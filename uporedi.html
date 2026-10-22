@@ -12,15 +12,19 @@
 <meta property="og:title" content="Uporedi električne automobile: domet, baterija i dimenzije | ev-srbija.rs">
 <meta property="og:description" content="Uporedite do tri električna automobila koja se prodaju u Srbiji: domet po WLTP normi, baterija, dužina, širina, visina, klirens i broj sedišta.">
 <meta property="og:url" content="https://www.ev-srbija.rs/uporedi.html">
-<meta property="og:image" content="https://www.ev-srbija.rs/img/og-ev-srbija.png">
+<meta property="og:image" content="https://www.ev-srbija.rs/img/og-ev-srbija.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="ev-srbija.rs – električni automobili u Srbiji">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="img/favicon-32.png" type="image/png" sizes="32x32">
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <meta name="theme-color" content="#16202e">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap">
-<link rel="stylesheet" href="assets/site.css?v=e87389d4">
+<link rel="stylesheet" href="assets/site.css?v=2019cb5f">
 <style>/* logo masks resolve against the page, not the stylesheet */.blogo{-webkit-mask:var(--l) center/contain no-repeat;mask:var(--l) center/contain no-repeat}</style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Početna", "item": "https://www.ev-srbija.rs/"}, {"@type": "ListItem", "position": 2, "name": "Uporedi modele", "item": "https://www.ev-srbija.rs/uporedi.html"}]}</script>
 </head>
@@ -221,6 +225,7 @@ var ROWS=[['Brend',function(m){return m.b}],['Klasa',function(m){return m.cls}],
 function ids(){return sel.map(function(s){return s.value}).filter(function(v,i,a){return v&&a.indexOf(v)===i})}
 function esc(t){var d=document.createElement('div');d.textContent=t;return d.innerHTML}
 function render(){
+  if(typeof pickers!=='undefined')pickers.forEach(function(p){p.sync()});
   var list=ids().map(function(i){return by[i]}).filter(Boolean),diff=$('cmp-diff').checked;
   try{sessionStorage.setItem('evc-cmp',JSON.stringify(list.map(function(m){return m.id})))}catch(e){}
   if(window.evcCmpSync)window.evcCmpSync();
@@ -228,8 +233,9 @@ function render(){
   var q=list.length?'?modeli='+list.map(function(m){return m.id}).join(','):'';try{history.replaceState(null,'',location.pathname+q)}catch(e){}
   if(!list.length){tbl.innerHTML='';return}
   var h='<thead><tr><th scope="col"><span class="sr">Podatak</span></th>'+list.map(function(m){
-    return '<th scope="col"><a class="cmp-img'+(m.k==='photo'?' photo':'')+'" href="modeli/'+m.id+'.html">'+m.img+'</a><span class="mk">'+esc(m.b.toUpperCase())+'</span><a class="cmp-name" href="modeli/'+m.id+'.html">'+esc(m.n)+'</a>'
-      +'<button type="button" class="cmp-x" data-id="'+m.id+'" aria-label="Ukloni '+esc(m.full)+' iz poređenja">×</button></th>'}).join('')+'</tr></thead><tbody>';
+    return '<th scope="col"><div class="cmp-imgw"><a class="cmp-img'+(m.k==='photo'?' photo':'')+'" href="modeli/'+m.id+'.html">'+m.img+'</a>'
+      +'<button type="button" class="cmp-x" data-id="'+m.id+'" aria-label="Ukloni '+esc(m.full)+' iz poređenja">×</button></div><span class="mk">'+esc(m.b.toUpperCase())+'</span><a class="cmp-name" href="modeli/'+m.id+'.html">'+esc(m.n)+'</a>'
+      +'</th>'}).join('')+'</tr></thead><tbody>';
   ROWS.forEach(function(r){
     var vals=list.map(r[1]),same=vals.every(function(v){return v===vals[0]});
     if(diff&&list.length>1&&same)return;
@@ -242,6 +248,42 @@ function render(){
   $('cmp-fn').textContent=fn.join(' ');$('cmp-fn').hidden=!fn.length;
 }
 sel.forEach(function(s){s.addEventListener('change',render)});
+/* custom model picker on top of each (visually hidden) select: search + list grouped by brand */
+var norm=function(t){return (t||'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/đ/g,'dj')};
+var pickers=sel.map(function(s,k){
+  var w=document.createElement('div');w.className='cpick';
+  var btn=document.createElement('button');btn.type='button';btn.className='cpick-btn';btn.setAttribute('aria-haspopup','listbox');btn.setAttribute('aria-expanded','false');
+  btn.innerHTML='<span class="cpick-val"></span>';
+  var pop=document.createElement('div');pop.className='cpick-pop';pop.hidden=true;
+  pop.innerHTML='<input type="search" class="cpick-q" placeholder="Pretražite model ili brend" autocomplete="off" aria-label="Pretraga modela"><ul class="cpick-list" role="listbox"></ul><p class="cpick-none" hidden>Nema modela za ovu pretragu.</p>';
+  var list=pop.querySelector('ul'),q=pop.querySelector('input'),none=pop.querySelector('.cpick-none');
+  [].slice.call(s.querySelectorAll('optgroup')).forEach(function(g){
+    var h=document.createElement('li');h.className='cpick-g';h.textContent=g.label;h.setAttribute('role','presentation');list.appendChild(h);
+    [].slice.call(g.children).forEach(function(o){var li=document.createElement('li');li.className='cpick-o';li.setAttribute('role','option');li.dataset.v=o.value;
+      li.dataset.s=norm(g.label+' '+o.textContent);li.textContent=o.textContent;li.tabIndex=-1;list.appendChild(li)})});
+  s.parentNode.appendChild(w);w.appendChild(btn);w.appendChild(pop);s.classList.add('cpick-native');s.tabIndex=-1;s.setAttribute('aria-hidden','true');
+  btn.id='cmp-b'+k;var lab=s.parentNode.querySelector('label');if(lab){lab.setAttribute('for','cmp-b'+k)}
+  function items(){return [].slice.call(list.querySelectorAll('.cpick-o')).filter(function(li){return !li.hidden&&!li.classList.contains('off')})}
+  function filter(){var t=norm(q.value.trim()),n=0;var last=null,shown=false;
+    [].slice.call(list.children).forEach(function(li){if(li.classList.contains('cpick-g')){if(last)last.hidden=!shown;last=li;shown=false;return}
+      var ok=!t||li.dataset.s.indexOf(t)>-1;li.hidden=!ok;if(ok){shown=true;n++}});if(last)last.hidden=!shown;none.hidden=n>0}
+  function open(o){pickers.forEach(function(p){if(p!==api)p.close()});pop.hidden=!o;btn.setAttribute('aria-expanded',o);w.classList.toggle('open',o);
+    if(o){var taken=sel.filter(function(x){return x!==s}).map(function(x){return x.value});
+      [].slice.call(list.querySelectorAll('.cpick-o')).forEach(function(li){li.classList.toggle('off',taken.indexOf(li.dataset.v)>-1);li.setAttribute('aria-selected',li.dataset.v===s.value)});
+      q.value='';filter();q.focus({preventScroll:true});var cur=list.querySelector('[aria-selected="true"]');if(cur)cur.scrollIntoView({block:'nearest'})}}
+  function choose(v){s.value=v;s.dispatchEvent(new Event('change'));open(false);btn.focus({preventScroll:true})}
+  btn.addEventListener('click',function(){open(pop.hidden)});
+  q.addEventListener('input',filter);
+  q.addEventListener('keydown',function(e){var it=items();if(e.key==='ArrowDown'){e.preventDefault();if(it[0])it[0].focus()}else if(e.key==='Enter'){e.preventDefault();if(it[0])choose(it[0].dataset.v)}else if(e.key==='Escape'){open(false);btn.focus()}});
+  list.addEventListener('click',function(e){var li=e.target.closest('.cpick-o');if(li&&!li.classList.contains('off'))choose(li.dataset.v)});
+  list.addEventListener('keydown',function(e){var it=items(),i=it.indexOf(document.activeElement);
+    if(e.key==='ArrowDown'){e.preventDefault();if(it[i+1])it[i+1].focus()}else if(e.key==='ArrowUp'){e.preventDefault();if(i>0)it[i-1].focus();else q.focus()}
+    else if(e.key==='Enter'||e.key===' '){e.preventDefault();if(document.activeElement.dataset.v)choose(document.activeElement.dataset.v)}else if(e.key==='Escape'){open(false);btn.focus()}});
+  var api={close:function(){if(!pop.hidden)open(false)},sync:function(){var o=s.options[s.selectedIndex];var has=!!s.value;
+    btn.querySelector('.cpick-val').textContent=has?o.textContent:'Izaberite model';btn.classList.toggle('empty',!has)}};
+  return api});
+document.addEventListener('click',function(e){if(!e.target.closest('.cpick'))pickers.forEach(function(p){p.close()})});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')pickers.forEach(function(p){p.close()})});
 $('cmp-diff').addEventListener('change',render);
 $('cmp-clear').addEventListener('click',function(){sel.forEach(function(s){s.value=''});render()});
 tbl.addEventListener('click',function(e){var b=e.target.closest('.cmp-x');if(!b)return;var keep=ids().filter(function(i){return i!==b.dataset.id});sel.forEach(function(s,k){s.value=keep[k]||''});render()});
