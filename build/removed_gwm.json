@@ -1,0 +1,20 @@
+{
+  "name": "GWM",
+  "data_slug": "gwm",
+  "logo": "gwm.svg",
+  "founded": "1984",
+  "hq": "Baoding, Kina",
+  "importer": "CENTAR S DOO",
+  "about": [
+    "Great Wall Motor (GWM) osnovan je 1984. u Baodingu i poznat je po SUV modelima i pikapima.",
+    "U Srbiji ga zastupa CENTAR S DOO kao ekskluzivni distributer. Trenutna ponuda obuhvata plug-in hibridne, hibridne i benzinske modele, bez potpuno električnih."
+  ],
+  "dealers": [
+    {
+      "city": "Srbija",
+      "name": "GWM Srbija",
+      "role": "Uvoznik",
+      "website": "greatwall.rs"
+    }
+  ]
+}

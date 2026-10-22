@@ -1,0 +1,1234 @@
+[
+ {
+  "id": "audi-rs-e-tron-gt",
+  "length_mm": 4997,
+  "width_mm": 1964,
+  "width_note": "bez retrovizora",
+  "height_mm": 1369,
+  "clearance_mm": null,
+  "seats": 5,
+  "sources": [
+   "https://uploads.audi-mediacenter.com/system/production/car_motorizations/1392/file_en/91bfc69ec55530e277b5023245b77c1c82772920/eTD-Audi-RS-e-tron-GT-performance-550kW_250515.pdf?1747293956="
+  ],
+  "notes": "Audi eTD (Germany, 05/2025, RS e-tron GT performance 550 kW) gives ranges: length 4997-5004, height 1369-1402 depending on equipment; lower bound used. Width incl. mirrors 2158. Ground clearance not stated.",
+  "length_txt": "4.997–5.004 mm",
+  "height_txt": "1.369–1.402 mm"
+ },
+ {
+  "id": "bmw-ix1",
+  "length_mm": 4500,
+  "width_mm": 1845,
+  "width_note": "bez retrovizora",
+  "height_mm": 1616,
+  "clearance_mm": 170,
+  "seats": 5,
+  "sources": [
+   "https://www.bmw.co.uk/en/all-models/bmw-i/ix1/bmw-ix1-technical-data.html",
+   "https://www.press.bmwgroup.com/global/article/attachment/T0393974EN/567425"
+  ],
+  "notes": "Width incl. mirrors 2104. Clearance (unladen) 170 from 2022 press spec of iX1 xDrive30; same L/W/H for eDrive20 and xDrive30 on bmw.co.uk."
+ },
+ {
+  "id": "bmw-ix",
+  "length_mm": 4965,
+  "width_mm": 1970,
+  "width_note": "bez retrovizora",
+  "height_mm": 1695,
+  "clearance_mm": 202,
+  "seats": 5,
+  "sources": [
+   "https://www.bmw.co.uk/en/all-models/bmw-i/ix/bmw-ix-technical-data.html",
+   "https://www.press.bmwgroup.com/asia/article/attachment/T0447880EN/627744"
+  ],
+  "notes": "Facelift (xDrive45/xDrive60/M70). Width incl. mirrors 2230. Clearance unladen 202."
+ },
+ {
+  "id": "bmw-i4",
+  "length_mm": 4783,
+  "width_mm": 1852,
+  "width_note": "bez retrovizora",
+  "height_mm": 1448,
+  "clearance_mm": 125,
+  "seats": 5,
+  "sources": [
+   "https://www.bmw.com.au/en/models/bmw-i/i4/bmw-i4-gran-coupe-technical-data.html",
+   "https://www.press.bmwgroup.com/mexico/article/attachment/T0334074ES/480974"
+  ],
+  "notes": "Width incl. mirrors 2073. Clearance unladen 125 from 2021 press spec (eDrive40); 2024 facelift press PDF was not machine-readable. Dimensions from BMW Australia page (EU tech page not fetchable)."
+ },
+ {
+  "id": "bmw-i5",
+  "length_mm": 5060,
+  "width_mm": 1900,
+  "width_note": "bez retrovizora",
+  "height_mm": 1515,
+  "clearance_mm": 146,
+  "seats": 5,
+  "sources": [
+   "https://www.bmw.co.uk/en/all-models/bmw-i/i5/bmw-i5-technical-data.html",
+   "https://www.press.bmwgroup.com/global/article/attachment/T0439978EN/612522"
+  ],
+  "notes": "eDrive40 height 1515 (M60 xDrive 1505). Width incl. mirrors 2156. Clearance unladen 146 is from i5 xDrive40 press spec (eDrive40 clearance not found)."
+ },
+ {
+  "id": "bmw-i7",
+  "length_mm": 5395,
+  "width_mm": 1950,
+  "width_note": null,
+  "height_mm": 1550,
+  "clearance_mm": 136,
+  "seats": 5,
+  "sources": [
+   "https://www.press.bmwgroup.com/united-kingdom/article/attachment/T0457311EN_GB/649700"
+  ],
+  "notes": "2026 facelift (i7 50/60 xDrive, launch Sept 2026); pre-facelift was 5391/1950/1544. Clearance unladen."
+ },
+ {
+  "id": "bmw-ix3",
+  "length_mm": 4782,
+  "width_mm": 1895,
+  "width_note": "bez retrovizora",
+  "height_mm": 1635,
+  "clearance_mm": 176,
+  "seats": 5,
+  "sources": [
+   "https://www.bmw.co.uk/en/all-models/x-models/ix3/bmw-ix3-technical-data.html",
+   "https://www.bmw.co.uk/en/all-models/x-models/ix3/bmw-ix3.html",
+   "https://www.press.bmwgroup.com/global/article/attachment/T0451998EN/636975"
+  ],
+  "notes": "Neue Klasse iX3 (40 / 50 xDrive same dims). Width incl. mirrors 2093. Clearance unladen 176 (iX3 50 xDrive press spec)."
+ },
+ {
+  "id": "bmw-i4-m50",
+  "length_mm": 4783,
+  "width_mm": 1852,
+  "width_note": "bez retrovizora",
+  "height_mm": 1448,
+  "clearance_mm": 125,
+  "seats": 5,
+  "sources": [
+   "https://www.bmw.com.au/en/models/bmw-i/i4/bmw-i4-gran-coupe-technical-data.html",
+   "https://www.press.bmwgroup.com/mexico/article/attachment/T0334074ES/480974"
+  ],
+  "notes": "Width incl. mirrors 2073. Clearance unladen 125 from 2021 press spec. Note: in Europe the M50 was renamed i4 M60 xDrive with the 2024 facelift."
+ },
+ {
+  "id": "bmw-ix-m-model",
+  "length_mm": 4965,
+  "width_mm": 1970,
+  "width_note": "bez retrovizora",
+  "height_mm": 1695,
+  "clearance_mm": 202,
+  "seats": 5,
+  "sources": [
+   "https://www.bmw.co.uk/en/all-models/bmw-i/ix/bmw-ix-technical-data.html",
+   "https://www.press.bmwgroup.com/asia/article/attachment/T0447880EN/627744"
+  ],
+  "notes": "Values for current iX M70 xDrive (facelift; M60 replaced by M70). Width incl. mirrors 2230. Clearance unladen 202."
+ },
+ {
+  "id": "bmw-i7-m70",
+  "length_mm": 5395,
+  "width_mm": 1950,
+  "width_note": null,
+  "height_mm": 1550,
+  "clearance_mm": 136,
+  "seats": 5,
+  "sources": [
+   "https://www.press.bmwgroup.com/united-kingdom/article/attachment/T0457311EN_GB/649700"
+  ],
+  "notes": "2026 facelift i7 M70 xDrive; pre-facelift press spec was 5391/1950/1544, clearance 136. Clearance unladen."
+ },
+ {
+  "id": "byd-dolphin-surf",
+  "length_mm": 3990,
+  "width_mm": 1720,
+  "width_note": null,
+  "height_mm": 1590,
+  "clearance_mm": 155,
+  "seats": 4,
+  "sources": [
+   "https://www.byd.com/it/auto-elettriche/dolphin-surf",
+   "https://www.byd.com/material/byd-site/de/preview/Dolphin_Surf_Brochure_DE.pdf",
+   "https://www.byd.com/material/byd-site/nl/pdfs/new-pricelist/Prijslijst_DOLPHIN_SURF.pdf",
+   "https://media.byd.com/five-seat-flexibility-and-fresh-techadded-to-byd-dolphin-surf/?lang=eng"
+  ],
+  "notes": "Serbian importer page not readable (redirect loop); BYD spec PDFs have unreadable digits, so clearance/seats not obtainable. | fill: DE brochure: 'Bodenfreiheit (unbeladen) 155', '(max. Zuladung) 120', '4-Sitzer' standard on Active/Boost/Comfort. NL price list (21-05-2025) gives 'Grondspeling (onbeladen / beladen) 151 / 131' and 'Aantal zitplaatsen 4'. Conflicting clearance figures (155 vs 151). BYD press (28 Sep 2026) announces an MY2026 5-seat version to be offered alongside the 4-seat from H2 2026."
+ },
+ {
+  "id": "byd-atto-2-comfort",
+  "length_mm": 4310,
+  "width_mm": 1830,
+  "width_note": "bez retrovizora",
+  "height_mm": 1675,
+  "clearance_mm": 170,
+  "seats": 5,
+  "sources": [
+   "https://www.byd.com/de/e-fahrzeuge/atto-2",
+   "https://byd-auto.rs/wp-content/uploads/2026/07/ATTO-2-Comfort-Leaflet_download_SRB_1125_V1-preview-4.pdf",
+   "https://www.byd.com/material/byd-site/nl/pdfs/pricelist-apr-2026/Prijslijst%20BYD%20ATTO%202%20per%2020-03-2026.pdf",
+   "https://www.byd.com/material/byd-site/de/preview/ATTO_2_Brochure_DE.pdf"
+  ],
+  "notes": "Width incl. mirrors 2060 (Serbian leaflet). Clearance values in leaflet unreadable; seats not stated. | fill: NL price list (Comfort): 'Grondspeling (onbeladen / beladen) 170/ 150', 'Aantal zitplaatsen 5'. DE brochure: Bodenfreiheit (unbeladen) Active 165 / Boost 165 / Comfort 170."
+ },
+ {
+  "id": "byd-atto-3-evo",
+  "length_mm": 4455,
+  "width_mm": 1875,
+  "width_note": "bez retrovizora",
+  "height_mm": 1615,
+  "clearance_mm": null,
+  "seats": null,
+  "sources": [
+   "https://byd-auto.rs/wp-content/uploads/2026/09/ATTO-3-EVO-SRB-TDV-AUTOMOTIVE-za-web.pdf",
+   "https://www.byd.com/de/presse/byd-atto-3-evo-2026",
+   "https://www.byd.com/material/__EU/byd-site/nl/pdfs/pricelist-aug-2026/Prijslijst%20BYD%20ATTO%203%20EVO_NL3.3.1pdf.pdf",
+   "https://www.byd.com/material/byd-site/de/pdfs/atto_3_evo/260317_ATTO_3_Evo_Broshure_Web.pdf",
+   "https://www.byd.com/material/byd-site/ch/pdfs/brochures/de/Folder_ATTO%203%20EVO_CH%20(DE)_compressed.pdf",
+   "https://www.byd.com/material/byd-site/se/pdfs/ATTO%203%20EVO-0326-BPS-SWE-20260317.pdf"
+  ],
+  "notes": "Width incl. mirrors 2060 (byd.com/de lists 2060 as Gesamtbreite). Clearance and seats not stated. | fill: Checked NL price list, DE/CH brochures, SE and HU spec/price PDFs, DE/NL/UK/SE model pages and media.byd.com press release: none list ground clearance or seat count."
+ },
+ {
+  "id": "byd-seal",
+  "length_mm": 4800,
+  "width_mm": 1875,
+  "width_note": "bez retrovizora",
+  "height_mm": 1460,
+  "clearance_mm": null,
+  "seats": 5,
+  "sources": [
+   "https://byd-auto.rs/wp-content/uploads/2026/09/seal.pdf",
+   "https://www.byd.com/de/e-fahrzeuge/seal",
+   "https://www.byd.com/material/byd-site/nl/pdfs/pricelist-may-2026/Prijslijst%20BYD%20SEAL%202026%20per%20Mei%202026%20-%20V1.0.pdf",
+   "https://www.byd.com/material/Prijslijst%20BYD%20SEAL%20per%2023-01-2026.pdf"
+  ],
+  "notes": "Width incl. mirrors 2150. Clearance and seats not stated. | fill: NL price lists: 'Aantal zitplaatsen 5 5 5' (Business/Design/Excellence AWD). No ground clearance in NL price lists, UK/HR/IT spec PDFs or DE brochure."
+ },
+ {
+  "id": "byd-sealion-7",
+  "length_mm": 4830,
+  "width_mm": 1925,
+  "width_note": null,
+  "height_mm": 1620,
+  "clearance_mm": 157,
+  "seats": 5,
+  "sources": [
+   "https://www.byd.com/de/e-fahrzeuge/sealion-7",
+   "https://www.byd.com/material/byd-site/hr/pdfs/2026-04/0053-26_SEALION%207-0625-BPS-EN-8P-V4-web_hr.pdf",
+   "https://www.byd.com/material/byd-site/nl/pdfs/pricelist-feb-2026/Prijslijst%20BYD%20SEALION%207%20per%2011-02-2026.pdf"
+  ],
+  "notes": "Serbian brochure PDF failed to load; BYD DE leaflet digits unreadable. Clearance and seats not stated. | fill: HR spec sheet (labelled): unladen Comfort 157 / Design AWD 163 / Excellence AWD 160 mm; laden 140 all. Value given is base Comfort. NL price list gives same three values (160/163/157, laden 140) with unclear column mapping, and 'Aantal zitplaatsen 5' for all variants."
+ },
+ {
+  "id": "changan-deepal-s05",
+  "length_mm": 4598,
+  "width_mm": 1900,
+  "width_note": null,
+  "height_mm": 1600,
+  "clearance_mm": 169,
+  "seats": 5,
+  "sources": [
+   "https://changanbalkans.com/rs/wp-content/uploads/2026/09/Deepal-S05-BEV-CENOVNIK-radna-verzija.pdf"
+  ],
+  "notes": "Serbian price list; clearance 169 unladen / 145 laden. Same for RWD Pro, RWD Max, AWD Max."
+ },
+ {
+  "id": "changan-deepal-s07",
+  "length_mm": 4750,
+  "width_mm": 1930,
+  "width_note": null,
+  "height_mm": 1625,
+  "clearance_mm": null,
+  "seats": 5,
+  "sources": [
+   "https://www.changaneurope.com/gr/en/Models/Changan-Deepal-S07/Specifications"
+  ],
+  "notes": "Changan Europe (Greece) spec page; changanbalkans.com/rs S07 page lists no dimensions. Clearance not stated."
+ },
+ {
+  "id": "citroen-e-c3",
+  "length_mm": 4015,
+  "width_mm": 1755,
+  "width_note": "bez retrovizora",
+  "height_mm": 1577,
+  "clearance_mm": 163,
+  "seats": 5,
+  "sources": [
+   "https://www.citroen.de/content/dam/citroen/germany/b2c/pricelists/Preisliste_Neuer_e-C3_C3_09.01.26.pdf",
+   "https://www.media.stellantis.com/uk-en/citroen/press/citroen-reveals-the-all-new-e-c3-the-first-european-affordable-electric-car",
+   "https://www.media.stellantis.com/ch-fr/citroen/press/a-partir-de-chf-24-690-la-nouvelle-citroen-c3-est-disponible-a-la-commande"
+  ],
+  "notes": "Citroën DE price list: width 1755 with mirrors folded / 1813 with mirrors extended (no pure body width given). Height 1577 with roof rails, 1567 without. citroen.rs PDFs are not machine-readable (robots-blocked). | fill: 'Ground clearance is an impressive 163mm for the all-electric ë-C3' (laden/unladen not stated). Note: citroen.ie pricing news says 197mm for 'the new C3' (likely petrol/general); ë-C3-specific figure used."
+ },
+ {
+  "id": "citroen-e-c3-aircross",
+  "length_mm": 4395,
+  "width_mm": null,
+  "width_note": "sa retrovizorima",
+  "height_mm": 1660,
+  "clearance_mm": 193,
+  "seats": 5,
+  "sources": [
+   "https://citroen.at/content/dam/citroen/austria/downloads/preislisten/07-2024/NEUER_E-C3_AIRCROSS_Produktblatt_2024_06_28.pdf",
+   "https://citroen.fr/content/dam/citroen/france/showroom/b2c/CT_Nouveau_C3Aircross_0425.pdf"
+  ],
+  "notes": "Citroën AT product sheet (06/2024). Footnote labels 1795 as width with mirrors extended (doubtful, looks like body width). Height 1660 without roof rails, 1663 with. Sheet lists 5 seats only; no 7-seat (5+2) version stated in this source. | Width hidden on site: source labels 1795 as width with mirrors extended, which looks wrong; needs a check. | fill: Citroën FR technical sheet (04/2025): 'Garde au sol : 193 mm versions électriques' (petrol/hybrid up to 200 mm); laden/unladen not stated."
+ },
+ {
+  "id": "citroen-e-c4",
+  "length_mm": 4350,
+  "width_mm": 1834,
+  "width_note": "bez retrovizora",
+  "height_mm": 1525,
+  "clearance_mm": 156,
+  "seats": 5,
+  "sources": [
+   "https://www.citroen.at/content/dam/citroen/austria/downloads/preislisten/12-25/C4_Produktblatt_2025_12.pdf",
+   "https://www.citroen.fr/content/dam/citroen/france/brochures/b2c/new-c4-e-c4/ct-nouvelle-c4-et-e-c4-societe-02062025.pdf"
+  ],
+  "notes": "Citroën AT product sheet 12/2025, table shared by C4 and ë-C4. Width 1834 mirrors folded / 2032 mirrors extended. Height range 1520-1525 (unladen). | fill: Citroën FR technical sheet (02/06/2025), dimensions section for C4/ë-C4: 'Garde au sol : 156 mm'; laden/unladen not stated."
+ },
+ {
+  "id": "citroen-e-c4-x",
+  "length_mm": 4580,
+  "width_mm": 1834,
+  "width_note": "bez retrovizora",
+  "height_mm": 1525,
+  "clearance_mm": 156,
+  "seats": 5,
+  "sources": [
+   "https://www.citroen.at/content/dam/citroen/austria/downloads/preislisten/12-25/C4X_Produktblatt_2025_12.pdf",
+   "https://www.citroen.co.uk/content/dam/citroen/uk/view-price---spec-guide/C4X-price-and-specification-guide.pdf",
+   "https://www.citroen.fr/content/dam/citroen/france/brochures/b2c/new-c4-c4x/ct-nouvelle-c4-x-et-e-c4-x-02062025.pdf"
+  ],
+  "notes": "Citroën AT sheet 12/2025 (facelift): length 4580, width 1834 folded / 2032 extended, height 1520-1525. UK guide (04/2024, pre-facelift) gives length 4600, width excl. mirrors 1834, height 1525. | fill: Citroën FR technical sheet (02/06/2025), dimensions for C4 X/ë-C4 X: 'Garde au sol : 156 mm'; laden/unladen not stated."
+ },
+ {
+  "id": "cupra-tavascan",
+  "length_mm": 4644,
+  "width_mm": 1861,
+  "width_note": null,
+  "height_mm": 1597,
+  "clearance_mm": null,
+  "seats": 5,
+  "sources": [
+   "https://www.cupraofficial.co.uk/new-cars/tavascan"
+  ],
+  "notes": "CUPRA UK model page; clearance not stated."
+ },
+ {
+  "id": "cupra-raval",
+  "length_mm": 4046,
+  "width_mm": 1784,
+  "width_note": null,
+  "height_mm": 1514,
+  "clearance_mm": null,
+  "seats": 5,
+  "sources": [
+   "https://www.cupra.com/en/cars/raval/raval-plus",
+   "https://www.cupra.com/en-gb/new-cars/raval/raval-v2-specs"
+  ],
+  "notes": "Same figures on CUPRA global (Raval Plus) and UK (V2) pages; clearance not stated."
+ },
+ {
+  "id": "dacia-spring",
+  "length_mm": 3701,
+  "width_mm": null,
+  "width_note": null,
+  "height_mm": null,
+  "clearance_mm": 146,
+  "seats": 4,
+  "sources": [
+   "https://www.dacia.rs/CountriesData/Serbia/images/pdf/katalog/novi-spring-katalog.pdf",
+   "https://www.dacia.rs/cars/novi-spring/pregled.html"
+  ],
+  "notes": "dacia.rs catalog dimension drawing: length 3701, clearance 146 (15-inch wheels). Width/height numbers appear unlabeled in drawing, so left null. 4 seats (passenger version); Cargo version has 2."
+ },
+ {
+  "id": "dongfeng-box",
+  "length_mm": null,
+  "width_mm": null,
+  "width_note": null,
+  "height_mm": null,
+  "clearance_mm": null,
+  "seats": null,
+  "sources": [],
+  "notes": "No official manufacturer/Serbian importer page with specs found (dongfeng-global.com has no Box page; dongfeng.si redirects to a distributor)."
+ },
+ {
+  "id": "ford-mustang-mach-e",
+  "length_mm": 4713,
+  "width_mm": 1881,
+  "width_note": "bez retrovizora",
+  "height_mm": 1624,
+  "clearance_mm": 147,
+  "seats": 5,
+  "sources": [
+   "https://www.ford.at/content/dam/guxeu/at/de_at/documents/technical-data/Technische_Daten_Ford_Mustang_Mach-E_MY26.00_zur_Preisliste_vom_16.01.2026_s.pdf",
+   "https://ford.rs/mustang-mach-e"
+  ],
+  "notes": "Ford AT tech data MY26: RWD/AWD length 4713, GT 4743; width 1881 no mirrors / 1930 folded / 2097 with mirrors; height (with antenna) 1624, GT 1613; clearance unladen 147 (GT 130), laden 116-119. Column mapping to versions slightly unclear in PDF. Seats from ford.rs ('space for five adults')."
+ },
+ {
+  "id": "ford-puma-gen-e",
+  "length_mm": 4214,
+  "width_mm": 1805,
+  "width_note": "bez retrovizora",
+  "height_mm": 1555,
+  "clearance_mm": 129,
+  "seats": null,
+  "sources": [
+   "https://www.fromtheroad.ford.com/content/dam/fordmediasite/eur/en/library/2025/tech-specs/2025%20Go%20Electric%20Puma%20Gen-E%20factsheet%20ENG.pdf"
+  ],
+  "notes": "Ford EU media factsheet: length without towbar; width 1805 no mirrors/folded, 1930 with mirrors; height unladen. Clearance 129 is AT MAX LOAD (laden) - unladen not stated. Seats not stated explicitly (only '5-seat mode' luggage figure), left null.",
+  "clearance_laden": true
+ },
+ {
+  "id": "ford-explorer",
+  "length_mm": 4468,
+  "width_mm": 1872,
+  "width_note": "bez retrovizora",
+  "height_mm": 1630,
+  "clearance_mm": 141,
+  "seats": 5,
+  "sources": [
+   "https://www.fromtheroad.ford.com/content/dam/fordmediasite/eur/en/library/2025/tech-specs/2025%20Go%20Electric%20Explorer%20factsheet%20ENG.pdf",
+   "https://www.ford.nl/content/dam/guxeu/nl/documents/pricelists/cars/PL-electric-explorer.pdf",
+   "https://ford.rs/explorer-ev"
+  ],
+  "notes": "Ford EU factsheet: width 1872 no mirrors (NL price list says 1871) / 1946 folded / 2063 with mirrors; height 1630 RWD, 1639 AWD. Clearance 141 RWD (148 AWD) is AT MAX LOAD (laden); unladen not stated. Seats 5 per ford.rs.",
+  "clearance_laden": true
+ },
+ {
+  "id": "foton-etunland",
+  "length_mm": null,
+  "width_mm": null,
+  "width_note": null,
+  "height_mm": null,
+  "clearance_mm": null,
+  "seats": null,
+  "sources": [],
+  "notes": "fotonserbia.rs lists eTunland but gives no specs; FotonMotor.pdf catalog has no eTunland data. No official spec source found."
+ },
+ {
+  "id": "geely-e5",
+  "length_mm": null,
+  "width_mm": null,
+  "width_note": null,
+  "height_mm": null,
+  "clearance_mm": null,
+  "seats": null,
+  "sources": [],
+  "notes": "geelyauto.rs E5 page/configurator show no dimensions. Official brochure and price list PDFs exist (cdn.kmag.net/.../Geely_E5_Brochure_Web_SRB_290726.pdf, SRB Geely E5 Cenovnik 01.09.2026.pdf) but could not be fetched (robots-blocked); global.geely.com EX5 page has no dimensions."
+ },
+ {
+  "id": "hyundai-ioniq-5",
+  "length_mm": 4655,
+  "width_mm": 1890,
+  "width_note": "bez retrovizora",
+  "height_mm": 1605,
+  "clearance_mm": 160,
+  "seats": 5,
+  "sources": [
+   "https://www.hyundai.news/newsroom/dam/de/Pressemappen/hyundai-ioniq-5-technische-daten-1124.pdf",
+   "https://dmassets.hyundai.com/is/content/hyundaiautoever/IONIQ+5+Tech+and+Spec+Guidepdf"
+  ],
+  "notes": "Hyundai DE press data sheet (11/2024); dimensions same for all versions. UK MY26 spec guide confirms 4655/1605 but labels 1890 as 'including mirrors' (likely label error). XRT not covered."
+ },
+ {
+  "id": "hyundai-ioniq-6",
+  "length_mm": 4925,
+  "width_mm": 1880,
+  "width_note": "bez retrovizora",
+  "height_mm": 1495,
+  "clearance_mm": 141,
+  "seats": 5,
+  "sources": [
+   "https://www.hyundai.news/newsroom/dam/de/Pressemappen/hyundai-ioniq-6-facelift-technische-daten-032026.pdf"
+  ],
+  "notes": "Facelift data sheet (2026). N Line / N Line X length 4935 mm. Width with mirrors 2144 mm."
+ },
+ {
+  "id": "hyundai-ioniq-6-n",
+  "length_mm": 4935,
+  "width_mm": 1940,
+  "width_note": "bez retrovizora",
+  "height_mm": 1495,
+  "clearance_mm": 141,
+  "seats": 5,
+  "sources": [
+   "https://www.hyundai.news/newsroom/dam/de/Pressemappen/hyundai-ioniq-6-n-technische-daten-052026.pdf",
+   "https://dmassets.hyundai.com/is/content/hyundaiautoever/IONIQ_6_N_Tech_and_Spec_Guidepdf"
+  ],
+  "notes": "Width with mirrors 2144 mm. UK spec guide matches length/width/height."
+ },
+ {
+  "id": "hyundai-ioniq-9",
+  "length_mm": 5060,
+  "width_mm": 1980,
+  "width_note": "bez retrovizora",
+  "height_mm": 1790,
+  "clearance_mm": 174,
+  "seats": 7,
+  "sources": [
+   "https://www.hyundai.news/newsroom/dam/de/Pressemappen/hyundai-ioniq-9-technische-daten-092025.pdf",
+   "https://www.hyundai.com/eu/en/models/ioniq-9/technical-data-downloads.html"
+  ],
+  "notes": "6- and 7-seat versions exist (max 7). Width with standard mirrors 2251 mm, with digital mirrors 2040 mm. Same dimensions for all powertrains."
+ },
+ {
+  "id": "hyundai-inster",
+  "length_mm": 3825,
+  "width_mm": 1610,
+  "width_note": "bez retrovizora",
+  "height_mm": 1575,
+  "clearance_mm": 144,
+  "seats": 5,
+  "sources": [
+   "https://www.hyundai.news/newsroom/dam/de/Pressemappen/Hyundai_INSTER_Technische_Daten_0226.pdf",
+   "https://dmassets.hyundai.com/is/content/hyundaiautoever/INSTER_Tech_and_Spec_Guidepdf",
+   "https://dmassets.hyundai.com/is/content/hyundaiautoever/Scheda_Tecnica_Hyundai_New_INSTER_5postipdf"
+  ],
+  "notes": "Inster Cross length 3845 mm. Height 1610 mm with roof rails (1575 without). Width excl. mirrors per UK spec guide (1875 incl. mirrors). Seats: 4 or 5 depending on version (UK guide lists 4 seats; DE 02/2026 sheet lists 5). Clearance 144 mm per DE 02/2026 sheet; older 2024 Belux press sheet gave 153 mm."
+ },
+ {
+  "id": "jac-e30x",
+  "length_mm": 4025,
+  "width_mm": 1770,
+  "width_note": null,
+  "height_mm": 1560,
+  "clearance_mm": null,
+  "seats": 5,
+  "sources": [
+   "https://jacmotors.rs/putnicka-vozila/e30x/"
+  ],
+  "notes": "Serbian importer page; same dimensions for Luxury and Flagship. Ground clearance not stated."
+ },
+ {
+  "id": "jac-t9-ev",
+  "length_mm": 5330,
+  "width_mm": 1965,
+  "width_note": null,
+  "height_mm": 1920,
+  "clearance_mm": 205,
+  "seats": null,
+  "sources": [
+   "https://jacmotors.rs/putnicka-vozila/t9-ev/"
+  ],
+  "notes": "Serbian importer page. Seat count not stated (double-cab pickup)."
+ },
+ {
+  "id": "jmev-ev3",
+  "length_mm": 3720,
+  "width_mm": 1640,
+  "width_note": null,
+  "height_mm": 1535,
+  "clearance_mm": 110,
+  "seats": null,
+  "sources": [
+   "https://www.jmev.rs/ev3.html"
+  ],
+  "notes": "Importer page gives 'Dimenzije vozila 3720x1640x1535' (order assumed LxWxH). Seats not stated. Page also has inconsistent wheelbase rows (2390 and 2750)."
+ },
+ {
+  "id": "jmev-elight",
+  "length_mm": 4675,
+  "width_mm": 1835,
+  "width_note": null,
+  "height_mm": 1480,
+  "clearance_mm": 145,
+  "seats": 5,
+  "sources": [
+   "https://www.jmev.rs/elight.html"
+  ],
+  "notes": "Importer page gives dimensions as 4675x1835x1480 (LxWxH); '4 vrata - 5 sedista'."
+ },
+ {
+  "id": "jmev-ewind",
+  "length_mm": 4640,
+  "width_mm": 1870,
+  "width_note": null,
+  "height_mm": 1658,
+  "clearance_mm": 160,
+  "seats": null,
+  "sources": [
+   "https://www.jmev.rs/ewind.html"
+  ],
+  "notes": "Importer page gives dimensions as 4640x1870x1658 (LxWxH). Seats not stated."
+ },
+ {
+  "id": "leapmotor-t03",
+  "length_mm": 3620,
+  "width_mm": 1652,
+  "width_note": null,
+  "height_mm": 1577,
+  "clearance_mm": 140,
+  "seats": 4,
+  "sources": [
+   "https://www.leapmotor.net/docs/lpmiwebsitededelibraries/t03-documents/preisliste_leapmotor_t03_my25_d_20260101_v20260501.pdf?sfvrsn=3af4aae0_1&sf_site_temp=true&sf_site=7c48222a-167e-4267-808f-72b79b8fd325",
+   "https://www.media.stellantis.com/uk-en/leapmotor/press/leapmotor-t03-uk-prress-informationon",
+   "https://www.media.stellantis.com/uploads/uk/attachment/5636/leapmotort03presskitfinal-67ee618ceff33.pdf"
+  ],
+  "notes": "Leapmotor DE price list MY25. Seats not stated in official sources found. | fill: Official Stellantis/Leapmotor UK press kit: 'the five-door and four-seater T03'. Clearance was not requested."
+ },
+ {
+  "id": "leapmotor-b03x",
+  "length_mm": 4270,
+  "width_mm": 1810,
+  "width_note": null,
+  "height_mm": 1635,
+  "clearance_mm": 175,
+  "seats": null,
+  "sources": [
+   "https://www.leapmotor.net/docs/lpmiwebsitededelibraries/b03x-documents/preisliste-leapmotor-b03x-my27-d-20260701-v20261001.pdf?sfvrsn=ddfcccf5_2",
+   "https://www.leapmotor.net/docs/default-source/b03x-documents/5845-26_leapmotor-brochure-b03x.pdf?sfvrsn=c0b32fcf_1&sf_site_temp=true&sf_site=23d7e6b7-a305-43c8-b268-7ffde9886c38",
+   "https://www.leapmotor.net/docs/lpmiwebsitenlnllibraries/default-document-library/leapmotor-b03x-prijslijst.pdf?sfvrsn=ae1273f4_1",
+   "https://www.leapmotor.net/docs/default-source/b03x-documents/pl_b03x_01-10-2026.pdf?sfvrsn=e68b75e_11"
+  ],
+  "notes": "Same for Pro and ProMax. Seats not stated. | fill: Checked NL price list and brochure, DE price list, FR brochure, NL/DE model pages and Stellantis press: no explicit seat count."
+ },
+ {
+  "id": "leapmotor-b05",
+  "length_mm": 4430,
+  "width_mm": 1880,
+  "width_note": null,
+  "height_mm": 1520,
+  "clearance_mm": 154,
+  "seats": 5,
+  "sources": [
+   "https://www.leapmotor.net/docs/lpmiwebsitededelibraries/b05-documents/preisliste-leapmotor-b05-my26-d-20260701-v20261001.pdf?sfvrsn=45673cad_2&sf_site_temp=true&sf_site=7c48222a-167e-4267-808f-72b79b8fd325",
+   "https://www.leapmotor.net/docs/default-source/b05-library/1782892486179leapmotor_b05_erg-(1).pdf?sfvrsn=b634fc78_16"
+  ],
+  "notes": "DE price list MY26, values given for ProMax. Seats not stated. | fill: Official Leapmotor B05 emergency response guide: '5 doors, 5 seats, hatchback'."
+ },
+ {
+  "id": "leapmotor-b10",
+  "length_mm": 4515,
+  "width_mm": 1885,
+  "width_note": null,
+  "height_mm": 1655,
+  "clearance_mm": 170,
+  "seats": null,
+  "sources": [
+   "https://www.leapmotor.net/docs/default-source/b10---2024/preisliste-leapmotor-b10-my26(25)-d-20261001-v20261012.pdf?sfvrsn=b1812072_42",
+   "https://www.leapmotor.net/docs/lpmiwebsitedeatlibraries/b10/pl_b10_12-10-2026.pdf?sfvrsn=754a2159_1",
+   "https://www.leapmotor.net/docs/lpmiwebsiteenielibraries/pfds---docs---downloadable/b10-docs/leapmotor-b10-price-specification-guide-october-20269db99d603d9945cd940197ce4d202691.pdf",
+   "https://apps.leapmotor.net/res/files/assistance/Gebruikshandleiding_B10.pdf"
+  ],
+  "notes": "BEV values; Hybrid EV is 4530 mm long, other dimensions identical. Seats not stated. | fill: No explicit seat count in AT price list, IE/UK spec guides, brochure, FAQs, press releases. NL owner manual shows driver, front passenger and 3 rear seat positions but states no total, so it was not used. Leapmotor PT rescue sheet exists only for the B10 hybrid."
+ },
+ {
+  "id": "leapmotor-c10",
+  "length_mm": 4739,
+  "width_mm": 1900,
+  "width_note": null,
+  "height_mm": 1680,
+  "clearance_mm": 180,
+  "seats": null,
+  "sources": [
+   "https://www.leapmotor.net/docs/default-source/c10---documents/preisliste-leapmotor-c10-my27-d-20261001-v20261016.pdf",
+   "https://www.leapmotor.net/docs/default-source/c10---documents/1768399695593_leapmotor_brochure_c10_compressed-1.pdf?sfvrsn=b7004d94_1&sf_site_temp=true&sf_site=23d7e6b7-a305-43c8-b268-7ffde9886c38",
+   "https://www.leapmotor.net/docs/lpmiwebsitenlnllibraries/prijslijsten/my27/leapmotor-c10-prijslijst_2026.pdf?sfvrsn=fb7233d4_1",
+   "https://www.leapmotor.net/docs/lpmiwebsitedeatlibraries/c10/pl_c10_01-10-2026.pdf",
+   "https://www.leapmotor.net/docs/default-source/c10-hybrid-ev/c10hybridev-notfalleinsatzleitfaden.pdf?sfvrsn=18bfacb5_46"
+  ],
+  "notes": "Dimensions identical across BEV and Hybrid EV. DE price list gives clearance '180 / 150' for ProMax/DYNAMIC (150 likely AWD, not explained); 180 for Pro. Seats not stated. | fill: No seat count in BEV price lists (NL, AT), UK spec guide or press. The C10 HYBRID EV emergency guide states '5-türig, 5-Sitzer, SUV', but it is for the hybrid, not the BEV, so it was left null (strict)."
+ },
+ {
+  "id": "kia-ev3",
+  "length_mm": 4300,
+  "width_mm": 1850,
+  "width_note": null,
+  "height_mm": 1560,
+  "clearance_mm": 140,
+  "seats": 5,
+  "sources": [
+   "https://www.kia.com/uk/new-cars/ev3/specification/",
+   "https://kia.com/content/dam/kwcms/kme/be/price-specs/Kia-EV3-Pricelist.pdf",
+   "https://www.kia.ch/assets/file/f7b4c93f60164a8d9bd5f1d70e93326a/699fcd8361404414a7b469bef1377ae6?alt=media&token=ac09244a-a8f9-4ffd-9059-d292677885d9&apiKey=f7b4c93f60164a8d9bd5f1d70e93326a"
+  ],
+  "notes": "Kia UK spec: Air 58.3 kWh 4300/1560; GT-Line 81.4 kWh length 4310, height 1570; GT AWD 4310/1575. Width 1850 on all, mirrors not specified. Kia Belux price list (org-prod2-press.kia.com, 07/2024) states width 1830 - conflict. No clearance or seat count on official pages found. | fill: Kia Belux price list: 'Garde au sol (mm) 140'; GT Line 147 mm. Seats from Kia Switzerland Preisliste EV3 (10.2026, MY27): 'Türen/Plätze 5/5'."
+ },
+ {
+  "id": "kia-ev4",
+  "length_mm": 4430,
+  "width_mm": 1860,
+  "width_note": null,
+  "height_mm": 1485,
+  "clearance_mm": 140,
+  "seats": null,
+  "sources": [
+   "https://www.kia.com/uk/new-cars/ev4/specification/",
+   "https://eu-www.kia.com/content/dam/kwcms/kme/be/price-specs/Kia-EV4-Pricelist.pdf",
+   "https://press.kia.com/content/dam/kiapress/DE/Germany/pressemappen/ev4-/25_09/Kia_EV4_Pressemappe_09-25.pdf"
+  ],
+  "notes": "Values are for the HATCHBACK (Air/Motion). GT-Line hatchback 4450 long; Fastback 4730 x 1860 x 1480; GT AWD 4450 x ? x 1495 (page shows width 1609 for GT, likely a typo). No clearance or seat count stated. | fill: Kia Belux EV4 price list: 'Garde au sol (mm) 140 / Bodemvrijheid' (body style not stated on the list). Seats: no explicit count found; the DE press kit only says 'finden im EV4 fünf Personen bequem Platz', and the Belux list shows a 3-seat rear bench. Kia CH EV4 page could not be fetched."
+ },
+ {
+  "id": "kia-ev6",
+  "length_mm": 4695,
+  "width_mm": 1880,
+  "width_note": null,
+  "height_mm": 1550,
+  "clearance_mm": 160,
+  "seats": 5,
+  "sources": [
+   "https://www.kia.com/sg/showroom/ev6/specification.html",
+   "https://kia.com/content/dam/kwcms/kme/be/price-specs/Kia-EV6-Pricelist.pdf",
+   "https://www.kia.ch/assets/file/f7b4c93f60164a8d9bd5f1d70e93326a/42371ca958f54a068120c74014555606?alt=media&token=0a469784-c88b-43ef-9bc7-d2e417a091ad&apiKey=f7b4c93f60164a8d9bd5f1d70e93326a"
+  ],
+  "notes": "EU Kia pages (UK, DE) do not state dimensions in text; values from Kia Singapore official spec page (facelift). Mirrors not specified. No clearance or seat count stated. | fill: Belux list: 'Garde-au-Sol Min. (mm) 160'. Seats from Kia CH Preisliste EV6 (09.2026, MY27): 'Türen/Plätze 5/5'."
+ },
+ {
+  "id": "kia-ev9",
+  "length_mm": 5010,
+  "width_mm": 1980,
+  "width_note": null,
+  "height_mm": 1755,
+  "clearance_mm": 177,
+  "seats": 7,
+  "sources": [
+   "https://prod2-press.kia.com/content/dam/kiapress/global/press-kits/2023/02-kia-press-kit-ev9/Kia%20-%20EV9%20-%20Technical%20Specifications.docx",
+   "https://www.kia.com/uk/new-cars/ev9/specification/"
+  ],
+  "notes": "Kia global press kit (2023): base 5010 x 1980 x 1755; GT-Line 5015 long, 1780 high; clearance 177 (laden/unladen not specified). Kia UK: 7 seats standard, 6-seat (swivel 2nd row) optional on GT-Line S."
+ },
+ {
+  "id": "kia-ev2",
+  "length_mm": 4060,
+  "width_mm": 1800,
+  "width_note": null,
+  "height_mm": 1575,
+  "clearance_mm": null,
+  "seats": 5,
+  "sources": [
+   "https://www.kia.com/uk/new-cars/ev2/specification/",
+   "https://www.kia.ch/assets/file/f7b4c93f60164a8d9bd5f1d70e93326a/c17333fa23ac423c9c6113e78aeae949?alt=media&token=12f94f18-b38c-44c1-87b7-5270639ac123&apiKey=f7b4c93f60164a8d9bd5f1d70e93326a",
+   "https://press.kia.com/content/dam/kiapress/DE/Germany/pressemappen/ev2/Kia_EV2_Pressemappe_03-26%20NEU.pdf"
+  ],
+  "notes": "Kia UK: First Edition/Air 4060 x 1800 x 1575; GT-Line/GT-Line S 4065 long, 1585 high. Mirrors not specified. No clearance or seat count stated. | fill: Seats: 5 standard; base 'Light' trim has 4 seats, and a 4-seat option is available from Earth. Sources: DE press kit 'fünf Sitzen (Ausführung Light: vier Sitze)' and CH price list 'Türen/Plätze 5/5 5/4'. Ground clearance not found: the Belux EV2 price list PDF is protected and unreadable; the IE specs page, CH brochure and DE press kit list none."
+ },
+ {
+  "id": "lynk-co-02",
+  "length_mm": 4460,
+  "width_mm": 1845,
+  "width_note": "bez retrovizora",
+  "height_mm": 1573,
+  "clearance_mm": null,
+  "seats": null,
+  "sources": [
+   "https://www.lynkco-see.com/rs/vozila/02/karakteristike"
+  ],
+  "notes": "Serbian importer page states width 1845 mm 'sklopljena ogledala' (mirrors folded). Single set of dimensions for Core+ and More. Brochure/price list PDFs not readable (robots-blocked). No clearance or seat count."
+ },
+ {
+  "id": "mazda-6e",
+  "length_mm": 4921,
+  "width_mm": 1890,
+  "width_note": null,
+  "height_mm": 1491,
+  "clearance_mm": null,
+  "seats": null,
+  "sources": [
+   "https://newsroom.mazda.com/en/publicity/release/2025/202501/250110b.html"
+  ],
+  "notes": "Mazda global newsroom (Jan 2025 European debut) spec table; height includes roof antenna. Mazda UK/EU spec pages not reachable. No clearance or seat count."
+ },
+ {
+  "id": "mazda-cx-6e",
+  "length_mm": null,
+  "width_mm": null,
+  "width_note": null,
+  "height_mm": null,
+  "clearance_mm": null,
+  "seats": null,
+  "sources": [],
+  "notes": "No official source with dimensions found: Mazda newsroom release and Mazda UK/AU press pages give only wheelbase 2902 mm; Mazda UK media pack spec doc link empty/unreadable; mazda.co.uk, mazda.de not fetchable."
+ },
+ {
+  "id": "mg-mg4-electric",
+  "length_mm": 4287,
+  "width_mm": 1836,
+  "width_note": null,
+  "height_mm": 1504,
+  "clearance_mm": 150,
+  "seats": 5,
+  "sources": [
+   "https://cdn.mgmotor.eu/images/model/brochure/MG4_MY2024_Brochure_Digital_250212_compressed.pdf",
+   "https://www.mgmotor.rs/model/mg4"
+  ],
+  "notes": "MG Europe MY2024 brochure (linked from mgmotor.rs). Height row lists 1504 and 1615, clearance row 150/117 and 160/132 (unladen/laden) without clear trim mapping; first values taken (assumed standard versions) - verify. Clearance is unladen (laden 117). Seats: no count in spec table; brochure and mgmotor.rs say fits a 'family of five'."
+ },
+ {
+  "id": "mg-mg5-electric",
+  "length_mm": 4600,
+  "width_mm": 1818,
+  "width_note": null,
+  "height_mm": 1521,
+  "clearance_mm": 115,
+  "seats": 5,
+  "sources": [
+   "https://cdn.mgmotor.eu/images/model/brochure/MG5_Brochure_A4_Digital_Final_030221.pdf",
+   "https://www.mgmotor.rs/model/mg5"
+  ],
+  "notes": "MG Europe brochure (2021, linked from mgmotor.rs). Spec table width 1818, but another line says overall width 1811 - conflict. Height 1543 with roof rack. Clearance laden/unladen not specified. Brochure: 'Up to five passengers'."
+ },
+ {
+  "id": "mg-mgs5-ev",
+  "length_mm": 4476,
+  "width_mm": 1849,
+  "width_note": null,
+  "height_mm": 1621,
+  "clearance_mm": null,
+  "seats": null,
+  "sources": [
+   "https://cdn.uc.assets.prezly.com/93199461-c655-4752-9431-1872df06bc35/-/inline/no/MG_PM_MGS5EV_DE.pdf"
+  ],
+  "notes": "Source is MG Motor Switzerland (official importer) press release, May 2025, hosted on its Prezly press room - not mgmotor.rs/mgmotor.eu (those pages render specs via JS). Long Range Luxury height 1633. No clearance or seat count."
+ },
+ {
+  "id": "mini-cooper",
+  "length_mm": 3858,
+  "width_mm": 1756,
+  "width_note": null,
+  "height_mm": 1460,
+  "clearance_mm": 124,
+  "seats": 4,
+  "sources": [
+   "https://press.bmwgroup.com/global/article/attachment/T0448246EN/628485"
+  ],
+  "notes": "BMW Group PressClub technical data, MINI Cooper SE (11/2023). Cooper E data sheet not checked; JCW Electric sheet shows identical 3858/1756/1460, 124 mm, 4 seats. Clearance at curb weight."
+ },
+ {
+  "id": "mini-aceman",
+  "length_mm": 4079,
+  "width_mm": 1754,
+  "width_note": null,
+  "height_mm": 1514,
+  "clearance_mm": 143,
+  "seats": 5,
+  "sources": [
+   "https://www.press.bmwgroup.com/slovenia/article/attachment/T0448241SL/628466"
+  ],
+  "notes": "BMW Group PressClub technical data, MINI Aceman E (05/2024). Aceman SE sheet not found; may differ slightly. Clearance at curb weight."
+ },
+ {
+  "id": "mini-countryman",
+  "length_mm": 4445,
+  "width_mm": 1843,
+  "width_note": null,
+  "height_mm": 1635,
+  "clearance_mm": 171,
+  "seats": 5,
+  "sources": [
+   "https://www.press.bmwgroup.com/global/article/attachment/T0448240EN/629246"
+  ],
+  "notes": "BMW Group PressClub technical data, MINI Countryman SE ALL4 (03/2024). Countryman E (FWD) not checked; may differ. Clearance at curb weight."
+ },
+ {
+  "id": "opel-astra-electric",
+  "length_mm": 4374,
+  "width_mm": 1859,
+  "width_note": "retrovizori sklopljeni",
+  "height_mm": 1482,
+  "clearance_mm": null,
+  "seats": 5,
+  "sources": [
+   "https://www.opel.de/content/dam/opel/germany/tools/preislisten/astra-preisliste.pdf",
+   "https://www.opel.ie/content/dam/opel/ireland/brochure-library/brochures/passenger-cars/WebAstraElectricPriceSpecGuide.pdf",
+   "https://www.opel.it/content/dam/opel/italia/veicoli/new-brochure/Astra.pdf"
+  ],
+  "notes": "Opel DE price list (01.10.2026), Electric 5-door column: width with mirrors open/folded 2062/1859 (no width without mirrors given); height (kerb weight) 1482-1488 depending on version. Opel IE guide (Oct 2024) gives 4374 / 1860 folded / height 1441 - height differs between sources. Seats not stated. | fill: Seats: 'CARATTERISTICHE ASTRA ELECTRIC' table 'Numero posti 5' (Berlina and Sports Tourer). Ground clearance not in opel.de price list (Stand 01.10.2026), opel.es datasheet, opel.ie spec guide, or Stellantis press kits.",
+  "width_folded": true
+ },
+ {
+  "id": "opel-frontera-electric",
+  "length_mm": 4385,
+  "width_mm": 1849,
+  "width_note": "retrovizori sklopljeni",
+  "height_mm": 1635,
+  "clearance_mm": null,
+  "seats": 5,
+  "sources": [
+   "https://www.opel.de/content/dam/opel/germany/tools/preislisten/frontera-preisliste.pdf",
+   "https://www.opel.de/fahrzeuge/frontera/frontera-bev/uebersicht.html",
+   "https://www.opel.ie/content/dam/opel/ireland/brochure-library/brochures/passenger-cars/NewFronteraPriceSpecGuide.pdf"
+  ],
+  "notes": "DE price list table (all powertrains): width mirrors out/folded 2020/1849; height at kerb weight / with antenna 1635/1655 (PDF text extraction scrambled, mapping by label order). Opel IE guide lists 4385 / 1795 width / 1655 height. Seats: opel.de says 5 standard, 7-seat only for Hybrid GS/Ultimate, not Electric. | fill: No ground clearance in opel.de Frontera Preisliste, opel.es MY26 datasheet, or Stellantis media press releases (EN/FR/ME).",
+  "width_folded": true
+ },
+ {
+  "id": "opel-mokka-electric",
+  "length_mm": 4151,
+  "width_mm": 1791,
+  "width_note": "retrovizori sklopljeni",
+  "height_mm": 1532,
+  "clearance_mm": null,
+  "seats": 5,
+  "sources": [
+   "https://www.opel.ie/content/dam/opel/ireland/brochure-library/brochures/passenger-cars/WebMokkaEPriceEquipGuide.pdf",
+   "https://www.opel.de/content/dam/opel/germany/tools/preislisten/mokka-preisliste.pdf",
+   "https://www.opel.it/content/dam/opel/italia/veicoli/new-brochure/Mokka.pdf",
+   "https://www.media.stellantis.com/pl-pl/opel/press/opel-mokka-press-kit"
+  ],
+  "notes": "Opel IE Mokka-e guide (Oct 2024): width mirrors unfolded/folded 1987/1791, height (kerb) 1532. Current Opel DE price list (10/2026, all powertrains): length 4150, width 1987/1787, height 1535 (1515) / GSE 1506 - small differences. Seats not stated. | fill: Seats: opel.it Mokka MY24 brochure 'CARATTERISTICHE MOKKA ELECTRIC' 'Numero posti 5' (Electric 136/156 cv). Ground clearance not in opel.de Preisliste (Stand 05.10.2026), opel.es datasheet or press kit.",
+  "width_folded": true
+ },
+ {
+  "id": "peugeot-e-208",
+  "length_mm": 4055,
+  "width_mm": 1745,
+  "width_note": "bez retrovizora",
+  "height_mm": 1430,
+  "clearance_mm": null,
+  "seats": 5,
+  "sources": [
+   "https://www.media.stellantis.com/uploads/uk/model-pricelist/peugeot208pricespecapr23-6455a592410b8.pdf",
+   "https://www.media.stellantis.com/em-en/peugeot/press/new-peugeot-e-208-irresistible-and-fun-to-drive"
+  ],
+  "notes": "UK price/spec guide (Apr 2023, whole 208 range): width with mirrors open/folded 1960/1755. Press release confirms 4.055 m, 1.745 m excluding mirrors, 1.43 m for facelifted E-208. E-208 GTi differs (4100/1771/1403)."
+ },
+ {
+  "id": "peugeot-e-2008",
+  "length_mm": 4304,
+  "width_mm": 1770,
+  "width_note": "bez retrovizora",
+  "height_mm": 1523,
+  "clearance_mm": null,
+  "seats": 5,
+  "sources": [
+   "https://www.media.stellantis.com/uploads/uk/model-pricelist/peugeot2008priceandspecaug2023-6502ddeff1c7e.pdf",
+   "https://www.peugeot.de/modelle/neuer-2008/elektro.html"
+  ],
+  "notes": "UK price/spec guide (Aug 2023, whole range incl. E-2008): width excl. mirrors 1770, mirrors open/folded 1987/1815; height without/with roof bars 1523/1550. peugeot.de page confirms 4304 and 1523/1550 (labels 1815 as width without mirrors)."
+ },
+ {
+  "id": "peugeot-e-308",
+  "length_mm": 4367,
+  "width_mm": 1850,
+  "width_note": "bez retrovizora",
+  "height_mm": 1441,
+  "clearance_mm": null,
+  "seats": 5,
+  "sources": [
+   "https://www.peugeot.co.uk/content/peugeot/worldwide/uk/en/index/models/peugeot-308/electric.html",
+   "https://www.media.stellantis.com/uploads/uk/attachment/4984/0244508peugeotspecguidesjuly308eversion20-650a0a92a995a.pdf"
+  ],
+  "notes": "Length/height from current peugeot.co.uk E-308 page (4367/1441; it lists 1859 as width excl. mirrors). Width 1850 excl. mirrors and seats 5 from UK spec guide (Sep 2023, pre-facelift hatchback: 4365 length, 1465 height, mirrors open/folded 2062/1859). Sources disagree on height."
+ },
+ {
+  "id": "peugeot-e-3008",
+  "length_mm": 4542,
+  "width_mm": 1895,
+  "width_note": null,
+  "height_mm": 1641,
+  "clearance_mm": 198,
+  "seats": 5,
+  "sources": [
+   "https://www.media.stellantis.com/uploads/em/attachment//caractechnewpeugeote300812092023-6500120ddbb1b.pdf",
+   "https://www.peugeot.de/modelle/3008/elektro.html"
+  ],
+  "notes": "Stellantis media spec sheet (Sep 2023): same dimensions for all versions; ground clearance 198 mm for 73 kWh versions, NA for 98 kWh Long Range. Mirror status of width not specified. Seats: peugeot.de FAQ says 3008 seats 5 (general 3008 statement)."
+ },
+ {
+  "id": "porsche-taycan-4",
+  "length_mm": 4963,
+  "width_mm": 1966,
+  "width_note": "bez retrovizora",
+  "height_mm": 1379,
+  "clearance_mm": 127,
+  "seats": null,
+  "sources": [
+   "https://newsroom.porsche.com/dam/jcr:345788fd-9387-43e2-9b12-d9207d75890b/pag-taycan-4-en.pdf",
+   "https://www.porsche.com/pcom-model-pages-isr/api/en/technical-data/Y1ABN1/",
+   "https://www.porsche.com/stories/mobility/how-many-seats-are-there-in-a-porsche/"
+  ],
+  "notes": "Porsche newsroom technical data MY S 11/2024: width 1966 (2144 incl. mirrors). Ground clearance and seat count not stated. | fill: Porsche tech data (Y1ABN1 Taycan 4): 'Max. ground clearance, air suspension (normal ride height): 127 mm' (low 117, off-road 147). Seats: no count in the tech data. A porsche.com story says the Taycan saloon has a '4+1 seating layout', but it is general and ambiguous (4 vs 4+1), so left null."
+ },
+ {
+  "id": "porsche-macan-4",
+  "length_mm": 4784,
+  "width_mm": 1938,
+  "width_note": "bez retrovizora",
+  "height_mm": 1622,
+  "clearance_mm": 185,
+  "seats": null,
+  "sources": [
+   "https://newsroom.porsche.com/dam/jcr:2464d712-2088-47e6-a54d-99d91a30caad/pag-macan-4-electric-td-en.pdf.pdf",
+   "https://newsroom.porsche.com/dam/jcr:d2a3945e-e8ec-40f0-832a-4efa9ffb1719/U.S.%20Press%20Kit%20Macan_Media%20Drive_Antibes.pdf",
+   "https://newsroom.porsche.com/en/press-kits/the-new-porsche-macan/Highlights.html",
+   "https://www.porsche.com/pcom-model-pages-isr/api/en/technical-data/XABBB1/"
+  ],
+  "notes": "Width 1938 (2152 incl. mirrors). Clearance 185 mm is the air-suspension 'Normal' level per Porsche US press kit (195 mm with off-road package); steel-spring value not stated. Seats not stated. | fill: Only seats was requested. The Porsche tech data has no seat count (it lists ground clearance, steel PASM DIN 186 mm, for reference). A porsche.com story about seats covers only the combustion Macan."
+ },
+ {
+  "id": "porsche-macan-4s",
+  "length_mm": 4784,
+  "width_mm": 1938,
+  "width_note": "bez retrovizora",
+  "height_mm": 1622,
+  "clearance_mm": 186,
+  "seats": null,
+  "sources": [
+   "https://newsroom.porsche.com/dam/jcr:693341b3-b7f5-4352-b51e-7b899db88db4/pag-macan-4s-electric-td-en.pdf",
+   "https://www.porsche.com/pcom-model-pages-isr/api/en/technical-data/XABDC1/"
+  ],
+  "notes": "Porsche technical data MY R 06/2024: width 1938 (2152 incl. mirrors). Ground clearance and seats not stated in this document (Macan family air-suspension figure 185 mm is in press kit, see macan-4). | fill: 'Max. ground clearance, steel suspension (PASM DIN): 186 mm'; air suspension low 170, off-road 205, extra off-road 225. No seat count in the official tech data."
+ },
+ {
+  "id": "porsche-cayenne-turbo-electric",
+  "length_mm": 4985,
+  "width_mm": 1980,
+  "width_note": "bez retrovizora",
+  "height_mm": 1674,
+  "clearance_mm": 190,
+  "seats": null,
+  "sources": [
+   "https://newsroom.porsche.com/dam/jcr:31c63413-bec4-46dd-b69c-1f78199b6b81/cayenne-turbo-electric-td-en.pdf",
+   "https://newsroom.porsche.com/en/2025/products/porsche-cayenne-electric-technological-milestone-41128.html",
+   "https://www.porsche.com/pcom-model-pages-isr/api/en/technical-data/X1ACD1/"
+  ],
+  "notes": "Width 1980 (2199 incl. mirrors). Ground clearance and seats not stated. | fill: 'Max. ground clearance, air suspension (normal ride height): 190 mm'; low 175, off-road 210, extra off-road 245. No seat count in the tech data or the newsroom TD PDF."
+ },
+ {
+  "id": "renault-5-e-tech",
+  "length_mm": 3922,
+  "width_mm": 1808,
+  "width_note": "bez retrovizora",
+  "height_mm": 1498,
+  "clearance_mm": 145,
+  "seats": 5,
+  "sources": [
+   "https://www.renault.fr/vehicules-electriques/r5-e-tech-electrique/comparateur-specifications.html",
+   "https://www.renault.co.uk/electric-vehicles/r5-e-tech-electric/specifications.html"
+  ],
+  "notes": "renault.fr: largeur hors tout 1808, with mirrors 2020 (renault.co.uk labels 1808 as 'mirrors folded'). Clearance 145 is laden ('en charge'); unladen not given. Data shown for 120 hp version.",
+  "clearance_laden": true
+ },
+ {
+  "id": "renault-twingo-e-tech",
+  "length_mm": 3789,
+  "width_mm": null,
+  "width_note": "sa retrovizorima",
+  "height_mm": 1491,
+  "clearance_mm": 118,
+  "seats": 4,
+  "sources": [
+   "https://www.renault.fr/vehicules-electriques/twingo-e-tech-electrique/comparateur-specifications.html",
+   "https://www.renault.fr/vehicules-electriques/twingo-e-tech-electrique/habitabilite-et-dimensions.html"
+  ],
+  "notes": "Only width with mirrors stated in mm (1953); dimensions page says width 1.72 m (mirror status unspecified). Clearance 118 is laden ('en charge'); unladen not given. | Width hidden on site: only width with mirrors (1953) is published.",
+  "clearance_laden": true
+ },
+ {
+  "id": "renault-4-e-tech",
+  "length_mm": 4144,
+  "width_mm": 1808,
+  "width_note": "bez retrovizora",
+  "height_mm": 1552,
+  "clearance_mm": 181,
+  "seats": 5,
+  "sources": [
+   "https://www.renault.fr/vehicules-electriques/r4-e-tech-electrique/comparateur-specifications.html",
+   "https://www.renault.co.uk/electric-vehicles/r4-e-tech-electric/specifications.html"
+  ],
+  "notes": "Width with mirrors 2020 (renault.co.uk labels 1808 as 'mirrors folded'). Height 1552; 1572 with roof rails (UK: techno/iconic 1572). Clearance 181 is laden ('en charge'); unladen not given.",
+  "clearance_laden": true
+ },
+ {
+  "id": "skoda-elroq",
+  "length_mm": 4488,
+  "width_mm": 1884,
+  "width_note": null,
+  "height_mm": 1625,
+  "clearance_mm": 186,
+  "seats": 5,
+  "sources": [
+   "https://cdn.skoda-storyboard.com/2025/04/Skoda_Elroq_Technical_data_28ca6795.pdf"
+  ],
+  "notes": "Skoda press technical data (Elroq 50/60/85/RS columns). Height and clearance at kerb weight. The PDF lists two values each: height 1625/1608, clearance 186/170. The lower values appear to be the RS (sports chassis), but the text extract does not map them to columns clearly. Width: mirrors not specified. Does not apply to Sportline."
+ },
+ {
+  "id": "skoda-enyaq",
+  "length_mm": 4658,
+  "width_mm": 1879,
+  "width_note": null,
+  "height_mm": 1622,
+  "clearance_mm": 183,
+  "seats": 5,
+  "sources": [
+   "https://cdn.skoda-storyboard.com/2025/05/TD-Enyaq-en_0308de7f.pdf"
+  ],
+  "notes": "Skoda press technical data (May 2025, columns 60/85/85x/RS). Length 4658 (RS 4660). Height at kerb weight 1622/1620/1607 and clearance 183/181/167. The lower values appear to be 85x and RS, but the column mapping is not explicit. Width: mirrors not specified. Does not apply to Sportline."
+ },
+ {
+  "id": "skoda-enyaq-coupe",
+  "length_mm": 4658,
+  "width_mm": 1879,
+  "width_note": null,
+  "height_mm": 1623,
+  "clearance_mm": 183,
+  "seats": 5,
+  "sources": [
+   "https://cdn.skoda-storyboard.com/2025/05/TD-Enyaq-Coupe-en_d0e93c99.pdf"
+  ],
+  "notes": "Skoda press technical data for the Enyaq Coupe (May 2025, columns 60/85/85x/RS). Length 4658 (RS 4660). Height at kerb weight 1623/1621/1608 and clearance 183/181/167, with the lower values presumably 85x and RS. Width: mirrors not specified. Does not apply to Sportline."
+ },
+ {
+  "id": "suzuki-e-vitara",
+  "length_mm": 4275,
+  "width_mm": 1800,
+  "width_note": null,
+  "height_mm": 1635,
+  "clearance_mm": 180,
+  "seats": 5,
+  "sources": [
+   "https://www.globalsuzuki.com/globalnews/2024/1104.html"
+  ],
+  "notes": "Suzuki global news release, European-model specs. Clearance is stated as 'minimum ground clearance'. Width: mirrors not specified."
+ },
+ {
+  "id": "toyota-bz4x",
+  "length_mm": 4690,
+  "width_mm": 1860,
+  "width_note": "bez retrovizora",
+  "height_mm": 1650,
+  "clearance_mm": 177,
+  "seats": 5,
+  "sources": [
+   "https://media.toyota.co.uk/wp-content/uploads/sites/5/pdf/260311-bZ4X-Tech-Specs.pdf",
+   "https://www.toyota.co.uk/new-cars/bz4x/specs"
+  ],
+  "notes": "Toyota UK media tech specs (260311 = March 2026, updated bZ4X). Ground clearance is 'minimum running ground clearance with one passenger'. Single values given for all versions. Seats taken from toyota.co.uk ('five-seat cabin')."
+ },
+ {
+  "id": "volkswagen-id-3-neo",
+  "length_mm": 4265,
+  "width_mm": 1809,
+  "width_note": "bez retrovizora",
+  "height_mm": 1554,
+  "clearance_mm": null,
+  "seats": 5,
+  "sources": [
+   "https://www.volkswagen.at/id3-neo/id3-neo/technische-daten/trend",
+   "https://www.volkswagen.co.uk/en/electric-and-hybrid/electric-cars/id3-neo/id3-neo-dimensions.html",
+   "https://www.volkswagen-newsroom.com/en/at-a-glance-id3-neo-20328",
+   "https://www.volkswagen-newsroom.com/de/publikationen/weitere/der-neue-id-3-neo-3265/download"
+  ],
+  "notes": "VW Austria, ID.3 Neo Trend 50 kWh: height without roof rails 1554. VW UK lists height 1561 (same length and width). No official seat count or ground clearance found. | fill: Seats: newsroom 'At a glance' states 'Seating: 5' / 'five-seater'. Ground clearance not published on volkswagen.at tech data (no row) or newsroom press kit."
+ },
+ {
+  "id": "volkswagen-id-4",
+  "length_mm": 4584,
+  "width_mm": 1852,
+  "width_note": "bez retrovizora",
+  "height_mm": 1616,
+  "clearance_mm": 210,
+  "seats": 5,
+  "sources": [
+   "https://www.volkswagen.at/id4/id4/technische-daten/pure",
+   "https://www.volkswagen.co.uk/en/electric-and-hybrid/electric-cars/id4/id4-dimensions.html",
+   "https://volkswagen-newsroom.com/de/pressemitteilungen/der-neue-id4-weltpremiere-des-rein-elektrisch-angetriebenen-suv-6446/download",
+   "https://www.volkswagen-newsroom.com/de/der-neue-id4-gtx-von-volkswagen-7256/download"
+  ],
+  "notes": "VW Austria, ID.4 Pure: height without roof rails 1616. VW UK lists height 1634 for ID.4 and 1619 for the GTX (GTX length 4582). No official ground clearance found. | fill: World-premiere press release (2020): '21 Zentimeter Bodenfreiheit' (RWD ID.4; laden/unladen not stated). ID.4 GTX with DCC: 17 cm (170 mm). Seats not requested (also 'Sitze 5' at https://www.volkswagen.at/id4/id4/technische-daten/pure)."
+ },
+ {
+  "id": "volkswagen-id-5",
+  "length_mm": 4599,
+  "width_mm": 1852,
+  "width_note": "bez retrovizora",
+  "height_mm": 1618,
+  "clearance_mm": null,
+  "seats": null,
+  "sources": [
+   "https://volkswagen.co.uk/en/electric-and-hybrid/electric-cars/id5/id-5-dimensions.html"
+  ],
+  "notes": "VW UK. The GTX is 4582 long and 1601 high. No official seat count or ground clearance found. | fill: Checked volkswagen.de/.at/.co.uk ID.5 tech data/dimensions pages and newsroom ID.5 press releases/technical data: no ground clearance and no explicit seat count found (volkswagen.at ID.5 technische-daten pages failed to load)."
+ },
+ {
+  "id": "volkswagen-id-7",
+  "length_mm": 4961,
+  "width_mm": 1862,
+  "width_note": "bez retrovizora",
+  "height_mm": 1534,
+  "clearance_mm": null,
+  "seats": 5,
+  "sources": [
+   "https://www.volkswagen.at/id7/id7/technische-daten/pro",
+   "https://volkswagen.co.uk/en/electric-and-hybrid/electric-cars/id7/id7-dimensions.html"
+  ],
+  "notes": "VW Austria, ID.7 Pro: height without roof rails 1534. VW UK lists height 1536 and width 2141. The UK page mislabels 2141 as 'excluding mirrors', but it is presumably the width including mirrors. The UK page also gives 1862 excluding mirrors. No official ground clearance found. | fill: No ground clearance on volkswagen.at (alle-varianten), volkswagen.de tech data, volkswagen.co.uk dimensions, or newsroom press kit PDF. (Seats 5 confirmed at https://www.volkswagen.at/id7/id7/technische-daten/alle-varianten, not requested.)"
+ },
+ {
+  "id": "volkswagen-id-polo",
+  "length_mm": 4053,
+  "width_mm": 1816,
+  "width_note": "bez retrovizora",
+  "height_mm": 1530,
+  "clearance_mm": null,
+  "seats": 5,
+  "sources": [
+   "https://www.volkswagen.co.uk/en/new/id-polo/id-polo-dimensions.html",
+   "https://www.volkswagen-newsroom.com/en/at-a-glance-id-polo-20359"
+  ],
+  "notes": "Dimensions from VW UK; seats from VW newsroom ('seats five people'). No official ground clearance found. | fill: No ground clearance in volkswagen.at technische-daten (trend), newsroom fact sheet, world-premiere and international media drive press kits."
+ },
+ {
+  "id": "volvo-ex30",
+  "length_mm": 4233,
+  "width_mm": 1838,
+  "width_note": "bez retrovizora",
+  "height_mm": 1550,
+  "clearance_mm": 171,
+  "seats": 5,
+  "sources": [
+   "https://www.volvocars.com/uk/cars/ex30-electric/specifications/",
+   "https://www.volvocars.com/nz/support/car/ex30/article/0ed816eed33d98cac0a8cc377bc12bc7-e6a7973b2bf222b2c0a8b09757c97ec8-8664b2fa77a7e089c0a8296870d1a409"
+  ],
+  "notes": "Height and clearance at kerb weight plus one person. Clearance comes from the Volvo NZ support/owner-manual dimensions page. Width is 2032 with mirrors."
+ },
+ {
+  "id": "volvo-ex60",
+  "length_mm": 4803,
+  "width_mm": 1908,
+  "width_note": "bez retrovizora",
+  "height_mm": 1635,
+  "clearance_mm": 178,
+  "seats": 5,
+  "sources": [
+   "https://www.volvocars.com/intl/cars/ex60-electric/specifications",
+   "https://www.volvocars.com/uk/support/car/ex60/article/0ed816eed33d98cac0a8cc377bc12bc7-e6a7973b2bf222b2c0a8b09757c97ec8-8664b2fa77a7e089c0a8296870d1a409"
+  ],
+  "notes": "Height and clearance at kerb weight plus one person. Clearance comes from the Volvo UK support dimensions page. Width is 2067 with mirrors. Seats: 5 for P6, P10 and P12."
+ },
+ {
+  "id": "volvo-ex90",
+  "length_mm": 5037,
+  "width_mm": 1964,
+  "width_note": "bez retrovizora",
+  "height_mm": 1744,
+  "clearance_mm": 213,
+  "seats": 7,
+  "sources": [
+   "https://www.volvocars.com/uk/cars/ex90-electric/specifications/",
+   "https://www.volvocars.com/uk/support/car/ex90/article/0ed816eed33d98cac0a8cc377bc12bc7-e6a7973b2bf222b2c0a8b09757c97ec8-8664b2fa77a7e089c0a8296870d1a409"
+  ],
+  "notes": "UK spec page gives height 1744 (kerb weight plus one person). The support/manual page gives 1741 and ground clearance 213, both at kerb weight plus one person, with no air-suspension mode stated. Width is 2113 with mirrors. Manual mentions 6- and 7-seat versions; 7 is the maximum."
+ },
+ {
+  "id": "volvo-es90",
+  "length_mm": 5000,
+  "width_mm": 1942,
+  "width_note": "bez retrovizora",
+  "height_mm": 1549,
+  "clearance_mm": 177,
+  "seats": 5,
+  "sources": [
+   "https://volvocars.com/ie/cars/es90-electric/specifications",
+   "https://www.volvocars.com/nz/support/car/es90/article/0ed816eed33d98cac0a8cc377bc12bc7-e6a7973b2bf222b2c0a8b09757c97ec8-8664b2fa77a7e089c0a8296870d1a409"
+  ],
+  "notes": "IE spec page gives height 1549 (kerb weight plus one person). The NZ support page gives height 1546 and ground clearance 177 at kerb weight plus one person. Width is 2120 with mirrors."
+ }
+]

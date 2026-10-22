@@ -1,0 +1,1987 @@
+{
+  "_about": "Brands listed on ev-srbija.rs. Collected from each brand's official Serbian website on 2026-10-15. Prices are 'from' prices as shown on the site that day, in EUR. null = not found on the site; check manually. logo_url is the file the brand uses in its own site header; ask the importer for official logo files and permission before publishing. Where a site did not state body type or powertrain, a few well-known values were filled in (e.g. Tiggo = SUV, Arrizo 8 = sedan, JAC T9 = pikap); verify before publishing. Logo files are in the logos folder (provided by the site owner on 2026-10-15); on the homepage they are shown in one color that follows the light or dark theme. range_wltp_km = WLTP range of the longest-range version, from manufacturer or press sources (checked 2026-10-15). Fact-checked against importer sites on 2026-10-16. Only passenger models (cars, SUVs, pickups) are shown on the site; vans, trucks and buses are kept here but not listed.",
+  "brands": [
+    {
+      "slug": "byd",
+      "name": "BYD",
+      "website": "https://byd-auto.rs/",
+      "importer": "TDV Automotive DOO (generalni uvoznik i distributer za Srbiju)",
+      "address": "Milutina Milankovića 9ž, 11070 Beograd",
+      "phone": "+381 (0)11 440 92 97",
+      "email": "office@byd-auto.rs",
+      "dealer_locator": null,
+      "logo_url": "https://byd-auto.rs/wp-content/uploads/2025/03/byd-main-logo-dark.svg",
+      "description_sr": "BYD Srbija donosi inovaciju i vrhunske performanse u svet kineskih električnih automobila koji osvajaju globalno tržište.",
+      "models": [
+        {
+          "name": "Dolphin Surf",
+          "powertrain": "EV",
+          "body": "Hečbek",
+          "price_from_eur": 23990,
+          "range_wltp_km": 507,
+          "range_note": "507 km per site owner (byd-auto.rs lists 507 km WLTP urban for Boost; WLTP combined is 322 km)"
+        },
+        {
+          "name": "Atto 2 DM-i",
+          "powertrain": "PHEV",
+          "body": "SUV",
+          "price_from_eur": 28250
+        },
+        {
+          "name": "Atto 2 Comfort",
+          "powertrain": "EV",
+          "body": "SUV",
+          "price_from_eur": 32250,
+          "range_wltp_km": 430
+        },
+        {
+          "name": "Seal U DM-i",
+          "powertrain": "PHEV",
+          "body": "SUV",
+          "price_from_eur": 35990
+        },
+        {
+          "name": "Atto 3 Evo",
+          "powertrain": "EV",
+          "body": "SUV",
+          "price_from_eur": 36250,
+          "range_wltp_km": 510,
+          "range_note": "Design RWD, WLTP (byd-auto.rs/modeli/byd-atto-3-evo/), checked 2026-10-16",
+          "battery_kwh": 74.8
+        },
+        {
+          "name": "Seal",
+          "powertrain": "EV",
+          "body": "Sedan",
+          "price_from_eur": 40490,
+          "range_wltp_km": 570
+        },
+        {
+          "name": "Sealion 7",
+          "powertrain": "EV",
+          "body": "SUV",
+          "price_from_eur": 44590,
+          "range_wltp_km": 502,
+          "battery_kwh": [
+            82.5,
+            91.3
+          ],
+          "range_note": "per site owner 2026-10-16"
+        },
+        {
+          "name": "Seal 5 DM-i",
+          "powertrain": "PHEV",
+          "body": "Sedan",
+          "price_from_eur": null,
+          "note": "samo u futeru sajta"
+        }
+      ],
+      "social": {
+        "facebook": "https://www.facebook.com/profile.php?id=61573925043998",
+        "instagram": "https://www.instagram.com/byd.srbija/",
+        "youtube": "https://www.youtube.com/channel/UCezYxQzKzknd52GuozpOdnA",
+        "linkedin": "https://www.linkedin.com/company/byd-serbia",
+        "x": "https://x.com/BYDSerbia",
+        "tiktok": "https://www.tiktok.com/@byd.serbia"
+      },
+      "gaps": [],
+      "logo_file": "logos/byd.svg",
+      "phone_roadside": "+381 (0)69 667 667",
+      "showrooms": [
+        {
+          "name": "BYD Salon",
+          "address": "Bulevar Milutina Milankovića 7đ, Novi Beograd",
+          "hours": "Pon-Pet 8:00-18:00, Sub 10:00-14:00",
+          "phone": "+381 (0)11 440 92 97"
+        }
+      ]
+    },
+    {
+      "slug": "changan",
+      "name": "Changan",
+      "website": "https://changanbalkans.com/rs/",
+      "importer": null,
+      "parent_company": "Changan Automobile Europe Holding B.V., Koningin Julianaplein 10, 2595 AA Hag, Holandija",
+      "address": null,
+      "phone": null,
+      "email": null,
+      "dealer_locator": null,
+      "logo_url": null,
+      "description_sr": null,
+      "description_en": "CHANGAN Automobile is one of China's top four automotive groups, with 40 years of manufacturing expertise.",
+      "models": [
+        {
+          "name": "CS35 Plus",
+          "powertrain": "Benzin",
+          "body": "SUV",
+          "price_from_eur": 19990
+        },
+        {
+          "name": "CS55 Plus",
+          "powertrain": "Benzin",
+          "body": "SUV",
+          "price_from_eur": 23990
+        },
+        {
+          "name": "UNI-T",
+          "powertrain": "Benzin",
+          "body": "SUV",
+          "price_from_eur": 25990
+        },
+        {
+          "name": "Deepal S05",
+          "powertrain": "EV",
+          "body": "SUV",
+          "price_from_eur": 33490,
+          "range_wltp_km": 485
+        },
+        {
+          "name": "Deepal S07",
+          "powertrain": "EV",
+          "body": "SUV",
+          "price_from_eur": null,
+          "range_wltp_km": 475,
+          "battery_kwh": 79.97,
+          "range_note": "WLTP per site owner 2026-10-16"
+        },
+        {
+          "name": "Deepal S05 PHEV",
+          "powertrain": "PHEV",
+          "body": "SUV",
+          "price_from_eur": null,
+          "note": "Uskoro"
+        }
+      ],
+      "social": {
+        "facebook": "https://www.facebook.com/people/Changan-Srbija/61581142259659/",
+        "instagram": "https://www.instagram.com/changan.srbija/",
+        "linkedin": "https://www.linkedin.com/company/changan-balkans/"
+      },
+      "gaps": [
+        "Serbian importer and contacts",
+        "logo",
+        "powertrain for CS35 Plus, CS55 Plus, UNI-T"
+      ],
+      "logo_file": "logos/changan.svg"
+    },
+    {
+      "slug": "chery",
+      "name": "Chery",
+      "website": "https://www.cheryauto.rs/",
+      "importer": "Chery Grand Motors (named in the site's consent text)",
+      "address": "Milutina Milankovića 1a, 11070 Novi Beograd (prodajni salon)",
+      "phone": "+381 11 20 90 630",
+      "email": null,
+      "dealer_locator": "https://www.cheryauto.rs/kontakt",
+      "logo_url": "http://www.cheryauto.rs/images/fb_logo.png",
+      "description_sr": "Chery, luksuz za svačiji ukus. Doživite vožnju kao nikada pre!",
+      "models": [
+        {
+          "name": "Tiggo 4 Pro Hybrid",
+          "powertrain": "Hibrid",
+          "body": "SUV",
+          "price_from_eur": null
+        },
+        {
+          "name": "Tiggo 7 Pro",
+          "powertrain": "Benzin",
+          "body": "SUV",
+          "price_from_eur": null
+        },
+        {
+          "name": "Tiggo 7 Pro PHEV",
+          "powertrain": "PHEV",
+          "body": "SUV",
+          "price_from_eur": null
+        },
+        {
+          "name": "Tiggo 8 Pro",
+          "powertrain": "Benzin",
+          "body": "SUV",
+          "price_from_eur": null
+        },
+        {
+          "name": "Tiggo 8 Pro PHEV",
+          "powertrain": "PHEV",
+          "body": "SUV",
+          "price_from_eur": null
+        },
+        {
+          "name": "Tiggo 9 Pro PHEV",
+          "powertrain": "PHEV",
+          "body": "SUV",
+          "price_from_eur": 44990
+        },
+        {
+          "name": "FX",
+          "powertrain": "Benzin",
+          "body": null,
+          "price_from_eur": null
+        },
+        {
+          "name": "Arrizo 8",
+          "powertrain": "Benzin",
+          "body": "Sedan",
+          "price_from_eur": 22990
+        },
+        {
+          "name": "Arrizo 8 PHEV",
+          "powertrain": "PHEV",
+          "body": "Sedan",
+          "price_from_eur": null
+        }
+      ],
+      "dealers": [
+        {
+          "city": "Beograd",
+          "name": "Grand Motors"
+        },
+        {
+          "city": "Novi Sad",
+          "name": "Grand Motors"
+        },
+        {
+          "city": "Pančevo",
+          "name": "Sava Motors"
+        },
+        {
+          "city": "Kraljevo",
+          "name": "Marić Centar"
+        },
+        {
+          "city": "Niš",
+          "name": "Ideal Auto"
+        },
+        {
+          "city": "Šabac",
+          "name": "KGV Motors"
+        },
+        {
+          "city": "Subotica",
+          "name": "Auto kuća Alfa"
+        },
+        {
+          "city": "Zrenjanin",
+          "name": "Točak sistem doo"
+        }
+      ],
+      "social": {
+        "facebook": "https://www.facebook.com/chery.serbia/",
+        "instagram": "https://www.instagram.com/chery.serbia/",
+        "youtube": "https://www.youtube.com/@CheryAutoSerbia",
+        "x": "https://www.twitter.com/CheryAutoCo"
+      },
+      "gaps": [
+        "email",
+        "logo_url is the social-share image, not confirmed as the logo",
+        "powertrain for non-PHEV models",
+        "Removed from the site on 2026-10-16: no 100% electric car on the Serbian market."
+      ],
+      "logo_file": "logos/chery.svg",
+      "listed_on_site": false
+    },
+    {
+      "slug": "china-motor",
+      "name": "Dongfeng",
+      "website": "https://chinamotor.rs/",
+      "importer": null,
+      "address": null,
+      "phone": null,
+      "email": null,
+      "dealer_locator": null,
+      "logo_url": null,
+      "description_sr": null,
+      "models": [
+        {
+          "name": "Box",
+          "powertrain": "EV",
+          "body": "Hečbek",
+          "range_wltp_km": 310,
+          "note": "added 2026-10-16 from the site owner (photo supplied); range not yet verified",
+          "range_note": "per site owner 2026-10-16"
+        }
+      ],
+      "social": {},
+      "gaps": [
+        "confirm that chinamotor.rs is the Dongfeng importer (assumed from the logo you sent)",
+        "site blocks automated reading: fill models, prices and contacts manually"
+      ],
+      "logo_file": "logos/dongfeng.svg",
+      "importer_site_name": "China Motor"
+    },
+    {
+      "slug": "foton",
+      "name": "Foton",
+      "website": "https://fotonserbia.rs/",
+      "importer": "Foton Serbia - Ecofleet d.o.o., Vladimira Tomanovića 59, Beograd",
+      "address": "Vladimira Tomanovića 59, 11000 Beograd",
+      "phone": "+381 11 6 555 211",
+      "phone_sales": [
+        "+381 66 8517 959",
+        "+381 64 8090 363"
+      ],
+      "email": "office@fotonserbia.rs",
+      "dealer_locator": null,
+      "logo_url": null,
+      "logo_file": "logos/foton.svg",
+      "description_sr": "Foton je vodeći proizvođač komercijalnih vozila u svetu, osnovan 1996. godine sa sedištem u Pekingu, Kina.",
+      "models": [
+        {
+          "name": "eTunland",
+          "powertrain": "EV",
+          "body": "Pikap",
+          "price_from_eur": null,
+          "range_wltp_km": 400,
+          "range_note": "WLTP, provided by site owner 2026-10-16"
+        },
+        {
+          "name": "eToano Pro",
+          "powertrain": "EV",
+          "body": "Kombi",
+          "price_from_eur": null
+        },
+        {
+          "name": "eView",
+          "powertrain": "EV",
+          "body": "Kombi",
+          "price_from_eur": null
+        },
+        {
+          "name": "eView Grand",
+          "powertrain": "EV",
+          "body": "Kombi",
+          "price_from_eur": null
+        },
+        {
+          "name": "eAumark",
+          "powertrain": "EV",
+          "body": "Kamion",
+          "price_from_eur": null
+        },
+        {
+          "name": "eAuman",
+          "powertrain": "EV",
+          "body": "Kamion",
+          "price_from_eur": null
+        },
+        {
+          "name": "eBus",
+          "powertrain": "EV",
+          "body": "Autobus",
+          "price_from_eur": null
+        },
+        {
+          "name": "Tunland G7",
+          "powertrain": null,
+          "body": "Pikap",
+          "price_from_eur": 29990,
+          "note": "nije električni; cena iz oglasa u hero sekciji"
+        },
+        {
+          "name": "Tunland V9",
+          "powertrain": null,
+          "body": "Pikap",
+          "price_from_eur": null,
+          "note": "nije električni"
+        },
+        {
+          "name": "Tunland V7",
+          "powertrain": null,
+          "body": "Pikap",
+          "price_from_eur": null
+        },
+        {
+          "name": "Aumark",
+          "powertrain": null,
+          "body": "Kamion",
+          "price_from_eur": null
+        },
+        {
+          "name": "Wonder",
+          "powertrain": null,
+          "body": null,
+          "price_from_eur": null
+        }
+      ],
+      "dealers": [
+        {
+          "city": "Niš",
+          "name": "Ideal Auto d.o.o."
+        },
+        {
+          "city": "Niš",
+          "name": "Auto Mig Niš"
+        }
+      ],
+      "social": {
+        "instagram": "https://www.instagram.com/fotonsrbija/",
+        "facebook": "https://www.facebook.com/profile.php?id=61564629083601",
+        "linkedin": "https://www.linkedin.com/company/ecofleetecofleet/about/"
+      },
+      "gaps": [
+        "EV status of the 'e' models inferred from their names: confirm with the importer",
+        "body types inferred from the site menu (Pickup, Kamion, Kombi, Bus)",
+        "prices"
+      ]
+    },
+    {
+      "slug": "geely",
+      "name": "Geely",
+      "website": "https://www.geelyauto.rs/",
+      "importer": "VCAG d.o.o. Beograd",
+      "address": "Auto-put za Novi Sad 98, 11080 Beograd - Zemun",
+      "phone": "011 418 00 80",
+      "email": "geely_rs@geely-see.com",
+      "dealer_locator": "https://www.geelyauto.rs/zastupnici",
+      "logo_url": null,
+      "description_sr": "Geely je pionirska marka, usmerena ka budućnosti, koja se ističe inovativnim dizajnom vozila i razvojem napredne tehnologije.",
+      "models": [
+        {
+          "name": "Geely E2",
+          "powertrain": "EV",
+          "body": null,
+          "price_from_eur": null,
+          "range_wltp_km": 325,
+          "range_note": "WLTP (geelyauto.rs/vozila/e2), checked 2026-10-16",
+          "listed_on_site": false,
+          "note": "coming soon, not yet on sale in Serbia per site owner (2026-10-16)"
+        },
+        {
+          "name": "Geely E5",
+          "powertrain": "EV",
+          "body": "SUV",
+          "price_from_eur": null,
+          "range_wltp_km": 430,
+          "range_note": "WLTP (geelyauto.rs/vozila/e5), checked 2026-10-16",
+          "battery_kwh": 60.22
+        },
+        {
+          "name": "Cityray",
+          "powertrain": "Benzin",
+          "body": "SUV",
+          "price_from_eur": null,
+          "note": "popust do 8.000 €"
+        },
+        {
+          "name": "Starray",
+          "powertrain": "Benzin",
+          "body": "SUV",
+          "price_from_eur": null
+        },
+        {
+          "name": "Starray EM-i",
+          "powertrain": "PHEV",
+          "body": "SUV",
+          "price_from_eur": 29990,
+          "note": "popust do 7.000 €"
+        }
+      ],
+      "social": {
+        "facebook": "https://www.facebook.com/GeelySrbija",
+        "instagram": "https://www.instagram.com/geelysrbija",
+        "youtube": "https://www.youtube.com/@geelysrbija"
+      },
+      "gaps": [
+        "logo",
+        "powertrain for Cityray and Starray",
+        "E2 powertrain not stated on site (assumed EV)"
+      ],
+      "logo_file": "logos/geely.svg"
+    },
+    {
+      "slug": "gwm",
+      "name": "GWM (Great Wall Motor)",
+      "website": "https://greatwall.rs/",
+      "importer": "CENTAR S DOO (ekskluzivni distributer, greatwall.rs)",
+      "address": null,
+      "phone": null,
+      "email": null,
+      "dealer_locator": null,
+      "logo_url": null,
+      "description_sr": null,
+      "models": [
+        {
+          "name": "WEY 03 PHEV AWD",
+          "powertrain": "PHEV",
+          "body": "SUV"
+        },
+        {
+          "name": "WEY 05 PHEV",
+          "powertrain": "PHEV",
+          "body": "SUV"
+        },
+        {
+          "name": "Haval H6 HEV",
+          "powertrain": "HEV",
+          "body": "SUV"
+        },
+        {
+          "name": "Haval H6",
+          "powertrain": "Benzin",
+          "body": "SUV"
+        },
+        {
+          "name": "Haval Jolion Pro HEV",
+          "powertrain": "HEV",
+          "body": "SUV"
+        },
+        {
+          "name": "POER",
+          "powertrain": "Dizel",
+          "body": "Pikap"
+        }
+      ],
+      "social": {},
+      "gaps": [
+        "no BEV listed on greatwall.rs (checked 2026-10-16)",
+        "powertrain of Haval H6 and POER assumed from model names",
+        "Removed from the site on 2026-10-16: no 100% electric car on the Serbian market."
+      ],
+      "logo_file": "logos/gwm.svg",
+      "listed_on_site": false
+    },
+    {
+      "slug": "jac",
+      "name": "JAC",
+      "website": "https://jacmotors.rs/",
+      "importer": "Mašinopromet d.o.o. (MP Group)",
+      "address": null,
+      "phone": "064 820 70 56",
+      "email": "dusan@mpgroup.rs",
+      "dealer_locator": null,
+      "logo_url": "https://jacmotors.rs/wp-content/uploads/logo-white.svg",
+      "description_sr": "JAC je jedan od najvećih svetskih proizvođača električnih vozila.",
+      "models": [
+        {
+          "name": "E30X",
+          "powertrain": "EV",
+          "body": "Hečbek",
+          "price_from_eur": null,
+          "note": "\"100% električan\", 41 or 51.5 kWh LFP; range shown as WLTP in headline but CLTC in spec table, so not used",
+          "range_wltp_km": 505,
+          "battery_kwh": [
+            41,
+            51.5
+          ],
+          "range_note": "405 / 505 km per site owner 2026-10-16 (importer spec table labels 505 km as CLTC)"
+        },
+        {
+          "name": "e-JS4",
+          "powertrain": "EV",
+          "body": "SUV",
+          "price_from_eur": null,
+          "listed_on_site": false,
+          "note": "not offered in Serbia per site owner (2026-10-16)"
+        },
+        {
+          "name": "T9 EV",
+          "powertrain": "EV",
+          "body": "Pikap",
+          "price_from_eur": null,
+          "range_wltp_km": 330,
+          "battery_kwh": 88.02,
+          "range_note": "per site owner 2026-10-16"
+        },
+        {
+          "name": "M3 EV",
+          "powertrain": "EV",
+          "body": null,
+          "price_from_eur": null,
+          "listed_on_site": false,
+          "note": "not offered in Serbia per site owner (2026-10-16)"
+        }
+      ],
+      "social": {
+        "facebook": "https://www.facebook.com/profile.php?id=61569186390870",
+        "instagram": "https://www.instagram.com/jacmotors_balkan/",
+        "linkedin": "https://www.linkedin.com/company/jacmotorsserbia",
+        "x": "https://x.com/JACMotors_Rs",
+        "tiktok": "https://www.tiktok.com/@jacmotors_srbija"
+      },
+      "gaps": [
+        "importer name (email domain mpgroup.rs)",
+        "address",
+        "prices",
+        "logo file is white, needs a dark version for light backgrounds"
+      ],
+      "logo_file": "logos/jac.svg"
+    },
+    {
+      "slug": "jetour",
+      "name": "Jetour",
+      "website": "https://jetour.rs/",
+      "importer": "AK Kompresor d.o.o. (named as page author; not confirmed as importer)",
+      "address": null,
+      "phone": null,
+      "email": null,
+      "dealer_locator": null,
+      "logo_url": null,
+      "description_sr": "Istražite JETOUR SUV modele dostupne u Srbiji.",
+      "models": [],
+      "social": {},
+      "gaps": [
+        "site content loads by script and could not be read: models, prices, contacts, logo",
+        "Removed from the site on 2026-10-16: no 100% electric car on the Serbian market."
+      ],
+      "logo_file": "logos/jetour.svg",
+      "logo_file_alt": "logos/jetour-white-alt.svg",
+      "listed_on_site": false
+    },
+    {
+      "slug": "jmev",
+      "name": "JMEV",
+      "website": "https://www.jmev.rs/",
+      "importer": "CUBI d.o.o. (generalni uvoznik, distributer i serviser)",
+      "address": "Novi Sad",
+      "phone": null,
+      "email": null,
+      "dealer_locator": null,
+      "logo_url": "https://www.jmev.rs/assets/logo.png",
+      "description_sr": "Prodaja i servis električnih automobila u Srbiji.",
+      "models": [
+        {
+          "name": "EV3",
+          "powertrain": "EV",
+          "body": "Hečbek",
+          "price_from_eur": null,
+          "range_wltp_km": 330,
+          "battery_kwh": 30.24,
+          "range_note": "per site owner 2026-10-16"
+        },
+        {
+          "name": "Elight",
+          "powertrain": "EV",
+          "body": "Sedan",
+          "price_from_eur": null,
+          "range_wltp_km": 500,
+          "battery_kwh": 63,
+          "range_note": "per site owner 2026-10-16"
+        },
+        {
+          "name": "Ewind",
+          "powertrain": "EV",
+          "body": "SUV",
+          "price_from_eur": null,
+          "range_wltp_km": 460,
+          "battery_kwh": 70.38,
+          "range_note": "per site owner 2026-10-16"
+        }
+      ],
+      "social": {},
+      "gaps": [
+        "street address, phone, email",
+        "prices",
+        "body types"
+      ],
+      "logo_file": "logos/jmev.png"
+    },
+    {
+      "slug": "leapmotor",
+      "name": "Leapmotor",
+      "website": "https://www.leapmotor.net",
+      "importer": null,
+      "address": null,
+      "phone": null,
+      "email": null,
+      "dealer_locator": null,
+      "logo_url": "https://www.leapmotor.net/images/default-source/accessories/logo-small.png",
+      "description_sr": null,
+      "description_en": "Discover Leapmotor electric cars and SUVs.",
+      "models": [
+        {
+          "name": "T03",
+          "powertrain": "EV",
+          "body": "Gradski automobil",
+          "price_from_eur": null,
+          "range_wltp_km": 265,
+          "battery_kwh": 37.3,
+          "range_versions": null,
+          "range_note": "per site owner 2026-10-16"
+        },
+        {
+          "name": "B03X",
+          "powertrain": "EV",
+          "body": "SUV",
+          "price_from_eur": null,
+          "range_wltp_km": 382,
+          "battery_kwh": "39,8 / 53",
+          "range_versions": "292 / 382 km",
+          "range_note": "per site owner 2026-10-16"
+        },
+        {
+          "name": "B05",
+          "powertrain": "EV",
+          "body": "Hečbek",
+          "price_from_eur": null,
+          "range_wltp_km": 482,
+          "battery_kwh": "56,2 / 67,1",
+          "range_versions": "401 / 482 km",
+          "range_note": "per site owner 2026-10-16"
+        },
+        {
+          "name": "B10",
+          "powertrain": "EV / Hybrid EV",
+          "body": "SUV",
+          "price_from_eur": null,
+          "range_wltp_km": 434,
+          "battery_kwh": "56,2 / 67,1",
+          "range_versions": "361 / 434 km",
+          "range_note": "per site owner 2026-10-16"
+        },
+        {
+          "name": "C10",
+          "powertrain": "EV / Hybrid EV",
+          "body": "SUV",
+          "price_from_eur": null,
+          "range_wltp_km": 510,
+          "battery_kwh": "69,9 / 81,9",
+          "range_versions": "420 / 510 km",
+          "range_note": "per site owner 2026-10-16"
+        }
+      ],
+      "social": {
+        "facebook": "https://www.facebook.com/Leapmotor",
+        "instagram": "https://www.instagram.com/leapmotor_global",
+        "youtube": "https://www.youtube.com/@leapmotorglobal",
+        "linkedin": "https://www.linkedin.com/company/leapmotorglobal",
+        "x": "https://x.com/Leapmotorglobal"
+      },
+      "gaps": [
+        "global site: Serbian importer, contacts and prices not listed",
+        "confirm which models are sold in Serbia",
+        "B03 removed: not yet launched in Europe (expected 2027). Serbian site leapmotor.net/rs exists; dealers seen: AUTOPROMET d.o.o. Beograd, GOTA CAR Novi Sad (not confirmed as official). checked 2026-10-16"
+      ],
+      "logo_file": "logos/leapmotor.svg"
+    },
+    {
+      "slug": "lynk-co",
+      "name": "Lynk & Co",
+      "website": "https://www.lynkco-see.com/rs/",
+      "importer": "VCAG d.o.o. Beograd-Zemun",
+      "address": "Autoput za Novi Sad 98, 11080 Beograd-Zemun",
+      "phone": null,
+      "email": null,
+      "dealer_locator": null,
+      "logo_url": null,
+      "description_sr": "Lynk & Co je hrabar globalni automobilski brend koji hrabro izaziva tradicionalne norme automobilske industrije.",
+      "models": [
+        {
+          "name": "Lynk & Co 01",
+          "powertrain": "PHEV",
+          "body": "SUV",
+          "price_from_eur": 34990,
+          "note": "Core+, uključuje 5.000 € popusta"
+        },
+        {
+          "name": "Lynk & Co 02",
+          "powertrain": "EV",
+          "body": "SUV",
+          "price_from_eur": 26990,
+          "note": "uključuje 4.000 € popusta i 5.000 € državne subvencije",
+          "range_wltp_km": 445,
+          "body_note": "crossover"
+        },
+        {
+          "name": "Lynk & Co 08",
+          "powertrain": "PHEV",
+          "body": "SUV",
+          "price_from_eur": 49990,
+          "note": "Core+"
+        }
+      ],
+      "social": {
+        "facebook": "https://www.facebook.com/lynkcosrbija/",
+        "instagram": "https://www.instagram.com/lynkcosrbija",
+        "youtube": "https://www.youtube.com/@lynkcosrbija",
+        "linkedin": "https://www.linkedin.com/company/lynkco-see"
+      },
+      "gaps": [
+        "phone",
+        "email",
+        "logo"
+      ],
+      "logo_file": "logos/lynk-co.svg"
+    },
+    {
+      "slug": "mg",
+      "name": "MG",
+      "website": "https://www.mgmotor.rs/",
+      "importer": "Grand Motors d.o.o., Milutina Milankovića 21, Beograd (mgmotor.rs/impressum)",
+      "address": null,
+      "phone": null,
+      "email": null,
+      "dealer_locator": "https://www.mgmotor.rs/map",
+      "logo_url": null,
+      "description_sr": "MG nudi širok asortiman održivih električnih i elektrifikovanih vozila evropskim vozačima.",
+      "models": [
+        {
+          "name": "MG3",
+          "powertrain": "Benzin",
+          "body": null,
+          "price_from_eur": null
+        },
+        {
+          "name": "MG3 Hybrid+",
+          "powertrain": "HEV",
+          "body": "Hečbek",
+          "price_from_eur": null
+        },
+        {
+          "name": "MG ZS Hybrid+",
+          "powertrain": "HEV",
+          "body": null,
+          "price_from_eur": null
+        },
+        {
+          "name": "MG HS",
+          "powertrain": "Benzin",
+          "body": "SUV",
+          "price_from_eur": null
+        },
+        {
+          "name": "MG HS Hybrid+",
+          "powertrain": "HEV",
+          "body": "SUV",
+          "price_from_eur": null
+        },
+        {
+          "name": "MG HS Plug-in Hybrid",
+          "powertrain": "PHEV",
+          "body": "SUV",
+          "price_from_eur": null
+        },
+        {
+          "name": "MG4 Electric",
+          "powertrain": "EV",
+          "body": "Hečbek",
+          "price_from_eur": null,
+          "range_wltp_km": 465,
+          "range_note": "per site owner 2026-10-16",
+          "battery_kwh": 64
+        },
+        {
+          "name": "MG5 Electric",
+          "powertrain": "EV",
+          "body": "Karavan",
+          "price_from_eur": null,
+          "range_wltp_km": 400,
+          "battery_kwh": 61.1,
+          "range_note": "per site owner 2026-10-16"
+        },
+        {
+          "name": "MGS5 EV",
+          "powertrain": "EV",
+          "body": "SUV",
+          "price_from_eur": null,
+          "range_wltp_km": 480,
+          "battery_kwh": 64,
+          "range_note": "per site owner 2026-10-16"
+        },
+        {
+          "name": "MGS9 Plug-in Hybrid",
+          "powertrain": "PHEV",
+          "body": null,
+          "price_from_eur": null,
+          "note": "Uskoro"
+        }
+      ],
+      "social": {
+        "facebook": "https://www.facebook.com/MGMotorEurope/",
+        "instagram": "https://www.instagram.com/mgmotoreurope/",
+        "youtube": "https://www.youtube.com/channel/UCRkzXwI_w2sikVu0ADnHd6g",
+        "linkedin": "https://www.linkedin.com/company/35589946",
+        "tiktok": "https://www.tiktok.com/@mgmotoreurope",
+        "x": "https://twitter.com/MGMotorEurope"
+      },
+      "gaps": [
+        "importer name",
+        "contacts",
+        "prices (site shows template placeholders)",
+        "logo"
+      ],
+      "logo_file": "logos/mg.svg"
+    },
+    {
+      "slug": "swm",
+      "name": "SWM",
+      "website": "https://swm-auto.rs/",
+      "importer": null,
+      "parent_company": "ATMO grupa (garancija)",
+      "address": null,
+      "phone": null,
+      "email": null,
+      "dealer_locator": null,
+      "logo_url": "https://swm-auto.rs/wp-content/uploads/2025/09/atmo-swm-white.svg",
+      "description_sr": "SWM spaja inovacije i naprednu tehnologiju kako bi vozačima ponudio rešenja za savremene potrebe, bez kompromisa u stilu i tehnici.",
+      "models": [
+        {
+          "name": "G01 Pro",
+          "powertrain": "Benzin",
+          "body": "SUV",
+          "price_from_eur": null,
+          "note": "178 KS, 300 Nm, 7DCT"
+        },
+        {
+          "name": "G03F",
+          "powertrain": null,
+          "body": null,
+          "price_from_eur": null
+        },
+        {
+          "name": "G03F EDI",
+          "powertrain": null,
+          "body": null,
+          "price_from_eur": null
+        },
+        {
+          "name": "X30L EV",
+          "powertrain": "EV",
+          "body": "Kombi",
+          "price_from_eur": null,
+          "note": "2-seat cargo van, 41.9 kWh, 305 km NEDC (swm-auto.rs/swm-x30lev/): not a passenger car, so not listed on the site"
+        }
+      ],
+      "dealers": [
+        {
+          "city": "Beograd",
+          "name": "Mašinopromet"
+        },
+        {
+          "city": null,
+          "name": "Centar Boban"
+        },
+        {
+          "city": "Leskovac",
+          "name": "Todorović 007"
+        }
+      ],
+      "social": {
+        "facebook": "https://www.facebook.com/profile.php?id=61560479307610",
+        "instagram": "https://www.instagram.com/swm_balkan/",
+        "youtube": "https://www.youtube.com/@SWMSerbia"
+      },
+      "gaps": [
+        "importer name and contacts",
+        "prices",
+        "logo file is white and co-branded with ATMO",
+        "Removed from the site on 2026-10-16: no 100% electric passenger car on the Serbian market."
+      ],
+      "logo_file": "logos/swm.svg",
+      "logo_file_alt": "logos/swm-atmo.svg",
+      "listed_on_site": false
+    },
+    {
+      "slug": "audi",
+      "name": "Audi",
+      "website": null,
+      "importer": null,
+      "address": null,
+      "phone": null,
+      "email": null,
+      "dealer_locator": null,
+      "logo_url": null,
+      "description_sr": "Audi je nemački proizvođač automobila sa sedištem u Ingolštatu, deo grupe Volkswagen.",
+      "models": [
+        {
+          "name": "RS e-tron GT",
+          "powertrain": "EV",
+          "body": "Sedan",
+          "range_wltp_km": 593,
+          "battery_kwh": 105.0
+        }
+      ],
+      "social": {},
+      "gaps": [
+        "importer",
+        "dealers",
+        "range",
+        "battery",
+        "photos"
+      ],
+      "logo_file": "logos/audi.svg",
+      "phone_roadside": null,
+      "showrooms": []
+    },
+    {
+      "slug": "bmw",
+      "name": "BMW",
+      "website": null,
+      "importer": "BMW Srbija",
+      "address": "Radnička 8, 11000 Beograd",
+      "phone": "011/3539-900",
+      "email": "office@bmw.rs",
+      "dealer_locator": null,
+      "logo_url": null,
+      "description_sr": "BMW je nemački proizvođač automobila i motocikala osnovan 1916. u Minhenu.",
+      "models": [
+        {
+          "name": "iX1",
+          "powertrain": "EV",
+          "body": "SUV",
+          "range_wltp_km": 467,
+          "battery_kwh": 65.0
+        },
+        {
+          "name": "iX",
+          "powertrain": "EV",
+          "body": "SUV",
+          "range_wltp_km": 701,
+          "battery_kwh": 109.1
+        },
+        {
+          "name": "i3",
+          "powertrain": "EV",
+          "body": "Sedan",
+          "range_wltp_km": 912,
+          "battery_kwh": 108.7,
+          "range_note": "BMW i3 50 xDrive Sedan; 108.7 kWh, 912 km per bmw.rs, confirmed by site owner 2026-10-22."
+        },
+        {
+          "name": "i4",
+          "powertrain": "EV",
+          "body": "Sedan",
+          "range_wltp_km": 600,
+          "battery_kwh": 81.3
+        },
+        {
+          "name": "i5 M60",
+          "powertrain": "EV",
+          "body": "Sedan",
+          "range_wltp_km": 516,
+          "battery_kwh": 81.2
+        },
+        {
+          "name": "i7",
+          "powertrain": "EV",
+          "body": "Sedan",
+          "range_wltp_km": 727,
+          "battery_kwh": 112.5
+        },
+        {
+          "name": "iX3",
+          "powertrain": "EV",
+          "body": "SUV",
+          "range_wltp_km": 805,
+          "battery_kwh": 108.7
+        },
+        {
+          "name": "iX5",
+          "powertrain": "EV",
+          "body": "SUV",
+          "range_wltp_km": 850,
+          "battery_kwh": 141.2,
+          "range_note": "Battery and range provided by site owner on 2026-10-22."
+        },
+        {
+          "name": "i4 M60",
+          "powertrain": "EV",
+          "body": "Sedan",
+          "range_wltp_km": 551,
+          "battery_kwh": 81.1
+        },
+        {
+          "name": "iX M70",
+          "powertrain": "EV",
+          "body": "SUV",
+          "range_wltp_km": 600,
+          "battery_kwh": 108.9
+        },
+        {
+          "name": "i7 M70",
+          "powertrain": "EV",
+          "body": "Sedan",
+          "range_wltp_km": 686,
+          "battery_kwh": 112.4,
+          "range_note": "686 km per bmw.rs (i7 M70 xDrive Sedan, 566–686 km), confirmed by site owner 2026-10-22."
+        }
+      ],
+      "social": {},
+      "gaps": [
+        "importer",
+        "dealers",
+        "range",
+        "battery",
+        "photos"
+      ],
+      "logo_file": "logos/bmw.svg",
+      "phone_roadside": null,
+      "showrooms": [],
+      "hours_salon": "Ponedeljak-Petak 08:30-19:00, subota 09:00-14:00"
+    },
+    {
+      "slug": "cupra",
+      "name": "Cupra",
+      "website": null,
+      "importer": null,
+      "address": null,
+      "phone": null,
+      "email": null,
+      "dealer_locator": null,
+      "logo_url": null,
+      "description_sr": "Cupra je španski sportski brend, koji je kao samostalan brend predstavljen 2018. kao deo grupe SEAT.",
+      "models": [
+        {
+          "name": "Tavascan",
+          "powertrain": "EV",
+          "body": "SUV",
+          "range_wltp_km": 547,
+          "battery_kwh": 77.0
+        },
+        {
+          "name": "Raval",
+          "powertrain": "EV",
+          "body": "Gradski automobil",
+          "range_wltp_km": 448,
+          "battery_kwh": 52.0
+        }
+      ],
+      "social": {},
+      "gaps": [
+        "importer",
+        "dealers",
+        "range",
+        "battery",
+        "photos"
+      ],
+      "logo_file": "logos/cupra.svg",
+      "phone_roadside": null,
+      "showrooms": []
+    },
+    {
+      "slug": "dacia",
+      "name": "Dacia",
+      "website": null,
+      "importer": null,
+      "address": null,
+      "phone": null,
+      "email": null,
+      "dealer_locator": null,
+      "logo_url": null,
+      "description_sr": "Dacia je rumunski proizvođač automobila, deo grupe Renault.",
+      "models": [
+        {
+          "name": "Spring",
+          "powertrain": "EV",
+          "body": "Gradski automobil",
+          "range_wltp_km": 225,
+          "battery_kwh": 26.8
+        }
+      ],
+      "social": {},
+      "gaps": [
+        "importer",
+        "dealers",
+        "range",
+        "battery",
+        "photos"
+      ],
+      "logo_file": "logos/dacia.svg",
+      "phone_roadside": null,
+      "showrooms": []
+    },
+    {
+      "slug": "ford",
+      "name": "Ford",
+      "website": null,
+      "importer": null,
+      "address": null,
+      "phone": null,
+      "email": null,
+      "dealer_locator": null,
+      "logo_url": null,
+      "description_sr": "Ford je američki proizvođač automobila osnovan 1903. u Detroitu.",
+      "models": [
+        {
+          "name": "Mustang Mach-E",
+          "powertrain": "EV",
+          "body": "SUV",
+          "range_wltp_km": 600,
+          "battery_kwh": [
+            72.6,
+            98.0
+          ]
+        },
+        {
+          "name": "Puma Gen-E",
+          "powertrain": "EV",
+          "body": "SUV",
+          "range_wltp_km": 417,
+          "battery_kwh": 46.8
+        },
+        {
+          "name": "Explorer",
+          "powertrain": "EV",
+          "body": "SUV",
+          "range_wltp_km": 602,
+          "battery_kwh": [
+            58.0,
+            77.0,
+            79.0
+          ]
+        }
+      ],
+      "social": {},
+      "gaps": [
+        "importer",
+        "dealers",
+        "range",
+        "battery",
+        "photos"
+      ],
+      "logo_file": "logos/ford.svg",
+      "phone_roadside": null,
+      "showrooms": []
+    },
+    {
+      "slug": "kia",
+      "name": "Kia",
+      "website": null,
+      "importer": null,
+      "address": null,
+      "phone": null,
+      "email": null,
+      "dealer_locator": null,
+      "logo_url": null,
+      "description_sr": "Kia je južnokorejski proizvođač automobila, deo grupe Hyundai Motor Group.",
+      "models": [
+        {
+          "name": "EV3",
+          "powertrain": "EV",
+          "body": "SUV",
+          "range_wltp_km": 605,
+          "battery_kwh": [
+            58.3,
+            81.4
+          ]
+        },
+        {
+          "name": "EV4",
+          "powertrain": "EV",
+          "body": "Hečbek",
+          "range_wltp_km": 729,
+          "battery_kwh": [
+            58.3,
+            81.4
+          ]
+        },
+        {
+          "name": "EV6",
+          "powertrain": "EV",
+          "body": "Hečbek",
+          "range_wltp_km": 766,
+          "battery_kwh": [
+            63.0,
+            84.0
+          ]
+        },
+        {
+          "name": "EV9",
+          "powertrain": "EV",
+          "body": "SUV",
+          "range_wltp_km": 563,
+          "battery_kwh": 99.8
+        },
+        {
+          "name": "EV2",
+          "powertrain": "EV",
+          "body": "SUV",
+          "battery_kwh": [
+            42.2,
+            61
+          ],
+          "range_wltp_km": 670
+        }
+      ],
+      "social": {},
+      "gaps": [
+        "importer",
+        "dealers",
+        "range",
+        "battery",
+        "photos"
+      ],
+      "logo_file": "logos/kia.svg",
+      "phone_roadside": null,
+      "showrooms": []
+    },
+    {
+      "slug": "mazda",
+      "name": "Mazda",
+      "website": null,
+      "importer": null,
+      "address": null,
+      "phone": null,
+      "email": null,
+      "dealer_locator": null,
+      "logo_url": null,
+      "description_sr": "Mazda je japanski proizvođač automobila osnovan 1920. u Hirošimi.",
+      "models": [
+        {
+          "name": "6e",
+          "powertrain": "EV",
+          "body": "Sedan",
+          "range_wltp_km": 552,
+          "battery_kwh": [
+            68.8,
+            80.0
+          ]
+        },
+        {
+          "name": "CX-6e",
+          "powertrain": "EV",
+          "body": "SUV",
+          "range_wltp_km": 484,
+          "battery_kwh": 78.0
+        }
+      ],
+      "social": {},
+      "gaps": [
+        "importer",
+        "dealers",
+        "range",
+        "battery",
+        "photos"
+      ],
+      "logo_file": "logos/mazda.svg",
+      "phone_roadside": null,
+      "showrooms": []
+    },
+    {
+      "slug": "porsche",
+      "name": "Porsche",
+      "website": null,
+      "importer": null,
+      "address": null,
+      "phone": null,
+      "email": null,
+      "dealer_locator": null,
+      "logo_url": null,
+      "description_sr": "Porsche je nemački proizvođač sportskih automobila sa sedištem u Štutgartu.",
+      "models": [
+        {
+          "name": "Taycan 4",
+          "powertrain": "EV",
+          "body": "Sedan",
+          "range_wltp_km": 596,
+          "battery_kwh": 105.0
+        },
+        {
+          "name": "Macan 4",
+          "powertrain": "EV",
+          "body": "SUV",
+          "range_wltp_km": 572,
+          "battery_kwh": 100.0
+        },
+        {
+          "name": "Macan 4S",
+          "powertrain": "EV",
+          "body": "SUV",
+          "range_wltp_km": 556,
+          "battery_kwh": 100.0
+        },
+        {
+          "name": "Cayenne Turbo Electric",
+          "powertrain": "EV",
+          "body": "SUV",
+          "battery_kwh": 113.0,
+          "range_wltp_km": 604
+        }
+      ],
+      "social": {},
+      "gaps": [
+        "importer",
+        "dealers",
+        "range",
+        "battery",
+        "photos"
+      ],
+      "logo_file": "logos/porsche.svg",
+      "phone_roadside": null,
+      "showrooms": []
+    },
+    {
+      "slug": "renault",
+      "name": "Renault",
+      "website": null,
+      "importer": null,
+      "address": null,
+      "phone": null,
+      "email": null,
+      "dealer_locator": null,
+      "logo_url": null,
+      "description_sr": "Renault je francuski proizvođač automobila osnovan 1899.",
+      "models": [
+        {
+          "name": "5 E-Tech",
+          "powertrain": "EV",
+          "body": "Hečbek",
+          "range_wltp_km": 430,
+          "battery_kwh": [
+            40.0,
+            52.0
+          ]
+        },
+        {
+          "name": "Twingo E-Tech",
+          "powertrain": "EV",
+          "body": "Gradski automobil",
+          "range_wltp_km": 263,
+          "battery_kwh": 27.5
+        },
+        {
+          "name": "4 E-Tech",
+          "powertrain": "EV",
+          "body": "SUV",
+          "range_wltp_km": 409,
+          "battery_kwh": [
+            40.0,
+            52.0
+          ]
+        }
+      ],
+      "social": {},
+      "gaps": [
+        "importer",
+        "dealers",
+        "range",
+        "battery",
+        "photos"
+      ],
+      "logo_file": "logos/renault.svg",
+      "phone_roadside": null,
+      "showrooms": []
+    },
+    {
+      "slug": "suzuki",
+      "name": "Suzuki",
+      "website": null,
+      "importer": null,
+      "address": null,
+      "phone": null,
+      "email": null,
+      "dealer_locator": null,
+      "logo_url": null,
+      "description_sr": "Suzuki je japanski proizvođač automobila i motocikala sa sedištem u Hamamacuu.",
+      "models": [
+        {
+          "name": "e Vitara",
+          "powertrain": "EV",
+          "body": "SUV",
+          "range_wltp_km": 426,
+          "battery_kwh": 61.0
+        }
+      ],
+      "social": {},
+      "gaps": [
+        "importer",
+        "dealers",
+        "range",
+        "battery",
+        "photos"
+      ],
+      "logo_file": "logos/suzuki.svg",
+      "phone_roadside": null,
+      "showrooms": []
+    },
+    {
+      "slug": "toyota",
+      "name": "Toyota",
+      "website": null,
+      "importer": null,
+      "address": null,
+      "phone": null,
+      "email": null,
+      "dealer_locator": null,
+      "logo_url": null,
+      "description_sr": "Toyota je japanski proizvođač automobila osnovan 1937.",
+      "models": [
+        {
+          "name": "bZ4X",
+          "powertrain": "EV",
+          "body": "SUV",
+          "range_wltp_km": 559,
+          "battery_kwh": [
+            125,
+            165
+          ]
+        }
+      ],
+      "social": {},
+      "gaps": [
+        "importer",
+        "dealers",
+        "range",
+        "battery",
+        "photos"
+      ],
+      "logo_file": "logos/toyota.svg",
+      "phone_roadside": null,
+      "showrooms": []
+    },
+    {
+      "slug": "volkswagen",
+      "name": "Volkswagen",
+      "website": null,
+      "importer": null,
+      "address": null,
+      "phone": null,
+      "email": null,
+      "dealer_locator": null,
+      "logo_url": null,
+      "description_sr": "Volkswagen je nemački proizvođač automobila osnovan 1937. u Volfsburgu.",
+      "models": [
+        {
+          "name": "ID.3 Neo",
+          "powertrain": "EV",
+          "body": "Hečbek",
+          "range_wltp_km": 418,
+          "battery_kwh": 50.0
+        },
+        {
+          "name": "ID.4",
+          "powertrain": "EV",
+          "body": "SUV",
+          "range_wltp_km": 570,
+          "battery_kwh": [
+            58.0,
+            79.0
+          ]
+        },
+        {
+          "name": "ID.5",
+          "powertrain": "EV",
+          "body": "SUV",
+          "range_wltp_km": 558,
+          "battery_kwh": [
+            77.0,
+            79.0
+          ]
+        },
+        {
+          "name": "ID.7",
+          "powertrain": "EV",
+          "body": "Sedan",
+          "range_wltp_km": 711,
+          "battery_kwh": [
+            77.0,
+            86.0
+          ]
+        },
+        {
+          "name": "ID. Polo",
+          "powertrain": "EV",
+          "body": "Hečbek",
+          "range_wltp_km": 454,
+          "battery_kwh": [
+            37.0,
+            52.0
+          ]
+        }
+      ],
+      "social": {},
+      "gaps": [
+        "importer",
+        "dealers",
+        "range",
+        "battery",
+        "photos"
+      ],
+      "logo_file": "logos/volkswagen.svg",
+      "phone_roadside": null,
+      "showrooms": []
+    },
+    {
+      "slug": "hyundai",
+      "name": "Hyundai",
+      "website": null,
+      "importer": null,
+      "address": null,
+      "phone": null,
+      "email": null,
+      "dealer_locator": null,
+      "logo_url": null,
+      "description_sr": "Hyundai je južnokorejski proizvođač automobila, deo grupe Hyundai Motor Group.",
+      "models": [
+        {
+          "name": "IONIQ 5",
+          "powertrain": "EV",
+          "body": "SUV",
+          "range_wltp_km": 507,
+          "battery_kwh": [
+            58.0,
+            77.4
+          ]
+        },
+        {
+          "name": "IONIQ 6",
+          "powertrain": "EV",
+          "body": "Sedan",
+          "range_wltp_km": 614,
+          "battery_kwh": [
+            53.0,
+            77.4
+          ]
+        },
+        {
+          "name": "IONIQ 6 N",
+          "powertrain": "EV",
+          "body": "Sedan",
+          "range_wltp_km": 487,
+          "battery_kwh": 84.0
+        },
+        {
+          "name": "IONIQ 9",
+          "powertrain": "EV",
+          "body": "SUV",
+          "range_wltp_km": 606,
+          "battery_kwh": 110.3
+        },
+        {
+          "name": "Inster",
+          "powertrain": "EV",
+          "body": "Gradski automobil",
+          "range_wltp_km": 369,
+          "battery_kwh": [
+            42.0,
+            49.0
+          ]
+        }
+      ],
+      "social": {},
+      "gaps": [
+        "importer",
+        "dealers",
+        "range",
+        "battery"
+      ],
+      "logo_file": "logos/hyundai.svg",
+      "phone_roadside": null,
+      "showrooms": []
+    },
+    {
+      "slug": "citroen",
+      "name": "Citroën",
+      "website": null,
+      "importer": null,
+      "address": null,
+      "phone": null,
+      "email": null,
+      "dealer_locator": null,
+      "logo_url": null,
+      "description_sr": "Citroën je francuski proizvođač automobila, deo grupe Stellantis.",
+      "models": [
+        {
+          "name": "ë-C3",
+          "powertrain": "EV",
+          "body": "Hečbek",
+          "range_wltp_km": 320,
+          "battery_kwh": 44.0
+        },
+        {
+          "name": "ë-C3 Aircross",
+          "powertrain": "EV",
+          "body": "SUV",
+          "range_wltp_km": 302,
+          "battery_kwh": 44.0
+        },
+        {
+          "name": "ë-C4",
+          "powertrain": "EV",
+          "body": "Hečbek",
+          "range_wltp_km": 416,
+          "battery_kwh": [
+            50.0,
+            54.0
+          ]
+        },
+        {
+          "name": "ë-C4 X",
+          "powertrain": "EV",
+          "body": "Sedan",
+          "range_wltp_km": 416,
+          "battery_kwh": [
+            50.0,
+            54.0
+          ]
+        }
+      ],
+      "social": {},
+      "gaps": [
+        "importer",
+        "dealers",
+        "photos"
+      ],
+      "logo_file": "logos/citroen.svg",
+      "phone_roadside": null,
+      "showrooms": []
+    },
+    {
+      "slug": "mini",
+      "name": "MINI",
+      "website": null,
+      "importer": null,
+      "address": null,
+      "phone": null,
+      "email": null,
+      "dealer_locator": null,
+      "logo_url": null,
+      "description_sr": "MINI je britanski brend automobila u vlasništvu grupe BMW.",
+      "models": [
+        {
+          "name": "Cooper",
+          "powertrain": "EV",
+          "body": "Hečbek",
+          "range_wltp_km": 400,
+          "battery_kwh": [
+            36.6,
+            49.2
+          ]
+        },
+        {
+          "name": "Aceman",
+          "powertrain": "EV",
+          "body": "SUV",
+          "range_wltp_km": 405,
+          "battery_kwh": [
+            38.5,
+            49.2
+          ]
+        },
+        {
+          "name": "Countryman",
+          "powertrain": "EV",
+          "body": "SUV",
+          "range_wltp_km": 500,
+          "battery_kwh": 64.6
+        }
+      ],
+      "social": {},
+      "gaps": [
+        "importer",
+        "dealers",
+        "photos"
+      ],
+      "logo_file": "logos/mini.svg",
+      "phone_roadside": null,
+      "showrooms": []
+    },
+    {
+      "slug": "opel",
+      "name": "Opel",
+      "website": null,
+      "importer": null,
+      "address": null,
+      "phone": null,
+      "email": null,
+      "dealer_locator": null,
+      "logo_url": null,
+      "description_sr": "Opel je nemački proizvođač automobila sa sedištem u Rüsselsheimu, deo grupe Stellantis.",
+      "models": [
+        {
+          "name": "Astra Electric",
+          "powertrain": "EV",
+          "body": "Hečbek",
+          "range_wltp_km": 454,
+          "battery_kwh": 58.0
+        },
+        {
+          "name": "Frontera Electric",
+          "powertrain": "EV",
+          "body": "SUV",
+          "range_wltp_km": 408,
+          "battery_kwh": [
+            44.0,
+            54.0
+          ]
+        },
+        {
+          "name": "Mokka Electric",
+          "powertrain": "EV",
+          "body": "SUV",
+          "range_wltp_km": 403,
+          "battery_kwh": 54.0
+        }
+      ],
+      "social": {},
+      "gaps": [
+        "importer",
+        "dealers",
+        "photos"
+      ],
+      "logo_file": "logos/opel.svg",
+      "phone_roadside": null,
+      "showrooms": []
+    },
+    {
+      "slug": "peugeot",
+      "name": "Peugeot",
+      "website": null,
+      "importer": null,
+      "address": null,
+      "phone": null,
+      "email": null,
+      "dealer_locator": null,
+      "logo_url": null,
+      "description_sr": "Peugeot je francuski proizvođač automobila, deo grupe Stellantis.",
+      "models": [
+        {
+          "name": "e-208",
+          "powertrain": "EV",
+          "body": "Hečbek",
+          "range_wltp_km": 362,
+          "battery_kwh": 50.0
+        },
+        {
+          "name": "e-2008",
+          "powertrain": "EV",
+          "body": "SUV",
+          "range_wltp_km": 406,
+          "battery_kwh": 54.0
+        },
+        {
+          "name": "e-308",
+          "powertrain": "EV",
+          "body": "Hečbek",
+          "range_wltp_km": 450,
+          "battery_kwh": 58.3
+        },
+        {
+          "name": "e-3008",
+          "powertrain": "EV",
+          "body": "SUV",
+          "range_wltp_km": 701,
+          "battery_kwh": [
+            73.0,
+            96.9
+          ]
+        }
+      ],
+      "social": {},
+      "gaps": [
+        "importer",
+        "dealers",
+        "photos"
+      ],
+      "logo_file": "logos/peugeot.svg",
+      "phone_roadside": null,
+      "showrooms": []
+    },
+    {
+      "slug": "skoda",
+      "name": "Škoda",
+      "website": null,
+      "importer": null,
+      "address": null,
+      "phone": null,
+      "email": null,
+      "dealer_locator": null,
+      "logo_url": null,
+      "description_sr": "Škoda je češki proizvođač automobila sa sedištem u Mladoj Boleslavi, deo grupe Volkswagen.",
+      "models": [
+        {
+          "name": "Elroq",
+          "powertrain": "EV",
+          "body": "SUV",
+          "range_wltp_km": 575,
+          "battery_kwh": [
+            58.0,
+            77.0
+          ]
+        },
+        {
+          "name": "Enyaq",
+          "powertrain": "EV",
+          "body": "SUV",
+          "range_wltp_km": 582,
+          "battery_kwh": [
+            58.0,
+            77.0
+          ]
+        },
+        {
+          "name": "Enyaq Coupé",
+          "powertrain": "EV",
+          "body": "SUV",
+          "range_wltp_km": 591,
+          "battery_kwh": [
+            58.0,
+            77.0
+          ]
+        }
+      ],
+      "social": {},
+      "gaps": [
+        "importer",
+        "dealers",
+        "photos"
+      ],
+      "logo_file": "logos/skoda.svg",
+      "phone_roadside": null,
+      "showrooms": []
+    },
+    {
+      "slug": "volvo",
+      "name": "Volvo",
+      "website": null,
+      "importer": null,
+      "address": null,
+      "phone": null,
+      "email": null,
+      "dealer_locator": null,
+      "logo_url": null,
+      "description_sr": "Volvo Cars je švedski proizvođač automobila sa sedištem u Geteborgu.",
+      "models": [
+        {
+          "name": "EX30",
+          "powertrain": "EV",
+          "body": "SUV",
+          "range_wltp_km": 475,
+          "battery_kwh": [
+            51.0,
+            69.0
+          ]
+        },
+        {
+          "name": "EX60",
+          "powertrain": "EV",
+          "body": "SUV",
+          "range_wltp_km": 810,
+          "battery_kwh": [
+            83.0,
+            95.0,
+            117.0
+          ]
+        },
+        {
+          "name": "EX90",
+          "powertrain": "EV",
+          "body": "SUV",
+          "range_wltp_km": 617,
+          "battery_kwh": [
+            92.0,
+            106.0
+          ]
+        },
+        {
+          "name": "ES90",
+          "powertrain": "EV",
+          "body": "Sedan",
+          "range_wltp_km": 702,
+          "battery_kwh": [
+            92.0,
+            106.0
+          ]
+        }
+      ],
+      "social": {},
+      "gaps": [
+        "importer",
+        "dealers",
+        "photos"
+      ],
+      "logo_file": "logos/volvo.svg",
+      "phone_roadside": null,
+      "showrooms": []
+    }
+  ]
+}
