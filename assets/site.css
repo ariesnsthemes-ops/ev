@@ -423,6 +423,8 @@ a.img{cursor:pointer;text-decoration:none}
 .faq details{border-top:1px solid var(--line)}
 .faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 0;font-weight:500;color:var(--ink);font-size:15px}
 .faq summary::-webkit-details-marker{display:none}
+summary{-webkit-tap-highlight-color:transparent;-webkit-user-select:none;user-select:none}
+summary:focus:not(:focus-visible){outline:none}
 .faq .pm{flex:none;width:28px;height:28px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;color:var(--muted);transition:transform .2s,background .2s,color .2s}
 .faq details[open] .pm{transform:rotate(45deg);background:var(--green);border-color:var(--green);color:#fff}
 .faq details p{color:var(--muted);font-size:14px;padding:0 44px 20px 0}
