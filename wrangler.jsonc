@@ -1,13 +1,16 @@
 {
-  // Cloudflare Workers (static assets) settings for ev-srbija.rs
-  // The website is the "site" folder; nothing is built on Cloudflare.
+  // Cloudflare Workers settings for ev-srbija.rs
+  // The website is the "site" folder; nothing is built on Cloudflare (no build command).
   "name": "ev-srbija",
   "compatibility_date": "2026-10-01",
+  "main": "worker.js",
   "assets": {
     "directory": "./site",
-    // unknown addresses show site/404.html with status 404
-    "not_found_handling": "404-page",
+    "binding": "ASSETS",
     // keep addresses exactly as they are (/modeli.html stays /modeli.html, no redirect)
-    "html_handling": "none"
+    "html_handling": "none",
+    "not_found_handling": "404-page",
+    // the homepage addresses go through worker.js ("/" serves index.html, "/index.html" redirects to "/")
+    "run_worker_first": ["/", "/index.html"]
   }
 }
