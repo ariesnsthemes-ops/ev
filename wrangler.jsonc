@@ -1,0 +1,13 @@
+{
+  // Cloudflare Workers (static assets) settings for ev-srbija.rs
+  // The website is the "site" folder; nothing is built on Cloudflare.
+  "name": "ev-srbija",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./site",
+    // unknown addresses show site/404.html with status 404
+    "not_found_handling": "404-page",
+    // keep addresses exactly as they are (/modeli.html stays /modeli.html, no redirect)
+    "html_handling": "none"
+  }
+}
