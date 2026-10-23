@@ -2,14 +2,14 @@
 
 > Nezavisan informativni sajt o potpuno električnim automobilima (BEV) koji se zvanično prodaju u Srbiji. Bez hibrida. Bez cena.
 > Domet je po WLTP normi, za verziju sa najvećim dometom. Podaci su sa zvaničnih sajtova proizvođača i uvoznika. Prazno polje znači da proizvođač podatak ne objavljuje.
-> Ukupno: 89 modela, 29 brendova. Poslednje ažuriranje: 2026-10-23.
+> Ukupno: 89 modela, 29 brendova. Poslednje ažuriranje: 2026-10-24.
 
 ## Audi
-Stranica: https://www.ev-srbija.rs/brendovi/audi.html
+Stranica: https://www.ev-srbija.rs/brendovi/audi
 Ovlašćeni distributeri u gradovima: Beograd, Niš, Novi Sad i Čačak.
 
 ### Audi RS e-tron GT
-- Stranica: https://www.ev-srbija.rs/modeli/audi-rs-e-tron-gt.html
+- Stranica: https://www.ev-srbija.rs/modeli/audi-rs-e-tron-gt
 - Klasa: Sedan
 - Pogon: 100% električni
 - Domet (WLTP): do 593 km
@@ -20,11 +20,11 @@ Ovlašćeni distributeri u gradovima: Beograd, Niš, Novi Sad i Čačak.
 - Broj sedišta: 5
 
 ## BMW
-Stranica: https://www.ev-srbija.rs/brendovi/bmw.html
+Stranica: https://www.ev-srbija.rs/brendovi/bmw
 Ovlašćeni distributeri u gradovima: Beograd, Mladenovac, Niš, Novi Pazar, Novi Sad i Čačak.
 
 ### BMW iX1
-- Stranica: https://www.ev-srbija.rs/modeli/bmw-ix1.html
+- Stranica: https://www.ev-srbija.rs/modeli/bmw-ix1
 - Klasa: SUV
 - Pogon: 100% električni
 - Domet (WLTP): do 467 km
@@ -36,7 +36,7 @@ Ovlašćeni distributeri u gradovima: Beograd, Mladenovac, Niš, Novi Pazar, Nov
 - Broj sedišta: 5
 
 ### BMW iX
-- Stranica: https://www.ev-srbija.rs/modeli/bmw-ix.html
+- Stranica: https://www.ev-srbija.rs/modeli/bmw-ix
 - Klasa: SUV
 - Pogon: 100% električni
 - Domet (WLTP): do 701 km
@@ -48,14 +48,14 @@ Ovlašćeni distributeri u gradovima: Beograd, Mladenovac, Niš, Novi Pazar, Nov
 - Broj sedišta: 5
 
 ### BMW i3
-- Stranica: https://www.ev-srbija.rs/modeli/bmw-i3.html
+- Stranica: https://www.ev-srbija.rs/modeli/bmw-i3
 - Klasa: Sedan
 - Pogon: 100% električni
 - Domet (WLTP): do 912 km
 - Baterija: 108,7 kWh
 
 ### BMW i4
-- Stranica: https://www.ev-srbija.rs/modeli/bmw-i4.html
+- Stranica: https://www.ev-srbija.rs/modeli/bmw-i4
 - Klasa: Sedan
 - Pogon: 100% električni
 - Domet (WLTP): do 600 km
@@ -67,7 +67,7 @@ Ovlašćeni distributeri u gradovima: Beograd, Mladenovac, Niš, Novi Pazar, Nov
 - Broj sedišta: 5
 
 ### BMW i5 M60
-- Stranica: https://www.ev-srbija.rs/modeli/bmw-i5.html
+- Stranica: https://www.ev-srbija.rs/modeli/bmw-i5
 - Klasa: Sedan
 - Pogon: 100% električni
 - Domet (WLTP): do 516 km
@@ -79,7 +79,7 @@ Ovlašćeni distributeri u gradovima: Beograd, Mladenovac, Niš, Novi Pazar, Nov
 - Broj sedišta: 5
 
 ### BMW i7
-- Stranica: https://www.ev-srbija.rs/modeli/bmw-i7.html
+- Stranica: https://www.ev-srbija.rs/modeli/bmw-i7
 - Klasa: Sedan
 - Pogon: 100% električni
 - Domet (WLTP): do 727 km
@@ -91,7 +91,7 @@ Ovlašćeni distributeri u gradovima: Beograd, Mladenovac, Niš, Novi Pazar, Nov
 - Broj sedišta: 5
 
 ### BMW iX3
-- Stranica: https://www.ev-srbija.rs/modeli/bmw-ix3.html
+- Stranica: https://www.ev-srbija.rs/modeli/bmw-ix3
 - Klasa: SUV
 - Pogon: 100% električni
 - Domet (WLTP): do 805 km
@@ -103,14 +103,14 @@ Ovlašćeni distributeri u gradovima: Beograd, Mladenovac, Niš, Novi Pazar, Nov
 - Broj sedišta: 5
 
 ### BMW iX5
-- Stranica: https://www.ev-srbija.rs/modeli/bmw-ix5.html
+- Stranica: https://www.ev-srbija.rs/modeli/bmw-ix5
 - Klasa: SUV
 - Pogon: 100% električni
 - Domet (WLTP): do 850 km
 - Baterija: 141,2 kWh
 
 ### BMW i4 M60
-- Stranica: https://www.ev-srbija.rs/modeli/bmw-i4-m50.html
+- Stranica: https://www.ev-srbija.rs/modeli/bmw-i4-m50
 - Klasa: Sedan
 - Pogon: 100% električni
 - Domet (WLTP): do 551 km
@@ -122,7 +122,7 @@ Ovlašćeni distributeri u gradovima: Beograd, Mladenovac, Niš, Novi Pazar, Nov
 - Broj sedišta: 5
 
 ### BMW iX M70
-- Stranica: https://www.ev-srbija.rs/modeli/bmw-ix-m-model.html
+- Stranica: https://www.ev-srbija.rs/modeli/bmw-ix-m-model
 - Klasa: SUV
 - Pogon: 100% električni
 - Domet (WLTP): do 600 km
@@ -134,7 +134,7 @@ Ovlašćeni distributeri u gradovima: Beograd, Mladenovac, Niš, Novi Pazar, Nov
 - Broj sedišta: 5
 
 ### BMW i7 M70
-- Stranica: https://www.ev-srbija.rs/modeli/bmw-i7-m70.html
+- Stranica: https://www.ev-srbija.rs/modeli/bmw-i7-m70
 - Klasa: Sedan
 - Pogon: 100% električni
 - Domet (WLTP): do 686 km
@@ -146,11 +146,11 @@ Ovlašćeni distributeri u gradovima: Beograd, Mladenovac, Niš, Novi Pazar, Nov
 - Broj sedišta: 5
 
 ## BYD
-Stranica: https://www.ev-srbija.rs/brendovi/byd.html
+Stranica: https://www.ev-srbija.rs/brendovi/byd
 Ovlašćeni distributeri u gradovima: Beograd.
 
 ### BYD Dolphin Surf
-- Stranica: https://www.ev-srbija.rs/modeli/byd-dolphin-surf.html
+- Stranica: https://www.ev-srbija.rs/modeli/byd-dolphin-surf
 - Klasa: Hečbek
 - Pogon: 100% električni
 - Domet (WLTP): do 507 km
@@ -162,7 +162,7 @@ Ovlašćeni distributeri u gradovima: Beograd.
 - Broj sedišta: 4
 
 ### BYD Atto 2
-- Stranica: https://www.ev-srbija.rs/modeli/byd-atto-2-comfort.html
+- Stranica: https://www.ev-srbija.rs/modeli/byd-atto-2-comfort
 - Klasa: SUV
 - Pogon: 100% električni
 - Domet (WLTP): do 430 km
@@ -174,7 +174,7 @@ Ovlašćeni distributeri u gradovima: Beograd.
 - Broj sedišta: 5
 
 ### BYD Atto 3 Evo
-- Stranica: https://www.ev-srbija.rs/modeli/byd-atto-3-evo.html
+- Stranica: https://www.ev-srbija.rs/modeli/byd-atto-3-evo
 - Klasa: SUV
 - Pogon: 100% električni
 - Domet (WLTP): do 510 km
@@ -184,7 +184,7 @@ Ovlašćeni distributeri u gradovima: Beograd.
 - Visina: 1.615 mm
 
 ### BYD Seal
-- Stranica: https://www.ev-srbija.rs/modeli/byd-seal.html
+- Stranica: https://www.ev-srbija.rs/modeli/byd-seal
 - Klasa: Sedan
 - Pogon: 100% električni
 - Domet (WLTP): do 570 km
@@ -195,7 +195,7 @@ Ovlašćeni distributeri u gradovima: Beograd.
 - Broj sedišta: 5
 
 ### BYD Sealion 7
-- Stranica: https://www.ev-srbija.rs/modeli/byd-sealion-7.html
+- Stranica: https://www.ev-srbija.rs/modeli/byd-sealion-7
 - Klasa: SUV
 - Pogon: 100% električni
 - Domet (WLTP): do 502 km
@@ -207,11 +207,11 @@ Ovlašćeni distributeri u gradovima: Beograd.
 - Broj sedišta: 5
 
 ## Changan
-Stranica: https://www.ev-srbija.rs/brendovi/changan.html
+Stranica: https://www.ev-srbija.rs/brendovi/changan
 Ovlašćeni distributeri u gradovima: Beograd, Niš i Novi Sad.
 
 ### Changan Deepal S05
-- Stranica: https://www.ev-srbija.rs/modeli/changan-deepal-s05.html
+- Stranica: https://www.ev-srbija.rs/modeli/changan-deepal-s05
 - Klasa: SUV
 - Pogon: 100% električni
 - Domet (WLTP): do 485 km
@@ -223,7 +223,7 @@ Ovlašćeni distributeri u gradovima: Beograd, Niš i Novi Sad.
 - Broj sedišta: 5
 
 ### Changan Deepal S07
-- Stranica: https://www.ev-srbija.rs/modeli/changan-deepal-s07.html
+- Stranica: https://www.ev-srbija.rs/modeli/changan-deepal-s07
 - Klasa: SUV
 - Pogon: 100% električni
 - Domet (WLTP): do 475 km
@@ -234,11 +234,11 @@ Ovlašćeni distributeri u gradovima: Beograd, Niš i Novi Sad.
 - Broj sedišta: 5
 
 ## Citroën
-Stranica: https://www.ev-srbija.rs/brendovi/citroen.html
+Stranica: https://www.ev-srbija.rs/brendovi/citroen
 Ovlašćeni distributeri u gradovima: Beograd, Bačka Topola, Niš, Novi Sad i Čačak.
 
 ### Citroën ë-C3
-- Stranica: https://www.ev-srbija.rs/modeli/citroen-e-c3.html
+- Stranica: https://www.ev-srbija.rs/modeli/citroen-e-c3
 - Klasa: Hečbek
 - Pogon: 100% električni
 - Domet (WLTP): do 320 km
@@ -250,7 +250,7 @@ Ovlašćeni distributeri u gradovima: Beograd, Bačka Topola, Niš, Novi Sad i �
 - Broj sedišta: 5
 
 ### Citroën ë-C3 Aircross
-- Stranica: https://www.ev-srbija.rs/modeli/citroen-e-c3-aircross.html
+- Stranica: https://www.ev-srbija.rs/modeli/citroen-e-c3-aircross
 - Klasa: SUV
 - Pogon: 100% električni
 - Domet (WLTP): do 302 km
@@ -261,7 +261,7 @@ Ovlašćeni distributeri u gradovima: Beograd, Bačka Topola, Niš, Novi Sad i �
 - Broj sedišta: 5
 
 ### Citroën ë-C4
-- Stranica: https://www.ev-srbija.rs/modeli/citroen-e-c4.html
+- Stranica: https://www.ev-srbija.rs/modeli/citroen-e-c4
 - Klasa: Hečbek
 - Pogon: 100% električni
 - Domet (WLTP): do 354 / 416 km
@@ -273,7 +273,7 @@ Ovlašćeni distributeri u gradovima: Beograd, Bačka Topola, Niš, Novi Sad i �
 - Broj sedišta: 5
 
 ### Citroën ë-C4 X
-- Stranica: https://www.ev-srbija.rs/modeli/citroen-e-c4-x.html
+- Stranica: https://www.ev-srbija.rs/modeli/citroen-e-c4-x
 - Klasa: Sedan
 - Pogon: 100% električni
 - Domet (WLTP): do 354 / 416 km
@@ -285,11 +285,11 @@ Ovlašćeni distributeri u gradovima: Beograd, Bačka Topola, Niš, Novi Sad i �
 - Broj sedišta: 5
 
 ## Cupra
-Stranica: https://www.ev-srbija.rs/brendovi/cupra.html
+Stranica: https://www.ev-srbija.rs/brendovi/cupra
 Ovlašćeni distributeri: lista nije objavljena.
 
 ### Cupra Tavascan
-- Stranica: https://www.ev-srbija.rs/modeli/cupra-tavascan.html
+- Stranica: https://www.ev-srbija.rs/modeli/cupra-tavascan
 - Klasa: SUV
 - Pogon: 100% električni
 - Domet (WLTP): do 547 km
@@ -300,7 +300,7 @@ Ovlašćeni distributeri: lista nije objavljena.
 - Broj sedišta: 5
 
 ### Cupra Raval
-- Stranica: https://www.ev-srbija.rs/modeli/cupra-raval.html
+- Stranica: https://www.ev-srbija.rs/modeli/cupra-raval
 - Klasa: Gradski
 - Pogon: 100% električni
 - Domet (WLTP): do 448 km
@@ -311,11 +311,11 @@ Ovlašćeni distributeri: lista nije objavljena.
 - Broj sedišta: 5
 
 ## Dacia
-Stranica: https://www.ev-srbija.rs/brendovi/dacia.html
+Stranica: https://www.ev-srbija.rs/brendovi/dacia
 Ovlašćeni distributeri u gradovima: Beograd, Jagodina, Niš, Novi Sad, Pančevo, Požarevac, Subotica, Užice, Zrenjanin, Čačak i Šabac.
 
 ### Dacia Spring
-- Stranica: https://www.ev-srbija.rs/modeli/dacia-spring.html
+- Stranica: https://www.ev-srbija.rs/modeli/dacia-spring
 - Klasa: Gradski
 - Pogon: 100% električni
 - Domet (WLTP): do 225 km
@@ -325,22 +325,22 @@ Ovlašćeni distributeri u gradovima: Beograd, Jagodina, Niš, Novi Sad, Pančev
 - Broj sedišta: 4
 
 ## Dongfeng
-Stranica: https://www.ev-srbija.rs/brendovi/dongfeng.html
+Stranica: https://www.ev-srbija.rs/brendovi/dongfeng
 Ovlašćeni distributeri u gradovima: Beograd, Kragujevac, Niš, Novi Sad i Subotica.
 
 ### Dongfeng Box
-- Stranica: https://www.ev-srbija.rs/modeli/dongfeng-box.html
+- Stranica: https://www.ev-srbija.rs/modeli/dongfeng-box
 - Klasa: Hečbek
 - Pogon: 100% električni
 - Domet (WLTP): do 310 km
 - Baterija: 43,9 kWh
 
 ## Ford
-Stranica: https://www.ev-srbija.rs/brendovi/ford.html
+Stranica: https://www.ev-srbija.rs/brendovi/ford
 Ovlašćeni distributeri u gradovima: Beograd, Kragujevac, Niš, Novi Sad, Pančevo, Subotica, Čačak i Šabac.
 
 ### Ford Mustang Mach-E
-- Stranica: https://www.ev-srbija.rs/modeli/ford-mustang-mach-e.html
+- Stranica: https://www.ev-srbija.rs/modeli/ford-mustang-mach-e
 - Klasa: SUV
 - Pogon: 100% električni
 - Domet (WLTP): do 440 / 600 km
@@ -352,7 +352,7 @@ Ovlašćeni distributeri u gradovima: Beograd, Kragujevac, Niš, Novi Sad, Panč
 - Broj sedišta: 5
 
 ### Ford Puma Gen-E
-- Stranica: https://www.ev-srbija.rs/modeli/ford-puma-gen-e.html
+- Stranica: https://www.ev-srbija.rs/modeli/ford-puma-gen-e
 - Klasa: SUV
 - Pogon: 100% električni
 - Domet (WLTP): do 417 km
@@ -363,7 +363,7 @@ Ovlašćeni distributeri u gradovima: Beograd, Kragujevac, Niš, Novi Sad, Panč
 - Klirens: 129 mm (pod opterećenjem)
 
 ### Ford Explorer
-- Stranica: https://www.ev-srbija.rs/modeli/ford-explorer.html
+- Stranica: https://www.ev-srbija.rs/modeli/ford-explorer
 - Klasa: SUV
 - Pogon: 100% električni
 - Domet (WLTP): do 444 / 553 / 602 km
@@ -375,33 +375,33 @@ Ovlašćeni distributeri u gradovima: Beograd, Kragujevac, Niš, Novi Sad, Panč
 - Broj sedišta: 5
 
 ## Foton
-Stranica: https://www.ev-srbija.rs/brendovi/foton.html
+Stranica: https://www.ev-srbija.rs/brendovi/foton
 Ovlašćeni distributeri u gradovima: Beograd, Jagodina, Niš, Novi Sad, Subotica i Šabac.
 
 ### Foton eTunland
-- Stranica: https://www.ev-srbija.rs/modeli/foton-etunland.html
+- Stranica: https://www.ev-srbija.rs/modeli/foton-etunland
 - Klasa: Pikap
 - Pogon: 100% električni
 - Domet (WLTP): do 400 km
 - Baterija: 88 kWh
 
 ## Geely
-Stranica: https://www.ev-srbija.rs/brendovi/geely.html
+Stranica: https://www.ev-srbija.rs/brendovi/geely
 Ovlašćeni distributeri u gradovima: Beograd, Kragujevac, Niš, Novi Sad, Požarevac i Subotica.
 
 ### Geely E5
-- Stranica: https://www.ev-srbija.rs/modeli/geely-e5.html
+- Stranica: https://www.ev-srbija.rs/modeli/geely-e5
 - Klasa: SUV
 - Pogon: 100% električni
 - Domet (WLTP): do 430 km
 - Baterija: 60,22 kWh
 
 ## Hyundai
-Stranica: https://www.ev-srbija.rs/brendovi/hyundai.html
+Stranica: https://www.ev-srbija.rs/brendovi/hyundai
 Ovlašćeni distributeri u gradovima: Beograd, Jagodina, Kraljevo, Niš, Novi Sad, Sombor, Subotica, Zrenjanin, Čačak i Šabac.
 
 ### Hyundai IONIQ 5
-- Stranica: https://www.ev-srbija.rs/modeli/hyundai-ioniq-5.html
+- Stranica: https://www.ev-srbija.rs/modeli/hyundai-ioniq-5
 - Klasa: SUV
 - Pogon: 100% električni
 - Domet (WLTP): do 384 / 507 km
@@ -413,7 +413,7 @@ Ovlašćeni distributeri u gradovima: Beograd, Jagodina, Kraljevo, Niš, Novi Sa
 - Broj sedišta: 5
 
 ### Hyundai IONIQ 6
-- Stranica: https://www.ev-srbija.rs/modeli/hyundai-ioniq-6.html
+- Stranica: https://www.ev-srbija.rs/modeli/hyundai-ioniq-6
 - Klasa: Sedan
 - Pogon: 100% električni
 - Domet (WLTP): do 429 / 614 km
@@ -425,7 +425,7 @@ Ovlašćeni distributeri u gradovima: Beograd, Jagodina, Kraljevo, Niš, Novi Sa
 - Broj sedišta: 5
 
 ### Hyundai IONIQ 6 N
-- Stranica: https://www.ev-srbija.rs/modeli/hyundai-ioniq-6-n.html
+- Stranica: https://www.ev-srbija.rs/modeli/hyundai-ioniq-6-n
 - Klasa: Sedan
 - Pogon: 100% električni
 - Domet (WLTP): do 487 km
@@ -437,7 +437,7 @@ Ovlašćeni distributeri u gradovima: Beograd, Jagodina, Kraljevo, Niš, Novi Sa
 - Broj sedišta: 5
 
 ### Hyundai IONIQ 9
-- Stranica: https://www.ev-srbija.rs/modeli/hyundai-ioniq-9.html
+- Stranica: https://www.ev-srbija.rs/modeli/hyundai-ioniq-9
 - Klasa: SUV
 - Pogon: 100% električni
 - Domet (WLTP): do 606 km
@@ -449,7 +449,7 @@ Ovlašćeni distributeri u gradovima: Beograd, Jagodina, Kraljevo, Niš, Novi Sa
 - Broj sedišta: 7
 
 ### Hyundai Inster
-- Stranica: https://www.ev-srbija.rs/modeli/hyundai-inster.html
+- Stranica: https://www.ev-srbija.rs/modeli/hyundai-inster
 - Klasa: Gradski
 - Pogon: 100% električni
 - Domet (WLTP): do 323 / 369 km
@@ -461,11 +461,11 @@ Ovlašćeni distributeri u gradovima: Beograd, Jagodina, Kraljevo, Niš, Novi Sa
 - Broj sedišta: 5
 
 ## JAC
-Stranica: https://www.ev-srbija.rs/brendovi/jac.html
+Stranica: https://www.ev-srbija.rs/brendovi/jac
 Ovlašćeni distributeri u gradovima: Beograd.
 
 ### JAC E30X
-- Stranica: https://www.ev-srbija.rs/modeli/jac-e30x.html
+- Stranica: https://www.ev-srbija.rs/modeli/jac-e30x
 - Klasa: Hečbek
 - Pogon: 100% električni
 - Domet (WLTP): do 405 / 505 km
@@ -476,7 +476,7 @@ Ovlašćeni distributeri u gradovima: Beograd.
 - Broj sedišta: 5
 
 ### JAC T9 EV
-- Stranica: https://www.ev-srbija.rs/modeli/jac-t9-ev.html
+- Stranica: https://www.ev-srbija.rs/modeli/jac-t9-ev
 - Klasa: Pikap
 - Pogon: 100% električni
 - Domet (WLTP): do 330 km
@@ -487,11 +487,11 @@ Ovlašćeni distributeri u gradovima: Beograd.
 - Klirens: 205 mm
 
 ## JMEV
-Stranica: https://www.ev-srbija.rs/brendovi/jmev.html
+Stranica: https://www.ev-srbija.rs/brendovi/jmev
 Ovlašćeni distributeri u gradovima: Beograd i Novi Sad.
 
 ### JMEV EV3
-- Stranica: https://www.ev-srbija.rs/modeli/jmev-ev3.html
+- Stranica: https://www.ev-srbija.rs/modeli/jmev-ev3
 - Klasa: Hečbek
 - Pogon: 100% električni
 - Domet (WLTP): do 330 km
@@ -502,7 +502,7 @@ Ovlašćeni distributeri u gradovima: Beograd i Novi Sad.
 - Klirens: 110 mm
 
 ### JMEV Elight
-- Stranica: https://www.ev-srbija.rs/modeli/jmev-elight.html
+- Stranica: https://www.ev-srbija.rs/modeli/jmev-elight
 - Klasa: Sedan
 - Pogon: 100% električni
 - Domet (WLTP): do 500 km
@@ -514,7 +514,7 @@ Ovlašćeni distributeri u gradovima: Beograd i Novi Sad.
 - Broj sedišta: 5
 
 ### JMEV Ewind
-- Stranica: https://www.ev-srbija.rs/modeli/jmev-ewind.html
+- Stranica: https://www.ev-srbija.rs/modeli/jmev-ewind
 - Klasa: SUV
 - Pogon: 100% električni
 - Domet (WLTP): do 460 km
@@ -525,11 +525,11 @@ Ovlašćeni distributeri u gradovima: Beograd i Novi Sad.
 - Klirens: 160 mm
 
 ## Kia
-Stranica: https://www.ev-srbija.rs/brendovi/kia.html
+Stranica: https://www.ev-srbija.rs/brendovi/kia
 Ovlašćeni distributeri u gradovima: Beograd, Niš, Novi Sad, Požarevac, Subotica, Čačak i Šabac.
 
 ### Kia EV3
-- Stranica: https://www.ev-srbija.rs/modeli/kia-ev3.html
+- Stranica: https://www.ev-srbija.rs/modeli/kia-ev3
 - Klasa: SUV
 - Pogon: 100% električni
 - Domet (WLTP): do 436 / 605 km
@@ -541,7 +541,7 @@ Ovlašćeni distributeri u gradovima: Beograd, Niš, Novi Sad, Požarevac, Subot
 - Broj sedišta: 5
 
 ### Kia EV4
-- Stranica: https://www.ev-srbija.rs/modeli/kia-ev4.html
+- Stranica: https://www.ev-srbija.rs/modeli/kia-ev4
 - Klasa: Hečbek
 - Pogon: 100% električni
 - Domet (WLTP): do 440 / 729 km
@@ -552,7 +552,7 @@ Ovlašćeni distributeri u gradovima: Beograd, Niš, Novi Sad, Požarevac, Subot
 - Klirens: 140 mm
 
 ### Kia EV6
-- Stranica: https://www.ev-srbija.rs/modeli/kia-ev6.html
+- Stranica: https://www.ev-srbija.rs/modeli/kia-ev6
 - Klasa: Hečbek
 - Pogon: 100% električni
 - Domet (WLTP): do 644 / 766 km
@@ -564,7 +564,7 @@ Ovlašćeni distributeri u gradovima: Beograd, Niš, Novi Sad, Požarevac, Subot
 - Broj sedišta: 5
 
 ### Kia EV9
-- Stranica: https://www.ev-srbija.rs/modeli/kia-ev9.html
+- Stranica: https://www.ev-srbija.rs/modeli/kia-ev9
 - Klasa: SUV
 - Pogon: 100% električni
 - Domet (WLTP): do 563 km
@@ -576,7 +576,7 @@ Ovlašćeni distributeri u gradovima: Beograd, Niš, Novi Sad, Požarevac, Subot
 - Broj sedišta: 7
 
 ### Kia EV2
-- Stranica: https://www.ev-srbija.rs/modeli/kia-ev2.html
+- Stranica: https://www.ev-srbija.rs/modeli/kia-ev2
 - Klasa: SUV
 - Pogon: 100% električni
 - Domet (WLTP): do 435 / 670 km
@@ -587,11 +587,11 @@ Ovlašćeni distributeri u gradovima: Beograd, Niš, Novi Sad, Požarevac, Subot
 - Broj sedišta: 5
 
 ## Leapmotor
-Stranica: https://www.ev-srbija.rs/brendovi/leapmotor.html
+Stranica: https://www.ev-srbija.rs/brendovi/leapmotor
 Ovlašćeni distributeri u gradovima: Beograd i Novi Sad.
 
 ### Leapmotor T03
-- Stranica: https://www.ev-srbija.rs/modeli/leapmotor-t03.html
+- Stranica: https://www.ev-srbija.rs/modeli/leapmotor-t03
 - Klasa: Gradski
 - Pogon: 100% električni
 - Domet (WLTP): do 265 km
@@ -603,7 +603,7 @@ Ovlašćeni distributeri u gradovima: Beograd i Novi Sad.
 - Broj sedišta: 4
 
 ### Leapmotor B03X
-- Stranica: https://www.ev-srbija.rs/modeli/leapmotor-b03x.html
+- Stranica: https://www.ev-srbija.rs/modeli/leapmotor-b03x
 - Klasa: SUV
 - Pogon: 100% električni
 - Domet (WLTP): do 292 / 382 km
@@ -614,7 +614,7 @@ Ovlašćeni distributeri u gradovima: Beograd i Novi Sad.
 - Klirens: 175 mm
 
 ### Leapmotor B05
-- Stranica: https://www.ev-srbija.rs/modeli/leapmotor-b05.html
+- Stranica: https://www.ev-srbija.rs/modeli/leapmotor-b05
 - Klasa: Hečbek
 - Pogon: 100% električni
 - Domet (WLTP): do 401 / 482 km
@@ -626,7 +626,7 @@ Ovlašćeni distributeri u gradovima: Beograd i Novi Sad.
 - Broj sedišta: 5
 
 ### Leapmotor B10
-- Stranica: https://www.ev-srbija.rs/modeli/leapmotor-b10.html
+- Stranica: https://www.ev-srbija.rs/modeli/leapmotor-b10
 - Klasa: SUV
 - Pogon: 100% električni
 - Domet (WLTP): do 361 / 434 km
@@ -637,7 +637,7 @@ Ovlašćeni distributeri u gradovima: Beograd i Novi Sad.
 - Klirens: 170 mm
 
 ### Leapmotor C10
-- Stranica: https://www.ev-srbija.rs/modeli/leapmotor-c10.html
+- Stranica: https://www.ev-srbija.rs/modeli/leapmotor-c10
 - Klasa: SUV
 - Pogon: 100% električni
 - Domet (WLTP): do 420 / 510 km
@@ -648,11 +648,11 @@ Ovlašćeni distributeri u gradovima: Beograd i Novi Sad.
 - Klirens: 180 mm
 
 ## Lynk & Co
-Stranica: https://www.ev-srbija.rs/brendovi/lynk-co.html
+Stranica: https://www.ev-srbija.rs/brendovi/lynk-co
 Ovlašćeni distributeri u gradovima: Beograd.
 
 ### Lynk & Co 02
-- Stranica: https://www.ev-srbija.rs/modeli/lynk-co-02.html
+- Stranica: https://www.ev-srbija.rs/modeli/lynk-co-02
 - Klasa: Crossover
 - Pogon: 100% električni
 - Domet (WLTP): do 445 km
@@ -662,11 +662,11 @@ Ovlašćeni distributeri u gradovima: Beograd.
 - Visina: 1.573 mm
 
 ## Mazda
-Stranica: https://www.ev-srbija.rs/brendovi/mazda.html
+Stranica: https://www.ev-srbija.rs/brendovi/mazda
 Ovlašćeni distributeri u gradovima: Beograd, Niš, Novi Sad, Subotica i Čačak.
 
 ### Mazda 6e
-- Stranica: https://www.ev-srbija.rs/modeli/mazda-6e.html
+- Stranica: https://www.ev-srbija.rs/modeli/mazda-6e
 - Klasa: Sedan
 - Pogon: 100% električni
 - Domet (WLTP): do 479 / 552 km
@@ -676,18 +676,18 @@ Ovlašćeni distributeri u gradovima: Beograd, Niš, Novi Sad, Subotica i Čača
 - Visina: 1.491 mm
 
 ### Mazda CX-6e
-- Stranica: https://www.ev-srbija.rs/modeli/mazda-cx-6e.html
+- Stranica: https://www.ev-srbija.rs/modeli/mazda-cx-6e
 - Klasa: SUV
 - Pogon: 100% električni
 - Domet (WLTP): do 484 km
 - Baterija: 78 kWh
 
 ## MG
-Stranica: https://www.ev-srbija.rs/brendovi/mg.html
+Stranica: https://www.ev-srbija.rs/brendovi/mg
 Ovlašćeni distributeri u gradovima: Beograd, Kragujevac, Niš, Novi Sad, Subotica i Čačak.
 
 ### MG4 Electric
-- Stranica: https://www.ev-srbija.rs/modeli/mg-mg4-electric.html
+- Stranica: https://www.ev-srbija.rs/modeli/mg-mg4-electric
 - Klasa: Hečbek
 - Pogon: 100% električni
 - Domet (WLTP): do 465 km
@@ -699,7 +699,7 @@ Ovlašćeni distributeri u gradovima: Beograd, Kragujevac, Niš, Novi Sad, Subot
 - Broj sedišta: 5
 
 ### MG5 Electric
-- Stranica: https://www.ev-srbija.rs/modeli/mg-mg5-electric.html
+- Stranica: https://www.ev-srbija.rs/modeli/mg-mg5-electric
 - Klasa: Karavan
 - Pogon: 100% električni
 - Domet (WLTP): do 400 km
@@ -711,7 +711,7 @@ Ovlašćeni distributeri u gradovima: Beograd, Kragujevac, Niš, Novi Sad, Subot
 - Broj sedišta: 5
 
 ### MGS5 EV
-- Stranica: https://www.ev-srbija.rs/modeli/mg-mgs5-ev.html
+- Stranica: https://www.ev-srbija.rs/modeli/mg-mgs5-ev
 - Klasa: SUV
 - Pogon: 100% električni
 - Domet (WLTP): do 480 km
@@ -721,11 +721,11 @@ Ovlašćeni distributeri u gradovima: Beograd, Kragujevac, Niš, Novi Sad, Subot
 - Visina: 1.621 mm
 
 ## MINI
-Stranica: https://www.ev-srbija.rs/brendovi/mini.html
+Stranica: https://www.ev-srbija.rs/brendovi/mini
 Ovlašćeni distributeri u gradovima: Beograd.
 
 ### MINI Cooper
-- Stranica: https://www.ev-srbija.rs/modeli/mini-cooper.html
+- Stranica: https://www.ev-srbija.rs/modeli/mini-cooper
 - Klasa: Hečbek
 - Pogon: 100% električni
 - Domet (WLTP): do 290 / 400 km
@@ -737,7 +737,7 @@ Ovlašćeni distributeri u gradovima: Beograd.
 - Broj sedišta: 4
 
 ### MINI Aceman
-- Stranica: https://www.ev-srbija.rs/modeli/mini-aceman.html
+- Stranica: https://www.ev-srbija.rs/modeli/mini-aceman
 - Klasa: SUV
 - Pogon: 100% električni
 - Domet (WLTP): do 309 / 405 km
@@ -749,7 +749,7 @@ Ovlašćeni distributeri u gradovima: Beograd.
 - Broj sedišta: 5
 
 ### MINI Countryman
-- Stranica: https://www.ev-srbija.rs/modeli/mini-countryman.html
+- Stranica: https://www.ev-srbija.rs/modeli/mini-countryman
 - Klasa: SUV
 - Pogon: 100% električni
 - Domet (WLTP): do 500 km
@@ -761,11 +761,11 @@ Ovlašćeni distributeri u gradovima: Beograd.
 - Broj sedišta: 5
 
 ## Opel
-Stranica: https://www.ev-srbija.rs/brendovi/opel.html
+Stranica: https://www.ev-srbija.rs/brendovi/opel
 Ovlašćeni distributeri u gradovima: Beograd, Niš, Novi Sad, Požarevac, Zrenjanin, Čačak i Šabac.
 
 ### Opel Astra Electric
-- Stranica: https://www.ev-srbija.rs/modeli/opel-astra-electric.html
+- Stranica: https://www.ev-srbija.rs/modeli/opel-astra-electric
 - Klasa: Hečbek
 - Pogon: 100% električni
 - Domet (WLTP): do 454 km
@@ -776,7 +776,7 @@ Ovlašćeni distributeri u gradovima: Beograd, Niš, Novi Sad, Požarevac, Zrenj
 - Broj sedišta: 5
 
 ### Opel Frontera Electric
-- Stranica: https://www.ev-srbija.rs/modeli/opel-frontera-electric.html
+- Stranica: https://www.ev-srbija.rs/modeli/opel-frontera-electric
 - Klasa: SUV
 - Pogon: 100% električni
 - Domet (WLTP): do 305 / 408 km
@@ -787,7 +787,7 @@ Ovlašćeni distributeri u gradovima: Beograd, Niš, Novi Sad, Požarevac, Zrenj
 - Broj sedišta: 5
 
 ### Opel Mokka Electric
-- Stranica: https://www.ev-srbija.rs/modeli/opel-mokka-electric.html
+- Stranica: https://www.ev-srbija.rs/modeli/opel-mokka-electric
 - Klasa: SUV
 - Pogon: 100% električni
 - Domet (WLTP): do 403 km
@@ -798,11 +798,11 @@ Ovlašćeni distributeri u gradovima: Beograd, Niš, Novi Sad, Požarevac, Zrenj
 - Broj sedišta: 5
 
 ## Peugeot
-Stranica: https://www.ev-srbija.rs/brendovi/peugeot.html
+Stranica: https://www.ev-srbija.rs/brendovi/peugeot
 Ovlašćeni distributeri u gradovima: Beograd, Niš, Novi Sad, Zrenjanin i Čačak.
 
 ### Peugeot e-208
-- Stranica: https://www.ev-srbija.rs/modeli/peugeot-e-208.html
+- Stranica: https://www.ev-srbija.rs/modeli/peugeot-e-208
 - Klasa: Hečbek
 - Pogon: 100% električni
 - Domet (WLTP): do 362 km
@@ -813,7 +813,7 @@ Ovlašćeni distributeri u gradovima: Beograd, Niš, Novi Sad, Zrenjanin i Čač
 - Broj sedišta: 5
 
 ### Peugeot e-2008
-- Stranica: https://www.ev-srbija.rs/modeli/peugeot-e-2008.html
+- Stranica: https://www.ev-srbija.rs/modeli/peugeot-e-2008
 - Klasa: SUV
 - Pogon: 100% električni
 - Domet (WLTP): do 406 km
@@ -824,7 +824,7 @@ Ovlašćeni distributeri u gradovima: Beograd, Niš, Novi Sad, Zrenjanin i Čač
 - Broj sedišta: 5
 
 ### Peugeot e-308
-- Stranica: https://www.ev-srbija.rs/modeli/peugeot-e-308.html
+- Stranica: https://www.ev-srbija.rs/modeli/peugeot-e-308
 - Klasa: Hečbek
 - Pogon: 100% električni
 - Domet (WLTP): do 450 km
@@ -835,7 +835,7 @@ Ovlašćeni distributeri u gradovima: Beograd, Niš, Novi Sad, Zrenjanin i Čač
 - Broj sedišta: 5
 
 ### Peugeot e-3008
-- Stranica: https://www.ev-srbija.rs/modeli/peugeot-e-3008.html
+- Stranica: https://www.ev-srbija.rs/modeli/peugeot-e-3008
 - Klasa: SUV
 - Pogon: 100% električni
 - Domet (WLTP): do 526 / 701 km
@@ -847,11 +847,11 @@ Ovlašćeni distributeri u gradovima: Beograd, Niš, Novi Sad, Zrenjanin i Čač
 - Broj sedišta: 5
 
 ## Porsche
-Stranica: https://www.ev-srbija.rs/brendovi/porsche.html
+Stranica: https://www.ev-srbija.rs/brendovi/porsche
 Ovlašćeni distributeri u gradovima: Beograd i Novi Sad.
 
 ### Porsche Taycan 4
-- Stranica: https://www.ev-srbija.rs/modeli/porsche-taycan-4.html
+- Stranica: https://www.ev-srbija.rs/modeli/porsche-taycan-4
 - Klasa: Sedan
 - Pogon: 100% električni
 - Domet (WLTP): do 596 km
@@ -862,7 +862,7 @@ Ovlašćeni distributeri u gradovima: Beograd i Novi Sad.
 - Klirens: 127 mm
 
 ### Porsche Macan 4
-- Stranica: https://www.ev-srbija.rs/modeli/porsche-macan-4.html
+- Stranica: https://www.ev-srbija.rs/modeli/porsche-macan-4
 - Klasa: SUV
 - Pogon: 100% električni
 - Domet (WLTP): do 572 km
@@ -873,7 +873,7 @@ Ovlašćeni distributeri u gradovima: Beograd i Novi Sad.
 - Klirens: 185 mm
 
 ### Porsche Macan 4S
-- Stranica: https://www.ev-srbija.rs/modeli/porsche-macan-4s.html
+- Stranica: https://www.ev-srbija.rs/modeli/porsche-macan-4s
 - Klasa: SUV
 - Pogon: 100% električni
 - Domet (WLTP): do 556 km
@@ -884,7 +884,7 @@ Ovlašćeni distributeri u gradovima: Beograd i Novi Sad.
 - Klirens: 186 mm
 
 ### Porsche Cayenne Turbo Electric
-- Stranica: https://www.ev-srbija.rs/modeli/porsche-cayenne-turbo-electric.html
+- Stranica: https://www.ev-srbija.rs/modeli/porsche-cayenne-turbo-electric
 - Klasa: SUV
 - Pogon: 100% električni
 - Domet (WLTP): do 604 km
@@ -895,11 +895,11 @@ Ovlašćeni distributeri u gradovima: Beograd i Novi Sad.
 - Klirens: 190 mm
 
 ## Renault
-Stranica: https://www.ev-srbija.rs/brendovi/renault.html
+Stranica: https://www.ev-srbija.rs/brendovi/renault
 Ovlašćeni distributeri u gradovima: Beograd, Jagodina, Kragujevac, Niš, Novi Sad, Pančevo, Požarevac, Subotica, Užice, Zrenjanin, Čačak i Šabac.
 
 ### Renault 5 E-Tech
-- Stranica: https://www.ev-srbija.rs/modeli/renault-5-e-tech.html
+- Stranica: https://www.ev-srbija.rs/modeli/renault-5-e-tech
 - Klasa: Hečbek
 - Pogon: 100% električni
 - Domet (WLTP): do 315 / 430 km
@@ -911,7 +911,7 @@ Ovlašćeni distributeri u gradovima: Beograd, Jagodina, Kragujevac, Niš, Novi 
 - Broj sedišta: 5
 
 ### Renault Twingo E-Tech
-- Stranica: https://www.ev-srbija.rs/modeli/renault-twingo-e-tech.html
+- Stranica: https://www.ev-srbija.rs/modeli/renault-twingo-e-tech
 - Klasa: Gradski
 - Pogon: 100% električni
 - Domet (WLTP): do 263 km
@@ -922,7 +922,7 @@ Ovlašćeni distributeri u gradovima: Beograd, Jagodina, Kragujevac, Niš, Novi 
 - Broj sedišta: 4
 
 ### Renault 4 E-Tech
-- Stranica: https://www.ev-srbija.rs/modeli/renault-4-e-tech.html
+- Stranica: https://www.ev-srbija.rs/modeli/renault-4-e-tech
 - Klasa: SUV
 - Pogon: 100% električni
 - Domet (WLTP): do 308 / 409 km
@@ -934,11 +934,11 @@ Ovlašćeni distributeri u gradovima: Beograd, Jagodina, Kragujevac, Niš, Novi 
 - Broj sedišta: 5
 
 ## Škoda
-Stranica: https://www.ev-srbija.rs/brendovi/skoda.html
+Stranica: https://www.ev-srbija.rs/brendovi/skoda
 Ovlašćeni distributeri u gradovima: Beograd, Kragujevac, Kruševac, Niš, Novi Pazar, Novi Sad, Paraćin, Subotica, Valjevo, Zrenjanin, Čačak i Šabac.
 
 ### Škoda Elroq
-- Stranica: https://www.ev-srbija.rs/modeli/skoda-elroq.html
+- Stranica: https://www.ev-srbija.rs/modeli/skoda-elroq
 - Klasa: SUV
 - Pogon: 100% električni
 - Domet (WLTP): do 451 / 575 km
@@ -950,7 +950,7 @@ Ovlašćeni distributeri u gradovima: Beograd, Kragujevac, Kruševac, Niš, Novi
 - Broj sedišta: 5
 
 ### Škoda Enyaq
-- Stranica: https://www.ev-srbija.rs/modeli/skoda-enyaq.html
+- Stranica: https://www.ev-srbija.rs/modeli/skoda-enyaq
 - Klasa: SUV
 - Pogon: 100% električni
 - Domet (WLTP): do 431 / 582 km
@@ -962,7 +962,7 @@ Ovlašćeni distributeri u gradovima: Beograd, Kragujevac, Kruševac, Niš, Novi
 - Broj sedišta: 5
 
 ### Škoda Enyaq Coupé
-- Stranica: https://www.ev-srbija.rs/modeli/skoda-enyaq-coupe.html
+- Stranica: https://www.ev-srbija.rs/modeli/skoda-enyaq-coupe
 - Klasa: SUV
 - Pogon: 100% električni
 - Domet (WLTP): do 440 / 591 km
@@ -974,11 +974,11 @@ Ovlašćeni distributeri u gradovima: Beograd, Kragujevac, Kruševac, Niš, Novi
 - Broj sedišta: 5
 
 ## Suzuki
-Stranica: https://www.ev-srbija.rs/brendovi/suzuki.html
+Stranica: https://www.ev-srbija.rs/brendovi/suzuki
 Ovlašćeni distributeri u gradovima: Beograd i Novi Sad.
 
 ### Suzuki e Vitara
-- Stranica: https://www.ev-srbija.rs/modeli/suzuki-e-vitara.html
+- Stranica: https://www.ev-srbija.rs/modeli/suzuki-e-vitara
 - Klasa: SUV
 - Pogon: 100% električni
 - Domet (WLTP): do 426 km
@@ -990,11 +990,11 @@ Ovlašćeni distributeri u gradovima: Beograd i Novi Sad.
 - Broj sedišta: 5
 
 ## Toyota
-Stranica: https://www.ev-srbija.rs/brendovi/toyota.html
+Stranica: https://www.ev-srbija.rs/brendovi/toyota
 Ovlašćeni distributeri u gradovima: Beograd, Niš, Novi Sad, Subotica i Čačak.
 
 ### Toyota bZ4X
-- Stranica: https://www.ev-srbija.rs/modeli/toyota-bz4x.html
+- Stranica: https://www.ev-srbija.rs/modeli/toyota-bz4x
 - Klasa: SUV
 - Pogon: 100% električni
 - Domet (WLTP): do 444 / 559 km
@@ -1006,11 +1006,11 @@ Ovlašćeni distributeri u gradovima: Beograd, Niš, Novi Sad, Subotica i Čača
 - Broj sedišta: 5
 
 ## Volkswagen
-Stranica: https://www.ev-srbija.rs/brendovi/volkswagen.html
+Stranica: https://www.ev-srbija.rs/brendovi/volkswagen
 Ovlašćeni distributeri: lista nije objavljena.
 
 ### Volkswagen ID.3 Neo
-- Stranica: https://www.ev-srbija.rs/modeli/volkswagen-id-3-neo.html
+- Stranica: https://www.ev-srbija.rs/modeli/volkswagen-id-3-neo
 - Klasa: Hečbek
 - Pogon: 100% električni
 - Domet (WLTP): do 418 km
@@ -1021,7 +1021,7 @@ Ovlašćeni distributeri: lista nije objavljena.
 - Broj sedišta: 5
 
 ### Volkswagen ID.4
-- Stranica: https://www.ev-srbija.rs/modeli/volkswagen-id-4.html
+- Stranica: https://www.ev-srbija.rs/modeli/volkswagen-id-4
 - Klasa: SUV
 - Pogon: 100% električni
 - Domet (WLTP): do 436 / 570 km
@@ -1033,7 +1033,7 @@ Ovlašćeni distributeri: lista nije objavljena.
 - Broj sedišta: 5
 
 ### Volkswagen ID.5
-- Stranica: https://www.ev-srbija.rs/modeli/volkswagen-id-5.html
+- Stranica: https://www.ev-srbija.rs/modeli/volkswagen-id-5
 - Klasa: SUV
 - Pogon: 100% električni
 - Domet (WLTP): do 558 / 534 km
@@ -1043,7 +1043,7 @@ Ovlašćeni distributeri: lista nije objavljena.
 - Visina: 1.618 mm
 
 ### Volkswagen ID.7
-- Stranica: https://www.ev-srbija.rs/modeli/volkswagen-id-7.html
+- Stranica: https://www.ev-srbija.rs/modeli/volkswagen-id-7
 - Klasa: Sedan
 - Pogon: 100% električni
 - Domet (WLTP): do 600 / 711 km
@@ -1054,7 +1054,7 @@ Ovlašćeni distributeri: lista nije objavljena.
 - Broj sedišta: 5
 
 ### Volkswagen ID. Polo
-- Stranica: https://www.ev-srbija.rs/modeli/volkswagen-id-polo.html
+- Stranica: https://www.ev-srbija.rs/modeli/volkswagen-id-polo
 - Klasa: Hečbek
 - Pogon: 100% električni
 - Domet (WLTP): do 331 / 454 km
@@ -1065,11 +1065,11 @@ Ovlašćeni distributeri: lista nije objavljena.
 - Broj sedišta: 5
 
 ## Volvo
-Stranica: https://www.ev-srbija.rs/brendovi/volvo.html
+Stranica: https://www.ev-srbija.rs/brendovi/volvo
 Ovlašćeni distributeri u gradovima: Beograd.
 
 ### Volvo EX30
-- Stranica: https://www.ev-srbija.rs/modeli/volvo-ex30.html
+- Stranica: https://www.ev-srbija.rs/modeli/volvo-ex30
 - Klasa: SUV
 - Pogon: 100% električni
 - Domet (WLTP): do 337 / 475 km
@@ -1081,7 +1081,7 @@ Ovlašćeni distributeri u gradovima: Beograd.
 - Broj sedišta: 5
 
 ### Volvo EX60
-- Stranica: https://www.ev-srbija.rs/modeli/volvo-ex60.html
+- Stranica: https://www.ev-srbija.rs/modeli/volvo-ex60
 - Klasa: SUV
 - Pogon: 100% električni
 - Domet (WLTP): do 611 / 660 / 810 km
@@ -1093,7 +1093,7 @@ Ovlašćeni distributeri u gradovima: Beograd.
 - Broj sedišta: 5
 
 ### Volvo EX90
-- Stranica: https://www.ev-srbija.rs/modeli/volvo-ex90.html
+- Stranica: https://www.ev-srbija.rs/modeli/volvo-ex90
 - Klasa: SUV
 - Pogon: 100% električni
 - Domet (WLTP): do 564 / 617 km
@@ -1105,7 +1105,7 @@ Ovlašćeni distributeri u gradovima: Beograd.
 - Broj sedišta: 7
 
 ### Volvo ES90
-- Stranica: https://www.ev-srbija.rs/modeli/volvo-es90.html
+- Stranica: https://www.ev-srbija.rs/modeli/volvo-es90
 - Klasa: Sedan
 - Pogon: 100% električni
 - Domet (WLTP): do 664 / 702 km
@@ -1117,8 +1117,8 @@ Ovlašćeni distributeri u gradovima: Beograd.
 - Broj sedišta: 5
 
 ## Ostalo
-- Subvencije 2026: https://www.ev-srbija.rs/subvencije-elektricni-automobili-2026.html
-- Distributeri po gradovima: https://www.ev-srbija.rs/distributeri.html
-- Mapa punjača: https://www.ev-srbija.rs/punjaci.html
-- Uporedi modele: https://www.ev-srbija.rs/uporedi.html
+- Subvencije 2026: https://www.ev-srbija.rs/subvencije-elektricni-automobili-2026
+- Distributeri po gradovima: https://www.ev-srbija.rs/distributeri
+- Mapa punjača: https://www.ev-srbija.rs/punjaci
+- Uporedi modele: https://www.ev-srbija.rs/uporedi
 - Kontakt i ispravke podataka: office@ev-srbija.rs

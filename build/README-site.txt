@@ -3,10 +3,14 @@ ev-srbija.rs - static site
 The published website is the site/ folder: open site/index.html to view it. Everything else is the source used to build it.
 Rebuild after any change:  python3 build/build_site.py  (run from the project folder; writes site/)
 
-Cloudflare Pages:
-  Upload the contents of site/ (direct upload), or connect the GitHub repo with
-  build output directory "site" and no build command (commit site/ after each rebuild).
-  404.html is used automatically for unknown addresses. site/_headers sets security and cache headers.
+Cloudflare (Workers, connected to GitHub):
+  wrangler.jsonc (project root) publishes the site/ folder as it is: no build command,
+  deploy command "npx wrangler deploy". Addresses have no .html (ev-srbija.rs/modeli): Cloudflare serves
+  /modeli from modeli.html and redirects old /modeli.html addresses to /modeli. Unknown addresses show
+  404.html (status 404). site/_headers sets security and cache headers.
+  With CLEAN_URLS = True the links work on Cloudflare only, not when opening the files from disk.
+  After each rebuild, commit the updated site/ folder; Cloudflare publishes it automatically.
+  Direct upload instead: upload the contents of site/ (ev-srbija-cloudflare-upload-*.zip).
   Redirect https://ev-srbija.rs to https://www.ev-srbija.rs (301) so search engines see one address.
 
 Sources of truth:
@@ -24,6 +28,7 @@ Switches in build/build_site.py (section "SWITCHES"):
                         oglasi@ev-srbija.rs, "Zakupi" buttons, ad codes, links to Oglašavanje. The ad spots on the
                         homepage stay as neutral "Slobodna pozicija" placeholders.
                 True  = all of it is back. The build stops with an error if ads are off but an ad reference remains.
+  CLEAN_URLS    True  = addresses without .html (for Cloudflare). False = .html addresses (any host, or opening files from disk).
   GA_ID         Google Analytics 4 ID ('G-...'); empty = analytics never loads.
 
 To turn ads ON later (any Claude account): attach the latest project zip and ask:

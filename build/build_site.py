@@ -1991,6 +1991,10 @@ if os.path.exists(f'{OUT}/README.txt'):
 #                    True = everything for selling ads is back.
 NOINDEX = True
 ADS_ENABLED = False
+# CLEAN_URLS = True -> addresses without .html (ev-srbija.rs/modeli). Files stay modeli.html on disk; Cloudflare
+#                     serves /modeli from modeli.html (wrangler.jsonc: html_handling auto-trailing-slash).
+#                     Links then work only on Cloudflare, not when opening the files from disk. False = .html addresses.
+CLEAN_URLS = True
 
 # Cloudflare Pages: security and cache headers (_headers is read by Cloudflare, never served as a page)
 open(f'{OUT}/_headers', 'w').write('''/*
@@ -2235,6 +2239,31 @@ if not ADS_ENABLED:
                 left.append((os.path.relpath(f, OUT), body[max(0, m.start() - 30):m.end() + 20]))
     if left:
         raise SystemExit('ADS_ENABLED=False but ad references remain: ' + repr(left[:10]))
+
+# ------------------------------------------------------------------ CLEAN_URLS: drop ".html" from every internal address
+if CLEAN_URLS:
+    import glob
+    PAGES_ = sorted((os.path.relpath(f, OUT)[:-5] for f in glob.glob(f'{OUT}/**/*.html', recursive=True)), key=len, reverse=True)
+    PAGES_ = [p_ for p_ in PAGES_ if p_ != '404']
+    rx = re.compile(r'(?<![A-Za-z0-9_.-])((?:https://www\.ev-srbija\.rs/|\.\./|/)?)(' + '|'.join(re.escape(p_) for p_ in PAGES_) + r')\.html(?=["\'#?)\s<,\\]|$)')
+    def _clean(m):
+        pre, path = m.group(1), m.group(2)
+        if path == 'index':
+            return pre if pre else './'
+        return pre + path
+    for f in glob.glob(f'{OUT}/**/*', recursive=True):
+        if not (os.path.isfile(f) and f.endswith(('.html', '.xml', '.txt', '.json'))):
+            continue
+        t = open(f, encoding='utf-8').read()
+        t2 = rx.sub(_clean, t)
+        d_ = os.path.dirname(os.path.relpath(f, OUT))
+        if d_:                                                  # sibling links inside brendovi/ and modeli/ ("kia.html")
+            sib = sorted((p_[len(d_) + 1:] for p_ in PAGES_ if p_.startswith(d_ + '/')), key=len, reverse=True)
+            if sib:
+                t2 = re.sub(r'(?<=["\'])(' + '|'.join(re.escape(x) for x in sib) + r')\.html(?=["\'#?])', r'\1', t2)
+        t2 = t2.replace("+'.html", "+'")                     # links built in scripts: 'modeli/'+id+'.html'
+        if t2 != t:
+            open(f, 'w', encoding='utf-8').write(t2)
 
 # NOINDEX = True: mark every page noindex in the HTML itself (works on any host)
 if NOINDEX:
