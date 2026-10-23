@@ -25,7 +25,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap">
-<link rel="stylesheet" href="assets/site.css?v=df9b378b">
+<link rel="stylesheet" href="assets/site.css?v=7e79983e">
 <style>/* logo masks resolve against the page, not the stylesheet */.blogo{-webkit-mask:var(--l) center/contain no-repeat;mask:var(--l) center/contain no-repeat}</style>
 <link rel="stylesheet" href="assets/maplibre-gl.css">
 <script src="assets/maplibre-gl.js" defer></script>
@@ -139,11 +139,12 @@
       </div>
       <div><h4>ISTRAŽI</h4><ul><li><a href="brendovi.html">Svi brendovi</a></li><li><a href="modeli.html">Svi modeli</a></li><li><a href="najveci-domet.html">Najveći domet</a></li><li><a href="index.html#pretraga">Pretraga</a></li></ul></div>
       <div><h4>KATEGORIJE</h4><ul><li><a href="elektricni-suv.html">Električni SUV</a></li><li><a href="elektricni-hecbek.html">Hečbek</a></li><li><a href="elektricni-sedani.html">Sedan</a></li><li><a href="elektricni-pikapi.html">Pikap</a></li><li><a href="gradski-elektricni-automobili.html">Gradski</a></li></ul></div>
-      <div><h4>INFORMACIJE</h4><ul><li><a href="distributeri.html">Distributeri</a></li><li><a href="punjaci.html">Punjači</a></li><li><a href="uporedi.html">Uporedi modele</a></li><li><a href="subvencije-elektricni-automobili-2026.html">Subvencije 2026</a></li><li><a href="index.html#faq">Česta pitanja</a></li><li><a href="oglasavanje.html">Oglašavanje</a></li><li><a href="o-nama.html">O nama</a></li><li><a href="kontakt.html">Kontakt</a></li><li><a href="politika-privatnosti.html">Politika privatnosti</a></li><li><a href="index.html#" data-cookie-settings>Podešavanja kolačića</a></li></ul></div>
-      <div><h4>KONTAKT</h4><ul><li><a href="mailto:office@ev-srbija.rs">office@ev-srbija.rs</a></li><li><a href="mailto:oglasi@ev-srbija.rs">oglasi@ev-srbija.rs</a></li></ul></div>
+      <div><h4>INFORMACIJE</h4><ul><li><a href="distributeri.html">Distributeri</a></li><li><a href="punjaci.html">Punjači</a></li><li><a href="uporedi.html">Uporedi modele</a></li><li><a href="subvencije-elektricni-automobili-2026.html">Subvencije 2026</a></li><li><a href="index.html#faq">Česta pitanja</a></li><li><a href="o-nama.html">O nama</a></li><li><a href="kontakt.html">Kontakt</a></li><li><a href="index.html#" data-cookie-settings>Podešavanja kolačića</a></li></ul></div>
+      <div><h4>KONTAKT</h4><ul><li><a href="mailto:office@ev-srbija.rs">office@ev-srbija.rs</a></li></ul></div>
     </div>
     <div class="foot-bottom">
       <span>© 2026 ev-srbija.rs. Sva prava zadržana.</span>
+      <a class="foot-legal" href="politika-privatnosti.html">Politika privatnosti</a>
     </div>
     <p class="disclaimer"><strong>Napomena:</strong> ev-srbija.rs nije zvanični sajt nijednog proizvođača, uvoznika ili distributera vozila. Sve informacije na sajtu su isključivo informativnog karaktera, prikupljene iz javno dostupnih izvora, i mogu biti netačne, nepotpune ili zastarele. Pre kupovine proverite cene, opremu, domet i dostupnost modela kod ovlašćenog distributera. Nazivi i logotipi brendova vlasništvo su njihovih nosilaca. Brendovi koji se ne pojavljuju na sajtu ili nisu dali saglasnost da se njihov sadržaj nalazi na sajtu ili nismo uspeli da pronađemo potpune podatke o vozilima koji su potrebni za ovu vrstu prezentacije na njihovim zvaničnim sajtovima u Republici Srbiji.</p>
   </div>
@@ -285,7 +286,7 @@ function openPop(id){
   box.children[4].href=li.querySelector('.ch-act a').href;
   if(popup)popup.remove();popup=new maplibregl.Popup({offset:12,maxWidth:'260px'}).setLngLat(FEATS[id].geometry.coordinates).setDOMContent(box).addTo(map);
 }
-var FIT=true;
+var FIT=true,FLY=0,RM=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
 function apply(push,fit){
   var p=+(sel('p')[0]||0),k=sel('k'),a=sel('a'),vis=[];
   items.forEach(function(li){var c=li.dataset.c.split(' ');
@@ -299,14 +300,22 @@ function apply(push,fit){
   $('cat-apply').textContent=vis.length?('Prikaži '+vis.length+' punjača'):'Nema rezultata';
   if(map&&ready){map.getSource('ch').setData({type:'FeatureCollection',features:vis.map(function(li){return FEATS[li.dataset.id]})});
     if(popup)popup.remove();
-    if(fit&&vis.length){var b=new maplibregl.LngLatBounds();vis.forEach(function(li){b.extend([+li.dataset.lng,+li.dataset.lat])});map.fitBounds(b,{padding:40,maxZoom:13,duration:fit===2?600:0})}}
+    if(fit&&vis.length){var b=new maplibregl.LngLatBounds();vis.forEach(function(li){b.extend([+li.dataset.lng,+li.dataset.lat])});map.stop();map.fitBounds(b,{padding:40,maxZoom:13,duration:fit===2&&!RM?1000:0})}}
   if(push!==false){var q=new URLSearchParams();if(p)q.set('snaga',p);if(k.length)q.set('konektor',k.join(','));if(a.length)q.set('pristup',a.join(','));
     try{history.replaceState(null,'',location.pathname+(q.toString()?'?'+q:''))}catch(e){}}
 }
 side.addEventListener('change',function(e){var t=e.target;if(t.name==='p'&&t.checked)inputs.forEach(function(i){if(i.name==='p'&&i!==t)i.checked=false});shown=PAGE;apply(true,2)});
 $('ch-more').addEventListener('click',function(){shown+=PAGE;apply(false)});
-list.addEventListener('click',function(e){var b=e.target.closest('.ch-show');if(!b||!map)return;var li=b.closest('.ch');
-  $('ch-map').scrollIntoView({behavior:'smooth',block:'center'});map.jumpTo({center:[+li.dataset.lng,+li.dataset.lat],zoom:15});openPop(li.dataset.id)});
+/* the whole card shows the charger on the map (the Navigacija link keeps its own job) */
+list.addEventListener('click',function(e){if(e.target.closest('a'))return;var li=e.target.closest('.ch');if(!li||!map)return;
+  if(window.getSelection&&String(getSelection()).length>2&&!e.target.closest('.ch-show'))return;
+  items.forEach(function(x){x.classList.toggle('sel',x===li)});
+  if(popup)popup.remove();
+  var el=$('ch-map'),r=el.getBoundingClientRect(),inView=r.top>=0&&r.bottom<=innerHeight;
+  if(!inView)el.scrollIntoView({behavior:RM?'auto':'smooth',block:'center'});
+  var go=function(){map.stop();var t=++FLY;map.once('moveend',function(){if(t===FLY)openPop(li.dataset.id)});
+    map.flyTo({center:[+li.dataset.lng,+li.dataset.lat],zoom:15,curve:1.42,duration:RM?0:1600,essential:true})};
+  if(inView||RM)go();else setTimeout(go,350)});
 function reset(){inputs.forEach(function(i){i.checked=false});shown=PAGE;apply(true,true)}
 var q=new URLSearchParams(location.search);
 if(q.get('snaga'))inputs.forEach(function(i){if(i.name==='p')i.checked=i.value===q.get('snaga')});

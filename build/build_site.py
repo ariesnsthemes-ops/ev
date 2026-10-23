@@ -5,7 +5,7 @@ Every brand and model gets its own crawlable page with the content in the HTML (
 to read it), its own title, description, canonical URL, Open Graph tags and JSON-LD structured data.
 Run from the ev-china folder:  python3 build/build_site.py
 """
-import base64, hashlib, html, json, os, re, shutil
+import base64, collections, hashlib, html, json, os, re, shutil
 
 ROOT = '.'
 OUT = f'{ROOT}/site'
@@ -17,7 +17,7 @@ SITE = 'ev-srbija.rs'
 
 E = lambda t: html.escape(str(t if t is not None else ''), quote=True)
 
-src = open(f'{ROOT}/index.html', encoding='utf-8').read()
+src = open(f'{ROOT}/build/homepage-template.html', encoding='utf-8').read()
 content = json.load(open(f'{ROOT}/build/brand_content.json', encoding='utf-8'))
 mcontent = json.load(open(f'{ROOT}/build/model_content.json', encoding='utf-8'))
 data = {b['slug']: b for b in json.load(open(f'{ROOT}/data/brands.json', encoding='utf-8'))['brands']}
@@ -94,7 +94,7 @@ brand_opts = ''.join('<option>' + esc_html(brands[s]['name']) + '</option>' for 
 src, k = re.subn(r'(<select id="f-brand"><option value="">Svi brendovi</option>).*?(</select>)', lambda mm: mm.group(1) + brand_opts + mm.group(2), src, count=1, flags=re.S)
 assert k == 1
 src = re.sub(r'<script type="application/json" id="ev-models">.*?</script>', lambda mm: blob, src, count=1, flags=re.S)
-open(f'{ROOT}/index.html', 'w', encoding='utf-8').write(src)
+open(f'{ROOT}/build/homepage-template.html', 'w', encoding='utf-8').write(src)
 
 # ------------------------------------------------------------------ pieces taken from the homepage source
 style = re.search(r'<style>(.*?)</style>', src, re.S).group(1)
@@ -364,6 +364,7 @@ body.no-scroll{overflow:hidden}
 .maplibregl-popup-close-button{font-size:18px;padding:2px 8px}
 .ch-list{list-style:none;margin:20px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
 .ch{display:flex;flex-direction:column;gap:8px;padding:18px 20px;border:1px solid var(--line);border-radius:var(--r-lg);background:var(--surface)}
+.ch{cursor:pointer;transition:border-color .15s,box-shadow .15s}.ch:hover{border-color:color-mix(in srgb,var(--green) 45%,var(--line))}.ch.sel{border-color:var(--green);box-shadow:0 0 0 1px var(--green)}
 .ch[hidden]{display:none}
 .ch-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
 .ch h3{font-size:16px;line-height:1.3;margin:0;letter-spacing:-.01em}
@@ -1532,7 +1533,7 @@ function openPop(id){
   box.children[4].href=li.querySelector('.ch-act a').href;
   if(popup)popup.remove();popup=new maplibregl.Popup({offset:12,maxWidth:'260px'}).setLngLat(FEATS[id].geometry.coordinates).setDOMContent(box).addTo(map);
 }
-var FIT=true;
+var FIT=true,FLY=0,RM=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
 function apply(push,fit){
   var p=+(sel('p')[0]||0),k=sel('k'),a=sel('a'),vis=[];
   items.forEach(function(li){var c=li.dataset.c.split(' ');
@@ -1546,14 +1547,22 @@ function apply(push,fit){
   $('cat-apply').textContent=vis.length?('Prikaži '+vis.length+' punjača'):'Nema rezultata';
   if(map&&ready){map.getSource('ch').setData({type:'FeatureCollection',features:vis.map(function(li){return FEATS[li.dataset.id]})});
     if(popup)popup.remove();
-    if(fit&&vis.length){var b=new maplibregl.LngLatBounds();vis.forEach(function(li){b.extend([+li.dataset.lng,+li.dataset.lat])});map.fitBounds(b,{padding:40,maxZoom:13,duration:fit===2?600:0})}}
+    if(fit&&vis.length){var b=new maplibregl.LngLatBounds();vis.forEach(function(li){b.extend([+li.dataset.lng,+li.dataset.lat])});map.stop();map.fitBounds(b,{padding:40,maxZoom:13,duration:fit===2&&!RM?1000:0})}}
   if(push!==false){var q=new URLSearchParams();if(p)q.set('snaga',p);if(k.length)q.set('konektor',k.join(','));if(a.length)q.set('pristup',a.join(','));
     try{history.replaceState(null,'',location.pathname+(q.toString()?'?'+q:''))}catch(e){}}
 }
 side.addEventListener('change',function(e){var t=e.target;if(t.name==='p'&&t.checked)inputs.forEach(function(i){if(i.name==='p'&&i!==t)i.checked=false});shown=PAGE;apply(true,2)});
 $('ch-more').addEventListener('click',function(){shown+=PAGE;apply(false)});
-list.addEventListener('click',function(e){var b=e.target.closest('.ch-show');if(!b||!map)return;var li=b.closest('.ch');
-  $('ch-map').scrollIntoView({behavior:'smooth',block:'center'});map.jumpTo({center:[+li.dataset.lng,+li.dataset.lat],zoom:15});openPop(li.dataset.id)});
+/* the whole card shows the charger on the map (the Navigacija link keeps its own job) */
+list.addEventListener('click',function(e){if(e.target.closest('a'))return;var li=e.target.closest('.ch');if(!li||!map)return;
+  if(window.getSelection&&String(getSelection()).length>2&&!e.target.closest('.ch-show'))return;
+  items.forEach(function(x){x.classList.toggle('sel',x===li)});
+  if(popup)popup.remove();
+  var el=$('ch-map'),r=el.getBoundingClientRect(),inView=r.top>=0&&r.bottom<=innerHeight;
+  if(!inView)el.scrollIntoView({behavior:RM?'auto':'smooth',block:'center'});
+  var go=function(){map.stop();var t=++FLY;map.once('moveend',function(){if(t===FLY)openPop(li.dataset.id)});
+    map.flyTo({center:[+li.dataset.lng,+li.dataset.lat],zoom:15,curve:1.42,duration:RM?0:1600,essential:true})};
+  if(inView||RM)go();else setTimeout(go,350)});
 function reset(){inputs.forEach(function(i){i.checked=false});shown=PAGE;apply(true,true)}
 var q=new URLSearchParams(location.search);
 if(q.get('snaga'))inputs.forEach(function(i){if(i.name==='p')i.checked=i.value===q.get('snaga')});
@@ -1771,7 +1780,7 @@ info_page('politika-privatnosti.html', 'Politika privatnosti', 'Politika privatn
       <ul>
         <li><strong>Statistika poseta (Google Analytics).</strong> Samo ako kliknete „Prihvati“ u obaveštenju o kolačićima. Detalji su u odeljku Kolačići i Google Analytics.</li>
         <li><strong>Podešavanja u pregledaču.</strong> Izbor svetle ili tamne teme i lista modela za poređenje čuvaju se samo u vašem pregledaču (sessionStorage) i brišu se kada zatvorite karticu. Vaš izbor u vezi sa kolačićima čuva se u pregledaču (localStorage) do 6 meseci, da vas ne bismo pitali pri svakoj poseti. Ovi podaci se ne šalju nama.</li>
-        <li><strong>E-pošta.</strong> Kada nam pišete, vašu adresu e-pošte i sadržaj poruke koristimo samo da bismo odgovorili. Poruke čuvamo dok je to potrebno za odgovor i eventualnu dalju saradnju, a zatim ih brišemo.</li>
+        <li><strong>E-pošta.</strong> Kada nam pišete, vaše podatke koristimo isključivo za odgovaranje na vaš upit i dalju komunikaciju. Podatke ne delimo sa trećim licima i čuvamo ih samo onoliko koliko je neophodno za ostvarivanje te svrhe. Odgovore šaljemo preko servisa Resend (detalji u odeljku Slanje e-pošte).</li>
         <li><strong>Server.</strong> Kao i svaki sajt, server na kojem se sajt nalazi može da beleži tehničke podatke o zahtevima (IP adresa, vreme, tip pregledača) radi bezbednosti i ispravnog rada.</li>
       </ul>
       <h2 id="kolacici">Kolačići i Google Analytics</h2>
@@ -1783,6 +1792,14 @@ info_page('politika-privatnosti.html', 'Politika privatnosti', 'Politika privatn
         <li><strong>Čuvanje:</strong> podaci o posetama se u Google Analytics čuvaju 2 meseca, a zatim se automatski brišu.</li>
         <li><strong>Prenos podataka:</strong> Google može da obrađuje podatke i van Srbije, uključujući Sjedinjene Američke Države, uz mere zaštite koje predviđa Google.</li>
         <li><strong>Povlačenje saglasnosti:</strong> u svakom trenutku, preko linka <a href="#" data-cookie-settings>Podešavanja kolačića</a> (nalazi se i u podnožju svake stranice). Možete i da obrišete kolačiće u pregledaču ili da instalirate Googleov <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">dodatak za isključivanje Google Analytics</a>.</li>
+      </ul>
+      <h2 id="e-posta">Slanje e-pošte (Resend)</h2>
+      <p>Odgovore na vaše poruke šaljemo preko servisa Resend (Resend, Inc., Sjedinjene Američke Države), koji za nas obavlja tehničko slanje e-pošte.</p>
+      <ul>
+        <li><strong>Podaci:</strong> vaša adresa e-pošte, sadržaj našeg odgovora i tehnički podaci o isporuci (vreme slanja, da li je poruka isporučena).</li>
+        <li><strong>Svrha i pravni osnov:</strong> odgovor na poruku koju ste nam poslali, odnosno vaš zahtev.</li>
+        <li><strong>Prenos podataka:</strong> Resend može da obrađuje podatke i van Srbije, uključujući Sjedinjene Američke Države, uz mere zaštite koje predviđa Resend.</li>
+        <li>Resend podatke koristi samo za slanje poruka u naše ime, ne za sopstvene svrhe.</li>
       </ul>
       <h2>Spoljni servisi</h2>
       <p>Neki delovi sajta učitavaju se sa spoljnih servisa, koji pri tome vide vašu IP adresu:</p>
@@ -1912,7 +1929,7 @@ for _mid in [i for i in FEATURED_HOME if i in models]:
 src, _k = re.subn(r'(<div class="models" id="models">)(.*?)(\n\s*<div class="empty" id="empty" hidden>)',
                   lambda mm: mm.group(1) + '\n' + '\n'.join(_cards) + mm.group(3), src, count=1, flags=re.S)
 assert _k == 1
-open(f'{ROOT}/index.html', 'w', encoding='utf-8').write(src)
+open(f'{ROOT}/build/homepage-template.html', 'w', encoding='utf-8').write(src)
 home = unembed(src, '')
 faq_pairs = re.findall(r'<details[^>]*>\s*<summary[^>]*>(.*?)</summary>\s*<p>(.*?)</p>\s*</details>', home, re.S)
 faq_pairs = [(re.sub(r'\s*\+\s*$', '', re.sub(r'<[^>]+>', '', q)).strip(), html.unescape(re.sub(r'<[^>]+>', '', a)).strip()) for q, a in faq_pairs]
@@ -1962,13 +1979,36 @@ for path, h in pages.items():
     os.makedirs(os.path.dirname(f'{OUT}/{path}') or OUT, exist_ok=True)
     open(f'{OUT}/{path}', 'w', encoding='utf-8').write(h)
 open(f'{ROOT}/build/_preview_index.html', 'w', encoding='utf-8').write(preview)
-shutil.copy(f'{ROOT}/build/README-site.txt', f'{OUT}/README.txt')
-# feedback copy on Vercel must not be indexed; set VERCEL_NOINDEX = False (or delete site/vercel.json) before launch
-VERCEL_NOINDEX = True
-if VERCEL_NOINDEX:
-    json.dump({'headers': [{'source': '/(.*)', 'headers': [{'key': 'X-Robots-Tag', 'value': 'noindex, nofollow'}]}]},
-              open(f'{OUT}/vercel.json', 'w'), indent=2)
-elif os.path.exists(f'{OUT}/vercel.json'):
+# README stays with the project, not in the published site
+shutil.copy(f'{ROOT}/build/README-site.txt', f'{ROOT}/README.txt')
+if os.path.exists(f'{OUT}/README.txt'):
+    os.remove(f'{OUT}/README.txt')
+# ------------------------------------------------------------------ SWITCHES (see README.txt)
+# NOINDEX = True  -> every page gets <meta name="robots" content="noindex, nofollow"> and an X-Robots-Tag header
+#                    (private preview, e.g. password-protected on Cloudflare). False = search engines may index.
+# ADS_ENABLED = False -> Oglašavanje page, demo page, oglasi@ address, "Zakupi" buttons, ad codes and links to
+#                    Oglašavanje are left out of the site; the ad spots stay as neutral "Slobodna pozicija" placeholders.
+#                    True = everything for selling ads is back.
+NOINDEX = True
+ADS_ENABLED = False
+
+# Cloudflare Pages: security and cache headers (_headers is read by Cloudflare, never served as a page)
+open(f'{OUT}/_headers', 'w').write('''/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: SAMEORIGIN
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=()
+''' + ('  X-Robots-Tag: noindex, nofollow\n' if NOINDEX else '') + '''
+/img/*
+  Cache-Control: public, max-age=2592000
+
+/logos/*
+  Cache-Control: public, max-age=2592000
+
+/assets/*
+  Cache-Control: public, max-age=2592000
+''')
+if os.path.exists(f'{OUT}/vercel.json'):
     os.remove(f'{OUT}/vercel.json')
 
 # ------------------------------------------------------------------ demo page for advertisers (not linked, noindex, not in sitemap)
@@ -2125,8 +2165,79 @@ for p in sorted(pages, key=lambda p: (p.count('/'), p)):
     pass
 print('index.html', len(pages['index.html']) // 1024, 'KB; model page', len(pages['modeli/byd-seal.html']) // 1024, 'KB')
 
-# feedback copy: also mark every page noindex in the HTML itself, so it works even if the host ignores vercel.json
-if VERCEL_NOINDEX:
+# ------------------------------------------------------------------ ADS_ENABLED = False: strip everything used to sell ads
+if not ADS_ENABLED:
+    import glob
+    for f in ('oglasavanje.html', 'primer-oglasa.html'):
+        if os.path.exists(f'{OUT}/{f}'):
+            os.remove(f'{OUT}/{f}')
+    if os.path.isdir(f'{OUT}/img/demo'):
+        shutil.rmtree(f'{OUT}/img/demo')
+    seen = collections.Counter()
+    def strip(h, f):
+        n0 = h
+        # footer: Oglašavanje link and oglasi@ address (all pages)
+        h = re.sub(r'<li><a href="(?:\.\./|/)?oglasavanje\.html">Oglašavanje</a></li>', '', h)
+        h = h.replace('<li><a href="mailto:oglasi@ev-srbija.rs">oglasi@ev-srbija.rs</a></li>', '')
+        # structured data: sales contact
+        h = h.replace(', {"@type": "ContactPoint", "contactType": "sales", "email": "oglasi@ev-srbija.rs", "availableLanguage": "sr"}', '')
+        if f == 'index.html':
+            h = re.sub(r'<div class="rs-note">.*?</div>', '', h)
+            h = re.sub(r'<!--[^>]*?AD-0.*?-->\s*', '', h, flags=re.S)                         # internal ad comments
+            h = re.sub(r' data-pos="AD-0[^"]*"', '', h)                                   # AD-0x codes and "Detalji"
+            h = re.sub(r'\s*<a href="oglasavanje\.html#zakup-0\d" class="btn btn-dark">Zakupi[^<]*<span class="arr">→</span></a>', '', h)
+            h = h.replace('<p>Jedna od 5 pozicija u hero karuselu. Kreativa 1600 x 900 px (16:9), mesečni zakup.</p>', '')
+            h = h.replace('<span class="media-hint" id="hero-hint">Kreativa oglašivača 1600 x 900 px</span>', '')
+            h = h.replace('''<a class="tile tile-free" href="oglasavanje.html#zakup-01" data-k="'+k+'"><b>POZICIJA '+(k+1)+'</b><strong>Slobodna pozicija</strong><span>Zakupi →</span></a>''',
+                          '''<div class="tile tile-free" data-k="'+k+'"><b>POZICIJA '+(k+1)+'</b><strong>Slobodna pozicija</strong></div>''')
+        if f == 'index.html':
+            # no word about ads anywhere while ads are off (labels and screen-reader names included)
+            h = re.sub(r'\s*<span class="rs-label">Oglas</span>', '', h)
+            h = h.replace('<span class="rs-label">Brend meseca · Oglas</span>', '<span class="rs-label">Brend meseca</span>')
+            h = h.replace('aria-label="Oglas"', 'aria-label="Istaknuto"')
+            h = h.replace('aria-label="Prethodni oglas"', 'aria-label="Prethodna pozicija"').replace('aria-label="Sledeći oglas"', 'aria-label="Sledeća pozicija"')
+            h = h.replace('aria-label="Oglašivači u rotaciji"', 'aria-label="Pozicije"').replace('aria-label="Sponzorisani modeli"', 'aria-label="Istaknuti modeli"')
+            h = h.replace('<div class="slot">LOGO SPONZORA</div>', '<div class="slot">LOGO</div>')
+            h = re.sub(r'\s*<p>Mesto za jednog distributera ili brend, uz link ka zakazivanju test vožnje\.</p>', '', h)
+        if f == 'politika-privatnosti.html':
+            h = h.replace('kako bismo poboljšali sadržaj i oglašivačima pokazali posećenost.', 'kako bismo poboljšali sadržaj.')
+            h = h.replace('Ne prodajemo podatke i ne koristimo ih za personalizovane oglase.', 'Ne prodajemo podatke i ne koristimo ih za profilisanje posetilaca.')
+        if f == 'o-nama.html':
+            h = h.replace(' Oglasi na sajtu su jasno odvojeni od podataka o modelima i ne utiču na redosled ni na sadržaj podataka.', '')
+            h = h.replace(' Za oglašavanje se javite na <a href="mailto:oglasi@ev-srbija.rs">oglasi@ev-srbija.rs</a>.', '')
+        if f == 'kontakt.html':
+            h = h.replace(' Za oglašavanje pišite na <a href="mailto:oglasi@ev-srbija.rs">oglasi@ev-srbija.rs</a>.', '')
+            h = re.sub(r'\s*<a class="ccard" href="mailto:oglasi@ev-srbija\.rs">.*?</span></span></a>', '', h, flags=re.S)
+            h = h.replace(' Uslovi za reklamna mesta nalaze se na stranici <a href="oglasavanje.html">Oglašavanje</a>.', '')
+            h = h.replace(', oglasi@ev-srbija.rs za oglašavanje', '')
+        return h
+    for f in glob.glob(f'{OUT}/**/*.html', recursive=True):
+        rel = os.path.relpath(f, OUT)
+        h = open(f, encoding='utf-8').read()
+        h2 = strip(h, rel)
+        if h2 != h:
+            open(f, 'w', encoding='utf-8').write(h2)
+    for f in ('sitemap.xml', 'llms.txt', 'llms-full.txt'):
+        t = open(f'{OUT}/{f}', encoding='utf-8').read()
+        t = re.sub(r'\s*<url><loc>[^<]*oglasavanje\.html</loc>.*?</url>', '', t)
+        t = '\n'.join(l for l in t.split('\n') if 'oglasavanje' not in l and 'oglasi@' not in l)
+        open(f'{OUT}/{f}', 'w', encoding='utf-8').write(t)
+    # nothing about selling ads may be left (only words like "oglas" in the privacy policy)
+    left = []
+    for f in glob.glob(f'{OUT}/**/*', recursive=True):
+        if os.path.isfile(f) and f.endswith(('.html', '.txt', '.xml', '.json')):
+            t = open(f, encoding='utf-8').read()
+            for w in ('oglasavanje.html', 'oglasi@', 'Zakupi', 'zakup-0', 'primer-oglasa', 'rs-note">', 'mesečni zakup'):
+                if w in t:
+                    left.append((os.path.relpath(f, OUT), w))
+            body = re.sub(r'<script.*?</script>', '', t, flags=re.S) if f.endswith('.html') else t
+            for m in re.finditer(r'(?i)ogla[sš]|sponzor|reklam', body):
+                left.append((os.path.relpath(f, OUT), body[max(0, m.start() - 30):m.end() + 20]))
+    if left:
+        raise SystemExit('ADS_ENABLED=False but ad references remain: ' + repr(left[:10]))
+
+# NOINDEX = True: mark every page noindex in the HTML itself (works on any host)
+if NOINDEX:
     import glob
     for f in glob.glob(f'{OUT}/**/*.html', recursive=True):
         h = open(f, encoding='utf-8').read()
