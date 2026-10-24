@@ -25,7 +25,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap">
-<link rel="stylesheet" href="assets/site.css?v=7e79983e">
+<link rel="stylesheet" href="assets/site.css?v=5eeb3a1d">
 <style>/* logo masks resolve against the page, not the stylesheet */.blogo{-webkit-mask:var(--l) center/contain no-repeat;mask:var(--l) center/contain no-repeat}</style>
 <link rel="stylesheet" href="assets/maplibre-gl.css">
 <script src="assets/maplibre-gl.js" defer></script>
@@ -284,7 +284,7 @@ function openPop(id){
   box.children[0].textContent=li.querySelector('h3').textContent;box.children[1].textContent=li.querySelector('.ch-kw').textContent;
   box.children[2].textContent=ad?ad.textContent:'';box.children[3].textContent=[].slice.call(li.querySelectorAll('.ch-tags .tag')).map(function(t){return t.textContent}).join(' · ');
   box.children[4].href=li.querySelector('.ch-act a').href;
-  if(popup)popup.remove();popup=new maplibregl.Popup({offset:12,maxWidth:'260px'}).setLngLat(FEATS[id].geometry.coordinates).setDOMContent(box).addTo(map);
+  if(popup)popup.remove();popup=new maplibregl.Popup({offset:12,maxWidth:'260px',focusAfterOpen:false}).setLngLat(FEATS[id].geometry.coordinates).setDOMContent(box).addTo(map);
 }
 var FIT=true,FLY=0,RM=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
 function apply(push,fit){
