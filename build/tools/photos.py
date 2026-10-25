@@ -1,5 +1,5 @@
 """Optimise model photos: trim margins, clean faint transparent haze, save 1280px and 640px WebP.
-Usage: python3 photos.py <source_dir>   (files named evsrbija-<model-id>.<ext>, or mapped below)"""
+Usage: python3 photos.py <source_dir>   (files named evomobil-<model-id>.<ext>, or mapped below)"""
 import sys, os, glob, json
 from PIL import Image, ImageChops
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -30,10 +30,10 @@ def save(img, path, opaque):
 
 for f in sorted(glob.glob(SRC + '/*')):
     n = os.path.splitext(os.path.basename(f))[0]
-    mid = n[len('evsrbija-'):] if n.startswith('evsrbija-') else next((v for k, v in MAP.items() if k in n), None)
+    mid = n[len('evomobil-'):] if n.startswith('evomobil-') else next((v for k, v in MAP.items() if k in n), None)
     if not mid or mid in KEEP_OLD:
         print('skip', os.path.basename(f)); continue
     im = trim(Image.open(f)); opaque = im.split()[3].getextrema()[0] >= 250
-    for w, p in ((1280, f'{ROOT}/img/evsrbija-{mid}.webp'), (640, f'{ROOT}/img/evsrbija-{mid}-640.webp')):
+    for w, p in ((1280, f'{ROOT}/img/evomobil-{mid}.webp'), (640, f'{ROOT}/img/evomobil-{mid}-640.webp')):
         save(im if im.width <= w else im.resize((w, round(im.height * w / im.width)), Image.LANCZOS), p, opaque)
     print('ok', mid, im.size)

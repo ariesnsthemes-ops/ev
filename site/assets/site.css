@@ -110,6 +110,47 @@ header.site{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;backgrou
 .marks-toggle[aria-pressed="true"] .sw{background:var(--ad)}
 .marks-toggle[aria-pressed="true"] .sw::after{transform:translateX(14px)}
 
+
+/* placeholder photos: very faint, multiplied into a soft green so empty spots look alive (demo look until real ads) */
+.ph-bg{isolation:isolate}
+.ph-bg:not(.free){position:relative}
+.ph-bg:not(.partner-box){background:linear-gradient(135deg,var(--green-soft) 0%,color-mix(in srgb,var(--green) 22%,var(--surface)) 100%)!important;border-color:color-mix(in srgb,var(--green) 22%,var(--line))!important}
+.ph-bg::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;pointer-events:none;
+  background:var(--ph,none) var(--ph-pos,center)/cover no-repeat;opacity:.22;mix-blend-mode:multiply;filter:grayscale(1) contrast(1.1) brightness(1.08)}
+.ph-bg::after{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;pointer-events:none;
+  background:linear-gradient(90deg,color-mix(in srgb,var(--green-soft) 75%,transparent),transparent 65%)}
+.partner-box.ph-bg::before{mix-blend-mode:luminosity;opacity:.16}
+.partner-box.ph-bg::after{display:none}
+:root[data-evtheme="dark"] .ph-bg::before{mix-blend-mode:luminosity;opacity:.18}
+@media (prefers-color-scheme:dark){:root:not([data-evtheme="light"]) .ph-bg::before{mix-blend-mode:luminosity;opacity:.18}}
+/* option "fade": the photo keeps its colour on the right and dissolves into the soft green on the left, where the text sits */
+:root[data-ph="fade"] .ph-bg::before{opacity:1;mix-blend-mode:normal;filter:saturate(.9) contrast(1.02);
+  -webkit-mask-image:linear-gradient(100deg,transparent 18%,rgba(0,0,0,.45) 48%,#000 82%);mask-image:linear-gradient(100deg,transparent 18%,rgba(0,0,0,.45) 48%,#000 82%)}
+:root[data-ph="fade"] .ph-bg::after{z-index:-1;background:
+  linear-gradient(100deg,color-mix(in srgb,var(--green-soft) 92%,transparent) 0 28%,color-mix(in srgb,var(--green-soft) 35%,transparent) 55%,transparent 80%),
+  linear-gradient(0deg,color-mix(in srgb,var(--green) 10%,transparent),transparent 60%)}
+:root[data-ph="fade"] .tile-free.ph-bg::before{-webkit-mask-image:linear-gradient(100deg,transparent 5%,rgba(0,0,0,.5) 45%,#000 85%);mask-image:linear-gradient(100deg,transparent 5%,rgba(0,0,0,.5) 45%,#000 85%)}
+:root[data-ph="fade"] .offers .ph-bg::before{-webkit-mask-image:linear-gradient(100deg,transparent 42%,rgba(0,0,0,.5) 70%,#000 96%);mask-image:linear-gradient(100deg,transparent 42%,rgba(0,0,0,.5) 70%,#000 96%)}
+:root[data-ph="fade"] .offers .ph-bg::after{background:linear-gradient(100deg,color-mix(in srgb,var(--green-soft) 92%,transparent) 0 45%,transparent 85%)}
+:root[data-ph="fade"] .partner-box.ph-bg::before{opacity:.38;mix-blend-mode:normal;filter:saturate(.8);-webkit-mask-image:linear-gradient(0deg,transparent 0%,#000 70%);mask-image:linear-gradient(0deg,transparent 0%,#000 70%)}
+:root[data-ph="fade"][data-evtheme="dark"] .ph-bg:not(.partner-box)::before{opacity:.55}
+@media (max-width:640px){:root[data-ph="fade"] .tile-free.ph-bg::before{-webkit-mask-image:linear-gradient(100deg,transparent 45%,rgba(0,0,0,.6) 75%,#000 100%);mask-image:linear-gradient(100deg,transparent 45%,rgba(0,0,0,.6) 75%,#000 100%)}
+  :root[data-ph="fade"] .free.ph-bg::before{-webkit-mask-image:linear-gradient(100deg,transparent 30%,rgba(0,0,0,.5) 60%,#000 90%);mask-image:linear-gradient(100deg,transparent 30%,rgba(0,0,0,.5) 60%,#000 90%)}}
+@media (prefers-color-scheme:dark){:root[data-ph="fade"]:not([data-evtheme="light"]) .ph-bg:not(.partner-box)::before{opacity:.55}}
+/* option "photo": the regular photo fills the whole spot; a dark scrim from the left keeps the text white and readable */
+:root[data-ph="photo"] .ph-bg::before{opacity:1;mix-blend-mode:normal;filter:saturate(1.05);-webkit-mask-image:none;mask-image:none}
+:root[data-ph="photo"] .ph-bg::after{display:block;z-index:-1;background:
+  linear-gradient(100deg,rgba(9,15,22,.78) 0%,rgba(9,15,22,.55) 42%,rgba(9,15,22,.18) 100%),
+  linear-gradient(0deg,rgba(9,15,22,.35),transparent 55%)}
+:root[data-ph="photo"] .ph-bg:not(.partner-box){border-color:transparent!important}
+:root[data-ph="photo"] .ph-bg h3,:root[data-ph="photo"] .ph-bg strong{color:#fff}
+:root[data-ph="photo"] .ph-bg p{color:rgba(255,255,255,.86)}
+:root[data-ph="photo"] .ph-bg b,:root[data-ph="photo"] .ph-bg .rs-label{color:rgba(255,255,255,.72)}
+:root[data-ph="photo"] .tile-free.ph-bg{border-style:solid}
+:root[data-ph="photo"] .tile-free.ph-bg::after{background:linear-gradient(100deg,rgba(9,15,22,.8) 0%,rgba(9,15,22,.5) 60%,rgba(9,15,22,.3) 100%)}
+:root[data-ph="photo"] .partner-box.ph-bg::before{opacity:.5}
+:root[data-ph="photo"] .partner-box.ph-bg::after{display:block;background:linear-gradient(0deg,rgba(9,15,22,.85),rgba(9,15,22,.35))}
+:root[data-ph="photo"] .ph-bg .bolt{opacity:.25}
 /* house ad (shown in a slot until it is rented) */
 .house{border-radius:var(--r-lg);background:
   repeating-linear-gradient(135deg,transparent 0 14px,color-mix(in srgb,var(--ink) 3%,transparent) 14px 15px),var(--surface-2);

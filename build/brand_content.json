@@ -1,2214 +1,2332 @@
 {
-  "byd": {
-    "name": "BYD",
-    "data_slug": "byd",
-    "logo": "byd.svg",
-    "founded": "1995",
-    "hq": "Šenžen, Kina",
-    "importer": "TDV Automotive DOO",
-    "about": [
-      "BYD (Build Your Dreams) osnovan je 1995. u Šenženu kao proizvođač baterija, a automobile proizvodi od 2003. godine.",
-      "Danas je jedan od najvećih proizvođača električnih vozila na svetu i sam razvija baterije, elektromotore i elektroniku. Generalni uvoznik i distributer za Srbiju je TDV Automotive DOO iz Beograda."
+ "byd": {
+  "name": "BYD",
+  "data_slug": "byd",
+  "logo": "byd.svg",
+  "founded": "1995",
+  "hq": "Šenžen, Kina",
+  "importer": "TDV Automotive DOO",
+  "about": [
+   "BYD (Build Your Dreams) osnovan je 1995. u Šenženu kao proizvođač baterija, a automobile proizvodi od 2003. godine.",
+   "Danas je jedan od najvećih proizvođača električnih vozila na svetu i sam razvija baterije, elektromotore i elektroniku. Generalni uvoznik i distributer za Srbiju je TDV Automotive DOO iz Beograda."
+  ],
+  "dealers": [
+   {
+    "city": "Beograd",
+    "name": "TDV Automotive DOO",
+    "role": "Generalni uvoznik i distributer",
+    "address": "Milutina Milankovića 9ž",
+    "zip": "11070 Beograd",
+    "phone": "+381 (0)11 440 92 97",
+    "phone_label": "TELEFON (PRODAJA)",
+    "assist": "+381 (0)69 667 667",
+    "email": "office@byd-auto.rs",
+    "website": "byd-auto.rs"
+   },
+   {
+    "city": "Beograd",
+    "name": "BYD Salon",
+    "role": "Prodajni salon",
+    "address": "Bulevar Milutina Milankovića 7đ",
+    "zip": "11070 Novi Beograd",
+    "hours": "Ponedeljak-Petak 8:00-18:00, subota 10:00-14:00",
+    "website": "byd-auto.rs",
+    "phone": "+381 (0)11 440 92 97"
+   }
+  ]
+ },
+ "changan": {
+  "name": "Changan",
+  "data_slug": "changan",
+  "logo": "changan.svg",
+  "founded": null,
+  "hq": "Čungking, Kina",
+  "importer": "Changan Balkans",
+  "about": [
+   "Changan je jedan od četiri najveća kineska automobilska koncerna, sa više od 40 godina iskustva u proizvodnji automobila.",
+   "Električne modele nudi u liniji Deepal. Za tržište Balkana zadužen je Changan Balkans."
+  ],
+  "dealers": [
+   {
+    "city": "Beograd",
+    "name": "Ada Motors, BM Motors Savograd",
+    "role": "Ovlašćeni diler",
+    "address": "Milentija Popovića 5B",
+    "zip": "11000 Beograd",
+    "phone": "+381 69 350 4113",
+    "email": "office@adamotors.rs"
+   },
+   {
+    "city": "Beograd",
+    "name": "Ada Motors, BM Motors Galerija",
+    "role": "Ovlašćeni diler",
+    "address": "TC Galerija, Bulevar Vudroa Vilsona 14",
+    "zip": "11000 Beograd",
+    "phone": "+381 66 87 88 930",
+    "email": "office@adamotors.rs"
+   },
+   {
+    "city": "Beograd",
+    "name": "A.K. Kompresor",
+    "role": "Ovlašćeni diler",
+    "address": "Žorža Klemensoa 19",
+    "zip": "11000 Beograd",
+    "phone": "+381 11 7155585",
+    "email": "igor.kalezic@akkompresor.rs"
+   },
+   {
+    "city": "Novi Sad",
+    "name": "Stojanov",
+    "role": "Ovlašćeni diler",
+    "address": "Zrenjaninski put 16",
+    "zip": "21000 Novi Sad",
+    "phone": "+381 21 21 02 155",
+    "email": "office@stojanov.rs"
+   },
+   {
+    "city": "Niš",
+    "name": "Mitić Company",
+    "role": "Ovlašćeni diler",
+    "address": "Stevana Nemanje 60a",
+    "zip": "Niš",
+    "phone": "+381 18 4519 519",
+    "email": "office@miticcompany.com"
+   }
+  ]
+ },
+ "dongfeng": {
+  "name": "Dongfeng",
+  "data_slug": "china-motor",
+  "logo": "dongfeng.svg",
+  "founded": "1969",
+  "hq": "Vuhan, Kina",
+  "importer": null,
+  "about": [
+   "Dongfeng Motor osnovan je 1969. u Vuhanu i jedan je od najvećih kineskih proizvođača vozila.",
+   "U Srbiji nudi mali električni automobil Dongfeng Box."
+  ],
+  "dealers": [
+   {
+    "city": "Beograd",
+    "name": "Auto kuća Alfa",
+    "role": "Zvanični diler i serviser",
+    "address": "Ugrinovački put, 2. deo 32",
+    "zip": "11000 Beograd",
+    "phone_label": "MENADŽER PRODAJE",
+    "phone": "+381 64 6411191",
+    "email": "nemanja.stasic@autokucaalfa.com",
+    "website": "autokucaalfa.com"
+   },
+   {
+    "city": "Beograd",
+    "name": "Nikom Auto d.o.o.",
+    "role": "Zvanični diler i serviser",
+    "address": "Autoput za Niš 23, Zvezdara",
+    "zip": "11000 Beograd",
+    "phone_label": "MENADŽER PRODAJE",
+    "phone": "+381 60 18 61 101",
+    "email": "prodajabg@nikomauto.rs"
+   },
+   {
+    "city": "Niš",
+    "name": "Nikom Auto d.o.o.",
+    "role": "Zvanični diler i serviser",
+    "address": "Blagoja Parovića 1M",
+    "zip": "Niš",
+    "phone_label": "MENADŽER PRODAJE",
+    "phone": "+381 60 04 90 805",
+    "email": "office@nikomauto.rs"
+   },
+   {
+    "city": "Kragujevac",
+    "name": "Nikom Auto d.o.o.",
+    "role": "Zvanični diler i serviser",
+    "address": "Lepenički bulevar 47",
+    "zip": "34000 Kragujevac",
+    "phone_label": "MENADŽER PRODAJE",
+    "phone": "+381 34 355 810",
+    "email": "office@nikomauto.rs"
+   },
+   {
+    "city": "Novi Sad",
+    "name": "Gota Car",
+    "role": "Zvanični diler i serviser",
+    "address": "Zrenjaninski put 6",
+    "zip": "21000 Novi Sad",
+    "phone_label": "MENADŽER PRODAJE",
+    "phone": "+381 21 215 5460",
+    "email": "prodaja@gotacargroup.com"
+   },
+   {
+    "city": "Subotica",
+    "name": "Auto kuća Alfa",
+    "role": "Zvanični diler i serviser",
+    "address": "Jovana Mikića 20",
+    "zip": "Subotica",
+    "phone_label": "MENADŽER PRODAJE",
+    "phone": "+381 62 263 019",
+    "email": "zarko.alcin@autokucaalfa.com",
+    "website": "autokucaalfa.com"
+   }
+  ]
+ },
+ "foton": {
+  "name": "Foton",
+  "data_slug": "foton",
+  "logo": "foton.svg",
+  "founded": "1996",
+  "hq": "Peking, Kina",
+  "importer": "Foton Serbia - Ecofleet d.o.o.",
+  "about": [
+   "Foton je jedan od najvećih kineskih proizvođača komercijalnih vozila, osnovan 1996. godine sa sedištem u Pekingu.",
+   "U Srbiji nudi električni pikap eTunland. Električne kombije, kamione i autobuse iz njegove ponude ne prikazujemo, jer pratimo samo putnička vozila."
+  ],
+  "dealers": [
+   {
+    "city": "Beograd",
+    "name": "Eco Fleet d.o.o.",
+    "role": "Prodaja i servis",
+    "address": "Vladimira Tomanovića 59",
+    "zip": "11000 Beograd",
+    "phone_label": "TELEFON (PRODAJA I SERVIS)",
+    "phone": [
+     "+381 66 8517 959",
+     "+381 64 809 0363",
+     "+381 11 6555 213",
+     "+381 11 6555 214"
     ],
-    "dealers": [
-      {
-        "city": "Beograd",
-        "name": "TDV Automotive DOO",
-        "role": "Generalni uvoznik i distributer",
-        "address": "Milutina Milankovića 9ž",
-        "zip": "11070 Beograd",
-        "phone": "+381 (0)11 440 92 97",
-        "phone_label": "TELEFON (PRODAJA)",
-        "assist": "+381 (0)69 667 667",
-        "email": "office@byd-auto.rs",
-        "website": "byd-auto.rs"
-      },
-      {
-        "city": "Beograd",
-        "name": "BYD Salon",
-        "role": "Prodajni salon",
-        "address": "Bulevar Milutina Milankovića 7đ",
-        "zip": "11070 Novi Beograd",
-        "hours": "Ponedeljak-Petak 8:00-18:00, subota 10:00-14:00",
-        "website": "byd-auto.rs",
-        "phone": "+381 (0)11 440 92 97"
-      }
+    "email": "office@fotonserbia.rs",
+    "hours": "Pon-Pet 09:00-17:00, subotom ne radi",
+    "service_phone": [
+     "+381 11 6 555 211",
+     "+381 11 6 555 212"
+    ],
+    "service_hours": "Pon-Pet 09:00-17:00, subotom ne radi"
+   },
+   {
+    "city": "Beograd",
+    "name": "AC Brajić",
+    "role": "Prodaja",
+    "address": "Ibarski put bb, Rakovica",
+    "zip": "11000 Beograd",
+    "phone_label": "TELEFON (PRODAJA)",
+    "phone": "+381 11 7859 030",
+    "email": "office@acbrajic.com",
+    "hours": "Pon-Pet 08:00-17:00, sub 09:00-14:00"
+   },
+   {
+    "city": "Novi Sad",
+    "name": "Beta Motors d.o.o.",
+    "role": "Prodaja i servis",
+    "address": "Rumenački put 30",
+    "zip": "21000 Novi Sad",
+    "phone_label": "TELEFON (PRODAJA)",
+    "phone": "+381 63 531 698",
+    "email": "office@betamotors.rs",
+    "hours": "Pon-Pet 08:00-17:00, sub 09:00-14:00",
+    "service_phone": [
+     "+381 21 20 77 057",
+     "+381 63 53 15 00"
+    ],
+    "service_email": "support@betamotors.rs",
+    "service_hours": "Pon-Pet 08:00-17:00, sub 09:00-14:00"
+   },
+   {
+    "city": "Jagodina",
+    "name": "AC Peda d.o.o.",
+    "role": "Prodaja i servis",
+    "address": "Kapetana Koče 91",
+    "zip": "35000 Jagodina",
+    "phone_label": "TELEFON (PRODAJA I SERVIS)",
+    "phone": "+381 63 60 16 65",
+    "email": "autocentarpeda@mts.rs",
+    "hours": "Pon-Pet 08:00-16:00, sub 08:00-16:00",
+    "service_phone": "+381 69 24 54 640",
+    "service_hours": "Pon-Pet 08:00-16:00, sub 08:00-16:00"
+   },
+   {
+    "city": "Niš",
+    "name": "Auto Mig d.o.o.",
+    "role": "Prodaja i servis",
+    "address": "Stevana Sinđelića 90, Trupale",
+    "zip": "18000 Niš",
+    "phone_label": "TELEFON (PRODAJA I SERVIS)",
+    "phone": [
+     "+381 18 4583 780",
+     "+381 18 4583 640"
+    ],
+    "email": "foton.prodaja@automig.rs",
+    "hours": "Pon-Pet 09:00-16:30, sub 08:00-13:00",
+    "service_phone": "+381 18 4583 720",
+    "service_email": "foton.servis@automig.rs",
+    "service_hours": "Pon-Pet 08:00-15:30, sub 08:00-13:00"
+   },
+   {
+    "city": "Šabac",
+    "name": "Auto Market Group",
+    "role": "Prodaja i servis",
+    "address": "Obilazni put bb",
+    "zip": "15000 Šabac",
+    "phone_label": "TELEFON (PRODAJA I SERVIS)",
+    "phone": "015 7160 100",
+    "email": [
+     "prodaja@automarketgroup.rs",
+     "info@automarketgroup.rs"
+    ],
+    "hours": "Pon-Pet 08:00-17:00, sub 08:00-15:00",
+    "service_email": "servis@automarketgroup.rs",
+    "service_hours": "Pon-Pet 08:00-17:00, sub 08:00-15:00"
+   },
+   {
+    "city": "Subotica",
+    "name": "D3 Automotive d.o.o.",
+    "role": "Prodaja",
+    "address": "Otmara Majera 22",
+    "zip": "24000 Subotica",
+    "phone_label": "TELEFON (PRODAJA)",
+    "phone": "+381 24 642 100",
+    "hours": "Pon-Pet 08:00-17:00, sub 09:00-13:00"
+   }
+  ]
+ },
+ "geely": {
+  "name": "Geely",
+  "data_slug": "geely",
+  "logo": "geely.svg",
+  "founded": "1986",
+  "hq": "Hangdžou, Kina",
+  "importer": "VCAG d.o.o.",
+  "about": [
+   "Geely je osnovan 1986. u Hangdžouu i danas je jedna od najvećih privatnih automobilskih grupa u Kini, u čijem sastavu su i Volvo Cars i Lynk & Co.",
+   "U Srbiji ga zastupa VCAG d.o.o. iz Beograda."
+  ],
+  "dealers": [
+   {
+    "city": "Beograd",
+    "name": "Geely Centar Beograd",
+    "role": "Prodaja i servis",
+    "address": "Autoput za Novi Sad 98",
+    "zip": "11080 Beograd-Zemun",
+    "phone_label": "TELEFON (PRODAJA)",
+    "phone": "+381 11 40 44 232",
+    "email": "prodajageelybg@geelycentar.rs",
+    "hours": "Pon-Pet 08:00-19:00, sub 09:00-15:00",
+    "service_phone": "+381 11 31 65 496",
+    "service_email": "servisbg@geelyauto.rs",
+    "service_hours": "Pon-Pet 07:00-20:00, sub 07:00-15:00"
+   },
+   {
+    "city": "Novi Sad",
+    "name": "Bel Car Team d.o.o.",
+    "role": "Prodaja i servis",
+    "address": "Bulevar vojvode Stepe 38a",
+    "zip": "21000 Novi Sad",
+    "phone_label": "TELEFON (PRODAJA)",
+    "phone": [
+     "+381 21 6791004",
+     "+381 69 5544620",
+     "+381 69 5544756"
+    ],
+    "email": "salon@belcarteam.rs",
+    "hours": "Pon-Pet 08:00-17:00, sub 08:00-12:00",
+    "service_phone": "+381 21 6402422",
+    "service_email": "servis@belcarteam.rs",
+    "service_hours": "Pon-Pet 08:00-16:00, sub 08:00-12:00"
+   },
+   {
+    "city": "Niš",
+    "name": "Raavex-Group d.o.o.",
+    "role": "Prodaja i servis",
+    "address": "Bulevar cara Konstantina bb",
+    "zip": "18000 Niš",
+    "phone_label": "TELEFON (PRODAJA I SERVIS)",
+    "phone": "+381 18 259 000",
+    "email": "info@raavexgroup.co.rs",
+    "hours": "Pon-Pet 09:00-17:00, sub 09:00-14:00"
+   },
+   {
+    "city": "Kragujevac",
+    "name": "Nikom Auto d.o.o.",
+    "role": "Prodaja i servis",
+    "address": "Lepenički bulevar 47",
+    "zip": "34000 Kragujevac",
+    "phone_label": "TELEFON (PRODAJA I SERVIS)",
+    "phone": "+381 34 355810",
+    "email": "office@nikomauto.rs",
+    "hours": "Pon-Pet 08:00-18:00, sub 08:00-16:00",
+    "service_email": "servis@nikomauto.rs",
+    "service_hours": "Pon-Sub 08:00-16:00"
+   },
+   {
+    "city": "Subotica",
+    "name": "Auto Car Vidaković d.o.o.",
+    "role": "Prodaja i servis",
+    "address": "Starine Novaka 53",
+    "zip": "24000 Subotica",
+    "phone_label": "TELEFON (PRODAJA I SERVIS)",
+    "phone": "+381 24 566 226",
+    "email": [
+     "sandra@vidakovic.rs",
+     "dejan@vidakovic.rs"
+    ],
+    "hours": "Pon-Pet 08:00-16:30, sub 08:00-12:00",
+    "service_email": "aleksandar@vidakovic.rs",
+    "service_hours": "Pon-Pet 08:00-16:30, sub 08:00-12:00"
+   },
+   {
+    "city": "Požarevac",
+    "name": "Bibo Car d.o.o.",
+    "role": "Prodaja i servis",
+    "address": "Ljubičevska naselja bb",
+    "zip": "12000 Požarevac",
+    "phone_label": "TELEFON (PRODAJA I SERVIS)",
+    "phone": "+381 12 531 794",
+    "email": "milica.munic@bibocar.rs",
+    "hours": "Pon-Pet 08:00-17:00, sub 08:00-14:00",
+    "service_email": "marijan.andrijevic@bibocar.rs",
+    "service_hours": "Pon-Pet 08:00-17:00, sub 08:00-14:00"
+   }
+  ]
+ },
+ "jac": {
+  "name": "JAC",
+  "data_slug": "jac",
+  "logo": "jac.svg",
+  "founded": "1964",
+  "hq": "Hefej, Kina",
+  "importer": "Mašinopromet d.o.o.",
+  "about": [
+   "JAC Motors iz Hefeja osnovan je 1964. i proizvodi putnička i komercijalna vozila.",
+   "Na srpskom tržištu nudi električne modele, uključujući električni pikap T9 EV."
+  ],
+  "dealers": [
+   {
+    "city": "Beograd",
+    "name": "Mašinopromet d.o.o.",
+    "role": "Prodaja",
+    "address": "Auto put Beograd-Zagreb 300F",
+    "zip": "11000 Beograd",
+    "phone": "+381 64 820 70 56",
+    "email": "dusan@mpgroup.rs"
+   }
+  ]
+ },
+ "jmev": {
+  "name": "JMEV",
+  "data_slug": "jmev",
+  "logo": "jmev.png",
+  "founded": null,
+  "hq": "Nančang, Kina",
+  "importer": "CUBI d.o.o.",
+  "about": [
+   "JMEV (Jiangling Motors Electric Vehicle) je kineski proizvođač električnih automobila iz Nančanga.",
+   "U Srbiji prodaju obavlja CUBI d.o.o. iz Novog Sada."
+  ],
+  "dealers": [
+   {
+    "city": "Novi Sad",
+    "name": "CUBI d.o.o.",
+    "role": "Generalni uvoznik, distributer i serviser",
+    "address": "Bulevar vojvode Stepe 36/a",
+    "zip": "21000 Novi Sad",
+    "phone": "+381 69 202 42 60",
+    "email": "cubi@jmev.rs"
+   },
+   {
+    "city": "Beograd",
+    "name": "Centar Boban d.o.o.",
+    "role": "Zvanični diler i serviser",
+    "address": "Dunavska 13",
+    "zip": "11000 Beograd",
+    "phone": "+381 66 604 2171",
+    "email": "nemanja.nikolic@centarboban.com"
+   }
+  ]
+ },
+ "leapmotor": {
+  "name": "Leapmotor",
+  "data_slug": "leapmotor",
+  "logo": "leapmotor.svg",
+  "founded": "2015",
+  "hq": "Hangdžou, Kina",
+  "importer": null,
+  "about": [
+   "Leapmotor je osnovan 2015. u Hangdžouu i proizvodi električna vozila i vozila sa produženim dometom.",
+   "Od 2023. sarađuje sa grupom Stellantis, preko koje se njegovi modeli prodaju u Evropi."
+  ],
+  "dealers": [
+   {
+    "city": "Beograd",
+    "name": "Autopromet",
+    "role": "Prodaja i servis",
+    "address": "Autoput 5",
+    "zip": "11070 Novi Beograd",
+    "phone": "+381 11 319 31 50",
+    "hours": "Pon-Pet 08:00-18:00, sub 08:00-14:00",
+    "service_hours": "Pon-Pet 08:00-16:00, sub 08:00-13:00"
+   },
+   {
+    "city": "Beograd",
+    "name": "AK Kompresor",
+    "role": "Prodaja i servis",
+    "address": "Žorža Klemansoa 19",
+    "zip": "11000 Beograd",
+    "phone": "+381 11 71 55 600",
+    "hours": "Pon-Pet 09:00-18:00, sub i ned 09:00-14:00",
+    "service_hours": "Pon-Pet 08:00-17:00, sub 09:00-15:00"
+   },
+   {
+    "city": "Novi Sad",
+    "name": "Gota Car",
+    "role": "Prodaja i servis",
+    "address": "Zrenjaninski put 6",
+    "zip": "21000 Novi Sad",
+    "phone_label": "TELEFON (PRODAJA)",
+    "phone": [
+     "+381 21 2155 460",
+     "+381 63 483 967",
+     "+381 63 691 085"
+    ],
+    "hours": "Pon-Pet 09:00-18:00, sub 09:00-14:00",
+    "service_phone": [
+     "+381 21 2155 450",
+     "+381 63 483 441"
+    ],
+    "service_hours": "Pon-Pet 08:00-16:00, sub 08:00-13:00",
+    "parts_phone": "+381 66 8032 669"
+   }
+  ]
+ },
+ "lynk-co": {
+  "name": "Lynk & Co",
+  "data_slug": "lynk-co",
+  "logo": "lynk-co.svg",
+  "founded": "2016",
+  "hq": "Geteborg, Švedska",
+  "importer": "VCAG d.o.o.",
+  "about": [
+   "Lynk & Co je brend nastao 2016. u okviru grupe Geely, sa dizajnom i razvojem u Švedskoj.",
+   "U Srbiji ga zastupa VCAG d.o.o. iz Beograda. Potpuno električni model u ponudi je Lynk & Co 02."
+  ],
+  "dealers": [
+   {
+    "city": "Beograd",
+    "name": "Lynk & Co centar Beograd",
+    "role": "Prodaja i servis",
+    "address": "Autoput za Novi Sad 98",
+    "zip": "11080 Beograd-Zemun",
+    "phone_label": "TELEFON (PRODAJA)",
+    "phone": [
+     "+381 11 404 58 08",
+     "+381 62 800 65 94"
+    ],
+    "email": "lynkco.beograd@lynkco-center.com",
+    "hours": "Pon-Pet 08:00-19:00, sub 09:00-15:00",
+    "service_phone": [
+     "+381 11 404 0351",
+     "+381 11 404 0352"
+    ],
+    "service_email": "volvoservisbg@lynkco-center.com",
+    "service_hours": "Pon-Pet 07:00-20:00, sub 08:00-15:00"
+   }
+  ]
+ },
+ "mg": {
+  "name": "MG",
+  "data_slug": "mg",
+  "logo": "mg.svg",
+  "founded": "1924",
+  "hq": "Šangaj, Kina",
+  "importer": "Grand Motors d.o.o.",
+  "about": [
+   "MG je britanski brend osnovan 1924, koji je danas u vlasništvu kineske grupe SAIC Motor.",
+   "U Evropi je jedan od najpoznatijih brendova pristupačnih električnih automobila, a u Srbiji nudi MG4 Electric, MG5 Electric i MGS5 EV."
+  ],
+  "dealers": [
+   {
+    "city": "Beograd",
+    "name": "Grand Motors d.o.o.",
+    "role": "Ovlašćeni diler",
+    "address": "Stopićeva 8, Bežanijska kosa",
+    "zip": "11070 Novi Beograd",
+    "phone": "+381 11 2090692",
+    "email": "mg@grandmotors.rs"
+   },
+   {
+    "city": "Beograd",
+    "name": "AC Brajić",
+    "role": "Ovlašćeni diler",
+    "address": "Ibarski put 101",
+    "zip": "11090 Rakovica, Beograd",
+    "phone": "+381 60 0806731",
+    "email": "office@acbrajic.com"
+   },
+   {
+    "city": "Novi Sad",
+    "name": "Grand Motors d.o.o.",
+    "role": "Ovlašćeni diler",
+    "address": "Novosadski put 110",
+    "zip": "21203 Veternik",
+    "phone": "+381 21 6302822",
+    "email": "mg.novisad@grandmotors.rs"
+   },
+   {
+    "city": "Niš",
+    "name": "Grand Motors d.o.o.",
+    "role": "Ovlašćeni diler",
+    "address": "Bulevar Nikole Tesle bb",
+    "zip": "18000 Niš",
+    "phone": "+381 18 585999",
+    "email": "mg.nis@grandmotors.rs"
+   },
+   {
+    "city": "Kragujevac",
+    "name": "Viva Company d.o.o.",
+    "role": "Ovlašćeni diler",
+    "address": "Miodraga Vlajića Šuke 16",
+    "zip": "34000 Kragujevac",
+    "phone": "+381 34 6333044",
+    "email": "info@vivacompany.rs"
+   },
+   {
+    "city": "Čačak",
+    "name": "Autostad Motors d.o.o.",
+    "role": "Ovlašćeni diler",
+    "address": "Bulevar Tanaska Rajića 176",
+    "zip": "32000 Čačak",
+    "phone": "+381 32 5350420",
+    "email": "office@autostadmotors.rs"
+   },
+   {
+    "city": "Subotica",
+    "name": "D-Motors Group d.o.o.",
+    "role": "Ovlašćeni diler",
+    "address": "Otmara Majera 22",
+    "zip": "24000 Subotica",
+    "phone": "+381 63 240556",
+    "email": "office@dmg.rs"
+   }
+  ]
+ },
+ "audi": {
+  "name": "Audi",
+  "data_slug": "audi",
+  "logo": "audi.svg",
+  "founded": "1909",
+  "hq": "Ingolštat, Nemačka",
+  "importer": "Porsche SCG d.o.o.",
+  "about": [
+   "Audi je nemački proizvođač automobila sa sedištem u Ingolštatu, deo grupe Volkswagen.",
+   "U ponudi električnih automobila u Srbiji je RS e-tron GT."
+  ],
+  "dealers": [
+   {
+    "city": "Čačak",
+    "name": "Autocentar Manik",
+    "role": "Ovlašćeni partner",
+    "address": "Ibarski put 13, Preljina",
+    "zip": "32212 Čačak"
+   },
+   {
+    "city": "Beograd",
+    "name": "Autokomerc centar Aerodrom",
+    "role": "Ovlašćeni partner",
+    "address": "Svetog Save 84/C",
+    "zip": "11271 Surčin"
+   },
+   {
+    "city": "Niš",
+    "name": "Bros Auto",
+    "role": "Ovlašćeni partner",
+    "address": "Dimitrija Tucovića 185",
+    "zip": "18000 Niš"
+   },
+   {
+    "city": "Beograd",
+    "name": "Porsche Ada",
+    "role": "Ovlašćeni partner",
+    "address": "Radnička 4",
+    "zip": "11000 Beograd"
+   },
+   {
+    "city": "Novi Sad",
+    "name": "Porsche Novi Sad",
+    "role": "Ovlašćeni partner",
+    "address": "Zrenjaninski put 24",
+    "zip": "21000 Novi Sad"
+   }
+  ]
+ },
+ "bmw": {
+  "name": "BMW",
+  "data_slug": "bmw",
+  "logo": "bmw.svg",
+  "founded": "1916",
+  "hq": "Minhen, Nemačka",
+  "importer": "BMW Srbija",
+  "about": [
+   "BMW je nemački proizvođač automobila i motocikala osnovan 1916. u Minhenu.",
+   "BMW i-serija obuhvata potpuno električne modele iX1, iX, iX3, i4, i5 i i7, uključujući M verzije."
+  ],
+  "dealers": [
+   {
+    "city": "Beograd",
+    "name": "DELTA MOTORS ČUKARICA",
+    "role": "Prodajni salon",
+    "address": "Radnička 8",
+    "zip": "11000 Beograd",
+    "phone": "011/3539-900",
+    "email": "office@bmw.rs",
+    "hours": "Ponedeljak-Petak 08:30-19:00, subota 09:00-14:00"
+   },
+   {
+    "city": "Beograd",
+    "name": "BMW RADULOVIĆ d.o.o.",
+    "role": "Prodajni salon",
+    "address": "Dragoslava Srejovića 4b",
+    "zip": "11000 Beograd",
+    "phone": "011/208-0180",
+    "email": "prodaja@radulovic-group.com",
+    "website": "radulovic-group.com",
+    "hours": "Ponedeljak-Petak 08:30-16:30, subota 08:00-13:00"
+   },
+   {
+    "city": "Novi Sad",
+    "name": "BMW RADULOVIĆ d.o.o.",
+    "role": "Prodajni salon",
+    "address": "Novosadski put 71, Veternik",
+    "zip": "21203 Novi Sad",
+    "phone": "021/820-888",
+    "email": "prodaja@radulovic-group.com",
+    "website": "radulovic-group.com",
+    "hours": "Ponedeljak-Petak 08:30-16:30, subota 08:00-13:00"
+   },
+   {
+    "city": "Mladenovac",
+    "name": "BMW STEFANOVIĆ AUTO",
+    "role": "Prodajni salon",
+    "address": "Beogradski put bb",
+    "zip": "11406 Vlaška",
+    "phone": "011/8201-900",
+    "email": "info@bmw-stefanovic.com",
+    "website": "bmw-stefanovic.rs",
+    "hours": "Ponedeljak-Subota 09:00-17:00"
+   },
+   {
+    "city": "Niš",
+    "name": "BMW MITIĆ COMPANY d.o.o.",
+    "role": "Prodajni salon",
+    "address": "Dimitrija Tucovića 173",
+    "zip": "18000 Niš",
+    "phone": "018/451-9519",
+    "email": "office@bmw-mitic.rs",
+    "hours": "Ponedeljak-Petak 09:00-17:00, subota 09:00-14:00"
+   },
+   {
+    "city": "Čačak",
+    "name": "BMW AUTOGARANT",
+    "role": "Prodajni salon",
+    "address": "Ibarski put 100",
+    "zip": "32000 Čačak",
+    "phone": "032/380-900",
+    "email": "office@autogarant.rs",
+    "website": "autogarant.rs",
+    "hours": "Ponedeljak-Petak 08:00-16:30, subota 08:00-13:00"
+   },
+   {
+    "city": "Beograd",
+    "name": "THE BMW STORE",
+    "role": "Galerija",
+    "address": "Galerija Beograd, Bulevar Vudroa Vilsona 12",
+    "zip": "11000 Beograd",
+    "phone": "065 88 95 445",
+    "phone_label": "VIBER",
+    "email": "galerija@bmw.rs",
+    "hours": "Radnim danima i vikendom 10:00-22:00"
+   },
+   {
+    "city": "Novi Pazar",
+    "name": "ELITE MOTORS",
+    "role": "Prodajni salon",
+    "address": "Mihajla Pupina 5",
+    "zip": "36300 Novi Pazar",
+    "phone": "+381 63 266 266",
+    "email": "office@bmw-elitemotors.rs",
+    "hours": "Ponedeljak-Petak 09:00-17:00, subota 09:00-14:30"
+   }
+  ]
+ },
+ "cupra": {
+  "name": "Cupra",
+  "data_slug": "cupra",
+  "logo": "cupra.svg",
+  "founded": "2018",
+  "hq": "Barselona, Španija",
+  "importer": "Porsche SCG d.o.o.",
+  "about": [
+   "Cupra je španski sportski brend, koji je kao samostalan brend predstavljen 2018. kao deo grupe SEAT.",
+   "Električni modeli su Tavascan i Raval."
+  ],
+  "dealers": []
+ },
+ "dacia": {
+  "name": "Dacia",
+  "data_slug": "dacia",
+  "logo": "dacia.svg",
+  "founded": "1966",
+  "hq": "Mioveni, Rumunija",
+  "importer": null,
+  "about": [
+   "Dacia je rumunski proizvođač automobila, deo grupe Renault.",
+   "Dacia Spring je najpristupačniji potpuno električni automobil u ovoj kategoriji."
+  ],
+  "dealers": [
+   {
+    "city": "Subotica",
+    "name": "AUTO CAR VIDAKOVIĆ",
+    "role": "Prodajni salon",
+    "address": "Starine Novaka 53",
+    "zip": "24000 Subotica",
+    "phone": "+381 24 566 260",
+    "service_phone": [
+     "+381 24 566 260"
     ]
-  },
-  "changan": {
-    "name": "Changan",
-    "data_slug": "changan",
-    "logo": "changan.svg",
-    "founded": null,
-    "hq": "Čungking, Kina",
-    "importer": "Changan Balkans",
-    "about": [
-      "Changan je jedan od četiri najveća kineska automobilska koncerna, sa više od 40 godina iskustva u proizvodnji automobila.",
-      "Električne modele nudi u liniji Deepal. Za tržište Balkana zadužen je Changan Balkans."
-    ],
-    "dealers": [
-      {
-        "city": "Beograd",
-        "name": "Ada Motors, BM Motors Savograd",
-        "role": "Ovlašćeni diler",
-        "address": "Milentija Popovića 5B",
-        "zip": "11000 Beograd",
-        "phone": "+381 69 350 4113",
-        "email": "office@adamotors.rs"
-      },
-      {
-        "city": "Beograd",
-        "name": "Ada Motors, BM Motors Galerija",
-        "role": "Ovlašćeni diler",
-        "address": "TC Galerija, Bulevar Vudroa Vilsona 14",
-        "zip": "11000 Beograd",
-        "phone": "+381 66 87 88 930",
-        "email": "office@adamotors.rs"
-      },
-      {
-        "city": "Beograd",
-        "name": "A.K. Kompresor",
-        "role": "Ovlašćeni diler",
-        "address": "Žorža Klemensoa 19",
-        "zip": "11000 Beograd",
-        "phone": "+381 11 7155585",
-        "email": "igor.kalezic@akkompresor.rs"
-      },
-      {
-        "city": "Novi Sad",
-        "name": "Stojanov",
-        "role": "Ovlašćeni diler",
-        "address": "Zrenjaninski put 16",
-        "zip": "21000 Novi Sad",
-        "phone": "+381 21 21 02 155",
-        "email": "office@stojanov.rs"
-      },
-      {
-        "city": "Niš",
-        "name": "Mitić Company",
-        "role": "Ovlašćeni diler",
-        "address": "Stevana Nemanje 60a",
-        "zip": "Niš",
-        "phone": "+381 18 4519 519",
-        "email": "office@miticcompany.com"
-      }
+   },
+   {
+    "city": "Niš",
+    "name": "AUTO CENTAR KRUNIĆ",
+    "role": "Prodajni salon",
+    "address": "Bulevar Svetog Cara Konstantina 86a",
+    "zip": "18000 Niš",
+    "phone": "+381 18 454 21 61",
+    "service_phone": [
+     "+381 18 452 45 32"
     ]
-  },
-  "dongfeng": {
-    "name": "Dongfeng",
-    "data_slug": "china-motor",
-    "logo": "dongfeng.svg",
-    "founded": "1969",
-    "hq": "Vuhan, Kina",
-    "importer": null,
-    "about": [
-      "Dongfeng Motor osnovan je 1969. u Vuhanu i jedan je od najvećih kineskih proizvođača vozila.",
-      "U Srbiji nudi mali električni automobil Dongfeng Box."
-    ],
-    "dealers": [
-      {
-        "city": "Beograd",
-        "name": "Auto kuća Alfa",
-        "role": "Zvanični diler i serviser",
-        "address": "Ugrinovački put, 2. deo 32",
-        "zip": "11000 Beograd",
-        "phone_label": "MENADŽER PRODAJE",
-        "phone": "+381 64 6411191",
-        "email": "nemanja.stasic@autokucaalfa.com",
-        "website": "autokucaalfa.com"
-      },
-      {
-        "city": "Beograd",
-        "name": "Nikom Auto d.o.o.",
-        "role": "Zvanični diler i serviser",
-        "address": "Autoput za Niš 23, Zvezdara",
-        "zip": "11000 Beograd",
-        "phone_label": "MENADŽER PRODAJE",
-        "phone": "+381 60 18 61 101",
-        "email": "prodajabg@nikomauto.rs"
-      },
-      {
-        "city": "Niš",
-        "name": "Nikom Auto d.o.o.",
-        "role": "Zvanični diler i serviser",
-        "address": "Blagoja Parovića 1M",
-        "zip": "Niš",
-        "phone_label": "MENADŽER PRODAJE",
-        "phone": "+381 60 04 90 805",
-        "email": "office@nikomauto.rs"
-      },
-      {
-        "city": "Kragujevac",
-        "name": "Nikom Auto d.o.o.",
-        "role": "Zvanični diler i serviser",
-        "address": "Lepenički bulevar 47",
-        "zip": "34000 Kragujevac",
-        "phone_label": "MENADŽER PRODAJE",
-        "phone": "+381 34 355 810",
-        "email": "office@nikomauto.rs"
-      },
-      {
-        "city": "Novi Sad",
-        "name": "Gota Car",
-        "role": "Zvanični diler i serviser",
-        "address": "Zrenjaninski put 6",
-        "zip": "21000 Novi Sad",
-        "phone_label": "MENADŽER PRODAJE",
-        "phone": "+381 21 215 5460",
-        "email": "prodaja@gotacargroup.com"
-      },
-      {
-        "city": "Subotica",
-        "name": "Auto kuća Alfa",
-        "role": "Zvanični diler i serviser",
-        "address": "Jovana Mikića 20",
-        "zip": "Subotica",
-        "phone_label": "MENADŽER PRODAJE",
-        "phone": "+381 62 263 019",
-        "email": "zarko.alcin@autokucaalfa.com",
-        "website": "autokucaalfa.com"
-      }
+   },
+   {
+    "city": "Jagodina",
+    "name": "AUTO KUĆA FRANCUZ D.O.O.",
+    "role": "Prodajni salon",
+    "address": "Kralja Aleksandra 28",
+    "zip": "35000 Jagodina",
+    "phone": "+381 35 243 095",
+    "service_phone": [
+     "+381 35 243 095"
     ]
-  },
-  "foton": {
-    "name": "Foton",
-    "data_slug": "foton",
-    "logo": "foton.svg",
-    "founded": "1996",
-    "hq": "Peking, Kina",
-    "importer": "Foton Serbia - Ecofleet d.o.o.",
-    "about": [
-      "Foton je jedan od najvećih kineskih proizvođača komercijalnih vozila, osnovan 1996. godine sa sedištem u Pekingu.",
-      "U Srbiji nudi električni pikap eTunland. Električne kombije, kamione i autobuse iz njegove ponude ne prikazujemo, jer pratimo samo putnička vozila."
-    ],
-    "dealers": [
-      {
-        "city": "Beograd",
-        "name": "Eco Fleet d.o.o.",
-        "role": "Prodaja i servis",
-        "address": "Vladimira Tomanovića 59",
-        "zip": "11000 Beograd",
-        "phone_label": "TELEFON (PRODAJA I SERVIS)",
-        "phone": [
-          "+381 66 8517 959",
-          "+381 64 809 0363",
-          "+381 11 6555 213",
-          "+381 11 6555 214"
-        ],
-        "email": "office@fotonserbia.rs",
-        "hours": "Pon-Pet 09:00-17:00, subotom ne radi",
-        "service_phone": [
-          "+381 11 6 555 211",
-          "+381 11 6 555 212"
-        ],
-        "service_hours": "Pon-Pet 09:00-17:00, subotom ne radi"
-      },
-      {
-        "city": "Beograd",
-        "name": "AC Brajić",
-        "role": "Prodaja",
-        "address": "Ibarski put bb, Rakovica",
-        "zip": "11000 Beograd",
-        "phone_label": "TELEFON (PRODAJA)",
-        "phone": "+381 11 7859 030",
-        "email": "office@acbrajic.com",
-        "hours": "Pon-Pet 08:00-17:00, sub 09:00-14:00"
-      },
-      {
-        "city": "Novi Sad",
-        "name": "Beta Motors d.o.o.",
-        "role": "Prodaja i servis",
-        "address": "Rumenački put 30",
-        "zip": "21000 Novi Sad",
-        "phone_label": "TELEFON (PRODAJA)",
-        "phone": "+381 63 531 698",
-        "email": "office@betamotors.rs",
-        "hours": "Pon-Pet 08:00-17:00, sub 09:00-14:00",
-        "service_phone": [
-          "+381 21 20 77 057",
-          "+381 63 53 15 00"
-        ],
-        "service_email": "support@betamotors.rs",
-        "service_hours": "Pon-Pet 08:00-17:00, sub 09:00-14:00"
-      },
-      {
-        "city": "Jagodina",
-        "name": "AC Peda d.o.o.",
-        "role": "Prodaja i servis",
-        "address": "Kapetana Koče 91",
-        "zip": "35000 Jagodina",
-        "phone_label": "TELEFON (PRODAJA I SERVIS)",
-        "phone": "+381 63 60 16 65",
-        "email": "autocentarpeda@mts.rs",
-        "hours": "Pon-Pet 08:00-16:00, sub 08:00-16:00",
-        "service_phone": "+381 69 24 54 640",
-        "service_hours": "Pon-Pet 08:00-16:00, sub 08:00-16:00"
-      },
-      {
-        "city": "Niš",
-        "name": "Auto Mig d.o.o.",
-        "role": "Prodaja i servis",
-        "address": "Stevana Sinđelića 90, Trupale",
-        "zip": "18000 Niš",
-        "phone_label": "TELEFON (PRODAJA I SERVIS)",
-        "phone": [
-          "+381 18 4583 780",
-          "+381 18 4583 640"
-        ],
-        "email": "foton.prodaja@automig.rs",
-        "hours": "Pon-Pet 09:00-16:30, sub 08:00-13:00",
-        "service_phone": "+381 18 4583 720",
-        "service_email": "foton.servis@automig.rs",
-        "service_hours": "Pon-Pet 08:00-15:30, sub 08:00-13:00"
-      },
-      {
-        "city": "Šabac",
-        "name": "Auto Market Group",
-        "role": "Prodaja i servis",
-        "address": "Obilazni put bb",
-        "zip": "15000 Šabac",
-        "phone_label": "TELEFON (PRODAJA I SERVIS)",
-        "phone": "015 7160 100",
-        "email": [
-          "prodaja@automarketgroup.rs",
-          "info@automarketgroup.rs"
-        ],
-        "hours": "Pon-Pet 08:00-17:00, sub 08:00-15:00",
-        "service_email": "servis@automarketgroup.rs",
-        "service_hours": "Pon-Pet 08:00-17:00, sub 08:00-15:00"
-      },
-      {
-        "city": "Subotica",
-        "name": "D3 Automotive d.o.o.",
-        "role": "Prodaja",
-        "address": "Otmara Majera 22",
-        "zip": "24000 Subotica",
-        "phone_label": "TELEFON (PRODAJA)",
-        "phone": "+381 24 642 100",
-        "hours": "Pon-Pet 08:00-17:00, sub 09:00-13:00"
-      }
+   },
+   {
+    "city": "Beograd",
+    "name": "AUTO KUĆA KOMPRESOR",
+    "role": "Prodajni salon",
+    "address": "Žorža Klemansoa 19",
+    "zip": "11000 Beograd",
+    "phone": "+381 11 715 56 34",
+    "service_phone": [
+     "+381 11 715 56 01"
     ]
-  },
-  "geely": {
-    "name": "Geely",
-    "data_slug": "geely",
-    "logo": "geely.svg",
-    "founded": "1986",
-    "hq": "Hangdžou, Kina",
-    "importer": "VCAG d.o.o.",
-    "about": [
-      "Geely je osnovan 1986. u Hangdžouu i danas je jedna od najvećih privatnih automobilskih grupa u Kini, u čijem sastavu su i Volvo Cars i Lynk & Co.",
-      "U Srbiji ga zastupa VCAG d.o.o. iz Beograda."
-    ],
-    "dealers": [
-      {
-        "city": "Beograd",
-        "name": "Geely Centar Beograd",
-        "role": "Prodaja i servis",
-        "address": "Autoput za Novi Sad 98",
-        "zip": "11080 Beograd-Zemun",
-        "phone_label": "TELEFON (PRODAJA)",
-        "phone": "+381 11 40 44 232",
-        "email": "prodajageelybg@geelycentar.rs",
-        "hours": "Pon-Pet 08:00-19:00, sub 09:00-15:00",
-        "service_phone": "+381 11 31 65 496",
-        "service_email": "servisbg@geelyauto.rs",
-        "service_hours": "Pon-Pet 07:00-20:00, sub 07:00-15:00"
-      },
-      {
-        "city": "Novi Sad",
-        "name": "Bel Car Team d.o.o.",
-        "role": "Prodaja i servis",
-        "address": "Bulevar vojvode Stepe 38a",
-        "zip": "21000 Novi Sad",
-        "phone_label": "TELEFON (PRODAJA)",
-        "phone": [
-          "+381 21 6791004",
-          "+381 69 5544620",
-          "+381 69 5544756"
-        ],
-        "email": "salon@belcarteam.rs",
-        "hours": "Pon-Pet 08:00-17:00, sub 08:00-12:00",
-        "service_phone": "+381 21 6402422",
-        "service_email": "servis@belcarteam.rs",
-        "service_hours": "Pon-Pet 08:00-16:00, sub 08:00-12:00"
-      },
-      {
-        "city": "Niš",
-        "name": "Raavex-Group d.o.o.",
-        "role": "Prodaja i servis",
-        "address": "Bulevar cara Konstantina bb",
-        "zip": "18000 Niš",
-        "phone_label": "TELEFON (PRODAJA I SERVIS)",
-        "phone": "+381 18 259 000",
-        "email": "info@raavexgroup.co.rs",
-        "hours": "Pon-Pet 09:00-17:00, sub 09:00-14:00"
-      },
-      {
-        "city": "Kragujevac",
-        "name": "Nikom Auto d.o.o.",
-        "role": "Prodaja i servis",
-        "address": "Lepenički bulevar 47",
-        "zip": "34000 Kragujevac",
-        "phone_label": "TELEFON (PRODAJA I SERVIS)",
-        "phone": "+381 34 355810",
-        "email": "office@nikomauto.rs",
-        "hours": "Pon-Pet 08:00-18:00, sub 08:00-16:00",
-        "service_email": "servis@nikomauto.rs",
-        "service_hours": "Pon-Sub 08:00-16:00"
-      },
-      {
-        "city": "Subotica",
-        "name": "Auto Car Vidaković d.o.o.",
-        "role": "Prodaja i servis",
-        "address": "Starine Novaka 53",
-        "zip": "24000 Subotica",
-        "phone_label": "TELEFON (PRODAJA I SERVIS)",
-        "phone": "+381 24 566 226",
-        "email": [
-          "sandra@vidakovic.rs",
-          "dejan@vidakovic.rs"
-        ],
-        "hours": "Pon-Pet 08:00-16:30, sub 08:00-12:00",
-        "service_email": "aleksandar@vidakovic.rs",
-        "service_hours": "Pon-Pet 08:00-16:30, sub 08:00-12:00"
-      },
-      {
-        "city": "Požarevac",
-        "name": "Bibo Car d.o.o.",
-        "role": "Prodaja i servis",
-        "address": "Ljubičevska naselja bb",
-        "zip": "12000 Požarevac",
-        "phone_label": "TELEFON (PRODAJA I SERVIS)",
-        "phone": "+381 12 531 794",
-        "email": "milica.munic@bibocar.rs",
-        "hours": "Pon-Pet 08:00-17:00, sub 08:00-14:00",
-        "service_email": "marijan.andrijevic@bibocar.rs",
-        "service_hours": "Pon-Pet 08:00-17:00, sub 08:00-14:00"
-      }
+   },
+   {
+    "city": "Novi Sad",
+    "name": "AUTO KUĆA SEKULIĆ",
+    "role": "Prodajni salon",
+    "address": "Kralja Petra I 33",
+    "zip": "21203 Veternik",
+    "phone": "+381 21 822 062",
+    "service_phone": [
+     "+381 21 822 544",
+     "+381 21 823 195"
     ]
-  },
-  "jac": {
-    "name": "JAC",
-    "data_slug": "jac",
-    "logo": "jac.svg",
-    "founded": "1964",
-    "hq": "Hefej, Kina",
-    "importer": "Mašinopromet d.o.o.",
-    "about": [
-      "JAC Motors iz Hefeja osnovan je 1964. i proizvodi putnička i komercijalna vozila.",
-      "Na srpskom tržištu nudi električne modele, uključujući električni pikap T9 EV."
-    ],
-    "dealers": [
-      {
-        "city": "Beograd",
-        "name": "Mašinopromet d.o.o.",
-        "role": "Prodaja",
-        "address": "Auto put Beograd-Zagreb 300F",
-        "zip": "11000 Beograd",
-        "phone": "+381 64 820 70 56",
-        "email": "dusan@mpgroup.rs"
-      }
+   },
+   {
+    "city": "Užice",
+    "name": "NOVI B AUTO",
+    "role": "Prodajni salon",
+    "address": "Bela Zemlja bb",
+    "zip": "31000 Užice",
+    "phone": "+381 31 570 018",
+    "service_phone": [
+     "+381 31 572 767"
     ]
-  },
-  "jmev": {
-    "name": "JMEV",
-    "data_slug": "jmev",
-    "logo": "jmev.png",
-    "founded": null,
-    "hq": "Nančang, Kina",
-    "importer": "CUBI d.o.o.",
-    "about": [
-      "JMEV (Jiangling Motors Electric Vehicle) je kineski proizvođač električnih automobila iz Nančanga.",
-      "U Srbiji prodaju obavlja CUBI d.o.o. iz Novog Sada."
-    ],
-    "dealers": [
-      {
-        "city": "Novi Sad",
-        "name": "CUBI d.o.o.",
-        "role": "Generalni uvoznik, distributer i serviser",
-        "address": "Bulevar vojvode Stepe 36/a",
-        "zip": "21000 Novi Sad",
-        "phone": "+381 69 202 42 60",
-        "email": "cubi@jmev.rs"
-      },
-      {
-        "city": "Beograd",
-        "name": "Centar Boban d.o.o.",
-        "role": "Zvanični diler i serviser",
-        "address": "Dunavska 13",
-        "zip": "11000 Beograd",
-        "phone": "+381 66 604 2171",
-        "email": "nemanja.nikolic@centarboban.com"
-      }
+   },
+   {
+    "city": "Požarevac",
+    "name": "BIBO CAR",
+    "role": "Prodajni salon",
+    "address": "Ljubičevska – naselje bb",
+    "zip": "12000 Požarevac",
+    "phone": "+381 12 7160 140",
+    "service_phone": [
+     "+381 12 531 794"
     ]
-  },
-  "leapmotor": {
-    "name": "Leapmotor",
-    "data_slug": "leapmotor",
-    "logo": "leapmotor.svg",
-    "founded": "2015",
-    "hq": "Hangdžou, Kina",
-    "importer": null,
-    "about": [
-      "Leapmotor je osnovan 2015. u Hangdžouu i proizvodi električna vozila i vozila sa produženim dometom.",
-      "Od 2023. sarađuje sa grupom Stellantis, preko koje se njegovi modeli prodaju u Evropi."
-    ],
-    "dealers": [
-      {
-        "city": "Beograd",
-        "name": "Autopromet",
-        "role": "Prodaja i servis",
-        "address": "Autoput 5",
-        "zip": "11070 Novi Beograd",
-        "phone": "+381 11 319 31 50",
-        "hours": "Pon-Pet 08:00-18:00, sub 08:00-14:00",
-        "service_hours": "Pon-Pet 08:00-16:00, sub 08:00-13:00"
-      },
-      {
-        "city": "Beograd",
-        "name": "AK Kompresor",
-        "role": "Prodaja i servis",
-        "address": "Žorža Klemansoa 19",
-        "zip": "11000 Beograd",
-        "phone": "+381 11 71 55 600",
-        "hours": "Pon-Pet 09:00-18:00, sub i ned 09:00-14:00",
-        "service_hours": "Pon-Pet 08:00-17:00, sub 09:00-15:00"
-      },
-      {
-        "city": "Novi Sad",
-        "name": "Gota Car",
-        "role": "Prodaja i servis",
-        "address": "Zrenjaninski put 6",
-        "zip": "21000 Novi Sad",
-        "phone_label": "TELEFON (PRODAJA)",
-        "phone": [
-          "+381 21 2155 460",
-          "+381 63 483 967",
-          "+381 63 691 085"
-        ],
-        "hours": "Pon-Pet 09:00-18:00, sub 09:00-14:00",
-        "service_phone": [
-          "+381 21 2155 450",
-          "+381 63 483 441"
-        ],
-        "service_hours": "Pon-Pet 08:00-16:00, sub 08:00-13:00",
-        "parts_phone": "+381 66 8032 669"
-      }
+   },
+   {
+    "city": "Beograd",
+    "name": "EMIL FREY AUTO CENTAR",
+    "role": "Prodajni salon",
+    "address": "Sajmište 29",
+    "zip": "11070 Beograd",
+    "phone": "+381 11 2018 011",
+    "service_phone": [
+     "+381 11 2018 030",
+     "+381 11 2018 051"
     ]
-  },
-  "lynk-co": {
-    "name": "Lynk & Co",
-    "data_slug": "lynk-co",
-    "logo": "lynk-co.svg",
-    "founded": "2016",
-    "hq": "Geteborg, Švedska",
-    "importer": "VCAG d.o.o.",
-    "about": [
-      "Lynk & Co je brend nastao 2016. u okviru grupe Geely, sa dizajnom i razvojem u Švedskoj.",
-      "U Srbiji ga zastupa VCAG d.o.o. iz Beograda. Potpuno električni model u ponudi je Lynk & Co 02."
-    ],
-    "dealers": [
-      {
-        "city": "Beograd",
-        "name": "Lynk & Co centar Beograd",
-        "role": "Prodaja i servis",
-        "address": "Autoput za Novi Sad 98",
-        "zip": "11080 Beograd-Zemun",
-        "phone_label": "TELEFON (PRODAJA)",
-        "phone": [
-          "+381 11 404 58 08",
-          "+381 62 800 65 94"
-        ],
-        "email": "lynkco.beograd@lynkco-center.com",
-        "hours": "Pon-Pet 08:00-19:00, sub 09:00-15:00",
-        "service_phone": [
-          "+381 11 404 0351",
-          "+381 11 404 0352"
-        ],
-        "service_email": "volvoservisbg@lynkco-center.com",
-        "service_hours": "Pon-Pet 07:00-20:00, sub 08:00-15:00"
-      }
+   },
+   {
+    "city": "Čačak",
+    "name": "JEVTOVIC AUTO",
+    "role": "Prodajni salon",
+    "address": "Prislonica bb",
+    "zip": "32000 Čačak",
+    "phone": "+381 32 301 134",
+    "service_phone": [
+     "+381 32 301 110",
+     "+381 32 301 101"
     ]
-  },
-  "mg": {
-    "name": "MG",
-    "data_slug": "mg",
-    "logo": "mg.svg",
-    "founded": "1924",
-    "hq": "Šangaj, Kina",
-    "importer": "Grand Motors d.o.o.",
-    "about": [
-      "MG je britanski brend osnovan 1924, koji je danas u vlasništvu kineske grupe SAIC Motor.",
-      "U Evropi je jedan od najpoznatijih brendova pristupačnih električnih automobila, a u Srbiji nudi MG4 Electric, MG5 Electric i MGS5 EV."
-    ],
-    "dealers": [
-      {
-        "city": "Beograd",
-        "name": "Grand Motors d.o.o.",
-        "role": "Ovlašćeni diler",
-        "address": "Stopićeva 8, Bežanijska kosa",
-        "zip": "11070 Novi Beograd",
-        "phone": "+381 11 2090692",
-        "email": "mg@grandmotors.rs"
-      },
-      {
-        "city": "Beograd",
-        "name": "AC Brajić",
-        "role": "Ovlašćeni diler",
-        "address": "Ibarski put 101",
-        "zip": "11090 Rakovica, Beograd",
-        "phone": "+381 60 0806731",
-        "email": "office@acbrajic.com"
-      },
-      {
-        "city": "Novi Sad",
-        "name": "Grand Motors d.o.o.",
-        "role": "Ovlašćeni diler",
-        "address": "Novosadski put 110",
-        "zip": "21203 Veternik",
-        "phone": "+381 21 6302822",
-        "email": "mg.novisad@grandmotors.rs"
-      },
-      {
-        "city": "Niš",
-        "name": "Grand Motors d.o.o.",
-        "role": "Ovlašćeni diler",
-        "address": "Bulevar Nikole Tesle bb",
-        "zip": "18000 Niš",
-        "phone": "+381 18 585999",
-        "email": "mg.nis@grandmotors.rs"
-      },
-      {
-        "city": "Kragujevac",
-        "name": "Viva Company d.o.o.",
-        "role": "Ovlašćeni diler",
-        "address": "Miodraga Vlajića Šuke 16",
-        "zip": "34000 Kragujevac",
-        "phone": "+381 34 6333044",
-        "email": "info@vivacompany.rs"
-      },
-      {
-        "city": "Čačak",
-        "name": "Autostad Motors d.o.o.",
-        "role": "Ovlašćeni diler",
-        "address": "Bulevar Tanaska Rajića 176",
-        "zip": "32000 Čačak",
-        "phone": "+381 32 5350420",
-        "email": "office@autostadmotors.rs"
-      },
-      {
-        "city": "Subotica",
-        "name": "D-Motors Group d.o.o.",
-        "role": "Ovlašćeni diler",
-        "address": "Otmara Majera 22",
-        "zip": "24000 Subotica",
-        "phone": "+381 63 240556",
-        "email": "office@dmg.rs"
-      }
+   },
+   {
+    "city": "Šabac",
+    "name": "PSC VUKOVIĆ",
+    "role": "Prodajni salon",
+    "address": "Obilazni put bb",
+    "zip": "15000 Šabac",
+    "phone": "+381 15 303 303",
+    "service_phone": [
+     "+381 15 303 303"
     ]
-  },
-  "audi": {
-    "name": "Audi",
-    "data_slug": "audi",
-    "logo": "audi.svg",
-    "founded": "1909",
-    "hq": "Ingolštat, Nemačka",
-    "importer": "Porsche SCG d.o.o.",
-    "about": [
-      "Audi je nemački proizvođač automobila sa sedištem u Ingolštatu, deo grupe Volkswagen.",
-      "U ponudi električnih automobila u Srbiji je RS e-tron GT."
-    ],
-    "dealers": [
-      {
-        "city": "Čačak",
-        "name": "Autocentar Manik",
-        "role": "Ovlašćeni partner",
-        "address": "Ibarski put 13, Preljina",
-        "zip": "32212 Čačak"
-      },
-      {
-        "city": "Beograd",
-        "name": "Autokomerc centar Aerodrom",
-        "role": "Ovlašćeni partner",
-        "address": "Svetog Save 84/C",
-        "zip": "11271 Surčin"
-      },
-      {
-        "city": "Niš",
-        "name": "Bros Auto",
-        "role": "Ovlašćeni partner",
-        "address": "Dimitrija Tucovića 185",
-        "zip": "18000 Niš"
-      },
-      {
-        "city": "Beograd",
-        "name": "Porsche Ada",
-        "role": "Ovlašćeni partner",
-        "address": "Radnička 4",
-        "zip": "11000 Beograd"
-      },
-      {
-        "city": "Novi Sad",
-        "name": "Porsche Novi Sad",
-        "role": "Ovlašćeni partner",
-        "address": "Zrenjaninski put 24",
-        "zip": "21000 Novi Sad"
-      }
+   },
+   {
+    "city": "Beograd",
+    "name": "RENO SAVA (Beograd)",
+    "role": "Prodajni salon",
+    "address": "Mirijevski Bulevar 119",
+    "zip": "11000 Beograd",
+    "phone": "+381 11 655 70 20",
+    "service_phone": [
+     "+381 11 655 70 16"
     ]
-  },
-  "bmw": {
-    "name": "BMW",
-    "data_slug": "bmw",
-    "logo": "bmw.svg",
-    "founded": "1916",
-    "hq": "Minhen, Nemačka",
-    "importer": "BMW Srbija",
-    "about": [
-      "BMW je nemački proizvođač automobila i motocikala osnovan 1916. u Minhenu.",
-      "BMW i-serija obuhvata potpuno električne modele iX1, iX, iX3, i4, i5 i i7, uključujući M verzije."
-    ],
-    "dealers": [
-      {
-        "city": "Beograd",
-        "name": "DELTA MOTORS ČUKARICA",
-        "role": "Prodajni salon",
-        "address": "Radnička 8",
-        "zip": "11000 Beograd",
-        "phone": "011/3539-900",
-        "email": "office@bmw.rs",
-        "hours": "Ponedeljak-Petak 08:30-19:00, subota 09:00-14:00"
-      },
-      {
-        "city": "Beograd",
-        "name": "BMW RADULOVIĆ d.o.o.",
-        "role": "Prodajni salon",
-        "address": "Dragoslava Srejovića 4b",
-        "zip": "11000 Beograd",
-        "phone": "011/208-0180",
-        "email": "prodaja@radulovic-group.com",
-        "website": "radulovic-group.com",
-        "hours": "Ponedeljak-Petak 08:30-16:30, subota 08:00-13:00"
-      },
-      {
-        "city": "Novi Sad",
-        "name": "BMW RADULOVIĆ d.o.o.",
-        "role": "Prodajni salon",
-        "address": "Novosadski put 71, Veternik",
-        "zip": "21203 Novi Sad",
-        "phone": "021/820-888",
-        "email": "prodaja@radulovic-group.com",
-        "website": "radulovic-group.com",
-        "hours": "Ponedeljak-Petak 08:30-16:30, subota 08:00-13:00"
-      },
-      {
-        "city": "Mladenovac",
-        "name": "BMW STEFANOVIĆ AUTO",
-        "role": "Prodajni salon",
-        "address": "Beogradski put bb",
-        "zip": "11406 Vlaška",
-        "phone": "011/8201-900",
-        "email": "info@bmw-stefanovic.com",
-        "website": "bmw-stefanovic.rs",
-        "hours": "Ponedeljak-Subota 09:00-17:00"
-      },
-      {
-        "city": "Niš",
-        "name": "BMW MITIĆ COMPANY d.o.o.",
-        "role": "Prodajni salon",
-        "address": "Dimitrija Tucovića 173",
-        "zip": "18000 Niš",
-        "phone": "018/451-9519",
-        "email": "office@bmw-mitic.rs",
-        "hours": "Ponedeljak-Petak 09:00-17:00, subota 09:00-14:00"
-      },
-      {
-        "city": "Čačak",
-        "name": "BMW AUTOGARANT",
-        "role": "Prodajni salon",
-        "address": "Ibarski put 100",
-        "zip": "32000 Čačak",
-        "phone": "032/380-900",
-        "email": "office@autogarant.rs",
-        "website": "autogarant.rs",
-        "hours": "Ponedeljak-Petak 08:00-16:30, subota 08:00-13:00"
-      },
-      {
-        "city": "Beograd",
-        "name": "THE BMW STORE",
-        "role": "Galerija",
-        "address": "Galerija Beograd, Bulevar Vudroa Vilsona 12",
-        "zip": "11000 Beograd",
-        "phone": "065 88 95 445",
-        "phone_label": "VIBER",
-        "email": "galerija@bmw.rs",
-        "hours": "Radnim danima i vikendom 10:00-22:00"
-      },
-      {
-        "city": "Novi Pazar",
-        "name": "ELITE MOTORS",
-        "role": "Prodajni salon",
-        "address": "Mihajla Pupina 5",
-        "zip": "36300 Novi Pazar",
-        "phone": "+381 63 266 266",
-        "email": "office@bmw-elitemotors.rs",
-        "hours": "Ponedeljak-Petak 09:00-17:00, subota 09:00-14:30"
-      }
+   },
+   {
+    "city": "Pančevo",
+    "name": "RENO SAVA (Pančevo)",
+    "role": "Prodajni salon",
+    "address": "Novoseljanski put 62b",
+    "zip": "26000 Pančevo",
+    "phone": "+381 13 2190 190",
+    "service_phone": [
+     "+381 13 2190 193"
     ]
-  },
-  "cupra": {
-    "name": "Cupra",
-    "data_slug": "cupra",
-    "logo": "cupra.svg",
-    "founded": "2018",
-    "hq": "Barselona, Španija",
-    "importer": "Porsche SCG d.o.o.",
-    "about": [
-      "Cupra je španski sportski brend, koji je kao samostalan brend predstavljen 2018. kao deo grupe SEAT.",
-      "Električni modeli su Tavascan i Raval."
-    ],
-    "dealers": []
-  },
-  "dacia": {
-    "name": "Dacia",
-    "data_slug": "dacia",
-    "logo": "dacia.svg",
-    "founded": "1966",
-    "hq": "Mioveni, Rumunija",
-    "importer": null,
-    "about": [
-      "Dacia je rumunski proizvođač automobila, deo grupe Renault.",
-      "Dacia Spring je najpristupačniji potpuno električni automobil u ovoj kategoriji."
-    ],
-    "dealers": [
-      {
-        "city": "Subotica",
-        "name": "AUTO CAR VIDAKOVIĆ",
-        "role": "Prodajni salon",
-        "address": "Starine Novaka 53",
-        "zip": "24000 Subotica",
-        "phone": "+381 24 566 260",
-        "service_phone": [
-          "+381 24 566 260"
-        ]
-      },
-      {
-        "city": "Niš",
-        "name": "AUTO CENTAR KRUNIĆ",
-        "role": "Prodajni salon",
-        "address": "Bulevar Svetog Cara Konstantina 86a",
-        "zip": "18000 Niš",
-        "phone": "+381 18 454 21 61",
-        "service_phone": [
-          "+381 18 452 45 32"
-        ]
-      },
-      {
-        "city": "Jagodina",
-        "name": "AUTO KUĆA FRANCUZ D.O.O.",
-        "role": "Prodajni salon",
-        "address": "Kralja Aleksandra 28",
-        "zip": "35000 Jagodina",
-        "phone": "+381 35 243 095",
-        "service_phone": [
-          "+381 35 243 095"
-        ]
-      },
-      {
-        "city": "Beograd",
-        "name": "AUTO KUĆA KOMPRESOR",
-        "role": "Prodajni salon",
-        "address": "Žorža Klemansoa 19",
-        "zip": "11000 Beograd",
-        "phone": "+381 11 715 56 34",
-        "service_phone": [
-          "+381 11 715 56 01"
-        ]
-      },
-      {
-        "city": "Novi Sad",
-        "name": "AUTO KUĆA SEKULIĆ",
-        "role": "Prodajni salon",
-        "address": "Kralja Petra I 33",
-        "zip": "21203 Veternik",
-        "phone": "+381 21 822 062",
-        "service_phone": [
-          "+381 21 822 544",
-          "+381 21 823 195"
-        ]
-      },
-      {
-        "city": "Užice",
-        "name": "NOVI B AUTO",
-        "role": "Prodajni salon",
-        "address": "Bela Zemlja bb",
-        "zip": "31000 Užice",
-        "phone": "+381 31 570 018",
-        "service_phone": [
-          "+381 31 572 767"
-        ]
-      },
-      {
-        "city": "Požarevac",
-        "name": "BIBO CAR",
-        "role": "Prodajni salon",
-        "address": "Ljubičevska – naselje bb",
-        "zip": "12000 Požarevac",
-        "phone": "+381 12 7160 140",
-        "service_phone": [
-          "+381 12 531 794"
-        ]
-      },
-      {
-        "city": "Beograd",
-        "name": "EMIL FREY AUTO CENTAR",
-        "role": "Prodajni salon",
-        "address": "Sajmište 29",
-        "zip": "11070 Beograd",
-        "phone": "+381 11 2018 011",
-        "service_phone": [
-          "+381 11 2018 030",
-          "+381 11 2018 051"
-        ]
-      },
-      {
-        "city": "Čačak",
-        "name": "JEVTOVIC AUTO",
-        "role": "Prodajni salon",
-        "address": "Prislonica bb",
-        "zip": "32000 Čačak",
-        "phone": "+381 32 301 134",
-        "service_phone": [
-          "+381 32 301 110",
-          "+381 32 301 101"
-        ]
-      },
-      {
-        "city": "Šabac",
-        "name": "PSC VUKOVIĆ",
-        "role": "Prodajni salon",
-        "address": "Obilazni put bb",
-        "zip": "15000 Šabac",
-        "phone": "+381 15 303 303",
-        "service_phone": [
-          "+381 15 303 303"
-        ]
-      },
-      {
-        "city": "Beograd",
-        "name": "RENO SAVA (Beograd)",
-        "role": "Prodajni salon",
-        "address": "Mirijevski Bulevar 119",
-        "zip": "11000 Beograd",
-        "phone": "+381 11 655 70 20",
-        "service_phone": [
-          "+381 11 655 70 16"
-        ]
-      },
-      {
-        "city": "Pančevo",
-        "name": "RENO SAVA (Pančevo)",
-        "role": "Prodajni salon",
-        "address": "Novoseljanski put 62b",
-        "zip": "26000 Pančevo",
-        "phone": "+381 13 2190 190",
-        "service_phone": [
-          "+381 13 2190 193"
-        ]
-      },
-      {
-        "city": "Zrenjanin",
-        "name": "AC BANAT",
-        "role": "Prodajni salon",
-        "address": "Pere Dobrinovića 26",
-        "zip": "23000 Zrenjanin",
-        "phone": "+381 60 6555 098",
-        "service_phone": [
-          "+381 23 528 980",
-          "+381 60 6555 047"
-        ]
-      },
-      {
-        "city": "Novi Sad",
-        "name": "AUTO KUĆA SEKULIĆ (Novi Sad)",
-        "role": "Prodajni salon",
-        "address": "Bulevar Vojvode Stepe 78",
-        "zip": "21000 Novi Sad",
-        "phone": "+381 21 6399 636"
-      },
-      {
-        "city": "Novi Sad",
-        "name": "STOJANOV AUTO",
-        "role": "Prodajni salon",
-        "address": "Zrenjaninski put 12",
-        "zip": "21000 Novi Sad",
-        "phone": "+381 21 21 00 488",
-        "service_phone": [
-          "+381 21 21 00 488"
-        ]
-      }
+   },
+   {
+    "city": "Zrenjanin",
+    "name": "AC BANAT",
+    "role": "Prodajni salon",
+    "address": "Pere Dobrinovića 26",
+    "zip": "23000 Zrenjanin",
+    "phone": "+381 60 6555 098",
+    "service_phone": [
+     "+381 23 528 980",
+     "+381 60 6555 047"
     ]
-  },
-  "ford": {
-    "name": "Ford",
-    "data_slug": "ford",
-    "logo": "ford.svg",
-    "founded": "1903",
-    "hq": "Dirborn, Mičigen, SAD",
-    "importer": null,
-    "about": [
-      "Ford je američki proizvođač automobila osnovan 1903. u Detroitu.",
-      "Električni modeli u ponudi su Mustang Mach-E, Puma Gen-E i Explorer."
-    ],
-    "dealers": [
-      {
-        "city": "Beograd",
-        "name": "GRAND MOTORS DOO",
-        "role": "Prodajni salon",
-        "address": "Bulevar Milutina Milankovića 21",
-        "zip": "11070 Novi Beograd",
-        "phone": "+381 11 2090 600",
-        "email": [
-          "salon.bg@grandmotors.rs",
-          "recepcija@grandmotors.rs"
-        ],
-        "website": "ford.rs",
-        "service_phone": [
-          "+381 11 20 90 650",
-          "+381 63 10 70 641",
-          "+381 63 24 44 78",
-          "+381 62 24 26 88",
-          "+381 63 10 71 489",
-          "+381 63 50 41 98"
-        ]
-      },
-      {
-        "city": "Novi Sad",
-        "name": "GRAND MOTORS DOO",
-        "role": "Prodajni salon",
-        "address": "Novosadski put 110, Veternik",
-        "zip": "21203 Novi Sad",
-        "phone": "+381 21 63 02 822",
-        "email": "salon.ns@grandmotors.rs",
-        "website": "ford.rs"
-      },
-      {
-        "city": "Niš",
-        "name": "GRAND MOTORS DOO",
-        "role": "Prodajni salon",
-        "address": "Bulevar Nikole Tesle bb",
-        "zip": "18000 Niš",
-        "phone": "+381 18 585 999",
-        "email": "salon.ni@grandmotors.rs",
-        "website": "ford.rs"
-      },
-      {
-        "city": "Subotica",
-        "name": "D-MOTORS",
-        "role": "Prodajni salon",
-        "address": "Beogradski put 66",
-        "zip": "24000 Subotica",
-        "phone": "+381 24 642 100",
-        "email": "office@fordsubotica.rs"
-      },
-      {
-        "city": "Čačak",
-        "name": "AUTOSTAD MOTORS DOO",
-        "role": "Prodajni salon",
-        "address": "Bulevar Tanaska Rajića 176",
-        "zip": "32000 Čačak",
-        "phone": "+381 32 53 50 420",
-        "email": "office@autostadmotors.rs",
-        "website": "autostadmotors.rs"
-      },
-      {
-        "city": "Šabac",
-        "name": "AUTO MARKET GROUP DOO",
-        "role": "Prodajni salon",
-        "address": "Obilazni put bb",
-        "zip": "15000 Šabac",
-        "phone": "+381 15 716 0100",
-        "email": "prodaja@fordsabac.rs",
-        "website": "fordsabac.rs"
-      },
-      {
-        "city": "Pančevo",
-        "name": "SAVA MOTORS",
-        "role": "Prodajni salon",
-        "address": "Novoseljanski put 62b",
-        "zip": "26100 Pančevo",
-        "email": "prodaja@savamotors.com"
-      },
-      {
-        "city": "Kragujevac",
-        "name": "VIVA COMPANY DOO",
-        "role": "Prodajni salon",
-        "address": "M. Vlajica Suke 16",
-        "zip": "34000 Kragujevac",
-        "phone": "+381 34 6333 044",
-        "email": "vivacompanydoo@gmail.com"
-      }
+   },
+   {
+    "city": "Novi Sad",
+    "name": "AUTO KUĆA SEKULIĆ (Novi Sad)",
+    "role": "Prodajni salon",
+    "address": "Bulevar Vojvode Stepe 78",
+    "zip": "21000 Novi Sad",
+    "phone": "+381 21 6399 636"
+   },
+   {
+    "city": "Novi Sad",
+    "name": "STOJANOV AUTO",
+    "role": "Prodajni salon",
+    "address": "Zrenjaninski put 12",
+    "zip": "21000 Novi Sad",
+    "phone": "+381 21 21 00 488",
+    "service_phone": [
+     "+381 21 21 00 488"
     ]
-  },
-  "kia": {
-    "name": "Kia",
-    "data_slug": "kia",
-    "logo": "kia.svg",
-    "founded": "1944",
-    "hq": "Seul, Južna Koreja",
-    "importer": null,
-    "about": [
-      "Kia je južnokorejski proizvođač automobila, deo grupe Hyundai Motor Group.",
-      "EV serija obuhvata modele EV2, EV3, EV4, EV6 i EV9."
+   }
+  ]
+ },
+ "ford": {
+  "name": "Ford",
+  "data_slug": "ford",
+  "logo": "ford.svg",
+  "founded": "1903",
+  "hq": "Dirborn, Mičigen, SAD",
+  "importer": null,
+  "about": [
+   "Ford je američki proizvođač automobila osnovan 1903. u Detroitu.",
+   "Električni modeli u ponudi su Mustang Mach-E, Puma Gen-E i Explorer."
+  ],
+  "dealers": [
+   {
+    "city": "Beograd",
+    "name": "GRAND MOTORS DOO",
+    "role": "Prodajni salon",
+    "address": "Bulevar Milutina Milankovića 21",
+    "zip": "11070 Novi Beograd",
+    "phone": "+381 11 2090 600",
+    "email": [
+     "salon.bg@grandmotors.rs",
+     "recepcija@grandmotors.rs"
     ],
-    "dealers": [
-      {
-        "city": "Beograd",
-        "name": "KIA CENTAR BEOGRAD",
-        "role": "Prodajni salon",
-        "address": "Autoput za Novi Sad 98",
-        "zip": "11080 Beograd-Zemun",
-        "phone": [
-          "+381 62 800 1440",
-          "+381 11 316 69 03"
-        ],
-        "email": "prodajabg@kiacentar.rs",
-        "hours": "Ponedeljak-Petak 08:00-19:00, subota 08:00-15:00"
-      },
-      {
-        "city": "Šabac",
-        "name": "PSC VUKOVIĆ d.o.o.",
-        "role": "Prodajni salon",
-        "address": "Obilazni put bb",
-        "zip": "15000 Šabac",
-        "phone": [
-          "+381 62 303 323",
-          "+381 60 3207 253"
-        ],
-        "email": "prodajavozila@pscvukovic.rs",
-        "hours": "Ponedeljak-Petak 08:00-17:00, subota 08:30-14:00"
-      },
-      {
-        "city": "Čačak",
-        "name": "SNEŽANA PETRIĆ PR (Autopetrić)",
-        "role": "Prodajni salon",
-        "address": "Bulevar Tanaska Rajića br. 17",
-        "zip": "32000 Čačak",
-        "phone": [
-          "+381 32 358 581"
-        ],
-        "email": "petric.kiamotors@gmail.com",
-        "hours": "Ponedeljak-Petak 08:00-17:00, subota 09:00-14:00"
-      },
-      {
-        "city": "Niš",
-        "name": "VELJA AUTO KOSTADINOVIĆ MILOŠ PR",
-        "role": "Prodajni salon",
-        "address": "Ul. Bulevar 12. februara 64c",
-        "zip": "18000 Niš",
-        "phone": [
-          "+381 18 588 058"
-        ],
-        "email": "kiaveljaauto@gmail.com",
-        "hours": "Ponedeljak-Petak 08:00-19:00, subota 08:00-16:00"
-      },
-      {
-        "city": "Novi Sad",
-        "name": "BEL CAR TEAM d.o.o.",
-        "role": "Prodajni salon",
-        "address": "Bulevar Vojvode Stepe 38a",
-        "zip": "21000 Novi Sad",
-        "phone": [
-          "+381 21 67 91 004",
-          "+381 69 55 44 620",
-          "+381 69 55 44 756"
-        ],
-        "email": "salon@belcarteam.rs",
-        "hours": "Ponedeljak-Petak 08:00-17:00, subota 08:00-12:00"
-      },
-      {
-        "city": "Novi Sad",
-        "name": "MTL AUTO d.o.o.",
-        "role": "Prodajni salon",
-        "address": "Kralja Petra Prvog 97",
-        "zip": "21203 Novi Sad - Veternik",
-        "phone": [
-          "+381 21 300 24 89",
-          "+381 62 185 74 84"
-        ],
-        "email": "kia@mtlauto.rs",
-        "hours": "Ponedeljak-Petak 08:00-17:00, subota 09:00-14:00"
-      },
-      {
-        "city": "Požarevac",
-        "name": "AUTO MIRKOS d.o.o.",
-        "role": "Prodajni salon",
-        "address": "Ljubičevska bb",
-        "zip": "12000 Požarevac",
-        "phone": [
-          "+381 12 515 220"
-        ],
-        "email": "kiaprodaja@automirkos.com",
-        "hours": "Ponedeljak-Petak 08:00-16:30, subota 08:00-14:00"
-      },
-      {
-        "city": "Subotica",
-        "name": "AUTO KUĆA ALFA d.o.o.",
-        "role": "Prodajni salon",
-        "address": "Jovana Mikića 18",
-        "zip": "24000 Subotica",
-        "phone": [
-          "+381 24 526 362",
-          "+381 69 18 70 550"
-        ],
-        "email": "office@autokucaalfa.com",
-        "hours": "Ponedeljak-Petak 08:00-15:30, subota 08:00-13:00"
-      }
+    "website": "ford.rs",
+    "service_phone": [
+     "+381 11 20 90 650",
+     "+381 63 10 70 641",
+     "+381 63 24 44 78",
+     "+381 62 24 26 88",
+     "+381 63 10 71 489",
+     "+381 63 50 41 98"
     ]
-  },
-  "mazda": {
-    "name": "Mazda",
-    "data_slug": "mazda",
-    "logo": "mazda.svg",
-    "founded": "1920",
-    "hq": "Hirošima, Japan",
-    "importer": null,
-    "about": [
-      "Mazda je japanski proizvođač automobila osnovan 1920. u Hirošimi.",
-      "Električni model u ponudi je Mazda 6e."
+   },
+   {
+    "city": "Novi Sad",
+    "name": "GRAND MOTORS DOO",
+    "role": "Prodajni salon",
+    "address": "Novosadski put 110, Veternik",
+    "zip": "21203 Novi Sad",
+    "phone": "+381 21 63 02 822",
+    "email": "salon.ns@grandmotors.rs",
+    "website": "ford.rs"
+   },
+   {
+    "city": "Niš",
+    "name": "GRAND MOTORS DOO",
+    "role": "Prodajni salon",
+    "address": "Bulevar Nikole Tesle bb",
+    "zip": "18000 Niš",
+    "phone": "+381 18 585 999",
+    "email": "salon.ni@grandmotors.rs",
+    "website": "ford.rs"
+   },
+   {
+    "city": "Subotica",
+    "name": "D-MOTORS",
+    "role": "Prodajni salon",
+    "address": "Beogradski put 66",
+    "zip": "24000 Subotica",
+    "phone": "+381 24 642 100",
+    "email": "office@fordsubotica.rs"
+   },
+   {
+    "city": "Čačak",
+    "name": "AUTOSTAD MOTORS DOO",
+    "role": "Prodajni salon",
+    "address": "Bulevar Tanaska Rajića 176",
+    "zip": "32000 Čačak",
+    "phone": "+381 32 53 50 420",
+    "email": "office@autostadmotors.rs",
+    "website": "autostadmotors.rs"
+   },
+   {
+    "city": "Šabac",
+    "name": "AUTO MARKET GROUP DOO",
+    "role": "Prodajni salon",
+    "address": "Obilazni put bb",
+    "zip": "15000 Šabac",
+    "phone": "+381 15 716 0100",
+    "email": "prodaja@fordsabac.rs",
+    "website": "fordsabac.rs"
+   },
+   {
+    "city": "Pančevo",
+    "name": "SAVA MOTORS",
+    "role": "Prodajni salon",
+    "address": "Novoseljanski put 62b",
+    "zip": "26100 Pančevo",
+    "email": "prodaja@savamotors.com"
+   },
+   {
+    "city": "Kragujevac",
+    "name": "VIVA COMPANY DOO",
+    "role": "Prodajni salon",
+    "address": "M. Vlajica Suke 16",
+    "zip": "34000 Kragujevac",
+    "phone": "+381 34 6333 044",
+    "email": "vivacompanydoo@gmail.com"
+   }
+  ]
+ },
+ "kia": {
+  "name": "Kia",
+  "data_slug": "kia",
+  "logo": "kia.svg",
+  "founded": "1944",
+  "hq": "Seul, Južna Koreja",
+  "importer": null,
+  "about": [
+   "Kia je južnokorejski proizvođač automobila, deo grupe Hyundai Motor Group.",
+   "EV serija obuhvata modele EV2, EV3, EV4, EV6 i EV9."
+  ],
+  "dealers": [
+   {
+    "city": "Beograd",
+    "name": "KIA CENTAR BEOGRAD",
+    "role": "Prodajni salon",
+    "address": "Autoput za Novi Sad 98",
+    "zip": "11080 Beograd-Zemun",
+    "phone": [
+     "+381 62 800 1440",
+     "+381 11 316 69 03"
     ],
-    "dealers": [
-      {
-        "city": "Subotica",
-        "name": "AUTO KUĆA ALFA",
-        "role": "Prodajni salon",
-        "address": "Jovana Mikića 18",
-        "zip": "24000 Subotica",
-        "phone": "+381 24 555 500",
-        "email": "office@autokucaalfa.com",
-        "website": "alfa.mazda.rs",
-        "hours": "Ponedeljak-Petak 08:00-16:00, subota 08:00-13:00"
-      },
-      {
-        "city": "Novi Sad",
-        "name": "GRAND MOTORS",
-        "role": "Prodajni salon",
-        "address": "Novosadski put 110, Veternik",
-        "zip": "21203 Novi Sad",
-        "phone": "+381 21 630 2822",
-        "email": "mazda@grandmotors.rs",
-        "website": "grandm.mazda.rs",
-        "hours": "Ponedeljak-Petak 09:00-17:00, subota 09:00-14:00"
-      },
-      {
-        "city": "Beograd",
-        "name": "DIPEM (Beograd)",
-        "role": "Prodajni salon",
-        "address": "Đorđa Stanojevića 41",
-        "zip": "11070 Novi Beograd",
-        "phone": "+381 11 234 11 74",
-        "email": "mazdaprodaja@dipem.rs",
-        "website": "dipem.mazda.rs",
-        "hours": "Ponedeljak-Petak 08:00-18:00, subota 09:00-15:00"
-      },
-      {
-        "city": "Čačak",
-        "name": "DIPEM (Čačak)",
-        "role": "Prodajni salon",
-        "address": "Ibarski put 88",
-        "zip": "32000 Čačak",
-        "phone": "+381 32 381 881",
-        "email": "mazda@dipem.rs",
-        "website": "dipem.mazda.rs",
-        "hours": "Ponedeljak-Petak 08:00-17:00, subota 08:00-13:00"
-      },
-      {
-        "city": "Niš",
-        "name": "AUTO MG COMMERCE",
-        "role": "Prodajni salon",
-        "address": "Stevana Sinđelića 90, Trupale",
-        "zip": "18000 Niš",
-        "phone": [
-          "+381 62 279 085",
-          "+381 18 581 336"
-        ],
-        "email": "mazda@automg.rs",
-        "website": "automg.mazda.rs",
-        "hours": "Ponedeljak-Petak 09:00-17:00, subota 07:30-13:30"
-      }
-    ]
-  },
-  "porsche": {
-    "name": "Porsche",
-    "data_slug": "porsche",
-    "logo": "porsche.svg",
-    "founded": "1931",
-    "hq": "Štutgart, Nemačka",
-    "importer": "Porsche SCG d.o.o.",
-    "about": [
-      "Porsche je nemački proizvođač sportskih automobila sa sedištem u Štutgartu.",
-      "Električni modeli su Taycan 4, Macan 4 i Cayenne Turbo Electric."
+    "email": "prodajabg@kiacentar.rs",
+    "hours": "Ponedeljak-Petak 08:00-19:00, subota 08:00-15:00"
+   },
+   {
+    "city": "Šabac",
+    "name": "PSC VUKOVIĆ d.o.o.",
+    "role": "Prodajni salon",
+    "address": "Obilazni put bb",
+    "zip": "15000 Šabac",
+    "phone": [
+     "+381 62 303 323",
+     "+381 60 3207 253"
     ],
-    "dealers": [
-      {
-        "city": "Beograd",
-        "name": "PORSCHE CENTAR BEOGRAD",
-        "role": "Prodajni salon",
-        "address": "Radnička 4",
-        "zip": "11000 Beograd",
-        "phone": "0800 801 811",
-        "email": "info@porschecentarbeograd.rs",
-        "website": "porsche.rs",
-        "hours": "Ponedeljak-Petak 09:00-17:00 (subotom i nedeljom ne radi)"
-      },
-      {
-        "city": "Beograd",
-        "name": "Porsche Ada",
-        "role": "Ovlašćeni partner",
-        "address": "Radnička 4",
-        "zip": "11000 Beograd"
-      },
-      {
-        "city": "Novi Sad",
-        "name": "Porsche Novi Sad",
-        "role": "Ovlašćeni partner",
-        "address": "Zrenjaninski put 24",
-        "zip": "21000 Novi Sad"
-      }
-    ]
-  },
-  "renault": {
-    "name": "Renault",
-    "data_slug": "renault",
-    "logo": "renault.svg",
-    "founded": "1899",
-    "hq": "Bulonj-Bijankur, Francuska",
-    "importer": null,
-    "about": [
-      "Renault je francuski proizvođač automobila osnovan 1899.",
-      "Električna ponuda obuhvata modele 5 E-Tech, 4 E-Tech i Twingo E-Tech."
+    "email": "prodajavozila@pscvukovic.rs",
+    "hours": "Ponedeljak-Petak 08:00-17:00, subota 08:30-14:00"
+   },
+   {
+    "city": "Čačak",
+    "name": "SNEŽANA PETRIĆ PR (Autopetrić)",
+    "role": "Prodajni salon",
+    "address": "Bulevar Tanaska Rajića br. 17",
+    "zip": "32000 Čačak",
+    "phone": [
+     "+381 32 358 581"
     ],
-    "dealers": [
-      {
-        "city": "Beograd",
-        "name": "AK KOMPRESOR PRODAJA AUTOMOBILA d.o.o.",
-        "role": "Prodajni salon",
-        "address": "Žorža Klemansoa 19",
-        "zip": "11000 Beograd",
-        "phone": "+381 11 715 56 01"
-      },
-      {
-        "city": "Zrenjanin",
-        "name": "AUTO CENTAR BANAT DOO",
-        "role": "Prodajni salon",
-        "address": "Pere Dobrinovića 26",
-        "zip": "23000 Zrenjanin",
-        "phone": "+381 60 655 50 31"
-      },
-      {
-        "city": "Niš",
-        "name": "AUTO CENTAR KRUNIĆ",
-        "role": "Prodajni salon",
-        "address": "Bul. Svetog Cara Konstantina 86a",
-        "zip": "18000 Niš",
-        "phone": "+381 18 452 4532"
-      },
-      {
-        "city": "Kragujevac",
-        "name": "AUTO KUĆA FRANCUZ D.O.O.",
-        "role": "Prodajni salon",
-        "address": "Miodraga Vlajića Šuke 16",
-        "zip": "34000 Kragujevac",
-        "phone": "+381 34 633 6235"
-      },
-      {
-        "city": "Jagodina",
-        "name": "AUTO KUĆA FRANCUZ d.o.o.",
-        "role": "Prodajni salon",
-        "address": "Kralja Aleksandra 28",
-        "zip": "35000 Jagodina",
-        "phone": "+381 35 824 3095"
-      },
-      {
-        "city": "Novi Sad",
-        "name": "AUTO KUĆA SEKULIĆ",
-        "role": "Prodajni salon",
-        "address": "Bulevar Vojvode Stepe 78",
-        "zip": "21000 Novi Sad",
-        "phone": "+381 21 639 9586"
-      },
-      {
-        "city": "Novi Sad",
-        "name": "AUTO KUĆA SEKULIĆ d.o.o.",
-        "role": "Prodajni salon",
-        "address": "Kralja Petra I 33",
-        "zip": "21203 Veternik",
-        "phone": "+381 21 822 544"
-      },
-      {
-        "city": "Subotica",
-        "name": "AUTOCAR VIDAKOVIĆ d.o.o.",
-        "role": "Prodajni salon",
-        "address": "Starine Novaka 53",
-        "zip": "24000 Subotica",
-        "phone": "+381 24 566 260"
-      },
-      {
-        "city": "Požarevac",
-        "name": "BIBO-CAR d.o.o.",
-        "role": "Prodajni salon",
-        "address": "Ljubičevska-naselje bb",
-        "zip": "12000 Požarevac",
-        "phone": "+381 12 530 773"
-      },
-      {
-        "city": "Beograd",
-        "name": "EMIL FREY AUTOCENTAR d.o.o.",
-        "role": "Prodajni salon",
-        "address": "Sajmište 29",
-        "zip": "11070 Beograd",
-        "phone": "+381 11 2018 034"
-      },
-      {
-        "city": "Čačak",
-        "name": "JEVTOVIĆ AUTO d.o.o. Čačak",
-        "role": "Prodajni salon",
-        "address": "Prislonica bb",
-        "zip": "32000 Čačak",
-        "phone": "+381 32 301 110"
-      },
-      {
-        "city": "Užice",
-        "name": "NOVI B AUTO",
-        "role": "Prodajni salon",
-        "address": "Bela Zemlja bb",
-        "zip": "31000 Užice",
-        "phone": "+381 31 572 767"
-      },
-      {
-        "city": "Šabac",
-        "name": "PSC VUKOVIĆ d.o.o.",
-        "role": "Prodajni salon",
-        "address": "Obilazni put bb",
-        "zip": "15000 Šabac",
-        "phone": "+381 15 303 303"
-      },
-      {
-        "city": "Beograd",
-        "name": "RENO-SAVA (Beograd)",
-        "role": "Prodajni salon",
-        "address": "Mirijevski bulevar 119",
-        "zip": "11000 Beograd",
-        "phone": "+381 11 655 70 16"
-      },
-      {
-        "city": "Pančevo",
-        "name": "RENO-SAVA d.o.o. (Pančevo)",
-        "role": "Prodajni salon",
-        "address": "Novoseljanski put 62b",
-        "zip": "26000 Pančevo",
-        "phone": "+381 13 219 0193"
-      },
-      {
-        "city": "Novi Sad",
-        "name": "STOJANOV AUTO DOO",
-        "role": "Prodajni salon",
-        "address": "Zrenjaninski put 12",
-        "zip": "21000 Novi Sad",
-        "phone": "+381 21 210 0488"
-      }
-    ]
-  },
-  "suzuki": {
-    "name": "Suzuki",
-    "data_slug": "suzuki",
-    "logo": "suzuki.svg",
-    "founded": "1909",
-    "hq": "Hamamacu, Japan",
-    "importer": null,
-    "about": [
-      "Suzuki je japanski proizvođač automobila i motocikala sa sedištem u Hamamacuu.",
-      "Električni model u ponudi je e Vitara."
+    "email": "petric.kiamotors@gmail.com",
+    "hours": "Ponedeljak-Petak 08:00-17:00, subota 09:00-14:00"
+   },
+   {
+    "city": "Niš",
+    "name": "VELJA AUTO KOSTADINOVIĆ MILOŠ PR",
+    "role": "Prodajni salon",
+    "address": "Ul. Bulevar 12. februara 64c",
+    "zip": "18000 Niš",
+    "phone": [
+     "+381 18 588 058"
     ],
-    "dealers": [
-      {
-        "city": "Novi Sad",
-        "name": "BETA MOTORS CENTAR",
-        "role": "Prodajni salon",
-        "address": "Temerinska 95",
-        "zip": "21000 Novi Sad",
-        "phone": [
-          "+381 63 531 400",
-          "+381 21 472 00 48",
-          "+381 21 633 44 82"
-        ],
-        "email": "office@suzuki-novisad.rs",
-        "hours": "Ponedeljak-Petak 09:00-17:00, subota 09:00-14:00"
-      },
-      {
-        "city": "Beograd",
-        "name": "EURO SUMAR d.o.o.",
-        "role": "Prodajni salon",
-        "address": "Vojislava Ilića 145",
-        "zip": "11000 Beograd",
-        "phone": [
-          "+381 11 288 9554",
-          "+381 11 288 6076"
-        ],
-        "email": "prodajavozila@suzuki-srbija.rs",
-        "hours": "Ponedeljak-Petak 08:00-18:00, subota 09:00-14:00"
-      }
-    ]
-  },
-  "toyota": {
-    "name": "Toyota",
-    "data_slug": "toyota",
-    "logo": "toyota.svg",
-    "founded": "1937",
-    "hq": "Toyota, Aiči, Japan",
-    "importer": null,
-    "about": [
-      "Toyota je japanski proizvođač automobila osnovan 1937.",
-      "Električni model je bZ4X."
+    "email": "kiaveljaauto@gmail.com",
+    "hours": "Ponedeljak-Petak 08:00-19:00, subota 08:00-16:00"
+   },
+   {
+    "city": "Novi Sad",
+    "name": "BEL CAR TEAM d.o.o.",
+    "role": "Prodajni salon",
+    "address": "Bulevar Vojvode Stepe 38a",
+    "zip": "21000 Novi Sad",
+    "phone": [
+     "+381 21 67 91 004",
+     "+381 69 55 44 620",
+     "+381 69 55 44 756"
     ],
-    "dealers": [
-      {
-        "city": "Novi Sad",
-        "name": "Gota Car d.o.o. (Novi Sad)",
-        "address": "Zrenjaninski put 6",
-        "zip": "21000 Novi Sad"
-      },
-      {
-        "city": "Subotica",
-        "name": "Gota Car d.o.o. (Subotica)",
-        "address": "Senćanski put 209B",
-        "zip": "24000 Subotica"
-      },
-      {
-        "city": "Niš",
-        "name": "Raavex-Group d.o.o.",
-        "address": "Bulevar Cara Konstantina bb",
-        "zip": "18000 Niš"
-      },
-      {
-        "city": "Čačak",
-        "name": "Techno MK Auto d.o.o.",
-        "address": "Bulevar Oslobodilaca bb",
-        "zip": "32000 Čačak"
-      },
-      {
-        "city": "Beograd",
-        "name": "Toyota Centar Beograd d.o.o. (ADA)",
-        "address": "Radnička 22",
-        "zip": "11030 Beograd"
-      },
-      {
-        "city": "Beograd",
-        "name": "Toyota Centar Beograd d.o.o. (SEVER)",
-        "address": "Zrenjaninski put 28a",
-        "zip": "11210 Beograd"
-      }
-    ]
-  },
-  "volkswagen": {
-    "name": "Volkswagen",
-    "data_slug": "volkswagen",
-    "logo": "volkswagen.svg",
-    "founded": "1937",
-    "hq": "Volfsburg, Nemačka",
-    "importer": "Porsche SCG d.o.o.",
-    "about": [
-      "Volkswagen je nemački proizvođač automobila osnovan 1937. u Volfsburgu.",
-      "Električni modeli obuhvataju ID. seriju: ID.3, ID.4, ID.5 i ID.7."
+    "email": "salon@belcarteam.rs",
+    "hours": "Ponedeljak-Petak 08:00-17:00, subota 08:00-12:00"
+   },
+   {
+    "city": "Novi Sad",
+    "name": "MTL AUTO d.o.o.",
+    "role": "Prodajni salon",
+    "address": "Kralja Petra Prvog 97",
+    "zip": "21203 Novi Sad - Veternik",
+    "phone": [
+     "+381 21 300 24 89",
+     "+381 62 185 74 84"
     ],
-    "dealers": []
-  },
-  "hyundai": {
-    "name": "Hyundai",
-    "data_slug": "hyundai",
-    "logo": "hyundai.svg",
-    "founded": "1967",
-    "hq": "Seul, Južna Koreja",
-    "importer": null,
-    "about": [
-      "Hyundai je južnokorejski proizvođač automobila osnovan 1967. u Seulu, deo grupe Hyundai Motor Group.",
-      "Električna IONIQ serija obuhvata modele IONIQ 5, IONIQ 6, IONIQ 6 N i IONIQ 9, kao i mali električni Inster."
+    "email": "kia@mtlauto.rs",
+    "hours": "Ponedeljak-Petak 08:00-17:00, subota 09:00-14:00"
+   },
+   {
+    "city": "Požarevac",
+    "name": "AUTO MIRKOS d.o.o.",
+    "role": "Prodajni salon",
+    "address": "Ljubičevska bb",
+    "zip": "12000 Požarevac",
+    "phone": [
+     "+381 12 515 220"
     ],
-    "dealers": [
-      {
-        "city": "Beograd",
-        "name": "HYUNDAI SRBIJA – Prodajni salon",
-        "role": "Prodajni salon",
-        "address": "Milutina Milankovića 7v",
-        "zip": "11070 Beograd",
-        "phone": [
-          "+381 11 2252 500",
-          "+381 11 2252 501",
-          "+381 60 800 9009",
-          "+381 11 2252 505",
-          "+381 60 800 9062",
-          "+381 11 2252 507",
-          "+381 60 800 9042",
-          "+381 11 2252 503",
-          "+381 60 800 9011"
-        ],
-        "email": [
-          "salon@hyundai.rs",
-          "aleksandar.petrovic@hyundai.rs",
-          "biljana.pavlovic@hyundai.rs",
-          "danijela.cvrkotic@hyundai.rs",
-          "dragan.sibinac@hyundai.rs"
-        ],
-        "hours": "Ponedeljak-Petak 09:00-18:00, subota 09:00-15:00"
-      },
-      {
-        "city": "Beograd",
-        "name": "EHOM AUTO – Salon",
-        "role": "Prodajni salon",
-        "address": "Severni bulevar 6",
-        "zip": "11000 Beograd",
-        "phone": "+381 11 6752 772",
-        "email": "ehom.auto.prodaja@hyundai.rs",
-        "hours": "Ponedeljak-Petak 09:00-17:00, subota 09:00-14:00"
-      },
-      {
-        "city": "Novi Sad",
-        "name": "HYUNDAI SRBIJA – Prodajni salon",
-        "role": "Prodajni salon",
-        "address": "Rumenački put 6",
-        "zip": "21000 Novi Sad",
-        "phone": [
-          "+381 21 2100 680",
-          "+381 21 2100 681",
-          "+381 60 800 9052",
-          "+381 60 800 9058"
-        ],
-        "email": [
-          "srdjan.pruginic@hyundai.rs",
-          "ivana.masanovic@hyundai.rs"
-        ],
-        "hours": "Ponedeljak-Petak 09:00-17:00, subota 09:00-14:00"
-      },
-      {
-        "city": "Niš",
-        "name": "IDEAL AUTO d.o.o.",
-        "role": "Prodajni salon",
-        "address": "Stari Put Beograd Niš bb",
-        "zip": "18000 Niš",
-        "phone": [
-          "+381 18 4602 777",
-          "+381 18 4602 778",
-          "+381 18 4602 779"
-        ],
-        "email": "ideal.auto.prodaja@hyundai.co.rs",
-        "hours": "Ponedeljak-Petak 08:00-17:00, subota 07:30-15:30"
-      },
-      {
-        "city": "Čačak",
-        "name": "BAVARIA TEAM d.o.o.",
-        "role": "Prodajni salon",
-        "address": "Ibarski put 30, Prislonica",
-        "zip": "32214 Čačak",
-        "phone": [
-          "+381 32 54 85 140",
-          "+381 66 800 2014",
-          "+381 66 800 2262"
-        ],
-        "email": "bavariateam.prodaja@hyundai.co.rs"
-      },
-      {
-        "city": "Kraljevo",
-        "name": "MARIĆ CENTAR",
-        "role": "Prodajni salon",
-        "address": "Ibarska 66-68, Progorelica",
-        "zip": "36340 Konarevo",
-        "phone": [
-          "+381 36 824 670",
-          "+381 69 360 0001"
-        ],
-        "email": "maric.centar.prodaja@hyundai.rs",
-        "hours": "Ponedeljak-Petak 09:00-17:00, subota 09:00-14:00"
-      },
-      {
-        "city": "Jagodina",
-        "name": "SVETOZAREVO PROMET",
-        "role": "Prodajni salon",
-        "address": "Kapetana Koče 91B",
-        "zip": "35000 Jagodina",
-        "phone": "+381 35 8230 303",
-        "email": "svetozarevo.promet.prodaja@hyundai.co.rs",
-        "hours": "Ponedeljak-Petak 08:00-17:00, subota 08:00-15:00"
-      },
-      {
-        "city": "Zrenjanin",
-        "name": "KPM AUTOMOBILI",
-        "role": "Prodajni salon",
-        "address": "Pere Dobrinovića 26",
-        "zip": "23000 Zrenjanin",
-        "phone": [
-          "+381 23 522 419",
-          "+381 60 655 5044"
-        ],
-        "email": "kpm.prodaja@hyundai.co.rs",
-        "hours": "Ponedeljak-petak 08:00-16:00, subota 08:00-15:00"
-      },
-      {
-        "city": "Šabac",
-        "name": "AC BRAJIĆ d.o.o.",
-        "role": "Prodajni salon",
-        "address": "Svetog Save 84, Majur",
-        "zip": "15353 Šabac",
-        "phone": [
-          "+381 15 375 391",
-          "+381 62 225 150"
-        ],
-        "email": "prodaja.acbrajic@hyundai.co.rs",
-        "hours": "Ponedeljak-Petak 08:00-16:00, subota 09:00-14:00"
-      },
-      {
-        "city": "Sombor",
-        "name": "D-KOMERC",
-        "role": "Prodajni salon",
-        "address": "Konjovićeva 67",
-        "zip": "25000 Sombor",
-        "phone": [
-          "+381 25 419 363",
-          "+381 25 418 487"
-        ],
-        "email": "dkomerc.prodaja@hyundai.co.rs",
-        "hours": "Ponedeljak-Petak 08:00-17:00, subota 09:00-14:00"
-      },
-      {
-        "city": "Subotica",
-        "name": "D-MOTORS GROUP",
-        "role": "Prodajni salon",
-        "address": "Otmara Majera 22",
-        "zip": "24000 Subotica",
-        "phone": [
-          "+381 24 642 107",
-          "+381 63 14 54 259"
-        ],
-        "email": [
-          "dmotors.prodaja@hyundai.co.rs",
-          "nenadpolic.dmotors@hyundai.co.rs"
-        ],
-        "hours": "Ponedeljak-Petak 08:00-16:00, subota 09:00-14:00"
-      }
-    ]
-  },
-  "citroen": {
-    "name": "Citroën",
-    "data_slug": "citroen",
-    "logo": "citroen.svg",
-    "founded": "1919",
-    "hq": "Francuska",
-    "importer": null,
-    "about": [
-      "Citroën je francuski proizvođač automobila, deo grupe Stellantis.",
-      "Električni modeli u ponudi su ë-C3, ë-C3 Aircross, ë-C4 i ë-C4 X."
+    "email": "kiaprodaja@automirkos.com",
+    "hours": "Ponedeljak-Petak 08:00-16:30, subota 08:00-14:00"
+   },
+   {
+    "city": "Subotica",
+    "name": "AUTO KUĆA ALFA d.o.o.",
+    "role": "Prodajni salon",
+    "address": "Jovana Mikića 18",
+    "zip": "24000 Subotica",
+    "phone": [
+     "+381 24 526 362",
+     "+381 69 18 70 550"
     ],
-    "dealers": [
-      {
-        "city": "Beograd",
-        "name": "AK KOMPRESOR",
-        "role": "Prodajni salon",
-        "address": "Žorža Klemansoa 19",
-        "zip": "11000 Beograd",
-        "phone": "011 7155 600",
-        "hours": "Ponedeljak-Petak 09:00-18:00, subota i nedelja 09:00-14:00"
-      },
-      {
-        "city": "Beograd",
-        "name": "AUTOPROMET",
-        "role": "Prodajni salon",
-        "address": "Autoput 5",
-        "zip": "11070 Novi Beograd",
-        "phone": "011 3193 150",
-        "hours": "Ponedeljak-Petak 08:00-18:00, subota 08:00-14:00"
-      },
-      {
-        "city": "Beograd",
-        "name": "WEST BEOCAR",
-        "role": "Prodajni salon",
-        "address": "Autoput Beograd-Novi Sad 150d",
-        "zip": "11080 Zemun",
-        "phone": "065 9872 701",
-        "hours": "Ponedeljak-Petak 09:00-18:00, subota 09:00-14:00"
-      },
-      {
-        "city": "Novi Sad",
-        "name": "GOTA CAR",
-        "role": "Prodajni salon",
-        "address": "Zrenjaninski put 6",
-        "zip": "21000 Novi Sad",
-        "phone": "021 2155 460"
-      },
-      {
-        "city": "Čačak",
-        "name": "TECHNO MK AUTO",
-        "role": "Prodajni salon",
-        "address": "Bulevar oslobodilaca bb",
-        "zip": "32103 Čačak",
-        "phone": "032 5454 050"
-      },
-      {
-        "city": "Bačka Topola",
-        "name": "AUTO AS",
-        "role": "Prodajni salon",
-        "address": "Jovana Mikića 40",
-        "zip": "24300 Bačka Topola",
-        "phone": "024 718 500"
-      },
-      {
-        "city": "Niš",
-        "name": "RAAVEX GROUP",
-        "role": "Prodajni salon",
-        "address": "Bulevar Cara Konstantina bb",
-        "zip": "18000 Niš",
-        "phone": "018 259 000",
-        "hours": "Ponedeljak-Petak 09:00-17:00, subota 09:00-14:00"
-      }
-    ]
-  },
-  "mini": {
-    "name": "MINI",
-    "data_slug": "mini",
-    "logo": "mini.svg",
-    "founded": "1959",
-    "hq": "Velika Britanija",
-    "importer": null,
-    "about": [
-      "MINI je britanski brend automobila u vlasništvu grupe BMW.",
-      "Električni modeli u ponudi su Cooper, Aceman i Countryman."
+    "email": "office@autokucaalfa.com",
+    "hours": "Ponedeljak-Petak 08:00-15:30, subota 08:00-13:00"
+   }
+  ]
+ },
+ "mazda": {
+  "name": "Mazda",
+  "data_slug": "mazda",
+  "logo": "mazda.svg",
+  "founded": "1920",
+  "hq": "Hirošima, Japan",
+  "importer": null,
+  "about": [
+   "Mazda je japanski proizvođač automobila osnovan 1920. u Hirošimi.",
+   "Električni model u ponudi je Mazda 6e."
+  ],
+  "dealers": [
+   {
+    "city": "Subotica",
+    "name": "AUTO KUĆA ALFA",
+    "role": "Prodajni salon",
+    "address": "Jovana Mikića 18",
+    "zip": "24000 Subotica",
+    "phone": "+381 24 555 500",
+    "email": "office@autokucaalfa.com",
+    "website": "alfa.mazda.rs",
+    "hours": "Ponedeljak-Petak 08:00-16:00, subota 08:00-13:00"
+   },
+   {
+    "city": "Novi Sad",
+    "name": "GRAND MOTORS",
+    "role": "Prodajni salon",
+    "address": "Novosadski put 110, Veternik",
+    "zip": "21203 Novi Sad",
+    "phone": "+381 21 630 2822",
+    "email": "mazda@grandmotors.rs",
+    "website": "grandm.mazda.rs",
+    "hours": "Ponedeljak-Petak 09:00-17:00, subota 09:00-14:00"
+   },
+   {
+    "city": "Beograd",
+    "name": "DIPEM (Beograd)",
+    "role": "Prodajni salon",
+    "address": "Đorđa Stanojevića 41",
+    "zip": "11070 Novi Beograd",
+    "phone": "+381 11 234 11 74",
+    "email": "mazdaprodaja@dipem.rs",
+    "website": "dipem.mazda.rs",
+    "hours": "Ponedeljak-Petak 08:00-18:00, subota 09:00-15:00"
+   },
+   {
+    "city": "Čačak",
+    "name": "DIPEM (Čačak)",
+    "role": "Prodajni salon",
+    "address": "Ibarski put 88",
+    "zip": "32000 Čačak",
+    "phone": "+381 32 381 881",
+    "email": "mazda@dipem.rs",
+    "website": "dipem.mazda.rs",
+    "hours": "Ponedeljak-Petak 08:00-17:00, subota 08:00-13:00"
+   },
+   {
+    "city": "Niš",
+    "name": "AUTO MG COMMERCE",
+    "role": "Prodajni salon",
+    "address": "Stevana Sinđelića 90, Trupale",
+    "zip": "18000 Niš",
+    "phone": [
+     "+381 62 279 085",
+     "+381 18 581 336"
     ],
-    "dealers": [
-      {
-        "city": "Beograd",
-        "name": "Delta Motors",
-        "role": "Prodajni salon",
-        "address": "Radnička 8",
-        "zip": "11000 Beograd",
-        "phone": "+381 (0) 11 35 39 900",
-        "email": "info@mini.rs",
-        "hours": "Ponedeljak-Petak 08:30-19:00, subota 09:00-14:00"
-      }
-    ]
-  },
-  "opel": {
-    "name": "Opel",
-    "data_slug": "opel",
-    "logo": "opel.svg",
-    "founded": "1862",
-    "hq": "Rüsselsheim, Nemačka",
-    "importer": null,
-    "about": [
-      "Opel je nemački proizvođač automobila sa sedištem u Rüsselsheimu, deo grupe Stellantis.",
-      "Električni modeli u ponudi su Astra Electric, Frontera Electric i Mokka Electric."
+    "email": "mazda@automg.rs",
+    "website": "automg.mazda.rs",
+    "hours": "Ponedeljak-Petak 09:00-17:00, subota 07:30-13:30"
+   }
+  ]
+ },
+ "porsche": {
+  "name": "Porsche",
+  "data_slug": "porsche",
+  "logo": "porsche.svg",
+  "founded": "1931",
+  "hq": "Štutgart, Nemačka",
+  "importer": "Porsche SCG d.o.o.",
+  "about": [
+   "Porsche je nemački proizvođač sportskih automobila sa sedištem u Štutgartu.",
+   "Električni modeli su Taycan 4, Macan 4 i Cayenne Turbo Electric."
+  ],
+  "dealers": [
+   {
+    "city": "Beograd",
+    "name": "PORSCHE CENTAR BEOGRAD",
+    "role": "Prodajni salon",
+    "address": "Radnička 4",
+    "zip": "11000 Beograd",
+    "phone": "0800 801 811",
+    "email": "info@porschecentarbeograd.rs",
+    "website": "porsche.rs",
+    "hours": "Ponedeljak-Petak 09:00-17:00 (subotom i nedeljom ne radi)"
+   },
+   {
+    "city": "Beograd",
+    "name": "Porsche Ada",
+    "role": "Ovlašćeni partner",
+    "address": "Radnička 4",
+    "zip": "11000 Beograd"
+   },
+   {
+    "city": "Novi Sad",
+    "name": "Porsche Novi Sad",
+    "role": "Ovlašćeni partner",
+    "address": "Zrenjaninski put 24",
+    "zip": "21000 Novi Sad"
+   }
+  ]
+ },
+ "renault": {
+  "name": "Renault",
+  "data_slug": "renault",
+  "logo": "renault.svg",
+  "founded": "1899",
+  "hq": "Bulonj-Bijankur, Francuska",
+  "importer": null,
+  "about": [
+   "Renault je francuski proizvođač automobila osnovan 1899.",
+   "Električna ponuda obuhvata modele 5 E-Tech, 4 E-Tech i Twingo E-Tech."
+  ],
+  "dealers": [
+   {
+    "city": "Beograd",
+    "name": "AK KOMPRESOR PRODAJA AUTOMOBILA d.o.o.",
+    "role": "Prodajni salon",
+    "address": "Žorža Klemansoa 19",
+    "zip": "11000 Beograd",
+    "phone": "+381 11 715 56 01"
+   },
+   {
+    "city": "Zrenjanin",
+    "name": "AUTO CENTAR BANAT DOO",
+    "role": "Prodajni salon",
+    "address": "Pere Dobrinovića 26",
+    "zip": "23000 Zrenjanin",
+    "phone": "+381 60 655 50 31"
+   },
+   {
+    "city": "Niš",
+    "name": "AUTO CENTAR KRUNIĆ",
+    "role": "Prodajni salon",
+    "address": "Bul. Svetog Cara Konstantina 86a",
+    "zip": "18000 Niš",
+    "phone": "+381 18 452 4532"
+   },
+   {
+    "city": "Kragujevac",
+    "name": "AUTO KUĆA FRANCUZ D.O.O.",
+    "role": "Prodajni salon",
+    "address": "Miodraga Vlajića Šuke 16",
+    "zip": "34000 Kragujevac",
+    "phone": "+381 34 633 6235"
+   },
+   {
+    "city": "Jagodina",
+    "name": "AUTO KUĆA FRANCUZ d.o.o.",
+    "role": "Prodajni salon",
+    "address": "Kralja Aleksandra 28",
+    "zip": "35000 Jagodina",
+    "phone": "+381 35 824 3095"
+   },
+   {
+    "city": "Novi Sad",
+    "name": "AUTO KUĆA SEKULIĆ",
+    "role": "Prodajni salon",
+    "address": "Bulevar Vojvode Stepe 78",
+    "zip": "21000 Novi Sad",
+    "phone": "+381 21 639 9586"
+   },
+   {
+    "city": "Novi Sad",
+    "name": "AUTO KUĆA SEKULIĆ d.o.o.",
+    "role": "Prodajni salon",
+    "address": "Kralja Petra I 33",
+    "zip": "21203 Veternik",
+    "phone": "+381 21 822 544"
+   },
+   {
+    "city": "Subotica",
+    "name": "AUTOCAR VIDAKOVIĆ d.o.o.",
+    "role": "Prodajni salon",
+    "address": "Starine Novaka 53",
+    "zip": "24000 Subotica",
+    "phone": "+381 24 566 260"
+   },
+   {
+    "city": "Požarevac",
+    "name": "BIBO-CAR d.o.o.",
+    "role": "Prodajni salon",
+    "address": "Ljubičevska-naselje bb",
+    "zip": "12000 Požarevac",
+    "phone": "+381 12 530 773"
+   },
+   {
+    "city": "Beograd",
+    "name": "EMIL FREY AUTOCENTAR d.o.o.",
+    "role": "Prodajni salon",
+    "address": "Sajmište 29",
+    "zip": "11070 Beograd",
+    "phone": "+381 11 2018 034"
+   },
+   {
+    "city": "Čačak",
+    "name": "JEVTOVIĆ AUTO d.o.o. Čačak",
+    "role": "Prodajni salon",
+    "address": "Prislonica bb",
+    "zip": "32000 Čačak",
+    "phone": "+381 32 301 110"
+   },
+   {
+    "city": "Užice",
+    "name": "NOVI B AUTO",
+    "role": "Prodajni salon",
+    "address": "Bela Zemlja bb",
+    "zip": "31000 Užice",
+    "phone": "+381 31 572 767"
+   },
+   {
+    "city": "Šabac",
+    "name": "PSC VUKOVIĆ d.o.o.",
+    "role": "Prodajni salon",
+    "address": "Obilazni put bb",
+    "zip": "15000 Šabac",
+    "phone": "+381 15 303 303"
+   },
+   {
+    "city": "Beograd",
+    "name": "RENO-SAVA (Beograd)",
+    "role": "Prodajni salon",
+    "address": "Mirijevski bulevar 119",
+    "zip": "11000 Beograd",
+    "phone": "+381 11 655 70 16"
+   },
+   {
+    "city": "Pančevo",
+    "name": "RENO-SAVA d.o.o. (Pančevo)",
+    "role": "Prodajni salon",
+    "address": "Novoseljanski put 62b",
+    "zip": "26000 Pančevo",
+    "phone": "+381 13 219 0193"
+   },
+   {
+    "city": "Novi Sad",
+    "name": "STOJANOV AUTO DOO",
+    "role": "Prodajni salon",
+    "address": "Zrenjaninski put 12",
+    "zip": "21000 Novi Sad",
+    "phone": "+381 21 210 0488"
+   }
+  ]
+ },
+ "suzuki": {
+  "name": "Suzuki",
+  "data_slug": "suzuki",
+  "logo": "suzuki.svg",
+  "founded": "1909",
+  "hq": "Hamamacu, Japan",
+  "importer": null,
+  "about": [
+   "Suzuki je japanski proizvođač automobila i motocikala sa sedištem u Hamamacuu.",
+   "Električni model u ponudi je e Vitara."
+  ],
+  "dealers": [
+   {
+    "city": "Novi Sad",
+    "name": "BETA MOTORS CENTAR",
+    "role": "Prodajni salon",
+    "address": "Temerinska 95",
+    "zip": "21000 Novi Sad",
+    "phone": [
+     "+381 63 531 400",
+     "+381 21 472 00 48",
+     "+381 21 633 44 82"
     ],
-    "dealers": [
-      {
-        "city": "Beograd",
-        "name": "OPEL KDD AUTO DOO",
-        "role": "Prodajni salon",
-        "address": "Višnjička 53a",
-        "zip": "11060 Beograd",
-        "phone": "+381 11 2022 300",
-        "website": "www.opel.rs"
-      },
-      {
-        "city": "Beograd",
-        "name": "AUTOPROMET d.o.o.",
-        "role": "Prodajni salon",
-        "address": "Autoput br. 5",
-        "zip": "11077 Novi Beograd",
-        "phone": "011 319 0108",
-        "website": "www.autopromet.rs"
-      },
-      {
-        "city": "Beograd",
-        "name": "WEST BEOCAR",
-        "role": "Prodajni salon",
-        "address": "Autoput Beograd - Novi Sad 150d",
-        "zip": "11080 Beograd",
-        "phone": "011 2836 910",
-        "website": "www.beoauto.com",
-        "hours": "Ponedeljak-Petak 09:00-19:00, subota 09:00-15:00"
-      },
-      {
-        "city": "Beograd",
-        "name": "AC BRAJIĆ",
-        "role": "Prodajni salon",
-        "address": "Ibarski put 101",
-        "zip": "11000 Beograd",
-        "phone": "011 7859030",
-        "website": "opel.acbrajic.com"
-      },
-      {
-        "city": "Novi Sad",
-        "name": "STOJANOV DOO",
-        "role": "Prodajni salon",
-        "address": "Zrenjaninski put 16",
-        "zip": "21000 Novi Sad",
-        "phone": "+381 21 2100 491",
-        "website": "www.opel.rs",
-        "hours": "Ponedeljak-Petak 08:00-18:00, subota 08:00-12:30"
-      },
-      {
-        "city": "Niš",
-        "name": "CAR BOX D.O.O.",
-        "role": "Prodajni salon",
-        "address": "Bulevar Cara Konstantina 80-82",
-        "zip": "18000 Niš",
-        "phone": "+381 18 550010",
-        "website": "www.opelcarbox.rs",
-        "hours": "Ponedeljak-Petak 08:00-17:00, subota 08:00-15:00"
-      },
-      {
-        "city": "Čačak",
-        "name": "INTERAUTO TRADE",
-        "role": "Prodajni salon",
-        "address": "Preljina",
-        "zip": "32212 Čačak",
-        "phone": "032 380 000",
-        "website": "www.opel.rs"
-      },
-      {
-        "city": "Zrenjanin",
-        "name": "PSC ČIRKOM",
-        "role": "Prodajni salon",
-        "address": "Ognjeslava Kostovića 5",
-        "zip": "23000 Zrenjanin",
-        "phone": "+381 23 3150000"
-      },
-      {
-        "city": "Šabac",
-        "name": "AC BRAJIĆ",
-        "role": "Prodajni salon",
-        "address": "Loznički put bb",
-        "zip": "15000 Šabac",
-        "phone": "+381 15 375 516",
-        "website": "opel.acbrajic.com"
-      },
-      {
-        "city": "Požarevac",
-        "name": "AUTO MIRKOS",
-        "role": "Prodajni salon",
-        "address": "Ljubičevska-naselje bb",
-        "zip": "12000 Požarevac",
-        "phone": "012 515 225",
-        "website": "automirkos.com"
-      }
-    ]
-  },
-  "peugeot": {
-    "name": "Peugeot",
-    "data_slug": "peugeot",
-    "logo": "peugeot.svg",
-    "founded": "1810",
-    "hq": "Francuska",
-    "importer": null,
-    "about": [
-      "Peugeot je francuski proizvođač automobila, deo grupe Stellantis.",
-      "Električni modeli u ponudi su e-208, e-2008, e-308 i e-3008."
+    "email": "office@suzuki-novisad.rs",
+    "hours": "Ponedeljak-Petak 09:00-17:00, subota 09:00-14:00"
+   },
+   {
+    "city": "Beograd",
+    "name": "EURO SUMAR d.o.o.",
+    "role": "Prodajni salon",
+    "address": "Vojislava Ilića 145",
+    "zip": "11000 Beograd",
+    "phone": [
+     "+381 11 288 9554",
+     "+381 11 288 6076"
     ],
-    "dealers": [
-      {
-        "city": "Beograd",
-        "name": "KDD Auto",
-        "role": "Prodajni salon",
-        "address": "Višnjička 53a",
-        "zip": "Beograd",
-        "phone": "011/2022300"
-      },
-      {
-        "city": "Beograd",
-        "name": "Auto Nena Stil",
-        "role": "Prodajni salon",
-        "address": "Cara Dušana 205a",
-        "zip": "Zemun",
-        "phone": "011/307-25-00"
-      },
-      {
-        "city": "Novi Sad",
-        "name": "Cubi",
-        "role": "Prodajni salon",
-        "address": "Bulevar vojvode Stepe 36a",
-        "zip": "Novi Sad",
-        "phone": "021/424-133"
-      },
-      {
-        "city": "Zrenjanin",
-        "name": "Točak Auto",
-        "role": "Prodajni salon",
-        "address": "Manastirska 9",
-        "zip": "Zrenjanin",
-        "phone": "023/510803"
-      },
-      {
-        "city": "Čačak",
-        "name": "Auto Garant",
-        "role": "Prodajni salon",
-        "address": "Ibarski put 100",
-        "zip": "Čačak",
-        "phone": "032/380-050"
-      },
-      {
-        "city": "Niš",
-        "name": "Car Box",
-        "role": "Prodajni salon",
-        "address": "Bulevar Svetog cara Konstantina 80-82",
-        "zip": "Niš",
-        "phone": "018/550-010"
-      }
-    ]
-  },
-  "skoda": {
-    "name": "Škoda",
-    "data_slug": "skoda",
-    "logo": "skoda.svg",
-    "founded": "1895",
-    "hq": "Mlada Boleslav, Češka",
-    "importer": null,
-    "about": [
-      "Škoda je češki proizvođač automobila sa sedištem u Mladoj Boleslavi, deo grupe Volkswagen.",
-      "Električni modeli u ponudi su Elroq, Enyaq i Enyaq Coupé."
+    "email": "prodajavozila@suzuki-srbija.rs",
+    "hours": "Ponedeljak-Petak 08:00-18:00, subota 09:00-14:00"
+   }
+  ]
+ },
+ "toyota": {
+  "name": "Toyota",
+  "data_slug": "toyota",
+  "logo": "toyota.svg",
+  "founded": "1937",
+  "hq": "Toyota, Aiči, Japan",
+  "importer": null,
+  "about": [
+   "Toyota je japanski proizvođač automobila osnovan 1937.",
+   "Električni model je bZ4X."
+  ],
+  "dealers": [
+   {
+    "city": "Novi Sad",
+    "name": "Gota Car d.o.o. (Novi Sad)",
+    "address": "Zrenjaninski put 6",
+    "zip": "21000 Novi Sad"
+   },
+   {
+    "city": "Subotica",
+    "name": "Gota Car d.o.o. (Subotica)",
+    "address": "Senćanski put 209B",
+    "zip": "24000 Subotica"
+   },
+   {
+    "city": "Niš",
+    "name": "Raavex-Group d.o.o.",
+    "address": "Bulevar Cara Konstantina bb",
+    "zip": "18000 Niš"
+   },
+   {
+    "city": "Čačak",
+    "name": "Techno MK Auto d.o.o.",
+    "address": "Bulevar Oslobodilaca bb",
+    "zip": "32000 Čačak"
+   },
+   {
+    "city": "Beograd",
+    "name": "Toyota Centar Beograd d.o.o. (ADA)",
+    "address": "Radnička 22",
+    "zip": "11030 Beograd"
+   },
+   {
+    "city": "Beograd",
+    "name": "Toyota Centar Beograd d.o.o. (SEVER)",
+    "address": "Zrenjaninski put 28a",
+    "zip": "11210 Beograd"
+   }
+  ]
+ },
+ "volkswagen": {
+  "name": "Volkswagen",
+  "data_slug": "volkswagen",
+  "logo": "volkswagen.svg",
+  "founded": "1937",
+  "hq": "Volfsburg, Nemačka",
+  "importer": "Porsche SCG d.o.o.",
+  "about": [
+   "Volkswagen je nemački proizvođač automobila osnovan 1937. u Volfsburgu.",
+   "Električni modeli obuhvataju ID. seriju: ID.3, ID.4, ID.5 i ID.7."
+  ],
+  "dealers": [
+   {
+    "city": "Majur",
+    "name": "ACP Automotive",
+    "role": "Ovlašćeni partner",
+    "address": "Obilazni put br.80a",
+    "zip": "15353 Majur",
+    "phone": [
+     "+381 15 319 210"
     ],
-    "dealers": [
-      {
-        "city": "Beograd",
-        "name": "Autočačak Promet, PJ Novi Beograd",
-        "role": "Prodajni salon",
-        "address": "Bulevar Milutina Milankovića 9a",
-        "zip": "11070 Novi Beograd",
-        "phone": [
-          "+381 11 3072 822",
-          "+381 64 855 50 35"
-        ],
-        "email": "prodaja.nbg@autocacak-promet.rs",
-        "website": "www.autocacak-promet.rs",
-        "hours": "Ponedeljak-Petak 08:00-20:00, subota 08:00-15:00"
-      },
-      {
-        "city": "Beograd",
-        "name": "Autočačak Promet, PJ Krnjača",
-        "role": "Prodajni salon",
-        "address": "Zrenjaninski put 83a",
-        "zip": "11060 Beograd",
-        "phone": [
-          "+381 11 3317 122",
-          "+381 64 1100 413"
-        ],
-        "email": "prodaja.bg@autocacak-promet.rs",
-        "website": "www.autocacak-promet.rs",
-        "hours": "Ponedeljak-Petak 08:00-16:00, subota 08:00-12:00"
-      },
-      {
-        "city": "Beograd",
-        "name": "Alpros",
-        "role": "Prodajni salon",
-        "address": "Vojvode Stepe 361",
-        "zip": "Beograd",
-        "phone": [
-          "+381 11 7151 897",
-          "+381 62 595 710"
-        ],
-        "email": "prodaja.skoda@alprosauto.rs",
-        "website": "www.skoda-alpros.rs",
-        "hours": "Ponedeljak-Petak 08:00-18:00, subota 08:00-15:00"
-      },
-      {
-        "city": "Beograd",
-        "name": "Auto Centar Stojanović d.o.o.",
-        "role": "Prodajni salon",
-        "address": "Jurija Gagarina 225",
-        "zip": "Novi Beograd",
-        "phone": "+381 11 655 76 52",
-        "email": "office@acs45.rs",
-        "website": "www.autocentarstojanovic.rs",
-        "hours": "Ponedeljak-Petak 08:00-18:00, subota 08:00-15:00"
-      },
-      {
-        "city": "Beograd",
-        "name": "Ćirinac d.o.o.",
-        "role": "Prodajni salon",
-        "address": "Višnjička 61v",
-        "zip": "Beograd",
-        "phone": "+381 11 339 22 72",
-        "email": "kontakt@skodacirinac.com",
-        "hours": "Ponedeljak-Petak 09:00-17:00, subota 09:00-14:00"
-      },
-      {
-        "city": "Čačak",
-        "name": "Autočačak Promet, PJ Čačak",
-        "role": "Prodajni salon",
-        "address": "Konjevići bb",
-        "zip": "32103 Čačak",
-        "phone": [
-          "+381 32 303 515",
-          "+381 32 303 525",
-          "+381 64 855 50 20",
-          "+381 64 855 50 98"
-        ],
-        "email": "prodaja.ca@autocacak-promet.rs",
-        "website": "www.autocacak-promet.rs",
-        "hours": "Ponedeljak-Petak 08:00-17:00, subota 08:00-14:00"
-      },
-      {
-        "city": "Niš",
-        "name": "Autočačak Promet, PJ Niš",
-        "role": "Prodajni salon",
-        "address": "Vizantijski bulevar bb",
-        "zip": "18000 Niš",
-        "phone": [
-          "+381 18 514 448",
-          "+381 62 886 30 13"
-        ],
-        "email": "prodaja.nis@autocacak-promet.rs",
-        "website": "www.autocacak-promet.rs",
-        "hours": "Ponedeljak-Petak 08:00-18:00, subota 08:00-12:00"
-      },
-      {
-        "city": "Novi Sad",
-        "name": "Auto Centar Intersrem d.o.o.",
-        "role": "Prodajni salon",
-        "address": "Novosadski put 112",
-        "zip": "21203 Veternik",
-        "phone": [
-          "+381 21 6851 800",
-          "+381 62 251 107"
-        ],
-        "website": "www.intersrem.co.rs",
-        "hours": "Ponedeljak-Petak 08:00-19:00, subota 08:00-12:00"
-      },
-      {
-        "city": "Šabac",
-        "name": "AKS Drive d.o.o.",
-        "role": "Prodajni salon",
-        "address": "Obilazni put bb",
-        "zip": "15353 Šabac",
-        "phone": "+381 15 377 607",
-        "email": "office@aks-drive.co.rs",
-        "website": "www.aks-drive.co.rs",
-        "hours": "Ponedeljak-Petak 09:00-17:00, subota 09:00-15:00"
-      },
-      {
-        "city": "Subotica",
-        "name": "Auto-Hermes d.o.o.",
-        "role": "Prodajni salon",
-        "address": "Horgoški put 19a",
-        "zip": "Palić",
-        "phone": "+381 24 603 602",
-        "email": "info@autohermes.rs",
-        "website": "www.autohermes.rs",
-        "hours": "Ponedeljak-Petak 08:00-16:00, subota 08:00-12:00"
-      },
-      {
-        "city": "Kragujevac",
-        "name": "Tomić auto 034 d.o.o.",
-        "role": "Prodajni salon",
-        "address": "Gornjomilanovačka 82a",
-        "zip": "34000 Kragujevac",
-        "phone": "+381 34 354 666",
-        "email": "tomic.dragan@tomicauto034.rs",
-        "website": "www.tomicauto034.rs",
-        "hours": "Ponedeljak-Petak 08:00-16:00, subota 08:00-12:00"
-      },
-      {
-        "city": "Zrenjanin",
-        "name": "Auto centar Cune",
-        "role": "Prodajni salon",
-        "address": "Bagljaš zapad 7",
-        "zip": "23000 Zrenjanin",
-        "phone": [
-          "+381 23 531 038",
-          "+381 60 0535 830"
-        ],
-        "email": "skodaautozr@gmail.com",
-        "website": "autocentarcune.rs",
-        "hours": "Ponedeljak-Petak 08:00-16:30, subota 08:00-14:00"
-      },
-      {
-        "city": "Valjevo",
-        "name": "ABC Test d.o.o.",
-        "role": "Prodajni salon",
-        "address": "Ljubomira Pavlovića 13",
-        "zip": "14000 Valjevo",
-        "phone": [
-          "+381 14 220 250",
-          "+381 65 5220 271"
-        ],
-        "email": "info@abc-test.rs",
-        "website": "www.abc-test.rs",
-        "hours": "Ponedeljak-Petak 08:00-16:00, subota 08:00-13:00"
-      },
-      {
-        "city": "Kruševac",
-        "name": "Interauto d.o.o.",
-        "role": "Prodajni salon",
-        "address": "Globoder",
-        "zip": "37000 Kruševac",
-        "phone": [
-          "+381 37 3653 100",
-          "+381 64 8555 203"
-        ],
-        "email": "prodaja.krusevac@interauto-trade.rs",
-        "hours": "Ponedeljak-Petak 08:00-17:00, subota 09:00-16:00"
-      },
-      {
-        "city": "Novi Pazar",
-        "name": "Auto Fabo 020",
-        "role": "Prodajni salon",
-        "address": "Naselje Mur 5",
-        "zip": "36300 Novi Pazar",
-        "phone": [
-          "+381 20 390 300",
-          "+381 63 661 371",
-          "+381 63 636 979"
-        ],
-        "email": "prodaja@autofabo.rs",
-        "hours": "Ponedeljak-Petak 09:00-17:00, subota 09:00-15:00"
-      },
-      {
-        "city": "Paraćin",
-        "name": "Auto Centar Aca",
-        "role": "Prodajni salon",
-        "address": "Tome Živanovića 70",
-        "zip": "35250 Paraćin",
-        "phone": [
-          "+381 35 568 455",
-          "+381 65 340 12 12"
-        ],
-        "email": "ivana.radunovic@autoaca.com",
-        "website": "autoaca.com",
-        "hours": "Ponedeljak-Petak 08:00-17:00, subota 08:00-14:00"
-      }
-    ]
-  },
-  "volvo": {
-    "name": "Volvo",
-    "data_slug": "volvo",
-    "logo": "volvo.svg",
-    "founded": "1927",
-    "hq": "Geteborg, Švedska",
-    "importer": null,
-    "about": [
-      "Volvo Cars je švedski proizvođač automobila sa sedištem u Geteborgu.",
-      "Električni modeli u ponudi su EX30, EX60, EX90 i ES90."
+    "email": "office@vw-petrovic.co.rs",
+    "website": null,
+    "hours": "Ponedeljak-Petak 08:00-17:00, subota 08:00-14:00"
+   },
+   {
+    "city": "Beograd",
+    "name": "Autokomerc Komision",
+    "role": "Ovlašćeni partner",
+    "address": "Oblakovska",
+    "zip": "11000 Beograd",
+    "phone": [
+     "+381 11 30 60 400"
     ],
-    "dealers": [
-      {
-        "city": "Beograd",
-        "name": "Volvo Car Beograd",
-        "role": "Prodajni salon",
-        "address": "Autoput za Novi Sad 98",
-        "zip": "11080 Beograd-Zemun",
-        "phone": [
-          "011-404-58-08",
-          "062-800-65-94"
-        ],
-        "email": "infobg@volvocentar.rs",
-        "hours": "Ponedeljak-Petak 08:00-19:00, subota 09:00-15:00"
-      }
-    ]
-  }
+    "email": "office@autokomerckomision.rs",
+    "website": null,
+    "hours": "Ponedeljak-Petak 08:00-19:00, subota 08:00-14:00"
+   },
+   {
+    "city": "Jagodina",
+    "name": "Autokuća Tasić Jagodina",
+    "role": "Ovlašćeni partner",
+    "address": "Slovenski put 25",
+    "zip": "35000 Jagodina",
+    "phone": [
+     "+381 35 815 06 60"
+    ],
+    "email": "info.ja@aktasic.rs",
+    "website": null,
+    "hours": "Ponedeljak-Petak 08:00-16:00, subota 08:00-13:00"
+   },
+   {
+    "city": "Kragujevac",
+    "name": "Autokuća Tasić Kragujevac",
+    "role": "Ovlašćeni partner",
+    "address": "Lepenički bulevar 45",
+    "zip": "34000 Kragujevac",
+    "phone": [
+     "+381 34 617 17 00"
+    ],
+    "email": "info.kg@aktasic.rs",
+    "website": null,
+    "hours": "Ponedeljak-Petak 08:00-17:00, subota 08:00-13:00"
+   },
+   {
+    "city": "Subotica",
+    "name": "Autokuća Tasić Subotica",
+    "role": "Ovlašćeni partner",
+    "address": "Franje Kluza 42",
+    "zip": "24000 Subotica",
+    "phone": [
+     "+381 24 415 05 00"
+    ],
+    "email": "info.su@aktasic.rs",
+    "website": null,
+    "hours": "Ponedeljak-Petak 08:00-16:00, subota 08:00-13:00"
+   },
+   {
+    "city": "Niš",
+    "name": "Bros Auto",
+    "role": "Ovlašćeni partner",
+    "address": "Dimitrija Tucovića 185",
+    "zip": "18000 Niš",
+    "phone": [
+     "+381 18 4566900"
+    ],
+    "email": "office@brosauto.rs",
+    "website": null,
+    "hours": "Ponedeljak-Petak 09:00-17:00, subota 09:00-15:00"
+   },
+   {
+    "city": "Čačak",
+    "name": "LAKEAUTO032",
+    "role": "Ovlašćeni partner",
+    "address": "Bulevar Oslobodilaca Čačka 96 A",
+    "zip": "32000 Čačak",
+    "phone": [
+     "+381 32 5461 028"
+    ],
+    "email": "office@vwlakeauto.com",
+    "website": null,
+    "hours": "Ponedeljak-Petak 08:00-17:00, subota 08:00-13:00"
+   },
+   {
+    "city": "Novi Sad",
+    "name": "Porsche Novi Sad",
+    "role": "Ovlašćeni partner",
+    "address": "Zrenjaninski put 24",
+    "zip": "21000 Novi Sad",
+    "phone": [
+     "0800 801 811"
+    ],
+    "email": "office@porsche-novisad.rs",
+    "website": null,
+    "hours": null
+   },
+   {
+    "city": "Beograd",
+    "name": "Porsche Sever",
+    "role": "Ovlašćeni partner",
+    "address": "Zrenjaninski put 9",
+    "zip": "11210 Beograd",
+    "phone": [
+     "0800 801 811"
+    ],
+    "email": "office@porsche-sever.rs",
+    "website": null,
+    "hours": "Ponedeljak-Petak 08:00-17:00"
+   }
+  ]
+ },
+ "hyundai": {
+  "name": "Hyundai",
+  "data_slug": "hyundai",
+  "logo": "hyundai.svg",
+  "founded": "1967",
+  "hq": "Seul, Južna Koreja",
+  "importer": null,
+  "about": [
+   "Hyundai je južnokorejski proizvođač automobila osnovan 1967. u Seulu, deo grupe Hyundai Motor Group.",
+   "Električna IONIQ serija obuhvata modele IONIQ 5, IONIQ 6, IONIQ 6 N i IONIQ 9, kao i mali električni Inster."
+  ],
+  "dealers": [
+   {
+    "city": "Beograd",
+    "name": "HYUNDAI SRBIJA – Prodajni salon",
+    "role": "Prodajni salon",
+    "address": "Milutina Milankovića 7v",
+    "zip": "11070 Beograd",
+    "phone": [
+     "+381 11 2252 500",
+     "+381 11 2252 501",
+     "+381 60 800 9009",
+     "+381 11 2252 505",
+     "+381 60 800 9062",
+     "+381 11 2252 507",
+     "+381 60 800 9042",
+     "+381 11 2252 503",
+     "+381 60 800 9011"
+    ],
+    "email": [
+     "salon@hyundai.rs",
+     "aleksandar.petrovic@hyundai.rs",
+     "biljana.pavlovic@hyundai.rs",
+     "danijela.cvrkotic@hyundai.rs",
+     "dragan.sibinac@hyundai.rs"
+    ],
+    "hours": "Ponedeljak-Petak 09:00-18:00, subota 09:00-15:00"
+   },
+   {
+    "city": "Beograd",
+    "name": "EHOM AUTO – Salon",
+    "role": "Prodajni salon",
+    "address": "Severni bulevar 6",
+    "zip": "11000 Beograd",
+    "phone": "+381 11 6752 772",
+    "email": "ehom.auto.prodaja@hyundai.rs",
+    "hours": "Ponedeljak-Petak 09:00-17:00, subota 09:00-14:00"
+   },
+   {
+    "city": "Novi Sad",
+    "name": "HYUNDAI SRBIJA – Prodajni salon",
+    "role": "Prodajni salon",
+    "address": "Rumenački put 6",
+    "zip": "21000 Novi Sad",
+    "phone": [
+     "+381 21 2100 680",
+     "+381 21 2100 681",
+     "+381 60 800 9052",
+     "+381 60 800 9058"
+    ],
+    "email": [
+     "srdjan.pruginic@hyundai.rs",
+     "ivana.masanovic@hyundai.rs"
+    ],
+    "hours": "Ponedeljak-Petak 09:00-17:00, subota 09:00-14:00"
+   },
+   {
+    "city": "Niš",
+    "name": "IDEAL AUTO d.o.o.",
+    "role": "Prodajni salon",
+    "address": "Stari Put Beograd Niš bb",
+    "zip": "18000 Niš",
+    "phone": [
+     "+381 18 4602 777",
+     "+381 18 4602 778",
+     "+381 18 4602 779"
+    ],
+    "email": "ideal.auto.prodaja@hyundai.co.rs",
+    "hours": "Ponedeljak-Petak 08:00-17:00, subota 07:30-15:30"
+   },
+   {
+    "city": "Čačak",
+    "name": "BAVARIA TEAM d.o.o.",
+    "role": "Prodajni salon",
+    "address": "Ibarski put 30, Prislonica",
+    "zip": "32214 Čačak",
+    "phone": [
+     "+381 32 54 85 140",
+     "+381 66 800 2014",
+     "+381 66 800 2262"
+    ],
+    "email": "bavariateam.prodaja@hyundai.co.rs"
+   },
+   {
+    "city": "Kraljevo",
+    "name": "MARIĆ CENTAR",
+    "role": "Prodajni salon",
+    "address": "Ibarska 66-68, Progorelica",
+    "zip": "36340 Konarevo",
+    "phone": [
+     "+381 36 824 670",
+     "+381 69 360 0001"
+    ],
+    "email": "maric.centar.prodaja@hyundai.rs",
+    "hours": "Ponedeljak-Petak 09:00-17:00, subota 09:00-14:00"
+   },
+   {
+    "city": "Jagodina",
+    "name": "SVETOZAREVO PROMET",
+    "role": "Prodajni salon",
+    "address": "Kapetana Koče 91B",
+    "zip": "35000 Jagodina",
+    "phone": "+381 35 8230 303",
+    "email": "svetozarevo.promet.prodaja@hyundai.co.rs",
+    "hours": "Ponedeljak-Petak 08:00-17:00, subota 08:00-15:00"
+   },
+   {
+    "city": "Zrenjanin",
+    "name": "KPM AUTOMOBILI",
+    "role": "Prodajni salon",
+    "address": "Pere Dobrinovića 26",
+    "zip": "23000 Zrenjanin",
+    "phone": [
+     "+381 23 522 419",
+     "+381 60 655 5044"
+    ],
+    "email": "kpm.prodaja@hyundai.co.rs",
+    "hours": "Ponedeljak-petak 08:00-16:00, subota 08:00-15:00"
+   },
+   {
+    "city": "Šabac",
+    "name": "AC BRAJIĆ d.o.o.",
+    "role": "Prodajni salon",
+    "address": "Svetog Save 84, Majur",
+    "zip": "15353 Šabac",
+    "phone": [
+     "+381 15 375 391",
+     "+381 62 225 150"
+    ],
+    "email": "prodaja.acbrajic@hyundai.co.rs",
+    "hours": "Ponedeljak-Petak 08:00-16:00, subota 09:00-14:00"
+   },
+   {
+    "city": "Sombor",
+    "name": "D-KOMERC",
+    "role": "Prodajni salon",
+    "address": "Konjovićeva 67",
+    "zip": "25000 Sombor",
+    "phone": [
+     "+381 25 419 363",
+     "+381 25 418 487"
+    ],
+    "email": "dkomerc.prodaja@hyundai.co.rs",
+    "hours": "Ponedeljak-Petak 08:00-17:00, subota 09:00-14:00"
+   },
+   {
+    "city": "Subotica",
+    "name": "D-MOTORS GROUP",
+    "role": "Prodajni salon",
+    "address": "Otmara Majera 22",
+    "zip": "24000 Subotica",
+    "phone": [
+     "+381 24 642 107",
+     "+381 63 14 54 259"
+    ],
+    "email": [
+     "dmotors.prodaja@hyundai.co.rs",
+     "nenadpolic.dmotors@hyundai.co.rs"
+    ],
+    "hours": "Ponedeljak-Petak 08:00-16:00, subota 09:00-14:00"
+   }
+  ]
+ },
+ "citroen": {
+  "name": "Citroën",
+  "data_slug": "citroen",
+  "logo": "citroen.svg",
+  "founded": "1919",
+  "hq": "Francuska",
+  "importer": null,
+  "about": [
+   "Citroën je francuski proizvođač automobila, deo grupe Stellantis.",
+   "Električni modeli u ponudi su ë-C3, ë-C3 Aircross, ë-C4 i ë-C4 X."
+  ],
+  "dealers": [
+   {
+    "city": "Beograd",
+    "name": "AK KOMPRESOR",
+    "role": "Prodajni salon",
+    "address": "Žorža Klemansoa 19",
+    "zip": "11000 Beograd",
+    "phone": "011 7155 600",
+    "hours": "Ponedeljak-Petak 09:00-18:00, subota i nedelja 09:00-14:00"
+   },
+   {
+    "city": "Beograd",
+    "name": "AUTOPROMET",
+    "role": "Prodajni salon",
+    "address": "Autoput 5",
+    "zip": "11070 Novi Beograd",
+    "phone": "011 3193 150",
+    "hours": "Ponedeljak-Petak 08:00-18:00, subota 08:00-14:00"
+   },
+   {
+    "city": "Beograd",
+    "name": "WEST BEOCAR",
+    "role": "Prodajni salon",
+    "address": "Autoput Beograd-Novi Sad 150d",
+    "zip": "11080 Zemun",
+    "phone": "065 9872 701",
+    "hours": "Ponedeljak-Petak 09:00-18:00, subota 09:00-14:00"
+   },
+   {
+    "city": "Novi Sad",
+    "name": "GOTA CAR",
+    "role": "Prodajni salon",
+    "address": "Zrenjaninski put 6",
+    "zip": "21000 Novi Sad",
+    "phone": "021 2155 460"
+   },
+   {
+    "city": "Čačak",
+    "name": "TECHNO MK AUTO",
+    "role": "Prodajni salon",
+    "address": "Bulevar oslobodilaca bb",
+    "zip": "32103 Čačak",
+    "phone": "032 5454 050"
+   },
+   {
+    "city": "Bačka Topola",
+    "name": "AUTO AS",
+    "role": "Prodajni salon",
+    "address": "Jovana Mikića 40",
+    "zip": "24300 Bačka Topola",
+    "phone": "024 718 500"
+   },
+   {
+    "city": "Niš",
+    "name": "RAAVEX GROUP",
+    "role": "Prodajni salon",
+    "address": "Bulevar Cara Konstantina bb",
+    "zip": "18000 Niš",
+    "phone": "018 259 000",
+    "hours": "Ponedeljak-Petak 09:00-17:00, subota 09:00-14:00"
+   }
+  ]
+ },
+ "mini": {
+  "name": "MINI",
+  "data_slug": "mini",
+  "logo": "mini.svg",
+  "founded": "1959",
+  "hq": "Velika Britanija",
+  "importer": null,
+  "about": [
+   "MINI je britanski brend automobila u vlasništvu grupe BMW.",
+   "Električni modeli u ponudi su Cooper, Aceman i Countryman."
+  ],
+  "dealers": [
+   {
+    "city": "Beograd",
+    "name": "Delta Motors",
+    "role": "Prodajni salon",
+    "address": "Radnička 8",
+    "zip": "11000 Beograd",
+    "phone": "+381 (0) 11 35 39 900",
+    "email": "info@mini.rs",
+    "hours": "Ponedeljak-Petak 08:30-19:00, subota 09:00-14:00"
+   }
+  ]
+ },
+ "opel": {
+  "name": "Opel",
+  "data_slug": "opel",
+  "logo": "opel.svg",
+  "founded": "1862",
+  "hq": "Rüsselsheim, Nemačka",
+  "importer": null,
+  "about": [
+   "Opel je nemački proizvođač automobila sa sedištem u Rüsselsheimu, deo grupe Stellantis.",
+   "Električni modeli u ponudi su Astra Electric, Frontera Electric i Mokka Electric."
+  ],
+  "dealers": [
+   {
+    "city": "Beograd",
+    "name": "OPEL KDD AUTO DOO",
+    "role": "Prodajni salon",
+    "address": "Višnjička 53a",
+    "zip": "11060 Beograd",
+    "phone": "+381 11 2022 300",
+    "website": "www.opel.rs"
+   },
+   {
+    "city": "Beograd",
+    "name": "AUTOPROMET d.o.o.",
+    "role": "Prodajni salon",
+    "address": "Autoput br. 5",
+    "zip": "11077 Novi Beograd",
+    "phone": "011 319 0108",
+    "website": "www.autopromet.rs"
+   },
+   {
+    "city": "Beograd",
+    "name": "WEST BEOCAR",
+    "role": "Prodajni salon",
+    "address": "Autoput Beograd - Novi Sad 150d",
+    "zip": "11080 Beograd",
+    "phone": "011 2836 910",
+    "website": "www.beoauto.com",
+    "hours": "Ponedeljak-Petak 09:00-19:00, subota 09:00-15:00"
+   },
+   {
+    "city": "Beograd",
+    "name": "AC BRAJIĆ",
+    "role": "Prodajni salon",
+    "address": "Ibarski put 101",
+    "zip": "11000 Beograd",
+    "phone": "011 7859030",
+    "website": "opel.acbrajic.com"
+   },
+   {
+    "city": "Novi Sad",
+    "name": "STOJANOV DOO",
+    "role": "Prodajni salon",
+    "address": "Zrenjaninski put 16",
+    "zip": "21000 Novi Sad",
+    "phone": "+381 21 2100 491",
+    "website": "www.opel.rs",
+    "hours": "Ponedeljak-Petak 08:00-18:00, subota 08:00-12:30"
+   },
+   {
+    "city": "Niš",
+    "name": "CAR BOX D.O.O.",
+    "role": "Prodajni salon",
+    "address": "Bulevar Cara Konstantina 80-82",
+    "zip": "18000 Niš",
+    "phone": "+381 18 550010",
+    "website": "www.opelcarbox.rs",
+    "hours": "Ponedeljak-Petak 08:00-17:00, subota 08:00-15:00"
+   },
+   {
+    "city": "Čačak",
+    "name": "INTERAUTO TRADE",
+    "role": "Prodajni salon",
+    "address": "Preljina",
+    "zip": "32212 Čačak",
+    "phone": "032 380 000",
+    "website": "www.opel.rs"
+   },
+   {
+    "city": "Zrenjanin",
+    "name": "PSC ČIRKOM",
+    "role": "Prodajni salon",
+    "address": "Ognjeslava Kostovića 5",
+    "zip": "23000 Zrenjanin",
+    "phone": "+381 23 3150000"
+   },
+   {
+    "city": "Šabac",
+    "name": "AC BRAJIĆ",
+    "role": "Prodajni salon",
+    "address": "Loznički put bb",
+    "zip": "15000 Šabac",
+    "phone": "+381 15 375 516",
+    "website": "opel.acbrajic.com"
+   },
+   {
+    "city": "Požarevac",
+    "name": "AUTO MIRKOS",
+    "role": "Prodajni salon",
+    "address": "Ljubičevska-naselje bb",
+    "zip": "12000 Požarevac",
+    "phone": "012 515 225",
+    "website": "automirkos.com"
+   }
+  ]
+ },
+ "peugeot": {
+  "name": "Peugeot",
+  "data_slug": "peugeot",
+  "logo": "peugeot.svg",
+  "founded": "1810",
+  "hq": "Francuska",
+  "importer": null,
+  "about": [
+   "Peugeot je francuski proizvođač automobila, deo grupe Stellantis.",
+   "Električni modeli u ponudi su e-208, e-2008, e-308 i e-3008."
+  ],
+  "dealers": [
+   {
+    "city": "Beograd",
+    "name": "KDD Auto",
+    "role": "Prodajni salon",
+    "address": "Višnjička 53a",
+    "zip": "Beograd",
+    "phone": "011/2022300"
+   },
+   {
+    "city": "Beograd",
+    "name": "Auto Nena Stil",
+    "role": "Prodajni salon",
+    "address": "Cara Dušana 205a",
+    "zip": "Zemun",
+    "phone": "011/307-25-00"
+   },
+   {
+    "city": "Novi Sad",
+    "name": "Cubi",
+    "role": "Prodajni salon",
+    "address": "Bulevar vojvode Stepe 36a",
+    "zip": "Novi Sad",
+    "phone": "021/424-133"
+   },
+   {
+    "city": "Zrenjanin",
+    "name": "Točak Auto",
+    "role": "Prodajni salon",
+    "address": "Manastirska 9",
+    "zip": "Zrenjanin",
+    "phone": "023/510803"
+   },
+   {
+    "city": "Čačak",
+    "name": "Auto Garant",
+    "role": "Prodajni salon",
+    "address": "Ibarski put 100",
+    "zip": "Čačak",
+    "phone": "032/380-050"
+   },
+   {
+    "city": "Niš",
+    "name": "Car Box",
+    "role": "Prodajni salon",
+    "address": "Bulevar Svetog cara Konstantina 80-82",
+    "zip": "Niš",
+    "phone": "018/550-010"
+   }
+  ]
+ },
+ "skoda": {
+  "name": "Škoda",
+  "data_slug": "skoda",
+  "logo": "skoda.svg",
+  "founded": "1895",
+  "hq": "Mlada Boleslav, Češka",
+  "importer": null,
+  "about": [
+   "Škoda je češki proizvođač automobila sa sedištem u Mladoj Boleslavi, deo grupe Volkswagen.",
+   "Električni modeli u ponudi su Elroq, Enyaq i Enyaq Coupé."
+  ],
+  "dealers": [
+   {
+    "city": "Beograd",
+    "name": "Autočačak Promet, PJ Novi Beograd",
+    "role": "Prodajni salon",
+    "address": "Bulevar Milutina Milankovića 9a",
+    "zip": "11070 Novi Beograd",
+    "phone": [
+     "+381 11 3072 822",
+     "+381 64 855 50 35"
+    ],
+    "email": "prodaja.nbg@autocacak-promet.rs",
+    "website": "www.autocacak-promet.rs",
+    "hours": "Ponedeljak-Petak 08:00-20:00, subota 08:00-15:00"
+   },
+   {
+    "city": "Beograd",
+    "name": "Autočačak Promet, PJ Krnjača",
+    "role": "Prodajni salon",
+    "address": "Zrenjaninski put 83a",
+    "zip": "11060 Beograd",
+    "phone": [
+     "+381 11 3317 122",
+     "+381 64 1100 413"
+    ],
+    "email": "prodaja.bg@autocacak-promet.rs",
+    "website": "www.autocacak-promet.rs",
+    "hours": "Ponedeljak-Petak 08:00-16:00, subota 08:00-12:00"
+   },
+   {
+    "city": "Beograd",
+    "name": "Alpros",
+    "role": "Prodajni salon",
+    "address": "Vojvode Stepe 361",
+    "zip": "Beograd",
+    "phone": [
+     "+381 11 7151 897",
+     "+381 62 595 710"
+    ],
+    "email": "prodaja.skoda@alprosauto.rs",
+    "website": "www.skoda-alpros.rs",
+    "hours": "Ponedeljak-Petak 08:00-18:00, subota 08:00-15:00"
+   },
+   {
+    "city": "Beograd",
+    "name": "Auto Centar Stojanović d.o.o.",
+    "role": "Prodajni salon",
+    "address": "Jurija Gagarina 225",
+    "zip": "Novi Beograd",
+    "phone": "+381 11 655 76 52",
+    "email": "office@acs45.rs",
+    "website": "www.autocentarstojanovic.rs",
+    "hours": "Ponedeljak-Petak 08:00-18:00, subota 08:00-15:00"
+   },
+   {
+    "city": "Beograd",
+    "name": "Ćirinac d.o.o.",
+    "role": "Prodajni salon",
+    "address": "Višnjička 61v",
+    "zip": "Beograd",
+    "phone": "+381 11 339 22 72",
+    "email": "kontakt@skodacirinac.com",
+    "hours": "Ponedeljak-Petak 09:00-17:00, subota 09:00-14:00"
+   },
+   {
+    "city": "Čačak",
+    "name": "Autočačak Promet, PJ Čačak",
+    "role": "Prodajni salon",
+    "address": "Konjevići bb",
+    "zip": "32103 Čačak",
+    "phone": [
+     "+381 32 303 515",
+     "+381 32 303 525",
+     "+381 64 855 50 20",
+     "+381 64 855 50 98"
+    ],
+    "email": "prodaja.ca@autocacak-promet.rs",
+    "website": "www.autocacak-promet.rs",
+    "hours": "Ponedeljak-Petak 08:00-17:00, subota 08:00-14:00"
+   },
+   {
+    "city": "Niš",
+    "name": "Autočačak Promet, PJ Niš",
+    "role": "Prodajni salon",
+    "address": "Vizantijski bulevar bb",
+    "zip": "18000 Niš",
+    "phone": [
+     "+381 18 514 448",
+     "+381 62 886 30 13"
+    ],
+    "email": "prodaja.nis@autocacak-promet.rs",
+    "website": "www.autocacak-promet.rs",
+    "hours": "Ponedeljak-Petak 08:00-18:00, subota 08:00-12:00"
+   },
+   {
+    "city": "Novi Sad",
+    "name": "Auto Centar Intersrem d.o.o.",
+    "role": "Prodajni salon",
+    "address": "Novosadski put 112",
+    "zip": "21203 Veternik",
+    "phone": [
+     "+381 21 6851 800",
+     "+381 62 251 107"
+    ],
+    "website": "www.intersrem.co.rs",
+    "hours": "Ponedeljak-Petak 08:00-19:00, subota 08:00-12:00"
+   },
+   {
+    "city": "Šabac",
+    "name": "AKS Drive d.o.o.",
+    "role": "Prodajni salon",
+    "address": "Obilazni put bb",
+    "zip": "15353 Šabac",
+    "phone": "+381 15 377 607",
+    "email": "office@aks-drive.co.rs",
+    "website": "www.aks-drive.co.rs",
+    "hours": "Ponedeljak-Petak 09:00-17:00, subota 09:00-15:00"
+   },
+   {
+    "city": "Subotica",
+    "name": "Auto-Hermes d.o.o.",
+    "role": "Prodajni salon",
+    "address": "Horgoški put 19a",
+    "zip": "Palić",
+    "phone": "+381 24 603 602",
+    "email": "info@autohermes.rs",
+    "website": "www.autohermes.rs",
+    "hours": "Ponedeljak-Petak 08:00-16:00, subota 08:00-12:00"
+   },
+   {
+    "city": "Kragujevac",
+    "name": "Tomić auto 034 d.o.o.",
+    "role": "Prodajni salon",
+    "address": "Gornjomilanovačka 82a",
+    "zip": "34000 Kragujevac",
+    "phone": "+381 34 354 666",
+    "email": "tomic.dragan@tomicauto034.rs",
+    "website": "www.tomicauto034.rs",
+    "hours": "Ponedeljak-Petak 08:00-16:00, subota 08:00-12:00"
+   },
+   {
+    "city": "Zrenjanin",
+    "name": "Auto centar Cune",
+    "role": "Prodajni salon",
+    "address": "Bagljaš zapad 7",
+    "zip": "23000 Zrenjanin",
+    "phone": [
+     "+381 23 531 038",
+     "+381 60 0535 830"
+    ],
+    "email": "skodaautozr@gmail.com",
+    "website": "autocentarcune.rs",
+    "hours": "Ponedeljak-Petak 08:00-16:30, subota 08:00-14:00"
+   },
+   {
+    "city": "Valjevo",
+    "name": "ABC Test d.o.o.",
+    "role": "Prodajni salon",
+    "address": "Ljubomira Pavlovića 13",
+    "zip": "14000 Valjevo",
+    "phone": [
+     "+381 14 220 250",
+     "+381 65 5220 271"
+    ],
+    "email": "info@abc-test.rs",
+    "website": "www.abc-test.rs",
+    "hours": "Ponedeljak-Petak 08:00-16:00, subota 08:00-13:00"
+   },
+   {
+    "city": "Kruševac",
+    "name": "Interauto d.o.o.",
+    "role": "Prodajni salon",
+    "address": "Globoder",
+    "zip": "37000 Kruševac",
+    "phone": [
+     "+381 37 3653 100",
+     "+381 64 8555 203"
+    ],
+    "email": "prodaja.krusevac@interauto-trade.rs",
+    "hours": "Ponedeljak-Petak 08:00-17:00, subota 09:00-16:00"
+   },
+   {
+    "city": "Novi Pazar",
+    "name": "Auto Fabo 020",
+    "role": "Prodajni salon",
+    "address": "Naselje Mur 5",
+    "zip": "36300 Novi Pazar",
+    "phone": [
+     "+381 20 390 300",
+     "+381 63 661 371",
+     "+381 63 636 979"
+    ],
+    "email": "prodaja@autofabo.rs",
+    "hours": "Ponedeljak-Petak 09:00-17:00, subota 09:00-15:00"
+   },
+   {
+    "city": "Paraćin",
+    "name": "Auto Centar Aca",
+    "role": "Prodajni salon",
+    "address": "Tome Živanovića 70",
+    "zip": "35250 Paraćin",
+    "phone": [
+     "+381 35 568 455",
+     "+381 65 340 12 12"
+    ],
+    "email": "ivana.radunovic@autoaca.com",
+    "website": "autoaca.com",
+    "hours": "Ponedeljak-Petak 08:00-17:00, subota 08:00-14:00"
+   }
+  ]
+ },
+ "volvo": {
+  "name": "Volvo",
+  "data_slug": "volvo",
+  "logo": "volvo.svg",
+  "founded": "1927",
+  "hq": "Geteborg, Švedska",
+  "importer": null,
+  "about": [
+   "Volvo Cars je švedski proizvođač automobila sa sedištem u Geteborgu.",
+   "Električni modeli u ponudi su EX30, EX60, EX90 i ES90."
+  ],
+  "dealers": [
+   {
+    "city": "Beograd",
+    "name": "Volvo Car Beograd",
+    "role": "Prodajni salon",
+    "address": "Autoput za Novi Sad 98",
+    "zip": "11080 Beograd-Zemun",
+    "phone": [
+     "011-404-58-08",
+     "062-800-65-94"
+    ],
+    "email": "infobg@volvocentar.rs",
+    "hours": "Ponedeljak-Petak 08:00-19:00, subota 09:00-15:00"
+   }
+  ]
+ }
 }

@@ -9,11 +9,11 @@ import base64, collections, hashlib, html, json, os, re, shutil
 
 ROOT = '.'
 OUT = f'{ROOT}/site'
-DOMAIN = 'https://www.ev-srbija.rs'   # change here if the site goes live on another address
+DOMAIN = 'https://www.evomobil.rs'   # change here if the site goes live on another address
 import datetime as _dt
 UPDATED = _dt.date.today().isoformat()  # build date, used only in sitemap/structured data
 UPDATED_TXT = 'oktobar 2026'
-SITE = 'ev-srbija.rs'
+SITE = 'evomobil.rs'
 
 E = lambda t: html.escape(str(t if t is not None else ''), quote=True)
 
@@ -36,7 +36,7 @@ def model_id(brand_slug, brand_name, model_name):
 ID_KEEP = {('bmw', 'i4 M60'): 'bmw-i4-m50', ('bmw', 'iX M70'): 'bmw-ix-m-model', ('bmw', 'i5 M60'): 'bmw-i5'}
 
 # ------------------------------------------------------------------ data
-PHOTO_FILES = {'kia-ev9': 'evsrbija-kia-ev9.webp', 'porsche-cayenne-turbo-electric': 'evsrbija-porsche-cayenne-turbo-electric.webp', 'bmw-i4-m50': 'evsrbija-bmw-i4-m50.webp', 'bmw-ix-m-model': 'evsrbija-bmw-ix-m-model.webp', 'bmw-i7-m70': 'evsrbija-bmw-i7-m70.webp', 'bmw-i4': 'evsrbija-bmw-i4.webp', 'bmw-i5': 'evsrbija-bmw-i5.webp', 'bmw-ix': 'evsrbija-bmw-ix.webp', 'bmw-ix3': 'evsrbija-bmw-ix3.webp', 'bmw-ix5': 'evsrbija-bmw-ix5.webp', 'bmw-i3': 'evsrbija-bmw-i3.webp', 'bmw-ix1': 'evsrbija-bmw-ix1.webp', 'bmw-i7': 'evsrbija-bmw-i7.webp', 'hyundai-ioniq-5': 'evsrbija-hyundai-ioniq-5.webp', 'hyundai-ioniq-6': 'evsrbija-hyundai-ioniq-6.webp', 'hyundai-ioniq-6-n': 'evsrbija-hyundai-ioniq-6-n.webp', 'hyundai-ioniq-9': 'evsrbija-hyundai-ioniq-9.webp', 'hyundai-inster': 'evsrbija-hyundai-inster.webp', 'cupra-tavascan': 'evsrbija-cupra-tavascan.webp', 'mazda-cx-6e': 'evsrbija-mazda-cx-6e.webp', 'mazda-6e': 'evsrbija-mazda-6e.webp', 'cupra-raval': 'evsrbija-cupra-raval.webp', 'dacia-spring': 'evsrbija-dacia-spring.webp', 'kia-ev6': 'evsrbija-kia-ev6.webp', 'kia-ev4': 'evsrbija-kia-ev4.webp', 'kia-ev3': 'evsrbija-kia-ev3.webp', 'kia-ev2': 'evsrbija-kia-ev2.webp', 'porsche-macan-4': 'evsrbija-porsche-macan-4.webp', 'porsche-taycan-4': 'evsrbija-porsche-taycan-4.webp', 'ford-explorer': 'evsrbija-ford-explorer.webp', 'toyota-bz4x': 'evsrbija-toyota-bz4x.webp', 'ford-mustang-mach-e': 'evsrbija-ford-mustang-mach-e.webp', 'ford-puma-gen-e': 'evsrbija-ford-puma-gen-e.webp', 'renault-twingo-e-tech': 'evsrbija-renault-twingo-e-tech.webp', 'renault-5-e-tech': 'evsrbija-renault-5-e-tech.webp', 'renault-4-e-tech': 'evsrbija-renault-4-e-tech.webp', 'suzuki-e-vitara': 'evsrbija-suzuki-e-vitara.webp', 'volkswagen-id-polo': 'evsrbija-volkswagen-id-polo.webp', 'volkswagen-id-3-neo': 'evsrbija-volkswagen-id-3-neo.webp', 'volkswagen-id-4': 'evsrbija-volkswagen-id-4.webp', 'volkswagen-id-5': 'evsrbija-volkswagen-id-5.webp', 'volkswagen-id-7': 'evsrbija-volkswagen-id-7.webp', 'foton-etunland': 'evsrbija-foton-etunland.webp', 'byd-dolphin-surf': 'evsrbija-byd-dolphin-surf.webp', 'byd-atto-2-comfort': 'evsrbija-byd-atto-2-comfort.webp', 'byd-atto-3-evo': 'evsrbija-byd-atto-3-evo.webp', 'byd-seal': 'evsrbija-byd-seal.webp', 'byd-sealion-7': 'evsrbija-byd-sealion-7.webp', 'mg-mg4-electric': 'evsrbija-mg-mg4-electric.webp', 'mg-mg5-electric': 'evsrbija-mg-mg5-electric.webp', 'mg-mgs5-ev': 'evsrbija-mg-mgs5-ev.webp', 'changan-deepal-s05': 'evsrbija-changan-deepal-s05.webp', 'changan-deepal-s07': 'evsrbija-changan-deepal-s07.webp', 'geely-e5': 'evsrbija-geely-e5.webp', 'dongfeng-box': 'evsrbija-dongfeng-box.webp', 'jac-t9-ev': 'evsrbija-jac-t9-ev.webp', 'jac-e30x': 'evsrbija-jac-e30x.webp', 'jmev-ev3': 'evsrbija-jmev-ev3.webp', 'jmev-elight': 'evsrbija-jmev-elight.webp', 'leapmotor-b03x': 'evsrbija-leapmotor-b03x.webp', 'leapmotor-b05': 'evsrbija-leapmotor-b05.webp', 'leapmotor-b10': 'evsrbija-leapmotor-b10.webp', 'leapmotor-c10': 'evsrbija-leapmotor-c10.webp', 'leapmotor-t03': 'evsrbija-leapmotor-t03.webp', 'mini-countryman': 'evsrbija-mini-countryman.webp', 'mini-aceman': 'evsrbija-mini-aceman.webp', 'mini-cooper': 'evsrbija-mini-cooper.webp', 'opel-astra-electric': 'evsrbija-opel-astra-electric.webp', 'opel-frontera-electric': 'evsrbija-opel-frontera-electric.webp', 'opel-mokka-electric': 'evsrbija-opel-mokka-electric.webp', 'citroen-e-c3': 'evsrbija-citroen-e-c3.webp', 'citroen-e-c3-aircross': 'evsrbija-citroen-e-c3-aircross.webp', 'citroen-e-c4': 'evsrbija-citroen-e-c4.webp', 'citroen-e-c4-x': 'evsrbija-citroen-e-c4-x.webp', 'skoda-elroq': 'evsrbija-skoda-elroq.webp', 'skoda-enyaq': 'evsrbija-skoda-enyaq.webp', 'skoda-enyaq-coupe': 'evsrbija-skoda-enyaq-coupe.webp', 'volvo-ex30': 'evsrbija-volvo-ex30.webp', 'volvo-ex60': 'evsrbija-volvo-ex60.webp', 'volvo-ex90': 'evsrbija-volvo-ex90.webp', 'volvo-es90': 'evsrbija-volvo-es90.webp', 'porsche-macan-4s': 'evsrbija-porsche-macan-4s.webp', 'peugeot-e-208': 'evsrbija-peugeot-e-208.webp', 'peugeot-e-2008': 'evsrbija-peugeot-e-2008.webp', 'peugeot-e-308': 'evsrbija-peugeot-e-308.webp', 'peugeot-e-3008': 'evsrbija-peugeot-e-3008.webp'}
+PHOTO_FILES = {'kia-ev9': 'evomobil-kia-ev9.webp', 'porsche-cayenne-turbo-electric': 'evomobil-porsche-cayenne-turbo-electric.webp', 'bmw-i4-m50': 'evomobil-bmw-i4-m50.webp', 'bmw-ix-m-model': 'evomobil-bmw-ix-m-model.webp', 'bmw-i7-m70': 'evomobil-bmw-i7-m70.webp', 'bmw-i4': 'evomobil-bmw-i4.webp', 'bmw-i5': 'evomobil-bmw-i5.webp', 'bmw-ix': 'evomobil-bmw-ix.webp', 'bmw-ix3': 'evomobil-bmw-ix3.webp', 'bmw-ix5': 'evomobil-bmw-ix5.webp', 'bmw-i3': 'evomobil-bmw-i3.webp', 'bmw-ix1': 'evomobil-bmw-ix1.webp', 'bmw-i7': 'evomobil-bmw-i7.webp', 'hyundai-ioniq-5': 'evomobil-hyundai-ioniq-5.webp', 'hyundai-ioniq-6': 'evomobil-hyundai-ioniq-6.webp', 'hyundai-ioniq-6-n': 'evomobil-hyundai-ioniq-6-n.webp', 'hyundai-ioniq-9': 'evomobil-hyundai-ioniq-9.webp', 'hyundai-inster': 'evomobil-hyundai-inster.webp', 'cupra-tavascan': 'evomobil-cupra-tavascan.webp', 'mazda-cx-6e': 'evomobil-mazda-cx-6e.webp', 'mazda-6e': 'evomobil-mazda-6e.webp', 'cupra-raval': 'evomobil-cupra-raval.webp', 'dacia-spring': 'evomobil-dacia-spring.webp', 'kia-ev6': 'evomobil-kia-ev6.webp', 'kia-ev4': 'evomobil-kia-ev4.webp', 'kia-ev3': 'evomobil-kia-ev3.webp', 'kia-ev2': 'evomobil-kia-ev2.webp', 'porsche-macan-4': 'evomobil-porsche-macan-4.webp', 'porsche-taycan-4': 'evomobil-porsche-taycan-4.webp', 'ford-explorer': 'evomobil-ford-explorer.webp', 'toyota-bz4x': 'evomobil-toyota-bz4x.webp', 'ford-mustang-mach-e': 'evomobil-ford-mustang-mach-e.webp', 'ford-puma-gen-e': 'evomobil-ford-puma-gen-e.webp', 'renault-twingo-e-tech': 'evomobil-renault-twingo-e-tech.webp', 'renault-5-e-tech': 'evomobil-renault-5-e-tech.webp', 'renault-4-e-tech': 'evomobil-renault-4-e-tech.webp', 'suzuki-e-vitara': 'evomobil-suzuki-e-vitara.webp', 'volkswagen-id-polo': 'evomobil-volkswagen-id-polo.webp', 'volkswagen-id-3-neo': 'evomobil-volkswagen-id-3-neo.webp', 'volkswagen-id-4': 'evomobil-volkswagen-id-4.webp', 'volkswagen-id-5': 'evomobil-volkswagen-id-5.webp', 'volkswagen-id-7': 'evomobil-volkswagen-id-7.webp', 'foton-etunland': 'evomobil-foton-etunland.webp', 'byd-dolphin-surf': 'evomobil-byd-dolphin-surf.webp', 'byd-atto-2-comfort': 'evomobil-byd-atto-2-comfort.webp', 'byd-atto-3-evo': 'evomobil-byd-atto-3-evo.webp', 'byd-seal': 'evomobil-byd-seal.webp', 'byd-sealion-7': 'evomobil-byd-sealion-7.webp', 'mg-mg4-electric': 'evomobil-mg-mg4-electric.webp', 'mg-mg5-electric': 'evomobil-mg-mg5-electric.webp', 'mg-mgs5-ev': 'evomobil-mg-mgs5-ev.webp', 'changan-deepal-s05': 'evomobil-changan-deepal-s05.webp', 'changan-deepal-s07': 'evomobil-changan-deepal-s07.webp', 'geely-e5': 'evomobil-geely-e5.webp', 'dongfeng-box': 'evomobil-dongfeng-box.webp', 'jac-t9-ev': 'evomobil-jac-t9-ev.webp', 'jac-e30x': 'evomobil-jac-e30x.webp', 'jmev-ev3': 'evomobil-jmev-ev3.webp', 'jmev-elight': 'evomobil-jmev-elight.webp', 'leapmotor-b03x': 'evomobil-leapmotor-b03x.webp', 'leapmotor-b05': 'evomobil-leapmotor-b05.webp', 'leapmotor-b10': 'evomobil-leapmotor-b10.webp', 'leapmotor-c10': 'evomobil-leapmotor-c10.webp', 'leapmotor-t03': 'evomobil-leapmotor-t03.webp', 'mini-countryman': 'evomobil-mini-countryman.webp', 'mini-aceman': 'evomobil-mini-aceman.webp', 'mini-cooper': 'evomobil-mini-cooper.webp', 'opel-astra-electric': 'evomobil-opel-astra-electric.webp', 'opel-frontera-electric': 'evomobil-opel-frontera-electric.webp', 'opel-mokka-electric': 'evomobil-opel-mokka-electric.webp', 'citroen-e-c3': 'evomobil-citroen-e-c3.webp', 'citroen-e-c3-aircross': 'evomobil-citroen-e-c3-aircross.webp', 'citroen-e-c4': 'evomobil-citroen-e-c4.webp', 'citroen-e-c4-x': 'evomobil-citroen-e-c4-x.webp', 'skoda-elroq': 'evomobil-skoda-elroq.webp', 'skoda-enyaq': 'evomobil-skoda-enyaq.webp', 'skoda-enyaq-coupe': 'evomobil-skoda-enyaq-coupe.webp', 'volvo-ex30': 'evomobil-volvo-ex30.webp', 'volvo-ex60': 'evomobil-volvo-ex60.webp', 'volvo-ex90': 'evomobil-volvo-ex90.webp', 'volvo-es90': 'evomobil-volvo-es90.webp', 'porsche-macan-4s': 'evomobil-porsche-macan-4s.webp', 'peugeot-e-208': 'evomobil-peugeot-e-208.webp', 'peugeot-e-2008': 'evomobil-peugeot-e-2008.webp', 'peugeot-e-308': 'evomobil-peugeot-e-308.webp', 'peugeot-e-3008': 'evomobil-peugeot-e-3008.webp'}
 BODY = {'SUV': ('SUV', 'suv'), 'Hečbek': ('Hečbek', 'hatch'), 'Sedan': ('Sedan', 'sedan'), 'Karavan': ('Karavan', 'sedan'),
         'Gradski automobil': ('Gradski', 'hatch'), 'Pikap': ('Pikap', None)}
 NOT_PASSENGER = {'Kombi', 'Kamion', 'Autobus'}
@@ -723,7 +723,7 @@ def ld_dealer(d, brand_names):
     return o
 
 # ------------------------------------------------------------------ page shell
-OG_DEFAULT = 'img/og-ev-srbija.jpg'
+OG_DEFAULT = 'img/og-evomobil.jpg'
 
 def short(t, n=160):
     t = re.sub(r'\s+', ' ', t).strip()
@@ -793,7 +793,7 @@ def page(path, title, desc, body, ld=(), og_image=None, extra_js='', extra_head=
             f'<link rel="canonical" href="{canonical}">\n'
             f'<meta property="og:type" content="website">\n<meta property="og:site_name" content="{SITE}">\n<meta property="og:locale" content="sr_RS">\n'
             f'<meta property="og:title" content="{E(title)}">\n<meta property="og:description" content="{E(desc)}">\n'
-            f'<meta property="og:url" content="{canonical}">\n<meta property="og:image" content="{og}">\n' + ('<meta property="og:image:width" content="1200">\n<meta property="og:image:height" content="630">\n<meta property="og:image:alt" content="ev-srbija.rs – električni automobili u Srbiji">\n' if og.endswith(OG_DEFAULT) else '') + f'<meta name="twitter:card" content="summary_large_image">\n'
+            f'<meta property="og:url" content="{canonical}">\n<meta property="og:image" content="{og}">\n' + ('<meta property="og:image:width" content="1200">\n<meta property="og:image:height" content="630">\n<meta property="og:image:alt" content="evomobil.rs – električni automobili u Srbiji">\n' if og.endswith(OG_DEFAULT) else '') + f'<meta name="twitter:card" content="summary_large_image">\n'
             f'<link rel="icon" href="{pre}favicon.ico" sizes="any">\n<link rel="icon" href="{pre}img/favicon-32.png" type="image/png" sizes="32x32">\n<link rel="apple-touch-icon" href="{pre}img/apple-touch-icon.png">\n'
             '<meta name="theme-color" content="#16202e">\n'
             '<link rel="preconnect" href="https://fonts.googleapis.com">\n<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
@@ -1181,10 +1181,10 @@ apply(false);
 })();"""
 
 all_sorted = ALL_IDS
-intro = 'Na ev-srbija.rs trenutno pratimo električne modele automobila koji se prodaju u Srbiji. Prikazujemo samo potpuno električne automobile, bez hibrida.'
+intro = 'Na evomobil.rs trenutno pratimo električne modele automobila koji se prodaju u Srbiji. Prikazujemo samo potpuno električne automobile, bez hibrida.'
 crumb, body, ld = catalog_page('modeli.html', 'Svi električni automobili u Srbiji', intro, sorted(all_sorted, key=lambda i: -(models[i]['r'] or 0)), crumb_name='Svi modeli')
 pages['modeli.html'] = page('modeli.html', f'Svi električni automobili u Srbiji | {SITE}',
-                            f'Spisak svih {len(ALL_IDS)} električnih automobila na ev-srbija.rs, sa dometom, baterijom, klasom vozila i distributerima.', body, ld, extra_js=CATALOG_JS)
+                            f'Spisak svih {len(ALL_IDS)} električnih automobila na evomobil.rs, sa dometom, baterijom, klasom vozila i distributerima.', body, ld, extra_js=CATALOG_JS)
 
 # brands index
 tiles = ''.join(f'<a class="btile" href="brendovi/{s}.html"><div class="mark">{logo_span(s, "")}</div><div class="meta"><h3>{E(brands[s]["name"])}</h3></div>'
@@ -1369,6 +1369,18 @@ def charger_rows():
             'down': x.get('StatusTypeID') not in (50, None),
             'seen': (x.get('DateLastVerified') or x.get('DateLastStatusUpdate') or x.get('DateCreated') or '')[:10],
         })
+    # extra chargers added by hand (data/chargers-extra.json), e.g. motorway chargers from Putevi Srbije, NIS, Charge&GO:
+    # [{"name": "...", "lat": 44.81, "lng": 20.46, "address": "...", "town": "Beograd", "kw": 50,
+    #   "connectors": ["CCS", "Tip 2"], "access": "javni", "app": true, "points": 2, "source": "..."}]
+    # They win over an Open Charge Map entry at the same spot (within 60 m).
+    xf = f'{ROOT}/data/chargers-extra.json'
+    if os.path.exists(xf):
+        for k, x in enumerate(json.load(open(xf, encoding='utf-8'))):
+            rows.append({'id': f'x{k + 1}', 'name': x['name'], 'lat': float(x['lat']), 'lng': float(x['lng']),
+                         'addr': x.get('address') or '', 'town': x.get('town') or '', 'kw': x.get('kw'),
+                         'conn': sorted(set(x.get('connectors') or [])), 'points': x.get('points'),
+                         'acc': x.get('access') or 'javni', 'app': bool(x.get('app')), 'down': bool(x.get('down')),
+                         'seen': '9999-12-31'})
     # the same place is often entered more than once: keep one entry per spot (within 60 m), the most recently checked
     rows.sort(key=lambda r: r['seen'], reverse=True)
     kept = []
@@ -1732,13 +1744,13 @@ def info_page(path, crumb_name, h1, answer, prose, title, desc, ld_extra=(), ext
 
 N_MODELS, N_BRANDS = len(ALL_IDS), sum(1 for s in ORDER if brands[s]['models'])
 N_DEALERS = n_dealers
-ORG = {'@type': 'Organization', 'name': SITE, 'url': DOMAIN + '/', 'email': 'office@ev-srbija.rs'}
+ORG = {'@type': 'Organization', 'name': SITE, 'url': DOMAIN + '/', 'email': 'office@evomobil.rs'}
 
-info_page('o-nama.html', 'O nama', 'O sajtu ev-srbija.rs',
-    f'ev-srbija.rs je nezavisan informativni sajt o potpuno električnim automobilima koji se zvanično prodaju u Srbiji. '
+info_page('o-nama.html', 'O nama', 'O sajtu evomobil.rs',
+    f'evomobil.rs je nezavisan informativni sajt o potpuno električnim automobilima koji se zvanično prodaju u Srbiji. '
     f'Na jednom mestu prikazujemo {N_MODELS} modela {N_BRANDS} brendova, njihov domet po WLTP normi, kapacitet baterije, dimenzije i kontakte ovlašćenih distributera.',
-    f'''      <h2>Šta je ev-srbija.rs</h2>
-      <p>ev-srbija.rs pomaže kupcima u Srbiji da brzo uporede električne automobile koji se ovde zaista mogu kupiti. Prikazujemo samo potpuno električna vozila (BEV), bez hibrida i plug-in hibrida, i samo modele koje uvoznik ili distributer nudi na srpskom tržištu.</p>
+    f'''      <h2>Šta je evomobil.rs</h2>
+      <p>evomobil.rs pomaže kupcima u Srbiji da brzo uporede električne automobile koji se ovde zaista mogu kupiti. Prikazujemo samo potpuno električna vozila (BEV), bez hibrida i plug-in hibrida, i samo modele koje uvoznik ili distributer nudi na srpskom tržištu.</p>
       <h2>Šta možete da pronađete</h2>
       <ul>
         <li><a href="modeli.html">Svi električni modeli</a> sa filterima po brendu, dometu i karoseriji.</li>
@@ -1752,34 +1764,34 @@ info_page('o-nama.html', 'O nama', 'O sajtu ev-srbija.rs',
       <p>Podatke o modelima, dometu, bateriji i dimenzijama preuzimamo sa zvaničnih sajtova proizvođača i uvoznika, iz njihovih cenovnika, tehničkih listova i saopštenja za medije. Kontakte distributera preuzimamo sa zvaničnih sajtova uvoznika i distributera. Podatke o punjačima preuzimamo iz otvorene baze Open Charge Map.</p>
       <p>Domet je naveden po WLTP normi, za verziju sa najvećim dometom. Ako proizvođač neki podatak ne objavljuje, polje ostavljamo prazno i ne procenjujemo vrednost. Cene ne prikazujemo, jer se često menjaju; aktuelnu cenu proverite kod distributera.</p>
       <h2>Nezavisnost</h2>
-      <p>ev-srbija.rs nije zvanični sajt nijednog proizvođača, uvoznika ili distributera. Nazivi, fotografije i logotipi brendova vlasništvo su njihovih nosilaca. Oglasi na sajtu su jasno odvojeni od podataka o modelima i ne utiču na redosled ni na sadržaj podataka.</p>
+      <p>evomobil.rs nije zvanični sajt nijednog proizvođača, uvoznika ili distributera. Nazivi, fotografije i logotipi brendova vlasništvo su njihovih nosilaca. Oglasi na sajtu su jasno odvojeni od podataka o modelima i ne utiču na redosled ni na sadržaj podataka.</p>
       <h2>Ispravke i sugestije</h2>
-      <p>Ako primetite netačan podatak, novi model ili promenu kod distributera, pišite nam na <a href="mailto:office@ev-srbija.rs">office@ev-srbija.rs</a>. Za oglašavanje se javite na <a href="mailto:oglasi@ev-srbija.rs">oglasi@ev-srbija.rs</a>.</p>''',
+      <p>Ako primetite netačan podatak, novi model ili promenu kod distributera, pišite nam na <a href="mailto:office@evomobil.rs">office@evomobil.rs</a>. Za oglašavanje se javite na <a href="mailto:oglasi@evomobil.rs">oglasi@evomobil.rs</a>.</p>''',
     f'O nama | {SITE}',
-    f'ev-srbija.rs je nezavisan sajt o električnim automobilima u Srbiji: {N_MODELS} modela, domet, baterija, dimenzije, distributeri i punjači. Podaci sa zvaničnih sajtova proizvođača.',
-    [{'@context': 'https://schema.org', '@type': 'AboutPage', 'name': 'O sajtu ev-srbija.rs', 'url': f'{DOMAIN}/o-nama.html', 'inLanguage': 'sr-Latn', 'about': ORG}])
+    f'evomobil.rs je nezavisan sajt o električnim automobilima u Srbiji: {N_MODELS} modela, domet, baterija, dimenzije, distributeri i punjači. Podaci sa zvaničnih sajtova proizvođača.',
+    [{'@context': 'https://schema.org', '@type': 'AboutPage', 'name': 'O sajtu evomobil.rs', 'url': f'{DOMAIN}/o-nama.html', 'inLanguage': 'sr-Latn', 'about': ORG}])
 
 info_page('kontakt.html', 'Kontakt', 'Kontakt',
-    'Za pitanja, ispravke podataka i sugestije pišite na <a href="mailto:office@ev-srbija.rs">office@ev-srbija.rs</a>. Za oglašavanje pišite na <a href="mailto:oglasi@ev-srbija.rs">oglasi@ev-srbija.rs</a>.',
+    'Za pitanja, ispravke podataka i sugestije pišite na <a href="mailto:office@evomobil.rs">office@evomobil.rs</a>. Za oglašavanje pišite na <a href="mailto:oglasi@evomobil.rs">oglasi@evomobil.rs</a>.',
     '''      <div class="contact-cards">
-        <a class="ccard" href="mailto:office@ev-srbija.rs"><span class="ccard-k">OPŠTA PITANJA I ISPRAVKE</span><strong>office@ev-srbija.rs</strong><span>Netačan podatak, novi model, promena kod distributera ili sugestija za sajt.</span></a>
-        <a class="ccard" href="mailto:oglasi@ev-srbija.rs"><span class="ccard-k">OGLAŠAVANJE</span><strong>oglasi@ev-srbija.rs</strong><span>Zakup reklamnih mesta za uvoznike, distributere i partnere. <span class="ccard-more">Pogledajte <u>reklamna mesta</u>.</span></span></a>
+        <a class="ccard" href="mailto:office@evomobil.rs"><span class="ccard-k">OPŠTA PITANJA I ISPRAVKE</span><strong>office@evomobil.rs</strong><span>Netačan podatak, novi model, promena kod distributera ili sugestija za sajt.</span></a>
+        <a class="ccard" href="mailto:oglasi@evomobil.rs"><span class="ccard-k">OGLAŠAVANJE</span><strong>oglasi@evomobil.rs</strong><span>Zakup reklamnih mesta za uvoznike, distributere i partnere. <span class="ccard-more">Pogledajte <u>reklamna mesta</u>.</span></span></a>
       </div>
       <h2>Za kupce</h2>
-      <p>ev-srbija.rs ne prodaje vozila i ne zakazuje test vožnje. Za ponudu, cenu, dostupnost i test vožnju obratite se ovlašćenom distributeru. Kontakte svih distributera po gradovima pronaći ćete na stranici <a href="distributeri.html">Distributeri</a>, a kontakte za određeni brend na stranici tog brenda.</p>
+      <p>evomobil.rs ne prodaje vozila i ne zakazuje test vožnje. Za ponudu, cenu, dostupnost i test vožnju obratite se ovlašćenom distributeru. Kontakte svih distributera po gradovima pronaći ćete na stranici <a href="distributeri.html">Distributeri</a>, a kontakte za određeni brend na stranici tog brenda.</p>
       <h2>Za uvoznike i distributere</h2>
       <p>Ako želite da ispravite ili dopunite podatke o vašim modelima ili prodajnim mestima, pošaljite nam link ka zvaničnom izvoru (cenovnik, tehnički list ili stranica na vašem sajtu). Podatke objavljujemo samo iz zvaničnih izvora. Uslovi za reklamna mesta nalaze se na stranici <a href="oglasavanje.html">Oglašavanje</a>.</p>''',
     f'Kontakt | {SITE}',
-    'Kontakt ev-srbija.rs: office@ev-srbija.rs za pitanja i ispravke podataka, oglasi@ev-srbija.rs za oglašavanje. Za test vožnju se obratite distributeru.',
+    'Kontakt evomobil.rs: office@evomobil.rs za pitanja i ispravke podataka, oglasi@evomobil.rs za oglašavanje. Za test vožnju se obratite distributeru.',
     [{'@context': 'https://schema.org', '@type': 'ContactPage', 'name': 'Kontakt', 'url': f'{DOMAIN}/kontakt.html', 'inLanguage': 'sr-Latn',
-      'about': dict(ORG, contactPoint=[{'@type': 'ContactPoint', 'contactType': 'customer support', 'email': 'office@ev-srbija.rs', 'availableLanguage': 'sr'},
-                                       {'@type': 'ContactPoint', 'contactType': 'sales', 'email': 'oglasi@ev-srbija.rs', 'availableLanguage': 'sr'}])}])
+      'about': dict(ORG, contactPoint=[{'@type': 'ContactPoint', 'contactType': 'customer support', 'email': 'office@evomobil.rs', 'availableLanguage': 'sr'},
+                                       {'@type': 'ContactPoint', 'contactType': 'sales', 'email': 'oglasi@evomobil.rs', 'availableLanguage': 'sr'}])}])
 pages['kontakt.html'] = pages['kontakt.html'].replace('<u>reklamna mesta</u>', 'reklamna mesta')
 
 info_page('politika-privatnosti.html', 'Politika privatnosti', 'Politika privatnosti',
-    'ev-srbija.rs ne traži registraciju. Kolačiće za statistiku poseta (Google Analytics) koristimo samo ako na to pristanete, a podatke koje nam pošaljete e-poštom koristimo samo da bismo odgovorili. U nastavku je objašnjeno šta se dešava sa podacima kada koristite sajt.',
+    'evomobil.rs ne traži registraciju. Kolačiće za statistiku poseta (Google Analytics) koristimo samo ako na to pristanete, a podatke koje nam pošaljete e-poštom koristimo samo da bismo odgovorili. U nastavku je objašnjeno šta se dešava sa podacima kada koristite sajt.',
     '''      <h2>Ko je rukovalac podacima</h2>
-      <p>Rukovalac podacima je vlasnik sajta ev-srbija.rs. Za sva pitanja o privatnosti pišite na <a href="mailto:office@ev-srbija.rs">office@ev-srbija.rs</a>.</p>
+      <p>Rukovalac podacima je vlasnik sajta evomobil.rs. Za sva pitanja o privatnosti pišite na <a href="mailto:office@evomobil.rs">office@evomobil.rs</a>.</p>
       <h2>Podaci koje prikupljamo</h2>
       <ul>
         <li><strong>Statistika poseta (Google Analytics).</strong> Samo ako kliknete „Prihvati“ u obaveštenju o kolačićima. Detalji su u odeljku Kolačići i Google Analytics.</li>
@@ -1814,11 +1826,11 @@ info_page('politika-privatnosti.html', 'Politika privatnosti', 'Politika privatn
       </ul>
       <p>Linkovi ka sajtovima distributera, proizvođača i ka Google mapama (dugme „Navigacija“) vode na spoljne sajtove koji imaju sopstvene politike privatnosti.</p>
       <h2>Vaša prava</h2>
-      <p>U skladu sa Zakonom o zaštiti podataka o ličnosti imate pravo da zatražite pristup podacima koje o vama imamo, njihovu ispravku ili brisanje, kao i da uložite prigovor. Zahtev pošaljite na <a href="mailto:office@ev-srbija.rs">office@ev-srbija.rs</a>. Imate i pravo da podnesete pritužbu Povereniku za informacije od javnog značaja i zaštitu podataka o ličnosti (<a href="https://www.poverenik.rs" target="_blank" rel="noopener">poverenik.rs</a>).</p>
+      <p>U skladu sa Zakonom o zaštiti podataka o ličnosti imate pravo da zatražite pristup podacima koje o vama imamo, njihovu ispravku ili brisanje, kao i da uložite prigovor. Zahtev pošaljite na <a href="mailto:office@evomobil.rs">office@evomobil.rs</a>. Imate i pravo da podnesete pritužbu Povereniku za informacije od javnog značaja i zaštitu podataka o ličnosti (<a href="https://www.poverenik.rs" target="_blank" rel="noopener">poverenik.rs</a>).</p>
       <h2>Izmene</h2>
       <p>Ako uvedemo nove servise, ažuriraćemo ovu stranicu pre nego što ih uključimo.</p>''',
     f'Politika privatnosti | {SITE}',
-    'Politika privatnosti sajta ev-srbija.rs: Google Analytics samo uz saglasnost, kolačići, spoljni servisi i kako ostvariti prava iz Zakona o zaštiti podataka o ličnosti.',
+    'Politika privatnosti sajta evomobil.rs: Google Analytics samo uz saglasnost, kolačići, spoljni servisi i kako ostvariti prava iz Zakona o zaštiti podataka o ličnosti.',
     [{'@context': 'https://schema.org', '@type': 'WebPage', 'name': 'Politika privatnosti', 'url': f'{DOMAIN}/politika-privatnosti.html', 'inLanguage': 'sr-Latn', 'publisher': ORG}])
 
 # 404: served for any missing address, so links resolve from the site root
@@ -1842,7 +1854,7 @@ body404 = f'''
   </section>
 </main>
 '''
-pages['404.html'] = page('404.html', f'Stranica nije pronađena | {SITE}', 'Tražena stranica ne postoji na ev-srbija.rs.', body404,
+pages['404.html'] = page('404.html', f'Stranica nije pronađena | {SITE}', 'Tražena stranica ne postoji na evomobil.rs.', body404,
                          extra_head='<meta name="robots" content="noindex">\n')
 pages['404.html'] = re.sub(r'<link rel="canonical"[^>]*>\n', '', pages['404.html'])
 pages['404.html'] = re.sub(r'(href|src)="(?!https?:|#|/|mailto:|tel:|data:)', r'\1="/', pages['404.html'])
@@ -1892,7 +1904,7 @@ body = f'''
     </div>
     <div class="wrap">{qa_block(sub_qa)}</div>
     <div class="wrap">
-      <p class="sources">Izvori: <a href="https://www.paragraf.rs/dnevne-vesti/071026/071026-vest10.html" rel="noopener" target="_blank">Paragraf, 7. oktobar 2026</a>; <a href="https://biznis.rs/vesti/srbija/usvojena-uredba-o-subvencionisanju-elektricnih-vozila-za-2026-godinu/" rel="noopener" target="_blank">Biznis.rs, 6. februar 2026</a>. ev-srbija.rs nije zvanični izvor; pre kupovine proverite aktuelne uslove u uredbi i javnom pozivu Ministarstva zaštite životne sredine.</p>
+      <p class="sources">Izvori: <a href="https://www.paragraf.rs/dnevne-vesti/071026/071026-vest10.html" rel="noopener" target="_blank">Paragraf, 7. oktobar 2026</a>; <a href="https://biznis.rs/vesti/srbija/usvojena-uredba-o-subvencionisanju-elektricnih-vozila-za-2026-godinu/" rel="noopener" target="_blank">Biznis.rs, 6. februar 2026</a>. evomobil.rs nije zvanični izvor; pre kupovine proverite aktuelne uslove u uredbi i javnom pozivu Ministarstva zaštite životne sredine.</p>
     </div>
   </section>
 </main>
@@ -1918,7 +1930,7 @@ body = f'''
 </main>
 '''
 pages['oglasavanje.html'] = page('oglasavanje.html', f'Oglašavanje: reklamna mesta i formati | {SITE}',
-                                 'Reklamna mesta na ev-srbija.rs za uvoznike, distributere i partnere: hero karusel, leaderboard, brend meseca, ponude partnera. Formati i zakup.',
+                                 'Reklamna mesta na evomobil.rs za uvoznike, distributere i partnere: hero karusel, leaderboard, brend meseca, ponude partnera. Formati i zakup.',
                                  body, [ld_breadcrumbs(crumb)], extra_js='(function(){var $=function(i){return document.getElementById(i)};\n' + copy_js + '})();')
 
 # ------------------------------------------------------------------ homepage
@@ -1941,15 +1953,15 @@ faq_pairs = [(html.unescape(q), a) for q, a in faq_pairs]
 head_meta = (f'<link rel="canonical" href="{DOMAIN}/">\n<meta property="og:type" content="website">\n<meta property="og:site_name" content="{SITE}">\n'
              f'<meta property="og:locale" content="sr_RS">\n<meta property="og:title" content="Električni automobili u Srbiji | {SITE}">\n'
              '<meta property="og:description" content="Električni automobili u Srbiji na jednom mestu: modeli, domet, baterija i distributeri.">\n'
-             f'<meta property="og:url" content="{DOMAIN}/">\n<meta property="og:image" content="{DOMAIN}/{OG_DEFAULT}">\n<meta property="og:image:width" content="1200">\n<meta property="og:image:height" content="630">\n<meta property="og:image:alt" content="ev-srbija.rs – električni automobili u Srbiji">\n<meta name="twitter:card" content="summary_large_image">\n'
+             f'<meta property="og:url" content="{DOMAIN}/">\n<meta property="og:image" content="{DOMAIN}/{OG_DEFAULT}">\n<meta property="og:image:width" content="1200">\n<meta property="og:image:height" content="630">\n<meta property="og:image:alt" content="evomobil.rs – električni automobili u Srbiji">\n<meta name="twitter:card" content="summary_large_image">\n'
              '<link rel="icon" href="favicon.ico" sizes="any">\n<link rel="icon" href="img/favicon-32.png" type="image/png" sizes="32x32">\n<link rel="apple-touch-icon" href="img/apple-touch-icon.png">\n<meta name="theme-color" content="#16202e">\n')
 home_ld = [
     {'@context': 'https://schema.org', '@type': 'WebSite', 'name': SITE, 'url': DOMAIN + '/', 'inLanguage': 'sr-Latn',
      'description': 'Električni automobili u Srbiji: modeli, domet i distributeri.'},
     {'@context': 'https://schema.org', '@type': 'Organization', 'name': SITE, 'url': DOMAIN + '/', 'logo': DOMAIN + '/img/icon-512.png',
-     'email': 'office@ev-srbija.rs', 'areaServed': {'@type': 'Country', 'name': 'Srbija'},
-     'contactPoint': [{'@type': 'ContactPoint', 'contactType': 'customer support', 'email': 'office@ev-srbija.rs', 'availableLanguage': 'sr'},
-                      {'@type': 'ContactPoint', 'contactType': 'sales', 'email': 'oglasi@ev-srbija.rs', 'availableLanguage': 'sr'}]},
+     'email': 'office@evomobil.rs', 'areaServed': {'@type': 'Country', 'name': 'Srbija'},
+     'contactPoint': [{'@type': 'ContactPoint', 'contactType': 'customer support', 'email': 'office@evomobil.rs', 'availableLanguage': 'sr'},
+                      {'@type': 'ContactPoint', 'contactType': 'sales', 'email': 'oglasi@evomobil.rs', 'availableLanguage': 'sr'}]},
     ld_faq(faq_pairs),
 ]
 home_ld_html = ''.join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>\n' for x in home_ld)
@@ -1995,10 +2007,14 @@ if os.path.exists(f'{OUT}/README.txt'):
 #                    True = everything for selling ads is back.
 NOINDEX = True
 ADS_ENABLED = False
-# CLEAN_URLS = True -> addresses without .html (ev-srbija.rs/modeli). Files stay modeli.html on disk; Cloudflare
+# CLEAN_URLS = True -> addresses without .html (evomobil.rs/modeli). Files stay modeli.html on disk; Cloudflare
 #                     serves /modeli from modeli.html (wrangler.jsonc: html_handling auto-trailing-slash).
 #                     Links then work only on Cloudflare, not when opening the files from disk. False = .html addresses.
 CLEAN_URLS = True
+# PH_STYLE: how the demo photos sit in empty ad spots. 'multiply' = faint greyscale photo multiplied into green;
+#           'fade' = colour photo on the right dissolving into the soft green on the left;
+#           'photo' = regular full photo with a dark scrim, white text.
+PH_STYLE = 'photo'
 
 # Cloudflare Pages: security and cache headers (_headers is read by Cloudflare, never served as a page)
 open(f'{OUT}/_headers', 'w').write('''/*
@@ -2031,7 +2047,7 @@ if os.path.isdir(f'{ROOT}/demo/out'):
     # head: noindex, own title, no canonical to the homepage
     d = re.sub(r'<link rel="canonical"[^>]*>\n?', '', d, count=1)
     d = d.replace('<head>', '<head>\n<meta name="robots" content="noindex, nofollow">', 1)
-    d = re.sub(r'<title>[^<]*</title>', '<title>Primer reklamnih mesta | ev-srbija.rs</title>', d, count=1)
+    d = re.sub(r'<title>[^<]*</title>', '<title>Primer reklamnih mesta | evomobil.rs</title>', d, count=1)
     # hero: 5 filled rotation positions
     i = d.index('  const slides=['); j = d.index('  ];', i)
     hero = [('AutoCentar Nova', 'Električni SUV', 'hero-1-nova'), ('VoltDom', 'Kućni punjač', 'hero-2-voltdom'),
@@ -2040,13 +2056,13 @@ if os.path.isdir(f'{ROOT}/demo/out'):
         f"    {{b:'{b}',m:'{m}',img:'{D}{f}.webp',alt:'Oglas: {b}',href:'#'}}" for b, m, f in hero) + '\n' + d[j:]
     d = d.replace('<a id="h-link" class="hero-img" href="#" hidden><img id="h-img" src="data:," alt="" width="1600" height="900"></a>',
                   f'<a id="h-link" class="hero-img" href="#"><img id="h-img" src="{D}hero-1-nova.webp" alt="Oglas: AutoCentar Nova" width="1600" height="900"></a>', 1)
-    d = d.replace('<div class="free" id="h-free">', '<div class="free" id="h-free" hidden>', 1)
+    d = d.replace('<div class="free ph-bg" id="h-free" style="--ph:url(../img/evomobil-bg-auto.webp)">', '<div class="free ph-bg" id="h-free" style="--ph:url(../img/evomobil-bg-auto.webp)" hidden>', 1)
     d = d.replace('<span class="rs-chip"><span id="h-brand">SLOBODNA POZICIJA</span></span>', '<span class="rs-chip" hidden><span id="h-brand">AUTOCENTAR NOVA</span></span>', 1)
     def pic(big, small, alt, w, h):
         return (f'<a class="demo-ad" href="#" aria-label="{alt}"><picture><source media="(max-width: 640px)" srcset="{D}{small}.webp">'
                 f'<img src="{D}{big}.webp" alt="{alt}" width="{w}" height="{h}" decoding="async"></picture></a>')
     def swap_house(doc, pos, html):
-        k = doc.index(f'data-pos="{pos}"'); a = doc.index('<div class="house">', k)
+        k = doc.index(f'data-pos="{pos}"'); a = doc.index('<div class="house', k)
         depth, p = 0, a
         while True:
             o = doc.find('<div', p); c = doc.find('</div>', p)
@@ -2080,7 +2096,7 @@ if os.path.isdir(f'{ROOT}/demo/out'):
                 '.nova{display:inline-flex;align-items:center;gap:10px;color:#fff;font:500 20px var(--font);letter-spacing:-.01em}.nova b{font-weight:800}.nova svg{width:30px;height:30px}'
                 '</style>\n')
     d = d.replace('</head>', demo_css + '</head>', 1)
-    d = d.replace('<header class="site"', '<div class="demo-top">' + '<div class="demo-bar"><b>DEMO</b><span>Primer kako izgledaju popunjena reklamna mesta na ev-srbija.rs. Oglašivači i ponude su izmišljeni. Zakup: oglasi@ev-srbija.rs</span><a class="demo-back" href="oglasavanje.html">← Nazad na Oglašavanje</a></div>' + '\n<header class="site"', 1)
+    d = d.replace('<header class="site"', '<div class="demo-top">' + '<div class="demo-bar"><b>DEMO</b><span>Primer kako izgledaju popunjena reklamna mesta na evomobil.rs. Oglašivači i ponude su izmišljeni. Zakup: oglasi@evomobil.rs</span><a class="demo-back" href="oglasavanje.html">← Nazad na Oglašavanje</a></div>' + '\n<header class="site"', 1)
     d = re.sub(r'(</header>)', r'\1</div>', d, count=1)
     d = d.replace('href="#"', 'href="#" onclick="return false"')
     # demo is a picture of the site: nothing on it can be clicked, opened or typed into
@@ -2162,7 +2178,7 @@ for s_ in ORDER:
                           'gradovi_distributera': cities}, **dd))
 full += ['## Ostalo', f'- Subvencije 2026: {DOMAIN}/subvencije-elektricni-automobili-2026.html',
          f'- Distributeri po gradovima: {DOMAIN}/distributeri.html', f'- Mapa punjača: {DOMAIN}/punjaci.html', f'- Uporedi modele: {DOMAIN}/uporedi.html',
-         f'- Kontakt i ispravke podataka: office@ev-srbija.rs', '']
+         f'- Kontakt i ispravke podataka: office@evomobil.rs', '']
 open(f'{OUT}/llms-full.txt', 'w', encoding='utf-8').write('\n'.join(full))
 os.makedirs(f'{OUT}/podaci', exist_ok=True)
 json.dump({'izvor': SITE, 'url': DOMAIN + '/', 'azurirano': UPDATED, 'napomena': 'Domet po WLTP normi; podaci sa zvaničnih sajtova proizvođača i uvoznika; null = nije objavljeno.',
@@ -2186,9 +2202,9 @@ if not ADS_ENABLED:
         n0 = h
         # footer: Oglašavanje link and oglasi@ address (all pages)
         h = re.sub(r'<li><a href="(?:\.\./|/)?oglasavanje\.html">Oglašavanje</a></li>', '', h)
-        h = h.replace('<li><a href="mailto:oglasi@ev-srbija.rs">oglasi@ev-srbija.rs</a></li>', '')
+        h = h.replace('<li><a href="mailto:oglasi@evomobil.rs">oglasi@evomobil.rs</a></li>', '')
         # structured data: sales contact
-        h = h.replace(', {"@type": "ContactPoint", "contactType": "sales", "email": "oglasi@ev-srbija.rs", "availableLanguage": "sr"}', '')
+        h = h.replace(', {"@type": "ContactPoint", "contactType": "sales", "email": "oglasi@evomobil.rs", "availableLanguage": "sr"}', '')
         if f == 'index.html':
             h = re.sub(r'<div class="rs-note">.*?</div>', '', h)
             h = re.sub(r'<!--[^>]*?AD-0.*?-->\s*', '', h, flags=re.S)                         # internal ad comments
@@ -2196,8 +2212,8 @@ if not ADS_ENABLED:
             h = re.sub(r'\s*<a href="oglasavanje\.html#zakup-0\d" class="btn btn-dark">Zakupi[^<]*<span class="arr">→</span></a>', '', h)
             h = h.replace('<p>Jedna od 5 pozicija u hero karuselu. Kreativa 1600 x 900 px (16:9), mesečni zakup.</p>', '')
             h = h.replace('<span class="media-hint" id="hero-hint">Kreativa oglašivača 1600 x 900 px</span>', '')
-            h = h.replace('''<a class="tile tile-free" href="oglasavanje.html#zakup-01" data-k="'+k+'"><b>POZICIJA '+(k+1)+'</b><strong>Slobodna pozicija</strong><span>Zakupi →</span></a>''',
-                          '''<div class="tile tile-free" data-k="'+k+'"><b>POZICIJA '+(k+1)+'</b><strong>Slobodna pozicija</strong></div>''')
+            h = h.replace('''<a class="tile tile-free ph-bg" href="oglasavanje.html#zakup-01" data-k="'+k+'"'+(s.bg?' style="--ph:url('+s.bg+')"':'')+'><b>POZICIJA '+(k+1)+'</b><strong>Slobodna pozicija</strong><span>Zakupi →</span></a>''',
+                          '''<div class="tile tile-free ph-bg" data-k="'+k+'"'+(s.bg?' style="--ph:url('+s.bg+')"':'')+'><b>POZICIJA '+(k+1)+'</b><strong>Slobodna pozicija</strong></div>''')
         if f == 'index.html':
             # no word about ads anywhere while ads are off (labels and screen-reader names included)
             h = re.sub(r'\s*<span class="rs-label">Oglas</span>', '', h)
@@ -2212,12 +2228,12 @@ if not ADS_ENABLED:
             h = h.replace('Ne prodajemo podatke i ne koristimo ih za personalizovane oglase.', 'Ne prodajemo podatke i ne koristimo ih za profilisanje posetilaca.')
         if f == 'o-nama.html':
             h = h.replace(' Oglasi na sajtu su jasno odvojeni od podataka o modelima i ne utiču na redosled ni na sadržaj podataka.', '')
-            h = h.replace(' Za oglašavanje se javite na <a href="mailto:oglasi@ev-srbija.rs">oglasi@ev-srbija.rs</a>.', '')
+            h = h.replace(' Za oglašavanje se javite na <a href="mailto:oglasi@evomobil.rs">oglasi@evomobil.rs</a>.', '')
         if f == 'kontakt.html':
-            h = h.replace(' Za oglašavanje pišite na <a href="mailto:oglasi@ev-srbija.rs">oglasi@ev-srbija.rs</a>.', '')
-            h = re.sub(r'\s*<a class="ccard" href="mailto:oglasi@ev-srbija\.rs">.*?</span></span></a>', '', h, flags=re.S)
+            h = h.replace(' Za oglašavanje pišite na <a href="mailto:oglasi@evomobil.rs">oglasi@evomobil.rs</a>.', '')
+            h = re.sub(r'\s*<a class="ccard" href="mailto:oglasi@evomobil\.rs">.*?</span></span></a>', '', h, flags=re.S)
             h = h.replace(' Uslovi za reklamna mesta nalaze se na stranici <a href="oglasavanje.html">Oglašavanje</a>.', '')
-            h = h.replace(', oglasi@ev-srbija.rs za oglašavanje', '')
+            h = h.replace(', oglasi@evomobil.rs za oglašavanje', '')
         return h
     for f in glob.glob(f'{OUT}/**/*.html', recursive=True):
         rel = os.path.relpath(f, OUT)
@@ -2244,12 +2260,19 @@ if not ADS_ENABLED:
     if left:
         raise SystemExit('ADS_ENABLED=False but ad references remain: ' + repr(left[:10]))
 
+# ------------------------------------------------------------------ PH_STYLE: placeholder photo look on the homepage
+if PH_STYLE != 'multiply':
+    for f in [f'{OUT}/index.html'] + ([f'{OUT}/primer-oglasa.html'] if os.path.exists(f'{OUT}/primer-oglasa.html') else []):
+        h = open(f, encoding='utf-8').read()
+        h = h.replace('<meta charset="utf-8">', '<meta charset="utf-8">\n<script>document.documentElement.setAttribute("data-ph","' + PH_STYLE + '")</script>', 1)
+        open(f, 'w', encoding='utf-8').write(h)
+
 # ------------------------------------------------------------------ CLEAN_URLS: drop ".html" from every internal address
 if CLEAN_URLS:
     import glob
     PAGES_ = sorted((os.path.relpath(f, OUT)[:-5] for f in glob.glob(f'{OUT}/**/*.html', recursive=True)), key=len, reverse=True)
     PAGES_ = [p_ for p_ in PAGES_ if p_ != '404']
-    rx = re.compile(r'(?<![A-Za-z0-9_.-])((?:https://www\.ev-srbija\.rs/|\.\./|/)?)(' + '|'.join(re.escape(p_) for p_ in PAGES_) + r')\.html(?=["\'#?)\s<,\\]|$)')
+    rx = re.compile(r'(?<![A-Za-z0-9_.-])((?:https://www\.evomobil\.rs/|\.\./|/)?)(' + '|'.join(re.escape(p_) for p_ in PAGES_) + r')\.html(?=["\'#?)\s<,\\]|$)')
     def _clean(m):
         pre, path = m.group(1), m.group(2)
         if path == 'index':

@@ -1,140 +1,140 @@
-# ev-srbija.rs
+# evomobil.rs
 
 > Nezvanični informativni sajt o potpuno električnim automobilima koji se prodaju u Srbiji: modeli, domet (WLTP), baterija i kontakti ovlašćenih distributera. Hibridi nisu uključeni.
 
 ## Glavne stranice
-- [Svi modeli](https://www.ev-srbija.rs/modeli): 89 električnih modela
-- [Brendovi](https://www.ev-srbija.rs/brendovi)
-- [Najveći domet](https://www.ev-srbija.rs/najveci-domet)
-- [Distributeri po gradovima](https://www.ev-srbija.rs/distributeri)
-- [Punjači za električne automobile (mapa)](https://www.ev-srbija.rs/punjaci)
-- [Subvencije 2026](https://www.ev-srbija.rs/subvencije-elektricni-automobili-2026)
-- [Uporedi modele](https://www.ev-srbija.rs/uporedi): poređenje do tri modela
-- [O nama](https://www.ev-srbija.rs/o-nama): izvori podataka i metodologija
-- [Kontakt](https://www.ev-srbija.rs/kontakt)
+- [Svi modeli](https://www.evomobil.rs/modeli): 89 električnih modela
+- [Brendovi](https://www.evomobil.rs/brendovi)
+- [Najveći domet](https://www.evomobil.rs/najveci-domet)
+- [Distributeri po gradovima](https://www.evomobil.rs/distributeri)
+- [Punjači za električne automobile (mapa)](https://www.evomobil.rs/punjaci)
+- [Subvencije 2026](https://www.evomobil.rs/subvencije-elektricni-automobili-2026)
+- [Uporedi modele](https://www.evomobil.rs/uporedi): poređenje do tri modela
+- [O nama](https://www.evomobil.rs/o-nama): izvori podataka i metodologija
+- [Kontakt](https://www.evomobil.rs/kontakt)
 
 ## Kompletni podaci
-- [llms-full.txt](https://www.ev-srbija.rs/llms-full.txt): svi modeli sa dometom, baterijom, dimenzijama i gradovima distributera, na jednom mestu
-- [modeli.json](https://www.ev-srbija.rs/podaci/modeli.json): isti podaci u JSON formatu
+- [llms-full.txt](https://www.evomobil.rs/llms-full.txt): svi modeli sa dometom, baterijom, dimenzijama i gradovima distributera, na jednom mestu
+- [modeli.json](https://www.evomobil.rs/podaci/modeli.json): isti podaci u JSON formatu
 
 ## Brendovi
-- [Audi](https://www.ev-srbija.rs/brendovi/audi): Audi RS e-tron GT
-- [BMW](https://www.ev-srbija.rs/brendovi/bmw): BMW iX1, BMW iX, BMW i3, BMW i4, BMW i5 M60, BMW i7, BMW iX3, BMW iX5, BMW i4 M60, BMW iX M70, BMW i7 M70
-- [BYD](https://www.ev-srbija.rs/brendovi/byd): BYD Dolphin Surf, BYD Atto 2, BYD Atto 3 Evo, BYD Seal, BYD Sealion 7
-- [Changan](https://www.ev-srbija.rs/brendovi/changan): Changan Deepal S05, Changan Deepal S07
-- [Citroën](https://www.ev-srbija.rs/brendovi/citroen): Citroën ë-C3, Citroën ë-C3 Aircross, Citroën ë-C4, Citroën ë-C4 X
-- [Cupra](https://www.ev-srbija.rs/brendovi/cupra): Cupra Tavascan, Cupra Raval
-- [Dacia](https://www.ev-srbija.rs/brendovi/dacia): Dacia Spring
-- [Dongfeng](https://www.ev-srbija.rs/brendovi/dongfeng): Dongfeng Box
-- [Ford](https://www.ev-srbija.rs/brendovi/ford): Ford Mustang Mach-E, Ford Puma Gen-E, Ford Explorer
-- [Foton](https://www.ev-srbija.rs/brendovi/foton): Foton eTunland
-- [Geely](https://www.ev-srbija.rs/brendovi/geely): Geely E5
-- [Hyundai](https://www.ev-srbija.rs/brendovi/hyundai): Hyundai IONIQ 5, Hyundai IONIQ 6, Hyundai IONIQ 6 N, Hyundai IONIQ 9, Hyundai Inster
-- [JAC](https://www.ev-srbija.rs/brendovi/jac): JAC E30X, JAC T9 EV
-- [JMEV](https://www.ev-srbija.rs/brendovi/jmev): JMEV EV3, JMEV Elight, JMEV Ewind
-- [Kia](https://www.ev-srbija.rs/brendovi/kia): Kia EV3, Kia EV4, Kia EV6, Kia EV9, Kia EV2
-- [Leapmotor](https://www.ev-srbija.rs/brendovi/leapmotor): Leapmotor T03, Leapmotor B03X, Leapmotor B05, Leapmotor B10, Leapmotor C10
-- [Lynk & Co](https://www.ev-srbija.rs/brendovi/lynk-co): Lynk & Co 02
-- [Mazda](https://www.ev-srbija.rs/brendovi/mazda): Mazda 6e, Mazda CX-6e
-- [MG](https://www.ev-srbija.rs/brendovi/mg): MG4 Electric, MG5 Electric, MGS5 EV
-- [MINI](https://www.ev-srbija.rs/brendovi/mini): MINI Cooper, MINI Aceman, MINI Countryman
-- [Opel](https://www.ev-srbija.rs/brendovi/opel): Opel Astra Electric, Opel Frontera Electric, Opel Mokka Electric
-- [Peugeot](https://www.ev-srbija.rs/brendovi/peugeot): Peugeot e-208, Peugeot e-2008, Peugeot e-308, Peugeot e-3008
-- [Porsche](https://www.ev-srbija.rs/brendovi/porsche): Porsche Taycan 4, Porsche Macan 4, Porsche Macan 4S, Porsche Cayenne Turbo Electric
-- [Renault](https://www.ev-srbija.rs/brendovi/renault): Renault 5 E-Tech, Renault Twingo E-Tech, Renault 4 E-Tech
-- [Škoda](https://www.ev-srbija.rs/brendovi/skoda): Škoda Elroq, Škoda Enyaq, Škoda Enyaq Coupé
-- [Suzuki](https://www.ev-srbija.rs/brendovi/suzuki): Suzuki e Vitara
-- [Toyota](https://www.ev-srbija.rs/brendovi/toyota): Toyota bZ4X
-- [Volkswagen](https://www.ev-srbija.rs/brendovi/volkswagen): Volkswagen ID.3 Neo, Volkswagen ID.4, Volkswagen ID.5, Volkswagen ID.7, Volkswagen ID. Polo
-- [Volvo](https://www.ev-srbija.rs/brendovi/volvo): Volvo EX30, Volvo EX60, Volvo EX90, Volvo ES90
+- [Audi](https://www.evomobil.rs/brendovi/audi): Audi RS e-tron GT
+- [BMW](https://www.evomobil.rs/brendovi/bmw): BMW iX1, BMW iX, BMW i3, BMW i4, BMW i5 M60, BMW i7, BMW iX3, BMW iX5, BMW i4 M60, BMW iX M70, BMW i7 M70
+- [BYD](https://www.evomobil.rs/brendovi/byd): BYD Dolphin Surf, BYD Atto 2, BYD Atto 3 Evo, BYD Seal, BYD Sealion 7
+- [Changan](https://www.evomobil.rs/brendovi/changan): Changan Deepal S05, Changan Deepal S07
+- [Citroën](https://www.evomobil.rs/brendovi/citroen): Citroën ë-C3, Citroën ë-C3 Aircross, Citroën ë-C4, Citroën ë-C4 X
+- [Cupra](https://www.evomobil.rs/brendovi/cupra): Cupra Tavascan, Cupra Raval
+- [Dacia](https://www.evomobil.rs/brendovi/dacia): Dacia Spring
+- [Dongfeng](https://www.evomobil.rs/brendovi/dongfeng): Dongfeng Box
+- [Ford](https://www.evomobil.rs/brendovi/ford): Ford Mustang Mach-E, Ford Puma Gen-E, Ford Explorer
+- [Foton](https://www.evomobil.rs/brendovi/foton): Foton eTunland
+- [Geely](https://www.evomobil.rs/brendovi/geely): Geely E5
+- [Hyundai](https://www.evomobil.rs/brendovi/hyundai): Hyundai IONIQ 5, Hyundai IONIQ 6, Hyundai IONIQ 6 N, Hyundai IONIQ 9, Hyundai Inster
+- [JAC](https://www.evomobil.rs/brendovi/jac): JAC E30X, JAC T9 EV
+- [JMEV](https://www.evomobil.rs/brendovi/jmev): JMEV EV3, JMEV Elight, JMEV Ewind
+- [Kia](https://www.evomobil.rs/brendovi/kia): Kia EV3, Kia EV4, Kia EV6, Kia EV9, Kia EV2
+- [Leapmotor](https://www.evomobil.rs/brendovi/leapmotor): Leapmotor T03, Leapmotor B03X, Leapmotor B05, Leapmotor B10, Leapmotor C10
+- [Lynk & Co](https://www.evomobil.rs/brendovi/lynk-co): Lynk & Co 02
+- [Mazda](https://www.evomobil.rs/brendovi/mazda): Mazda 6e, Mazda CX-6e
+- [MG](https://www.evomobil.rs/brendovi/mg): MG4 Electric, MG5 Electric, MGS5 EV
+- [MINI](https://www.evomobil.rs/brendovi/mini): MINI Cooper, MINI Aceman, MINI Countryman
+- [Opel](https://www.evomobil.rs/brendovi/opel): Opel Astra Electric, Opel Frontera Electric, Opel Mokka Electric
+- [Peugeot](https://www.evomobil.rs/brendovi/peugeot): Peugeot e-208, Peugeot e-2008, Peugeot e-308, Peugeot e-3008
+- [Porsche](https://www.evomobil.rs/brendovi/porsche): Porsche Taycan 4, Porsche Macan 4, Porsche Macan 4S, Porsche Cayenne Turbo Electric
+- [Renault](https://www.evomobil.rs/brendovi/renault): Renault 5 E-Tech, Renault Twingo E-Tech, Renault 4 E-Tech
+- [Škoda](https://www.evomobil.rs/brendovi/skoda): Škoda Elroq, Škoda Enyaq, Škoda Enyaq Coupé
+- [Suzuki](https://www.evomobil.rs/brendovi/suzuki): Suzuki e Vitara
+- [Toyota](https://www.evomobil.rs/brendovi/toyota): Toyota bZ4X
+- [Volkswagen](https://www.evomobil.rs/brendovi/volkswagen): Volkswagen ID.3 Neo, Volkswagen ID.4, Volkswagen ID.5, Volkswagen ID.7, Volkswagen ID. Polo
+- [Volvo](https://www.evomobil.rs/brendovi/volvo): Volvo EX30, Volvo EX60, Volvo EX90, Volvo ES90
 
 ## Modeli
-- [Audi RS e-tron GT](https://www.ev-srbija.rs/modeli/audi-rs-e-tron-gt): Sedan, domet do 593 km (WLTP), baterija 105 kWh
-- [BMW iX1](https://www.ev-srbija.rs/modeli/bmw-ix1): SUV, domet do 467 km (WLTP), baterija 65 kWh
-- [BMW iX](https://www.ev-srbija.rs/modeli/bmw-ix): SUV, domet do 701 km (WLTP), baterija 109,1 kWh
-- [BMW i3](https://www.ev-srbija.rs/modeli/bmw-i3): Sedan, domet do 912 km (WLTP), baterija 108,7 kWh
-- [BMW i4](https://www.ev-srbija.rs/modeli/bmw-i4): Sedan, domet do 600 km (WLTP), baterija 81,3 kWh
-- [BMW i5 M60](https://www.ev-srbija.rs/modeli/bmw-i5): Sedan, domet do 516 km (WLTP), baterija 81,2 kWh
-- [BMW i7](https://www.ev-srbija.rs/modeli/bmw-i7): Sedan, domet do 727 km (WLTP), baterija 112,5 kWh
-- [BMW iX3](https://www.ev-srbija.rs/modeli/bmw-ix3): SUV, domet do 805 km (WLTP), baterija 108,7 kWh
-- [BMW iX5](https://www.ev-srbija.rs/modeli/bmw-ix5): SUV, domet do 850 km (WLTP), baterija 141,2 kWh
-- [BMW i4 M60](https://www.ev-srbija.rs/modeli/bmw-i4-m50): Sedan, domet do 551 km (WLTP), baterija 81,1 kWh
-- [BMW iX M70](https://www.ev-srbija.rs/modeli/bmw-ix-m-model): SUV, domet do 600 km (WLTP), baterija 108,9 kWh
-- [BMW i7 M70](https://www.ev-srbija.rs/modeli/bmw-i7-m70): Sedan, domet do 686 km (WLTP), baterija 112,4 kWh
-- [BYD Dolphin Surf](https://www.ev-srbija.rs/modeli/byd-dolphin-surf): Hečbek, domet do 507 km (WLTP), baterija 43,2 kWh
-- [BYD Atto 2](https://www.ev-srbija.rs/modeli/byd-atto-2-comfort): SUV, domet do 430 km (WLTP), baterija 64,8 kWh
-- [BYD Atto 3 Evo](https://www.ev-srbija.rs/modeli/byd-atto-3-evo): SUV, domet do 510 km (WLTP), baterija 74,8 kWh
-- [BYD Seal](https://www.ev-srbija.rs/modeli/byd-seal): Sedan, domet do 570 km (WLTP), baterija 82,5 kWh
-- [BYD Sealion 7](https://www.ev-srbija.rs/modeli/byd-sealion-7): SUV, domet do 502 km (WLTP), baterija 82,5 / 91,3 kWh
-- [Changan Deepal S05](https://www.ev-srbija.rs/modeli/changan-deepal-s05): SUV, domet do 485 km (WLTP), baterija 68,8 kWh
-- [Changan Deepal S07](https://www.ev-srbija.rs/modeli/changan-deepal-s07): SUV, domet do 475 km (WLTP), baterija 79,97 kWh
-- [Citroën ë-C3](https://www.ev-srbija.rs/modeli/citroen-e-c3): Hečbek, domet do 320 km (WLTP), baterija 44 kWh
-- [Citroën ë-C3 Aircross](https://www.ev-srbija.rs/modeli/citroen-e-c3-aircross): SUV, domet do 302 km (WLTP), baterija 44 kWh
-- [Citroën ë-C4](https://www.ev-srbija.rs/modeli/citroen-e-c4): Hečbek, domet do 354 / 416 km (WLTP), baterija 50 / 54 kWh
-- [Citroën ë-C4 X](https://www.ev-srbija.rs/modeli/citroen-e-c4-x): Sedan, domet do 354 / 416 km (WLTP), baterija 50 / 54 kWh
-- [Cupra Tavascan](https://www.ev-srbija.rs/modeli/cupra-tavascan): SUV, domet do 547 km (WLTP), baterija 77 kWh
-- [Cupra Raval](https://www.ev-srbija.rs/modeli/cupra-raval): Gradski, domet do 448 km (WLTP), baterija 52 kWh
-- [Dacia Spring](https://www.ev-srbija.rs/modeli/dacia-spring): Gradski, domet do 225 km (WLTP), baterija 26,8 kWh
-- [Dongfeng Box](https://www.ev-srbija.rs/modeli/dongfeng-box): Hečbek, domet do 310 km (WLTP), baterija 43,9 kWh
-- [Ford Mustang Mach-E](https://www.ev-srbija.rs/modeli/ford-mustang-mach-e): SUV, domet do 440 / 600 km (WLTP), baterija 72,6 / 98 kWh
-- [Ford Puma Gen-E](https://www.ev-srbija.rs/modeli/ford-puma-gen-e): SUV, domet do 417 km (WLTP), baterija 46,8 kWh
-- [Ford Explorer](https://www.ev-srbija.rs/modeli/ford-explorer): SUV, domet do 444 / 553 / 602 km (WLTP), baterija 58 / 77 / 79 kWh
-- [Foton eTunland](https://www.ev-srbija.rs/modeli/foton-etunland): Pikap, domet do 400 km (WLTP), baterija 88 kWh
-- [Geely E5](https://www.ev-srbija.rs/modeli/geely-e5): SUV, domet do 430 km (WLTP), baterija 60,22 kWh
-- [Hyundai IONIQ 5](https://www.ev-srbija.rs/modeli/hyundai-ioniq-5): SUV, domet do 384 / 507 km (WLTP), baterija 58 / 77,4 kWh
-- [Hyundai IONIQ 6](https://www.ev-srbija.rs/modeli/hyundai-ioniq-6): Sedan, domet do 429 / 614 km (WLTP), baterija 53 / 77,4 kWh
-- [Hyundai IONIQ 6 N](https://www.ev-srbija.rs/modeli/hyundai-ioniq-6-n): Sedan, domet do 487 km (WLTP), baterija 84 kWh
-- [Hyundai IONIQ 9](https://www.ev-srbija.rs/modeli/hyundai-ioniq-9): SUV, domet do 606 km (WLTP), baterija 110,3 kWh
-- [Hyundai Inster](https://www.ev-srbija.rs/modeli/hyundai-inster): Gradski, domet do 323 / 369 km (WLTP), baterija 42 / 49 kWh
-- [JAC E30X](https://www.ev-srbija.rs/modeli/jac-e30x): Hečbek, domet do 405 / 505 km (WLTP), baterija 41 / 51,5 kWh
-- [JAC T9 EV](https://www.ev-srbija.rs/modeli/jac-t9-ev): Pikap, domet do 330 km (WLTP), baterija 88,02 kWh
-- [JMEV EV3](https://www.ev-srbija.rs/modeli/jmev-ev3): Hečbek, domet do 330 km (WLTP), baterija 30,24 kWh
-- [JMEV Elight](https://www.ev-srbija.rs/modeli/jmev-elight): Sedan, domet do 500 km (WLTP), baterija 63 kWh
-- [JMEV Ewind](https://www.ev-srbija.rs/modeli/jmev-ewind): SUV, domet do 460 km (WLTP), baterija 70,38 kWh
-- [Kia EV3](https://www.ev-srbija.rs/modeli/kia-ev3): SUV, domet do 436 / 605 km (WLTP), baterija 58,3 / 81,4 kWh
-- [Kia EV4](https://www.ev-srbija.rs/modeli/kia-ev4): Hečbek, domet do 440 / 729 km (WLTP), baterija 58,3 / 81,4 kWh
-- [Kia EV6](https://www.ev-srbija.rs/modeli/kia-ev6): Hečbek, domet do 644 / 766 km (WLTP), baterija 63 / 84 kWh
-- [Kia EV9](https://www.ev-srbija.rs/modeli/kia-ev9): SUV, domet do 563 km (WLTP), baterija 99,8 kWh
-- [Kia EV2](https://www.ev-srbija.rs/modeli/kia-ev2): SUV, domet do 435 / 670 km (WLTP), baterija 42,2 / 61 kWh
-- [Leapmotor T03](https://www.ev-srbija.rs/modeli/leapmotor-t03): Gradski, domet do 265 km (WLTP), baterija 37,3 kWh
-- [Leapmotor B03X](https://www.ev-srbija.rs/modeli/leapmotor-b03x): SUV, domet do 292 / 382 km (WLTP), baterija 39,8 / 53 kWh
-- [Leapmotor B05](https://www.ev-srbija.rs/modeli/leapmotor-b05): Hečbek, domet do 401 / 482 km (WLTP), baterija 56,2 / 67,1 kWh
-- [Leapmotor B10](https://www.ev-srbija.rs/modeli/leapmotor-b10): SUV, domet do 361 / 434 km (WLTP), baterija 56,2 / 67,1 kWh
-- [Leapmotor C10](https://www.ev-srbija.rs/modeli/leapmotor-c10): SUV, domet do 420 / 510 km (WLTP), baterija 69,9 / 81,9 kWh
-- [Lynk & Co 02](https://www.ev-srbija.rs/modeli/lynk-co-02): Crossover, domet do 445 km (WLTP), baterija 66 kWh
-- [Mazda 6e](https://www.ev-srbija.rs/modeli/mazda-6e): Sedan, domet do 479 / 552 km (WLTP), baterija 68,8 / 80 kWh
-- [Mazda CX-6e](https://www.ev-srbija.rs/modeli/mazda-cx-6e): SUV, domet do 484 km (WLTP), baterija 78 kWh
-- [MG4 Electric](https://www.ev-srbija.rs/modeli/mg-mg4-electric): Hečbek, domet do 465 km (WLTP), baterija 64 kWh
-- [MG5 Electric](https://www.ev-srbija.rs/modeli/mg-mg5-electric): Karavan, domet do 400 km (WLTP), baterija 61,1 kWh
-- [MGS5 EV](https://www.ev-srbija.rs/modeli/mg-mgs5-ev): SUV, domet do 480 km (WLTP), baterija 64 kWh
-- [MINI Cooper](https://www.ev-srbija.rs/modeli/mini-cooper): Hečbek, domet do 290 / 400 km (WLTP), baterija 36,6 / 49,2 kWh
-- [MINI Aceman](https://www.ev-srbija.rs/modeli/mini-aceman): SUV, domet do 309 / 405 km (WLTP), baterija 38,5 / 49,2 kWh
-- [MINI Countryman](https://www.ev-srbija.rs/modeli/mini-countryman): SUV, domet do 500 km (WLTP), baterija 64,6 kWh
-- [Opel Astra Electric](https://www.ev-srbija.rs/modeli/opel-astra-electric): Hečbek, domet do 454 km (WLTP), baterija 58 kWh
-- [Opel Frontera Electric](https://www.ev-srbija.rs/modeli/opel-frontera-electric): SUV, domet do 305 / 408 km (WLTP), baterija 44 / 54 kWh
-- [Opel Mokka Electric](https://www.ev-srbija.rs/modeli/opel-mokka-electric): SUV, domet do 403 km (WLTP), baterija 54 kWh
-- [Peugeot e-208](https://www.ev-srbija.rs/modeli/peugeot-e-208): Hečbek, domet do 362 km (WLTP), baterija 50 kWh
-- [Peugeot e-2008](https://www.ev-srbija.rs/modeli/peugeot-e-2008): SUV, domet do 406 km (WLTP), baterija 54 kWh
-- [Peugeot e-308](https://www.ev-srbija.rs/modeli/peugeot-e-308): Hečbek, domet do 450 km (WLTP), baterija 58,3 kWh
-- [Peugeot e-3008](https://www.ev-srbija.rs/modeli/peugeot-e-3008): SUV, domet do 526 / 701 km (WLTP), baterija 73 / 96,9 kWh
-- [Porsche Taycan 4](https://www.ev-srbija.rs/modeli/porsche-taycan-4): Sedan, domet do 596 km (WLTP), baterija 105 kWh
-- [Porsche Macan 4](https://www.ev-srbija.rs/modeli/porsche-macan-4): SUV, domet do 572 km (WLTP), baterija 100 kWh
-- [Porsche Macan 4S](https://www.ev-srbija.rs/modeli/porsche-macan-4s): SUV, domet do 556 km (WLTP), baterija 100 kWh
-- [Porsche Cayenne Turbo Electric](https://www.ev-srbija.rs/modeli/porsche-cayenne-turbo-electric): SUV, domet do 604 km (WLTP), baterija 113 kWh
-- [Renault 5 E-Tech](https://www.ev-srbija.rs/modeli/renault-5-e-tech): Hečbek, domet do 315 / 430 km (WLTP), baterija 40 / 52 kWh
-- [Renault Twingo E-Tech](https://www.ev-srbija.rs/modeli/renault-twingo-e-tech): Gradski, domet do 263 km (WLTP), baterija 27,5 kWh
-- [Renault 4 E-Tech](https://www.ev-srbija.rs/modeli/renault-4-e-tech): SUV, domet do 308 / 409 km (WLTP), baterija 40 / 52 kWh
-- [Škoda Elroq](https://www.ev-srbija.rs/modeli/skoda-elroq): SUV, domet do 451 / 575 km (WLTP), baterija 58 / 77 kWh
-- [Škoda Enyaq](https://www.ev-srbija.rs/modeli/skoda-enyaq): SUV, domet do 431 / 582 km (WLTP), baterija 58 / 77 kWh
-- [Škoda Enyaq Coupé](https://www.ev-srbija.rs/modeli/skoda-enyaq-coupe): SUV, domet do 440 / 591 km (WLTP), baterija 58 / 77 kWh
-- [Suzuki e Vitara](https://www.ev-srbija.rs/modeli/suzuki-e-vitara): SUV, domet do 426 km (WLTP), baterija 61 kWh
-- [Toyota bZ4X](https://www.ev-srbija.rs/modeli/toyota-bz4x): SUV, domet do 444 / 559 km (WLTP), baterija 125 / 165 kWh
-- [Volkswagen ID.3 Neo](https://www.ev-srbija.rs/modeli/volkswagen-id-3-neo): Hečbek, domet do 418 km (WLTP), baterija 50 kWh
-- [Volkswagen ID.4](https://www.ev-srbija.rs/modeli/volkswagen-id-4): SUV, domet do 436 / 570 km (WLTP), baterija 58 / 79 kWh
-- [Volkswagen ID.5](https://www.ev-srbija.rs/modeli/volkswagen-id-5): SUV, domet do 558 / 534 km (WLTP), baterija 77 / 79 kWh
-- [Volkswagen ID.7](https://www.ev-srbija.rs/modeli/volkswagen-id-7): Sedan, domet do 600 / 711 km (WLTP), baterija 77 / 86 kWh
-- [Volkswagen ID. Polo](https://www.ev-srbija.rs/modeli/volkswagen-id-polo): Hečbek, domet do 331 / 454 km (WLTP), baterija 37 / 52 kWh
-- [Volvo EX30](https://www.ev-srbija.rs/modeli/volvo-ex30): SUV, domet do 337 / 475 km (WLTP), baterija 51 / 69 kWh
-- [Volvo EX60](https://www.ev-srbija.rs/modeli/volvo-ex60): SUV, domet do 611 / 660 / 810 km (WLTP), baterija 83 / 95 / 117 kWh
-- [Volvo EX90](https://www.ev-srbija.rs/modeli/volvo-ex90): SUV, domet do 564 / 617 km (WLTP), baterija 92 / 106 kWh
-- [Volvo ES90](https://www.ev-srbija.rs/modeli/volvo-es90): Sedan, domet do 664 / 702 km (WLTP), baterija 92 / 106 kWh
+- [Audi RS e-tron GT](https://www.evomobil.rs/modeli/audi-rs-e-tron-gt): Sedan, domet do 593 km (WLTP), baterija 105 kWh
+- [BMW iX1](https://www.evomobil.rs/modeli/bmw-ix1): SUV, domet do 467 km (WLTP), baterija 65 kWh
+- [BMW iX](https://www.evomobil.rs/modeli/bmw-ix): SUV, domet do 701 km (WLTP), baterija 109,1 kWh
+- [BMW i3](https://www.evomobil.rs/modeli/bmw-i3): Sedan, domet do 912 km (WLTP), baterija 108,7 kWh
+- [BMW i4](https://www.evomobil.rs/modeli/bmw-i4): Sedan, domet do 600 km (WLTP), baterija 81,3 kWh
+- [BMW i5 M60](https://www.evomobil.rs/modeli/bmw-i5): Sedan, domet do 516 km (WLTP), baterija 81,2 kWh
+- [BMW i7](https://www.evomobil.rs/modeli/bmw-i7): Sedan, domet do 727 km (WLTP), baterija 112,5 kWh
+- [BMW iX3](https://www.evomobil.rs/modeli/bmw-ix3): SUV, domet do 805 km (WLTP), baterija 108,7 kWh
+- [BMW iX5](https://www.evomobil.rs/modeli/bmw-ix5): SUV, domet do 850 km (WLTP), baterija 141,2 kWh
+- [BMW i4 M60](https://www.evomobil.rs/modeli/bmw-i4-m50): Sedan, domet do 551 km (WLTP), baterija 81,1 kWh
+- [BMW iX M70](https://www.evomobil.rs/modeli/bmw-ix-m-model): SUV, domet do 600 km (WLTP), baterija 108,9 kWh
+- [BMW i7 M70](https://www.evomobil.rs/modeli/bmw-i7-m70): Sedan, domet do 686 km (WLTP), baterija 112,4 kWh
+- [BYD Dolphin Surf](https://www.evomobil.rs/modeli/byd-dolphin-surf): Hečbek, domet do 507 km (WLTP), baterija 43,2 kWh
+- [BYD Atto 2](https://www.evomobil.rs/modeli/byd-atto-2-comfort): SUV, domet do 430 km (WLTP), baterija 64,8 kWh
+- [BYD Atto 3 Evo](https://www.evomobil.rs/modeli/byd-atto-3-evo): SUV, domet do 510 km (WLTP), baterija 74,8 kWh
+- [BYD Seal](https://www.evomobil.rs/modeli/byd-seal): Sedan, domet do 570 km (WLTP), baterija 82,5 kWh
+- [BYD Sealion 7](https://www.evomobil.rs/modeli/byd-sealion-7): SUV, domet do 502 km (WLTP), baterija 82,5 / 91,3 kWh
+- [Changan Deepal S05](https://www.evomobil.rs/modeli/changan-deepal-s05): SUV, domet do 485 km (WLTP), baterija 68,8 kWh
+- [Changan Deepal S07](https://www.evomobil.rs/modeli/changan-deepal-s07): SUV, domet do 475 km (WLTP), baterija 79,97 kWh
+- [Citroën ë-C3](https://www.evomobil.rs/modeli/citroen-e-c3): Hečbek, domet do 320 km (WLTP), baterija 44 kWh
+- [Citroën ë-C3 Aircross](https://www.evomobil.rs/modeli/citroen-e-c3-aircross): SUV, domet do 302 km (WLTP), baterija 44 kWh
+- [Citroën ë-C4](https://www.evomobil.rs/modeli/citroen-e-c4): Hečbek, domet do 354 / 416 km (WLTP), baterija 50 / 54 kWh
+- [Citroën ë-C4 X](https://www.evomobil.rs/modeli/citroen-e-c4-x): Sedan, domet do 354 / 416 km (WLTP), baterija 50 / 54 kWh
+- [Cupra Tavascan](https://www.evomobil.rs/modeli/cupra-tavascan): SUV, domet do 547 km (WLTP), baterija 77 kWh
+- [Cupra Raval](https://www.evomobil.rs/modeli/cupra-raval): Gradski, domet do 448 km (WLTP), baterija 52 kWh
+- [Dacia Spring](https://www.evomobil.rs/modeli/dacia-spring): Gradski, domet do 225 km (WLTP), baterija 26,8 kWh
+- [Dongfeng Box](https://www.evomobil.rs/modeli/dongfeng-box): Hečbek, domet do 310 km (WLTP), baterija 43,9 kWh
+- [Ford Mustang Mach-E](https://www.evomobil.rs/modeli/ford-mustang-mach-e): SUV, domet do 440 / 600 km (WLTP), baterija 72,6 / 98 kWh
+- [Ford Puma Gen-E](https://www.evomobil.rs/modeli/ford-puma-gen-e): SUV, domet do 417 km (WLTP), baterija 46,8 kWh
+- [Ford Explorer](https://www.evomobil.rs/modeli/ford-explorer): SUV, domet do 444 / 553 / 602 km (WLTP), baterija 58 / 77 / 79 kWh
+- [Foton eTunland](https://www.evomobil.rs/modeli/foton-etunland): Pikap, domet do 400 km (WLTP), baterija 88 kWh
+- [Geely E5](https://www.evomobil.rs/modeli/geely-e5): SUV, domet do 430 km (WLTP), baterija 60,22 kWh
+- [Hyundai IONIQ 5](https://www.evomobil.rs/modeli/hyundai-ioniq-5): SUV, domet do 384 / 507 km (WLTP), baterija 58 / 77,4 kWh
+- [Hyundai IONIQ 6](https://www.evomobil.rs/modeli/hyundai-ioniq-6): Sedan, domet do 429 / 614 km (WLTP), baterija 53 / 77,4 kWh
+- [Hyundai IONIQ 6 N](https://www.evomobil.rs/modeli/hyundai-ioniq-6-n): Sedan, domet do 487 km (WLTP), baterija 84 kWh
+- [Hyundai IONIQ 9](https://www.evomobil.rs/modeli/hyundai-ioniq-9): SUV, domet do 606 km (WLTP), baterija 110,3 kWh
+- [Hyundai Inster](https://www.evomobil.rs/modeli/hyundai-inster): Gradski, domet do 323 / 369 km (WLTP), baterija 42 / 49 kWh
+- [JAC E30X](https://www.evomobil.rs/modeli/jac-e30x): Hečbek, domet do 405 / 505 km (WLTP), baterija 41 / 51,5 kWh
+- [JAC T9 EV](https://www.evomobil.rs/modeli/jac-t9-ev): Pikap, domet do 330 km (WLTP), baterija 88,02 kWh
+- [JMEV EV3](https://www.evomobil.rs/modeli/jmev-ev3): Hečbek, domet do 330 km (WLTP), baterija 30,24 kWh
+- [JMEV Elight](https://www.evomobil.rs/modeli/jmev-elight): Sedan, domet do 500 km (WLTP), baterija 63 kWh
+- [JMEV Ewind](https://www.evomobil.rs/modeli/jmev-ewind): SUV, domet do 460 km (WLTP), baterija 70,38 kWh
+- [Kia EV3](https://www.evomobil.rs/modeli/kia-ev3): SUV, domet do 436 / 605 km (WLTP), baterija 58,3 / 81,4 kWh
+- [Kia EV4](https://www.evomobil.rs/modeli/kia-ev4): Hečbek, domet do 440 / 729 km (WLTP), baterija 58,3 / 81,4 kWh
+- [Kia EV6](https://www.evomobil.rs/modeli/kia-ev6): Hečbek, domet do 644 / 766 km (WLTP), baterija 63 / 84 kWh
+- [Kia EV9](https://www.evomobil.rs/modeli/kia-ev9): SUV, domet do 563 km (WLTP), baterija 99,8 kWh
+- [Kia EV2](https://www.evomobil.rs/modeli/kia-ev2): SUV, domet do 435 / 670 km (WLTP), baterija 42,2 / 61 kWh
+- [Leapmotor T03](https://www.evomobil.rs/modeli/leapmotor-t03): Gradski, domet do 265 km (WLTP), baterija 37,3 kWh
+- [Leapmotor B03X](https://www.evomobil.rs/modeli/leapmotor-b03x): SUV, domet do 292 / 382 km (WLTP), baterija 39,8 / 53 kWh
+- [Leapmotor B05](https://www.evomobil.rs/modeli/leapmotor-b05): Hečbek, domet do 401 / 482 km (WLTP), baterija 56,2 / 67,1 kWh
+- [Leapmotor B10](https://www.evomobil.rs/modeli/leapmotor-b10): SUV, domet do 361 / 434 km (WLTP), baterija 56,2 / 67,1 kWh
+- [Leapmotor C10](https://www.evomobil.rs/modeli/leapmotor-c10): SUV, domet do 420 / 510 km (WLTP), baterija 69,9 / 81,9 kWh
+- [Lynk & Co 02](https://www.evomobil.rs/modeli/lynk-co-02): Crossover, domet do 445 km (WLTP), baterija 66 kWh
+- [Mazda 6e](https://www.evomobil.rs/modeli/mazda-6e): Sedan, domet do 479 / 552 km (WLTP), baterija 68,8 / 80 kWh
+- [Mazda CX-6e](https://www.evomobil.rs/modeli/mazda-cx-6e): SUV, domet do 484 km (WLTP), baterija 78 kWh
+- [MG4 Electric](https://www.evomobil.rs/modeli/mg-mg4-electric): Hečbek, domet do 465 km (WLTP), baterija 64 kWh
+- [MG5 Electric](https://www.evomobil.rs/modeli/mg-mg5-electric): Karavan, domet do 400 km (WLTP), baterija 61,1 kWh
+- [MGS5 EV](https://www.evomobil.rs/modeli/mg-mgs5-ev): SUV, domet do 480 km (WLTP), baterija 64 kWh
+- [MINI Cooper](https://www.evomobil.rs/modeli/mini-cooper): Hečbek, domet do 290 / 400 km (WLTP), baterija 36,6 / 49,2 kWh
+- [MINI Aceman](https://www.evomobil.rs/modeli/mini-aceman): SUV, domet do 309 / 405 km (WLTP), baterija 38,5 / 49,2 kWh
+- [MINI Countryman](https://www.evomobil.rs/modeli/mini-countryman): SUV, domet do 500 km (WLTP), baterija 64,6 kWh
+- [Opel Astra Electric](https://www.evomobil.rs/modeli/opel-astra-electric): Hečbek, domet do 454 km (WLTP), baterija 58 kWh
+- [Opel Frontera Electric](https://www.evomobil.rs/modeli/opel-frontera-electric): SUV, domet do 305 / 408 km (WLTP), baterija 44 / 54 kWh
+- [Opel Mokka Electric](https://www.evomobil.rs/modeli/opel-mokka-electric): SUV, domet do 403 km (WLTP), baterija 54 kWh
+- [Peugeot e-208](https://www.evomobil.rs/modeli/peugeot-e-208): Hečbek, domet do 362 km (WLTP), baterija 50 kWh
+- [Peugeot e-2008](https://www.evomobil.rs/modeli/peugeot-e-2008): SUV, domet do 406 km (WLTP), baterija 54 kWh
+- [Peugeot e-308](https://www.evomobil.rs/modeli/peugeot-e-308): Hečbek, domet do 450 km (WLTP), baterija 58,3 kWh
+- [Peugeot e-3008](https://www.evomobil.rs/modeli/peugeot-e-3008): SUV, domet do 526 / 701 km (WLTP), baterija 73 / 96,9 kWh
+- [Porsche Taycan 4](https://www.evomobil.rs/modeli/porsche-taycan-4): Sedan, domet do 596 km (WLTP), baterija 105 kWh
+- [Porsche Macan 4](https://www.evomobil.rs/modeli/porsche-macan-4): SUV, domet do 572 km (WLTP), baterija 100 kWh
+- [Porsche Macan 4S](https://www.evomobil.rs/modeli/porsche-macan-4s): SUV, domet do 556 km (WLTP), baterija 100 kWh
+- [Porsche Cayenne Turbo Electric](https://www.evomobil.rs/modeli/porsche-cayenne-turbo-electric): SUV, domet do 604 km (WLTP), baterija 113 kWh
+- [Renault 5 E-Tech](https://www.evomobil.rs/modeli/renault-5-e-tech): Hečbek, domet do 315 / 430 km (WLTP), baterija 40 / 52 kWh
+- [Renault Twingo E-Tech](https://www.evomobil.rs/modeli/renault-twingo-e-tech): Gradski, domet do 263 km (WLTP), baterija 27,5 kWh
+- [Renault 4 E-Tech](https://www.evomobil.rs/modeli/renault-4-e-tech): SUV, domet do 308 / 409 km (WLTP), baterija 40 / 52 kWh
+- [Škoda Elroq](https://www.evomobil.rs/modeli/skoda-elroq): SUV, domet do 451 / 575 km (WLTP), baterija 58 / 77 kWh
+- [Škoda Enyaq](https://www.evomobil.rs/modeli/skoda-enyaq): SUV, domet do 431 / 582 km (WLTP), baterija 58 / 77 kWh
+- [Škoda Enyaq Coupé](https://www.evomobil.rs/modeli/skoda-enyaq-coupe): SUV, domet do 440 / 591 km (WLTP), baterija 58 / 77 kWh
+- [Suzuki e Vitara](https://www.evomobil.rs/modeli/suzuki-e-vitara): SUV, domet do 426 km (WLTP), baterija 61 kWh
+- [Toyota bZ4X](https://www.evomobil.rs/modeli/toyota-bz4x): SUV, domet do 444 / 559 km (WLTP), baterija 125 / 165 kWh
+- [Volkswagen ID.3 Neo](https://www.evomobil.rs/modeli/volkswagen-id-3-neo): Hečbek, domet do 418 km (WLTP), baterija 50 kWh
+- [Volkswagen ID.4](https://www.evomobil.rs/modeli/volkswagen-id-4): SUV, domet do 436 / 570 km (WLTP), baterija 58 / 79 kWh
+- [Volkswagen ID.5](https://www.evomobil.rs/modeli/volkswagen-id-5): SUV, domet do 558 / 534 km (WLTP), baterija 77 / 79 kWh
+- [Volkswagen ID.7](https://www.evomobil.rs/modeli/volkswagen-id-7): Sedan, domet do 600 / 711 km (WLTP), baterija 77 / 86 kWh
+- [Volkswagen ID. Polo](https://www.evomobil.rs/modeli/volkswagen-id-polo): Hečbek, domet do 331 / 454 km (WLTP), baterija 37 / 52 kWh
+- [Volvo EX30](https://www.evomobil.rs/modeli/volvo-ex30): SUV, domet do 337 / 475 km (WLTP), baterija 51 / 69 kWh
+- [Volvo EX60](https://www.evomobil.rs/modeli/volvo-ex60): SUV, domet do 611 / 660 / 810 km (WLTP), baterija 83 / 95 / 117 kWh
+- [Volvo EX90](https://www.evomobil.rs/modeli/volvo-ex90): SUV, domet do 564 / 617 km (WLTP), baterija 92 / 106 kWh
+- [Volvo ES90](https://www.evomobil.rs/modeli/volvo-es90): Sedan, domet do 664 / 702 km (WLTP), baterija 92 / 106 kWh

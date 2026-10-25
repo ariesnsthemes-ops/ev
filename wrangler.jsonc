@@ -1,5 +1,5 @@
 {
-  // Cloudflare Workers settings for ev-srbija.rs
+  // Cloudflare Workers settings for evomobil.rs (worker name kept as "ev-srbija" so the existing Cloudflare project keeps working)
   // The website is the "site" folder; nothing is built on Cloudflare (no build command).
   "name": "ev-srbija",
   "compatibility_date": "2026-10-01",
