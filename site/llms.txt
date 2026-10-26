@@ -9,6 +9,7 @@
 - [Distributeri po gradovima](https://www.evomobil.rs/distributeri)
 - [Punjači za električne automobile (mapa)](https://www.evomobil.rs/punjaci)
 - [Subvencije 2026](https://www.evomobil.rs/subvencije-elektricni-automobili-2026)
+- [Kalkulator troškova](https://www.evomobil.rs/kalkulator-troskova): trošak struje u odnosu na benzin i dizel
 - [Uporedi modele](https://www.evomobil.rs/uporedi): poređenje do tri modela
 - [O nama](https://www.evomobil.rs/o-nama): izvori podataka i metodologija
 - [Kontakt](https://www.evomobil.rs/kontakt)

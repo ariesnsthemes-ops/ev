@@ -1,0 +1,54 @@
+# Weekly fuel price update for the cost calculator (kalkulator-troskova).
+# The Ministry of Trade sets new maximum prices every Friday at 15:00 (Belgrade).
+# Runs Friday 15:20, 16:20, 17:20 and 18:20 Belgrade time (both summer and winter time are covered,
+# because GitHub schedules in UTC), plus Saturday morning as a last check. Each run changes the site
+# only when a price changed, so repeated runs are harmless.
+# If the source can't be read or the numbers look wrong, the run fails, nothing on the site changes,
+# and GitHub emails you ("Run failed: Cene goriva"). The result of every run is under Actions > Cene goriva.
+name: Cene goriva
+
+on:
+  schedule:
+    - cron: '20 13-16 * * 5'   # Friday 13:20-16:20 UTC = 15:20-18:20 summer time / 14:20-17:20 winter time
+    - cron: '20 7 * * 6'       # Saturday 09:20 / 08:20 Belgrade, last check
+  workflow_dispatch: {}        # "Run workflow" button for a manual check
+
+permissions:
+  contents: write
+
+concurrency:
+  group: cene-goriva
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Read fuel prices
+        run: python3 build/update_fuel.py
+
+      - name: Rebuild site if prices changed
+        id: changed
+        run: |
+          if git diff --quiet -- data/gorivo.json; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            python3 build/build_site.py
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit and push (Cloudflare publishes automatically)
+        if: steps.changed.outputs.changed == 'true'
+        run: |
+          git config user.name "evomobil cene goriva"
+          git config user.email "office@evomobil.rs"
+          git add data/gorivo.json site
+          git commit -m "Cene goriva: BMB 95 $(python3 -c "import json;print(json.load(open('data/gorivo.json'))['benzin'])") RSD, Evrodizel $(python3 -c "import json;print(json.load(open('data/gorivo.json'))['dizel'])") RSD"
+          git push

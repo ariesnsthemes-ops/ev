@@ -19,6 +19,8 @@ Sources of truth:
   build/brand_content.json    brand texts, importers and dealers
   build/model_content.json    model descriptions, battery and range text
   build/model_dims.json       dimensions and seats (official sources only)
+  build/kalkulator.html       cost calculator page (markup, CSS, JS); not a page to open
+  data/gorivo.json            fuel prices for the calculator (BMB 95, Evrodizel, date of the Ministry decision)
   img/, logos/                photos and logos
 
 Switches in build/build_site.py (section "SWITCHES"):
@@ -41,3 +43,11 @@ Public launch:
   1. Set NOINDEX = False (and add GA_ID), rebuild, publish site/.
   2. Remove the Cloudflare Access password protection.
   3. Add the site to Google Search Console and Bing Webmaster Tools and submit sitemap.xml.
+
+Fuel prices (calculator):
+  .github/workflows/cene-goriva.yml runs build/update_fuel.py every Friday after 15:00 (several tries until 18:20,
+  plus Saturday morning). It reads BMB 95 and Evrodizel from nafta.hr/sr/cene-goriva-srbija, checks them
+  (150-320 RSD, at least 3 companies with the same top price, at most 20 RSD change in a week) and, only if a price
+  changed, writes data/gorivo.json, rebuilds the site and pushes; Cloudflare then publishes.
+  If a check fails, nothing changes and GitHub emails "Run failed: Cene goriva". Results: GitHub > Actions > Cene goriva.
+  Manual check: Actions > Cene goriva > Run workflow. Manual price change: edit data/gorivo.json and rebuild.

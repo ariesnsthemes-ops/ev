@@ -177,6 +177,48 @@ def join_sr(items):
 
 # ------------------------------------------------------------------ extra CSS for the generated pages
 extra_css = r'''
+.mcard h3 a:hover{text-decoration:none!important}   /* model name on cards: no underline on hover */
+
+.fgroup .fopt.zero{display:none!important}
+.fgroup .fmore[hidden],.fgroup[hidden]{display:none!important}
+
+footer .about{max-width:36ch;line-height:1.6}
+/* links in dealer cards: green underline on hover */
+.dgrid a{text-decoration:none;text-underline-offset:3px}
+.dgrid a:hover{color:var(--green-ink);text-decoration:underline;text-decoration-color:var(--green);text-decoration-thickness:1.5px}
+/* dark buttons ("Prihvati", "Pronađi automobil"...): visible hover */
+.btn-dark{transition:background-color .2s,box-shadow .2s,transform .2s}
+.btn-dark:hover{background:color-mix(in srgb,var(--btn) 80%,var(--green));box-shadow:0 6px 16px color-mix(in srgb,var(--btn) 25%,transparent)}
+.btn-dark:active{transform:translateY(1px)}
+.btn-ghost{transition:border-color .2s,background-color .2s}
+.btn-ghost:hover{background:var(--bg-alt)}
+@media (prefers-reduced-motion:reduce){.btn-dark,.btn-ghost{transition:none}}
+
+/* dealer city picker: button + homepage-style list (.dd-pop) */
+.city select.enh{position:absolute;left:0;bottom:0;width:1px;height:1px;opacity:0;pointer-events:none}
+.city-btn{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;height:46px;padding:0 16px;border:1px solid var(--line);border-radius:12px;background:var(--surface);color:var(--ink);font:600 14px var(--font);cursor:pointer;text-align:left;transition:border-color .2s,background .2s}
+.city-btn:hover{border-color:color-mix(in srgb,var(--ink) 25%,transparent)}
+.city.open .city-btn{background:var(--surface-2);border-color:var(--line)}
+.city.open .dd-chev{transform:rotate(180deg)}
+.city-btn:focus{outline:none}
+.city-btn:focus-visible{outline:2px solid var(--green);outline-offset:2px}
+.city .dd-pop{width:100%;max-width:none}
+.dd-opt:focus-visible{outline:none}
+/* brand logo above the model name */
+.mbrand .mbrand-logo{width:84px;height:28px}
+
+/* footer reveal: the page slides up over the footer, last section has rounded bottom corners */
+body{position:relative;z-index:0}   /* own stacking context, so the footer (z-index -1) stays clickable */
+main{background:var(--bg);border-radius:0 0 32px 32px}
+main>section:last-of-type{border-bottom-left-radius:32px;border-bottom-right-radius:32px}
+footer{position:relative;z-index:-1;box-shadow:0 -40px 0 0 #16202e}
+:root[data-evtheme="dark"] footer{box-shadow:0 -40px 0 0 #0a0f16}
+.ft-reveal footer{position:sticky;bottom:0}
+@media (max-width:760px){main,main>section:last-of-type{border-bottom-left-radius:24px;border-bottom-right-radius:24px}}
+@media (prefers-reduced-motion:reduce){.ft-reveal footer{position:relative}}
+
+.calc-link{margin-top:14px;font-size:14px;font-weight:600}.calc-link a{color:var(--green-ink);text-decoration:none}.calc-link a:hover{text-decoration:underline;text-underline-offset:3px}
+
 .crumbs{display:flex;gap:8px;flex-wrap:wrap;font-size:13px;color:var(--muted)}
 .crumbs a:hover{color:var(--ink)}
 .crumbs span[aria-current]{color:var(--ink);font-weight:600}
@@ -520,6 +562,20 @@ body.no-scroll{overflow:hidden}
 '''
 
 common_js = r'''
+/* sidebar filters: live counts per option for the current selection; options with 0 results are hidden */
+window.evcFacets=function(side,items,test){
+  var inputs=[].slice.call(side.querySelectorAll('.fopt input')),cur={};
+  inputs.forEach(function(i){cur[i.name]=cur[i.name]||[];if(i.checked)cur[i.name].push(i.value)});
+  inputs.forEach(function(i){var f={},n=0;for(var k in cur)f[k]=cur[k];f[i.name]=[i.value];
+    items.forEach(function(it){if(test(it,f))n++});
+    var l=i.closest('.fopt'),em=l.querySelector('em');if(em)em.textContent=n;l.classList.toggle('zero',!n&&!i.checked)});
+  [].slice.call(side.querySelectorAll('.fgroup')).forEach(function(g){
+    var all=[].slice.call(g.querySelectorAll('.fopt')),vis=all.filter(function(l){return !l.classList.contains('zero')}),bt=g.querySelector('.fmore');
+    if(bt){all.forEach(function(l){l.classList.remove('more')});vis.forEach(function(l,k){if(k>=4)l.classList.add('more')});
+      var m=Math.max(0,vis.length-4);bt.dataset.more=m;bt.hidden=!m;if(!g.classList.contains('open-all'))bt.textContent='Prikaži više ('+m+')'}
+    g.hidden=!vis.length});
+};
+
 (function(){
   // a new page always opens at its top (also inside embedding frames), unless the link points to a section
   try{if('scrollRestoration' in history)history.scrollRestoration='manual'}catch(e){}
@@ -536,7 +592,32 @@ common_js = r'''
   var sel=document.getElementById('city-sel');
   if(sel){var cards=[].slice.call(document.querySelectorAll('#dealer-main .dcard'));
     var show=function(){cards.forEach(function(c){c.hidden=c.getAttribute('data-city')!==sel.value})};
-    sel.addEventListener('change',show);show();}
+    sel.addEventListener('change',show);show();
+    /* city picker: same dropdown list as the homepage search filters (.dd-pop / .dd-opt) instead of the system list */
+    var wrap=sel.parentNode,lab=document.querySelector('label[for="city-sel"]');
+    var cb=document.createElement('button');cb.type='button';cb.className='city-btn';cb.id='city-btn';
+    cb.setAttribute('aria-haspopup','listbox');cb.setAttribute('aria-expanded','false');cb.setAttribute('aria-controls','city-list');
+    cb.innerHTML='<span class="dd-val"></span><svg class="dd-chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5 6 7.5 9 4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+    var cp=document.createElement('div');cp.className='dd-pop';cp.hidden=true;
+    cp.innerHTML='<div class="dd-list" role="listbox" id="city-list" aria-label="Grad"></div>';
+    sel.classList.add('enh');sel.tabIndex=-1;sel.setAttribute('aria-hidden','true');if(lab)lab.htmlFor='city-btn';
+    wrap.appendChild(cb);wrap.appendChild(cp);
+    var cl=cp.firstChild,ck='<svg class="dd-check" viewBox="0 0 14 14" aria-hidden="true"><path d="M3 7.5 5.8 10 11 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+    var csync=function(){cb.firstChild.textContent=sel.value};
+    var cclose=function(back){if(cp.hidden)return;cp.hidden=true;cb.setAttribute('aria-expanded','false');wrap.classList.remove('open');if(back)cb.focus()};
+    var copen=function(){cl.innerHTML=[].map.call(sel.options,function(o){var t=document.createElement('span');t.textContent=o.text;
+        return '<div class="dd-opt" role="option" tabindex="-1" data-v="'+t.innerHTML.replace(/"/g,'&quot;')+'" aria-selected="'+(o.value===sel.value)+'"><span class="dd-txt">'+t.innerHTML+'</span>'+ck+'</div>'}).join('');
+      cp.hidden=false;cb.setAttribute('aria-expanded','true');wrap.classList.add('open');
+      var cur=cl.querySelector('[aria-selected="true"]')||cl.querySelector('.dd-opt');if(cur){cur.scrollIntoView({block:'nearest'});cur.focus({preventScroll:true})}};
+    var cchoose=function(v){sel.value=v;sel.dispatchEvent(new Event('change'));csync();cclose(true)};
+    cb.addEventListener('click',function(){cp.hidden?copen():cclose()});
+    cb.addEventListener('keydown',function(e){if(e.key==='ArrowDown'||e.key==='ArrowUp'){e.preventDefault();copen()}});
+    cl.addEventListener('click',function(e){var o=e.target.closest('.dd-opt');if(o)cchoose(o.getAttribute('data-v'))});
+    cp.addEventListener('keydown',function(e){var os=[].slice.call(cl.querySelectorAll('.dd-opt')),k=os.indexOf(document.activeElement);
+      if(e.key==='ArrowDown'){e.preventDefault();(os[k+1]||os[0]).focus()}else if(e.key==='ArrowUp'){e.preventDefault();(os[k-1]||os[os.length-1]).focus()}
+      else if(e.key==='Enter'||e.key===' '){e.preventDefault();if(k>=0)cchoose(os[k].getAttribute('data-v'))}else if(e.key==='Escape'){e.preventDefault();cclose(true)}else if(e.key==='Tab')cclose()});
+    document.addEventListener('click',function(e){if(!wrap.contains(e.target))cclose()});
+    csync();}
 })();
 
 (function(){
@@ -759,7 +840,7 @@ CONSENT_JS = r"""
       box.addEventListener('click',function(e){var b=e.target.closest('[data-ck]');if(!b)return;var c=b.getAttribute('data-ck');save(c);box.hidden=true;
         if(c==='granted')loadGA();else{clearGA();if(loaded)location.reload()}});
       document.body.appendChild(box)}
-    box.hidden=false;var f=box.querySelector('[data-ck="granted"]');if(f)f.focus({preventScroll:true})}
+    box.hidden=false}   /* no auto-focus: it drew a focus ring around "Prihvati" before the visitor did anything */
   document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('[data-cookie-settings]');if(a){e.preventDefault();show()}});
   function init(){var c=read();if(c==='granted')loadGA();else if(c!=='denied')show()}
   if(document.readyState!=='loading')init();else document.addEventListener('DOMContentLoaded',init);
@@ -773,6 +854,7 @@ CONSENT_CSS = r'''
 .ck a{color:var(--green-ink);font-weight:600;text-decoration:underline;text-underline-offset:3px}
 .ck-btns{display:flex;gap:10px}
 .ck-btns .btn{flex:1;height:42px;justify-content:center}
+.ck-btns .btn:focus-visible{outline-offset:2px}
 @media (max-width:560px){.ck{left:12px;right:12px;bottom:12px;max-width:none}}
 '''
 
@@ -794,7 +876,7 @@ def page(path, title, desc, body, ld=(), og_image=None, extra_js='', extra_head=
             f'<meta property="og:type" content="website">\n<meta property="og:site_name" content="{SITE}">\n<meta property="og:locale" content="sr_RS">\n'
             f'<meta property="og:title" content="{E(title)}">\n<meta property="og:description" content="{E(desc)}">\n'
             f'<meta property="og:url" content="{canonical}">\n<meta property="og:image" content="{og}">\n' + ('<meta property="og:image:width" content="1200">\n<meta property="og:image:height" content="630">\n<meta property="og:image:alt" content="evomobil.rs – električni automobili u Srbiji">\n' if og.endswith(OG_DEFAULT) else '') + f'<meta name="twitter:card" content="summary_large_image">\n'
-            f'<link rel="icon" href="{pre}favicon.ico" sizes="any">\n<link rel="icon" href="{pre}img/favicon-32.png" type="image/png" sizes="32x32">\n<link rel="apple-touch-icon" href="{pre}img/apple-touch-icon.png">\n'
+            f'<link rel="icon" href="{pre}favicon.ico?v={FAV_V}" sizes="any">\n<link rel="icon" href="{pre}img/favicon.svg?v={FAV_V}" type="image/svg+xml">\n<link rel="icon" href="{pre}img/favicon-32.png?v={FAV_V}" type="image/png" sizes="32x32">\n<link rel="apple-touch-icon" href="{pre}img/apple-touch-icon.png?v={FAV_V}">\n'
             '<meta name="theme-color" content="#16202e">\n'
             '<link rel="preconnect" href="https://fonts.googleapis.com">\n<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
             '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap">\n'
@@ -803,6 +885,7 @@ def page(path, title, desc, body, ld=(), og_image=None, extra_js='', extra_head=
 
 SITE_CSS = ':root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}' + style + extra_css + CONSENT_CSS
 CSS_V = hashlib.md5(SITE_CSS.encode()).hexdigest()[:8]
+FAV_V = hashlib.md5(open(f'{ROOT}/favicon.ico', 'rb').read() + open(f'{ROOT}/img/favicon-32.png', 'rb').read()).hexdigest()[:8]
 MASK_FIX = '<style>/* logo masks resolve against the page, not the stylesheet */.blogo{-webkit-mask:var(--l) center/contain no-repeat;mask:var(--l) center/contain no-repeat}</style>\n'
 pages = {}   # path -> html
 
@@ -961,6 +1044,7 @@ for mid, m in models.items():
       <h2 class="h2s">{E(m["full"])}: osnovne specifikacije</h2>
       <dl class="specs-tbl">{''.join(f'<div><dt>{k}</dt><dd{"" if v else " class=na"}>{E(v or "Na upit")}</dd></div>' for k, v in specs)}</dl>
       <p class="price-note">Domet je po WLTP normi, prema podacima proizvođača ili uvoznika. Opremu i tehničke podatke proverite kod distributera.</p>
+      <p class="calc-link"><a href="../kalkulator-troskova.html?model={mid}">Koliko košta vožnja ovim modelom? Uporedite trošak struje i goriva <span class="arr">→</span></a></p>
     </div>
   </section>
 {dealer_section(m["b"], f'Kontaktirajte distributera za {m["full"]}')}
@@ -1148,6 +1232,7 @@ function apply(push){
   $('cat-empty').hidden=n>0;
   var active=k.length+b.length+(d?1:0);$('cat-n').hidden=!active;$('cat-n').textContent='('+active+')';
   $('cat-apply').textContent=n?('Prikaži '+n+(n===1?' model':' modela')):'Nema rezultata';
+  evcFacets(side,cards,function(c,f){var t=c.dataset.t.split(' ');return (!f.k.length||f.k.some(function(x){return t.indexOf(x)>-1}))&&(!f.b.length||f.b.indexOf(c.dataset.b)>-1)&&(+c.dataset.r>=+(f.d[0]||0))});
   if(push!==false){var q=new URLSearchParams();if(b.length)q.set('brend',b.join(','));if(d)q.set('domet',d);if(k.length)q.set('karoserija',k.join(','));if(s!=='r')q.set('sort',s);
     try{history.replaceState(null,'',location.pathname+(q.toString()?'?'+q:''))}catch(e){}}
 }
@@ -1301,6 +1386,7 @@ function apply(push){
   $('cat-empty').hidden=n>0;
   var a=g.length+b.length;list.classList.toggle('filtered',!!b.length);$('cat-n').hidden=!a;$('cat-n').textContent='('+a+')';
   $('cat-apply').textContent=n?('Prikaži '+n+' distributera'):'Nema rezultata';
+  evcFacets(side,cards,function(c,f){var cb=c.dataset.b.split(' ');return (!f.g.length||f.g.indexOf(c.dataset.c)>-1)&&(!f.b.length||f.b.some(function(x){return cb.indexOf(x)>-1}))});
   if(push!==false){var q=new URLSearchParams();if(g.length)q.set('grad',g.join(','));if(b.length)q.set('brend',b.join(','));
     try{history.replaceState(null,'',location.pathname+(q.toString()?'?'+q:''))}catch(e){}}
 }
@@ -1561,6 +1647,7 @@ function apply(push,fit){
   $('cat-empty').hidden=vis.length>0;
   var act=k.length+a.length+(p?1:0);$('cat-n').hidden=!act;$('cat-n').textContent='('+act+')';
   $('cat-apply').textContent=vis.length?('Prikaži '+vis.length+' punjača'):'Nema rezultata';
+  evcFacets(side,items,function(li,f){var c=li.dataset.c.split(' ');return (+li.dataset.kw>=+(f.p[0]||0))&&(!f.k.length||f.k.some(function(x){return c.indexOf(x)>-1}))&&(!f.a.length||f.a.indexOf(li.dataset.a)>-1)});
   if(map&&ready){map.getSource('ch').setData({type:'FeatureCollection',features:vis.map(function(li){return FEATS[li.dataset.id]})});
     if(popup)popup.remove();
     if(fit&&vis.length){var b=new maplibregl.LngLatBounds();vis.forEach(function(li){b.extend([+li.dataset.lng,+li.dataset.lat])});map.stop();map.fitBounds(b,{padding:40,maxZoom:13,duration:fit===2&&!RM?1000:0})}}
@@ -1916,6 +2003,61 @@ pages['subvencije-elektricni-automobili-2026.html'] = page('subvencije-elektricn
            {'@context': 'https://schema.org', '@type': 'Article', 'headline': 'Subvencije za električne automobile u Srbiji 2026.',
             'dateModified': UPDATED, 'inLanguage': 'sr-Latn', 'publisher': {'@type': 'Organization', 'name': SITE, 'url': DOMAIN + '/'}}])
 
+# ------------------------------------------------------------------ running cost calculator (electricity vs fuel)
+# Markup, CSS and JS live in build/kalkulator.html; fuel prices in data/gorivo.json (updated every Friday).
+_kc = open(f'{ROOT}/build/kalkulator.html', encoding='utf-8').read()
+_kc_css = _kc.split('<!--CSS-->')[1].split('<!--BODY-->')[0]
+_kc_body = _kc.split('<!--BODY-->')[1].split('<!--JS-->')[0]
+_kc_js = _kc.split('<!--JS-->')[1]
+FUEL = json.load(open(f'{ROOT}/data/gorivo.json', encoding='utf-8'))
+def _nums(t):
+    return [float(x.replace(',', '.')) for x in re.findall(r'\d+(?:,\d+)?', t or '')]
+kc_models = []
+for i in ALL_IDS:
+    m = models[i]
+    bat = _nums(kwh_txt(m)); rng = _nums(range_txt(m, True)) or ([m['r']] if m['r'] else [])
+    if not bat or not rng:
+        continue
+    if len(bat) != len(rng):
+        bat = [max(bat)] if len(rng) == 1 else bat[:len(rng)]
+        rng = rng[:len(bat)]
+    vs = [[b_, int(r_), round(b_ / r_ * 100, 1)] for b_, r_ in zip(bat, rng)]
+    # battery / WLTP range outside 11-26 kWh/100 km means the published figures don't fit together (city-only WLTP, kW instead of kWh)
+    kc_models.append({'id': i, 'b': brands[m['b']]['name'], 'n': m['full'], 'v': vs, 'ok': all(11 <= v[2] <= 26 for v in vs)})
+crumb = [('Početna', 'index.html'), ('Kalkulator troškova', 'kalkulator-troskova.html')]
+kc_qa = [
+    ('Koliko košta punjenje električnog automobila na 100 km?', 'Zavisi od potrošnje modela i cene struje. Automobil koji troši 15 kWh na 100 km, uz 10% gubitaka pri punjenju i cenu od 12 dinara po kWh, potroši struje za oko 200 dinara na 100 km. Na javnim brzim punjačima trošak je veći.'),
+    ('Kako se računa potrošnja električnog automobila?', 'Kapacitet baterije podelite sa dometom po WLTP normi i pomnožite sa 100. Dobijate potrošnju u kWh na 100 km. Stvarna potrošnja je obično veća, naročito zimi i na autoputu.'),
+    ('Odakle su cene goriva u kalkulatoru?', 'Koristimo najviše maloprodajne cene za BMB 95 i Evrodizel koje Ministarstvo unutrašnje i spoljne trgovine objavljuje svakog petka.'),
+]
+body = f"""
+<main id="top">
+  <section class="phero" style="padding-bottom:32px">
+    <div class="wrap">
+      {crumbs(crumb, '')}
+      <h1>Kalkulator troškova: struja ili gorivo</h1>
+      <p class="answer">Izaberite električni model, unesite koliko vozite i po kojoj ceni punite. Kalkulator poredi trošak energije sa automobilom na benzin ili dizel, na 100 km, mesečno, godišnje i za pet godina.</p>
+    </div>
+  </section>
+  <section class="sec" style="padding-top:0">
+    <div class="wrap">{_kc_body}</div>
+  </section>
+  <section class="sec alt">
+    <div class="wrap">
+      <h2 class="h2s">Česta pitanja o troškovima</h2>
+      {qa_block(kc_qa)}
+    </div>
+  </section>
+</main>
+"""
+_kc_js = _kc_js.replace('__MODELS__', json.dumps(kc_models, ensure_ascii=False, separators=(',', ':'))).replace('__FUEL__', json.dumps({k: FUEL[k] for k in ('datum', 'benzin', 'dizel')}))
+pages['kalkulator-troskova.html'] = page('kalkulator-troskova.html', f'Kalkulator troškova: struja ili gorivo | {SITE}',
+    'Koliko košta vožnja električnim automobilom u odnosu na benzin ili dizel? Izaberite model, kilometražu i cenu struje i uporedite trošak na 100 km, mesečno i godišnje.',
+    body, [ld_breadcrumbs(crumb), ld_faq(kc_qa),
+           {'@context': 'https://schema.org', '@type': 'WebApplication', 'name': 'Kalkulator troškova: struja ili gorivo', 'applicationCategory': 'UtilityApplication',
+            'operatingSystem': 'Any', 'inLanguage': 'sr-Latn', 'url': f'{DOMAIN}/kalkulator-troskova.html', 'offers': {'@type': 'Offer', 'price': '0', 'priceCurrency': 'RSD'}}],
+    extra_head=_kc_css, extra_js=_kc_js)
+
 # ------------------------------------------------------------------ advertising page (moved off the homepage)
 crumb = [('Početna', 'index.html'), ('Oglašavanje', 'oglasavanje.html')]
 ads = unembed(ads_section, '')
@@ -1954,7 +2096,7 @@ head_meta = (f'<link rel="canonical" href="{DOMAIN}/">\n<meta property="og:type"
              f'<meta property="og:locale" content="sr_RS">\n<meta property="og:title" content="Električni automobili u Srbiji | {SITE}">\n'
              '<meta property="og:description" content="Električni automobili u Srbiji na jednom mestu: modeli, domet, baterija i distributeri.">\n'
              f'<meta property="og:url" content="{DOMAIN}/">\n<meta property="og:image" content="{DOMAIN}/{OG_DEFAULT}">\n<meta property="og:image:width" content="1200">\n<meta property="og:image:height" content="630">\n<meta property="og:image:alt" content="evomobil.rs – električni automobili u Srbiji">\n<meta name="twitter:card" content="summary_large_image">\n'
-             '<link rel="icon" href="favicon.ico" sizes="any">\n<link rel="icon" href="img/favicon-32.png" type="image/png" sizes="32x32">\n<link rel="apple-touch-icon" href="img/apple-touch-icon.png">\n<meta name="theme-color" content="#16202e">\n')
+             f'<link rel="icon" href="favicon.ico?v={FAV_V}" sizes="any">\n<link rel="icon" href="img/favicon.svg?v={FAV_V}" type="image/svg+xml">\n<link rel="icon" href="img/favicon-32.png?v={FAV_V}" type="image/png" sizes="32x32">\n<link rel="apple-touch-icon" href="img/apple-touch-icon.png?v={FAV_V}">\n<meta name="theme-color" content="#16202e">\n')
 home_ld = [
     {'@context': 'https://schema.org', '@type': 'WebSite', 'name': SITE, 'url': DOMAIN + '/', 'inLanguage': 'sr-Latn',
      'description': 'Električni automobili u Srbiji: modeli, domet i distributeri.'},
@@ -2119,6 +2261,7 @@ fav = (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="{vb[0] - (side - w) / 
        f'<rect x="{vb[0] - (side - w) / 2:.2f}" y="{vb[1] - (side - h) / 2:.2f}" width="{side:.2f}" height="{side:.2f}" rx="{side * .22:.2f}" fill="#ffffff"/>'
        f'<g style="--logo-ink:#16202e;color:#16202e">{logo_sym.group(2)}</g></svg>')
 shutil.copy(f'{ROOT}/favicon.ico', f'{OUT}/favicon.ico')
+open(f'{OUT}/img/favicon.svg', 'w', encoding='utf-8').write(fav)
 
 # sitemap, robots, llms.txt
 urls = ['index.html'] + sorted(p for p in pages if p not in ('index.html', '404.html'))
@@ -2134,7 +2277,7 @@ open(f'{OUT}/robots.txt', 'w', encoding='utf-8').write(''.join(f'User-agent: {b}
 llms = [f'# {SITE}', '', '> Nezvanični informativni sajt o potpuno električnim automobilima koji se prodaju u Srbiji: modeli, domet (WLTP), baterija i kontakti ovlašćenih distributera. Hibridi nisu uključeni.', '',
         '## Glavne stranice', f'- [Svi modeli]({DOMAIN}/modeli.html): {len(ALL_IDS)} električnih modela', f'- [Brendovi]({DOMAIN}/brendovi.html)',
         f'- [Najveći domet]({DOMAIN}/najveci-domet.html)', f'- [Distributeri po gradovima]({DOMAIN}/distributeri.html)', f'- [Punjači za električne automobile (mapa)]({DOMAIN}/punjaci.html)',
-        f'- [Subvencije 2026]({DOMAIN}/subvencije-elektricni-automobili-2026.html)', f'- [Uporedi modele]({DOMAIN}/uporedi.html): poređenje do tri modela',
+        f'- [Subvencije 2026]({DOMAIN}/subvencije-elektricni-automobili-2026.html)', f'- [Kalkulator troškova]({DOMAIN}/kalkulator-troskova.html): trošak struje u odnosu na benzin i dizel', f'- [Uporedi modele]({DOMAIN}/uporedi.html): poređenje do tri modela',
         f'- [O nama]({DOMAIN}/o-nama.html): izvori podataka i metodologija', f'- [Kontakt]({DOMAIN}/kontakt.html)', '',
         '## Kompletni podaci', f'- [llms-full.txt]({DOMAIN}/llms-full.txt): svi modeli sa dometom, baterijom, dimenzijama i gradovima distributera, na jednom mestu',
         f'- [modeli.json]({DOMAIN}/podaci/modeli.json): isti podaci u JSON formatu', '', '## Brendovi']
@@ -2177,7 +2320,7 @@ for s_ in ORDER:
                           'domet_wltp_km': m['r'], 'domet_tekst': range_txt(m, True) if m['r'] else None, 'baterija': kwh_txt(m) if m['kwh'] else None,
                           'gradovi_distributera': cities}, **dd))
 full += ['## Ostalo', f'- Subvencije 2026: {DOMAIN}/subvencije-elektricni-automobili-2026.html',
-         f'- Distributeri po gradovima: {DOMAIN}/distributeri.html', f'- Mapa punjača: {DOMAIN}/punjaci.html', f'- Uporedi modele: {DOMAIN}/uporedi.html',
+         f'- Distributeri po gradovima: {DOMAIN}/distributeri.html', f'- Kalkulator troškova (struja i gorivo): {DOMAIN}/kalkulator-troskova.html', f'- Mapa punjača: {DOMAIN}/punjaci.html', f'- Uporedi modele: {DOMAIN}/uporedi.html',
          f'- Kontakt i ispravke podataka: office@evomobil.rs', '']
 open(f'{OUT}/llms-full.txt', 'w', encoding='utf-8').write('\n'.join(full))
 os.makedirs(f'{OUT}/podaci', exist_ok=True)
