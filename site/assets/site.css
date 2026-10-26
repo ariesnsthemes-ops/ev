@@ -628,6 +628,31 @@ body .hero .stage{aspect-ratio:16/9!important;background:var(--surface-2)}
 h1,h2,h3{font-family:var(--font-head);letter-spacing:-.02em}
 .btn,.link,.nav-cta,.theme-btn,.menu-btn,.res-reset,[data-filter],#h-cta,.tk-2,.panel .btn,.cat,.dd-btn{border-radius:999px!important}
 
+/* dark buttons with an arrow ("Detalji modela →" ...): stay the same black on hover, only the arrow moves */
+.btn-dark:has(.arr):hover{background:var(--btn);box-shadow:none}
+.btn-dark:has(.arr):active{transform:none}
+.btn .arr{display:inline-block;transition:transform .25s cubic-bezier(.16,1,.3,1)}
+/* outlined pills (filters, links): subtle hover */
+.filters button,.link,.res-reset{transition:background-color .2s,border-color .2s,color .2s}
+.filters button:not([aria-pressed="true"]):hover,.link:hover,.res-reset:hover{background:var(--bg-alt);border-color:color-mix(in srgb,var(--ink) 22%,transparent);color:var(--ink)}
+
+/* header logo on mouse hover (class lg-play is added by the header script, desktop pointers only):
+   the bolt empties, charges green from bottom to top, pulses and throws sparks; the E steps back and returns */
+.brand .brand-mark{overflow:visible}
+.brand-mark .lg-e,.brand-mark .lg-bolt{transform-box:fill-box;transform-origin:50% 50%}
+.brand-mark .lg-lvl{fill:#3aab18;transform-box:fill-box;transform-origin:50% 100%;transform:scaleY(0);opacity:0}
+.brand-mark .lg-sp{fill:#3aab18;opacity:0}
+.lg-play .brand-mark .lg-e{animation:lgE 1.5s cubic-bezier(.16,1,.3,1)}
+.lg-play .brand-mark .lg-bolt{animation:lgBase 1.5s ease-in-out,lgPulse .5s .85s cubic-bezier(.3,0,.2,1)}
+.lg-play .brand-mark .lg-lvl{animation:lgRise 1.5s cubic-bezier(.5,0,.3,1)}
+.lg-play .brand-mark .lg-sp{animation:lgSpark .65s .85s ease-out}
+.lg-play .brand-mark .lg-s2{animation-delay:.9s}.lg-play .brand-mark .lg-s3{animation-delay:.95s}.lg-play .brand-mark .lg-s4{animation-delay:.88s}
+@keyframes lgE{0%,100%{transform:none}16%,78%{transform:translateX(-8px)}}
+@keyframes lgBase{0%{fill-opacity:1}8%,56%{fill-opacity:.2}60%,100%{fill-opacity:1}}
+@keyframes lgRise{0%,8%{transform:scaleY(0);opacity:1}56%{transform:scaleY(1);opacity:1}64%,100%{transform:scaleY(1);opacity:0}}
+@keyframes lgPulse{0%,100%{transform:scale(1);filter:none}35%{transform:scale(1.22);filter:drop-shadow(0 0 7px rgba(76,194,38,.85))}70%{transform:scale(.96)}}
+@keyframes lgSpark{0%{opacity:1;transform:translate(0,0)}100%{opacity:0;transform:translate(var(--dx),var(--dy))}}
+
 .mcard h3 a:hover{text-decoration:none!important}   /* model name on cards: no underline on hover */
 
 .fgroup .fopt.zero{display:none!important}
@@ -639,7 +664,7 @@ footer .about{max-width:36ch;line-height:1.6}
 .dgrid a:hover{color:var(--green-ink);text-decoration:underline;text-decoration-color:var(--green);text-decoration-thickness:1.5px}
 /* dark buttons ("Prihvati", "Pronađi automobil"...): visible hover */
 .btn-dark{transition:background-color .2s,box-shadow .2s,transform .2s}
-.btn-dark:hover{background:color-mix(in srgb,var(--btn) 80%,var(--green));box-shadow:0 6px 16px color-mix(in srgb,var(--btn) 25%,transparent)}
+.btn-dark:hover{background:color-mix(in srgb,var(--btn) 84%,var(--bg));box-shadow:0 6px 16px color-mix(in srgb,var(--btn) 20%,transparent)}
 .btn-dark:active{transform:translateY(1px)}
 .btn-ghost{transition:border-color .2s,background-color .2s}
 .btn-ghost:hover{background:var(--bg-alt)}
