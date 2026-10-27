@@ -67,14 +67,15 @@ def section_prices(text, start_rx, stop_rx):
 
 
 def cap(prices, label):
-    """The maximum retail price: the highest price, which several companies must show."""
+    """The maximum retail price set by the government: the price most companies show.
+    (The page can also list premium fuels such as BMB 100 or "plus" diesel at a higher price at one or two
+    companies, so the most common price is used, not the highest one.)"""
     prices = [p for p in prices if MIN_RSD <= p <= MAX_RSD]
     if not prices:
         fail(f'Na stranici nije pronađena nijedna cena za {label}. Moguće je da je izvor promenio izgled stranice.')
-    top = max(prices)
-    n = collections.Counter(prices)[top]
+    top, n = collections.Counter(prices).most_common(1)[0]
     if n < MIN_STATIONS:
-        fail(f'{label}: najviša cena {top} RSD/l stoji kod samo {n} kompanije (očekivano bar {MIN_STATIONS}). Proverite izvor ručno.')
+        fail(f'{label}: nijedna cena se ne ponavlja kod bar {MIN_STATIONS} kompanije (najčešća: {top} RSD/l, {n}×). Proverite izvor ručno.')
     return int(top) if top == int(top) else top
 
 
@@ -103,7 +104,7 @@ def main():
         except Exception as e:
             fail(f'Stranica sa cenama nije dostupna ({e}).')
     text = to_text(page)
-    benzin = cap(section_prices(text, r'BMB\s*95', r'Evro\s*-?\s*dizel|Euro\s*-?\s*dizel|Eurodizel|Evrodizel|TNG|Autogas'), 'BMB 95')
+    benzin = cap(section_prices(text, r'BMB\s*95', r'Evro\s*-?\s*dizel|Euro\s*-?\s*dizel|Eurodizel|Evrodizel|BMB\s*100|TNG|Autogas|LPG'), 'BMB 95')
     dizel = cap(section_prices(text, r'Evro\s*-?\s*dizel|Euro\s*-?\s*dizel|Eurodizel|Evrodizel', r'BMB\s*95|TNG|Autogas|Komentar'), 'Evrodizel')
     if dizel == benzin:
         fail(f'BMB 95 i Evrodizel imaju istu cenu ({benzin} RSD/l), što ukazuje na grešku pri čitanju stranice.')
