@@ -706,6 +706,7 @@ h1,h2,h3{font-family:var(--font-head);letter-spacing:-.02em}
   <script>
   /* light theme by default, whatever the visitor's system setting; dark only when chosen with the button */
   (function(){var r=document.documentElement,k='evc-theme-s',t=null;try{t=sessionStorage.getItem(k)}catch(e){}
+    if(!t&&/SamsungBrowser/.test(navigator.userAgent)&&window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)t='dark';
     r.setAttribute('data-evtheme',t==='dark'?'dark':'light');
     function cs(d){var m=document.querySelector('meta[name=color-scheme]');if(m)m.content=d?'dark':'only light'}cs(t==='dark');
     var b=document.getElementById('theme-btn');
@@ -1136,7 +1137,7 @@ h1,h2,h3{font-family:var(--font-head);letter-spacing:-.02em}
     const href='modeli/'+m.id+'.html', label=m.b+' '+m.n, a=document.createElement('article');a.className='mcard';
     const sm=m.img?m.img.replace(/\.webp$/,'-640.webp'):'';
     const img=m.img?'<div class="img photo"><img src="'+sm+'" srcset="'+sm+' 640w, '+m.img+' 1280w" sizes="(max-width: 620px) 48vw, (max-width: 1000px) 46vw, 400px" alt="'+esc(label)+'" decoding="async"></div>'
-      :m.lg&&logoFor[m.b]?'<div class="img lg" role="img" aria-label="'+esc(label)+'"><span class="blogo" aria-hidden="true" style="'+esc(logoFor[m.b])+'"></span></div>'
+      :m.lg&&logoFor[m.b]?'<div class="img lg" role="img" aria-label="'+esc(label)+'"><span class="blogo has-img" aria-hidden="true"><img src="'+esc(logoFor[m.b])+'" alt="" decoding="async"></span></div>'
       :m.sil?'<div class="img"><svg viewBox="'+VB[m.sil]+'" role="img" aria-label="'+esc(label)+'"><use href="#car-'+m.sil+'"/></svg></div>'
       :'<div class="img ph">FOTOGRAFIJA USKORO</div>';
     a.innerHTML=cmpBtn(m.id)+imgLink(img,href)+'<div class="body"><div><div class="mk">'+esc(m.b.toUpperCase())+'</div><h3><a href="'+href+'">'+esc(m.n)+'</a></h3></div>'
@@ -1210,7 +1211,7 @@ h1,h2,h3{font-family:var(--font-head);letter-spacing:-.02em}
 
 
   // custom dropdowns for the search panel
-  const logoFor={};document.querySelectorAll('.btile[data-brand-page]').forEach(t=>{const l=t.querySelector('.blogo');if(l)logoFor[t.dataset.brandPage]=l.getAttribute('style')});
+  const logoFor={};document.querySelectorAll('.btile[data-brand-page]').forEach(t=>{const l=t.querySelector('.blogo img');if(l)logoFor[t.dataset.brandPage]=l.getAttribute('src')});
   const esc=t=>String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
   const dds=[];
   const checkSvg='<svg class="dd-check" viewBox="0 0 14 14" aria-hidden="true"><path d="M3 7.5 5.8 10 11 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
@@ -1227,7 +1228,7 @@ h1,h2,h3{font-family:var(--font-head);letter-spacing:-.02em}
     const list=pop.querySelector('.dd-list'), q=pop.querySelector('.dd-q');
     let only=null;
     const optHTML=o=>{
-      const logo=cfg.logos&&o.value&&logoFor[o.value]?'<span class="dd-logo" aria-hidden="true"><span class="blogo" style="'+esc(logoFor[o.value])+'"></span></span>':'';
+      const logo=cfg.logos&&o.value&&logoFor[o.value]?'<span class="dd-logo" aria-hidden="true"><span class="blogo has-img"><img src="'+esc(logoFor[o.value])+'" alt="" decoding="async"></span></span>':'';
       return '<div class="dd-opt" role="option" tabindex="-1" data-v="'+esc(o.value)+'" aria-selected="'+(o.value===sel.value)+'">'+logo+'<span class="dd-txt">'+esc(o.text)+'</span>'+checkSvg+'</div>';
     };
     function build(){

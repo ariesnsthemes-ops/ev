@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap">
-<link rel="stylesheet" href="../assets/site.css?v=8495e97c">
+<link rel="stylesheet" href="../assets/site.css?v=83d3b869">
 <style>/* logo masks resolve against the page, not the stylesheet */.blogo{-webkit-mask:var(--l) center/contain no-repeat;mask:var(--l) center/contain no-repeat}</style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Početna", "item": "https://www.evomobil.rs/"}, {"@type": "ListItem", "position": 2, "name": "Brendovi", "item": "https://www.evomobil.rs/brendovi"}, {"@type": "ListItem", "position": 3, "name": "JAC", "item": "https://www.evomobil.rs/brendovi/jac"}, {"@type": "ListItem", "position": 4, "name": "JAC T9 EV", "item": "https://www.evomobil.rs/modeli/jac-t9-ev"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Car", "name": "JAC T9 EV", "model": "T9 EV", "brand": {"@type": "Brand", "name": "JAC"}, "manufacturer": {"@type": "Organization", "name": "JAC"}, "fuelType": "Electric", "vehicleTransmission": "Automatic", "description": "JAC T9 EV je potpuno električni pikap brenda JAC. Prema podacima proizvođača ili uvoznika ima domet do 330 km po WLTP normi i bateriju od 88,02 kWh. U Srbiji ga prodaju ovlašćeni distributeri u gradu Beograd.", "url": "https://www.evomobil.rs/modeli/jac-t9-ev", "bodyType": "Pikap", "image": "https://www.evomobil.rs/img/evomobil-jac-t9-ev.webp", "length": {"@type": "QuantitativeValue", "value": 5330, "unitCode": "MMT"}, "width": {"@type": "QuantitativeValue", "value": 1965, "unitCode": "MMT"}, "height": {"@type": "QuantitativeValue", "value": 1920, "unitCode": "MMT"}, "additionalProperty": [{"@type": "PropertyValue", "name": "Domet (WLTP)", "value": 330, "unitText": "km", "description": "do 330 km"}, {"@type": "PropertyValue", "name": "Kapacitet baterije", "value": "88.02", "unitText": "kWh"}]}</script>
@@ -101,6 +101,7 @@
   <script>
   /* light theme by default, whatever the visitor's system setting; dark only when chosen with the button */
   (function(){var r=document.documentElement,k='evc-theme-s',t=null;try{t=sessionStorage.getItem(k)}catch(e){}
+    if(!t&&/SamsungBrowser/.test(navigator.userAgent)&&window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)t='dark';
     r.setAttribute('data-evtheme',t==='dark'?'dark':'light');
     function cs(d){var m=document.querySelector('meta[name=color-scheme]');if(m)m.content=d?'dark':'only light'}cs(t==='dark');
     var b=document.getElementById('theme-btn');
@@ -117,7 +118,7 @@
       <div class="mhero-grid">
         <div class="mhero-img"><img src="../img/evomobil-jac-t9-ev-640.webp" srcset="../img/evomobil-jac-t9-ev-640.webp 640w, ../img/evomobil-jac-t9-ev.webp 1280w" sizes="(max-width: 900px) 92vw, 640px" alt="JAC T9 EV" fetchpriority="high" decoding="async"></div>
         <div>
-          <a class="mbrand" href="../brendovi/jac" title="Svi modeli brenda JAC"><span class="mbrand-logo"><span class="blogo" aria-hidden="true" style="--l:url(../logos/jac.svg)"></span></span><span class="sr-only">JAC</span></a>
+          <a class="mbrand" href="../brendovi/jac" title="Svi modeli brenda JAC"><span class="mbrand-logo"><span class="blogo has-img" aria-hidden="true"><img src="../logos/jac.svg" alt="" decoding="async"></span></span><span class="sr-only">JAC</span></a>
           <h1>JAC T9 EV</h1>
           <div class="tags"><span class="tag">100% EV</span><span class="tag gray">PIKAP</span></div>
           <p class="answer">JAC T9 EV je potpuno električni pikap brenda JAC. Prema podacima proizvođača ili uvoznika ima domet do 330 km po WLTP normi i bateriju od 88,02 kWh. U Srbiji ga prodaju ovlašćeni distributeri u gradu Beograd.</p>

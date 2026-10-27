@@ -177,6 +177,12 @@ def join_sr(items):
 
 # ------------------------------------------------------------------ extra CSS for the generated pages
 extra_css = r'''
+/* brand logos are <img> (see "brand logos as images" in the build): dark in the light theme, white in the dark theme */
+.blogo.has-img{background:none!important;-webkit-mask:none!important;mask:none!important;position:relative}
+.blogo.has-img img{position:absolute;inset:0;display:block;width:100%;height:100%;max-width:none;object-fit:contain;filter:brightness(0);opacity:.92}
+.mbrand-logo .blogo.has-img img{object-position:left center}
+:root[data-evtheme="dark"] .blogo.has-img img{filter:brightness(0) invert(1);opacity:.95}
+
 /* phones: no blue flash on tap (text can still be selected with a long press) */
 html{-webkit-tap-highlight-color:transparent}
 a,button,label,summary,[role="button"],[role="option"],input,select{-webkit-tap-highlight-color:transparent}
@@ -2511,6 +2517,20 @@ if CLEAN_URLS:
         t2 = t2.replace("+'.html", "+'")                     # links built in scripts: 'modeli/'+id+'.html'
         if t2 != t:
             open(f, 'w', encoding='utf-8').write(t2)
+
+# ------------------------------------------------------------------ brand logos as images
+# Logos were drawn as CSS masks filled with a background colour. Browsers with their own "dark mode for websites"
+# (Samsung Internet) darken background colours, so logos turned dark on dark tiles. An <img> is left alone by them;
+# CSS filters colour it dark (light theme) or white (dark theme).
+import glob as _glob
+_lg = re.compile(r'<span class="blogo([^"]*)" aria-hidden="true" style="--l:url\(([^)]+)\)"></span>')
+_lgq = re.compile(r'<span class=\\"blogo([^"\\]*)\\" aria-hidden=\\"true\\" style=\\"--l:url\(([^)]+)\)\\"></span>')
+for _f in _glob.glob(f'{OUT}/**/*.html', recursive=True):
+    _h = open(_f, encoding='utf-8').read()
+    _h2 = _lg.sub(lambda m: f'<span class="blogo{m.group(1)} has-img" aria-hidden="true"><img src="{m.group(2)}" alt="" decoding="async"></span>', _h)
+    _h2 = _lgq.sub(lambda m: f'<span class=\\"blogo{m.group(1)} has-img\\" aria-hidden=\\"true\\"><img src=\\"{m.group(2)}\\" alt=\\"\\" decoding=\\"async\\"></span>', _h2)
+    if _h2 != _h:
+        open(_f, 'w', encoding='utf-8').write(_h2)
 
 # NOINDEX = True: mark every page noindex in the HTML itself (works on any host)
 if NOINDEX:

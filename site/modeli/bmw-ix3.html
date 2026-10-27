@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap">
-<link rel="stylesheet" href="../assets/site.css?v=8495e97c">
+<link rel="stylesheet" href="../assets/site.css?v=83d3b869">
 <style>/* logo masks resolve against the page, not the stylesheet */.blogo{-webkit-mask:var(--l) center/contain no-repeat;mask:var(--l) center/contain no-repeat}</style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Početna", "item": "https://www.evomobil.rs/"}, {"@type": "ListItem", "position": 2, "name": "Brendovi", "item": "https://www.evomobil.rs/brendovi"}, {"@type": "ListItem", "position": 3, "name": "BMW", "item": "https://www.evomobil.rs/brendovi/bmw"}, {"@type": "ListItem", "position": 4, "name": "BMW iX3", "item": "https://www.evomobil.rs/modeli/bmw-ix3"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Car", "name": "BMW iX3", "model": "iX3", "brand": {"@type": "Brand", "name": "BMW"}, "manufacturer": {"@type": "Organization", "name": "BMW"}, "fuelType": "Electric", "vehicleTransmission": "Automatic", "description": "BMW iX3 je potpuno električni SUV brenda BMW. Prema podacima proizvođača ili uvoznika ima domet do 805 km po WLTP normi i bateriju od 108,7 kWh. U Srbiji ga prodaju ovlašćeni distributeri u gradovima Beograd, Mladenovac, Niš, Novi Pazar, Novi Sad i Čačak.", "url": "https://www.evomobil.rs/modeli/bmw-ix3", "bodyType": "SUV", "image": "https://www.evomobil.rs/img/evomobil-bmw-ix3.webp", "vehicleSeatingCapacity": 5, "length": {"@type": "QuantitativeValue", "value": 4782, "unitCode": "MMT"}, "width": {"@type": "QuantitativeValue", "value": 1895, "unitCode": "MMT"}, "height": {"@type": "QuantitativeValue", "value": 1635, "unitCode": "MMT"}, "additionalProperty": [{"@type": "PropertyValue", "name": "Domet (WLTP)", "value": 805, "unitText": "km", "description": "do 805 km"}, {"@type": "PropertyValue", "name": "Kapacitet baterije", "value": "108,7", "unitText": "kWh"}]}</script>
@@ -101,6 +101,7 @@
   <script>
   /* light theme by default, whatever the visitor's system setting; dark only when chosen with the button */
   (function(){var r=document.documentElement,k='evc-theme-s',t=null;try{t=sessionStorage.getItem(k)}catch(e){}
+    if(!t&&/SamsungBrowser/.test(navigator.userAgent)&&window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)t='dark';
     r.setAttribute('data-evtheme',t==='dark'?'dark':'light');
     function cs(d){var m=document.querySelector('meta[name=color-scheme]');if(m)m.content=d?'dark':'only light'}cs(t==='dark');
     var b=document.getElementById('theme-btn');
@@ -117,7 +118,7 @@
       <div class="mhero-grid">
         <div class="mhero-img"><img src="../img/evomobil-bmw-ix3-640.webp" srcset="../img/evomobil-bmw-ix3-640.webp 640w, ../img/evomobil-bmw-ix3.webp 1280w" sizes="(max-width: 900px) 92vw, 640px" alt="BMW iX3" fetchpriority="high" decoding="async"></div>
         <div>
-          <a class="mbrand" href="../brendovi/bmw" title="Svi modeli brenda BMW"><span class="mbrand-logo"><span class="blogo" aria-hidden="true" style="--l:url(../logos/bmw.svg)"></span></span><span class="sr-only">BMW</span></a>
+          <a class="mbrand" href="../brendovi/bmw" title="Svi modeli brenda BMW"><span class="mbrand-logo"><span class="blogo has-img" aria-hidden="true"><img src="../logos/bmw.svg" alt="" decoding="async"></span></span><span class="sr-only">BMW</span></a>
           <h1>BMW iX3</h1>
           <div class="tags"><span class="tag">100% EV</span><span class="tag gray">SUV</span></div>
           <p class="answer">BMW iX3 je potpuno električni SUV brenda BMW. Prema podacima proizvođača ili uvoznika ima domet do 805 km po WLTP normi i bateriju od 108,7 kWh. U Srbiji ga prodaju ovlašćeni distributeri u gradovima Beograd, Mladenovac, Niš, Novi Pazar, Novi Sad i Čačak.</p>

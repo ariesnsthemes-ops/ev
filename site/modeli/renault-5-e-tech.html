@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap">
-<link rel="stylesheet" href="../assets/site.css?v=8495e97c">
+<link rel="stylesheet" href="../assets/site.css?v=83d3b869">
 <style>/* logo masks resolve against the page, not the stylesheet */.blogo{-webkit-mask:var(--l) center/contain no-repeat;mask:var(--l) center/contain no-repeat}</style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Početna", "item": "https://www.evomobil.rs/"}, {"@type": "ListItem", "position": 2, "name": "Brendovi", "item": "https://www.evomobil.rs/brendovi"}, {"@type": "ListItem", "position": 3, "name": "Renault", "item": "https://www.evomobil.rs/brendovi/renault"}, {"@type": "ListItem", "position": 4, "name": "Renault 5 E-Tech", "item": "https://www.evomobil.rs/modeli/renault-5-e-tech"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Car", "name": "Renault 5 E-Tech", "model": "5 E-Tech", "brand": {"@type": "Brand", "name": "Renault"}, "manufacturer": {"@type": "Organization", "name": "Renault"}, "fuelType": "Electric", "vehicleTransmission": "Automatic", "description": "Renault 5 E-Tech je potpuno električni hečbek brenda Renault. Prema podacima proizvođača ili uvoznika ima domet do 315 / 430 km po WLTP normi i bateriju od 40 / 52 kWh. U Srbiji ga prodaju ovlašćeni distributeri u gradovima Beograd, Jagodina, Kragujevac, Niš, Novi Sad, Pančevo, Požarevac, Subotica, Užice, Zrenjanin, Čačak i Šabac.", "url": "https://www.evomobil.rs/modeli/renault-5-e-tech", "bodyType": "Hečbek", "image": "https://www.evomobil.rs/img/evomobil-renault-5-e-tech.webp", "vehicleSeatingCapacity": 5, "length": {"@type": "QuantitativeValue", "value": 3922, "unitCode": "MMT"}, "width": {"@type": "QuantitativeValue", "value": 1808, "unitCode": "MMT"}, "height": {"@type": "QuantitativeValue", "value": 1498, "unitCode": "MMT"}, "additionalProperty": [{"@type": "PropertyValue", "name": "Domet (WLTP)", "value": 430, "unitText": "km", "description": "do 315 / 430 km"}, {"@type": "PropertyValue", "name": "Kapacitet baterije", "value": "40 / 52", "unitText": "kWh"}]}</script>
@@ -101,6 +101,7 @@
   <script>
   /* light theme by default, whatever the visitor's system setting; dark only when chosen with the button */
   (function(){var r=document.documentElement,k='evc-theme-s',t=null;try{t=sessionStorage.getItem(k)}catch(e){}
+    if(!t&&/SamsungBrowser/.test(navigator.userAgent)&&window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)t='dark';
     r.setAttribute('data-evtheme',t==='dark'?'dark':'light');
     function cs(d){var m=document.querySelector('meta[name=color-scheme]');if(m)m.content=d?'dark':'only light'}cs(t==='dark');
     var b=document.getElementById('theme-btn');
@@ -117,7 +118,7 @@
       <div class="mhero-grid">
         <div class="mhero-img"><img src="../img/evomobil-renault-5-e-tech-640.webp" srcset="../img/evomobil-renault-5-e-tech-640.webp 640w, ../img/evomobil-renault-5-e-tech.webp 1280w" sizes="(max-width: 900px) 92vw, 640px" alt="Renault 5 E-Tech" fetchpriority="high" decoding="async"></div>
         <div>
-          <a class="mbrand" href="../brendovi/renault" title="Svi modeli brenda Renault"><span class="mbrand-logo"><span class="blogo" aria-hidden="true" style="--l:url(../logos/renault.svg)"></span></span><span class="sr-only">Renault</span></a>
+          <a class="mbrand" href="../brendovi/renault" title="Svi modeli brenda Renault"><span class="mbrand-logo"><span class="blogo has-img" aria-hidden="true"><img src="../logos/renault.svg" alt="" decoding="async"></span></span><span class="sr-only">Renault</span></a>
           <h1>Renault 5 E-Tech</h1>
           <div class="tags"><span class="tag">100% EV</span><span class="tag gray">HEČBEK</span></div>
           <p class="answer">Renault 5 E-Tech je potpuno električni hečbek brenda Renault. Prema podacima proizvođača ili uvoznika ima domet do 315 / 430 km po WLTP normi i bateriju od 40 / 52 kWh. U Srbiji ga prodaju ovlašćeni distributeri u gradovima Beograd, Jagodina, Kragujevac, Niš, Novi Sad, Pančevo, Požarevac, Subotica, Užice, Zrenjanin, Čačak i Šabac.</p>

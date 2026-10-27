@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap">
-<link rel="stylesheet" href="../assets/site.css?v=8495e97c">
+<link rel="stylesheet" href="../assets/site.css?v=83d3b869">
 <style>/* logo masks resolve against the page, not the stylesheet */.blogo{-webkit-mask:var(--l) center/contain no-repeat;mask:var(--l) center/contain no-repeat}</style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Početna", "item": "https://www.evomobil.rs/"}, {"@type": "ListItem", "position": 2, "name": "Brendovi", "item": "https://www.evomobil.rs/brendovi"}, {"@type": "ListItem", "position": 3, "name": "MG", "item": "https://www.evomobil.rs/brendovi/mg"}, {"@type": "ListItem", "position": 4, "name": "MG4 Electric", "item": "https://www.evomobil.rs/modeli/mg-mg4-electric"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Car", "name": "MG4 Electric", "model": "MG4 Electric", "brand": {"@type": "Brand", "name": "MG"}, "manufacturer": {"@type": "Organization", "name": "MG"}, "fuelType": "Electric", "vehicleTransmission": "Automatic", "description": "MG4 Electric je potpuno električni hečbek brenda MG. Prema podacima proizvođača ili uvoznika ima domet do 465 km po WLTP normi i bateriju od 64 kWh. U Srbiji ga prodaju ovlašćeni distributeri u gradovima Beograd, Kragujevac, Niš, Novi Sad, Subotica i Čačak.", "url": "https://www.evomobil.rs/modeli/mg-mg4-electric", "bodyType": "Hečbek", "image": "https://www.evomobil.rs/img/evomobil-mg-mg4-electric.webp", "vehicleSeatingCapacity": 5, "length": {"@type": "QuantitativeValue", "value": 4287, "unitCode": "MMT"}, "width": {"@type": "QuantitativeValue", "value": 1836, "unitCode": "MMT"}, "height": {"@type": "QuantitativeValue", "value": 1504, "unitCode": "MMT"}, "additionalProperty": [{"@type": "PropertyValue", "name": "Domet (WLTP)", "value": 465, "unitText": "km", "description": "do 465 km"}, {"@type": "PropertyValue", "name": "Kapacitet baterije", "value": "64", "unitText": "kWh"}]}</script>
@@ -101,6 +101,7 @@
   <script>
   /* light theme by default, whatever the visitor's system setting; dark only when chosen with the button */
   (function(){var r=document.documentElement,k='evc-theme-s',t=null;try{t=sessionStorage.getItem(k)}catch(e){}
+    if(!t&&/SamsungBrowser/.test(navigator.userAgent)&&window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)t='dark';
     r.setAttribute('data-evtheme',t==='dark'?'dark':'light');
     function cs(d){var m=document.querySelector('meta[name=color-scheme]');if(m)m.content=d?'dark':'only light'}cs(t==='dark');
     var b=document.getElementById('theme-btn');
@@ -117,7 +118,7 @@
       <div class="mhero-grid">
         <div class="mhero-img"><img src="../img/evomobil-mg-mg4-electric-640.webp" srcset="../img/evomobil-mg-mg4-electric-640.webp 640w, ../img/evomobil-mg-mg4-electric.webp 1280w" sizes="(max-width: 900px) 92vw, 640px" alt="MG4 Electric" fetchpriority="high" decoding="async"></div>
         <div>
-          <a class="mbrand" href="../brendovi/mg" title="Svi modeli brenda MG"><span class="mbrand-logo"><span class="blogo" aria-hidden="true" style="--l:url(../logos/mg.svg)"></span></span><span class="sr-only">MG</span></a>
+          <a class="mbrand" href="../brendovi/mg" title="Svi modeli brenda MG"><span class="mbrand-logo"><span class="blogo has-img" aria-hidden="true"><img src="../logos/mg.svg" alt="" decoding="async"></span></span><span class="sr-only">MG</span></a>
           <h1>MG4 Electric</h1>
           <div class="tags"><span class="tag">100% EV</span><span class="tag gray">HEČBEK</span></div>
           <p class="answer">MG4 Electric je potpuno električni hečbek brenda MG. Prema podacima proizvođača ili uvoznika ima domet do 465 km po WLTP normi i bateriju od 64 kWh. U Srbiji ga prodaju ovlašćeni distributeri u gradovima Beograd, Kragujevac, Niš, Novi Sad, Subotica i Čačak.</p>

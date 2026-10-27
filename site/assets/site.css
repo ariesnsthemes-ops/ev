@@ -628,6 +628,12 @@ body .hero .stage{aspect-ratio:16/9!important;background:var(--surface-2)}
 h1,h2,h3{font-family:var(--font-head);letter-spacing:-.02em}
 .btn,.link,.nav-cta,.theme-btn,.menu-btn,.res-reset,[data-filter],#h-cta,.tk-2,.panel .btn,.cat,.dd-btn{border-radius:999px!important}
 
+/* brand logos are <img> (see "brand logos as images" in the build): dark in the light theme, white in the dark theme */
+.blogo.has-img{background:none!important;-webkit-mask:none!important;mask:none!important;position:relative}
+.blogo.has-img img{position:absolute;inset:0;display:block;width:100%;height:100%;max-width:none;object-fit:contain;filter:brightness(0);opacity:.92}
+.mbrand-logo .blogo.has-img img{object-position:left center}
+:root[data-evtheme="dark"] .blogo.has-img img{filter:brightness(0) invert(1);opacity:.95}
+
 /* phones: no blue flash on tap (text can still be selected with a long press) */
 html{-webkit-tap-highlight-color:transparent}
 a,button,label,summary,[role="button"],[role="option"],input,select{-webkit-tap-highlight-color:transparent}
