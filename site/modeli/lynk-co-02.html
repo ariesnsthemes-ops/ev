@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="only light">
 <title>Lynk &amp; Co 02 u Srbiji: domet, baterija i distributeri | evomobil.rs</title>
 <meta name="description" content="Lynk &amp; Co 02, potpuno električni crossover. Domet do 445 km (WLTP), baterija 66 kWh. Specifikacije i kontakti distributera Lynk &amp; Co u Srbiji.">
 <link rel="canonical" href="https://www.evomobil.rs/modeli/lynk-co-02">
@@ -26,7 +27,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap">
-<link rel="stylesheet" href="../assets/site.css?v=a74fd357">
+<link rel="stylesheet" href="../assets/site.css?v=8495e97c">
 <style>/* logo masks resolve against the page, not the stylesheet */.blogo{-webkit-mask:var(--l) center/contain no-repeat;mask:var(--l) center/contain no-repeat}</style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Početna", "item": "https://www.evomobil.rs/"}, {"@type": "ListItem", "position": 2, "name": "Brendovi", "item": "https://www.evomobil.rs/brendovi"}, {"@type": "ListItem", "position": 3, "name": "Lynk & Co", "item": "https://www.evomobil.rs/brendovi/lynk-co"}, {"@type": "ListItem", "position": 4, "name": "Lynk & Co 02", "item": "https://www.evomobil.rs/modeli/lynk-co-02"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Car", "name": "Lynk & Co 02", "model": "02", "brand": {"@type": "Brand", "name": "Lynk & Co"}, "manufacturer": {"@type": "Organization", "name": "Lynk & Co"}, "fuelType": "Electric", "vehicleTransmission": "Automatic", "description": "Lynk & Co 02 je potpuno električni crossover brenda Lynk & Co. Prema podacima proizvođača ili uvoznika ima domet do 445 km po WLTP normi i bateriju od 66 kWh. U Srbiji ga prodaju ovlašćeni distributeri u gradu Beograd.", "url": "https://www.evomobil.rs/modeli/lynk-co-02", "bodyType": "Crossover", "length": {"@type": "QuantitativeValue", "value": 4460, "unitCode": "MMT"}, "width": {"@type": "QuantitativeValue", "value": 1845, "unitCode": "MMT"}, "height": {"@type": "QuantitativeValue", "value": 1573, "unitCode": "MMT"}, "additionalProperty": [{"@type": "PropertyValue", "name": "Domet (WLTP)", "value": 445, "unitText": "km", "description": "do 445 km"}, {"@type": "PropertyValue", "name": "Kapacitet baterije", "value": "66", "unitText": "kWh"}]}</script>
@@ -104,10 +105,11 @@
   /* light theme by default, whatever the visitor's system setting; dark only when chosen with the button */
   (function(){var r=document.documentElement,k='evc-theme-s',t=null;try{t=sessionStorage.getItem(k)}catch(e){}
     r.setAttribute('data-evtheme',t==='dark'?'dark':'light');
+    function cs(d){var m=document.querySelector('meta[name=color-scheme]');if(m)m.content=d?'dark':'only light'}cs(t==='dark');
     var b=document.getElementById('theme-btn');
     function sync(){var d=r.getAttribute('data-evtheme')==='dark',l=d?'Uključi svetlu temu':'Uključi tamnu temu';b.setAttribute('aria-pressed',d);b.setAttribute('aria-label',l);b.title=l}
     sync();
-    b.addEventListener('click',function(){var d=r.getAttribute('data-evtheme')!=='dark';r.setAttribute('data-evtheme',d?'dark':'light');try{sessionStorage.setItem(k,d?'dark':'light')}catch(e){}sync()});
+    b.addEventListener('click',function(){var d=r.getAttribute('data-evtheme')!=='dark';r.setAttribute('data-evtheme',d?'dark':'light');cs(d);try{sessionStorage.setItem(k,d?'dark':'light')}catch(e){}sync()});
   })();
   </script>
 </header>

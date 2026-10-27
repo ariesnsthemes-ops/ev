@@ -209,7 +209,7 @@
         <li id="kc-fuelLi"></li>
         <li>Rezultat je informativna procena, ne ponuda.</li>
       </ul>
-      <p class="kc-src">Izvori: domet i baterija iz baze evomobil.rs (zvanični podaci proizvođača i uvoznika). Cene goriva: najviše maloprodajne cene koje utvrđuje Ministarstvo unutrašnje i spoljne trgovine, preuzete sa <a href="https://nafta.hr/sr/cene-goriva-srbija/" target="_blank" rel="noopener">linka</a> i ažurirane svakog petka.</p>
+      <p class="kc-src">Izvori: domet i baterija iz baze evomobil.rs (zvanični podaci proizvođača i uvoznika). Cene goriva: najviše maloprodajne cene koje utvrđuje Ministarstvo unutrašnje i spoljne trgovine, preuzete sa <a href="https://nafta.hr/sr/cene-goriva-srbija/" target="_blank" rel="noopener">linka</a> i proveravane svakog dana.</p>
     </section>
   </div>
 </div>
@@ -220,10 +220,11 @@ var LOSS=1.10,AVG=17,$=function(id){return document.getElementById('kc-'+id)};
 var nf=new Intl.NumberFormat('sr-Latn-RS',{maximumFractionDigits:0});
 var nf1=new Intl.NumberFormat('sr-Latn-RS',{minimumFractionDigits:1,maximumFractionDigits:1});
 var rsd=function(v){return nf.format(Math.round(v))+' RSD'};
-var d=FUEL.datum.split('-'),dt=(+d[2])+'. '+(+d[1])+'. '+d[0]+'.';
-var F={b:{name:'Benzin',price:FUEL.benzin,l:6.5,hint:'BMB 95, najviša maloprodajna cena od '+dt},
-       d:{name:'Dizel',price:FUEL.dizel,l:5.5,hint:'Evrodizel, najviša maloprodajna cena od '+dt}};
-$('fuelLi').textContent='Cene goriva su najviše maloprodajne cene koje Ministarstvo trgovine objavljuje petkom. Važeće od '+dt+': BMB 95 '+FUEL.benzin+' RSD/l, Evrodizel '+FUEL.dizel+' RSD/l.';
+function fd(s){var d=String(s).split('-');return (+d[2])+'. '+(+d[1])+'. '+d[0]+'.'}
+var dt=fd(FUEL.provereno||FUEL.datum);
+var F={b:{name:'Benzin',price:FUEL.benzin,l:6.5,hint:'BMB 95, najviša maloprodajna cena na dan '+dt},
+       d:{name:'Dizel',price:FUEL.dizel,l:5.5,hint:'Evrodizel, najviša maloprodajna cena na dan '+dt}};
+$('fuelLi').textContent='Cene goriva su najviše maloprodajne cene koje Ministarstvo trgovine utvrđuje petkom, a mi ih proveravamo svakog dana. Cene na dan '+dt+': BMB 95 '+FUEL.benzin+' RSD/l, Evrodizel '+FUEL.dizel+' RSD/l.';
 var sel=$('model'),brand='',og=null;
 MODELS.forEach(function(m,i){
   if(m.b!==brand){og=document.createElement('optgroup');og.label=m.b;sel.appendChild(og);brand=m.b}

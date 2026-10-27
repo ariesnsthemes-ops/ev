@@ -628,6 +628,17 @@ body .hero .stage{aspect-ratio:16/9!important;background:var(--surface-2)}
 h1,h2,h3{font-family:var(--font-head);letter-spacing:-.02em}
 .btn,.link,.nav-cta,.theme-btn,.menu-btn,.res-reset,[data-filter],#h-cta,.tk-2,.panel .btn,.cat,.dd-btn{border-radius:999px!important}
 
+/* phones: no blue flash on tap (text can still be selected with a long press) */
+html{-webkit-tap-highlight-color:transparent}
+a,button,label,summary,[role="button"],[role="option"],input,select{-webkit-tap-highlight-color:transparent}
+
+
+/* light by default for every visitor: no automatic dark mode from the phone or browser setting (dark only with the site button) */
+:root{color-scheme:only light}
+:root[data-evtheme="dark"]{color-scheme:dark}
+/* dark buttons ("Pronađi automobil", "Prihvati"...): a little darker on hover */
+.btn-dark:hover{background:color-mix(in srgb,var(--btn) 78%,#000);box-shadow:none}
+:root[data-evtheme="dark"] .btn-dark:hover{background:color-mix(in srgb,var(--btn) 86%,#000)}
 /* dark buttons with an arrow ("Detalji modela →" ...): stay the same black on hover, only the arrow moves */
 .btn-dark:has(.arr):hover{background:var(--btn);box-shadow:none}
 .btn-dark:has(.arr):active{transform:none}
@@ -664,7 +675,6 @@ footer .about{max-width:36ch;line-height:1.6}
 .dgrid a:hover{color:var(--green-ink);text-decoration:underline;text-decoration-color:var(--green);text-decoration-thickness:1.5px}
 /* dark buttons ("Prihvati", "Pronađi automobil"...): visible hover */
 .btn-dark{transition:background-color .2s,box-shadow .2s,transform .2s}
-.btn-dark:hover{background:color-mix(in srgb,var(--btn) 84%,var(--bg));box-shadow:0 6px 16px color-mix(in srgb,var(--btn) 20%,transparent)}
 .btn-dark:active{transform:translateY(1px)}
 .btn-ghost{transition:border-color .2s,background-color .2s}
 .btn-ghost:hover{background:var(--bg-alt)}

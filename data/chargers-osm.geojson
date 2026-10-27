@@ -1,0 +1,2790 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2026-10-27T19:50:57Z",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "way/431468548",
+      "properties": {
+        "@id": "way/431468548",
+        "amenity": "charging_station",
+        "brand": "Charge&Go",
+        "check_date": "2025-11-20",
+        "name": "Charge&GO - OMV Ada Ciganlija",
+        "socket:chademo": "1",
+        "socket:chademo:output": "50 kW",
+        "socket:type2": "1",
+        "socket:type2:output": "22 kW",
+        "socket:type2_combo": "1",
+        "socket:type2_combo:output": "50 kW",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.4131005,
+          44.7842787
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/956048412",
+      "properties": {
+        "@id": "way/956048412",
+        "amenity": "charging_station",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.2398052,
+          44.9626753
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1393014271",
+      "properties": {
+        "@id": "way/1393014271",
+        "amenity": "charging_station",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.2519289,
+          44.8146076
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1451968119",
+      "properties": {
+        "@id": "way/1451968119",
+        "amenity": "charging_station",
+        "brand": "Charge&Go",
+        "fee": "yes",
+        "socket:type2_combo": "2",
+        "socket:type2_combo:output": "240 kW",
+        "website": "https://chargego.rs/",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.345898,
+          44.8657423
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1484707444",
+      "properties": {
+        "@id": "way/1484707444",
+        "amenity": "charging_station",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.1251667,
+          45.764332
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/5102115442",
+      "properties": {
+        "@id": "node/5102115442",
+        "amenity": "charging_station",
+        "capacity": "6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.457676,
+          44.8158323
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/5304717494",
+      "properties": {
+        "@id": "node/5304717494",
+        "amenity": "charging_station",
+        "authentication:contactless": "yes",
+        "capacity": "2",
+        "fee": "no",
+        "motorcar": "yes",
+        "note": "activate with any credit card (even expired)",
+        "operator": "ProCredit",
+        "socket:type2": "2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.8456648,
+          45.2447523
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/5345818447",
+      "properties": {
+        "@id": "node/5345818447",
+        "amenity": "charging_station",
+        "capacity": "4",
+        "motorcar": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.466539,
+          44.8044588
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/5793648253",
+      "properties": {
+        "@id": "node/5793648253",
+        "amenity": "charging_station",
+        "authentication:membership_card": "yes",
+        "authentication:none": "no",
+        "bicycle": "no",
+        "capacity": "1",
+        "charging_station:output": "50 kW",
+        "description": "Triple Charger Adaševci Toll Station",
+        "fee": "no",
+        "motorcar": "yes",
+        "note": "Needs an RFID card to start (not for payment), but can be started with most RFID cards. Employees have RFID cards as well",
+        "opening_hours": "24/7",
+        "operator": "putevi srbije",
+        "parking:fee": "no",
+        "socket:chademo": "1",
+        "socket:type2": "1",
+        "socket:type2_combo": "1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.1932128,
+          45.0481367
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/5793659152",
+      "properties": {
+        "@id": "node/5793659152",
+        "amenity": "charging_station",
+        "authentication:membership_card": "yes",
+        "authentication:none": "no",
+        "bicycle": "no",
+        "capacity": "1",
+        "charging_station:output": "50kW",
+        "description": "Needs RFID card to start (no payment, only activation), most RFID cards work. Employees can lend a card as well. While officially 50kW, often only delivers 20kW. If driving to Bulgaria, turn before paying toll.",
+        "fee": "no",
+        "motorcar": "yes",
+        "opening_hours": "24/7",
+        "operator": "putevi srbije",
+        "parking:fee": "no",
+        "socket:chademo": "1",
+        "socket:type2": "1",
+        "socket:type2_combo": "1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          22.735101,
+          43.022341
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6077045372",
+      "properties": {
+        "@id": "node/6077045372",
+        "amenity": "charging_station",
+        "fee": "no",
+        "opening_hours": "24/7",
+        "socket:schuko": "2",
+        "socket:type2": "2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.7961751,
+          43.313004
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6077073468",
+      "properties": {
+        "@id": "node/6077073468",
+        "amenity": "charging_station",
+        "authentication:nfc": "yes",
+        "capacity": "1",
+        "fee": "no",
+        "operator": "Societe Generale",
+        "socket:type2": "2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.4267797,
+          44.8146208
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6240016905",
+      "properties": {
+        "@id": "node/6240016905",
+        "amenity": "charging_station",
+        "operator": "BUZHALA"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7106279,
+          42.5800494
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6317084325",
+      "properties": {
+        "@id": "node/6317084325",
+        "access": "yes",
+        "amenity": "charging_station",
+        "authentication:app": "yes",
+        "brand": "Orion",
+        "capacity": "3",
+        "check_date": "2025-12-13",
+        "contact:email": "emobility@oriontelekom.rs",
+        "contact:phone": "+381 11 4100333",
+        "contact:website": "https://oriontelekom.rs/",
+        "covered": "no",
+        "description": "Subotica - Belgrade direction - Southbound",
+        "fee": "no",
+        "hgv": "no",
+        "motorcar": "yes",
+        "name": "Orion - Putevi Srbije naplatna stanica Subotica",
+        "name:en": "Orion - Subotica toll station",
+        "opening_hours": "24/7",
+        "parking:fee": "no",
+        "ref": "1188;1189;1190",
+        "socket:chademo": "1",
+        "socket:chademo:output": "50 kW",
+        "socket:type2_cable": "1",
+        "socket:type2_cable:output": "44 kW",
+        "socket:type2_combo": "1",
+        "socket:type2_combo:output": "50 kW",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.733293,
+          46.0204465
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6672688885",
+      "properties": {
+        "@id": "node/6672688885",
+        "amenity": "charging_station",
+        "operator": "Kaloshi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.2344233,
+          42.146138
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6797205413",
+      "properties": {
+        "@id": "node/6797205413",
+        "amenity": "charging_station",
+        "capacity": "1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.8910355,
+          44.0023505
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6797205414",
+      "properties": {
+        "@id": "node/6797205414",
+        "access": "yes",
+        "amenity": "charging_station",
+        "capacity": "2",
+        "fee": "no",
+        "int_name": "Ikea",
+        "manufacturer": "Schneider Electric",
+        "name": "Икеа",
+        "name:sr": "Икеа",
+        "name:sr-Latn": "Ikea",
+        "operator": "Електропуњачи",
+        "socket:type2": "2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.5618676,
+          44.7105447
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/8185526053",
+      "properties": {
+        "@id": "node/8185526053",
+        "amenity": "charging_station",
+        "capacity": "3",
+        "fixme": "maxheight"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9132561,
+          44.012879
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/8228565597",
+      "properties": {
+        "@id": "node/8228565597",
+        "amenity": "charging_station",
+        "fixme": "level=? opening hours?"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.8410085,
+          45.2430753
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/8278064838",
+      "properties": {
+        "@id": "node/8278064838",
+        "amenity": "charging_station",
+        "brand": "Porsche",
+        "capacity": "2",
+        "name": "Porsche - пуњач за електрична возила",
+        "name:en": "Porsche -  electric car charger",
+        "operator": "Porsche",
+        "operator:wikidata": "Q40993",
+        "parking": "yes",
+        "parking:fee": "no",
+        "source": "zlatibor.rs"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.7030385,
+          43.723681
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/8405248202",
+      "properties": {
+        "@id": "node/8405248202",
+        "amenity": "charging_station",
+        "brand": "Tesla Supercharger",
+        "brand:wikidata": "Q17089620",
+        "brand:wikipedia": "en:Tesla Supercharger",
+        "capacity": "4",
+        "name": "Belgrade Supercharger",
+        "opening_hours": "24/7",
+        "operator": "Tesla",
+        "operator:wikidata": "Q478214",
+        "parking:fee": "no",
+        "short_name": "Tesla",
+        "socket:tesla_supercharger:output": "150 kW",
+        "website": "https://www.tesla.com/findus/location/supercharger/belgradesupercharger"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.5610585,
+          44.7100399
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/8598316554",
+      "properties": {
+        "@id": "node/8598316554",
+        "amenity": "charging_station",
+        "brand": "charge&GO",
+        "capacity": "2",
+        "covered": "no",
+        "fee": "yes",
+        "hgv": "no",
+        "name": "Charge&GO - BS Gazprom Stari Banovci",
+        "opening_hours": "24/7",
+        "operator": "Газпром",
+        "parking:fee": "no",
+        "ref": "54;55;56",
+        "socket:chademo": "1",
+        "socket:chademo:output": "50 kW",
+        "socket:type2_cable": "1",
+        "socket:type2_cable:output": "22 kW",
+        "socket:type2_combo": "1",
+        "socket:type2_combo:output": "50 kW",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.2335113,
+          44.9712258
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/8804816304",
+      "properties": {
+        "@id": "node/8804816304",
+        "amenity": "charging_station",
+        "authentication:app": "yes",
+        "authentication:debit_card": "yes",
+        "authentication:money_card": "yes",
+        "authentication:nfc": "yes",
+        "bicycle": "yes",
+        "capacity": "5",
+        "fee": "no",
+        "name": "Bikeep",
+        "scooter": "yes",
+        "surveillance": "outdoor",
+        "website": "https://bikeep.com/sr/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.4541766,
+          44.8212539
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/8813850644",
+      "properties": {
+        "@id": "node/8813850644",
+        "amenity": "charging_station",
+        "brand": "charge&GO",
+        "capacity": "2",
+        "covered": "no",
+        "fee": "yes",
+        "hgv": "no",
+        "name": "Charge&GO - BS Gazprom Sokolići",
+        "opening_hours": "24/7",
+        "operator": "Газпром",
+        "parking:fee": "no",
+        "ref": "51,52,53",
+        "socket:chademo": "1",
+        "socket:chademo:output": "50 kW",
+        "socket:type2_cable": "1",
+        "socket:type2_cable:output": "22 kW",
+        "socket:type2_combo": "1",
+        "socket:type2_combo:output": "50 kW",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.4001931,
+          43.9373855
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/8813926899",
+      "properties": {
+        "@id": "node/8813926899",
+        "amenity": "charging_station",
+        "brand": "charge&GO",
+        "capacity": "2",
+        "covered": "no",
+        "fee": "yes",
+        "hgv": "no",
+        "name": "Charge&GO - BS Gazprom Novi Sad 16",
+        "opening_hours": "24/7",
+        "operator": "Газпром",
+        "parking:fee": "no",
+        "ref": "57;58;59",
+        "socket:chademo": "1",
+        "socket:chademo:output": "50 kW",
+        "socket:type2_cable": "1",
+        "socket:type2_cable:output": "22 kW",
+        "socket:type2_combo": "1",
+        "socket:type2_combo:output": "50 kW",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.9221393,
+          45.275753
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/8821069016",
+      "properties": {
+        "@id": "node/8821069016",
+        "amenity": "charging_station",
+        "brand": "charge&GO",
+        "capacity": "5",
+        "covered": "yes",
+        "fee": "yes",
+        "hgv": "no",
+        "level": "0;3B",
+        "name": "Charge&GO - TC Promenada Novi Sad",
+        "opening_hours": "24/7",
+        "parking:fee": "no",
+        "ref": "41;42;43;44;45",
+        "socket:type2": "5",
+        "socket:type2:output": "22 kW",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.8430043,
+          45.2456592
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/8821114619",
+      "properties": {
+        "@id": "node/8821114619",
+        "amenity": "charging_station",
+        "brand": "charge&GO",
+        "capacity": "2",
+        "covered": "no",
+        "fee": "yes",
+        "hgv": "no",
+        "name": "Charge&GO - BS Gazprom Velika Plana",
+        "opening_hours": "24/7",
+        "operator": "Газпром",
+        "parking:fee": "no",
+        "ref": "60;61;62",
+        "socket:chademo": "1",
+        "socket:chademo:output": "50 kW",
+        "socket:type2_cable": "1",
+        "socket:type2_cable:output": "22 kW",
+        "socket:type2_combo": "1",
+        "socket:type2_combo:output": "50 kW",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0783528,
+          44.3453248
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/8821129797",
+      "properties": {
+        "@id": "node/8821129797",
+        "amenity": "charging_station",
+        "brand": "charge&GO",
+        "capacity": "5",
+        "covered": "no",
+        "fee": "yes",
+        "hgv": "no",
+        "name": "Charge&Go - Big Fashion Kragujevac",
+        "opening_hours": "24/7",
+        "parking:fee": "no",
+        "ref": "73;74;75;76;77",
+        "socket:type2": "5",
+        "socket:type2:output": "22 kW",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.8961752,
+          44.0089403
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/8862662345",
+      "properties": {
+        "@id": "node/8862662345",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "Tesla Supercharger",
+        "brand:wikidata": "Q17089620",
+        "brand:wikipedia": "en:Tesla Supercharger",
+        "capacity": "4",
+        "fee": "yes",
+        "name": "Aleksinac Supercharger",
+        "note": "4x Chargers, available from both parking areas",
+        "opening_hours": "24/7",
+        "operator": "Tesla",
+        "operator:wikidata": "Q478214",
+        "parking:fee": "no",
+        "ref:tesla": "aleksinacsupercharger",
+        "short_name": "Tesla",
+        "socket:tesla_supercharger": "4",
+        "socket:tesla_supercharger:output": "150 kW",
+        "socket:type2_combo": "4",
+        "socket:type2_combo:output": "130 kW",
+        "website": "https://www.tesla.com/findus/location/supercharger/aleksinacsupercharger"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.709347,
+          43.5288649
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/8936385452",
+      "properties": {
+        "@id": "node/8936385452",
+        "amenity": "charging_station",
+        "capacity": "8"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.4190857,
+          44.7864804
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/8944810164",
+      "properties": {
+        "@id": "node/8944810164",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.1547549,
+          42.660659
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9249259411",
+      "properties": {
+        "@id": "node/9249259411",
+        "amenity": "charging_station",
+        "authentication:none": "yes",
+        "fee": "no",
+        "socket:type2": "1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          22.6073169,
+          43.1336632
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9270518764",
+      "properties": {
+        "@id": "node/9270518764",
+        "amenity": "charging_station",
+        "capacity": "2",
+        "location": "underground",
+        "motorcar": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.4631687,
+          44.8112393
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9630355880",
+      "properties": {
+        "@id": "node/9630355880",
+        "amenity": "charging_station",
+        "bicycle": "no",
+        "brand": "Etrel",
+        "capacity": "1",
+        "motorcar": "yes",
+        "opening_hours": "24/7",
+        "parking:fee": "no",
+        "socket:type2": "1",
+        "socket:type2_cable:output": "22 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.8857314,
+          43.6176299
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9676497940",
+      "properties": {
+        "@id": "node/9676497940",
+        "access": "yes",
+        "amenity": "charging_station",
+        "authentication:app": "yes",
+        "brand": "Orion",
+        "capacity": "2",
+        "contact:email": "emobility@oriontelekom.rs",
+        "contact:phone": "+381 11 4100333",
+        "contact:website": "https://oriontelekom.rs/",
+        "covered": "no",
+        "description": "Southbound direction",
+        "fee": "no",
+        "hgv": "no",
+        "motorcar": "yes",
+        "name": "Orion - Putevi Srbije auto-put BG-NIŠ",
+        "opening_hours": "24/7",
+        "operator": "Putevi Srbije",
+        "parking:fee": "no",
+        "ref": "1153;1154",
+        "socket:chademo": "1",
+        "socket:chademo:output": "120 kW",
+        "socket:type2_combo": "1",
+        "socket:type2_combo:output": "120 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.8016574,
+          43.3902583
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9676497954",
+      "properties": {
+        "@id": "node/9676497954",
+        "access": "yes",
+        "amenity": "charging_station",
+        "authentication:app": "yes",
+        "brand": "Orion",
+        "capacity": "2",
+        "contact:email": "emobility@oriontelekom.rs",
+        "contact:phone": "+381 11 4100333",
+        "contact:website": "https://oriontelekom.rs/",
+        "covered": "no",
+        "description": "Northbound direction - towards Belgrade",
+        "fee": "no",
+        "hgv": "no",
+        "motorcar": "yes",
+        "name": "Orion - Putevi Srbije auto-put NIŠ-BG",
+        "opening_hours": "24/7",
+        "operator": "Putevi Srbije",
+        "parking:fee": "no",
+        "ref": "1155;1156",
+        "socket:chademo": "1",
+        "socket:chademo:output": "120 kW",
+        "socket:type2_combo": "1",
+        "socket:type2_combo:output": "120 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.8022139,
+          43.3904347
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9683482215",
+      "properties": {
+        "@id": "node/9683482215",
+        "amenity": "charging_station",
+        "authentication:none": "yes",
+        "fee": "no",
+        "socket:type2": "1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          22.7771234,
+          43.0124085
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9720396261",
+      "properties": {
+        "@id": "node/9720396261",
+        "amenity": "charging_station",
+        "authentication:none": "yes",
+        "fee": "no",
+        "socket:type2": "2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.9097468,
+          43.3245684
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9720423282",
+      "properties": {
+        "@id": "node/9720423282",
+        "amenity": "charging_station",
+        "authentication:none": "yes",
+        "fee": "no",
+        "socket:type2": "2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.9094703,
+          43.3245566
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9720436756",
+      "properties": {
+        "@id": "node/9720436756",
+        "amenity": "charging_station",
+        "authentication:none": "yes",
+        "fee": "no",
+        "socket:type2": "2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.9095928,
+          43.3245618
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9720452170",
+      "properties": {
+        "@id": "node/9720452170",
+        "amenity": "charging_station",
+        "authentication:none": "yes",
+        "fee": "no",
+        "socket:type2": "2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.9099022,
+          43.3245749
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9982302929",
+      "properties": {
+        "@id": "node/9982302929",
+        "amenity": "charging_station",
+        "authentication:none": "yes",
+        "fee": "no",
+        "name": "ProCredit Bank",
+        "socket:type2": "2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.9234759,
+          43.3392018
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9991658957",
+      "properties": {
+        "@id": "node/9991658957",
+        "amenity": "charging_station",
+        "authentication:contactless": "any",
+        "fee": "no",
+        "socket:type2": "2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.9303634,
+          43.323886
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10008908002",
+      "properties": {
+        "@id": "node/10008908002",
+        "access": "customers",
+        "amenity": "charging_station",
+        "capacity": "2",
+        "operator": "Lidl",
+        "operator:wikidata": "Q151954"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.4769975,
+          44.8173912
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10078413138",
+      "properties": {
+        "@id": "node/10078413138",
+        "amenity": "charging_station",
+        "bicycle": "no",
+        "brand": "Tesla, Inc.",
+        "brand:wikidata": "Q478214",
+        "capacity": "1",
+        "charge": "1000 RSD / 30 min",
+        "fee": "yes",
+        "motorcar": "yes",
+        "name:en": "Tesla Distance Charger",
+        "opening_hours": "24/7",
+        "parking:fee": "no",
+        "short_name": "Tesla",
+        "socket:type2_cable": "1",
+        "socket:type2_cable:output": "22 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.421247,
+          43.8634667
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10094584889",
+      "properties": {
+        "@id": "node/10094584889",
+        "access": "yes",
+        "amenity": "charging_station",
+        "capacity": "1",
+        "fee": "yes",
+        "name": "Charge&GO - Stop Shop S.Mitrovica"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.5917501,
+          44.9772862
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10156814144",
+      "properties": {
+        "@id": "node/10156814144",
+        "amenity": "charging_station",
+        "website": "https://vozimnastruju.rs;https://sajamautomobila.com/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.907116,
+          43.3228606
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10170060218",
+      "properties": {
+        "@id": "node/10170060218",
+        "amenity": "charging_station",
+        "bicycle": "yes",
+        "capacity": "6",
+        "operator": "Green Prizen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7355139,
+          42.210415
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10713611582",
+      "properties": {
+        "@id": "node/10713611582",
+        "access": "permissive",
+        "amenity": "charging_station",
+        "capacity": "22kW",
+        "charge": "30c/kWh",
+        "fee": "yes",
+        "payment:cash": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.690142,
+          44.4469995
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10713642850",
+      "properties": {
+        "@id": "node/10713642850",
+        "access": "yes",
+        "amenity": "charging_station",
+        "authentication:app": "yes",
+        "brand": "Orion",
+        "capacity": "2",
+        "contact:email": "emobility@oriontelekom.rs",
+        "contact:phone": "+381 11 4100333",
+        "contact:website": "https://oriontelekom.rs/",
+        "covered": "no",
+        "description": "Northbound direction - towards Belgrade",
+        "fee": "no",
+        "hgv": "no",
+        "motorcar": "yes",
+        "name": "Orion - Naplatna stanica Vrčin",
+        "opening_hours": "24/7",
+        "operator": "Putevi Srbije",
+        "parking:fee": "no",
+        "ref": "1366;1367",
+        "socket:type2_cable": "1",
+        "socket:type2_cable:output": "22 kW",
+        "socket:type2_combo": "1",
+        "socket:type2_combo:output": "75 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6122513,
+          44.6654215
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10864765534",
+      "properties": {
+        "@id": "node/10864765534",
+        "amenity": "charging_station",
+        "authentication:none": "yes",
+        "fee": "no",
+        "name": "ProCredit",
+        "socket:type2_cable": "2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.8825679,
+          43.643927
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10869327403",
+      "properties": {
+        "@id": "node/10869327403",
+        "amenity": "charging_station",
+        "bicycle": "no",
+        "brand": "Tesla",
+        "brand:wikidata": "Q478214",
+        "capacity": "2",
+        "motorcar": "yes",
+        "name": "Tesla Destination Charger",
+        "name:en": "Tesla Distance Charger",
+        "note": "Gen 3 wall Tesla wall conneector",
+        "opening_hours": "24/7",
+        "parking:fee": "no",
+        "socket:type2": "2",
+        "socket:type2_cable:output": "22 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.1452706,
+          43.7857738
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10961924286",
+      "properties": {
+        "@id": "node/10961924286",
+        "access": "customers",
+        "amenity": "charging_station",
+        "authentication:none": "yes",
+        "fee": "no",
+        "name": "ProCredit Bank",
+        "opening_hours": "24/7",
+        "socket:type2_cable": "2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9128151,
+          44.0040774
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10961947490",
+      "properties": {
+        "@id": "node/10961947490",
+        "amenity": "charging_station",
+        "authentication:none": "yes",
+        "fee": "no",
+        "level": "-1",
+        "socket:type2_cable": "6",
+        "zone": "1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.447856,
+          44.8031048
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10961948836",
+      "properties": {
+        "@id": "node/10961948836",
+        "amenity": "charging_station",
+        "authentication:none": "yes",
+        "fee": "no",
+        "socket:schuko": "1",
+        "socket:type2": "1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.4113654,
+          43.862896
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10961949709",
+      "properties": {
+        "@id": "node/10961949709",
+        "access": "yes",
+        "amenity": "charging_station",
+        "authentication:none": "yes",
+        "brand": "Lidl",
+        "capacity": "2",
+        "covered": "no",
+        "fee": "no",
+        "manufacturer": "ABB",
+        "maxstay": "1 hour",
+        "motorcar": "yes",
+        "opening_hours": "Mo-Su 08:00-22:00",
+        "operator": "Lidl",
+        "operator:wikidata": "Q151954",
+        "parking:fee": "no",
+        "socket:chademo": "1",
+        "socket:chademo:output": "20",
+        "socket:type2": "1",
+        "socket:type2:output": "11",
+        "socket:type2_combo": "1",
+        "socket:type2_combo:output": "20"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.8264216,
+          45.2366018
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10961950559",
+      "properties": {
+        "@id": "node/10961950559",
+        "amenity": "charging_station",
+        "fee": "no",
+        "level": "-1",
+        "parking:fee": "2h free",
+        "socket:type2": "2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.4363148,
+          44.8154106
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10961952025",
+      "properties": {
+        "@id": "node/10961952025",
+        "amenity": "charging_station",
+        "charge": "500rsd",
+        "fee": "yes",
+        "socket:type2_cable": "2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.5492871,
+          44.3087026
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/11005789356",
+      "properties": {
+        "@id": "node/11005789356",
+        "amenity": "charging_station",
+        "brand": "GoGreen",
+        "capacity": "2",
+        "operator": "Elen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7520956,
+          42.2199272
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/11159497626",
+      "properties": {
+        "@id": "node/11159497626",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "Charge&Go",
+        "capacity": "2",
+        "name": "Charge&GO - Stop Shop Zaječar",
+        "operator": "Charge&Go"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          22.2683158,
+          43.9031428
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/11161539392",
+      "properties": {
+        "@id": "node/11161539392",
+        "amenity": "charging_station",
+        "bicycle": "no",
+        "brand": "Tesla",
+        "brand:wikidata": "Q478214",
+        "capacity": "1",
+        "motorcar": "yes",
+        "name": "Tesla Destination Charger",
+        "name:en": "Tesla Distance Charger",
+        "note": "Gen 3 wall Tesla wall conneector",
+        "opening_hours": "24/7",
+        "parking:fee": "no",
+        "short_name": "Tesla",
+        "socket:type2": "1",
+        "socket:type2_cable:output": "22 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.4076598,
+          43.8670655
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/11283269584",
+      "properties": {
+        "@id": "node/11283269584",
+        "amenity": "charging_station",
+        "survey:date": "2023-10-23"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.8936739,
+          43.6227963
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/11285994388",
+      "properties": {
+        "@id": "node/11285994388",
+        "amenity": "charging_station",
+        "survey:date": "2023-10-24"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.8848807,
+          43.6123101
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/11608859730",
+      "properties": {
+        "@id": "node/11608859730",
+        "access": "yes",
+        "amenity": "charging_station",
+        "bicycle": "yes",
+        "capacity": "3",
+        "covered": "yes",
+        "fee": "no",
+        "motorcar": "no",
+        "opening_hours": "24/7",
+        "small_electric_vehicle": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.7798397,
+          45.1572512
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/11640250197",
+      "properties": {
+        "@id": "node/11640250197",
+        "amenity": "charging_station",
+        "authentication:contactless": "yes",
+        "capacity": "2",
+        "name": "Charge&GO - Stop Shop Niš",
+        "opening_hours": "05:00-01:00",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "ref": "97;98",
+        "socket:ccs": "2",
+        "socket:type1:output": "120 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.9371758,
+          43.3110647
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/11688511922",
+      "properties": {
+        "@id": "node/11688511922",
+        "amenity": "charging_station",
+        "bicycle": "no",
+        "brand": "Tesla",
+        "capacity": "2",
+        "fixme": "I went Th 19:09 and it was off, which hours is it working?",
+        "motorcar": "yes",
+        "name:en": "Tesla Distance Charger",
+        "parking:fee": "no",
+        "socket:type2_cable": "2",
+        "socket:type2_cable:output": "22 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.6256113,
+          43.8645825
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/11818344853",
+      "properties": {
+        "@id": "node/11818344853",
+        "amenity": "charging_station",
+        "brand": "Charge&Go",
+        "fee": "yes",
+        "manufacturer": "Tritium",
+        "socket:chademo": "1",
+        "socket:chademo:output": "46 kW",
+        "socket:type2_combo": "1",
+        "socket:type2_combo:output": "50 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.4588929,
+          44.8885294
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/12142021235",
+      "properties": {
+        "@id": "node/12142021235",
+        "access": "private",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.8301785,
+          45.2649367
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/12144831292",
+      "properties": {
+        "@id": "node/12144831292",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.4017119,
+          43.9350145
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/12144831293",
+      "properties": {
+        "@id": "node/12144831293",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.4016985,
+          43.9351062
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/12206033248",
+      "properties": {
+        "@id": "node/12206033248",
+        "access": "yes",
+        "amenity": "charging_station",
+        "bicycle": "yes",
+        "capacity": "3",
+        "covered": "yes",
+        "fee": "no",
+        "motorcar": "no",
+        "opening_hours": "24/7",
+        "small_electric_vehicle": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.6778749,
+          45.1356308
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/12206033249",
+      "properties": {
+        "@id": "node/12206033249",
+        "access": "yes",
+        "amenity": "charging_station",
+        "bicycle": "yes",
+        "capacity": "3",
+        "covered": "yes",
+        "fee": "no",
+        "motorcar": "no",
+        "opening_hours": "24/7",
+        "small_electric_vehicle": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.7495972,
+          45.1564696
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/12281405040",
+      "properties": {
+        "@id": "node/12281405040",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.4705331,
+          44.8109743
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/12281409515",
+      "properties": {
+        "@id": "node/12281409515",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.4697068,
+          44.8117677
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/12531705082",
+      "properties": {
+        "@id": "node/12531705082",
+        "amenity": "charging_station",
+        "brand": "Orion",
+        "capacity": "2",
+        "covered": "no",
+        "fee": "yes",
+        "hgv": "no",
+        "opening_hours": "24/7",
+        "operator": "Газпром",
+        "parking:fee": "no",
+        "socket:chademo": "1",
+        "socket:chademo:output": "50 kW",
+        "socket:type2_cable": "1",
+        "socket:type2_cable:output": "22 kW",
+        "socket:type2_combo": "1",
+        "socket:type2_combo:output": "50 kW",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.8325603,
+          46.1250625
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/12633260621",
+      "properties": {
+        "@id": "node/12633260621",
+        "access": "yes",
+        "addr:city": "Београд",
+        "addr:housenumber": "23",
+        "addr:postcode": "11231",
+        "addr:street": "Астрид Линдгрен",
+        "amenity": "charging_station",
+        "brand": "Tesla Supercharger",
+        "brand:wikidata": "Q17089620",
+        "capacity": "8",
+        "fee": "yes",
+        "motorcar": "yes",
+        "name": "Belgrade Supercharger",
+        "opening_hours": "24/7",
+        "operator": "Tesla",
+        "operator:wikidata": "Q478214",
+        "ref:tesla": "belgradeavasupercharger",
+        "short_name": "Tesla",
+        "socket:type2_combo": "8",
+        "socket:type2_combo:output": "250 kW",
+        "truck": "no",
+        "website": "https://www.tesla.com/findus/location/supercharger/belgradeavasupercharger"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.5601839,
+          44.712602
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/12744335444",
+      "properties": {
+        "@id": "node/12744335444",
+        "amenity": "charging_station",
+        "authentication:none": "yes",
+        "fee": "no",
+        "socket:type2": "1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          22.5809632,
+          43.1579564
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/12760859109",
+      "properties": {
+        "@id": "node/12760859109",
+        "access": "yes",
+        "amenity": "charging_station",
+        "bicycle": "yes",
+        "capacity": "3",
+        "covered": "yes",
+        "fee": "no",
+        "motorcar": "no",
+        "opening_hours": "24/7",
+        "small_electric_vehicle": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.8396777,
+          45.1519386
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/12769389499",
+      "properties": {
+        "@id": "node/12769389499",
+        "amenity": "charging_station",
+        "fee": "yes",
+        "motorcar": "yes",
+        "motorcycle": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.8092642,
+          44.9689254
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/12787662268",
+      "properties": {
+        "@id": "node/12787662268",
+        "amenity": "charging_station",
+        "authentication:none": "yes",
+        "fee": "no",
+        "socket:type2_cable": "1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6763944,
+          44.2533532
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/12787665011",
+      "properties": {
+        "@id": "node/12787665011",
+        "amenity": "charging_station",
+        "authentication:none": "yes",
+        "fee": "no",
+        "opening_hours": "24/7",
+        "socket:type2": "1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6693152,
+          44.5600906
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/12787761148",
+      "properties": {
+        "@id": "node/12787761148",
+        "amenity": "charging_station",
+        "authentication:none": "yes",
+        "fee": "no",
+        "opening_hours": "08:00-23:00",
+        "socket:type2_cable": "2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.8202495,
+          45.0006229
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/12806234883",
+      "properties": {
+        "@id": "node/12806234883",
+        "amenity": "charging_station",
+        "operator": "orion mobility",
+        "socket:type2": "2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.442199,
+          45.0131775
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13036761706",
+      "properties": {
+        "@id": "node/13036761706",
+        "amenity": "charging_station",
+        "fee": "yes",
+        "motorcar": "yes",
+        "motorcycle": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.8796829,
+          43.6453079
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13235072666",
+      "properties": {
+        "@id": "node/13235072666",
+        "access": "yes",
+        "amenity": "charging_station",
+        "authentication:app": "yes",
+        "brand": "Orion",
+        "capacity": "3",
+        "contact:email": "emobility@oriontelekom.rs",
+        "contact:phone": "+381 11 4100333",
+        "contact:website": "https://oriontelekom.rs/",
+        "covered": "no",
+        "fee": "no",
+        "hgv": "no",
+        "motorcar": "yes",
+        "name": "Orion - Putevi Srbije naplatna stanica Koševi",
+        "opening_hours": "24/7",
+        "operator": "Putevi Srbije",
+        "parking:fee": "no",
+        "ref": "1330;1331;1332",
+        "socket:type2": "1",
+        "socket:type2:output": "22 kW",
+        "socket:type2_combo": "2",
+        "socket:type2_combo:output": "60 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.231239,
+          43.5866256
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13247957032",
+      "properties": {
+        "@id": "node/13247957032",
+        "addr:street": "Autoput Šid - Beograd, Sremska Mitrovica",
+        "amenity": "charging_station",
+        "description": "Two CCS plugs 180KW combined power.",
+        "name": "Virta global 180KW EV charging station",
+        "opening_hours": "24/7",
+        "phone": "+381 66 8031700"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.4497346,
+          45.0355726
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13287698264",
+      "properties": {
+        "@id": "node/13287698264",
+        "amenity": "charging_station",
+        "authentication:app": "yes",
+        "authentication:contactless": "yes",
+        "capacity": "2",
+        "fee": "yes",
+        "hgv": "no",
+        "level": "0",
+        "motorcar": "yes",
+        "motorcycle": "yes",
+        "name": "Charge&GO",
+        "opening_hours": "24/7",
+        "parking:fee": "no",
+        "socket:type2_combo": "2",
+        "socket:type2_combo:output": "150 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.3552279,
+          45.3783065
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13310874259",
+      "properties": {
+        "@id": "node/13310874259",
+        "access": "yes",
+        "amenity": "charging_station",
+        "authentication:app": "yes",
+        "brand": "Orion",
+        "capacity": "2",
+        "contact:email": "emobility@oriontelekom.rs",
+        "contact:phone": "+381 11 4100333",
+        "contact:website": "https://oriontelekom.rs/",
+        "covered": "no",
+        "description": "Southbound direction",
+        "fee": "no",
+        "hgv": "no",
+        "motorcar": "yes",
+        "name": "Orion - Naplatna stanica Stara Pazova",
+        "opening_hours": "24/7",
+        "parking:fee": "no",
+        "ref": "1285;1286",
+        "socket:type2_cable": "1",
+        "socket:type2_cable:output": "22 kW",
+        "socket:type2_combo": "1",
+        "socket:type2_combo:output": "75 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.2013509,
+          45.0052982
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13310965714",
+      "properties": {
+        "@id": "node/13310965714",
+        "access": "yes",
+        "amenity": "charging_station",
+        "authentication:app": "yes",
+        "brand": "Orion",
+        "capacity": "2",
+        "contact:email": "emobility@oriontelekom.rs",
+        "contact:phone": "+381 11 4100333",
+        "contact:website": "https://oriontelekom.rs/",
+        "covered": "no",
+        "description": "Northbound direction - towards Belgrade",
+        "fee": "no",
+        "hgv": "no",
+        "motorcar": "yes",
+        "name": "Orion - Putevi Srbije naplatna stanica Preševo",
+        "opening_hours": "24/7",
+        "operator": "Putevi Srbije",
+        "parking:fee": "no",
+        "ref": "1173;1174",
+        "socket:chademo": "1",
+        "socket:chademo:output": "40 kW",
+        "socket:type2_combo": "1",
+        "socket:type2_combo:output": "40 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.7099533,
+          42.3034584
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13310970419",
+      "properties": {
+        "@id": "node/13310970419",
+        "access": "yes",
+        "amenity": "charging_station",
+        "authentication:app": "yes",
+        "brand": "Orion",
+        "capacity": "3",
+        "contact:email": "emobility@oriontelekom.rs",
+        "contact:phone": "+381 11 4100333",
+        "contact:website": "https://oriontelekom.rs/",
+        "covered": "no",
+        "description": "Southbound direction",
+        "fee": "no",
+        "hgv": "no",
+        "motorcar": "yes",
+        "name": "Orion - Naplatna stanica Ćićevac",
+        "note": "ABB Terra 124",
+        "opening_hours": "24/7",
+        "operator": "Putevi Srbije",
+        "parking:fee": "no",
+        "ref": "1326;1327;1328",
+        "socket:type2": "1",
+        "socket:type2:output": "22 kW",
+        "socket:type2_combo": "2",
+        "socket:type2_combo:output": "120 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.4207052,
+          43.723014
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13312080622",
+      "properties": {
+        "@id": "node/13312080622",
+        "access": "yes",
+        "amenity": "charging_station",
+        "capacity": "4",
+        "covered": "yes",
+        "fee": "yes",
+        "motorcar": "yes",
+        "name": "Ledi MS Brestovac",
+        "opening_hours": "24/7",
+        "parking:fee": "no",
+        "payment:cash": "yes",
+        "payment:credit_cards": "yes",
+        "socket:type2_combo": "4",
+        "socket:type2_combo:output": "120 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.8887889,
+          43.1495431
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13312088642",
+      "properties": {
+        "@id": "node/13312088642",
+        "access": "yes",
+        "amenity": "charging_station",
+        "capacity": "15",
+        "covered": "yes",
+        "fee": "yes",
+        "motorcar": "yes",
+        "name": "Ledi MS Nova Pazova",
+        "opening_hours": "24/7",
+        "parking:fee": "no",
+        "payment:cash": "yes",
+        "payment:credit_cards": "yes",
+        "socket:chademo": "6",
+        "socket:chademo:output": "50 kW",
+        "socket:type2": "3",
+        "socket:type2:output": "22 kW",
+        "socket:type2_combo": "6",
+        "socket:type2_combo:output": "350 kW;175 kW;50 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.2332732,
+          44.9690459
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13313453050",
+      "properties": {
+        "@id": "node/13313453050",
+        "amenity": "charging_station",
+        "brand": "Charge&GO",
+        "capacity": "2",
+        "fee": "yes",
+        "opening_hours": "24/7",
+        "socket:type:output": "70"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          22.3061159,
+          43.2201084
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13316672162",
+      "properties": {
+        "@id": "node/13316672162",
+        "amenity": "charging_station",
+        "brand": "Orion eMobility",
+        "fee": "yes",
+        "payment:app": "yes",
+        "socket:chademo": "1",
+        "socket:chademo:output": "50 kW",
+        "socket:type2": "1",
+        "socket:type2:output": "22 kW",
+        "socket:type2_combo": "1",
+        "socket:type2_combo:output": "75 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.3692797,
+          44.8316978
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13316918838",
+      "properties": {
+        "@id": "node/13316918838",
+        "amenity": "charging_station",
+        "brand": "Charge&Go",
+        "capacity": "2",
+        "fee": "yes",
+        "manufacturer": "Kostad",
+        "payment:app": "yes",
+        "socket:type2_combo": "2",
+        "socket:type2_combo:output": "140 kW",
+        "website": "https://chargego.rs/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.862736,
+          43.1825046
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13316918839",
+      "properties": {
+        "@id": "node/13316918839",
+        "amenity": "charging_station",
+        "brand": "Charge&Go",
+        "capacity": "2",
+        "fee": "yes",
+        "fixme": "Navedite tačnu lokaciju",
+        "manufacturer": "Kostad",
+        "payment:app": "yes",
+        "socket:type2_combo": "2",
+        "socket:type2_combo:output": "150 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.4171764,
+          44.8099634
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13316918840",
+      "properties": {
+        "@id": "node/13316918840",
+        "amenity": "charging_station",
+        "brand": "Charge&Go",
+        "fee": "yes",
+        "manufacturer": "Kostad",
+        "payment:app": "yes",
+        "socket:type2_combo": "2",
+        "socket:type2_combo:output": "120 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.472825,
+          44.7604582
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13317124914",
+      "properties": {
+        "@id": "node/13317124914",
+        "amenity": "charging_station",
+        "brand": "Charge&Go",
+        "capacity": "2",
+        "fee": "yes",
+        "manufacturer": "Kostad",
+        "payment:app": "yes",
+        "socket:type2_combo": "2",
+        "socket:type2_combo:output": "50 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.8257088,
+          45.2772486
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13317124915",
+      "properties": {
+        "@id": "node/13317124915",
+        "amenity": "charging_station",
+        "brand": "Charge&Go",
+        "fee": "yes",
+        "manufacturer": "Schneider Electric",
+        "payment:cards": "yes",
+        "socket:type2_combo": "2",
+        "socket:type2_combo:output": "120 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.1059323,
+          44.2066898
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13317235499",
+      "properties": {
+        "@id": "node/13317235499",
+        "amenity": "charging_station",
+        "brand": "Charge&Go",
+        "fee": "yes",
+        "fixme": "Наведите тачну локацију, број и врсту портова за пуњење",
+        "payment:app": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          22.819403,
+          43.0002756
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13320386074",
+      "properties": {
+        "@id": "node/13320386074",
+        "amenity": "charging_station",
+        "brand": "Charge&Go",
+        "fee": "yes",
+        "fixme": "Сазнајте тачну локацију станице за пуњење",
+        "manufacturer": "Kostad",
+        "payment:app": "yes",
+        "socket:type2_combo": "2",
+        "socket:type2_combo:output": "120 kW",
+        "website": "https://chargego.rs/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.9006422,
+          42.5440742
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13320386075",
+      "properties": {
+        "@id": "node/13320386075",
+        "amenity": "charging_station",
+        "brand": "Charge&Go",
+        "fee": "yes",
+        "manufacturer": "Kostad",
+        "payment:app": "yes",
+        "socket:type2_combo": "2",
+        "socket:type2_combo:output": "45 kW",
+        "website": "https://chargego.rs/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          22.2602593,
+          43.9103493
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13320431183",
+      "properties": {
+        "@id": "node/13320431183",
+        "amenity": "charging_station",
+        "brand": "Charge&Go",
+        "fee": "yes",
+        "fixme": "Сазнајте тачну локацију станице за пуњење",
+        "manufacturer": "Kostad",
+        "payment:app": "yes",
+        "socket:type2_combo": "2",
+        "socket:type2_combo:output": "110 kW",
+        "website": "https://chargego.rs/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.278285,
+          43.964394
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13320431184",
+      "properties": {
+        "@id": "node/13320431184",
+        "amenity": "charging_station",
+        "brand": "Charge&Go",
+        "fee": "yes",
+        "fixme": "Сазнајте тачну локацију станице за пуњење",
+        "manufacturer": "Kostad",
+        "payment:app": "yes",
+        "socket:type2_combo": "2",
+        "socket:type2_combo:output": "150 kW",
+        "website": "https://chargego.rs/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.8931519,
+          44.0024576
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13339598301",
+      "properties": {
+        "@id": "node/13339598301",
+        "amenity": "charging_station",
+        "brand": "Orion eMobility",
+        "fee": "yes",
+        "manufacturer": "Alpitronic",
+        "payment:app": "yes",
+        "socket:chademo": "1",
+        "socket:chademo:output": "60 kW",
+        "socket:type2": "1",
+        "socket:type2_combo": "1",
+        "socket:type2_combo:output": "60 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.567597,
+          44.7074038
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13343550063",
+      "properties": {
+        "@id": "node/13343550063",
+        "access": "restricted",
+        "amenity": "charging_station",
+        "manufacturer": "ABB",
+        "socket:type2": "2",
+        "socket:type2:output": "22 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.477843,
+          44.8064678
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13367910562",
+      "properties": {
+        "@id": "node/13367910562",
+        "amenity": "charging_station",
+        "brand": "RapidCharge",
+        "capacity": "120",
+        "operator": "RapidCharge",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0270404,
+          42.5860965
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13379053204",
+      "properties": {
+        "@id": "node/13379053204",
+        "access": "yes",
+        "amenity": "charging_station",
+        "authentication:app": "yes",
+        "brand": "Orion",
+        "capacity": "2",
+        "contact:email": "emobility@oriontelekom.rs",
+        "contact:phone": "+381 11 4100333",
+        "contact:website": "https://oriontelekom.rs/",
+        "covered": "no",
+        "fee": "no",
+        "hgv": "no",
+        "motorcar": "yes",
+        "name": "Orion - Odmorište Jerina",
+        "opening_hours": "24/7",
+        "operator": "Putevi Srbije",
+        "parking:fee": "no",
+        "ref": "1356;1357",
+        "socket:type2": "1",
+        "socket:type2:output": "22 kW",
+        "socket:type2_combo": "2",
+        "socket:type2_combo:output": "75 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.8139393,
+          44.5828463
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13534169497",
+      "properties": {
+        "@id": "node/13534169497",
+        "access": "private",
+        "amenity": "charging_station",
+        "capacity": "1",
+        "fee": "no",
+        "motorcar": "yes",
+        "motorcycle": "no",
+        "operator": "Факултет техничких наука",
+        "socket:type2_cable": "1",
+        "socket:type2_cable:output": "22kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.8503262,
+          45.2454581
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13622746585",
+      "properties": {
+        "@id": "node/13622746585",
+        "access": "yes",
+        "amenity": "charging_station",
+        "authentication:app": "yes",
+        "brand": "Orion",
+        "capacity": "2",
+        "contact:email": "emobility@oriontelekom.rs",
+        "contact:phone": "+381 11 4100333",
+        "contact:website": "https://oriontelekom.rs/",
+        "covered": "no",
+        "fee": "no",
+        "hgv": "no",
+        "motorcar": "yes",
+        "name": "Orion - JP Putevi Srbije",
+        "opening_hours": "24/7",
+        "operator": "Putevi Srbije",
+        "parking:fee": "no",
+        "ref": "1358;1359",
+        "socket:type2": "1",
+        "socket:type2:output": "22 kW",
+        "socket:type2_combo": "1",
+        "socket:type2_combo:output": "75 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          22.1694754,
+          43.2515312
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13622746586",
+      "properties": {
+        "@id": "node/13622746586",
+        "access": "yes",
+        "amenity": "charging_station",
+        "authentication:app": "yes",
+        "brand": "Orion",
+        "capacity": "2",
+        "contact:email": "emobility@oriontelekom.rs",
+        "contact:phone": "+381 11 4100333",
+        "contact:website": "https://oriontelekom.rs/",
+        "covered": "no",
+        "fee": "no",
+        "hgv": "no",
+        "motorcar": "yes",
+        "name": "Orion - JP Putevi Srbije",
+        "opening_hours": "24/7",
+        "operator": "Putevi Srbije",
+        "parking:fee": "no",
+        "ref": "1362;1363",
+        "socket:type2": "1",
+        "socket:type2:output": "22 kW",
+        "socket:type2_combo": "1",
+        "socket:type2_combo:output": "75 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          22.1663815,
+          43.2536533
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13622779639",
+      "properties": {
+        "@id": "node/13622779639",
+        "access": "yes",
+        "amenity": "charging_station",
+        "authentication:app": "yes",
+        "brand": "Orion",
+        "capacity": "4",
+        "contact:email": "emobility@oriontelekom.rs",
+        "contact:phone": "+381 11 4100333",
+        "contact:website": "https://oriontelekom.rs/",
+        "covered": "no",
+        "fee": "no",
+        "hgv": "no",
+        "motorcar": "yes",
+        "name": "Orion - Putevi Srbije naplatna stanica Vrnjačka Banja",
+        "opening_hours": "24/7",
+        "operator": "Putevi Srbije",
+        "parking:fee": "no",
+        "ref": "1344;1345;1346",
+        "socket:type2": "1",
+        "socket:type2:output": "22 kW",
+        "socket:type2_combo": "2",
+        "socket:type2_combo:output": "60 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9117433,
+          43.649452
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13622784822",
+      "properties": {
+        "@id": "node/13622784822",
+        "access": "yes",
+        "amenity": "charging_station",
+        "authentication:app": "yes",
+        "brand": "Orion",
+        "capacity": "3",
+        "contact:email": "emobility@oriontelekom.rs",
+        "contact:phone": "+381 11 4100333",
+        "contact:website": "https://oriontelekom.rs/",
+        "covered": "no",
+        "fee": "no",
+        "hgv": "no",
+        "motorcar": "yes",
+        "name": "Orion - Putevi Srbije naplatna stanica Trstenik",
+        "opening_hours": "24/7",
+        "operator": "Putevi Srbije",
+        "parking:fee": "no",
+        "ref": "1336;1337;1338",
+        "socket:type2": "1",
+        "socket:type2:output": "22 kW",
+        "socket:type2_combo": "2",
+        "socket:type2_combo:output": "60 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0220304,
+          43.619692
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13841833514",
+      "properties": {
+        "@id": "node/13841833514",
+        "access": "yes",
+        "amenity": "charging_station",
+        "capacity": "2",
+        "covered": "no",
+        "fee": "yes",
+        "level": "0",
+        "operator": "Charge&Go",
+        "socket:type2_combo": "2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.339874,
+          43.5699364
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/14087523491",
+      "properties": {
+        "@id": "node/14087523491",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.3902351,
+          44.8130198
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/14103645539",
+      "properties": {
+        "@id": "node/14103645539",
+        "amenity": "charging_station",
+        "check_date": "2026-08-18"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.4822858,
+          43.9963141
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/14142441100",
+      "properties": {
+        "@id": "node/14142441100",
+        "amenity": "charging_station",
+        "capacity": "2",
+        "covered": "yes",
+        "payment:account_cards": "yes",
+        "socket:type2": "2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.3929025,
+          45.3774424
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/14167014009",
+      "properties": {
+        "@id": "node/14167014009",
+        "access": "yes",
+        "amenity": "charging_station",
+        "bicycle": "yes",
+        "brand": "Econec",
+        "check_date": "2026-09-09",
+        "fee": "no",
+        "motorcar": "no",
+        "start_date": "2026-09-02",
+        "website": "https://maximumpower.com.cy/product/econec-ebike-box-stand-public-bicycle-repair-station/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.6136813,
+          44.9704259
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/14206109253",
+      "properties": {
+        "@id": "node/14206109253",
+        "access": "yes",
+        "amenity": "charging_station",
+        "bicycle": "yes",
+        "fee": "yes",
+        "motorcar": "no",
+        "source": "survey"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.1585332,
+          42.6609594
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/14254221809",
+      "properties": {
+        "@id": "node/14254221809",
+        "access": "customers",
+        "addr:floor": "0",
+        "amenity": "charging_station",
+        "capacity": "3",
+        "check_date": "2026-10-03",
+        "covered": "no",
+        "fee": "yes",
+        "operator": "Cacttus",
+        "payment:cash": "no",
+        "vehicle": "bike"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.1582497,
+          42.6605594
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/14284008063",
+      "properties": {
+        "@id": "node/14284008063",
+        "access": "yes",
+        "amenity": "charging_station",
+        "capacity": "2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.1220335,
+          44.8786272
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/14287145352",
+      "properties": {
+        "@id": "node/14287145352",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.3340384,
+          43.6054238
+        ]
+      }
+    }
+  ]
+}

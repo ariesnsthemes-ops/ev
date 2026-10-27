@@ -45,9 +45,16 @@ Public launch:
   3. Add the site to Google Search Console and Bing Webmaster Tools and submit sitemap.xml.
 
 Fuel prices (calculator):
-  .github/workflows/cene-goriva.yml runs build/update_fuel.py every Friday after 15:00 (several tries until 18:20,
-  plus Saturday morning). It reads BMB 95 and Evrodizel from nafta.hr/sr/cene-goriva-srbija, checks them
+  .github/workflows/cene-goriva.yml runs build/update_fuel.py every day at 7:00 and on Friday at 15:10 (retry 16:10).
+  Every successful run writes the day of the check ("provereno", shown as "cene na dan ..."). It reads BMB 95 and Evrodizel from nafta.hr/sr/cene-goriva-srbija, checks them
   (150-320 RSD, at least 3 companies with the same top price, at most 20 RSD change in a week) and, only if a price
-  changed, writes data/gorivo.json, rebuilds the site and pushes; Cloudflare then publishes.
+  changed, also the new prices; it rebuilds the site and pushes; Cloudflare then publishes.
   If a check fails, nothing changes and GitHub emails "Run failed: Cene goriva". Results: GitHub > Actions > Cene goriva.
   Manual check: Actions > Cene goriva > Run workflow. Manual price change: edit data/gorivo.json and rebuild.
+
+Chargers from OpenStreetMap (Punjači iz OpenStreetMap):
+  Put the overpass-turbo.eu GeoJSON export in data/chargers-osm.geojson (that exact name). The build merges it with
+  Open Charge Map and data/chargers-extra.json; the same spot within 60 m is kept once (extra.json wins, then the most
+  recently checked entry). Private chargers are left out. The map then credits "© OpenStreetMap saradnici (ODbL)".
+  .github/workflows/izgradnja-sajta.yml rebuilds site/ automatically after every push that changes data/, build/,
+  img/ or logos/, so a file uploaded through the GitHub website is enough.

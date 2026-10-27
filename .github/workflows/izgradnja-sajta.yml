@@ -1,0 +1,44 @@
+# Rebuilds the site/ folder whenever source files change on GitHub (for example a new
+# data/chargers-osm.geojson uploaded through the GitHub website), then commits it.
+# Cloudflare publishes the new site/ automatically. The push made here does not start this workflow again.
+name: Izgradnja sajta
+
+on:
+  push:
+    paths:
+      - 'data/**'
+      - 'build/**'
+      - 'img/**'
+      - 'logos/**'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: izgradnja-sajta
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Build site
+        run: python3 build/build_site.py
+
+      - name: Commit and push the rebuilt site
+        run: |
+          if [ -z "$(git status --porcelain site)" ]; then echo "Sajt je već ažuran."; exit 0; fi
+          git config user.name "evomobil izgradnja"
+          git config user.email "office@evomobil.rs"
+          git add site
+          git commit -m "Sajt ponovo izgrađen"
+          git pull --rebase --autostash
+          git push

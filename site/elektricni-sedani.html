@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="only light">
 <title>Električni sedani i karavani u Srbiji | evomobil.rs</title>
 <meta name="description" content="Električni sedani i karavani u Srbiji: domet, baterija i gde ih kupiti.">
 <link rel="canonical" href="https://www.evomobil.rs/elektricni-sedani">
@@ -26,7 +27,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap">
-<link rel="stylesheet" href="assets/site.css?v=a74fd357">
+<link rel="stylesheet" href="assets/site.css?v=8495e97c">
 <style>/* logo masks resolve against the page, not the stylesheet */.blogo{-webkit-mask:var(--l) center/contain no-repeat;mask:var(--l) center/contain no-repeat}</style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Početna", "item": "https://www.evomobil.rs/"}, {"@type": "ListItem", "position": 2, "name": "Električni sedani i karavani u Srbiji", "item": "https://www.evomobil.rs/elektricni-sedani"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ItemList", "name": "Električni sedani i karavani u Srbiji", "itemListOrder": "https://schema.org/ItemListUnordered", "itemListElement": [{"@type": "ListItem", "position": 1, "url": "https://www.evomobil.rs/modeli/bmw-i3", "name": "BMW i3"}, {"@type": "ListItem", "position": 2, "url": "https://www.evomobil.rs/modeli/bmw-i7", "name": "BMW i7"}, {"@type": "ListItem", "position": 3, "url": "https://www.evomobil.rs/modeli/volkswagen-id-7", "name": "Volkswagen ID.7"}, {"@type": "ListItem", "position": 4, "url": "https://www.evomobil.rs/modeli/volvo-es90", "name": "Volvo ES90"}, {"@type": "ListItem", "position": 5, "url": "https://www.evomobil.rs/modeli/bmw-i7-m70", "name": "BMW i7 M70"}, {"@type": "ListItem", "position": 6, "url": "https://www.evomobil.rs/modeli/hyundai-ioniq-6", "name": "Hyundai IONIQ 6"}, {"@type": "ListItem", "position": 7, "url": "https://www.evomobil.rs/modeli/bmw-i4", "name": "BMW i4"}, {"@type": "ListItem", "position": 8, "url": "https://www.evomobil.rs/modeli/porsche-taycan-4", "name": "Porsche Taycan 4"}, {"@type": "ListItem", "position": 9, "url": "https://www.evomobil.rs/modeli/audi-rs-e-tron-gt", "name": "Audi RS e-tron GT"}, {"@type": "ListItem", "position": 10, "url": "https://www.evomobil.rs/modeli/byd-seal", "name": "BYD Seal"}, {"@type": "ListItem", "position": 11, "url": "https://www.evomobil.rs/modeli/mazda-6e", "name": "Mazda 6e"}, {"@type": "ListItem", "position": 12, "url": "https://www.evomobil.rs/modeli/bmw-i4-m50", "name": "BMW i4 M60"}, {"@type": "ListItem", "position": 13, "url": "https://www.evomobil.rs/modeli/bmw-i5", "name": "BMW i5 M60"}, {"@type": "ListItem", "position": 14, "url": "https://www.evomobil.rs/modeli/jmev-elight", "name": "JMEV Elight"}, {"@type": "ListItem", "position": 15, "url": "https://www.evomobil.rs/modeli/hyundai-ioniq-6-n", "name": "Hyundai IONIQ 6 N"}, {"@type": "ListItem", "position": 16, "url": "https://www.evomobil.rs/modeli/citroen-e-c4-x", "name": "Citroën ë-C4 X"}, {"@type": "ListItem", "position": 17, "url": "https://www.evomobil.rs/modeli/mg-mg5-electric", "name": "MG5 Electric"}]}</script>
@@ -103,10 +104,11 @@
   /* light theme by default, whatever the visitor's system setting; dark only when chosen with the button */
   (function(){var r=document.documentElement,k='evc-theme-s',t=null;try{t=sessionStorage.getItem(k)}catch(e){}
     r.setAttribute('data-evtheme',t==='dark'?'dark':'light');
+    function cs(d){var m=document.querySelector('meta[name=color-scheme]');if(m)m.content=d?'dark':'only light'}cs(t==='dark');
     var b=document.getElementById('theme-btn');
     function sync(){var d=r.getAttribute('data-evtheme')==='dark',l=d?'Uključi svetlu temu':'Uključi tamnu temu';b.setAttribute('aria-pressed',d);b.setAttribute('aria-label',l);b.title=l}
     sync();
-    b.addEventListener('click',function(){var d=r.getAttribute('data-evtheme')!=='dark';r.setAttribute('data-evtheme',d?'dark':'light');try{sessionStorage.setItem(k,d?'dark':'light')}catch(e){}sync()});
+    b.addEventListener('click',function(){var d=r.getAttribute('data-evtheme')!=='dark';r.setAttribute('data-evtheme',d?'dark':'light');cs(d);try{sessionStorage.setItem(k,d?'dark':'light')}catch(e){}sync()});
   })();
   </script>
 </header>

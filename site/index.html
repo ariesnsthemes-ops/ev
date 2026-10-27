@@ -5,6 +5,7 @@
 <meta name="robots" content="noindex, nofollow">
 <script>document.documentElement.setAttribute("data-ph","photo")</script>
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="only light">
 <title>Električni automobili u Srbiji: modeli, domet i distributeri | evomobil.rs</title>
 <link rel="canonical" href="https://www.evomobil.rs/">
 <meta property="og:type" content="website">
@@ -31,7 +32,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap">
-<link rel="stylesheet" href="assets/site.css?v=a74fd357"><style>/* logo masks resolve against the page, not the stylesheet */.blogo{-webkit-mask:var(--l) center/contain no-repeat;mask:var(--l) center/contain no-repeat}</style>
+<link rel="stylesheet" href="assets/site.css?v=8495e97c"><style>/* logo masks resolve against the page, not the stylesheet */.blogo{-webkit-mask:var(--l) center/contain no-repeat;mask:var(--l) center/contain no-repeat}</style>
 
 
 
@@ -109,10 +110,11 @@
   /* light theme by default, whatever the visitor's system setting; dark only when chosen with the button */
   (function(){var r=document.documentElement,k='evc-theme-s',t=null;try{t=sessionStorage.getItem(k)}catch(e){}
     r.setAttribute('data-evtheme',t==='dark'?'dark':'light');
+    function cs(d){var m=document.querySelector('meta[name=color-scheme]');if(m)m.content=d?'dark':'only light'}cs(t==='dark');
     var b=document.getElementById('theme-btn');
     function sync(){var d=r.getAttribute('data-evtheme')==='dark',l=d?'Uključi svetlu temu':'Uključi tamnu temu';b.setAttribute('aria-pressed',d);b.setAttribute('aria-label',l);b.title=l}
     sync();
-    b.addEventListener('click',function(){var d=r.getAttribute('data-evtheme')!=='dark';r.setAttribute('data-evtheme',d?'dark':'light');try{sessionStorage.setItem(k,d?'dark':'light')}catch(e){}sync()});
+    b.addEventListener('click',function(){var d=r.getAttribute('data-evtheme')!=='dark';r.setAttribute('data-evtheme',d?'dark':'light');cs(d);try{sessionStorage.setItem(k,d?'dark':'light')}catch(e){}sync()});
   })();
   </script>
 </header>
@@ -535,6 +537,15 @@
       +'<a href="'+href+'" class="btn btn-dark">Detalji modela <span class="arr">→</span></a></div>';
     return a;
   }
+  // "Izdvojeni modeli": 6 random models that have a photo, one per brand, different on every visit
+  setTimeout(function(){const pool=ALL.filter(m=>m.img),seen={},pick=[];
+    for(let i=pool.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[pool[i],pool[j]]=[pool[j],pool[i]]}
+    pool.forEach(m=>{if(pick.length<6&&!seen[m.b]){seen[m.b]=1;pick.push(m)}});
+    if(pick.length<6)return;
+    const fresh=pick.map(m=>{const c=mkCard(m);c.hidden=false;c.dataset.tags=m.t.join(' ');c.dataset.name=m.n;c.dataset.range=m.r||0;c.dataset.brand=m.b;return c});
+    cards.forEach(c=>c.remove());cards.length=0;Object.keys(byId).forEach(k=>delete byId[k]);
+    fresh.forEach((c,k)=>{grid.insertBefore(c,empty);cards.push(c);byId[pick[k].id]=c});
+  },0);   /* after the rest of this script has run (mkCard needs helpers defined further down) */
   function searchAll(test,{cat=null}={}){
     clearExtra();cards.forEach(c=>c.hidden=true);
     const res=ALL.filter(test), frag=document.createDocumentFragment();

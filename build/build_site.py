@@ -177,6 +177,17 @@ def join_sr(items):
 
 # ------------------------------------------------------------------ extra CSS for the generated pages
 extra_css = r'''
+/* phones: no blue flash on tap (text can still be selected with a long press) */
+html{-webkit-tap-highlight-color:transparent}
+a,button,label,summary,[role="button"],[role="option"],input,select{-webkit-tap-highlight-color:transparent}
+
+
+/* light by default for every visitor: no automatic dark mode from the phone or browser setting (dark only with the site button) */
+:root{color-scheme:only light}
+:root[data-evtheme="dark"]{color-scheme:dark}
+/* dark buttons ("Pronađi automobil", "Prihvati"...): a little darker on hover */
+.btn-dark:hover{background:color-mix(in srgb,var(--btn) 78%,#000);box-shadow:none}
+:root[data-evtheme="dark"] .btn-dark:hover{background:color-mix(in srgb,var(--btn) 86%,#000)}
 /* dark buttons with an arrow ("Detalji modela →" ...): stay the same black on hover, only the arrow moves */
 .btn-dark:has(.arr):hover{background:var(--btn);box-shadow:none}
 .btn-dark:has(.arr):active{transform:none}
@@ -213,7 +224,6 @@ footer .about{max-width:36ch;line-height:1.6}
 .dgrid a:hover{color:var(--green-ink);text-decoration:underline;text-decoration-color:var(--green);text-decoration-thickness:1.5px}
 /* dark buttons ("Prihvati", "Pronađi automobil"...): visible hover */
 .btn-dark{transition:background-color .2s,box-shadow .2s,transform .2s}
-.btn-dark:hover{background:color-mix(in srgb,var(--btn) 84%,var(--bg));box-shadow:0 6px 16px color-mix(in srgb,var(--btn) 20%,transparent)}
 .btn-dark:active{transform:translateY(1px)}
 .btn-ghost{transition:border-color .2s,background-color .2s}
 .btn-ghost:hover{background:var(--bg-alt)}
@@ -895,7 +905,7 @@ def page(path, title, desc, body, ld=(), og_image=None, extra_js='', extra_head=
     hdr = relink(header, pre)
     ftr = relink(footer, pre)
     return (f'<!doctype html>\n<html lang="sr-Latn">\n<head>\n<meta charset="utf-8">\n'
-            '<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">\n'
+            '<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">\n<meta name="color-scheme" content="only light">\n'
             f'<title>{E(title)}</title>\n<meta name="description" content="{E(desc)}">\n'
             f'<link rel="canonical" href="{canonical}">\n'
             f'<meta property="og:type" content="website">\n<meta property="og:site_name" content="{SITE}">\n<meta property="og:locale" content="sr_RS">\n'
@@ -1480,6 +1490,46 @@ def charger_rows():
             'down': x.get('StatusTypeID') not in (50, None),
             'seen': (x.get('DateLastVerified') or x.get('DateLastStatusUpdate') or x.get('DateCreated') or '')[:10],
         })
+    # OpenStreetMap export (data/chargers-osm.geojson, made with overpass-turbo.eu; see README "Punjači iz OpenStreetMap")
+    of = f'{ROOT}/data/chargers-osm.geojson'
+    if os.path.exists(of):
+        OSM_SOCK = {'type2_combo': 'CCS', 'type2': 'Tip 2', 'type2_cable': 'Tip 2', 'chademo': 'CHAdeMO',
+                    'tesla_supercharger': 'Tesla', 'tesla_supercharger_ccs': 'CCS', 'type1': 'Tip 1', 'type1_combo': 'CCS'}
+        def _kw(v):
+            nums = [float(n.replace(',', '.')) for n in re.findall(r'\d+(?:[.,]\d+)?', str(v or ''))]
+            nums = [n / 1000 if n > 1000 else n for n in nums]
+            return max(nums) if nums else 0
+        for x in json.load(open(of, encoding='utf-8')).get('features', []):
+            t = x.get('properties') or {}
+            t = t.get('tags', t)          # overpass-turbo puts tags at the top level; some tools nest them under "tags"
+            if t.get('amenity') != 'charging_station' or t.get('access') in ('private', 'no') or t.get('disused') == 'yes':
+                continue
+            g = x.get('geometry') or {}
+            c = g.get('coordinates')
+            if not c:
+                continue
+            if g.get('type') == 'Point':
+                lng_, lat_ = c[0], c[1]
+            else:                          # a way drawn as an area: use the middle of its outline
+                ring = c[0] if g.get('type') == 'Polygon' else (c[0][0] if g.get('type') == 'MultiPolygon' else c)
+                lng_, lat_ = sum(p[0] for p in ring) / len(ring), sum(p[1] for p in ring) / len(ring)
+            if not (41.8 <= lat_ <= 46.3 and 18.8 <= lng_ <= 23.1):
+                continue
+            conns = sorted({lab for k, lab in OSM_SOCK.items() if t.get('socket:' + k) not in (None, '', 'no', '0')})
+            kw = max([_kw(t.get(k)) for k in t if k.startswith('socket:') and k.endswith(':output')]
+                     + [_kw(t.get('charging_station:output')), _kw(t.get('maxpower'))])
+            name = lat(t.get('name') or t.get('name:sr-Latn') or t.get('brand') or t.get('operator') or '') or 'Punjač'
+            if t.get('operator') and lat(t['operator']) not in name and name != 'Punjač':
+                name = f'{name} ({lat(t["operator"])})'
+            street = ' '.join(v for v in (lat(t.get('addr:street')), t.get('addr:housenumber') or '') if v)
+            pts = re.findall(r'\d+', str(t.get('capacity') or ''))
+            rows.append({'id': f'o{x.get("id") or len(rows)}'.replace('/', ''), 'name': name, 'lat': lat_, 'lng': lng_,
+                         'addr': street, 'town': town(t.get('addr:city') or t.get('addr:place') or ''),
+                         'kw': round(kw) if kw else None, 'conn': conns, 'points': int(pts[0]) if pts else None,
+                         'acc': 'gosti' if t.get('access') == 'customers' else 'javni',
+                         'app': 'app' in str(t.get('authentication:app') or '') or t.get('authentication:app') == 'yes',
+                         'down': t.get('operational_status') in ('closed', 'broken', 'out_of_order'),
+                         'seen': (t.get('check_date') or t.get('survey:date') or '2000-01-01')[:10]})
     # extra chargers added by hand (data/chargers-extra.json), e.g. motorway chargers from Putevi Srbije, NIS, Charge&GO:
     # [{"name": "...", "lat": 44.81, "lng": 20.46, "address": "...", "town": "Beograd", "kw": 50,
     #   "connectors": ["CCS", "Tip 2"], "access": "javni", "app": true, "points": 2, "source": "..."}]
@@ -1509,6 +1559,8 @@ def charger_rows():
 
 import math
 CHARGERS = charger_rows()
+OSM_NOTE = (' i <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="nofollow noopener">© OpenStreetMap</a> saradnici (ODbL)'
+            if os.path.exists(f'{ROOT}/data/chargers-osm.geojson') else '')
 KW_STEPS = [s for s in (22, 50, 100, 150) if any((r['kw'] or 0) >= s for r in CHARGERS)]
 CONN_ORDER = [c for c in ('CCS', 'Tip 2', 'CHAdeMO', 'Tesla', 'Tip 1') if any(c in r['conn'] for r in CHARGERS)]
 
@@ -1589,7 +1641,7 @@ body = f'''
         <ul class="ch-list" id="ch-list">{''.join(charger_item(r) for r in CHARGERS)}</ul>
         <button type="button" class="btn btn-ghost ch-more" id="ch-more" hidden>Prikaži još</button>
         <div class="cat-empty" id="cat-empty" hidden><strong>Nijedan punjač ne odgovara izabranim filterima.</strong><button type="button" class="btn btn-ghost" id="cat-empty-reset">Poništi filtere</button></div>
-        <p class="price-note">Izvor podataka: <a href="https://openchargemap.org" target="_blank" rel="nofollow noopener">Open Charge Map</a>, otvorena baza punjača koju dopunjuju korisnici. Podaci mogu biti nepotpuni ili zastareli; cenu, radno vreme i dostupnost proverite kod operatera punjača.</p>
+        <p class="price-note">Izvor podataka: <a href="https://openchargemap.org" target="_blank" rel="nofollow noopener">Open Charge Map</a>{OSM_NOTE}, otvorene baze punjača koje dopunjuju korisnici. Podaci mogu biti nepotpuni ili zastareli; cenu, radno vreme i dostupnost proverite kod operatera punjača.</p>
       </div>
     </div>
   </section>
@@ -2075,7 +2127,7 @@ body = f"""
   </section>
 </main>
 """
-_kc_js = _kc_js.replace('__MODELS__', json.dumps(kc_models, ensure_ascii=False, separators=(',', ':'))).replace('__FUEL__', json.dumps({k: FUEL[k] for k in ('datum', 'benzin', 'dizel')}))
+_kc_js = _kc_js.replace('__MODELS__', json.dumps(kc_models, ensure_ascii=False, separators=(',', ':'))).replace('__FUEL__', json.dumps({k: FUEL.get(k) or FUEL['datum'] for k in ('datum', 'provereno', 'benzin', 'dizel')}))
 pages['kalkulator-troskova.html'] = page('kalkulator-troskova.html', f'Kalkulator troškova: struja ili gorivo | {SITE}',
     'Koliko košta vožnja električnim automobilom u odnosu na benzin ili dizel? Izaberite model, kilometražu i cenu struje i uporedite trošak na 100 km, mesečno i godišnje.',
     body, [ld_breadcrumbs(crumb), ld_faq(kc_qa),
@@ -2144,7 +2196,7 @@ _bi = common_js.index('/* "Uporedi": pick up to 3 models')
 CMP_BAR_JS = '(function(){\n  ' + common_js[_bi:common_js.index('})();', _bi) + 5]
 body_part = body_part.replace('</body>', '<script>' + CMP_BAR_JS + CONSENT_JS + '</script>\n</body>') if '</body>' in body_part else body_part + '<script>' + CMP_BAR_JS + CONSENT_JS + '</script>\n'
 pages['index.html'] = ('<!doctype html>\n<html lang="sr-Latn">\n<head>\n<meta charset="utf-8">\n'
-                       '<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">\n'
+                       '<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">\n<meta name="color-scheme" content="only light">\n'
                        + head_part + body_part[:body_start] + '\n</head>\n<body>\n' + body_part[body_start:] + '\n</body>\n</html>\n')
 # preview copy for the Claude artifact (the artifact host adds the document wrapper itself)
 preview = home_head_frag

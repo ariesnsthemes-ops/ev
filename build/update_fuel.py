@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
-"""Weekly fuel price update for the cost calculator (evomobil.rs).
+"""Fuel price check for the cost calculator (evomobil.rs).
 
-Reads the maximum retail prices for BMB 95 and Evrodizel, checks them, and writes data/gorivo.json
-only when a price changed. Run by .github/workflows/cene-goriva.yml every Friday after 15:00 (Belgrade).
+Reads the maximum retail prices for BMB 95 and Evrodizel, checks them and writes data/gorivo.json:
+  provereno = the day of this check (shown on the site as "cene na dan ...")
+  datum     = the Friday from which the current prices apply (changes only when a price changes)
+Run by .github/workflows/cene-goriva.yml every day at 7:00 and on Fridays at 15:10 (Belgrade).
 
 Source: nafta.hr/sr/cene-goriva-srbija (stable page, table per fuel with the price at AVIA, EKO, MOL, NIS, OMV...).
 The prices there are the government's maximum retail prices, set by the Ministry of Trade every Friday at 15:00.
@@ -113,12 +115,18 @@ def main():
                  'Ako je promena stvarna, upišite je ručno u data/gorivo.json.')
 
     print(f'Pročitano: BMB 95 {benzin} RSD/l, Evrodizel {dizel} RSD/l (prethodno {old["benzin"]} / {old["dizel"]})')
+    now = belgrade_now()
+    today = now.date().isoformat()
     if benzin == old['benzin'] and dizel == old['dizel']:
-        summary(f'### Cene goriva: bez promene\n\nBMB 95 {benzin} RSD/l, Evrodizel {dizel} RSD/l (važe od {old["datum"]}).\n')
-        print('Bez promene.')
+        old['provereno'] = today
+        with open(DATA, 'w', encoding='utf-8') as f:
+            json.dump(old, f, ensure_ascii=False, indent=1)
+            f.write('\n')
+        summary(f'### Cene goriva: bez promene\n\nBMB 95 {benzin} RSD/l, Evrodizel {dizel} RSD/l (važe od {old["datum"]}, provereno {today}).\n')
+        print(f'Bez promene, provereno {today}.')
         return
     prev_b, prev_d = old['benzin'], old['dizel']
-    old.update({'datum': last_friday_15(belgrade_now()).isoformat(), 'benzin': benzin, 'dizel': dizel, 'izvor_preuzimanja': URL})
+    old.update({'datum': last_friday_15(now).isoformat(), 'provereno': today, 'benzin': benzin, 'dizel': dizel, 'izvor_preuzimanja': URL})
     with open(DATA, 'w', encoding='utf-8') as f:
         json.dump(old, f, ensure_ascii=False, indent=1)
         f.write('\n')
