@@ -5,6 +5,7 @@
 <meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="color-scheme" content="only light">
+<script>/* Samsung Internet dark mode: offer the site dark theme to it */if(/SamsungBrowser/.test(navigator.userAgent)){document.documentElement.classList.add("sam");var m=document.querySelector("meta[name=color-scheme]");if(m)m.content="light dark"}</script>
 <title>Škoda Enyaq u Srbiji: domet, baterija i distributeri | evomobil.rs</title>
 <meta name="description" content="Škoda Enyaq, potpuno električni SUV. Domet do 431 / 582 km (WLTP), baterija 58 / 77 kWh. Specifikacije i kontakti distributera Škoda u Srbiji.">
 <link rel="canonical" href="https://www.evomobil.rs/modeli/skoda-enyaq">
@@ -24,7 +25,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap">
-<link rel="stylesheet" href="../assets/site.css?v=83d3b869">
+<link rel="stylesheet" href="../assets/site.css?v=82ea8980">
 <style>/* logo masks resolve against the page, not the stylesheet */.blogo{-webkit-mask:var(--l) center/contain no-repeat;mask:var(--l) center/contain no-repeat}</style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Početna", "item": "https://www.evomobil.rs/"}, {"@type": "ListItem", "position": 2, "name": "Brendovi", "item": "https://www.evomobil.rs/brendovi"}, {"@type": "ListItem", "position": 3, "name": "Škoda", "item": "https://www.evomobil.rs/brendovi/skoda"}, {"@type": "ListItem", "position": 4, "name": "Škoda Enyaq", "item": "https://www.evomobil.rs/modeli/skoda-enyaq"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Car", "name": "Škoda Enyaq", "model": "Enyaq", "brand": {"@type": "Brand", "name": "Škoda"}, "manufacturer": {"@type": "Organization", "name": "Škoda"}, "fuelType": "Electric", "vehicleTransmission": "Automatic", "description": "Škoda Enyaq je potpuno električni SUV brenda Škoda. Prema podacima proizvođača ili uvoznika ima domet do 431 / 582 km po WLTP normi i bateriju od 58 / 77 kWh. U Srbiji ga prodaju ovlašćeni distributeri u gradovima Beograd, Kragujevac, Kruševac, Niš, Novi Pazar, Novi Sad, Paraćin, Subotica, Valjevo, Zrenjanin, Čačak i Šabac.", "url": "https://www.evomobil.rs/modeli/skoda-enyaq", "bodyType": "SUV", "image": "https://www.evomobil.rs/img/evomobil-skoda-enyaq.webp", "vehicleSeatingCapacity": 5, "length": {"@type": "QuantitativeValue", "value": 4658, "unitCode": "MMT"}, "width": {"@type": "QuantitativeValue", "value": 1879, "unitCode": "MMT"}, "height": {"@type": "QuantitativeValue", "value": 1622, "unitCode": "MMT"}, "additionalProperty": [{"@type": "PropertyValue", "name": "Domet (WLTP)", "value": 582, "unitText": "km", "description": "do 431 / 582 km"}, {"@type": "PropertyValue", "name": "Kapacitet baterije", "value": "58 / 77", "unitText": "kWh"}]}</script>
@@ -94,16 +95,22 @@
       </button>
     </div>
   </div>
-  <script>/* logo: on mouse hover the bolt charges from bottom to top, then sparks fly; the E steps back (desktop pointers only) */
-  (function(){var b=document.querySelector('header.site .brand');if(!b||!window.matchMedia||!matchMedia('(hover:hover) and (pointer:fine)').matches||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
-    var t;b.addEventListener('mouseenter',function(){if(b.classList.contains('lg-play'))return;b.classList.add('lg-play');clearTimeout(t);t=setTimeout(function(){b.classList.remove('lg-play')},1700)})})();
+  <script>/* logo animation (the bolt charges from bottom to top and throws sparks, the E steps back):
+     on mouse hover (desktop), and on a tap/click of the logo. A tap that opens the homepage plays it there, after the page loads. */
+  (function(){var b=document.querySelector('header.site .brand'),K='evc-logo-play';if(!b||!window.matchMedia||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+    var t;function play(){if(b.classList.contains('lg-play'))return;b.classList.add('lg-play');clearTimeout(t);t=setTimeout(function(){b.classList.remove('lg-play')},1700)}
+    if(matchMedia('(hover:hover) and (pointer:fine)').matches)b.addEventListener('mouseenter',play);
+    b.addEventListener('click',function(){var h=b.getAttribute('href')||'';if(h.charAt(0)==='#')play();else try{sessionStorage.setItem(K,'1')}catch(e){}});
+    var go=null;try{go=sessionStorage.getItem(K);sessionStorage.removeItem(K)}catch(e){}
+    if(go)setTimeout(play,250);
+  })();
   </script>
   <script>
   /* light theme by default, whatever the visitor's system setting; dark only when chosen with the button */
   (function(){var r=document.documentElement,k='evc-theme-s',t=null;try{t=sessionStorage.getItem(k)}catch(e){}
     if(!t&&/SamsungBrowser/.test(navigator.userAgent)&&window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)t='dark';
     r.setAttribute('data-evtheme',t==='dark'?'dark':'light');
-    function cs(d){var m=document.querySelector('meta[name=color-scheme]');if(m)m.content=d?'dark':'only light'}cs(t==='dark');
+    function cs(d){var m=document.querySelector('meta[name=color-scheme]');if(m)m.content=r.classList.contains('sam')?'light dark':(d?'dark':'only light')}cs(t==='dark');
     var b=document.getElementById('theme-btn');
     function sync(){var d=r.getAttribute('data-evtheme')==='dark',l=d?'Uključi svetlu temu':'Uključi tamnu temu';b.setAttribute('aria-pressed',d);b.setAttribute('aria-label',l);b.title=l}
     sync();

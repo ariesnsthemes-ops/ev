@@ -191,6 +191,8 @@ a,button,label,summary,[role="button"],[role="option"],input,select{-webkit-tap-
 /* light by default for every visitor: no automatic dark mode from the phone or browser setting (dark only with the site button) */
 :root{color-scheme:only light}
 :root[data-evtheme="dark"]{color-scheme:dark}
+:root.sam{color-scheme:light dark}
+:root.sam[data-evtheme="dark"]{color-scheme:dark}
 /* dark buttons ("Pronađi automobil", "Prihvati"...): a little darker on hover */
 .btn-dark:hover{background:color-mix(in srgb,var(--btn) 78%,#000);box-shadow:none}
 :root[data-evtheme="dark"] .btn-dark:hover{background:color-mix(in srgb,var(--btn) 86%,#000)}
@@ -911,7 +913,7 @@ def page(path, title, desc, body, ld=(), og_image=None, extra_js='', extra_head=
     hdr = relink(header, pre)
     ftr = relink(footer, pre)
     return (f'<!doctype html>\n<html lang="sr-Latn">\n<head>\n<meta charset="utf-8">\n'
-            '<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">\n<meta name="color-scheme" content="only light">\n'
+            '<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">\n<meta name="color-scheme" content="only light">\n<script>/* Samsung Internet dark mode: offer the site dark theme to it */if(/SamsungBrowser/.test(navigator.userAgent)){document.documentElement.classList.add("sam");var m=document.querySelector("meta[name=color-scheme]");if(m)m.content="light dark"}</script>\n'
             f'<title>{E(title)}</title>\n<meta name="description" content="{E(desc)}">\n'
             f'<link rel="canonical" href="{canonical}">\n'
             f'<meta property="og:type" content="website">\n<meta property="og:site_name" content="{SITE}">\n<meta property="og:locale" content="sr_RS">\n'
@@ -2202,7 +2204,7 @@ _bi = common_js.index('/* "Uporedi": pick up to 3 models')
 CMP_BAR_JS = '(function(){\n  ' + common_js[_bi:common_js.index('})();', _bi) + 5]
 body_part = body_part.replace('</body>', '<script>' + CMP_BAR_JS + CONSENT_JS + '</script>\n</body>') if '</body>' in body_part else body_part + '<script>' + CMP_BAR_JS + CONSENT_JS + '</script>\n'
 pages['index.html'] = ('<!doctype html>\n<html lang="sr-Latn">\n<head>\n<meta charset="utf-8">\n'
-                       '<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">\n<meta name="color-scheme" content="only light">\n'
+                       '<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">\n<meta name="color-scheme" content="only light">\n<script>/* Samsung Internet dark mode: offer the site dark theme to it */if(/SamsungBrowser/.test(navigator.userAgent)){document.documentElement.classList.add("sam");var m=document.querySelector("meta[name=color-scheme]");if(m)m.content="light dark"}</script>\n'
                        + head_part + body_part[:body_start] + '\n</head>\n<body>\n' + body_part[body_start:] + '\n</body>\n</html>\n')
 # preview copy for the Claude artifact (the artifact host adds the document wrapper itself)
 preview = home_head_frag

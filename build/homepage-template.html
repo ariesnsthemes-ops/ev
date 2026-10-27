@@ -44,6 +44,20 @@
   --shadow:0 20px 50px rgba(0,0,0,.35); --shadow-sm:0 10px 30px rgba(0,0,0,.4);
   --logo-ink:#f1f5f9; color-scheme:dark;
 }
+/* Samsung Internet: its dark mode uses a site's own dark styles only when they sit in a prefers-color-scheme query
+   and the page declares "light dark"; the html gets class "sam" from a script in <head> */
+@media (prefers-color-scheme:dark){:root.sam:not([data-evtheme="light"]){
+  --bg:#0d131c; --bg-alt:#111925; --surface:#161f2c; --surface-2:#1d2836; --line:#283446;
+  --ink:#f1f5f9; --text:#cbd5e1; --muted:#9aa8bb; --faint:#7d8ba0;
+  --green:#4cc226; --green-ink:#72d84e; --green-soft:#1a2e1c;
+  --btn:#f1f5f9; --btn-fg:#0d131c;
+  --band:#161f2c; --band-fg:#ffffff; --band-muted:#a9b6c7;
+  --ad:#fb923c; --ad-soft:rgba(251,146,60,.08); --ad-fg:#1a0d04;
+  --shadow:0 20px 50px rgba(0,0,0,.35); --shadow-sm:0 10px 30px rgba(0,0,0,.4);
+  --logo-ink:#f1f5f9; color-scheme:dark;
+}}
+:root.sam{color-scheme:light dark}
+
 
 *{box-sizing:border-box}
 [hidden]{display:none!important}
@@ -699,16 +713,22 @@ h1,h2,h3{font-family:var(--font-head);letter-spacing:-.02em}
       </button>
     </div>
   </div>
-  <script>/* logo: on mouse hover the bolt charges from bottom to top, then sparks fly; the E steps back (desktop pointers only) */
-  (function(){var b=document.querySelector('header.site .brand');if(!b||!window.matchMedia||!matchMedia('(hover:hover) and (pointer:fine)').matches||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
-    var t;b.addEventListener('mouseenter',function(){if(b.classList.contains('lg-play'))return;b.classList.add('lg-play');clearTimeout(t);t=setTimeout(function(){b.classList.remove('lg-play')},1700)})})();
+  <script>/* logo animation (the bolt charges from bottom to top and throws sparks, the E steps back):
+     on mouse hover (desktop), and on a tap/click of the logo. A tap that opens the homepage plays it there, after the page loads. */
+  (function(){var b=document.querySelector('header.site .brand'),K='evc-logo-play';if(!b||!window.matchMedia||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+    var t;function play(){if(b.classList.contains('lg-play'))return;b.classList.add('lg-play');clearTimeout(t);t=setTimeout(function(){b.classList.remove('lg-play')},1700)}
+    if(matchMedia('(hover:hover) and (pointer:fine)').matches)b.addEventListener('mouseenter',play);
+    b.addEventListener('click',function(){var h=b.getAttribute('href')||'';if(h.charAt(0)==='#')play();else try{sessionStorage.setItem(K,'1')}catch(e){}});
+    var go=null;try{go=sessionStorage.getItem(K);sessionStorage.removeItem(K)}catch(e){}
+    if(go)setTimeout(play,250);
+  })();
   </script>
   <script>
   /* light theme by default, whatever the visitor's system setting; dark only when chosen with the button */
   (function(){var r=document.documentElement,k='evc-theme-s',t=null;try{t=sessionStorage.getItem(k)}catch(e){}
     if(!t&&/SamsungBrowser/.test(navigator.userAgent)&&window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)t='dark';
     r.setAttribute('data-evtheme',t==='dark'?'dark':'light');
-    function cs(d){var m=document.querySelector('meta[name=color-scheme]');if(m)m.content=d?'dark':'only light'}cs(t==='dark');
+    function cs(d){var m=document.querySelector('meta[name=color-scheme]');if(m)m.content=r.classList.contains('sam')?'light dark':(d?'dark':'only light')}cs(t==='dark');
     var b=document.getElementById('theme-btn');
     function sync(){var d=r.getAttribute('data-evtheme')==='dark',l=d?'Uključi svetlu temu':'Uključi tamnu temu';b.setAttribute('aria-pressed',d);b.setAttribute('aria-label',l);b.title=l}
     sync();
