@@ -1,7 +1,7 @@
 {
  "izvor": "evomobil.rs",
  "url": "https://www.evomobil.rs/",
- "azurirano": "2026-10-27",
+ "azurirano": "2026-10-28",
  "napomena": "Domet po WLTP normi; podaci sa zvaničnih sajtova proizvođača i uvoznika; null = nije objavljeno.",
  "modeli": [
   {
@@ -1695,9 +1695,9 @@
    "model": "Toyota bZ4X",
    "url": "https://www.evomobil.rs/modeli/toyota-bz4x",
    "klasa": "SUV",
-   "domet_wltp_km": 559,
-   "domet_tekst": "do 444 / 559 km",
-   "baterija": "125 / 165 kWh",
+   "domet_wltp_km": 569,
+   "domet_tekst": "do 444 / 569 km",
+   "baterija": "57,7 / 73,1 kWh",
    "gradovi_distributera": [
     "Beograd",
     "Niš",
@@ -1709,6 +1709,50 @@
    "sirina": "1.860 mm",
    "visina": "1.650 mm",
    "klirens": "177 mm",
+   "broj_sedista": 5
+  },
+  {
+   "id": "toyota-bz4x-touring",
+   "brend": "Toyota",
+   "model": "Toyota bZ4X Touring",
+   "url": "https://www.evomobil.rs/modeli/toyota-bz4x-touring",
+   "klasa": "SUV",
+   "domet_wltp_km": 591,
+   "domet_tekst": "do 591 km",
+   "baterija": "74,7 kWh",
+   "gradovi_distributera": [
+    "Beograd",
+    "Niš",
+    "Novi Sad",
+    "Subotica",
+    "Čačak"
+   ],
+   "duzina": "4.830 mm",
+   "sirina": "1.860 mm",
+   "visina": "1.675 mm",
+   "klirens": "212 mm",
+   "broj_sedista": 5
+  },
+  {
+   "id": "toyota-c-hr-plus",
+   "brend": "Toyota",
+   "model": "Toyota C-HR+",
+   "url": "https://www.evomobil.rs/modeli/toyota-c-hr-plus",
+   "klasa": "SUV",
+   "domet_wltp_km": 607,
+   "domet_tekst": "do 458 / 607 km",
+   "baterija": "57,7 / 77 kWh",
+   "gradovi_distributera": [
+    "Beograd",
+    "Niš",
+    "Novi Sad",
+    "Subotica",
+    "Čačak"
+   ],
+   "duzina": "4.530 mm",
+   "sirina": "1.870 mm",
+   "visina": "1.595 mm",
+   "klirens": "185 mm",
    "broj_sedista": 5
   },
   {

@@ -1230,5 +1230,30 @@
    "https://www.volvocars.com/nz/support/car/es90/article/0ed816eed33d98cac0a8cc377bc12bc7-e6a7973b2bf222b2c0a8b09757c97ec8-8664b2fa77a7e089c0a8296870d1a409"
   ],
   "notes": "IE spec page gives height 1549 (kerb weight plus one person). The NZ support page gives height 1546 and ground clearance 177 at kerb weight plus one person. Width is 2120 with mirrors."
+ },
+ {
+  "id": "toyota-bz4x-touring",
+  "length_mm": 4830,
+  "width_mm": 1860,
+  "width_note": "bez retrovizora",
+  "height_mm": 1675,
+  "clearance_mm": 212,
+  "seats": 5,
+  "sources": [
+   "https://www.toyota.de/neuwagen/bz4x-touring/specifications",
+   "https://newsroom.toyota.eu/world-premiere-toyota-bz4x-touring/"
+  ]
+ },
+ {
+  "id": "toyota-c-hr-plus",
+  "length_mm": 4530,
+  "width_mm": 1870,
+  "height_mm": 1595,
+  "clearance_mm": 185,
+  "seats": 5,
+  "sources": [
+   "https://www.toyota.com.cy/new-cars/toyota-c-hr-plus/specifications",
+   "https://newsroom.toyota.eu/the-all-new-toyota-chr-stand-out-design-and-superior-bev-credentials/"
+  ]
  }
 ]

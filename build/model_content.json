@@ -1,416 +1,424 @@
 {
-  "_about": "Short model descriptions (Serbian) and known battery sizes. Keys are model page ids. Models without an entry get a generic description.",
-  "byd-dolphin-surf": {
-    "kwh": 43.2,
-    "desc": [
-      "BYD Dolphin Surf je kompaktni gradski električni automobil, napravljen za svakodnevnu vožnju po gradu i kraća putovanja.",
-      "Male spoljne mere olakšavaju parkiranje, a verzija sa baterijom od 43,2 kWh prema podacima uvoznika ima domet do 507 km po WLTP normi u gradskoj vožnji."
-    ]
-  },
-  "byd-atto-2-comfort": {
-    "kwh": 64.8,
-    "desc": [
-      "BYD Atto 2 je kompaktni električni SUV za grad i porodicu, sa povišenim položajem sedenja i praktičnom kabinom.",
-      "Verzija Comfort ima bateriju upotrebnog kapaciteta 64,8 kWh i prema podacima proizvođača domet do 430 km po WLTP normi."
-    ]
-  },
-  "byd-atto-3-evo": {
-    "desc": [
-      "BYD Atto 3 je kompaktni električni SUV i jedan od prvih BYD modela na evropskom tržištu.",
-      "Evo je unapređena verzija ovog modela. Verzija Design sa pogonom na zadnje točkove prema podacima uvoznika ima domet do 510 km po WLTP normi."
-    ],
-    "kwh": 74.8
-  },
-  "byd-seal": {
-    "kwh": 82.5,
-    "desc": [
-      "BYD Seal je električni sedan sportskog karaktera, sa niskom i aerodinamičnom karoserijom.",
-      "Verzija sa pogonom na zadnje točkove i baterijom od 82,5 kWh prema podacima proizvođača ima domet do 570 km po WLTP normi, što ga svrstava među električne modele sa najvećim dometom u ponudi."
-    ]
-  },
-  "byd-sealion-7": {
-    "desc": [
-      "BYD Sealion 7 je električni SUV sa linijom krova u stilu kupea, veći od modela Atto 3.",
-      "Namenjen je porodicama kojima je potreban prostor, uz performanse i opremu više klase."
-    ],
-    "kwh": "82,5 / 91,3"
-  },
-  "changan-deepal-s05": {
-    "kwh": 68.8,
-    "desc": [
-      "Deepal S05 je kompaktni električni SUV iz Changan-ove linije električnih vozila Deepal.",
-      "Evropska verzija sa pogonom na zadnje točkove ima LFP bateriju od 68,8 kWh i prema podacima proizvođača domet do 485 km po WLTP normi."
-    ]
-  },
-  "changan-deepal-s07": {
-    "desc": [
-      "Deepal S07 je električni SUV srednje veličine iz linije Deepal.",
-      "U prvom planu su prostrana kabina, digitalni kokpit i savremeni sistemi pomoći vozaču."
-    ],
-    "kwh": 79.97
-  },
-  "foton-etunland": {
-    "desc": [
-      "Foton eTunland je potpuno električni pikap, nastao na osnovu modela Tunland.",
-      "Namenjen je radu i prevozu tereta bez izduvnih gasova i sa tišim radom od dizel verzije, što ga čini pogodnim za gradske i komunalne službe, servise i firme."
-    ],
-    "kwh": "88"
-  },
-  "geely-e5": {
-    "desc": [
-      "Geely E5 je električni SUV iz nove generacije Geely električnih vozila.",
-      "Kombinuje prostranu kabinu, savremenu digitalnu opremu i sisteme pomoći vozaču."
-    ],
-    "kwh": 60.22
-  },
-  "jac-t9-ev": {
-    "desc": [
-      "JAC T9 EV je potpuno električni pikap, namenjen poslovnim korisnicima i radu na terenu.",
-      "Spaja nosivost pikapa sa tihim radom i nultom emisijom izduvnih gasova."
-    ],
-    "kwh": 88.02
-  },
-  "leapmotor-t03": {
-    "desc": [
-      "Leapmotor T03 je mali električni gradski automobil sa petoro vrata.",
-      "Kompaktne mere i okretnost čine ga pogodnim za svakodnevnu vožnju i parkiranje u gradu."
-    ],
-    "kwh": 37.3
-  },
-  "leapmotor-b10": {
-    "desc": [
-      "Leapmotor B10 je kompaktni električni SUV, smešten u ponudi ispod modela C10.",
-      "Namenjen je vozačima koji traže praktičan porodični SUV sa električnim pogonom."
-    ],
-    "kwh": "56,2 / 67,1",
-    "range_text": "361 / 434 km"
-  },
-  "leapmotor-c10": {
-    "desc": [
-      "Leapmotor C10 je električni SUV srednje veličine, sa prostranom kabinom i velikim ekranima.",
-      "U Evropi se prodaje preko saradnje Leapmotora i grupe Stellantis."
-    ],
-    "kwh": "69,9 / 81,9",
-    "range_text": "420 / 510 km"
-  },
-  "lynk-co-02": {
-    "kwh": 66,
-    "desc": [
-      "Lynk & Co 02 je potpuno električni kompaktni crossover i prvi električni model ovog brenda.",
-      "Ima bateriju nominalnog kapaciteta 66 kWh i prema podacima proizvođača domet do 445 km po WLTP normi."
-    ]
-  },
-  "mg-mg4-electric": {
-    "desc": [
-      "MG4 Electric je kompaktni električni hečbek, napravljen na namenskoj platformi za električna vozila.",
-      "Verzija Comfort sa baterijom od 64 kWh prema podacima uvoznika ima domet do 465 km po WLTP normi."
-    ],
-    "kwh": 64
-  },
-  "mg-mg5-electric": {
-    "desc": [
-      "MG5 Electric je električni karavan, jedan od retkih modela sa ovim tipom karoserije i potpuno električnim pogonom.",
-      "Pogodan je za porodice i vozače kojima je potreban veliki prtljažnik."
-    ],
-    "kwh": 61.1
-  },
-  "mg-mgs5-ev": {
-    "desc": [
-      "MGS5 EV je kompaktni električni SUV iz ponude brenda MG.",
-      "Namenjen je vozačima koji žele povišen položaj sedenja i praktičnost SUV modela uz električni pogon."
-    ],
-    "kwh": 64
-  },
-  "dongfeng-box": {
-    "desc": [
-      "Dongfeng Box je mali potpuno električni automobil sa petoro vrata, namenjen pre svega vožnji po gradu.",
-      "Kompaktne mere olakšavaju parkiranje, a kabina je prilagođena svakodnevnim kraćim putovanjima."
-    ],
-    "kwh": "43,9"
-  },
-  "jac-e30x": {
-    "desc": [
-      "JAC E30X je mali potpuno električni automobil sa petoro vrata i pet sedišta, namenjen pre svega vožnji po gradu.",
-      "Nudi se sa LFP baterijom od 41 ili 51,5 kWh, a domet prema podacima uvoznika iznosi do 405, odnosno do 505 km."
-    ],
-    "kwh": "41 / 51,5",
-    "range_text": "405 / 505 km"
-  },
-  "jmev-ev3": {
-    "kwh": 30.24
-  },
-  "jmev-elight": {
-    "kwh": 63
-  },
-  "jmev-ewind": {
-    "kwh": 70.38
-  },
-  "leapmotor-b05": {
-    "kwh": "56,2 / 67,1",
-    "range_text": "401 / 482 km"
-  },
-  "leapmotor-b03x": {
-    "kwh": "39,8 / 53",
-    "range_text": "292 / 382 km"
-  },
-  "audi-rs-e-tron-gt": {
-    "kwh": "105",
-    "range_text": "593 km"
-  },
-  "bmw-ix1": {
-    "kwh": "65",
-    "range_text": "467 km"
-  },
-  "bmw-ix": {
-    "kwh": "109,1",
-    "range_text": "701 km"
-  },
-  "bmw-i4": {
-    "kwh": "81,3",
-    "range_text": "600 km"
-  },
-  "bmw-i5": {
-    "kwh": "81,2",
-    "range_text": "516 km"
-  },
-  "bmw-i7": {
-    "kwh": "112,5",
-    "range_text": "727 km"
-  },
-  "bmw-ix3": {
-    "kwh": "108,7",
-    "range_text": "805 km"
-  },
-  "bmw-i4-m50": {
-    "kwh": "81,1",
-    "range_text": "551 km"
-  },
-  "bmw-ix-m-model": {
-    "kwh": "108,9",
-    "range_text": "600 km"
-  },
-  "bmw-i7-m70": {
-    "kwh": "112,4",
-    "range_text": "686 km"
-  },
-  "cupra-tavascan": {
-    "kwh": "77",
-    "range_text": "547 km"
-  },
-  "cupra-raval": {
-    "kwh": "52",
-    "range_text": "448 km"
-  },
-  "dacia-spring": {
-    "kwh": "26,8",
-    "range_text": "225 km"
-  },
-  "ford-mustang-mach-e": {
-    "kwh": "72,6 / 98",
-    "range_text": "440 / 600 km"
-  },
-  "ford-puma-gen-e": {
-    "kwh": "46,8",
-    "range_text": "417 km"
-  },
-  "ford-explorer": {
-    "kwh": "58 / 77 / 79",
-    "range_text": "444 / 553 / 602 km"
-  },
-  "kia-ev3": {
-    "kwh": "58,3 / 81,4",
-    "range_text": "436 / 605 km"
-  },
-  "kia-ev4": {
-    "kwh": "58,3 / 81,4",
-    "range_text": "440 / 729 km"
-  },
-  "kia-ev6": {
-    "kwh": "63 / 84",
-    "range_text": "644 / 766 km"
-  },
-  "kia-ev9": {
-    "kwh": "99,8",
-    "range_text": "563 km"
-  },
-  "mazda-6e": {
-    "kwh": "68,8 / 80",
-    "range_text": "479 / 552 km"
-  },
-  "mazda-cx-6e": {
-    "kwh": "78",
-    "range_text": "484 km"
-  },
-  "porsche-macan-4": {
-    "kwh": "100",
-    "range_text": "572 km"
-  },
-  "porsche-macan-4s": {
-    "kwh": "100",
-    "range_text": "556 km"
-  },
-  "renault-5-e-tech": {
-    "kwh": "40 / 52",
-    "range_text": "315 / 430 km"
-  },
-  "renault-twingo-e-tech": {
-    "kwh": "27,5",
-    "range_text": "263 km"
-  },
-  "renault-4-e-tech": {
-    "kwh": "40 / 52",
-    "range_text": "308 / 409 km"
-  },
-  "suzuki-e-vitara": {
-    "kwh": "61",
-    "range_text": "426 km"
-  },
-  "toyota-bz4x": {
-    "range_text": "444 / 559 km",
-    "kwh": "125 / 165"
-  },
-  "volkswagen-id-4": {
-    "kwh": "58 / 79",
-    "range_text": "436 / 570 km"
-  },
-  "volkswagen-id-5": {
-    "kwh": "77 / 79",
-    "range_text": "558 / 534 km"
-  },
-  "volkswagen-id-7": {
-    "kwh": "77 / 86",
-    "range_text": "600 / 711 km"
-  },
-  "volkswagen-id-polo": {
-    "kwh": "37 / 52",
-    "range_text": "331 / 454 km"
-  },
-  "hyundai-ioniq-5": {
-    "kwh": "58 / 77,4",
-    "range_text": "384 / 507 km"
-  },
-  "hyundai-ioniq-6": {
-    "kwh": "53 / 77,4",
-    "range_text": "429 / 614 km"
-  },
-  "hyundai-ioniq-6-n": {
-    "kwh": "84",
-    "range_text": "487 km"
-  },
-  "hyundai-ioniq-9": {
-    "kwh": "110,3",
-    "range_text": "606 km"
-  },
-  "hyundai-inster": {
-    "kwh": "42 / 49",
-    "range_text": "323 / 369 km"
-  },
-  "porsche-taycan-4": {
-    "kwh": "105",
-    "range_text": "596 km"
-  },
-  "volkswagen-id-3-neo": {
-    "kwh": "50",
-    "range_text": "418 km"
-  },
-  "porsche-cayenne-turbo-electric": {
-    "kwh": "113",
-    "range_text": "604 km"
-  },
-  "kia-ev2": {
-    "kwh": "42,2 / 61",
-    "range_text": "435 / 670 km"
-  },
-  "citroen-e-c3": {
-    "kwh": "44",
-    "range_text": "320 km"
-  },
-  "citroen-e-c3-aircross": {
-    "kwh": "44",
-    "range_text": "302 km"
-  },
-  "citroen-e-c4": {
-    "kwh": "50 / 54",
-    "range_text": "354 / 416 km"
-  },
-  "citroen-e-c4-x": {
-    "kwh": "50 / 54",
-    "range_text": "354 / 416 km"
-  },
-  "mini-cooper": {
-    "kwh": "36,6 / 49,2",
-    "range_text": "290 / 400 km"
-  },
-  "mini-aceman": {
-    "kwh": "38,5 / 49,2",
-    "range_text": "309 / 405 km"
-  },
-  "mini-countryman": {
-    "kwh": "64,6",
-    "range_text": "500 km"
-  },
-  "opel-astra-electric": {
-    "kwh": "58",
-    "range_text": "454 km"
-  },
-  "opel-frontera-electric": {
-    "kwh": "44 / 54",
-    "range_text": "305 / 408 km"
-  },
-  "opel-mokka-electric": {
-    "kwh": "54",
-    "range_text": "403 km"
-  },
-  "peugeot-e-208": {
-    "kwh": "50",
-    "range_text": "362 km"
-  },
-  "peugeot-e-2008": {
-    "kwh": "54",
-    "range_text": "406 km"
-  },
-  "peugeot-e-308": {
-    "kwh": "58,3",
-    "range_text": "450 km"
-  },
-  "peugeot-e-3008": {
-    "kwh": "73 / 96,9",
-    "range_text": "526 / 701 km"
-  },
-  "skoda-elroq": {
-    "kwh": "58 / 77",
-    "range_text": "451 / 575 km"
-  },
-  "skoda-enyaq": {
-    "kwh": "58 / 77",
-    "range_text": "431 / 582 km"
-  },
-  "skoda-enyaq-coupe": {
-    "kwh": "58 / 77",
-    "range_text": "440 / 591 km"
-  },
-  "volvo-ex30": {
-    "kwh": "51 / 69",
-    "range_text": "337 / 475 km"
-  },
-  "volvo-ex60": {
-    "kwh": "83 / 95 / 117",
-    "range_text": "611 / 660 / 810 km"
-  },
-  "volvo-ex90": {
-    "kwh": "92 / 106",
-    "range_text": "564 / 617 km"
-  },
-  "volvo-es90": {
-    "kwh": "92 / 106",
-    "range_text": "664 / 702 km"
-  },
-  "bmw-ix5": {
-    "kwh": "141,2",
-    "range_text": "850 km"
-  },
-  "bmw-i3": {
-    "kwh": "108,7",
-    "range_text": "912 km"
-  }
+ "_about": "Short model descriptions (Serbian) and known battery sizes. Keys are model page ids. Models without an entry get a generic description.",
+ "byd-dolphin-surf": {
+  "kwh": 43.2,
+  "desc": [
+   "BYD Dolphin Surf je kompaktni gradski električni automobil, napravljen za svakodnevnu vožnju po gradu i kraća putovanja.",
+   "Male spoljne mere olakšavaju parkiranje, a verzija sa baterijom od 43,2 kWh prema podacima uvoznika ima domet do 507 km po WLTP normi u gradskoj vožnji."
+  ]
+ },
+ "byd-atto-2-comfort": {
+  "kwh": 64.8,
+  "desc": [
+   "BYD Atto 2 je kompaktni električni SUV za grad i porodicu, sa povišenim položajem sedenja i praktičnom kabinom.",
+   "Verzija Comfort ima bateriju upotrebnog kapaciteta 64,8 kWh i prema podacima proizvođača domet do 430 km po WLTP normi."
+  ]
+ },
+ "byd-atto-3-evo": {
+  "desc": [
+   "BYD Atto 3 je kompaktni električni SUV i jedan od prvih BYD modela na evropskom tržištu.",
+   "Evo je unapređena verzija ovog modela. Verzija Design sa pogonom na zadnje točkove prema podacima uvoznika ima domet do 510 km po WLTP normi."
+  ],
+  "kwh": 74.8
+ },
+ "byd-seal": {
+  "kwh": 82.5,
+  "desc": [
+   "BYD Seal je električni sedan sportskog karaktera, sa niskom i aerodinamičnom karoserijom.",
+   "Verzija sa pogonom na zadnje točkove i baterijom od 82,5 kWh prema podacima proizvođača ima domet do 570 km po WLTP normi, što ga svrstava među električne modele sa najvećim dometom u ponudi."
+  ]
+ },
+ "byd-sealion-7": {
+  "desc": [
+   "BYD Sealion 7 je električni SUV sa linijom krova u stilu kupea, veći od modela Atto 3.",
+   "Namenjen je porodicama kojima je potreban prostor, uz performanse i opremu više klase."
+  ],
+  "kwh": "82,5 / 91,3"
+ },
+ "changan-deepal-s05": {
+  "kwh": 68.8,
+  "desc": [
+   "Deepal S05 je kompaktni električni SUV iz Changan-ove linije električnih vozila Deepal.",
+   "Evropska verzija sa pogonom na zadnje točkove ima LFP bateriju od 68,8 kWh i prema podacima proizvođača domet do 485 km po WLTP normi."
+  ]
+ },
+ "changan-deepal-s07": {
+  "desc": [
+   "Deepal S07 je električni SUV srednje veličine iz linije Deepal.",
+   "U prvom planu su prostrana kabina, digitalni kokpit i savremeni sistemi pomoći vozaču."
+  ],
+  "kwh": 79.97
+ },
+ "foton-etunland": {
+  "desc": [
+   "Foton eTunland je potpuno električni pikap, nastao na osnovu modela Tunland.",
+   "Namenjen je radu i prevozu tereta bez izduvnih gasova i sa tišim radom od dizel verzije, što ga čini pogodnim za gradske i komunalne službe, servise i firme."
+  ],
+  "kwh": "88"
+ },
+ "geely-e5": {
+  "desc": [
+   "Geely E5 je električni SUV iz nove generacije Geely električnih vozila.",
+   "Kombinuje prostranu kabinu, savremenu digitalnu opremu i sisteme pomoći vozaču."
+  ],
+  "kwh": 60.22
+ },
+ "jac-t9-ev": {
+  "desc": [
+   "JAC T9 EV je potpuno električni pikap, namenjen poslovnim korisnicima i radu na terenu.",
+   "Spaja nosivost pikapa sa tihim radom i nultom emisijom izduvnih gasova."
+  ],
+  "kwh": 88.02
+ },
+ "leapmotor-t03": {
+  "desc": [
+   "Leapmotor T03 je mali električni gradski automobil sa petoro vrata.",
+   "Kompaktne mere i okretnost čine ga pogodnim za svakodnevnu vožnju i parkiranje u gradu."
+  ],
+  "kwh": 37.3
+ },
+ "leapmotor-b10": {
+  "desc": [
+   "Leapmotor B10 je kompaktni električni SUV, smešten u ponudi ispod modela C10.",
+   "Namenjen je vozačima koji traže praktičan porodični SUV sa električnim pogonom."
+  ],
+  "kwh": "56,2 / 67,1",
+  "range_text": "361 / 434 km"
+ },
+ "leapmotor-c10": {
+  "desc": [
+   "Leapmotor C10 je električni SUV srednje veličine, sa prostranom kabinom i velikim ekranima.",
+   "U Evropi se prodaje preko saradnje Leapmotora i grupe Stellantis."
+  ],
+  "kwh": "69,9 / 81,9",
+  "range_text": "420 / 510 km"
+ },
+ "lynk-co-02": {
+  "kwh": 66,
+  "desc": [
+   "Lynk & Co 02 je potpuno električni kompaktni crossover i prvi električni model ovog brenda.",
+   "Ima bateriju nominalnog kapaciteta 66 kWh i prema podacima proizvođača domet do 445 km po WLTP normi."
+  ]
+ },
+ "mg-mg4-electric": {
+  "desc": [
+   "MG4 Electric je kompaktni električni hečbek, napravljen na namenskoj platformi za električna vozila.",
+   "Verzija Comfort sa baterijom od 64 kWh prema podacima uvoznika ima domet do 465 km po WLTP normi."
+  ],
+  "kwh": 64
+ },
+ "mg-mg5-electric": {
+  "desc": [
+   "MG5 Electric je električni karavan, jedan od retkih modela sa ovim tipom karoserije i potpuno električnim pogonom.",
+   "Pogodan je za porodice i vozače kojima je potreban veliki prtljažnik."
+  ],
+  "kwh": 61.1
+ },
+ "mg-mgs5-ev": {
+  "desc": [
+   "MGS5 EV je kompaktni električni SUV iz ponude brenda MG.",
+   "Namenjen je vozačima koji žele povišen položaj sedenja i praktičnost SUV modela uz električni pogon."
+  ],
+  "kwh": 64
+ },
+ "dongfeng-box": {
+  "desc": [
+   "Dongfeng Box je mali potpuno električni automobil sa petoro vrata, namenjen pre svega vožnji po gradu.",
+   "Kompaktne mere olakšavaju parkiranje, a kabina je prilagođena svakodnevnim kraćim putovanjima."
+  ],
+  "kwh": "43,9"
+ },
+ "jac-e30x": {
+  "desc": [
+   "JAC E30X je mali potpuno električni automobil sa petoro vrata i pet sedišta, namenjen pre svega vožnji po gradu.",
+   "Nudi se sa LFP baterijom od 41 ili 51,5 kWh, a domet prema podacima uvoznika iznosi do 405, odnosno do 505 km."
+  ],
+  "kwh": "41 / 51,5",
+  "range_text": "405 / 505 km"
+ },
+ "jmev-ev3": {
+  "kwh": 30.24
+ },
+ "jmev-elight": {
+  "kwh": 63
+ },
+ "jmev-ewind": {
+  "kwh": 70.38
+ },
+ "leapmotor-b05": {
+  "kwh": "56,2 / 67,1",
+  "range_text": "401 / 482 km"
+ },
+ "leapmotor-b03x": {
+  "kwh": "39,8 / 53",
+  "range_text": "292 / 382 km"
+ },
+ "audi-rs-e-tron-gt": {
+  "kwh": "105",
+  "range_text": "593 km"
+ },
+ "bmw-ix1": {
+  "kwh": "65",
+  "range_text": "467 km"
+ },
+ "bmw-ix": {
+  "kwh": "109,1",
+  "range_text": "701 km"
+ },
+ "bmw-i4": {
+  "kwh": "81,3",
+  "range_text": "600 km"
+ },
+ "bmw-i5": {
+  "kwh": "81,2",
+  "range_text": "516 km"
+ },
+ "bmw-i7": {
+  "kwh": "112,5",
+  "range_text": "727 km"
+ },
+ "bmw-ix3": {
+  "kwh": "108,7",
+  "range_text": "805 km"
+ },
+ "bmw-i4-m50": {
+  "kwh": "81,1",
+  "range_text": "551 km"
+ },
+ "bmw-ix-m-model": {
+  "kwh": "108,9",
+  "range_text": "600 km"
+ },
+ "bmw-i7-m70": {
+  "kwh": "112,4",
+  "range_text": "686 km"
+ },
+ "cupra-tavascan": {
+  "kwh": "77",
+  "range_text": "547 km"
+ },
+ "cupra-raval": {
+  "kwh": "52",
+  "range_text": "448 km"
+ },
+ "dacia-spring": {
+  "kwh": "26,8",
+  "range_text": "225 km"
+ },
+ "ford-mustang-mach-e": {
+  "kwh": "72,6 / 98",
+  "range_text": "440 / 600 km"
+ },
+ "ford-puma-gen-e": {
+  "kwh": "46,8",
+  "range_text": "417 km"
+ },
+ "ford-explorer": {
+  "kwh": "58 / 77 / 79",
+  "range_text": "444 / 553 / 602 km"
+ },
+ "kia-ev3": {
+  "kwh": "58,3 / 81,4",
+  "range_text": "436 / 605 km"
+ },
+ "kia-ev4": {
+  "kwh": "58,3 / 81,4",
+  "range_text": "440 / 729 km"
+ },
+ "kia-ev6": {
+  "kwh": "63 / 84",
+  "range_text": "644 / 766 km"
+ },
+ "kia-ev9": {
+  "kwh": "99,8",
+  "range_text": "563 km"
+ },
+ "mazda-6e": {
+  "kwh": "68,8 / 80",
+  "range_text": "479 / 552 km"
+ },
+ "mazda-cx-6e": {
+  "kwh": "78",
+  "range_text": "484 km"
+ },
+ "porsche-macan-4": {
+  "kwh": "100",
+  "range_text": "572 km"
+ },
+ "porsche-macan-4s": {
+  "kwh": "100",
+  "range_text": "556 km"
+ },
+ "renault-5-e-tech": {
+  "kwh": "40 / 52",
+  "range_text": "315 / 430 km"
+ },
+ "renault-twingo-e-tech": {
+  "kwh": "27,5",
+  "range_text": "263 km"
+ },
+ "renault-4-e-tech": {
+  "kwh": "40 / 52",
+  "range_text": "308 / 409 km"
+ },
+ "suzuki-e-vitara": {
+  "kwh": "61",
+  "range_text": "426 km"
+ },
+ "toyota-bz4x": {
+  "range_text": "444 / 569 km",
+  "kwh": "57,7 / 73,1"
+ },
+ "volkswagen-id-4": {
+  "kwh": "58 / 79",
+  "range_text": "436 / 570 km"
+ },
+ "volkswagen-id-5": {
+  "kwh": "77 / 79",
+  "range_text": "558 / 534 km"
+ },
+ "volkswagen-id-7": {
+  "kwh": "77 / 86",
+  "range_text": "600 / 711 km"
+ },
+ "volkswagen-id-polo": {
+  "kwh": "37 / 52",
+  "range_text": "331 / 454 km"
+ },
+ "hyundai-ioniq-5": {
+  "kwh": "58 / 77,4",
+  "range_text": "384 / 507 km"
+ },
+ "hyundai-ioniq-6": {
+  "kwh": "53 / 77,4",
+  "range_text": "429 / 614 km"
+ },
+ "hyundai-ioniq-6-n": {
+  "kwh": "84",
+  "range_text": "487 km"
+ },
+ "hyundai-ioniq-9": {
+  "kwh": "110,3",
+  "range_text": "606 km"
+ },
+ "hyundai-inster": {
+  "kwh": "42 / 49",
+  "range_text": "323 / 369 km"
+ },
+ "porsche-taycan-4": {
+  "kwh": "105",
+  "range_text": "596 km"
+ },
+ "volkswagen-id-3-neo": {
+  "kwh": "50",
+  "range_text": "418 km"
+ },
+ "porsche-cayenne-turbo-electric": {
+  "kwh": "113",
+  "range_text": "604 km"
+ },
+ "kia-ev2": {
+  "kwh": "42,2 / 61",
+  "range_text": "435 / 670 km"
+ },
+ "citroen-e-c3": {
+  "kwh": "44",
+  "range_text": "320 km"
+ },
+ "citroen-e-c3-aircross": {
+  "kwh": "44",
+  "range_text": "302 km"
+ },
+ "citroen-e-c4": {
+  "kwh": "50 / 54",
+  "range_text": "354 / 416 km"
+ },
+ "citroen-e-c4-x": {
+  "kwh": "50 / 54",
+  "range_text": "354 / 416 km"
+ },
+ "mini-cooper": {
+  "kwh": "36,6 / 49,2",
+  "range_text": "290 / 400 km"
+ },
+ "mini-aceman": {
+  "kwh": "38,5 / 49,2",
+  "range_text": "309 / 405 km"
+ },
+ "mini-countryman": {
+  "kwh": "64,6",
+  "range_text": "500 km"
+ },
+ "opel-astra-electric": {
+  "kwh": "58",
+  "range_text": "454 km"
+ },
+ "opel-frontera-electric": {
+  "kwh": "44 / 54",
+  "range_text": "305 / 408 km"
+ },
+ "opel-mokka-electric": {
+  "kwh": "54",
+  "range_text": "403 km"
+ },
+ "peugeot-e-208": {
+  "kwh": "50",
+  "range_text": "362 km"
+ },
+ "peugeot-e-2008": {
+  "kwh": "54",
+  "range_text": "406 km"
+ },
+ "peugeot-e-308": {
+  "kwh": "58,3",
+  "range_text": "450 km"
+ },
+ "peugeot-e-3008": {
+  "kwh": "73 / 96,9",
+  "range_text": "526 / 701 km"
+ },
+ "skoda-elroq": {
+  "kwh": "58 / 77",
+  "range_text": "451 / 575 km"
+ },
+ "skoda-enyaq": {
+  "kwh": "58 / 77",
+  "range_text": "431 / 582 km"
+ },
+ "skoda-enyaq-coupe": {
+  "kwh": "58 / 77",
+  "range_text": "440 / 591 km"
+ },
+ "volvo-ex30": {
+  "kwh": "51 / 69",
+  "range_text": "337 / 475 km"
+ },
+ "volvo-ex60": {
+  "kwh": "83 / 95 / 117",
+  "range_text": "611 / 660 / 810 km"
+ },
+ "volvo-ex90": {
+  "kwh": "92 / 106",
+  "range_text": "564 / 617 km"
+ },
+ "volvo-es90": {
+  "kwh": "92 / 106",
+  "range_text": "664 / 702 km"
+ },
+ "bmw-ix5": {
+  "kwh": "141,2",
+  "range_text": "850 km"
+ },
+ "bmw-i3": {
+  "kwh": "108,7",
+  "range_text": "912 km"
+ },
+ "toyota-bz4x-touring": {
+  "range_text": "591 km",
+  "kwh": 74.7
+ },
+ "toyota-c-hr-plus": {
+  "range_text": "458 / 607 km",
+  "kwh": "57,7 / 77"
+ }
 }

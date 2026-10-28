@@ -1499,20 +1499,36 @@
           "name": "bZ4X",
           "powertrain": "EV",
           "body": "SUV",
-          "range_wltp_km": 559,
+          "range_wltp_km": 569,
           "battery_kwh": [
-            125,
-            165
+            57.7,
+            73.1
+          ]
+        },
+        {
+          "name": "bZ4X Touring",
+          "powertrain": "EV",
+          "body": "SUV",
+          "range_wltp_km": 591,
+          "battery_kwh": [
+            74.7
+          ]
+        },
+        {
+          "name": "C-HR+",
+          "powertrain": "EV",
+          "body": "SUV",
+          "range_wltp_km": 607,
+          "battery_kwh": [
+            57.7,
+            77
           ]
         }
       ],
       "social": {},
       "gaps": [
         "importer",
-        "dealers",
-        "range",
-        "battery",
-        "photos"
+        "dealers"
       ],
       "logo_file": "logos/toyota.svg",
       "phone_roadside": null,

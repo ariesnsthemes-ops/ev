@@ -2,7 +2,7 @@
 
 > Nezavisan informativni sajt o potpuno električnim automobilima (BEV) koji se zvanično prodaju u Srbiji. Bez hibrida. Bez cena.
 > Domet je po WLTP normi, za verziju sa najvećim dometom. Podaci su sa zvaničnih sajtova proizvođača i uvoznika. Prazno polje znači da proizvođač podatak ne objavljuje.
-> Ukupno: 89 modela, 29 brendova. Poslednje ažuriranje: 2026-10-27.
+> Ukupno: 91 modela, 29 brendova. Poslednje ažuriranje: 2026-10-28.
 
 ## Audi
 Stranica: https://www.evomobil.rs/brendovi/audi
@@ -997,12 +997,36 @@ Ovlašćeni distributeri u gradovima: Beograd, Niš, Novi Sad, Subotica i Čača
 - Stranica: https://www.evomobil.rs/modeli/toyota-bz4x
 - Klasa: SUV
 - Pogon: 100% električni
-- Domet (WLTP): do 444 / 559 km
-- Baterija: 125 / 165 kWh
+- Domet (WLTP): do 444 / 569 km
+- Baterija: 57,7 / 73,1 kWh
 - Dužina: 4.690 mm
 - Širina: 1.860 mm
 - Visina: 1.650 mm
 - Klirens: 177 mm
+- Broj sedišta: 5
+
+### Toyota bZ4X Touring
+- Stranica: https://www.evomobil.rs/modeli/toyota-bz4x-touring
+- Klasa: SUV
+- Pogon: 100% električni
+- Domet (WLTP): do 591 km
+- Baterija: 74,7 kWh
+- Dužina: 4.830 mm
+- Širina: 1.860 mm
+- Visina: 1.675 mm
+- Klirens: 212 mm
+- Broj sedišta: 5
+
+### Toyota C-HR+
+- Stranica: https://www.evomobil.rs/modeli/toyota-c-hr-plus
+- Klasa: SUV
+- Pogon: 100% električni
+- Domet (WLTP): do 458 / 607 km
+- Baterija: 57,7 / 77 kWh
+- Dužina: 4.530 mm
+- Širina: 1.870 mm
+- Visina: 1.595 mm
+- Klirens: 185 mm
 - Broj sedišta: 5
 
 ## Volkswagen

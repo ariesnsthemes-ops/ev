@@ -3,7 +3,7 @@
 > Nezvanični informativni sajt o potpuno električnim automobilima koji se prodaju u Srbiji: modeli, domet (WLTP), baterija i kontakti ovlašćenih distributera. Hibridi nisu uključeni.
 
 ## Glavne stranice
-- [Svi modeli](https://www.evomobil.rs/modeli): 89 električnih modela
+- [Svi modeli](https://www.evomobil.rs/modeli): 91 električnih modela
 - [Brendovi](https://www.evomobil.rs/brendovi)
 - [Najveći domet](https://www.evomobil.rs/najveci-domet)
 - [Distributeri po gradovima](https://www.evomobil.rs/distributeri)
@@ -45,7 +45,7 @@
 - [Renault](https://www.evomobil.rs/brendovi/renault): Renault 5 E-Tech, Renault Twingo E-Tech, Renault 4 E-Tech
 - [Škoda](https://www.evomobil.rs/brendovi/skoda): Škoda Elroq, Škoda Enyaq, Škoda Enyaq Coupé
 - [Suzuki](https://www.evomobil.rs/brendovi/suzuki): Suzuki e Vitara
-- [Toyota](https://www.evomobil.rs/brendovi/toyota): Toyota bZ4X
+- [Toyota](https://www.evomobil.rs/brendovi/toyota): Toyota bZ4X, Toyota bZ4X Touring, Toyota C-HR+
 - [Volkswagen](https://www.evomobil.rs/brendovi/volkswagen): Volkswagen ID.3 Neo, Volkswagen ID.4, Volkswagen ID.5, Volkswagen ID.7, Volkswagen ID. Polo
 - [Volvo](https://www.evomobil.rs/brendovi/volvo): Volvo EX30, Volvo EX60, Volvo EX90, Volvo ES90
 
@@ -129,7 +129,9 @@
 - [Škoda Enyaq](https://www.evomobil.rs/modeli/skoda-enyaq): SUV, domet do 431 / 582 km (WLTP), baterija 58 / 77 kWh
 - [Škoda Enyaq Coupé](https://www.evomobil.rs/modeli/skoda-enyaq-coupe): SUV, domet do 440 / 591 km (WLTP), baterija 58 / 77 kWh
 - [Suzuki e Vitara](https://www.evomobil.rs/modeli/suzuki-e-vitara): SUV, domet do 426 km (WLTP), baterija 61 kWh
-- [Toyota bZ4X](https://www.evomobil.rs/modeli/toyota-bz4x): SUV, domet do 444 / 559 km (WLTP), baterija 125 / 165 kWh
+- [Toyota bZ4X](https://www.evomobil.rs/modeli/toyota-bz4x): SUV, domet do 444 / 569 km (WLTP), baterija 57,7 / 73,1 kWh
+- [Toyota bZ4X Touring](https://www.evomobil.rs/modeli/toyota-bz4x-touring): SUV, domet do 591 km (WLTP), baterija 74,7 kWh
+- [Toyota C-HR+](https://www.evomobil.rs/modeli/toyota-c-hr-plus): SUV, domet do 458 / 607 km (WLTP), baterija 57,7 / 77 kWh
 - [Volkswagen ID.3 Neo](https://www.evomobil.rs/modeli/volkswagen-id-3-neo): Hečbek, domet do 418 km (WLTP), baterija 50 kWh
 - [Volkswagen ID.4](https://www.evomobil.rs/modeli/volkswagen-id-4): SUV, domet do 436 / 570 km (WLTP), baterija 58 / 79 kWh
 - [Volkswagen ID.5](https://www.evomobil.rs/modeli/volkswagen-id-5): SUV, domet do 558 / 534 km (WLTP), baterija 77 / 79 kWh
