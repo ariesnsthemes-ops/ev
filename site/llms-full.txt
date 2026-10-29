@@ -2,7 +2,7 @@
 
 > Nezavisan informativni sajt o potpuno električnim automobilima (BEV) koji se zvanično prodaju u Srbiji. Bez hibrida. Bez cena.
 > Domet je po WLTP normi, za verziju sa najvećim dometom. Podaci su sa zvaničnih sajtova proizvođača i uvoznika. Prazno polje znači da proizvođač podatak ne objavljuje.
-> Ukupno: 91 modela, 29 brendova. Poslednje ažuriranje: 2026-10-28.
+> Ukupno: 91 modela, 29 brendova. Poslednje ažuriranje: 2026-10-29.
 
 ## Audi
 Stranica: https://www.evomobil.rs/brendovi/audi
