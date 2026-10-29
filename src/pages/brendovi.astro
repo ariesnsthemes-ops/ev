@@ -1,0 +1,34 @@
+---
+import Base from '../layouts/Base.astro';
+import { DOMAIN, SITE } from '../config';
+import { crumbs, ldBreadcrumbs, logoSpan, type Crumb } from '../lib/html';
+import { ORDER, brands } from '../lib/site';
+import { E, joinSr } from '../lib/util';
+
+const crumb: Crumb[] = [['Početna', 'index.html'], ['Brendovi', 'brendovi.html']];
+const names = joinSr(ORDER.map((s) => brands[s].name));
+const intro = `Trenutno pratimo ${ORDER.length} brendova koji u Srbiji nude potpuno električne automobile: ${names}. `
+  + 'Na stranici svakog brenda su njegovi električni modeli, domet, baterija i kontakti ovlašćenih distributera.';
+const tiles = ORDER.map((s) => {
+  const n = brands[s].models.length;
+  return `<a class="btile" href="brendovi/${s}"><div class="mark">${logoSpan(s, '')}</div><div class="meta"><h3>${E(brands[s].name)}</h3></div>`
+    + `<span class="count">${n} EV ${n === 1 ? 'model' : 'modela'}</span></a>`;
+}).join('');
+const ld = [ldBreadcrumbs(crumb), { '@context': 'https://schema.org', '@type': 'ItemList', name: 'Brendovi električnih automobila u Srbiji',
+  itemListElement: ORDER.map((s, k) => ({ '@type': 'ListItem', position: k + 1, url: `${DOMAIN}/brendovi/${s}`, name: brands[s].name })) }];
+---
+<Base path="brendovi.html" title={`Brendovi električnih automobila u Srbiji | ${SITE}`} ld={ld}
+  desc={`${ORDER.length} brendova sa električnim automobilima u Srbiji: ${names}.`}>
+<main id="top">
+  <section class="phero">
+    <div class="wrap">
+      <Fragment set:html={crumbs(crumb, '')} />
+      <h1>Brendovi električnih automobila u Srbiji</h1>
+      <p class="answer" set:html={E(intro)}></p>
+    </div>
+  </section>
+  <section class="sec" style="padding-top:0">
+    <div class="wrap"><div class="bento brands-only"><Fragment set:html={tiles} /></div></div>
+  </section>
+</main>
+</Base>

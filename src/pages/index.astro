@@ -1,0 +1,338 @@
+---
+/**
+ * Homepage: hero, search filters, brand tiles, featured models, guide and FAQ. The brand and model
+ * lists, the counts and the search data (#ev-models) come from the catalogue in src/lib/site.ts;
+ * the behaviour (carousel, search, filters, theme) is in src/scripts/home.js.
+ */
+import { ADS_ENABLED as ads, AD_PLACEHOLDER_TEXT as txt, CSS_V, DOMAIN, FAV_V, GA_ID, NOINDEX, OG_DEFAULT, PH_STYLE, SITE } from '../config';
+import { card, ldFaq, logoSpan, type QA } from '../lib/html';
+import { ALL_IDS, ORDER, brands, models } from '../lib/site';
+import { E, joinSr, pyjson } from '../lib/util';
+import Sprite from '../components/Sprite.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import homeJs from '../scripts/home.js?raw';
+import cmpbar from '../scripts/cmpbar.js?raw';
+import consentSrc from '../scripts/consent.js?raw';
+
+const listed = ORDER.filter((s) => brands[s].models.length);
+const brandOpts = listed.map((s) => `<option>${E(brands[s].name)}</option>`).join('');
+const modelGroups = listed.map((s) => `\n            <optgroup label="${E(brands[s].name)}">` + brands[s].models.map((i) => `<option>${E(models[i].n)}</option>`).join('') + '</optgroup>').join('');
+const tiles = ORDER.map((s) => {
+  const n = brands[s].models.length;
+  const count = n ? `<span class="count">${n === 1 ? `${n} EV model` : `${n} EV modela`}</span>` : '<span class="count soon">Trenutno bez EV modela</span>';
+  return `<a class="btile" href="brendovi/${s}" data-brand-page="${E(brands[s].name)}"><div class="mark">${logoSpan(s, '')}</div><div class="meta"><h3>${E(brands[s].name)}</h3></div>${count}</a>`;
+}).join('\n        ');
+
+// featured models (edit this list to change them; the search filters read the data-* attributes)
+const FEATURED_HOME = ['hyundai-ioniq-5', 'renault-5-e-tech', 'bmw-i4', 'byd-sealion-7', 'dacia-spring', 'foton-etunland'];
+const featured = FEATURED_HOME.filter((i) => i in models).map((i) => {
+  const m = models[i];
+  return card(i, '', true, ` data-tags="${m.tags.join(' ')}" data-name="${E(m.n)}" data-range="${m.r || 0}" data-brand="${E(brands[m.b].name)}"`);
+}).join('\n') + '\n';
+
+const nBrands = ORDER.length;
+const brandNamesTxt = joinSr(ORDER.map((s) => brands[s].name));
+const brandNames = E(brandNamesTxt);
+const nSuv = ALL_IDS.filter((i) => models[i].tags.includes('suv')).length;
+
+// FAQ: shown on the page and repeated as FAQPage structured data (plain text)
+const faq: [string, string, string][] = [
+  ['Koji električni automobili su dostupni u Srbiji?',
+    `Na sajtu trenutno prikazujemo potpuno električne modele ${nBrands} brenda: ${brandNames}. Postepeno dodajemo i električne automobile drugih proizvođača, a nove modele čim ih uvoznici objave.`,
+    `Na sajtu trenutno prikazujemo potpuno električne modele ${nBrands} brenda: ${brandNamesTxt}. Postepeno dodajemo i električne automobile drugih proizvođača, a nove modele čim ih uvoznici objave.`],
+  ['Koji električni SUV modeli se prodaju u Srbiji?',
+    `Na sajtu je trenutno ${nSuv} električnih SUV modela, među njima BYD Atto 2, BYD Sealion 7, Kia EV9, Hyundai IONIQ 5, Ford Explorer, Porsche Macan 4 i Toyota bZ4X. Kompletan spisak nalazi se na stranici <a href="elektricni-suv">Električni SUV</a>.`,
+    `Na sajtu je trenutno ${nSuv} električnih SUV modela, među njima BYD Atto 2, BYD Sealion 7, Kia EV9, Hyundai IONIQ 5, Ford Explorer, Porsche Macan 4 i Toyota bZ4X. Kompletan spisak nalazi se na stranici Električni SUV.`],
+  ['Gde mogu zakazati test vožnju?',
+    'Test vožnju zakazujete direktno kod ovlašćenog distributera. Spisak distributera po gradovima nalazi se na stranici <a href="distributeri">Distributeri</a>, a kontakti i na stranici svakog brenda i modela.',
+    'Test vožnju zakazujete direktno kod ovlašćenog distributera. Spisak distributera po gradovima nalazi se na stranici Distributeri, a kontakti i na stranici svakog brenda i modela.'],
+  ['Da li postoji subvencija za kupovinu električnog automobila?',
+    'Da. Ministarstvo zaštite životne sredine i u 2026. godini subvencioniše kupovinu novih električnih vozila. Za nov potpuno električni putnički automobil subvencija iznosi 5.000 evra. Zahtev podnosi kupac preko portala eUprava, a sredstva se dodeljuju po redosledu prijava dok ima novca u budžetu, najkasnije do 1. decembra 2026. Tačne uslove proverite na sajtu ministarstva pre kupovine. Više u vodiču <a href="subvencije-elektricni-automobili-2026">Subvencije za električne automobile 2026</a>.',
+    'Da. Ministarstvo zaštite životne sredine i u 2026. godini subvencioniše kupovinu novih električnih vozila. Za nov potpuno električni putnički automobil subvencija iznosi 5.000 evra. Zahtev podnosi kupac preko portala eUprava, a sredstva se dodeljuju po redosledu prijava dok ima novca u budžetu, najkasnije do 1. decembra 2026. Tačne uslove proverite na sajtu ministarstva pre kupovine. Više u vodiču Subvencije za električne automobile 2026.'],
+  ['Zašto na sajtu nema hibrida?',
+    'evomobil.rs prikazuje samo potpuno električne automobile. Plug-in hibridi, obični hibridi i modeli na benzin ili dizel nisu deo istraživanja.',
+    'evomobil.rs prikazuje samo potpuno električne automobile. Plug-in hibridi, obični hibridi i modeli na benzin ili dizel nisu deo istraživanja.'],
+];
+const faqHtml = faq.map(([q, a]) => `          <details><summary>${E(q)}<span class="pm" aria-hidden="true">+</span></summary>\n            <p>${a}</p></details>`).join('\n');
+const faqLd = ldFaq(faq.map(([q, , t]): QA => [q, t]));
+
+// search data for the filters and the model picker
+const rows = Object.values(models).map((m) => { const i = m.id; return { id: i, b: brands[m.b].name, n: m.n, t: m.tags, r: m.r, cls: m.cls, kwh: m.kwh, sil: m.sil,
+  img: m.photo ? 'img/' + m.photo : null, lg: m.lg }; });
+const evModels = pyjson(rows).replace(/<\//g, '<\\/');
+
+const ld = [
+  { '@context': 'https://schema.org', '@type': 'WebSite', name: SITE, url: DOMAIN + '/', inLanguage: 'sr-Latn', description: 'Električni automobili u Srbiji: modeli, domet i distributeri.' },
+  { '@context': 'https://schema.org', '@type': 'Organization', name: SITE, url: DOMAIN + '/', logo: DOMAIN + '/img/icon-512.png',
+    email: 'office@evomobil.rs', areaServed: { '@type': 'Country', name: 'Srbija' },
+    contactPoint: [{ '@type': 'ContactPoint', contactType: 'customer support', email: 'office@evomobil.rs', availableLanguage: 'sr' },
+      ...(ads ? [{ '@type': 'ContactPoint', contactType: 'sales', email: 'oglasi@evomobil.rs', availableLanguage: 'sr' }] : [])] },
+  faqLd,
+];
+const lds = ld.map((x) => `<script type="application/ld+json">${pyjson(x)}</script>\n`).join('');
+const headTop = (NOINDEX ? '\n<meta name="robots" content="noindex, nofollow">' : '') + (PH_STYLE !== 'multiply' ? `\n<script>document.documentElement.setAttribute("data-ph","${PH_STYLE}")</script>` : '');
+// the ad spots (AD-01 … AD-05): labels, "Zakupi" buttons and the owner notes exist only while ADS_ENABLED is on
+const note = (code: string, title: string, spec: string, z: string) => (ads ? `<div class="rs-note"><b>${code} · ${title}</b><span>${spec}</span><a href="oglasavanje#zakup-${z}">Detalji</a></div>` : '');
+const zakupi = (z: string, text = 'Zakupi ovaj prostor') => (ads ? `<a href="oglasavanje#zakup-${z}" class="btn btn-dark">${text} <span class="arr">→</span></a>` : '');
+const adLabel = ads ? '<span class="rs-label">Oglas</span>' : '';
+const homeScript = ads
+  ? homeJs.replace(`'<div class="tile tile-free ph-bg" data-k="'+k+'"'+(s.bg?' style="--ph:url('+s.bg+')"':'')+'><b>POZICIJA '+(k+1)+'</b><strong>Slobodna pozicija</strong></div>'`,
+      `'<a class="tile tile-free ph-bg" href="oglasavanje#zakup-01" data-k="'+k+'"'+(s.bg?' style="--ph:url('+s.bg+')"':'')+'><b>POZICIJA '+(k+1)+'</b><strong>Slobodna pozicija</strong><span>Zakupi →</span></a>'`)
+  : homeJs;
+const homeScriptFinal = txt ? homeScript : homeScript
+  .replace(`'><b>POZICIJA '+(k+1)+'</b><strong>Slobodna pozicija</strong></div>'`, `'></div>'`)
+  .replace(`$('h-brand').parentNode.hidden=!free;`, `$('h-brand').parentNode.hidden=true;`)
+  .replace(`b.setAttribute('aria-label','Pozicija '+(k+1)+': '+s.b+' '+s.m);`, `b.setAttribute('aria-label','Slika '+(k+1));`)
+  .replace(`$('h-brand').textContent=free?'SLOBODNA POZICIJA':`, `$('h-brand').textContent=free?'':`);
+if (!txt && homeScriptFinal.split('POZICIJA').length > 1) throw new Error('index.astro: home.js changed, the placeholder texts could not be removed');
+// photos only: no dark text scrims, full-strength photos, no bolt; the brand-of-the-month tile and the
+// test-drive box keep their texts invisibly (.ph-quiet) because those texts set the height of their row
+const photoOnlyCss = txt ? '' : '\n<style>/* empty ad spots: photos only (AD_PLACEHOLDER_TEXT off) */.ph-bg::after{display:none!important}.ph-bg::before{opacity:1!important;mix-blend-mode:normal!important;filter:none!important;-webkit-mask-image:none!important;mask-image:none!important}.ph-bg .bolt{display:none}.ph-quiet>*{visibility:hidden}</style>';
+const js = cmpbar + consentSrc.replace('__GA__', GA_ID);
+---
+<!doctype html>
+<html lang="sr-Latn">
+<head>
+<meta charset="utf-8"><Fragment set:html={headTop} />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="only light">
+<script is:inline>/* Samsung Internet dark mode: offer the site dark theme to it */if(/SamsungBrowser/.test(navigator.userAgent)){document.documentElement.classList.add("sam");var m=document.querySelector("meta[name=color-scheme]");if(m)m.content="light dark"}</script>
+<title>Električni automobili u Srbiji: modeli, domet i distributeri | evomobil.rs</title>
+<link rel="canonical" href={`${DOMAIN}/`}>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content={SITE}>
+<meta property="og:locale" content="sr_RS">
+<meta property="og:title" content={`Električni automobili u Srbiji | ${SITE}`}>
+<meta property="og:description" content="Električni automobili u Srbiji na jednom mestu: modeli, domet, baterija i distributeri.">
+<meta property="og:url" content={`${DOMAIN}/`}>
+<meta property="og:image" content={`${DOMAIN}/${OG_DEFAULT}`}>
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="evomobil.rs – električni automobili u Srbiji">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href={`favicon.ico?v=${FAV_V}`} sizes="any">
+<link rel="icon" href={`img/favicon.svg?v=${FAV_V}`} type="image/svg+xml">
+<link rel="icon" href={`img/favicon-32.png?v=${FAV_V}`} type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href={`img/apple-touch-icon.png?v=${FAV_V}`}>
+<meta name="theme-color" content="#16202e">
+<Fragment set:html={lds} /><meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Električni automobili u Srbiji na jednom mestu: modeli, domet, baterija, klasa vozila i kontakti zvaničnih distributera. Samo 100% električna vozila.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap">
+<link rel="stylesheet" href={`assets/site.css?v=${CSS_V}`}><style is:inline>/* logo masks resolve against the page, not the stylesheet */.blogo{-webkit-mask:var(--l) center/contain no-repeat;mask:var(--l) center/contain no-repeat}</style><Fragment set:html={photoOnlyCss} />
+
+
+
+</head>
+<body>
+<Sprite />
+
+<Header isHome />
+
+<main id="top"><Fragment set:html={ads ? '\n  <!-- HERO. AD-01: the carousel on the right is rented per rotation position. -->' : ''} />
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <span class="pill"><b>⚡</b>SAMO 100% ELEKTRIČNI AUTOMOBILI</span>
+        <h1><em>Električni automobili</em> u Srbiji.</h1>
+        <p class="lede">Električni modeli, domet i zvanični distributeri na jednom mestu.</p>
+        <div class="ctas">
+          <a href="#pretraga" class="btn btn-dark">Pronađi automobil <span class="arr">→</span></a>
+          <a href="distributeri" class="btn btn-ghost">Pronađi distributera</a>
+        </div>
+      </div>
+
+      <div class="hero-media rs" id="hero-media" data-pos={ads ? 'AD-01' : undefined}>
+        <Fragment set:html={note('AD-01', 'Hero karusel', '5 pozicija u rotaciji, kreativa 1600 x 900 px (16:9), mesečni zakup', '01')} />
+        <div class="stage" id="stage" aria-roledescription="carousel" aria-label={ads ? 'Sponzorisani modeli' : 'Istaknuti modeli'}>
+          <div class="stage-clip">
+            <a id="h-link" class="hero-img" href="#" hidden><img id="h-img" src="data:," alt="" width="1600" height="900"></a>
+            <div class="free ph-bg" id="h-free" style="--ph:url(../img/evomobil-bg-auto.webp)">
+              <Fragment set:html={txt ? '<h3>Ovde može biti vaš model</h3>' : ''} />
+              <Fragment set:html={ads ? '<p>Jedna od 5 pozicija u hero karuselu. Kreativa 1600 x 900 px (16:9), mesečni zakup.</p>\n              ' + zakupi('01', 'Zakupi ovu poziciju') : ''} />
+            </div>
+            <Fragment set:html={ads ? '<span class="media-hint" id="hero-hint">Kreativa oglašivača 1600 x 900 px</span>' : ''} />
+          </div>
+          <Fragment set:html={txt ? '<span class="rs-chip"><span id="h-brand">SLOBODNA POZICIJA</span></span>' : '<span class="rs-chip" hidden><span id="h-brand"></span></span>'} />
+          <div class="arrows stage-arrows">
+            <button type="button" id="prev" aria-label={ads ? 'Prethodni oglas' : 'Prethodna pozicija'}>←</button>
+            <button type="button" id="next" aria-label={ads ? 'Sledeći oglas' : 'Sledeća pozicija'}>→</button>
+          </div>
+        </div>
+        <div class="side" id="side"></div>
+        <div class="hero-tabs" id="hero-tabs" role="tablist" aria-label={ads ? 'Oglašivači u rotaciji' : 'Pozicije'}></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEARCH + CATEGORY RAIL -->
+  <section class="search" id="pretraga">
+    <div class="wrap">
+      <h2>Filtriraj i pronađi svoj model</h2>
+      <form class="panel" id="search-form">
+        <div class="field"><label for="f-brand">BREND</label>
+          <select id="f-brand"><option value="">Svi brendovi</option><Fragment set:html={brandOpts} /></select></div>
+        <div class="field"><label for="f-model">MODEL</label>
+          <select id="f-model"><option value="">Svi modeli</option><Fragment set:html={modelGroups} />
+          </select></div>
+        <div class="field"><label for="f-body">KAROSERIJA</label>
+          <select id="f-body"><option value="">Sve</option><option value="suv">SUV / crossover</option><option value="hatch">Hečbek</option><option value="sedan">Sedan</option><option value="pickup">Pikap</option></select></div>
+        <div class="field"><label for="f-range">DOMET</label>
+          <select id="f-range"><option value="">Bilo koji</option><option value="200">200+ km</option><option value="300">300+ km</option><option value="400">400+ km</option><option value="500">500+ km</option><option value="600">600+ km</option></select></div>
+        <button class="btn btn-dark" type="submit">Pretraži <span class="arr">→</span></button>
+      </form>
+      <div class="rail" role="group" aria-label="Kategorije">
+        <button type="button" class="cat" data-f="suv" aria-pressed="false"><span class="ic"><svg viewBox="0 12.5 50 25" fill="currentColor" aria-hidden="true"><g><path d="m38.4 36.4c2.8 0 5-2.3 5-5 0-2.8-2.3-5-5-5-2.8 0-5 2.3-5 5s2.2 5 5 5z"/><path d="m11.4 26.3c-2.8 0-5 2.3-5 5 0 2.8 2.3 5 5 5 2.8 0 5-2.3 5-5s-2.2-5-5-5z"/><path d="m48.8 21.9v-.1c0-.4-.1-.9-.4-1.5l-2-4.4c-.5-1.1-1.5-1.8-2.6-1.9-7-.5-14.5-.6-21.5 0-.9.1-1.8.4-2.5 1l-4.4 3.3c-2.2 1.7-5.1.2-12.4 3.1-.6.2-1 .7-1.2 1.2-.7 1.8-.9 3.5-.8 5.1.2 1.9 1.6 3.4 3.3 3.8 0-.1 0-.2 0-.3 0-3.9 3.1-7 7-7s7 3.2 7 7v.5h13c0-.2 0-.3 0-.5 0-3.9 3.1-7 7-7s7 3.2 7 7v.3c1.6-.5 3.1-1.5 3.3-3.1.5-1.9.5-4.2.2-6.5zm-22.3-1.8h-8.6l-1-.3 4.1-3.2c.4-.3.9-.5 1.4-.6 1.4-.1 2.8-.2 4.3-.3zm7.9 0h-5.9l.3-4.4c1.8-.1 3.7-.1 5.6 0zm7-1.9c-.2.2-.8 1.9-2.7 1.9h-2.3v-4.4c1.4 0 2.8.1 4.2.2l.8 1c.2.4.3.9 0 1.3z"/></g></svg></span><span><strong>SUV</strong><small>Porodični i kompaktni</small></span></button>
+        <button type="button" class="cat" data-f="hatch" aria-pressed="false"><span class="ic"><svg viewBox="0 12.5 50 25" fill="currentColor" aria-hidden="true"><g><g><path d="m48.2 25.6c-.1-.2-.1-.3-.2-.4-.3-2.9-1.1-5.9-2.6-8.8-.4-.9-1.3-1.4-2.2-1.5-6.4-.9-13.8-.9-21.4 0-.5 0-.9.2-1.3.5l-7 4.7c-.2.2-.5.2-.7.2-2.6 0-5.3.5-8.3 1.6-.5.2-1 .6-1.3 1-1.4 2-3.1 5-1.6 7.4.2.4.6.7 1 1 0-.2 0-.3 0-.5 0-3.8 3.1-6.9 7-6.9 3.8 0 7 3.1 7 6.9 0 .3 0 .7-.1 1h17.8c-.1-.3-.1-.7-.1-1 0-3.8 3.1-6.9 7-6.9 3.8 0 6.9 3.1 7 6.9.1-.1.3-.3.3-.5.8-1.5.7-3.1-.3-4.7zm-20.9-5.6-10.3.1 4.7-3.1c.1-.1.2-.1.4-.1 2-.2 4-.4 6-.5zm12.5-.6c-.1.3-.3.5-.7.5l-9.7.1.8-3.7c3.4-.1 6.7 0 9.8.2 0 .8.1 2-.2 2.9z"/></g><path d="m4.5 30.8c0-2.7 2.2-4.9 5-4.9s5 2.2 5 4.9-2.2 5-5 5-5-2.3-5-5z"/><path d="m36 30.8c0-2.7 2.2-4.9 5-4.9 2.7 0 5 2.2 5 4.9s-2.2 5-5 5c-2.7 0-5-2.3-5-5z"/></g></svg></span><span><strong>Hečbek</strong><small>Kompaktni</small></span></button>
+        <button type="button" class="cat" data-f="sedan" aria-pressed="false"><span class="ic"><svg viewBox="0 12.5 50 25" fill="currentColor" aria-hidden="true"><g transform="matrix(-1 0 0 1 50 0)"><g><path d="m48.8 23.7c-.1-1.3-1.2-2.4-2.6-2.5-.1 0-10.2-.6-11.4-.6-.2 0-.4-.1-.6-.2l-4.3-2.4c-3-1.6-15.9-1.1-17.8.4l-2.3 1.8c-1.1.8-2.1.7-5.3 1.5-1 .2-1.9.8-2.4 1.6-.6.9-.9 2-1.1 3.4-.2 2.1 1.4 4 3.6 4h.1c-1-3.6 1.8-7.3 5.7-7.3s6.7 3.7 5.7 7.3h17.7c-1-3.6 1.8-7.3 5.7-7.3 3.8 0 6.5 3.5 5.8 7.1.5-.2 1-.5 1.4-.8l1.9-1.8c.3-.2.4-.5.4-.9zm-31.6-1.5h-3.8l-2-.9 1.9-1.5c.4-.3 2-.5 3.9-.7zm6.1 0h-4.1v-3.2c1.3-.1 2.7-.1 4.1-.1zm7.3 0h-5.3v-3.2c1.6.1 3 .3 3.6.7l3.2 1.8z"/><ellipse cx="10.4" cy="29.2" rx="3.9" ry="3.9"/><circle cx="39.5" cy="29.2" r="3.9"/></g></g></svg></span><span><strong>Sedan</strong><small>Za duža putovanja</small></span></button>
+        <button type="button" class="cat" data-f="pickup" aria-pressed="false"><span class="ic"><svg viewBox="0 12.5 50 25" fill="currentColor" aria-hidden="true"><g transform="matrix(-1 0 0 1 50 0)"><g><path d="m4.8 30.7h1.3c0-.3-.1-.7-.1-1 0-3.8 2.9-6.9 6.6-6.9 3.6 0 6.5 3.1 6.5 6.9 0 .3 0 .7-.1 1h15.8c0-.3-.1-.7-.1-1 0-3.8 2.9-6.9 6.5-6.9s6.6 3.1 6.6 6.9v.3c.8-.7 1.3-1.8 1-3-.3-1.4-.7-2.7-1.2-4-.2-.5-.6-1-1.1-1.3-2.1-1.4-6.9-2-7.9-2-.2 0-.4 0-.6-.1-5-3.1-4.8-3-5.3-3.1-4.7-1-9.4-1.4-14.5-1.1-1 .1-1.8.8-1.9 1.9l-.4 3.5c-2-.1-8.7-.4-11.8-.5-1.7-.1-3.1 1.2-3.4 3-.1.5.3 3.7 1.6 6 .8.9 1.6 1.4 2.5 1.4zm27.7-12.2c.2.1 1 .6 3.6 2.2-.2.1.3 0-8.7 0l-.3-3.1c1.9.2 3.7.5 5.4.9zm-13.9-.9c0-.1 0-.1 0-.1 2.2-.1 4.4-.1 6.5 0l.3 3.2h-7.2z"/><path d="m17.2 29.7c0-2.7-2-4.9-4.5-4.9s-4.6 2.2-4.6 4.9 2 4.9 4.6 4.9 4.5-2.2 4.5-4.9z"/><path d="m45.9 29.7c0-2.7-2-4.9-4.6-4.9-2.5 0-4.5 2.2-4.5 4.9s2 4.9 4.5 4.9c2.6 0 4.6-2.2 4.6-4.9z"/></g></g></svg></span><span><strong>Pikap</strong><small>Za rad i teren</small></span></button>
+        <button type="button" class="cat" data-f="city" aria-pressed="false"><span class="ic"><svg viewBox="0 12.5 50 25" fill="currentColor" aria-hidden="true"><g transform="matrix(-1 0 0 1 50 0)"><g><path d="m37.7 20.4c-2.2-.8-7.2-4.6-9.8-5.1-5.1-1-20.1-3-22.9 1.3l-2.5 3.9c-.4.7-.4 1.4-.4 2.1.1.9.1 1.9-.7 3.5-.7 1.4-.8 2.7-.2 3.8.4.8 1.1 1.4 2 1.9-.4-4 2.8-7.5 6.9-7.5 4.3.1 7.6 4.2 6.5 8.4h16.1c-1-4 2-8.4 6.7-8.4 4.4.1 7.6 4.3 6.6 8.4h.2c1 0 2-.7 2.4-1.7 2.5-6.4-5.7-8.7-10.9-10.6zm-25.3-.2-2.6-.2c-.2 0-.4-.1-.5-.3l-1.3-2.8c1.1-.4 2.6-.7 4.4-.9zm8.6.6-6.6-.5v-4.5c2-.1 4.2 0 6.6.3zm13.7 1-4.9-.3-2.3-3.2c-.3-.5-1-.6-1.4-.2-.5.3-.5 1-.2 1.4l1.3 1.8-4.2-.3v-4.5c1.4.2 2.9.5 4.5.8 1.7.3 5.3 2.8 7.8 4.2z"/><path d="m39.7 26.4c-2.8 0-4.9 2.1-5 4.7-.1 2.7 2.1 4.9 4.8 5 2.6 0 4.8-2.1 4.9-4.7.1-2.7-2.1-4.9-4.7-5z"/><path d="m10.2 26.4c-2.7-.1-4.9 2-5 4.7-.1 2.8 2.2 4.9 4.8 5 2.5 0 4.8-2 4.9-4.7s-2-4.9-4.7-5z"/></g></g></svg></span><span><strong>Gradski</strong><small>Mali i laki</small></span></button>
+      </div>
+      <p class="search-note" id="search-note" role="status"></p>
+    </div>
+  </section>
+
+<Fragment set:html={ads ? '  <!-- AD-02 LEADERBOARD -->\n' : ''} />  <section class="leader" aria-label={ads ? 'Oglas' : 'Istaknuto'}>
+    <div class="wrap">
+      <div class="rs" data-pos={ads ? 'AD-02' : undefined}>
+        <Fragment set:html={note('AD-02', 'Leaderboard', 'desktop 2480 x 360 px, mobilni 720 x 500 px, mesečni zakup', '02')} />
+        <div class="house ph-bg" style="--ph:url(../img/evomobil-bg-auto-vertikalno.webp);--ph-pos:center 72%">
+<Fragment set:html={txt ? `          <div>${ads ? '\n            ' + adLabel : ''}
+            <h3>Vaš brend ispred kupaca električnih automobila</h3>
+            <p>Ovaj baner vidi svaki posetilac početne strane, odmah posle pretrage.</p>
+          </div>` : ''} /><Fragment set:html={ads ? '\n          ' + zakupi('02') : ''} />
+          <svg class="bolt" aria-hidden="true"><use href="#bolt"/></svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<Fragment set:html={ads ? '  <!-- BRANDS. AD-03 lives in the large tile. -->\n' : ''} />  <section class="sec alt" id="brendovi">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <h2>Brendovi dostupni u Srbiji</h2>
+          <p>Brendovi čije električne automobile pratimo u Srbiji. Kliknite na brend da vidite njegove modele.</p>
+        </div>
+      </div>
+      <div class="bento">
+        <div class={'feature-brand rs ph-bg' + (txt ? '' : ' ph-quiet')} data-pos={ads ? 'AD-03' : undefined} style="--ph:url(../img/evomobil-bg-svetlo.webp);--ph-pos:30% 40%" aria-hidden={txt ? undefined : 'true'}>
+          <Fragment set:html={note('AD-03', 'Brend meseca', 'logo 480 x 160 px + tekst do 120 znakova, 1 brend mesečno', '03')} />
+<Fragment set:html={`          <div>
+            <span class="rs-label">${ads ? 'Brend meseca · Oglas' : 'Brend meseca'}</span>
+            <h3>Ovde može stajati vaš brend</h3>
+            <p>Prvo mesto u listi brendova, sa logom i linkom ka vašoj EV ponudi.</p>
+          </div>
+          <div class="logo-slot">LOGO BRENDA</div>`} /><Fragment set:html={ads ? '\n          ' + zakupi('03') : ''} />
+        </div>
+        <Fragment set:html={tiles} />
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED MODELS -->
+  <section class="sec" id="modeli">
+    <div class="wrap">
+      <div class="head">
+        <div class="res-head">
+          <h2 id="models-title">Izdvojeni modeli</h2>
+          <p class="res-sub" id="models-sub" hidden></p>
+        </div>
+        <button type="button" class="link res-reset" id="search-reset" hidden>Poništi pretragu <span aria-hidden="true">×</span></button>
+        <div class="filters" id="model-filters" role="group" aria-label="Filter modela">
+          <button type="button" data-filter="all" aria-pressed="true">Svi</button>
+          <button type="button" data-filter="suv" aria-pressed="false">SUV</button>
+          <button type="button" data-filter="hatch" aria-pressed="false">Hečbek</button>
+          <button type="button" data-filter="sedan" aria-pressed="false">Sedan</button>
+          <button type="button" data-filter="pickup" aria-pressed="false">Pikap</button>
+        </div>
+      </div>
+      <div class="models" id="models">
+<Fragment set:html={featured} />        <div class="empty" id="empty" hidden>
+          <p id="empty-text">Nijedan model ne odgovara izabranim kriterijumima.</p>
+          <a href="modeli" class="btn btn-ghost" id="reset">Prikaži sve modele</a>
+        </div>
+      </div>
+      <p class="price-note">Domet je po WLTP normi, prema podacima proizvođača ili uvoznika, za verziju sa najvećim navedenim dometom. Proverite aktuelne podatke kod distributera.</p>
+      <p class="all-link"><a class="link" href="modeli">Svi električni modeli u Srbiji →</a></p>
+    </div>
+  </section>
+
+<Fragment set:html={ads ? '  <!-- AD-04 PARTNER OFFERS (2 positions) -->\n' : ''} />  <section aria-label="Ponude partnera">
+    <div class="wrap">
+      <div class="offers">
+        <div class="rs" data-pos={ads ? 'AD-04A' : undefined}>
+          <Fragment set:html={note('AD-04A', 'Ponuda partnera', 'desktop 1220 x 480 px, mobilni 690 x 440 px, mesečni zakup', '04')} />
+          <div class="house ph-bg" style="--ph:url(../img/evomobil-bg-punjac.webp)">
+            <Fragment set:html={txt ? `<div>${adLabel}<h3>Prostor za ponudu distributera</h3><p>Akcijske cene, lizing ili finansiranje za modele koje prodajete.</p></div>` : ''} /><Fragment set:html={ads ? '\n            ' + zakupi('04') : ''} />
+          </div>
+        </div>
+        <div class="rs" data-pos={ads ? 'AD-04B' : undefined}>
+          <Fragment set:html={note('AD-04B', 'Ponuda partnera', 'desktop 1220 x 480 px, mobilni 690 x 440 px, mesečni zakup', '04')} />
+          <div class="house ph-bg" style="--ph:url(../img/evomobil-bg-kabl.webp);--ph-pos:center 60%">
+            <Fragment set:html={txt ? `<div>${adLabel}<h3>Prostor za servis, osiguranje ili punjače</h3><p>Usluge koje vlasnicima električnih vozila trebaju posle kupovine.</p></div>` : ''} /><Fragment set:html={ads ? '\n            ' + zakupi('04') : ''} />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<Fragment set:html={ads ? '  <!-- TEST DRIVE BAND. AD-05 is the partner-box box. -->\n' : ''} />  <section class="cta" id="distributeri">
+    <div class="wrap">
+      <div class="cta-band">
+        <div class="glow" aria-hidden="true"></div>
+        <div>
+          <h2>Zainteresovani ste za test vožnju?</h2>
+          <p>Spisak zvaničnih distributera po gradovima, sa adresama, telefonima i radnim vremenom.</p>
+          <a href="distributeri" class="btn">Pronađi distributera <span class="arr">→</span></a>
+        </div>
+        <div class={'partner-box rs ph-bg' + (txt ? '' : ' ph-quiet')} data-pos={ads ? 'AD-05' : undefined} style="--ph:url(../img/evomobil-bg-auto.webp)" aria-hidden={txt ? undefined : 'true'}>
+          <Fragment set:html={note('AD-05', 'Sponzor sekcije', 'logo 400 x 120 px, beli ili jednobojni', '05')} />
+<Fragment set:html={`          <span class="rs-label">Test vožnje omogućava</span>
+          <div class="slot">${ads ? 'LOGO SPONZORA' : 'LOGO'}</div>`} /><Fragment set:html={ads ? '\n          <p>Mesto za jednog distributera ili brend, uz link ka zakazivanju test vožnje.</p>' : ''} />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GUIDE + FAQ -->
+  <section class="sec alt" id="faq">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <span class="eyebrow">Vodič kroz tržište</span>
+          <h2 style="margin-top:10px">O električnim automobilima u Srbiji</h2>
+        </div>
+      </div>
+      <div class="guide">
+        <div>
+          <article>
+            <h3>Zašto je u Srbiji sve više električnih automobila?</h3>
+            <p>Izbor električnih automobila u Srbiji brzo raste, od malih gradskih modela do SUV vozila i pikapa. Sve više proizvođača nudi modele sa dometom od 400 km i više, a država i u 2026. godini subvencioniše kupovinu novog električnog automobila sa 5.000 evra. Detalje pročitajte u vodiču <a href="subvencije-elektricni-automobili-2026">Subvencije za električne automobile 2026</a>.</p>
+          </article>
+          <article>
+            <h3>Koje brendove pratimo?</h3>
+            <p>Na sajtu su električni modeli {nBrands} brenda prisutna u Srbiji: <Fragment set:html={brandNames} />. Ponuda ide od gradskih modela kao što su Leapmotor T03, Dongfeng Box i BYD Dolphin Surf, preko kompaktnih SUV modela, do električnih pikapa JAC T9 EV i Foton eTunland. Prikazujemo samo potpuno električne modele, bez hibrida.</p>
+          </article>
+        </div>
+        <div class="faq">
+          <h3>Česta pitanja</h3>
+<Fragment set:html={faqHtml} />
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script type="application/json" id="ev-models" set:html={evModels}></script>
+<Footer isHome />
+
+
+<script is:inline set:html={homeScriptFinal}></script>
+<script is:inline set:html={js}></script>
+
+</body>
+</html>

@@ -34,6 +34,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap">
 <link rel="stylesheet" href="assets/site.css?v=82ea8980"><style>/* logo masks resolve against the page, not the stylesheet */.blogo{-webkit-mask:var(--l) center/contain no-repeat;mask:var(--l) center/contain no-repeat}</style>
+<style>/* empty ad spots: photos only (AD_PLACEHOLDER_TEXT off) */.ph-bg::after{display:none!important}.ph-bg::before{opacity:1!important;mix-blend-mode:normal!important;filter:none!important;-webkit-mask-image:none!important;mask-image:none!important}.ph-bg .bolt{display:none}.ph-quiet>*{visibility:hidden}</style>
 
 
 
@@ -146,12 +147,12 @@
           <div class="stage-clip">
             <a id="h-link" class="hero-img" href="#" hidden><img id="h-img" src="data:," alt="" width="1600" height="900"></a>
             <div class="free ph-bg" id="h-free" style="--ph:url(../img/evomobil-bg-auto.webp)">
-              <h3>Ovde može biti vaš model</h3>
+              
               
             </div>
             
           </div>
-          <span class="rs-chip"><span id="h-brand">SLOBODNA POZICIJA</span></span>
+          <span class="rs-chip" hidden><span id="h-brand"></span></span>
           <div class="arrows stage-arrows">
             <button type="button" id="prev" aria-label="Prethodna pozicija">←</button>
             <button type="button" id="next" aria-label="Sledeća pozicija">→</button>
@@ -224,10 +225,7 @@
       <div class="rs">
         
         <div class="house ph-bg" style="--ph:url(../img/evomobil-bg-auto-vertikalno.webp);--ph-pos:center 72%">
-          <div>
-            <h3>Vaš brend ispred kupaca električnih automobila</h3>
-            <p>Ovaj baner vidi svaki posetilac početne strane, odmah posle pretrage.</p>
-          </div>
+
           <svg class="bolt" aria-hidden="true"><use href="#bolt"/></svg>
         </div>
       </div>
@@ -243,7 +241,7 @@
         </div>
       </div>
       <div class="bento">
-        <div class="feature-brand rs ph-bg" style="--ph:url(../img/evomobil-bg-svetlo.webp);--ph-pos:30% 40%">
+        <div class="feature-brand rs ph-bg ph-quiet" style="--ph:url(../img/evomobil-bg-svetlo.webp);--ph-pos:30% 40%" aria-hidden="true">
           
           <div>
             <span class="rs-label">Brend meseca</span>
@@ -259,7 +257,7 @@
         <a class="btile" href="brendovi/citroen" data-brand-page="Citroën"><div class="mark"><span class="blogo has-img" aria-hidden="true"><img src="logos/citroen.svg" alt="" decoding="async"></span></div><div class="meta"><h3>Citroën</h3></div><span class="count">4 EV modela</span></a>
         <a class="btile" href="brendovi/cupra" data-brand-page="Cupra"><div class="mark"><span class="blogo has-img" aria-hidden="true"><img src="logos/cupra.svg" alt="" decoding="async"></span></div><div class="meta"><h3>Cupra</h3></div><span class="count">2 EV modela</span></a>
         <a class="btile" href="brendovi/dacia" data-brand-page="Dacia"><div class="mark"><span class="blogo has-img" aria-hidden="true"><img src="logos/dacia.svg" alt="" decoding="async"></span></div><div class="meta"><h3>Dacia</h3></div><span class="count">1 EV model</span></a>
-        <a class="btile" href="brendovi/dongfeng" data-brand-page="Dongfeng"><div class="mark"><span class="blogo sq has-img" aria-hidden="true"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyOC4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0i0KHQu9C+0LlfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAxMDAwIDY1MC42MTQzMTg4IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMDAwIDY1MC42MTQzMTg4IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjRDcwRTE5IiBkPSJNMjcyLjcyNzY2MTEsMjI3LjI3MDg4OTMNCglDMjcyLjcyNzY2MTEsMTAxLjc0OTA2OTIsMzc0LjQ3NjcxNTEsMCw0OTkuOTk4NTM1MiwwYzEyNS41MjE2MDY0LDAsMjI3LjI3MDY5MDksMTAxLjc0OTA2OTIsMjI3LjI3MDY5MDksMjI3LjI3MDg4OTMNCgljMCwxMjUuNTIxNTkxMi0xMDEuNzQ5MDg0NSwyMjcuMjcwNjQ1MS0yMjcuMjcwNjkwOSwyMjcuMjcwNjQ1MQ0KCUMzNzQuNDc2NzE1MSw0NTQuNTQxNTM0NCwyNzIuNzI3NjYxMSwzNTIuNzkyNDgwNSwyNzIuNzI3NjYxMSwyMjcuMjcwODg5MyBNNTgzLjIwMjk0MTksNDA5LjE4MTIxMzQNCgljLTI1LjMzNDQ3MjcsMTEuNjA3Nzg4MS01My41MTQyODIyLDE4LjA4MjU1LTgzLjIwNDQwNjcsMTguMDgyNTVjLTc5LjEyMDIzOTMsMC0xNDcuNDk4MDc3NC00NS45Mzk0NTMxLTE3OS45Mzc5NTc4LTExMi42MDEzNDg5DQoJYzkuNjQyMzM0LTM1LjI5MjYwMjUsMjkuNDI2MjY5NS02Ni40MTI2MjgyLDU1Ljk4NTI2LTkwLjA1MzM2Yy0wLjAxNDUyNjQsMC45OTcxNDY2LDAuMDU4NjU0OCwxLjk3MjM2NjMsMC4wNTg2NTQ4LDIuOTY5NzQxOA0KCWMwLDEwMS4xNDc3OTY2LDgxLjk4NzI3NDIsMTgzLjE0MjI0MjQsMTgzLjE0MjQ1NjEsMTgzLjE0MjI0MjQNCglDNTY3LjQwMDkzOTksNDEwLjcyMTAzODgsNTc1LjMzNDk2MDksNDEwLjIxNTA4NzksNTgzLjIwMjk0MTksNDA5LjE4MTIxMzQgTTQ5OS45OTg1MzUyLDM2NC4wMDQxODA5DQoJYzEwMS44ODA4NTk0LDAsMTg0LjQ2MjA5NzItODIuNTgxMjA3MywxODQuNDYyMDk3Mi0xODQuNDYyMDgxOWMwLTEzLjIxMzU5MjUtMS4zNzEwOTM4LTI2LjE3NzkwMjItNC4wMTA5ODYzLTM4LjYxNDMzNDENCgljMTIuNTI0MzUzLDI2LjE0MTIyMDEsMTkuNTQ5MTk0Myw1NS40MjA4OTg0LDE5LjU0OTE5NDMsODYuMzQzMTI0NGMwLDgwLjYxNTk4MjEtNDcuNjk5NTIzOSwxNTAuMDcxNTE3OS0xMTYuNDA3MTY1NSwxODEuNzI3MDY2DQoJYy04MS45OTQ2ODk5LTE5LjYyOTc2MDctMTQyLjkwMDM2MDEtOTMuNDA0NDE4OS0xNDIuOTAwMzYwMS0xODEuNDE5MTU4OQ0KCWMwLTUzLjgyOTYyMDQsMjIuODA0Njg3NS0xMDIuNjgwNDE5OSw1OS4yNzc2Nzk0LTEzNi43MzM1MDUyYy0xMDEuODgwODU5NCwwLTE4NC40NjIwNjY3LDgyLjU4ODU5MjUtMTg0LjQ2MjA2NjcsMTg0LjQ2MjI5NTUNCgljMCwxMi45Nzg4NTEzLDEuMzE5ODU0NywyNS43MTU4MjAzLDMuODcxNTgyLDM3LjkzOTQyMjZjLTEyLjQyMTY2MTQtMjYuMDQ1ODk4NC0xOS4zODA0NjI2LTU1LjE5MzMyODktMTkuMzgwNDYyNi04NS45NzYxMg0KCWMwLTExMC40NTMxMDk3LDg5LjU0MDAwODUtMTk5Ljk5MzEwMywyMDAuMDAwNDg4My0xOTkuOTkzMTAzYzc5LjE0OTM1MywwLDE0Ny41NTY1MTg2LDQ1Ljk2OTAwMTgsMTc5Ljk3NDQyNjMsMTEyLjY3NDc2NjUNCgljLTkuNjIwMzYxMywzNS4zODc5MDg5LTI5LjQzMzQxMDYsNjYuNTk1OTAxNS01Ni4wNTEyNjk1LDkwLjI5NTI1NzZjMC4wMTQ1MjY0LTEuMDA0NTQ3MS0wLjA1ODU5MzgtMS45NzIzODE2LTAuMDU4NTkzOC0yLjk3NjkxMzUNCgljMC0xMDEuMTQwMzk2MS04MS45ODczMDQ3LTE4My4xMzUwNzA4LTE4My4xMzUxMDEzLTE4My4xMzUwNzA4Yy04LjQxMDY3NSwwLTE2LjU4NjU3ODQsMC41MzUyNzQ1LTI0LjY5NjcxNjMsMS42Mjc3NTgNCgljODIuMTcwNTYyNywxOS41MTI0ODE3LDE0My4yMzc1NzkzLDkzLjM2NzcxMzksMTQzLjIzNzU3OTMsMTgxLjUwNzMyNDINCglDNTU5LjI2ODg1OTksMjgxLjEwNzY2Niw1MzYuNDcxNTU3NiwzMjkuOTU4NDY1Niw0OTkuOTk4NTM1MiwzNjQuMDA0MTgwOSIvPg0KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik05NDEuMzMwOTkzNyw1ODQuNDA2MTg5aDMzLjMzNDUzMzdIMTAwMHY2Ni4yMDc0NTg1aC04MS4yMzkxOTY4DQoJYy0xNS44OTAxOTc4LDAtMjguODkwOTkxMi0xMy41NzI5OTgtMjguODkwOTkxMi0zMC4xNzQzNzc0di00NC45MTI5NjM5YzAtMTYuNTkzOTk0MSwxMy4wMDA3OTM1LTMwLjE3NDEzMzMsMjguODkwOTkxMi0zMC4xNzQxMzMzDQoJSDEwMDB2MjQuMjA1MzIyM2gtMC41NzkxNjI2aC03MS41OTY4NjI4Yy02Ljk0NDAzMDgsMC0xMi42MjcwNzUyLDUuOTM5NDUzMS0xMi42MjcwNzUyLDEzLjE5MTY1MDR2MzAuNDY3NDY4Mw0KCWMwLDcuMjUyMTk3Myw1LjY4MzA0NDQsMTMuMTkxNzExNCwxMi42MjcwNzUyLDEzLjE5MTcxMTRoMzQuMjIxODYyOGwxMi42MTk2ODk5LDAuMDA3MTQxMXYtMTkuNTA1MDY1OWgtMzMuMzM0NTMzN1Y1ODQuNDA2MTg5eiIvPg0KPHBvbHlnb24gZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIHBvaW50cz0iNzU5LjM5Mzk4MTksNTQ1LjM1Mjg0NDIgNzgyLjE1NDYwMjEsNTQ1LjM1Mjg0NDIgDQoJNzgzLjUxODU1NDcsNTQ1LjM1Mjg0NDIgODQzLjI1ODM2MTgsNjEzLjg2MjY3MDkgODQzLjI1ODM2MTgsNTQ1LjM1Mjg0NDIgODY3LjM4MzExNzcsNTQ1LjM1Mjg0NDIgODY3LjM4MzExNzcsNjUwLjYxNDMxODggDQoJODQzLjI1ODM2MTgsNjUwLjYxNDMxODggNzgzLjUxODU1NDcsNTgzLjQxNzExNDMgNzgzLjUxODU1NDcsNjUwLjYxNDMxODggNzU5LjM5Mzk4MTksNjUwLjYxNDMxODggIi8+DQo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTI1LjMyNzMzNTQsNTg0LjQwNjE4OUgwdjY2LjIwNzQ1ODVoODEuMjM5NDMzMw0KCWMxNS44ODk5NzY1LDAsMjguODgzNTk4My0xMy41NzI5OTgsMjguODgzNTk4My0zMC4xNzQzNzc0di00NC45MTI5NjM5YzAtMTYuNTkzOTk0MS0xMi45OTM2MjE4LTMwLjE3NDEzMzMtMjguODgzNTk4My0zMC4xNzQxMzMzSDANCgl2MjQuMjA1MzIyM2gwLjU3MTk3NDdoNzEuNjA0MDI2OGM2LjkzNjg3NDQsMCwxMi42MTk2OTc2LDUuOTM5NDUzMSwxMi42MTk2OTc2LDEzLjE5MTY1MDR2MzAuNDY3NDY4Mw0KCWMwLDcuMjUyMTk3My01LjY4MjgyMzIsMTMuMTkxNzExNC0xMi42MTk2OTc2LDEzLjE5MTcxMTRIMzcuOTU0MTkzMWwtMTIuNjI2ODU3OCwwLjAwNzE0MTF2LTE5LjUwNTA2NTlWNTg0LjQwNjE4OXoiLz4NCjxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBwb2ludHM9IjY2OC41MTcxNTA5LDU4My40NTIyNzA1IDczNi45MDIxNjA2LDU4My40NTIyNzA1IDczNi45MDIxNjA2LDYwNi4yODY0OTkgDQoJNjY4LjUxNzE1MDksNjA2LjI4NjQ5OSA2NjguNTE3MTUwOSw2MjcuNzg2MTMyOCA3MzYuOTAyMTYwNiw2MjcuNzg2MTMyOCA3MzYuOTAyMTYwNiw2NTAuNjEyOTc2MSA2NjguNTE3MTUwOSw2NTAuNjEyOTc2MSANCgk2NDMuODU3MTE2Nyw2NTAuNjEyOTc2MSA2NDMuODU3MTE2Nyw2MjcuNzg2MTMyOCA2NDMuODU3MTE2Nyw2MDYuMjg2NDk5IDY0My44NTcxMTY3LDU4My40NTIyNzA1IDY0My44NTcxMTY3LDU2OC4xODU3MyANCgk2NDMuODU3MTE2Nyw1NTAuOTk3NjE5NiA2NDMuODU3MTE2Nyw1NDUuMzUxNTAxNSA3MzYuOTAyMTYwNiw1NDUuMzUxNTAxNSA3MzYuOTAyMTYwNiw1NjguMTg1NzMgNjY4LjUxNzE1MDksNTY4LjE4NTczICIvPg0KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik01MjguMzE2NjUwNCw1ODMuNDUzNzk2NGgyNC42NjAwMzQyaDY4LjM5MjM5NXYyMi44MjY4NDMzaC02OC4zOTIzOTV2NDQuMzMzNjc5Mg0KCWgtMjQuNjYwMDM0MnYtNDQuMzMzNjc5MlY1ODMuNDUzNzk2NHogTTU1MS40MTQ5NzgsNTQ1LjM1Mjg0NDJoMi42MTAzNTE2aDM5LjI0NDY4OTloMjguMDk5MDYwMXYyMi44MzQyMjg1aC01LjA1MjI0NjFoLTYyLjI5MTUwMzkNCgloLTI1LjY1MDAyNDRDNTI5LjE2NzIzNjMsNTU1LjQ4NjgxNjQsNTM5LjIyNzg0NDIsNTQ1LjM1Mjg0NDIsNTUxLjQxNDk3OCw1NDUuMzUyODQ0MiIvPg0KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik00NDcuMTY0MDYyNSw1ODQuNDA2MTg5aDMzLjMzNDUzMzdoMjUuMzI3MzMxNXY2Ni4yMDc0NTg1aC04MS4yMzIwNTU3DQoJYy0xNS44OTczMzg5LDAtMjguODkwOTkxMi0xMy41NzI5OTgtMjguODkwOTkxMi0zMC4xNzQzNzc0di00NC45MTI5NjM5YzAtMTYuNTkzOTk0MSwxMi45OTM2NTIzLTMwLjE3NDEzMzMsMjguODkwOTkxMi0zMC4xNzQxMzMzDQoJaDgxLjIzMjA1NTd2MjQuMjA1MzIyM2gtMC41NzE5NjA0SDQzMy42NTcwNzRjLTYuOTQ0MDMwOCwwLTEyLjYyNzA3NTIsNS45Mzk0NTMxLTEyLjYyNzA3NTIsMTMuMTkxNjUwNHYzMC40Njc0NjgzDQoJYzAsNy4yNTIxOTczLDUuNjgzMDQ0NCwxMy4xOTE3MTE0LDEyLjYyNzA3NTIsMTMuMTkxNzExNGgzNC4yMTQ0NDdsMTIuNjI3MDc1MiwwLjAwNzE0MTF2LTE5LjUwNTA2NTloLTMzLjMzNDUzMzdWNTg0LjQwNjE4OXoiLz4NCjxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBwb2ludHM9IjI2NS4yMzE1Njc0LDU0NS4zNTI4NDQyIDI4Ny45OTIxODc1LDU0NS4zNTI4NDQyIA0KCTI4OS4zNDg3MjQ0LDU0NS4zNTI4NDQyIDM0OS4wODg1MzE1LDYxMy44NjI2NzA5IDM0OS4wODg1MzE1LDU0NS4zNTI4NDQyIDM3My4yMTMyODc0LDU0NS4zNTI4NDQyIDM3My4yMTMyODc0LDY1MC42MTQzMTg4IA0KCTM0OS4wODg1MzE1LDY1MC42MTQzMTg4IDI4OS4zNDg3MjQ0LDU4My40MTcxMTQzIDI4OS4zNDg3MjQ0LDY1MC42MTQzMTg4IDI2NS4yMzE1Njc0LDY1MC42MTQzMTg4ICIvPg0KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xNzAuNTY0Mzc2OCw1NjkuNTU4MzQ5NmgzNC4yMjkyMDIzDQoJYzYuOTQ0MDMwOCwwLDEyLjYxOTY4OTksNS45Mzk1MTQyLDEyLjYxOTY4OTksMTMuMTg0MzI2MnYzMC40ODE5OTQ2YzAsNy4yNDQ4MTItNS42NzU2NTkyLDEzLjE4NDMyNjItMTIuNjE5Njg5OSwxMy4xODQzMjYyDQoJaC0zNC4yMjkyMDIzYy02Ljk0NDI0NDQsMC0xMi42MjcwNzUyLTUuOTM5NTE0Mi0xMi42MjcwNzUyLTEzLjE4NDMyNjJ2LTMwLjQ4MTk5NDYNCglDMTU3LjkzNzMwMTYsNTc1LjQ5Nzg2MzgsMTYzLjYyMDEzMjQsNTY5LjU1ODM0OTYsMTcwLjU2NDM3NjgsNTY5LjU1ODM0OTYgTTE2MS41MDExNzQ5LDU0NS4zNTI4NDQyaDUyLjM1NTYwNjENCgljMTUuODgyODEyNSwwLDI4Ljg4MzYwNiwxMy41ODAzODMzLDI4Ljg4MzYwNiwzMC4xNzQzMTY0djQ0LjkxMzAyNDljMCwxNi42MDEzNzk0LTEzLjAwMDc5MzUsMzAuMTc0MTMzMy0yOC44ODM2MDYsMzAuMTc0MTMzMw0KCWgtNTIuMzU1NjA2MWMtMTUuODkwMTk3OCwwLTI4Ljg4MzgxOTYtMTMuNTcyNzUzOS0yOC44ODM4MTk2LTMwLjE3NDEzMzN2LTQ0LjkxMzAyNDkNCglDMTMyLjYxNzM1NTMsNTU4LjkzMzIyNzUsMTQ1LjYxMDk3NzIsNTQ1LjM1Mjg0NDIsMTYxLjUwMTE3NDksNTQ1LjM1Mjg0NDIiLz4NCjwvc3ZnPg0K" alt="" decoding="async"></span></div><div class="meta"><h3>Dongfeng</h3></div><span class="count">1 EV model</span></a>
+        <a class="btile" href="brendovi/dongfeng" data-brand-page="Dongfeng"><div class="mark"><span class="blogo sq has-img" aria-hidden="true"><img src="logos/dongfeng.svg" alt="" decoding="async"></span></div><div class="meta"><h3>Dongfeng</h3></div><span class="count">1 EV model</span></a>
         <a class="btile" href="brendovi/ford" data-brand-page="Ford"><div class="mark"><span class="blogo has-img" aria-hidden="true"><img src="logos/ford.svg" alt="" decoding="async"></span></div><div class="meta"><h3>Ford</h3></div><span class="count">3 EV modela</span></a>
         <a class="btile" href="brendovi/foton" data-brand-page="Foton"><div class="mark"><span class="blogo has-img" aria-hidden="true"><img src="logos/foton.svg" alt="" decoding="async"></span></div><div class="meta"><h3>Foton</h3></div><span class="count">1 EV model</span></a>
         <a class="btile" href="brendovi/geely" data-brand-page="Geely"><div class="mark"><span class="blogo sq has-img" aria-hidden="true"><img src="logos/geely.svg" alt="" decoding="async"></span></div><div class="meta"><h3>Geely</h3></div><span class="count">1 EV model</span></a>
@@ -267,7 +265,7 @@
         <a class="btile" href="brendovi/jac" data-brand-page="JAC"><div class="mark"><span class="blogo has-img" aria-hidden="true"><img src="logos/jac.svg" alt="" decoding="async"></span></div><div class="meta"><h3>JAC</h3></div><span class="count">2 EV modela</span></a>
         <a class="btile" href="brendovi/jmev" data-brand-page="JMEV"><div class="mark"><span class="blogo sq has-img" aria-hidden="true"><img src="logos/jmev.png" alt="" decoding="async"></span></div><div class="meta"><h3>JMEV</h3></div><span class="count">3 EV modela</span></a>
         <a class="btile" href="brendovi/kia" data-brand-page="Kia"><div class="mark"><span class="blogo has-img" aria-hidden="true"><img src="logos/kia.svg" alt="" decoding="async"></span></div><div class="meta"><h3>Kia</h3></div><span class="count">5 EV modela</span></a>
-        <a class="btile" href="brendovi/leapmotor" data-brand-page="Leapmotor"><div class="mark"><span class="blogo sq has-img" aria-hidden="true"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyOC4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0i0KHQu9C+0LlfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCA4NjkuNTE4NDMyNiAxMDAwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4NjkuNTE4NDMyNiAxMDAwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGw9IiMwMDAwMDEiIGQ9Ik0xNDYuMjAwMzYzMiwxNjMuNjIxOTc4OEwxMS4yNjIzNzQ5LDI0MS43NzQ0MjkzQzQuMjk1NTcxOCwyNDUuODA5MjE5NCwwLjAwNDQyLDI1My4yNDg1NjU3LDAsMjYxLjI5OTQwOA0KCXY0NzcuMzM1MjM1NmMwLDguMTA0NzM2Myw0LjMxNTQ4OTMsMTUuNTc3ODE5OCwxMS4yNjIzNzQ5LDE5LjU3NzU3NTdMMjU0LjkyOTY1Nyw4OTkuMzYwMjI5NQ0KCWM1LjQwMzM1MDgsMy4wODEwNTQ3LDEyLjI4MTI4MDUsMS4xOTg0ODYzLDE1LjM2MjMzNTItNC4yMDQ4OTVjMC45Nzg4MjA4LTEuNzE2NjEzOCwxLjQ4ODczOS0zLjY2MDQ2MTQsMS40Nzg2MDcyLTUuNjM2NTM1Ng0KCVY2NjMuNzk3NjY4NWMtMC4wMjQ5MDIzLTMuOTk4NTk2Mi0yLjE2ODE1MTktNy42ODQyNjUxLTUuNjMxMTY0Ni05LjY4MzUzMjdsLTk3LjQ2NjkxODktNTYuNDY5NzI2Ng0KCWMtMy40NzkyMzI4LTIuMDA4Nzg5MS01LjYyNTAxNTMtNS43MTg3NS01LjYzMTE5NTEtOS43MzYyMDYxVjE3My4zNTgxMzkNCgljMC4wMjQwNDc5LTYuMTkwOTMzMi00Ljk3NTIwNDUtMTEuMjI5MTU2NS0xMS4xNjYxMzc3LTExLjI1MzE4OTFjLTEuOTkyODEzMS0wLjAwNzczNjItMy45NTE2NzU0LDAuNTE1OTE0OS01LjY3NDc4OTQsMS41MTcwMjg4Ii8+DQo8cGF0aCBmaWxsPSIjMDAwMDAxIiBkPSJNNDIzLjQ5Njg1NjcsMy4wNTQxODk5TDM1My4xODU5NzQxLDQzLjczNTU2OXY5MTIuNTE1NTAyOWw3MC4zMTA4ODI2LDQwLjY4MTM5NjUNCgljNi45NTEyOTM5LDQuMDkwMDI2OSwxNS41NzM0ODYzLDQuMDkwMDI2OSwyMi41MjQ3ODAzLDBsNzAuMjA1NTk2OS00MC42ODEzOTY1VjI1Mi4wMzY4ODA1DQoJYzAtOC42ODM2MDksOS4zNjc3OTc5LTE0LjA1MTY2NjMsMTYuODQwOTQyNC05LjczNjE2MDNsMTY3Ljc3Nzc3MSw5Ny4wNDU4Njc5DQoJYzMuNDczNDQ5NywyLjEwNTEzMzEsNS42MzEyMjU2LDUuNzg5MDkzLDUuNjMxMjI1Niw5Ljg0MTQzMDd2MjM4LjcyMDI0NTQNCgljLTAuMDA2MTY0Niw0LjAxNzUxNzEtMi4xNTE5MTY1LDcuNzI3NDE3LTUuNjMxMjI1Niw5LjczNjIwNjFsLTk3LjQ2NjkxODksNTYuNDY5NzI2Ng0KCWMtMy40NjMwMTI3LDEuOTk5MjY3Ni01LjYwNjI2MjIsNS42ODQ5MzY1LTUuNjMxMTY0Niw5LjY4MzUzMjd2MjI1Ljc3MzgwMzdjMCw4LjYzMDkyMDQsOS40MjAzNDkxLDE0LjEwNDI0OCwxNi44NDA4ODEzLDkuNzg4ODE4NA0KCWwyNDMuNjY3Mjk3NC0xNDEuMTQ4MDcxM2M2Ljk2Njg1NzktNC4wMzQ3OSwxMS4yNTc5OTU2LTExLjQ3NDEyMTEsMTEuMjYyMzkwMS0xOS41MjQ5NjM0VjI2MS4yOTk0MDgNCgljLTAuMDIzMTkzNC04LjAzMjAxMjktNC4zMTE3Njc2LTE1LjQ0Njk3NTctMTEuMjYyMzkwMS0xOS40NzIzMzU4TDQ0Ni4wMjE2MzcsMy4wMDE1NjIxDQoJYy02Ljk3NDk0NTEtNC4wMDIwODI4LTE1LjU0OTgzNTItNC4wMDIwODI4LTIyLjUyNDc4MDMsMCIvPg0KPC9zdmc+DQo=" alt="" decoding="async"></span></div><div class="meta"><h3>Leapmotor</h3></div><span class="count">5 EV modela</span></a>
+        <a class="btile" href="brendovi/leapmotor" data-brand-page="Leapmotor"><div class="mark"><span class="blogo sq has-img" aria-hidden="true"><img src="logos/leapmotor.svg" alt="" decoding="async"></span></div><div class="meta"><h3>Leapmotor</h3></div><span class="count">5 EV modela</span></a>
         <a class="btile" href="brendovi/lynk-co" data-brand-page="Lynk &amp; Co"><div class="mark"><span class="blogo has-img" aria-hidden="true"><img src="logos/lynk-co.svg" alt="" decoding="async"></span></div><div class="meta"><h3>Lynk &amp; Co</h3></div><span class="count">1 EV model</span></a>
         <a class="btile" href="brendovi/mazda" data-brand-page="Mazda"><div class="mark"><span class="blogo has-img" aria-hidden="true"><img src="logos/mazda.svg" alt="" decoding="async"></span></div><div class="meta"><h3>Mazda</h3></div><span class="count">2 EV modela</span></a>
         <a class="btile" href="brendovi/mg" data-brand-page="MG"><div class="mark"><span class="blogo sq has-img" aria-hidden="true"><img src="logos/mg.svg" alt="" decoding="async"></span></div><div class="meta"><h3>MG</h3></div><span class="count">3 EV modela</span></a>
@@ -325,13 +323,13 @@
         <div class="rs">
           
           <div class="house ph-bg" style="--ph:url(../img/evomobil-bg-punjac.webp)">
-            <div><h3>Prostor za ponudu distributera</h3><p>Akcijske cene, lizing ili finansiranje za modele koje prodajete.</p></div>
+            
           </div>
         </div>
         <div class="rs">
           
           <div class="house ph-bg" style="--ph:url(../img/evomobil-bg-kabl.webp);--ph-pos:center 60%">
-            <div><h3>Prostor za servis, osiguranje ili punjače</h3><p>Usluge koje vlasnicima električnih vozila trebaju posle kupovine.</p></div>
+            
           </div>
         </div>
       </div>
@@ -347,7 +345,7 @@
           <p>Spisak zvaničnih distributera po gradovima, sa adresama, telefonima i radnim vremenom.</p>
           <a href="distributeri" class="btn">Pronađi distributera <span class="arr">→</span></a>
         </div>
-        <div class="partner-box rs ph-bg" style="--ph:url(../img/evomobil-bg-auto.webp)">
+        <div class="partner-box rs ph-bg ph-quiet" style="--ph:url(../img/evomobil-bg-auto.webp)" aria-hidden="true">
           
           <span class="rs-label">Test vožnje omogućava</span>
           <div class="slot">LOGO</div>
@@ -447,7 +445,7 @@
   const side=$('side');
   function tileHTML(k){
     const s=slides[k];
-    if(s.free)return '<div class="tile tile-free ph-bg" data-k="'+k+'"'+(s.bg?' style="--ph:url('+s.bg+')"':'')+'><b>POZICIJA '+(k+1)+'</b><strong>Slobodna pozicija</strong></div>';
+    if(s.free)return '<div class="tile tile-free ph-bg" data-k="'+k+'"'+(s.bg?' style="--ph:url('+s.bg+')"':'')+'></div>';
     return '<a class="tile" href="'+s.href+'" data-k="'+k+'"><img src="'+s.img+'" alt="'+s.alt+'"></a>';
   }
   function renderSide(){
@@ -461,7 +459,7 @@
 
   slides.forEach((s,k)=>{
     const b=document.createElement('button');b.type='button';b.className='sp'+(s.free?' sp-free':'');b.setAttribute('role','tab');
-    b.setAttribute('aria-selected',k===0);b.setAttribute('aria-label','Pozicija '+(k+1)+': '+s.b+' '+s.m);
+    b.setAttribute('aria-selected',k===0);b.setAttribute('aria-label','Slika '+(k+1));
     b.innerHTML='<b>'+s.b+'</b><span>'+s.m+'</span><i></i>';
     b.onclick=()=>go(k);
     tabs.appendChild(b);
@@ -469,9 +467,9 @@
   function render(){
     const s=slides[i], free=!!s.free;
     $('h-free').hidden=!free; $('h-link').hidden=free;
-    if(free)$('h-free').style.setProperty('--ph',s.bg?'url('+s.bg+')':'none'); $('h-brand').parentNode.hidden=!free;
+    if(free)$('h-free').style.setProperty('--ph',s.bg?'url('+s.bg+')':'none'); $('h-brand').parentNode.hidden=true;
     if(!free){$('h-img').src=s.img;$('h-img').alt=s.alt;$('h-link').href=s.href}
-    $('h-brand').textContent=free?'SLOBODNA POZICIJA':s.b+' '+s.m.toUpperCase();
+    $('h-brand').textContent=free?'':s.b+' '+s.m.toUpperCase();
     [...tabs.children].forEach((t,k)=>t.setAttribute('aria-selected',k===i));
     const t=tabs.children[i];if(tabs.scrollWidth>tabs.clientWidth)tabs.scrollTo({left:t.offsetLeft-tabs.offsetLeft,behavior:reduce()?'auto':'smooth'});
     renderSide();

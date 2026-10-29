@@ -1,0 +1,46 @@
+---
+import Base from '../layouts/Base.astro';
+import { ADS_ENABLED, DOMAIN, SITE } from '../config';
+import { crumbs, ldBreadcrumbs, type Crumb } from '../lib/html';
+import { ALL_IDS, ORDER, brands } from '../lib/site';
+import { dealerCount } from '../lib/dealers';
+
+const N_MODELS = ALL_IDS.length, N_BRANDS = ORDER.filter((s) => brands[s].models.length).length, N_DEALERS = dealerCount;
+const ORG = { '@type': 'Organization', name: SITE, url: DOMAIN + '/', email: 'office@evomobil.rs' };
+const crumb: Crumb[] = [['Početna', 'index.html'], ['O nama', 'o-nama.html']];
+const ld = [ldBreadcrumbs(crumb), { '@context': 'https://schema.org', '@type': 'AboutPage', name: 'O sajtu evomobil.rs', url: `${DOMAIN}/o-nama`, inLanguage: 'sr-Latn', about: ORG }];
+---
+<Base path="o-nama.html" title={`O nama | ${SITE}`} ld={ld}
+  desc={`evomobil.rs je nezavisan sajt o električnim automobilima u Srbiji: ${N_MODELS} modela, domet, baterija, dimenzije, distributeri i punjači. Podaci sa zvaničnih sajtova proizvođača.`}>
+<main id="top">
+  <section class="phero">
+    <div class="wrap">
+      <Fragment set:html={crumbs(crumb, '')} />
+      <h1>O sajtu evomobil.rs</h1>
+      <p class="answer">evomobil.rs je nezavisan informativni sajt o potpuno električnim automobilima koji se zvanično prodaju u Srbiji. Na jednom mestu prikazujemo {N_MODELS} modela {N_BRANDS} brendova, njihov domet po WLTP normi, kapacitet baterije, dimenzije i kontakte ovlašćenih distributera.</p>
+    </div>
+  </section>
+  <section class="sec" style="padding-top:0">
+    <div class="wrap prose">
+      <h2>Šta je evomobil.rs</h2>
+      <p>evomobil.rs pomaže kupcima u Srbiji da brzo uporede električne automobile koji se ovde zaista mogu kupiti. Prikazujemo samo potpuno električna vozila (BEV), bez hibrida i plug-in hibrida, i samo modele koje uvoznik ili distributer nudi na srpskom tržištu.</p>
+      <h2>Šta možete da pronađete</h2>
+      <ul>
+        <li><a href="modeli">Svi električni modeli</a> sa filterima po brendu, dometu i karoseriji.</li>
+        <li><a href="uporedi">Poređenje do tri modela</a>: domet, baterija, dužina, širina, visina, klirens i broj sedišta.</li>
+        <li><a href="brendovi">Stranice brendova</a> sa svim modelima i ovlašćenim distributerima.</li>
+        <li><a href="distributeri">{N_DEALERS} distributera po gradovima</a> sa adresama i telefonima.</li>
+        <li><a href="punjaci">Mapa punjača</a> za električne automobile u Srbiji.</li>
+        <li><a href="subvencije-elektricni-automobili-2026">Vodič kroz subvencije</a> za kupovinu električnog automobila.</li>
+      </ul>
+      <h2>Odakle su podaci</h2>
+      <p>Podatke o modelima, dometu, bateriji i dimenzijama preuzimamo sa zvaničnih sajtova proizvođača i uvoznika, iz njihovih cenovnika, tehničkih listova i saopštenja za medije. Kontakte distributera preuzimamo sa zvaničnih sajtova uvoznika i distributera. Podatke o punjačima preuzimamo iz otvorene baze Open Charge Map.</p>
+      <p>Domet je naveden po WLTP normi, za verziju sa najvećim dometom. Ako proizvođač neki podatak ne objavljuje, polje ostavljamo prazno i ne procenjujemo vrednost. Cene ne prikazujemo, jer se često menjaju; aktuelnu cenu proverite kod distributera.</p>
+      <h2>Nezavisnost</h2>
+      <p>evomobil.rs nije zvanični sajt nijednog proizvođača, uvoznika ili distributera. Nazivi, fotografije i logotipi brendova vlasništvo su njihovih nosilaca.{ADS_ENABLED && ' Oglasi na sajtu su jasno odvojeni od podataka o modelima i ne utiču na redosled ni na sadržaj podataka.'}</p>
+      <h2>Ispravke i sugestije</h2>
+      <p>Ako primetite netačan podatak, novi model ili promenu kod distributera, pišite nam na <a href="mailto:office@evomobil.rs">office@evomobil.rs</a>.<Fragment set:html={ADS_ENABLED ? ' Za oglašavanje se javite na <a href="mailto:oglasi@evomobil.rs">oglasi@evomobil.rs</a>.' : ''} /></p>
+    </div>
+  </section>
+</main>
+</Base>

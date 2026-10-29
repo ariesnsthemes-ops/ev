@@ -1,0 +1,48 @@
+---
+/** Side-by-side comparison of up to three models (src/scripts/compare.js builds the table in the browser from CMP). */
+import Base from '../layouts/Base.astro';
+import { SITE } from '../config';
+import { crumbs, ldBreadcrumbs, picture, type Crumb } from '../lib/html';
+import { ALL_IDS, DIMS, ORDER, brands, kwhTxt, models, rangeTxt } from '../lib/site';
+import { E, mm, pyjson } from '../lib/util';
+import compareJs from '../scripts/compare.js?raw';
+
+// dimensions/seats come from data/model_dims.json (official manufacturer/importer sources only; null = not published)
+const cmpData = ALL_IDS.map((mid) => {
+  const m = models[mid], d = DIMS[mid] ?? ({} as any);
+  const [img, k] = picture(m, '');
+  return { id: mid, b: brands[m.b].name, n: m.n, full: m.full, cls: m.cls || '',
+    r: m.r || 0, rt: rangeTxt(m) || '', kt: kwhTxt(m) || '', img, k,
+    L: d.length_txt || mm(d.length_mm), W: d.width_folded && d.width_mm ? mm(d.width_mm) + '*' : mm(d.width_mm),
+    H: d.height_txt || mm(d.height_mm), C: d.clearance_laden && d.clearance_mm ? mm(d.clearance_mm) + '**' : mm(d.clearance_mm),
+    S: d.seats ?? null };
+});
+const slot = (k: number) => `<div class="cmp-slot"><label for="cmp-s${k}">Model ${k + 1}</label><select id="cmp-s${k}" data-k="${k}"><option value="">Izaberite model</option>`
+  + ORDER.filter((s) => brands[s].models.length).map((s) => `<optgroup label="${E(brands[s].name)}">` + brands[s].models.map((i) => `<option value="${i}">${E(models[i].full)}</option>`).join('') + '</optgroup>').join('')
+  + '</select></div>';
+const crumb: Crumb[] = [['Početna', 'index.html'], ['Uporedi modele', 'uporedi.html']];
+const js = 'var CMP=' + pyjson(cmpData, { compact: true }) + ';\n' + compareJs;
+---
+<Base path="uporedi.html" title={`Uporedi električne automobile: domet, baterija i dimenzije | ${SITE}`} ld={[ldBreadcrumbs(crumb)]} extraJs={js}
+  desc="Uporedite do tri električna automobila koja se prodaju u Srbiji: domet po WLTP normi, baterija, dužina, širina, visina, klirens i broj sedišta.">
+<main id="top">
+  <section class="phero">
+    <div class="wrap">
+      <Fragment set:html={crumbs(crumb, '')} />
+      <h1>Uporedi električne automobile</h1>
+      <p class="answer">Izaberite do tri modela i uporedite domet, bateriju, dimenzije, klirens i broj sedišta jedan pored drugog.</p>
+    </div>
+  </section>
+  <section class="sec" style="padding-top:0">
+    <div class="wrap">
+      <div class="cmp-pick"><Fragment set:html={slot(0) + slot(1) + slot(2)} /></div>
+      <div class="cmp-tools"><label class="fopt cmp-diff"><input type="checkbox" id="cmp-diff" autocomplete="off"><span>Prikaži samo razlike</span></label>
+        <button type="button" class="freset" id="cmp-clear">Očisti poređenje</button></div>
+      <div class="cmp-wrap" id="cmp-wrap"><table class="cmp-tbl" id="cmp-tbl"></table></div>
+      <p class="cmp-fn" id="cmp-fn" hidden></p>
+      <div class="cat-empty" id="cmp-empty"><strong>Izaberite bar jedan model iznad.</strong><span>Modele možete dodati i dugmetom „Uporedi“ na karticama modela.</span></div>
+      <p class="price-note">Domet je po WLTP normi. Dimenzije i broj sedišta preuzeti su sa zvaničnih sajtova proizvođača i uvoznika; kod modela sa više verzija navedena je osnovna verzija. Polje sa crticom znači da proizvođač podatak nije objavio.</p>
+    </div>
+  </section>
+</main>
+</Base>

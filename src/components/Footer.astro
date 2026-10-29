@@ -1,0 +1,28 @@
+---
+/** Site footer. Same `pre` / `isHome` rules as the header. */
+interface Props { pre?: string; isHome?: boolean }
+import { ADS_ENABLED } from '../config';
+const { pre = '', isHome = false } = Astro.props;
+const root = pre || './';
+const home = (hash?: string) => (isHome ? '#' + (hash ?? 'top') : root + (hash !== undefined ? '#' + hash : ''));
+---
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href={home()} class="brand"><svg viewBox="0 0 175.57 91.84" aria-hidden="true"><use href="#logo"/></svg><span>evomobil<span class="tld">.rs</span></span></a>
+        <p class="about">Električni automobili dostupni u Srbiji, na jednom mestu. Modeli, domet i baterija, kontakti ovlašćenih distributera, mapa punjača i kalkulator troškova.</p>
+      </div>
+      <div><h4>ISTRAŽI</h4><ul><li><a href={pre + "brendovi"}>Svi brendovi</a></li><li><a href={pre + "modeli"}>Svi modeli</a></li><li><a href={pre + "najveci-domet"}>Najveći domet</a></li><li><a href={root + "#pretraga"}>Pretraga</a></li></ul></div>
+      <div><h4>KATEGORIJE</h4><ul><li><a href={pre + "elektricni-suv"}>Električni SUV</a></li><li><a href={pre + "elektricni-hecbek"}>Hečbek</a></li><li><a href={pre + "elektricni-sedani"}>Sedan</a></li><li><a href={pre + "elektricni-pikapi"}>Pikap</a></li><li><a href={pre + "gradski-elektricni-automobili"}>Gradski</a></li></ul></div>
+      <div><h4>INFORMACIJE</h4><ul><li><a href={pre + "distributeri"}>Distributeri</a></li><li><a href={pre + "punjaci"}>Punjači</a></li><li><a href={pre + "uporedi"}>Uporedi modele</a></li><li><a href={pre + "kalkulator-troskova"}>Kalkulator troškova</a></li><li><a href={pre + "subvencije-elektricni-automobili-2026"}>Subvencije 2026</a></li><li><a href={root + "#faq"}>Česta pitanja</a></li><Fragment set:html={ADS_ENABLED ? `<li><a href="${pre}oglasavanje">Oglašavanje</a></li>` : ''} /><li><a href={pre + "o-nama"}>O nama</a></li><li><a href={pre + "kontakt"}>Kontakt</a></li><li><a href={home("")} data-cookie-settings>Podešavanja kolačića</a></li></ul></div>
+      <div><h4>KONTAKT</h4><ul><li><a href="mailto:office@evomobil.rs">office@evomobil.rs</a></li><Fragment set:html={ADS_ENABLED ? '<li><a href="mailto:oglasi@evomobil.rs">oglasi@evomobil.rs</a></li>' : ''} /></ul></div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 evomobil.rs. Sva prava zadržana.</span>
+      <a class="foot-legal" href={pre + "politika-privatnosti"}>Politika privatnosti</a>
+    </div>
+    <p class="disclaimer"><strong>Napomena:</strong> evomobil.rs nije zvanični sajt nijednog proizvođača, uvoznika ili distributera vozila. Sve informacije na sajtu su isključivo informativnog karaktera, prikupljene iz javno dostupnih izvora, i mogu biti netačne, nepotpune ili zastarele. Pre kupovine proverite cene, opremu, domet i dostupnost modela kod ovlašćenog distributera. Nazivi i logotipi brendova vlasništvo su njihovih nosilaca. Brendovi koji se ne pojavljuju na sajtu ili nisu dali saglasnost da se njihov sadržaj nalazi na sajtu ili nismo uspeli da pronađemo potpune podatke o vozilima koji su potrebni za ovu vrstu prezentacije na njihovim zvaničnim sajtovima u Republici Srbiji.</p>
+  </div>
+  <script is:inline>/* footer reveal (sticky) only when the whole footer fits on screen; on phones the footer is long, so it scrolls normally */(function(){var f=document.currentScript.parentNode,r=document.documentElement;function c(){r.classList.toggle('ft-reveal',f.offsetHeight<innerHeight-80)}c();addEventListener('resize',c);addEventListener('load',c)})();</script>
+</footer>

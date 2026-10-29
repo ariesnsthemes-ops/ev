@@ -1,0 +1,24 @@
+---
+/**
+ * Sidebar with checkbox filter groups, used by the catalogue, the dealers page and the chargers page.
+ * Each group: first `show` options visible, the rest behind "Prikaži više" (`more` false = no such button,
+ * as on the chargers page). Options with a count of 0 are skipped when `skipZero` is set.
+ */
+import type { FilterGroup, FilterOption } from '../lib/filters';
+interface Props { groups: FilterGroup[]; apply: string }
+const { groups, apply } = Astro.props;
+
+const SHOW = 4;
+const option = (o: FilterOption, k: number, more: boolean) =>
+  `<label class="fopt${more && k >= SHOW ? ' more' : ''}"><input autocomplete="off" type="checkbox" name="${o.name}" value="${o.value}"${o.checked ? ' checked' : ''}>`
+  + `<span>${o.label}</span>` + (o.count !== undefined && o.count !== null ? `<em>${o.count}</em>` : '') + '</label>';
+const html = groups.map((g) => {
+  const items = g.skipZero ? g.items.filter((o) => o.count) : g.items;
+  const more = g.more !== false;
+  const rows = items.map((o, k) => option(o, k, more)).join('');
+  const btn = more && items.length > SHOW
+    ? `<button type="button" class="fmore" data-more="${items.length - SHOW}" aria-expanded="false">Prikaži više (${items.length - SHOW})</button>` : '';
+  return `<fieldset class="fgroup" id="${g.id}"><legend>${g.legend}</legend>${rows}${btn}</fieldset>`;
+}).join('');
+---
+<aside class="cat-side" id="cat-side" aria-label="Filteri"><div class="cat-side-head"><h2>Filteri</h2><button type="button" class="cat-close" id="cat-close" aria-label="Zatvori filtere">×</button></div><Fragment set:html={html} /><button type="button" class="freset" id="freset">Poništi filtere</button><button type="button" class="btn btn-dark cat-apply" id="cat-apply">{apply}</button></aside>

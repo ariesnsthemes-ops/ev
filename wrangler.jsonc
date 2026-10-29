@@ -1,7 +1,7 @@
 {
   // Cloudflare Workers settings for evomobil.rs (worker name kept as "ev-srbija" so the existing Cloudflare project keeps working)
-  // The website is the "site" folder; nothing is built on Cloudflare (no build command).
-  "name": "ev-srbija",
+  // Cloudflare runs "npm run build" (Astro), which writes the "site" folder; "npx wrangler deploy" then publishes it.
+  "name": "ev",
   "compatibility_date": "2026-10-01",
   "assets": {
     "directory": "./site",

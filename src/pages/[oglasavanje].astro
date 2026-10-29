@@ -1,0 +1,23 @@
+---
+/**
+ * Advertising page (rates and formats). Built only while ADS_ENABLED is on in site.config.mjs;
+ * the markup is src/fragments/oglasavanje.html.
+ */
+import Base from '../layouts/Base.astro';
+import { ADS_ENABLED, SITE } from '../config';
+import { crumbs, ldBreadcrumbs, type Crumb } from '../lib/html';
+import section from '../fragments/oglasavanje.html?raw';
+import copyEmailJs from '../scripts/copy-email.js?raw';
+
+export const getStaticPaths = () => (ADS_ENABLED ? [{ params: { oglasavanje: 'oglasavanje' } }] : []);
+
+const crumb: Crumb[] = [['Početna', 'index.html'], ['Oglašavanje', 'oglasavanje.html']];
+---
+<Base path="oglasavanje.html" title={`Oglašavanje: reklamna mesta i formati | ${SITE}`} ld={[ldBreadcrumbs(crumb)]} extraJs={copyEmailJs}
+  desc="Reklamna mesta na evomobil.rs za uvoznike, distributere i partnere: hero karusel, leaderboard, brend meseca, ponude partnera. Formati i zakup.">
+<main id="top">
+  <section class="phero" style="padding-bottom:32px">
+    <div class="wrap"><Fragment set:html={crumbs(crumb, '')} /></div>
+  </section>
+<Fragment set:html={section} /></main>
+</Base>

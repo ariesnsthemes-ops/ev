@@ -1,0 +1,65 @@
+---
+/** Dealers by city, filterable by city and brand (src/scripts/dealers.js). */
+import Base from '../layouts/Base.astro';
+import FilterSidebar from '../components/FilterSidebar.astro';
+import type { FilterGroup } from '../lib/filters';
+import { NOTE, SITE } from '../config';
+import { crumbs, dealerCard, ldBreadcrumbs, ldDealer, type Crumb } from '../lib/html';
+import { cityEntries, cityOrder, dealerCount } from '../lib/dealers';
+import { ORDER, brands } from '../lib/site';
+import { E, joinSr, slugify } from '../lib/util';
+import dealersJs from '../scripts/dealers.js?raw';
+
+const cityCnt: Record<string, number> = {}, brandCnt: Record<string, number> = {};
+const ld: unknown[] = [];
+let blocks = '';
+for (const c of cityOrder) {
+  let cards = '';
+  for (const e of cityEntries(c)) {
+    const bslugs = ORDER.filter((s) => e.brands.includes(brands[s].name));
+    const links = bslugs.map((s) => `<a href="brendovi/${s}">${E(brands[s].name)}</a>`).join(', ');
+    cityCnt[c] = (cityCnt[c] || 0) + 1;
+    for (const s of bslugs) brandCnt[s] = (brandCnt[s] || 0) + 1;
+    cards += dealerCard(e.d, `<span class="brands-of">Brendovi: ${links}</span>`, ` data-c="${slugify(c)}" data-b="${bslugs.join(' ')}"`);
+    ld.push(ldDealer(e.d, e.brands));
+  }
+  blocks += `
+      <div class="city-block" id="${slugify(c)}">
+        <div class="dealer-main">${cards}</div>
+      </div>`;
+}
+const groups: FilterGroup[] = [
+  { id: 'fg-city', legend: 'Grad', items: cityOrder.map((c) => ({ name: 'g', value: slugify(c), label: E(c), count: cityCnt[c] })) },
+  { id: 'fg-brand', legend: 'Brend', items: ORDER.filter((s) => brandCnt[s]).map((s) => ({ name: 'b', value: s, label: E(brands[s].name), count: brandCnt[s] })) },
+];
+const crumb: Crumb[] = [['Početna', 'index.html'], ['Distributeri', 'distributeri.html']];
+const intro = `Spisak ${dealerCount} ovlašćenih distributera električnih automobila u ${cityOrder.length} gradova Srbije: ${joinSr(cityOrder)}. `
+  + 'Za svakog distributera navedeni su brendovi, adresa, telefon, email i radno vreme.';
+const nBrands = ORDER.filter((x) => brands[x].dealers.length).length;
+const desc = `Ovlašćeni distributeri električnih automobila u Srbiji za ${nBrands} brendova, od Audija do Volva: adrese, telefoni i radno vreme u gradovima ${joinSr(cityOrder.slice(0, 6))} i drugim.`.slice(0, 300);
+---
+<Base path="distributeri.html" title={`Distributeri električnih automobila u Srbiji | ${SITE}`} desc={desc} ld={[ldBreadcrumbs(crumb), ...ld]} extraJs={dealersJs}>
+<main id="top">
+  <section class="phero">
+    <div class="wrap">
+      <Fragment set:html={crumbs(crumb, '')} />
+      <h1>Distributeri električnih automobila u Srbiji</h1>
+      <p class="answer" set:html={E(intro)}></p>
+      <p class="updated">{NOTE}</p>
+    </div>
+  </section>
+  <section class="sec" style="padding-top:0">
+    <div class="wrap cat-layout">
+      <FilterSidebar groups={groups} apply="Prikaži distributere" />
+      <div class="cat-main">
+        <div class="cat-bar"><button type="button" class="btn btn-ghost cat-open" id="cat-open" aria-controls="cat-side">Filteri <span id="cat-n" hidden></span></button>
+          <p class="cat-count" id="cat-count" role="status">Prikazano {dealerCount} od {dealerCount} distributera</p></div>
+        <div id="d-list"><Fragment set:html={blocks} />
+        </div>
+        <div class="cat-empty" id="cat-empty" hidden><strong>Nijedan distributer ne odgovara izabranim filterima.</strong><button type="button" class="btn btn-ghost" id="cat-empty-reset">Poništi filtere</button></div>
+      </div>
+    </div>
+  </section>
+</main>
+<div class="cat-scrim" id="cat-scrim" hidden></div>
+</Base>

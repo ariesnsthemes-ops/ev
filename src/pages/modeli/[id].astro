@@ -1,0 +1,121 @@
+---
+/** One page per model: hero with photo and key facts, description, specifications, dealers, FAQ, other models of the brand. */
+import Base from '../../layouts/Base.astro';
+import { DOMAIN, SITE } from '../../config';
+import { card, crumbs, dealerSection, ldBreadcrumbs, ldFaq, logoSpan, picture, qaBlock, type Crumb, type QA } from '../../lib/html';
+import { ALL_IDS, CLS_WORD, DIMS, brands, citiesOf, kwhTxt, models, rangeTxt } from '../../lib/site';
+import { E, joinSr, mm } from '../../lib/util';
+
+export const getStaticPaths = () => ALL_IDS.map((id) => ({ params: { id } }));
+
+const { id: mid } = Astro.params;
+const m = models[mid], b = brands[m.b], pre = '../', cities = citiesOf(m.b);
+const cw = (m.cls && CLS_WORD[m.cls]) || 'automobil';
+const rng = rangeTxt(m, true);
+const cityWord = cities.length === 1 ? 'gradu' : 'gradovima';
+const summary = `${m.full} je potpuno električni ${cw} brenda ${b.name}. `
+  + (rng ? `Prema podacima proizvođača ili uvoznika ima domet ${rng} po WLTP normi` + (m.kwh ? ` i bateriju od ${kwhTxt(m)}` : '') + '. ' : m.kwh ? `Ima bateriju od ${kwhTxt(m)}. ` : '')
+  + (cities.length ? `U Srbiji ga prodaju ovlašćeni distributeri u ${cityWord} ${joinSr(cities)}.` : '');
+const title = `${m.full} u Srbiji: domet, baterija i distributeri | ${SITE}`;
+const desc = `${m.full}, potpuno električni ${cw}. ` + (rng ? `Domet ${rng} (WLTP)` + (m.kwh ? `, baterija ${kwhTxt(m)}` : '') + '. ' : '')
+  + `Specifikacije i kontakti distributera ${b.name} u Srbiji.`;
+const [inner, kind] = picture(m, pre);
+const heroImg = {
+  photo: `<div class="mhero-img">${inner.replace(' loading="lazy"', ' fetchpriority="high"').replace('(max-width: 620px) 48vw, (max-width: 1000px) 46vw, 400px', '(max-width: 900px) 92vw, 640px')}</div>`,
+  lg: `<div class="mhero-img lg" role="img" aria-label="${E(m.full)}">${inner}</div>`,
+  sil: `<div class="mhero-img sil" role="img" aria-label="${E(m.full)}">${inner}</div>`,
+  ph: '<div class="mhero-img ph">FOTOGRAFIJA USKORO</div>',
+}[kind];
+const descParas = m.desc || [`${m.full} je potpuno električni ${cw} brenda ${b.name} koji je dostupan na srpskom tržištu.`,
+  'Detaljne tehničke podatke i opremu dodajemo čim ih uvoznik objavi. Do tada informacije proverite kod ovlašćenog distributera.'];
+const dm = DIMS[mid] ?? ({} as any);
+const specs: [string, string | null | undefined][] = [['Brend', b.name], ['Model', m.full], ['Klasa vozila', m.cls], ['Pogon', '100% električni'],
+  ['Domet (WLTP)', rng], ['Baterija', kwhTxt(m)], ['Menjač', 'Automatski, jedan stepen prenosa']];
+const dimRows: [string, string | null | undefined][] = [
+  ['Dužina', dm.length_txt || mm(dm.length_mm)],
+  ['Širina', dm.width_folded && dm.width_mm ? mm(dm.width_mm) + ' (sa sklopljenim retrovizorima)' : mm(dm.width_mm)],
+  ['Visina', dm.height_txt || mm(dm.height_mm)],
+  ['Klirens', dm.clearance_laden && dm.clearance_mm ? mm(dm.clearance_mm) + ' (pod opterećenjem)' : mm(dm.clearance_mm)],
+  ['Broj sedišta', dm.seats ? String(dm.seats) : null],
+];
+specs.push(...dimRows.filter(([, v]) => v));
+const keys: [string, string][] = [['DOMET (WLTP)', rangeTxt(m) || 'Na upit'], ['BATERIJA', kwhTxt(m) || 'Na upit'], ['KLASA', m.cls || 'Na upit'], ['POGON', 'Električni']];
+const rel = b.models.filter((i) => i !== mid);
+const crumb: Crumb[] = [['Početna', 'index.html'], ['Brendovi', 'brendovi.html'], [b.name, `brendovi/${m.b}.html`], [m.full, `modeli/${mid}.html`]];
+const qa: QA[] = [];
+if (rng) qa.push([`Koliki je domet modela ${m.full}?`, `${m.full} ima domet ${rng} po WLTP normi, prema podacima proizvođača ili uvoznika. Stvarni domet zavisi od načina vožnje, temperature i opterećenja.`]);
+if (m.kwh) qa.push([`Koliki je kapacitet baterije modela ${m.full}?`, `${m.full} ima bateriju kapaciteta ${kwhTxt(m)}.`]);
+if (cities.length) qa.push([`Gde mogu kupiti ${m.full} u Srbiji?`, `${m.full} prodaju ovlašćeni distributeri brenda ${b.name} u ${cityWord} ${joinSr(cities)}. Kontakti su navedeni na ovoj stranici.`]);
+qa.push([`Da li je ${m.full} hibrid?`, `Ne. ${m.full} je potpuno električni automobil, bez motora sa unutrašnjim sagorevanjem.`]);
+
+const car: Record<string, unknown> = { '@context': 'https://schema.org', '@type': 'Car', name: m.full, model: m.n,
+  brand: { '@type': 'Brand', name: b.name }, manufacturer: { '@type': 'Organization', name: b.name },
+  fuelType: 'Electric', vehicleTransmission: 'Automatic', description: summary, url: `${DOMAIN}/modeli/${mid}` };
+if (m.cls) car.bodyType = m.cls;
+if (m.photo) car.image = `${DOMAIN}/img/${m.photo}`;
+if (dm.seats) car.vehicleSeatingCapacity = dm.seats;
+for (const [k, f] of [['length', 'length_mm'], ['width', 'width_mm'], ['height', 'height_mm']] as const) {
+  if (dm[f] && !(k === 'width' && dm.width_folded)) car[k] = { '@type': 'QuantitativeValue', value: dm[f], unitCode: 'MMT' };
+}
+const props: unknown[] = [];
+if (m.r) props.push({ '@type': 'PropertyValue', name: 'Domet (WLTP)', value: m.r, unitText: 'km', description: rng });
+if (m.kwh) props.push({ '@type': 'PropertyValue', name: 'Kapacitet baterije', value: String(m.kwh), unitText: 'kWh' });
+if (props.length) car.additionalProperty = props;
+const ld = [ldBreadcrumbs(crumb), car, ldFaq(qa)];
+const relHtml = rel.length ? rel.map((i) => card(i, pre)).join('')
+  : `<div class="models-empty"><strong>Ovo je trenutno jedini električni model brenda ${E(b.name)} u Srbiji.</strong>Pogledajte <a href="../modeli">sve električne modele</a>.</div>`;
+---
+<Base path={`modeli/${mid}.html`} title={title} desc={desc} ld={ld} ogImage={m.photo ? `img/${m.photo}` : null}>
+<main id="top">
+  <section class="mhero">
+    <div class="wrap">
+      <Fragment set:html={crumbs(crumb, pre)} />
+      <div class="mhero-grid">
+        <Fragment set:html={heroImg} />
+        <div>
+          <a class="mbrand" href={`../brendovi/${m.b}`} title={`Svi modeli brenda ${b.name}`}><span class="mbrand-logo"><Fragment set:html={logoSpan(m.b, pre, 'nosq')} /></span><span class="sr-only">{b.name}</span></a>
+          <h1>{m.full}</h1>
+          <div class="tags"><span class="tag">100% EV</span><Fragment set:html={m.cls ? `<span class="tag gray">${E(m.cls.toUpperCase())}</span>` : ''} /></div>
+          <p class="answer" set:html={E(summary)}></p>
+          <dl class="facts"><Fragment set:html={keys.map(([k, v]) => `<div><dt>${k}</dt><dd>${E(v)}</dd></div>`).join('')} /></dl>
+          <div class="ctas">
+            <Fragment set:html={b.dealers.length ? '<a href="#kontakt-distributera" class="btn btn-dark">Kontaktirajte distributera <span class="arr">→</span></a>' : ''} />
+            <a href={`../brendovi/${m.b}`} class="btn btn-ghost">Svi modeli {b.name}</a>
+            <a href={`../uporedi?modeli=${mid}`} class="btn btn-ghost">Uporedi sa drugim modelom</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec alt" id="o-modelu">
+    <div class="wrap b-about">
+      <h2>O modelu {m.full}</h2>
+      <div><Fragment set:html={descParas.map((p) => `<p>${E(p)}</p>`).join('')} /></div>
+    </div>
+  </section>
+
+  <section class="sec" id="specifikacije">
+    <div class="wrap">
+      <h2 class="h2s">{m.full}: osnovne specifikacije</h2>
+      <dl class="specs-tbl"><Fragment set:html={specs.map(([k, v]) => `<div><dt>${k}</dt><dd${v ? '' : ' class=na'}>${E(v || 'Na upit')}</dd></div>`).join('')} /></dl>
+      <p class="price-note">Domet je po WLTP normi, prema podacima proizvođača ili uvoznika. Opremu i tehničke podatke proverite kod distributera.</p>
+      <p class="calc-link"><a href={`../kalkulator-troskova?model=${mid}`}>Koliko košta vožnja ovim modelom? Uporedite trošak struje i goriva <span class="arr">→</span></a></p>
+    </div>
+  </section>
+<Fragment set:html={dealerSection(m.b, `Kontaktirajte distributera za ${m.full}`)} />
+  <section class="sec">
+    <div class="wrap">
+      <h2 class="h2s">Česta pitanja: {m.full}</h2>
+      <Fragment set:html={qaBlock(qa)} />
+    </div>
+  </section>
+
+  <section class="sec alt">
+    <div class="wrap">
+      <div class="head"><div><h2 style="font-size:clamp(24px,2.6vw,32px)">Ostali električni modeli {b.name}</h2></div><a class="link" href={`../brendovi/${m.b}`}>Stranica brenda →</a></div>
+      <div class={`models${rel.length > 6 ? ' many' : ''}`}><Fragment set:html={relHtml} /></div>
+    </div>
+  </section>
+</main>
+</Base>

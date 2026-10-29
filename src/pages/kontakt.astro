@@ -1,0 +1,33 @@
+---
+import Base from '../layouts/Base.astro';
+import { ADS_ENABLED, DOMAIN, SITE } from '../config';
+import { crumbs, ldBreadcrumbs, type Crumb } from '../lib/html';
+
+const ORG = { '@type': 'Organization', name: SITE, url: DOMAIN + '/', email: 'office@evomobil.rs' };
+const crumb: Crumb[] = [['Početna', 'index.html'], ['Kontakt', 'kontakt.html']];
+const ld = [ldBreadcrumbs(crumb), { '@context': 'https://schema.org', '@type': 'ContactPage', name: 'Kontakt', url: `${DOMAIN}/kontakt`, inLanguage: 'sr-Latn', about: { ...ORG, contactPoint: [{ '@type': 'ContactPoint', contactType: 'customer support', email: 'office@evomobil.rs', availableLanguage: 'sr' },
+    ...(ADS_ENABLED ? [{ '@type': 'ContactPoint', contactType: 'sales', email: 'oglasi@evomobil.rs', availableLanguage: 'sr' }] : [])] } }];
+---
+<Base path="kontakt.html" title={`Kontakt | ${SITE}`} ld={ld}
+  desc={`Kontakt evomobil.rs: office@evomobil.rs za pitanja i ispravke podataka${ADS_ENABLED ? ', oglasi@evomobil.rs za oglašavanje' : ''}. Za test vožnju se obratite distributeru.`}>
+<main id="top">
+  <section class="phero">
+    <div class="wrap">
+      <Fragment set:html={crumbs(crumb, '')} />
+      <h1>Kontakt</h1>
+      <p class="answer">Za pitanja, ispravke podataka i sugestije pišite na <a href="mailto:office@evomobil.rs">office@evomobil.rs</a>.<Fragment set:html={ADS_ENABLED ? ' Za oglašavanje pišite na <a href="mailto:oglasi@evomobil.rs">oglasi@evomobil.rs</a>.' : ''} /></p>
+    </div>
+  </section>
+  <section class="sec" style="padding-top:0">
+    <div class="wrap prose">
+      <div class="contact-cards">
+        <a class="ccard" href="mailto:office@evomobil.rs"><span class="ccard-k">OPŠTA PITANJA I ISPRAVKE</span><strong>office@evomobil.rs</strong><span>Netačan podatak, novi model, promena kod distributera ili sugestija za sajt.</span></a><Fragment set:html={ADS_ENABLED ? '\n        <a class="ccard" href="mailto:oglasi@evomobil.rs"><span class="ccard-k">OGLAŠAVANJE</span><strong>oglasi@evomobil.rs</strong><span>Zakup reklamnih mesta za uvoznike, distributere i partnere. <span class="ccard-more">Pogledajte reklamna mesta.</span></span></a>' : ''} />
+      </div>
+      <h2>Za kupce</h2>
+      <p>evomobil.rs ne prodaje vozila i ne zakazuje test vožnje. Za ponudu, cenu, dostupnost i test vožnju obratite se ovlašćenom distributeru. Kontakte svih distributera po gradovima pronaći ćete na stranici <a href="distributeri">Distributeri</a>, a kontakte za određeni brend na stranici tog brenda.</p>
+      <h2>Za uvoznike i distributere</h2>
+      <p>Ako želite da ispravite ili dopunite podatke o vašim modelima ili prodajnim mestima, pošaljite nam link ka zvaničnom izvoru (cenovnik, tehnički list ili stranica na vašem sajtu). Podatke objavljujemo samo iz zvaničnih izvora.<Fragment set:html={ADS_ENABLED ? ' Uslovi za reklamna mesta nalaze se na stranici <a href="oglasavanje">Oglašavanje</a>.' : ''} /></p>
+    </div>
+  </section>
+</main>
+</Base>

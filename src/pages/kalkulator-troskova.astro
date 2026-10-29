@@ -1,0 +1,66 @@
+---
+/**
+ * Running cost calculator (electricity vs fuel). Markup, CSS and JS live in src/fragments and
+ * src/scripts/kalkulator.js; fuel prices in data/gorivo.json (updated every Friday).
+ */
+import Base from '../layouts/Base.astro';
+import { DOMAIN, SITE } from '../config';
+import { crumbs, ldBreadcrumbs, ldFaq, qaBlock, type Crumb, type QA } from '../lib/html';
+import { ALL_IDS, brands, kwhTxt, models, rangeTxt } from '../lib/site';
+import { PyFloat, pyRound1, pyjson } from '../lib/util';
+import FUEL from '../data/gorivo.json';
+import css from '../fragments/kalkulator-css.html?raw';
+import body from '../fragments/kalkulator-body.html?raw';
+import jsSrc from '../scripts/kalkulator.js?raw';
+
+const nums = (t: string | null) => [...(t || '').matchAll(/\d+(?:,\d+)?/g)].map((m) => parseFloat(m[0].replace(',', '.')));
+const kcModels: unknown[] = [];
+for (const i of ALL_IDS) {
+  const m = models[i];
+  let bat = nums(kwhTxt(m));
+  let rng = nums(rangeTxt(m, true));
+  if (!rng.length && m.r) rng = [m.r];
+  if (!bat.length || !rng.length) continue;
+  if (bat.length !== rng.length) {
+    bat = rng.length === 1 ? [Math.max(...bat)] : bat.slice(0, rng.length);
+    rng = rng.slice(0, bat.length);
+  }
+  const vs = bat.map((b, k) => [new PyFloat(b), Math.trunc(rng[k]), new PyFloat(pyRound1(b / rng[k] * 100))]);
+  // battery / WLTP range outside 11-26 kWh/100 km means the published figures don't fit together (city-only WLTP, kW instead of kWh)
+  kcModels.push({ id: i, b: brands[m.b].name, n: m.full, v: vs, ok: vs.every((v) => (v[2] as PyFloat).v >= 11 && (v[2] as PyFloat).v <= 26) });
+}
+const fuel = Object.fromEntries(['datum', 'provereno', 'benzin', 'dizel'].map((k) => [k, (FUEL as any)[k] || (FUEL as any).datum]));
+const js = jsSrc.replace('__MODELS__', () => pyjson(kcModels, { compact: true })).replace('__FUEL__', () => pyjson(fuel));
+
+const path = 'kalkulator-troskova.html';
+const crumb: Crumb[] = [['Početna', 'index.html'], ['Kalkulator troškova', path]];
+const qa: QA[] = [
+  ['Koliko košta punjenje električnog automobila na 100 km?', 'Zavisi od potrošnje modela i cene struje. Automobil koji troši 15 kWh na 100 km, uz 10% gubitaka pri punjenju i cenu od 12 dinara po kWh, potroši struje za oko 200 dinara na 100 km. Na javnim brzim punjačima trošak je veći.'],
+  ['Kako se računa potrošnja električnog automobila?', 'Kapacitet baterije podelite sa dometom po WLTP normi i pomnožite sa 100. Dobijate potrošnju u kWh na 100 km. Stvarna potrošnja je obično veća, naročito zimi i na autoputu.'],
+  ['Odakle su cene goriva u kalkulatoru?', 'Koristimo najviše maloprodajne cene za BMB 95 i Evrodizel koje Ministarstvo unutrašnje i spoljne trgovine objavljuje svakog petka.'],
+];
+const ld = [ldBreadcrumbs(crumb), ldFaq(qa),
+  { '@context': 'https://schema.org', '@type': 'WebApplication', name: 'Kalkulator troškova: struja ili gorivo', applicationCategory: 'UtilityApplication',
+    operatingSystem: 'Any', inLanguage: 'sr-Latn', url: `${DOMAIN}/kalkulator-troskova`, offers: { '@type': 'Offer', price: '0', priceCurrency: 'RSD' } }];
+---
+<Base path={path} title={`Kalkulator troškova: struja ili gorivo | ${SITE}`} ld={ld} extraJs={js}
+  desc="Koliko košta vožnja električnim automobilom u odnosu na benzin ili dizel? Izaberite model, kilometražu i cenu struje i uporedite trošak na 100 km, mesečno i godišnje."><Fragment slot="head" set:html={css} />
+<main id="top">
+  <section class="phero" style="padding-bottom:32px">
+    <div class="wrap">
+      <Fragment set:html={crumbs(crumb, '')} />
+      <h1>Kalkulator troškova: struja ili gorivo</h1>
+      <p class="answer">Izaberite električni model, unesite koliko vozite i po kojoj ceni punite. Kalkulator poredi trošak energije sa automobilom na benzin ili dizel, na 100 km, mesečno, godišnje i za pet godina.</p>
+    </div>
+  </section>
+  <section class="sec" style="padding-top:0">
+    <div class="wrap"><Fragment set:html={body} /></div>
+  </section>
+  <section class="sec alt">
+    <div class="wrap">
+      <h2 class="h2s">Česta pitanja o troškovima</h2>
+      <Fragment set:html={qaBlock(qa)} />
+    </div>
+  </section>
+</main>
+</Base>

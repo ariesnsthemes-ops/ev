@@ -1,0 +1,61 @@
+---
+// Subsidy guide (facts checked on 16 Oct 2026)
+import Base from '../layouts/Base.astro';
+import { DOMAIN, SITE, UPDATED } from '../config';
+import { crumbs, ldBreadcrumbs, ldFaq, qaBlock, type Crumb, type QA } from '../lib/html';
+
+const path = 'subvencije-elektricni-automobili-2026.html';
+const crumb: Crumb[] = [['Početna', 'index.html'], ['Subvencije 2026', path]];
+const qa: QA[] = [
+  ['Koliko iznosi subvencija za električni automobil u Srbiji 2026?', 'Za nov potpuno električni putnički automobil subvencija iznosi 5.000 evra (u dinarskoj protivvrednosti).'],
+  ['Ko može da dobije subvenciju?', 'Pravo imaju fizička lica, preduzetnici i pravna lica koja kupuju novo električno vozilo.'],
+  ['Kako se podnosi zahtev?', 'Zahtev se podnosi elektronski, preko portala eUprava.'],
+  ['Do kada traje konkurs?', 'Rok za prijave produžen je sa 30. septembra na 1. decembar 2026. Konkurs se ranije zatvara ako se potroši novac iz budžeta.'],
+  ['Da li subvencija važi za hibride?', 'Ne. Subvencija u iznosu od 5.000 evra odnosi se na vozila sa električnim pogonom. Tačne uslove za svaku kategoriju vozila proverite u uredbi i javnom pozivu ministarstva.'],
+];
+const ld = [ldBreadcrumbs(crumb), ldFaq(qa),
+  { '@context': 'https://schema.org', '@type': 'Article', headline: 'Subvencije za električne automobile u Srbiji 2026.',
+    dateModified: UPDATED, inLanguage: 'sr-Latn', publisher: { '@type': 'Organization', name: SITE, url: DOMAIN + '/' } }];
+---
+<Base path={path} title={`Subvencije za električne automobile 2026: 5.000 € | ${SITE}`} ld={ld}
+  desc="Subvencija za nov električni automobil u Srbiji 2026. iznosi 5.000 evra. Ko može da se prijavi, kako preko eUprave i do kada traje konkurs.">
+<main id="top">
+  <section class="phero">
+    <div class="wrap">
+      <Fragment set:html={crumbs(crumb, '')} />
+      <h1>Subvencije za električne automobile u Srbiji 2026.</h1>
+      <p class="answer">Država i u 2026. godini subvencioniše kupovinu novih električnih vozila. Za nov potpuno električni putnički automobil subvencija iznosi 5.000 evra. Zahtev se podnosi preko portala eUprava, a novac se dodeljuje po redosledu prijava, najkasnije do 1. decembra 2026. ili dok se ne potroše sredstva.</p>
+      <div class="keybox"><dl>
+        <div><dt>IZNOS ZA ELEKTRIČNI AUTOMOBIL</dt><dd>5.000 €</dd></div>
+        <div><dt>PRIJAVA</dt><dd>Portal eUprava</dd></div>
+        <div><dt>ROK</dt><dd>1. decembar 2026.</dd></div>
+        <div><dt>BUDŽET ZA 2026.</dt><dd>170 miliona dinara</dd></div>
+      </dl></div>
+    </div>
+  </section>
+  <section class="sec" style="padding-top:0">
+    <div class="wrap prose">
+      <h2>Ko daje subvenciju</h2>
+      <p>Program vodi Ministarstvo zaštite životne sredine. Vlada Srbije usvojila je uredbu o subvencionisanju kupovine novih vozila na električni pogon za 2026. godinu 6. februara 2026, sa budžetom od 170 miliona dinara.</p>
+      <h2>Koliko iznosi</h2>
+      <p>Iznos zavisi od vrste vozila i kreće se od 250 do 5.000 evra. Za nov potpuno električni putnički automobil ili lako teretno vozilo do 3,5 tone subvencija iznosi 5.000 evra.</p>
+      <h2>Ko može da se prijavi</h2>
+      <p>Fizička lica, preduzetnici i pravna lica. Vozilo mora biti novo, odnosno ne sme biti ranije korišćeno ni registrovano.</p>
+      <h2>Kako se prijaviti</h2>
+      <ol>
+        <li>Izaberite nov električni automobil kod ovlašćenog distributera. <a href="modeli">Pogledajte sve električne modele u Srbiji.</a></li>
+        <li>Podnesite zahtev elektronski, preko portala eUprava.</li>
+        <li>Sredstva se dodeljuju po redosledu potpunih i ispravnih prijava, dok ima novca u budžetu.</li>
+        <li>Subvencija može pokriti deo učešća kod finansijskog lizinga ili deo kupoprodajne cene. Kod kupovine sopstvenim sredstvima isplaćuje se kada kupac dokaže da je platio deo cene koji ne pokriva subvencija.</li>
+      </ol>
+      <h2>Rok</h2>
+      <p>Prijave su počele 1. marta 2026. Prvobitni rok bio je 30. septembar, a produžen je do 1. decembra 2026. Ako se sredstva potroše ranije, prijem zahteva se zatvara i ministarstvo o tome obaveštava na svom sajtu.</p>
+      <h2>Česta pitanja</h2>
+    </div>
+    <div class="wrap"><Fragment set:html={qaBlock(qa)} /></div>
+    <div class="wrap">
+      <p class="sources">Izvori: <a href="https://www.paragraf.rs/dnevne-vesti/071026/071026-vest10.html" rel="noopener" target="_blank">Paragraf, 7. oktobar 2026</a>; <a href="https://biznis.rs/vesti/srbija/usvojena-uredba-o-subvencionisanju-elektricnih-vozila-za-2026-godinu/" rel="noopener" target="_blank">Biznis.rs, 6. februar 2026</a>. evomobil.rs nije zvanični izvor; pre kupovine proverite aktuelne uslove u uredbi i javnom pozivu Ministarstva zaštite životne sredine.</p>
+    </div>
+  </section>
+</main>
+</Base>
