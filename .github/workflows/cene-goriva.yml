@@ -1,21 +1,20 @@
 # Fuel price check for the cost calculator (kalkulator-troskova).
-# The Ministry of Trade sets new maximum prices every Friday at 15:00 (Belgrade).
-# Runs (Belgrade time): every day at 7:00, and on Friday at 15:10 with a retry at 16:10.
-# GitHub schedules in UTC, so each time is listed for winter (UTC+1) and summer (UTC+2) time;
-# the extra run does no harm. Each run writes today's date as "provereno" (shown on the site as
-# "cene na dan ...") and changes the prices only when they changed.
-# When src/data/gorivo.json changed, the run commits it; that push makes Cloudflare rebuild and publish the site.
+# The Ministry of Trade sets new maximum prices every Friday at 15:00 (Belgrade); this runs once a week,
+# on Friday at 15:10 Belgrade time.
+# GitHub schedules in UTC, so the job is scheduled for both 13:10 UTC (15:10 in summer, CEST) and 14:10 UTC
+# (15:10 in winter, CET); the first step keeps only the schedule that matches the current season (also when
+# GitHub starts the run late). "Run workflow" (manual) always runs.
+# Each run writes today's date as "provereno" (shown on the site as "cene na dan ...") and changes the prices
+# only when they changed. When src/data/gorivo.json changed, the run commits it; that push makes Cloudflare
+# rebuild and publish the site.
 # If the source can't be read or the numbers look wrong, the run fails, nothing on the site changes,
 # and GitHub emails you ("Run failed: Cene goriva"). Every run is listed under Actions > Cene goriva.
 name: Cene goriva
 
 on:
   schedule:
-    - cron: '0 5 * * *'      # 7:00 summer time (CEST) / 6:00 winter time
-    - cron: '0 6 * * *'      # 7:00 winter time (CET)  / 8:00 summer time
-    - cron: '10 13 * * 5'    # Friday 15:10 summer time
-    - cron: '10 14 * * 5'    # Friday 15:10 winter time / 16:10 summer time
-    - cron: '10 15 * * 5'    # Friday 16:10 winter time (retry)
+    - cron: '10 13 * * 5'    # Friday 13:10 UTC = 15:10 summer time (CEST)
+    - cron: '10 14 * * 5'    # Friday 14:10 UTC = 15:10 winter time (CET)
   workflow_dispatch: {}      # "Run workflow" button for a manual check
 
 permissions:
@@ -30,16 +29,34 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
+      - name: Only the run meant for 15:10 Belgrade time (scheduled runs)
+        id: time
+        # summer time (UTC+2) uses the 13:10 UTC schedule, winter time (UTC+1) the 14:10 UTC one;
+        # checked by schedule, not by the clock, so a run GitHub starts late still counts
+        run: |
+          OFFSET=$(TZ=Europe/Belgrade date +%z)
+          if [ "$OFFSET" = "+0200" ]; then WANT='10 13 * * 5'; else WANT='10 14 * * 5'; fi
+          if [ "${{ github.event_name }}" = "schedule" ] && [ "${{ github.event.schedule }}" != "$WANT" ]; then
+            echo "Belgrade is UTC$OFFSET: this is the other season's schedule, skipping."
+            echo "go=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "go=true" >> "$GITHUB_OUTPUT"
+          fi
+
       - uses: actions/checkout@v4
+        if: steps.time.outputs.go == 'true'
 
       - uses: actions/setup-python@v5
+        if: steps.time.outputs.go == 'true'
         with:
           python-version: '3.12'
 
       - name: Read fuel prices
+        if: steps.time.outputs.go == 'true'
         run: python3 scripts/update_fuel.py
 
       - name: Commit and push if the prices or the check date changed (Cloudflare then rebuilds)
+        if: steps.time.outputs.go == 'true'
         run: |
           if git diff --quiet -- src/data/gorivo.json; then echo "Nema promena."; exit 0; fi
           git config user.name "evomobil cene goriva"
