@@ -574,7 +574,7 @@ html.bp-open{overflow:hidden}
 @media (prefers-reduced-motion: reduce){.bp,.bp-back{transition:none}}
 
 /* footer */
-footer{background:#16202e;color:#a9b6c7;padding-block:64px 88px;--logo-ink:#ffffff}
+footer{background:#16202e;color:#a9b6c7;padding-block:64px 40px;--logo-ink:#ffffff}
 :root[data-evtheme="dark"] footer{background:#0a0f16}
 .foot-grid{display:grid;grid-template-columns:1.6fr repeat(4,minmax(0,1fr));gap:32px}
 footer .brand{color:#ffffff}
@@ -1082,3 +1082,8 @@ body.no-scroll{overflow:hidden}
    so the footer is hidden behind it at first and slides out as you scroll, as on long pages.
    lvh = the largest viewport height, so the footer never peeks out when a phone hides its toolbars */
 .ft-reveal main{min-height:calc(100vh - 69px);min-height:calc(100lvh - 69px)}
+/* 404: content centred in the page, horizontally and vertically */
+.nf-main{display:flex;flex-direction:column;justify-content:center}
+.nf{text-align:center}
+.nf h1,.nf .answer{margin-inline:auto}
+.nf .ctas,.nf .nf-links{justify-content:center}
