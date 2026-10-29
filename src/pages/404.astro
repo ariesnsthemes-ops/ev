@@ -1,0 +1,25 @@
+---
+// Served for any missing address, so every link resolves from the site root ("/").
+import Base from '../layouts/Base.astro';
+import { SITE } from '../config';
+---
+<Base path="404.html" pre="/" notFound title={`Stranica nije pronađena | ${SITE}`} desc="Tražena stranica ne postoji na evomobil.rs.">
+<main id="top">
+  <section class="phero nf">
+    <div class="wrap">
+      <p class="nf-code">404</p>
+      <h1>Stranica nije pronađena</h1>
+      <p class="answer">Stranica koju tražite ne postoji ili je premeštena. Možda vam pomogne nešto od ovoga:</p>
+      <div class="ctas">
+        <a href="/modeli" class="btn btn-dark">Svi električni modeli <span class="arr">→</span></a>
+        <a href="/#pretraga" class="btn btn-ghost">Pretraga</a>
+        <a href="/" class="btn btn-ghost">Početna</a>
+      </div>
+      <ul class="nf-links">
+        <li><a href="/brendovi">Brendovi</a></li><li><a href="/uporedi">Uporedi modele</a></li><li><a href="/distributeri">Distributeri</a></li>
+        <li><a href="/punjaci">Punjači</a></li><li><a href="/subvencije-elektricni-automobili-2026">Subvencije 2026</a></li><li><a href="/kontakt">Kontakt</a></li>
+      </ul>
+    </div>
+  </section>
+</main>
+</Base>

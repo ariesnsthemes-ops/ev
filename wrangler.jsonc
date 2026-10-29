@@ -1,8 +1,11 @@
 {
-  // Cloudflare Workers settings for evomobil.rs (worker name kept as "ev-srbija" so the existing Cloudflare project keeps working)
-  // The website is the "site" folder; nothing is built on Cloudflare (no build command).
-  "name": "ev-srbija",
+  // Cloudflare Workers settings for evomobil.rs (the name must match the Worker in Cloudflare: "ev")
+  // "npx wrangler deploy" (live) and "npx wrangler preview" (branches) first run "npm run build" (Astro, writes "site"), then publish it.
+  "name": "ev",
   "compatibility_date": "2026-10-01",
+  // Wrangler runs the Astro build itself before every deploy and preview, so it doesn't depend on the
+  // "Build command" fields in the Cloudflare dashboard (leave them empty to avoid building twice)
+  "build": { "command": "npm run build" },
   "assets": {
     "directory": "./site",
     // addresses without .html: /modeli is served from modeli.html, /modeli.html redirects to /modeli,
@@ -10,5 +13,8 @@
     "html_handling": "auto-trailing-slash",
     // unknown addresses show site/404.html with status 404
     "not_found_handling": "404-page"
-  }
+  },
+  // branch previews (the "astro" branch etc.): Cloudflare runs "npx wrangler preview", which needs this block;
+  // the previews use the same assets and settings as above
+  "previews": {}
 }

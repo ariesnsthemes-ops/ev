@@ -1,0 +1,101 @@
+
+<div class="kc">
+  <div class="kc-grid">
+    <form class="kc-panel" id="kc-f" autocomplete="off">
+      <section class="kc-sect">
+        <div class="kc-sect-h"><h2>Električni automobil</h2></div>
+        <div class="kc-group kc-g2" id="kc-carGroup">
+          <div class="kc-fld"><label for="kc-model">Model</label><select id="kc-model"></select></div>
+          <div class="kc-fld" id="kc-verWrap"><label for="kc-ver">Verzija baterije</label><select id="kc-ver"></select></div>
+        </div>
+        <div class="kc-cons" id="kc-consInfo"></div>
+        <div class="kc-note" id="kc-badNote" hidden><b>Proverite potrošnju.</b> Za ovaj model domet i baterija ne daju pouzdanu potrošnju, pa je uzeta prosečna vrednost od 17 kWh/100 km. Ako znate potrošnju iz zvaničnog kataloga, unesite je ručno.</div>
+        <label class="kc-switch"><input type="checkbox" id="kc-own"> Unesi potrošnju ručno</label>
+        <div class="kc-group" id="kc-ownWrap" hidden><div class="kc-fld"><label for="kc-ownKwh">Potrošnja</label><div class="kc-in"><input type="number" id="kc-ownKwh" min="8" max="40" step="0.1" value="17" inputmode="decimal"><span>kWh/100 km</span></div></div></div>
+      </section>
+
+      <section class="kc-sect">
+        <div class="kc-sect-h"><h2>Vožnja</h2></div>
+        <div class="kc-group"><div class="kc-fld"><div class="kc-rtop"><label for="kc-km">Godišnje pređete</label><output id="kc-kmOut" for="kc-km"></output></div><input type="range" id="kc-km" min="3000" max="50000" step="500" value="15000"><div class="kc-scale"><span>3.000 km</span><span>50.000 km</span></div></div></div>
+        <label class="kc-switch"><input type="checkbox" id="kc-winter"> Zimski uslovi (potrošnja struje +25%)</label>
+      </section>
+
+      <section class="kc-sect">
+        <div class="kc-sect-h"><h2>Punjenje</h2><span>unesite cene po kojima punite</span></div>
+        <div class="kc-group"><div class="kc-fld"><div class="kc-rtop"><label for="kc-home">Kod kuće / na poslu</label><output id="kc-homeOut" for="kc-home"></output></div><input type="range" id="kc-home" min="0" max="100" step="5" value="80"><div class="kc-scale"><span>sve na javnim punjačima</span><span>sve kod kuće</span></div></div></div>
+        <label class="kc-switch"><input type="checkbox" id="kc-dual"> Dvotarifno brojilo (punjenje noću)</label>
+        <div class="kc-group kc-g2" id="kc-singleRow">
+          <div class="kc-fld"><label for="kc-pHome">Cena struje kod kuće</label><div class="kc-in"><input type="number" id="kc-pHome" min="0" step="0.1" value="12" inputmode="decimal"><span>RSD/kWh</span></div></div>
+          <div class="kc-fld"><label for="kc-pPub">Javni punjači</label><div class="kc-in"><input type="number" id="kc-pPub" min="0" step="0.5" value="40" inputmode="decimal"><span>RSD/kWh</span></div></div>
+        </div>
+        <div class="kc-group kc-g3" id="kc-dualRow" hidden>
+          <div class="kc-fld"><label for="kc-pDay">Viša tarifa (dan)</label><div class="kc-in"><input type="number" id="kc-pDay" min="0" step="0.1" value="13" inputmode="decimal"><span>RSD/kWh</span></div></div>
+          <div class="kc-fld"><label for="kc-pNight">Niža tarifa (noć)</label><div class="kc-in"><input type="number" id="kc-pNight" min="0" step="0.1" value="6" inputmode="decimal"><span>RSD/kWh</span></div></div>
+          <div class="kc-fld"><label for="kc-nightShare">Noću punite</label><div class="kc-in"><input type="number" id="kc-nightShare" min="0" max="100" step="5" value="90" inputmode="numeric"><span>%</span></div></div>
+        </div>
+        <div class="kc-group" id="kc-pubRow" hidden></div>
+        <p class="kc-hint">Unete cene struje su primer. Proverite cenu na svom računu za struju (zelena, plava ili crvena zona) i cenovnik operatera javnih punjača.</p>
+      </section>
+
+      <section class="kc-sect">
+        <div class="kc-sect-h"><h2>Automobil na gorivo</h2></div>
+        <div class="kc-seg" role="group" aria-label="Vrsta goriva">
+          <button type="button" id="kc-fB" aria-pressed="true">Benzin</button>
+          <button type="button" id="kc-fD" aria-pressed="false">Dizel</button>
+        </div>
+        <div class="kc-group kc-g2">
+          <div class="kc-fld"><label for="kc-lper">Potrošnja</label><div class="kc-in"><input type="number" id="kc-lper" min="2" max="25" step="0.1" value="6.5" inputmode="decimal"><span>l/100 km</span></div></div>
+          <div class="kc-fld"><label for="kc-pFuel">Cena goriva</label><div class="kc-in"><input type="number" id="kc-pFuel" min="0" step="1" value="207" inputmode="decimal"><span>RSD/l</span></div></div>
+        </div>
+        <p class="kc-hint" id="kc-fuelHint"></p>
+      </section>
+    </form>
+
+    <aside class="kc-res" aria-live="polite">
+      <div class="kc-hero" id="kc-hero">
+        <div class="k" id="kc-heroK">Godišnja ušteda na energiji</div>
+        <div class="kc-big" id="kc-save"></div>
+        <div class="sub" id="kc-saveSub"></div>
+      </div>
+      <div class="kc-body">
+        <table>
+          <thead><tr><th></th><th><span class="kc-dot"></span>Struja</th><th><span class="kc-dot fuel"></span><span id="kc-fuelTh">Benzin</span></th></tr></thead>
+          <tbody>
+            <tr><td>Na 100 km</td><td class="ev" id="kc-e100"></td><td id="kc-g100"></td></tr>
+            <tr><td>Mesečno</td><td class="ev" id="kc-eMo"></td><td id="kc-gMo"></td></tr>
+            <tr><td>Godišnje</td><td class="ev" id="kc-eYr"></td><td id="kc-gYr"></td></tr>
+          </tbody>
+        </table>
+        <div class="kc-chart">
+          <div class="kc-chart-h"><h3>Ukupno za 5 godina</h3>
+            <div class="kc-legend"><span><span class="kc-dot"></span>Struja</span><span><span class="kc-dot fuel"></span><span id="kc-fuelLg">Benzin</span></span></div>
+          </div>
+          <div class="kc-bars" id="kc-bars"></div>
+        </div>
+        <p class="kc-disc">Procena troška energije uz iste cene tokom 5 godina. Ne uključuje cenu vozila, registraciju, osiguranje, održavanje ni subvencije.</p>
+      </div>
+    </aside>
+  </div>
+
+  <div class="kc-how">
+    <section class="kc-panel">
+      <h2>Kako računamo</h2>
+      <p>Potrošnja električnog modela:</p>
+      <div class="kc-f">kapacitet baterije ÷ domet WLTP × 100 = kWh/100 km</div>
+      <p>Trošak struje na 100 km:</p>
+      <div class="kc-f">potrošnja × 1,10 (gubici punjenja) × prosečna cena kWh</div>
+      <p>Prosečna cena kWh je mešavina kućne i javne cene po udelu koji ste izabrali. Trošak goriva:</p>
+      <div class="kc-f">l/100 km × cena litra</div>
+    </section>
+    <section class="kc-panel">
+      <h2>Šta treba znati</h2>
+      <ul>
+        <li>WLTP domet je laboratorijski. U stvarnoj vožnji, a naročito zimi i na autoputu, potrošnja je veća. Zato postoji opcija za zimske uslove.</li>
+        <li>Pri punjenju se deo energije izgubi. Računamo 10% gubitaka.</li>
+        <li id="kc-fuelLi"></li>
+        <li>Rezultat je informativna procena, ne ponuda.</li>
+      </ul>
+      <p class="kc-src">Izvori: domet i baterija iz baze evomobil.rs (zvanični podaci proizvođača i uvoznika). Cene goriva: najviše maloprodajne cene koje utvrđuje Ministarstvo unutrašnje i spoljne trgovine, preuzete sa <a href="https://nafta.hr/sr/cene-goriva-srbija/" target="_blank" rel="noopener">linka</a> i proveravane svakog dana.</p>
+    </section>
+  </div>
+</div>

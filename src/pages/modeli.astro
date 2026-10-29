@@ -1,0 +1,52 @@
+---
+/** All-models catalogue: checkbox filters on the left, model grid on the right (filters run in the browser, src/scripts/catalog.js). */
+import Base from '../layouts/Base.astro';
+import FilterSidebar from '../components/FilterSidebar.astro';
+import type { FilterGroup } from '../lib/filters';
+import { SITE } from '../config';
+import { card, crumbs, ldBreadcrumbs, ldItemList, type Crumb } from '../lib/html';
+import { ALL_IDS, ORDER, brands, byRangeDesc, models, type Model } from '../lib/site';
+import { E } from '../lib/util';
+import catalogJs from '../scripts/catalog.js?raw';
+
+const CAT_LABELS: [string, string][] = [['suv', 'SUV'], ['hatch', 'Hečbek'], ['sedan', 'Sedan'], ['city', 'Gradski'], ['pickup', 'Pikap'], ['wagon', 'Karavan']];
+const ids = byRangeDesc(ALL_IDS);
+const cnt = (test: (m: Model) => boolean) => ids.filter((i) => test(models[i])).length;
+const groups: FilterGroup[] = [
+  { id: 'fg-brand', legend: 'Brend', items: ORDER.filter((b) => ids.some((i) => models[i].b === b)).map((b) => ({ name: 'b', value: b, label: E(brands[b].name), count: cnt((m) => m.b === b) })) },
+  { id: 'fg-range', legend: 'Domet (WLTP)', items: [['300', '300+ km'], ['400', '400+ km'], ['500', '500+ km'], ['600', '600+ km']].map(([v, lab]) => ({ name: 'd', value: v, label: lab, count: cnt((m) => (m.r || 0) >= +v) })) },
+  { id: 'fg-body', legend: 'Karoserija', skipZero: true, items: CAT_LABELS.map(([t, lab]) => ({ name: 'k', value: t, label: lab, count: cnt((m) => m.tags.includes(t)) })) },
+];
+const grid = ids.map((i) => {
+  const m = models[i];
+  return card(i, '', true, ` data-b="${m.b}" data-t="${m.tags.join(' ')}" data-r="${m.r || 0}" data-n="${E(m.full.toLowerCase())}"`);
+}).join('');
+const h1 = 'Svi električni automobili u Srbiji';
+const intro = 'Na evomobil.rs trenutno pratimo električne modele automobila koji se prodaju u Srbiji. Prikazujemo samo potpuno električne automobile, bez hibrida.';
+const crumb: Crumb[] = [['Početna', 'index.html'], ['Svi modeli', 'modeli.html']];
+const ld = [ldBreadcrumbs(crumb), ldItemList(h1, ids, 'https://schema.org/ItemListUnordered')];
+---
+<Base path="modeli.html" title={`${h1} | ${SITE}`} ld={ld} extraJs={catalogJs}
+  desc={`Spisak svih ${ALL_IDS.length} električnih automobila na evomobil.rs, sa dometom, baterijom, klasom vozila i distributerima.`}>
+<main id="top">
+  <section class="phero">
+    <div class="wrap">
+      <Fragment set:html={crumbs(crumb, '')} />
+      <h1>{h1}</h1>
+      <p class="answer">{intro}</p>
+    </div>
+  </section>
+  <section class="sec" style="padding-top:0">
+    <div class="wrap cat-layout">
+      <FilterSidebar groups={groups} apply="Prikaži modele" />
+      <div class="cat-main">
+        <div class="cat-bar"><button type="button" class="btn btn-ghost cat-open" id="cat-open" aria-controls="cat-side">Filteri <span id="cat-n" hidden></span></button><p class="cat-count" id="cat-count" role="status">Prikazano {ids.length} od {ids.length} modela</p><div class="csel" id="cat-sort-wrap"><span class="csel-lab" id="sort-lab">Sortiraj</span><button type="button" class="csel-btn" id="cat-sort-btn" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="sort-lab cat-sort-btn"><span id="cat-sort-val">Najveći domet</span></button><ul class="csel-menu" id="cat-sort-menu" role="listbox" aria-labelledby="sort-lab" hidden><li role="option" data-v="r" aria-selected="true" tabindex="-1">Najveći domet</li><li role="option" data-v="n" aria-selected="false" tabindex="-1">Naziv A-Š</li></ul><input type="hidden" id="cat-sort" value="r"></div></div>
+        <div class="models many" id="cat-grid"><Fragment set:html={grid} /></div>
+        <div class="cat-empty" id="cat-empty" hidden><strong>Nijedan model ne odgovara izabranim filterima.</strong><button type="button" class="btn btn-ghost" id="cat-empty-reset">Poništi filtere</button></div>
+        <p class="price-note">Domet je po WLTP normi, prema podacima proizvođača ili uvoznika; kod modela sa više verzija naveden je raspon. Proverite aktuelne podatke kod distributera.</p>
+      </div>
+    </div>
+  </section>
+</main>
+<div class="cat-scrim" id="cat-scrim" hidden></div>
+</Base>

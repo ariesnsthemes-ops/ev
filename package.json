@@ -1,0 +1,20 @@
+{
+  "name": "evomobil-astro",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "compare": "node scripts/compare.mjs",
+    "visual": "node scripts/visual-check.mjs",
+    "switch": "node scripts/switch.mjs"
+  },
+  "dependencies": {
+    "astro": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=18.17"
+  }
+}

@@ -1,0 +1,4 @@
+node_modules/
+.astro/
+# Cloudflare builds the site itself ("npm run build" -> site/), so the built folder is not committed
+site/

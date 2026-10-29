@@ -1,0 +1,76 @@
+---
+/**
+ * Page shell shared by every page except the homepage: <head> (title, description, canonical,
+ * Open Graph, icons, fonts, stylesheet, JSON-LD), the SVG sprite, header, footer and the shared scripts.
+ *
+ * `path` is the page address relative to the site root with .html ("modeli/byd-seal.html"); from it
+ * come the canonical URL and the prefix back to the root ('' or '../'). The 404 page passes pre="/"
+ * because it is served for any missing address.
+ */
+import { CSS_V, DOMAIN, FAV_V, GA_ID, NOINDEX, OG_DEFAULT, SITE } from '../config';
+import { pyjson, short, E } from '../lib/util';
+import Sprite from '../components/Sprite.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import core from '../scripts/common-core.js?raw';
+import cmpbar from '../scripts/cmpbar.js?raw';
+import consentSrc from '../scripts/consent.js?raw';
+
+interface Props {
+  path: string;
+  title: string;
+  desc: string;
+  ld?: unknown[];
+  ogImage?: string | null;
+  extraJs?: string;
+  /** Prefix back to the root; derived from `path` unless given (the 404 page uses "/"). */
+  pre?: string;
+  /** The 404 page: no canonical, plain noindex. */
+  notFound?: boolean;
+}
+const { path, title, ld = [], ogImage = null, extraJs = '', notFound = false } = Astro.props;
+const desc = short(Astro.props.desc);
+const pre = Astro.props.pre ?? '../'.repeat((path.match(/\//g) || []).length);
+const canonical = `${DOMAIN}/` + (path === 'index.html' ? '' : notFound ? path : path.replace(/\.html$/, ''));
+const og = `${DOMAIN}/${ogImage || OG_DEFAULT}`;
+const lds = ld.map((x) => `<script type="application/ld+json">${pyjson(x)}</script>\n`).join('');
+
+// the 404 page is served from any depth, so the consent bar links to the privacy policy from the root
+const consent = consentSrc.replace('__GA__', GA_ID).replace(`href="'+base+'politika`, notFound ? `href="/'+base+'politika` : `href="'+base+'politika`);
+const robotsMeta = !notFound && NOINDEX ? '\n<meta name="robots" content="noindex, nofollow">' : '';
+const ogExtra = og.endsWith(OG_DEFAULT) ? '\n<meta property="og:image:width" content="1200">\n<meta property="og:image:height" content="630">\n<meta property="og:image:alt" content="evomobil.rs – električni automobili u Srbiji">' : '';
+const js = core + '\n' + cmpbar + '\n' + consent + extraJs;
+---
+<!doctype html>
+<html lang="sr-Latn">
+<head>
+<meta charset="utf-8"><Fragment set:html={robotsMeta} />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="only light">
+<script is:inline>/* Samsung Internet dark mode: offer the site dark theme to it */if(/SamsungBrowser/.test(navigator.userAgent)){document.documentElement.classList.add("sam");var m=document.querySelector("meta[name=color-scheme]");if(m)m.content="light dark"}</script>
+<title set:html={E(title)}></title>
+<meta name="description" content={desc}><Fragment set:html={notFound ? '' : `\n<link rel="canonical" href="${canonical}">`} />
+<meta property="og:type" content="website">
+<meta property="og:site_name" content={SITE}>
+<meta property="og:locale" content="sr_RS">
+<meta property="og:title" content={title}>
+<meta property="og:description" content={desc}>
+<meta property="og:url" content={canonical}>
+<meta property="og:image" content={og}><Fragment set:html={ogExtra} />
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href={`${pre}favicon.ico?v=${FAV_V}`} sizes="any">
+<link rel="icon" href={`${pre}img/favicon.svg?v=${FAV_V}`} type="image/svg+xml">
+<link rel="icon" href={`${pre}img/favicon-32.png?v=${FAV_V}`} type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href={`${pre}img/apple-touch-icon.png?v=${FAV_V}`}>
+<meta name="theme-color" content="#16202e">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap">
+<link rel="stylesheet" href={`${pre}assets/site.css?v=${CSS_V}`}>
+<style is:inline>/* logo masks resolve against the page, not the stylesheet */.blogo{-webkit-mask:var(--l) center/contain no-repeat;mask:var(--l) center/contain no-repeat}</style>
+<Fragment set:html={notFound ? '<meta name="robots" content="noindex">\n' : ''} /><slot name="head" /><Fragment set:html={lds} /></head>
+<body>
+<Sprite />
+<Header pre={pre} /><slot /><Footer pre={pre} /><script is:inline set:html={js}></script>
+</body>
+</html>

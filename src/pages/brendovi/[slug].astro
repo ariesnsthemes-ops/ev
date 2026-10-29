@@ -1,0 +1,95 @@
+---
+/** One page per brand: hero with facts, about text, model cards and table, dealers by city, FAQ, other brands. */
+import Base from '../../layouts/Base.astro';
+import { DOMAIN, SITE } from '../../config';
+import { card, cmpTable, crumbs, dealerSection, ldBreadcrumbs, ldDealer, ldFaq, ldItemList, logoSpan, qaBlock, type Crumb, type QA } from '../../lib/html';
+import { ORDER, brands, citiesOf, models, rangeTxt } from '../../lib/site';
+import { E, joinSr, pluralModels } from '../../lib/util';
+
+export const getStaticPaths = () => ORDER.map((slug) => ({ params: { slug } }));
+
+const { slug } = Astro.params;
+const b = brands[slug], pre = '../';
+const ids = b.models, cities = citiesOf(slug);
+const title = `${b.name} električni automobili u Srbiji | ${SITE}`;
+const names = ids.length ? joinSr(ids.map((i) => models[i].full)) : '';
+const ranges = ids.map((i) => models[i].r).filter((r): r is number => !!r);
+const dealerWord = b.dealers.length === 1 ? 'ovlašćenog distributera' : 'ovlašćenih distributera';
+const cityWord = cities.length === 1 ? 'gradu' : 'gradovima';
+const answer = !ids.length
+  ? `Podatke o električnim modelima brenda ${b.name} u Srbiji dodajemo uskoro, čim ih uvoznik objavi.`
+  : `${b.name} u Srbiji trenutno nudi ${pluralModels(ids.length)}: ${names}. `
+    + (ranges.length > 1 ? `Domet po WLTP normi je od ${Math.min(...ranges)} do ${Math.max(...ranges)} km, zavisno od modela i verzije. ` : ranges.length ? `Domet po WLTP normi je do ${ranges[0]} km. ` : '')
+    + (cities.length ? `Vozila se mogu kupiti kod ${b.dealers.length} ${dealerWord} u ${cityWord} ${joinSr(cities)}.` : '');
+const desc = (!ids.length
+  ? `${b.name} električni automobili u Srbiji: modeli, domet, baterija i kontakti distributera. Podatke dodajemo čim ih uvoznik objavi.`
+  : cities.length ? `${b.name} električni automobili u Srbiji: ${names}. Domet, baterija, klasa vozila i kontakti distributera u ${joinSr(cities)}.`
+  : `${b.name} električni automobili u Srbiji: ${names}. Domet, baterija i klasa vozila.`).slice(0, 300);
+const facts: [string, string | null | undefined][] = [['OSNOVAN', b.founded], ['SEDIŠTE', b.hq], ['UVOZNIK U SRBIJI', b.importer], ['EV MODELA', String(ids.length)]];
+const others = ORDER.filter((o) => o !== slug).map((o) => `<a href="${o}"><span class="ol">${logoSpan(o, pre)}</span>${E(brands[o].name)}</a>`).join('');
+const crumb: Crumb[] = [['Početna', 'index.html'], ['Brendovi', 'brendovi.html'], [b.name, `brendovi/${slug}.html`]];
+const qa: QA[] = [[`Koje električne modele ${b.name} nudi u Srbiji?`, answer.split('. Domet')[0].trim().replace(/\.+$/, '') + '.']];
+if (ranges.length) {
+  const best = ids.reduce((a, i) => ((models[i].r || 0) > (models[a].r || 0) ? i : a), ids[0]);
+  qa.push([`Koji ${b.name} električni automobil ima najveći domet?`, `Najveći domet ima ${models[best].full}: ${rangeTxt(models[best])} po WLTP normi, prema podacima proizvođača ili uvoznika.`]);
+}
+if (cities.length) qa.push([`Gde mogu kupiti ${b.name} električni automobil u Srbiji?`, `${b.name} električne automobile prodaju ovlašćeni distributeri u ${cityWord} ${joinSr(cities)}. Adrese, telefoni i radno vreme nalaze se u odeljku Kontaktirajte distributera.`]);
+
+const ld: unknown[] = [ldBreadcrumbs(crumb), ldFaq(qa), ldItemList(`Električni modeli ${b.name} u Srbiji`, ids),
+  ...b.dealers.filter((d) => d.city !== 'Srbija').map((d) => ldDealer(d, [b.name]))];
+const og = ids.length && models[ids[0]].photo ? `img/${models[ids[0]].photo}` : null;
+const modelsHtml = ids.length
+  ? `<div class="models${ids.length > 6 ? ' many' : ''}">${ids.map((i) => card(i, pre)).join('')}</div>`
+  : '<p class="answer">Podatke o električnim modelima, dometu i bateriji objavićemo čim ih uvoznik za Srbiju objavi.</p>';
+---
+<Base path={`brendovi/${slug}.html`} title={title} desc={desc} ld={ld} ogImage={og}>
+<main id="top">
+  <section class="bhero">
+    <div class="wrap">
+      <Fragment set:html={crumbs(crumb, pre)} />
+      <div class="bhero-grid">
+        <div class="bhero-logo" role="img" aria-label={`${b.name} logo`}><Fragment set:html={logoSpan(slug, pre)} /></div>
+        <div>
+          <h1>{b.name} električni automobili u Srbiji</h1>
+          <p class="answer" set:html={E(answer)}></p>
+          <dl class="facts"><Fragment set:html={facts.filter(([, v]) => v).map(([k, v]) => `<div><dt>${k}</dt><dd>${E(v)}</dd></div>`).join('')} /></dl>
+          <div class="ctas">
+            <a href="#modeli-brenda" class="btn btn-dark">Električni modeli <span class="arr">→</span></a>
+            <Fragment set:html={b.dealers.length ? '<a href="#kontakt-distributera" class="btn btn-ghost">Kontaktirajte distributera</a>' : ''} />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec alt" id="o-brendu">
+    <div class="wrap b-about">
+      <h2>O brendu {b.name}</h2>
+      <div><Fragment set:html={b.about.map((p) => `<p>${E(p)}</p>`).join('')} /></div>
+    </div>
+  </section>
+
+  <section class="sec" id="modeli-brenda">
+    <div class="wrap">
+      <div class="head"><div><h2>Električni modeli {b.name}</h2><p>{ids.length ? pluralModels(ids.length) + ' dostupno u Srbiji.' : 'Električne modele ovog brenda dodajemo uskoro.'}</p></div></div>
+      <Fragment set:html={modelsHtml} />
+      <Fragment set:html={ids.length > 1 ? cmpTable(ids, pre, false, false) : ''} />
+      <p class="price-note">Domet je po WLTP normi, prema podacima proizvođača ili uvoznika; kod modela sa više verzija naveden je raspon.</p>
+    </div>
+  </section>
+<Fragment set:html={dealerSection(slug, `Kontaktirajte distributera ${b.name}`)} />
+  <section class="sec">
+    <div class="wrap">
+      <h2 class="h2s">Česta pitanja o brendu {b.name}</h2>
+      <Fragment set:html={qaBlock(qa)} />
+    </div>
+  </section>
+
+  <section class="sec alt">
+    <div class="wrap">
+      <div class="head"><h2 style="font-size:clamp(24px,2.6vw,32px)">Ostali brendovi</h2></div>
+      <div class="others"><Fragment set:html={others} /></div>
+    </div>
+  </section>
+</main>
+</Base>

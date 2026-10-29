@@ -1,0 +1,73 @@
+---
+/** Charger map and list (MapLibre + OpenFreeMap tiles; the data is in src/lib/chargers.ts, the behaviour in src/scripts/chargers.js). */
+import Base from '../layouts/Base.astro';
+import FilterSidebar from '../components/FilterSidebar.astro';
+import type { FilterGroup } from '../lib/filters';
+import { SITE } from '../config';
+import { crumbs, ldBreadcrumbs, type Crumb } from '../lib/html';
+import { ACCESS_LAB, BORDER_ZONE, CHARGERS, CONN_ORDER, HAS_OSM, KW_STEPS, OUTLINE, type Charger } from '../lib/chargers';
+import { E, capitalize, pyjson } from '../lib/util';
+import chargersJs from '../scripts/chargers.js?raw';
+
+function item(r: Charger): string {
+  const where = [r.addr, r.town && !r.addr.includes(r.town) ? r.town : ''].filter(Boolean).join(', ');
+  const tags = r.conn.map((c) => `<span class="tag gray">${E(c)}</span>`).join('');
+  const kw = r.kw ? `<span class="ch-kw${(r.kw || 0) >= 50 ? ' fast' : ''}">${r.kw} kW</span>` : '<span class="ch-kw na">snaga nepoznata</span>';
+  const notes: string[] = [];
+  if (r.acc !== 'javni') notes.push(ACCESS_LAB[r.acc]);
+  if (r.app) notes.push('potrebna aplikacija ili kartica');
+  if (r.points && r.points > 1) notes.push(`${r.points} mesta za punjenje`);
+  if (r.down) notes.push('privremeno van funkcije');
+  const nav = `https://www.google.com/maps/dir/?api=1&destination=${r.lat.toFixed(6)},${r.lng.toFixed(6)}`;
+  return `<li class="ch" data-id="${r.id}" data-lat="${r.lat.toFixed(6)}" data-lng="${r.lng.toFixed(6)}" data-kw="${r.kw || 0}" `
+    + `data-c="${r.conn.map((c) => c.replace(/ /g, '')).join(' ')}" data-a="${r.acc}">`
+    + `<div class="ch-top"><h3>${E(r.name)}</h3>${kw}</div>`
+    + (where ? `<p class="ch-addr">${E(where)}</p>` : '')
+    + (tags ? `<div class="ch-tags">${tags}</div>` : '')
+    + (notes.length ? `<p class="ch-note">${E(capitalize(notes.join(', ')))}</p>` : '')
+    + `<div class="ch-act"><button type="button" class="ch-show">Prikaži na mapi</button>`
+    + `<a href="${nav}" target="_blank" rel="nofollow noopener">Navigacija ↗</a></div></li>`;
+}
+
+const nCh = CHARGERS.length, nFast = CHARGERS.filter((r) => (r.kw || 0) >= 50).length;
+const groups: FilterGroup[] = [
+  { id: 'fg-kw', legend: 'Snaga punjenja', more: false, skipZero: true, items: KW_STEPS.map((s) => ({ name: 'p', value: String(s), label: `${s}+ kW`, count: CHARGERS.filter((r) => (r.kw || 0) >= s).length })) },
+  { id: 'fg-conn', legend: 'Konektor', more: false, skipZero: true, items: CONN_ORDER.map((c) => ({ name: 'k', value: c.replace(/ /g, ''), label: c, count: CHARGERS.filter((r) => r.conn.includes(c)).length })) },
+  { id: 'fg-acc', legend: 'Pristup', more: false, skipZero: true, items: ['javni', 'gosti', 'nepoznato'].map((a) => ({ name: 'a', value: a, label: ACCESS_LAB[a], count: CHARGERS.filter((r) => r.acc === a).length })) },
+];
+const osmNote = HAS_OSM ? ' i <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="nofollow noopener">© OpenStreetMap</a> saradnici (ODbL)' : '';
+const crumb: Crumb[] = [['Početna', 'index.html'], ['Punjači', 'punjaci.html']];
+const intro = 'Mapa punjača za električne automobile u Srbiji: lokacije, snaga punjenja i tipovi konektora. '
+  + 'Izaberite snagu ili konektor koji odgovara vašem automobilu, a pre polaska proverite dostupnost u aplikaciji operatera.';
+// MapLibre is loaded from public/assets; the tag is split so the dev server's dependency scanner doesn't treat it as an import
+const mapHead = '<link rel="stylesheet" href="assets/maplibre-gl.css">\n<scr' + 'ipt src="assets/maplibre-gl.js" defer></scr' + 'ipt>\n';
+const js = 'var OUTLINE=' + pyjson(OUTLINE, { compact: true }) + ',BORDER_ZONE=' + pyjson(BORDER_ZONE, { compact: true }) + ';\n' + chargersJs;
+---
+<Base path="punjaci.html" title={`Punjači za električne automobile u Srbiji: mapa | ${SITE}`} ld={[ldBreadcrumbs(crumb)]} extraJs={js}
+  desc={`Mapa punjača za električne automobile u Srbiji: ${nCh} lokacija, od toga ${nFast} brzih punjača od 50 kW i više. Snaga, konektori (CCS, Tip 2, CHAdeMO) i navigacija do punjača.`}><Fragment slot="head" set:html={mapHead} />
+<main id="top">
+  <section class="phero">
+    <div class="wrap">
+      <Fragment set:html={crumbs(crumb, '')} />
+      <h1>Punjači za električne automobile u Srbiji</h1>
+      <p class="answer">{intro}</p>
+    </div>
+  </section>
+  <section class="sec" style="padding-top:0">
+    <div class="wrap cat-layout">
+      <FilterSidebar groups={groups} apply="Prikaži punjače" />
+      <div class="cat-main">
+        <div class="cat-bar"><button type="button" class="btn btn-ghost cat-open" id="cat-open" aria-controls="cat-side">Filteri <span id="cat-n" hidden></span></button>
+          <p class="cat-count" id="cat-count" role="status">Prikazano {nCh} od {nCh} punjača</p>
+          <p class="ch-legend"><i class="dot fast"></i>50+ kW <i class="dot"></i>sporije</p></div>
+        <div class="ch-map" id="ch-map" role="region" aria-label="Mapa punjača"></div>
+        <ul class="ch-list" id="ch-list"><Fragment set:html={CHARGERS.map(item).join('')} /></ul>
+        <button type="button" class="btn btn-ghost ch-more" id="ch-more" hidden>Prikaži još</button>
+        <div class="cat-empty" id="cat-empty" hidden><strong>Nijedan punjač ne odgovara izabranim filterima.</strong><button type="button" class="btn btn-ghost" id="cat-empty-reset">Poništi filtere</button></div>
+        <p class="price-note">Izvor podataka: <a href="https://openchargemap.org" target="_blank" rel="nofollow noopener">Open Charge Map</a><Fragment set:html={osmNote} />, otvorene baze punjača koje dopunjuju korisnici. Podaci mogu biti nepotpuni ili zastareli; cenu, radno vreme i dostupnost proverite kod operatera punjača.</p>
+      </div>
+    </div>
+  </section>
+</main>
+<div class="cat-scrim" id="cat-scrim" hidden></div>
+</Base>

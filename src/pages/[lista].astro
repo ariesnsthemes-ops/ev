@@ -1,0 +1,59 @@
+---
+/**
+ * Category lists (SUV, hečbek, sedan, pikap, gradski) and the range ranking: a table and the model cards.
+ * Each route is one entry of LISTS; the catalogue with filters is modeli.astro.
+ */
+import Base from '../layouts/Base.astro';
+import { SITE } from '../config';
+import { card, cmpTable, crumbs, ldBreadcrumbs, ldItemList, type Crumb } from '../lib/html';
+import { ALL_IDS, byRangeDesc, models } from '../lib/site';
+import { E, joinSr, pluralModels } from '../lib/util';
+import { CATS, NAV_ITEMS } from '../lib/lists';
+
+export const getStaticPaths = () => [...CATS.map((c) => ({ params: { lista: c.path } })), { params: { lista: 'najveci-domet' } }];
+
+const { lista } = Astro.params;
+let h1: string, intro: string, ids: string[], ranked = false, crumbName: string, title: string, desc: string;
+if (lista === 'najveci-domet') {
+  ids = byRangeDesc(ALL_IDS.filter((i) => models[i].r));
+  ranked = true;
+  const top3 = joinSr(ids.slice(0, 3).map((i) => `${models[i].full} (${models[i].r} km)`));
+  h1 = 'Električni automobili sa najvećim dometom u Srbiji';
+  intro = `Električni automobili sa najvećim dometom u Srbiji su ${top3}, prema WLTP podacima proizvođača i uvoznika. Tabela prikazuje ${ids.length} modela poređanih po najvećem navedenom dometu.`;
+  crumbName = 'Najveći domet';
+  title = `${h1} | ${SITE}`;
+  desc = `Rang lista električnih automobila u Srbiji po dometu (WLTP): ${top3}.`;
+} else {
+  const c = CATS.find((x) => x.path === lista)!;
+  ids = byRangeDesc(ALL_IDS.filter((i) => c.test(models[i])));
+  const rs = ids.map((i) => models[i].r).filter((r): r is number => !!r);
+  h1 = c.h1;
+  intro = `U Srbiji se trenutno prodaje ${pluralModels(ids.length)} u ovoj kategoriji: ${joinSr(ids.map((i) => models[i].full))}. `
+    + (rs.length > 1 ? `Domet po WLTP normi kreće se od ${Math.min(...rs)} do ${Math.max(...rs)} km, a najveći domet ima ${models[ids[0]].full}.` : '');
+  crumbName = h1;
+  title = `${h1} | ${SITE}`;
+  desc = c.desc;
+}
+const crumb: Crumb[] = [['Početna', 'index.html'], [crumbName, `${lista}.html`]];
+const catNav = '<nav class="cat-links" aria-label="Kategorije">' + NAV_ITEMS.map(([h, t]) => `<a href="${h}"${h === lista ? ' aria-current="page"' : ''}>${E(t)}</a>`).join('') + '</nav>';
+const ld = [ldBreadcrumbs(crumb), ldItemList(h1, ids, ranked ? 'https://schema.org/ItemListOrderDescending' : 'https://schema.org/ItemListUnordered')];
+---
+<Base path={`${lista}.html`} title={title} desc={desc} ld={ld}>
+<main id="top">
+  <section class="phero">
+    <div class="wrap">
+      <Fragment set:html={crumbs(crumb, '')} />
+      <h1>{h1}</h1>
+      <p class="answer" set:html={E(intro)}></p>
+      <Fragment set:html={catNav} />
+    </div>
+  </section>
+  <section class="sec" style="padding-top:0">
+    <div class="wrap">
+      <Fragment set:html={cmpTable(ids, '', ranked)} />
+      <p class="price-note">Domet je po WLTP normi, prema podacima proizvođača ili uvoznika; kod modela sa više verzija naveden je raspon. Proverite aktuelne podatke kod distributera.</p>
+      <div class={`models${ids.length > 6 ? ' many' : ''}`} style="margin-top:40px"><Fragment set:html={ids.map((i) => card(i, '')).join('')} /></div>
+    </div>
+  </section>
+</main>
+</Base>

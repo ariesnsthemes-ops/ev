@@ -1,0 +1,64 @@
+---
+import Base from '../layouts/Base.astro';
+import { ADS_ENABLED, DOMAIN, SITE } from '../config';
+import { crumbs, ldBreadcrumbs, type Crumb } from '../lib/html';
+
+const ORG = { '@type': 'Organization', name: SITE, url: DOMAIN + '/', email: 'office@evomobil.rs' };
+const crumb: Crumb[] = [['Početna', 'index.html'], ['Politika privatnosti', 'politika-privatnosti.html']];
+const ld = [ldBreadcrumbs(crumb), { '@context': 'https://schema.org', '@type': 'WebPage', name: 'Politika privatnosti', url: `${DOMAIN}/politika-privatnosti`, inLanguage: 'sr-Latn', publisher: ORG }];
+---
+<Base path="politika-privatnosti.html" title={`Politika privatnosti | ${SITE}`} ld={ld}
+  desc="Politika privatnosti sajta evomobil.rs: Google Analytics samo uz saglasnost, kolačići, spoljni servisi i kako ostvariti prava iz Zakona o zaštiti podataka o…">
+<main id="top">
+  <section class="phero">
+    <div class="wrap">
+      <Fragment set:html={crumbs(crumb, '')} />
+      <h1>Politika privatnosti</h1>
+      <p class="answer">evomobil.rs ne traži registraciju. Kolačiće za statistiku poseta (Google Analytics) koristimo samo ako na to pristanete, a podatke koje nam pošaljete e-poštom koristimo samo da bismo odgovorili. U nastavku je objašnjeno šta se dešava sa podacima kada koristite sajt.</p>
+    </div>
+  </section>
+  <section class="sec" style="padding-top:0">
+    <div class="wrap prose">
+      <h2>Ko je rukovalac podacima</h2>
+      <p>Rukovalac podacima je vlasnik sajta evomobil.rs. Za sva pitanja o privatnosti pišite na <a href="mailto:office@evomobil.rs">office@evomobil.rs</a>.</p>
+      <h2>Podaci koje prikupljamo</h2>
+      <ul>
+        <li><strong>Statistika poseta (Google Analytics).</strong> Samo ako kliknete „Prihvati“ u obaveštenju o kolačićima. Detalji su u odeljku Kolačići i Google Analytics.</li>
+        <li><strong>Podešavanja u pregledaču.</strong> Izbor svetle ili tamne teme i lista modela za poređenje čuvaju se samo u vašem pregledaču (sessionStorage) i brišu se kada zatvorite karticu. Vaš izbor u vezi sa kolačićima čuva se u pregledaču (localStorage) do 6 meseci, da vas ne bismo pitali pri svakoj poseti. Ovi podaci se ne šalju nama.</li>
+        <li><strong>E-pošta.</strong> Kada nam pišete, vaše podatke koristimo isključivo za odgovaranje na vaš upit i dalju komunikaciju. Podatke ne delimo sa trećim licima i čuvamo ih samo onoliko koliko je neophodno za ostvarivanje te svrhe. Odgovore šaljemo preko servisa Resend (detalji u odeljku Slanje e-pošte).</li>
+        <li><strong>Server.</strong> Kao i svaki sajt, server na kojem se sajt nalazi može da beleži tehničke podatke o zahtevima (IP adresa, vreme, tip pregledača) radi bezbednosti i ispravnog rada.</li>
+      </ul>
+      <h2 id="kolacici">Kolačići i Google Analytics</h2>
+      <p>Za statistiku poseta koristimo Google Analytics 4 (Google Ireland Limited i Google LLC). Na osnovu toga vidimo koliko ljudi posećuje sajt, koje stranice su najčitanije i sa kojih uređaja se pristupa, {ADS_ENABLED ? 'kako bismo poboljšali sadržaj i oglašivačima pokazali posećenost. Ne prodajemo podatke i ne koristimo ih za personalizovane oglase.' : 'kako bismo poboljšali sadržaj. Ne prodajemo podatke i ne koristimo ih za profilisanje posetilaca.'}</p>
+      <ul>
+        <li><strong>Pravni osnov:</strong> vaša saglasnost. Google Analytics se ne učitava dok ne kliknete „Prihvati“. Ako kliknete „Odbij“, ne postavlja se nijedan kolačić za statistiku.</li>
+        <li><strong>Kolačići:</strong> _ga i _ga_&lt;ID&gt; razlikuju posetioce i posete. Traju do 6 meseci.</li>
+        <li><strong>Podaci:</strong> stranice koje posećujete, vreme posete, približna lokacija (grad ili zemlja), vrsta uređaja i pregledača. Google Analytics 4 ne čuva vašu IP adresu.</li>
+        <li><strong>Čuvanje:</strong> podaci o posetama se u Google Analytics čuvaju 2 meseca, a zatim se automatski brišu.</li>
+        <li><strong>Prenos podataka:</strong> Google može da obrađuje podatke i van Srbije, uključujući Sjedinjene Američke Države, uz mere zaštite koje predviđa Google.</li>
+        <li><strong>Povlačenje saglasnosti:</strong> u svakom trenutku, preko linka <a href="#" data-cookie-settings>Podešavanja kolačića</a> (nalazi se i u podnožju svake stranice). Možete i da obrišete kolačiće u pregledaču ili da instalirate Googleov <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">dodatak za isključivanje Google Analytics</a>.</li>
+      </ul>
+      <h2 id="e-posta">Slanje e-pošte (Resend)</h2>
+      <p>Odgovore na vaše poruke šaljemo preko servisa Resend (Resend, Inc., Sjedinjene Američke Države), koji za nas obavlja tehničko slanje e-pošte.</p>
+      <ul>
+        <li><strong>Podaci:</strong> vaša adresa e-pošte, sadržaj našeg odgovora i tehnički podaci o isporuci (vreme slanja, da li je poruka isporučena).</li>
+        <li><strong>Svrha i pravni osnov:</strong> odgovor na poruku koju ste nam poslali, odnosno vaš zahtev.</li>
+        <li><strong>Prenos podataka:</strong> Resend može da obrađuje podatke i van Srbije, uključujući Sjedinjene Američke Države, uz mere zaštite koje predviđa Resend.</li>
+        <li>Resend podatke koristi samo za slanje poruka u naše ime, ne za sopstvene svrhe.</li>
+      </ul>
+      <h2>Spoljni servisi</h2>
+      <p>Neki delovi sajta učitavaju se sa spoljnih servisa, koji pri tome vide vašu IP adresu:</p>
+      <ul>
+        <li><strong>Google Fonts</strong> (Google): fontovi kojima je sajt napisan.</li>
+        <li><strong>OpenFreeMap</strong>: mapa na stranici <a href="punjaci">Punjači</a>.</li>
+        <li><strong>Google Analytics</strong>: samo uz vašu saglasnost, kao što je opisano iznad.</li>
+      </ul>
+      <p>Linkovi ka sajtovima distributera, proizvođača i ka Google mapama (dugme „Navigacija“) vode na spoljne sajtove koji imaju sopstvene politike privatnosti.</p>
+      <h2>Vaša prava</h2>
+      <p>U skladu sa Zakonom o zaštiti podataka o ličnosti imate pravo da zatražite pristup podacima koje o vama imamo, njihovu ispravku ili brisanje, kao i da uložite prigovor. Zahtev pošaljite na <a href="mailto:office@evomobil.rs">office@evomobil.rs</a>. Imate i pravo da podnesete pritužbu Povereniku za informacije od javnog značaja i zaštitu podataka o ličnosti (<a href="https://www.poverenik.rs" target="_blank" rel="noopener">poverenik.rs</a>).</p>
+      <h2>Izmene</h2>
+      <p>Ako uvedemo nove servise, ažuriraćemo ovu stranicu pre nego što ih uključimo.</p>
+    </div>
+  </section>
+</main>
+</Base>
