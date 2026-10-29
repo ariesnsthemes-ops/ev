@@ -1077,3 +1077,8 @@ body.no-scroll{overflow:hidden}
 .ck-btns .btn{flex:1;height:42px;justify-content:center}
 .ck-btns .btn:focus-visible{outline-offset:2px}
 @media (max-width:560px){.ck{left:12px;right:12px;bottom:12px;max-width:none}}
+
+/* footer reveal on short pages (404, ...): the page always covers at least one screen below the 69px header,
+   so the footer is hidden behind it at first and slides out as you scroll, as on long pages.
+   lvh = the largest viewport height, so the footer never peeks out when a phone hides its toolbars */
+.ft-reveal main{min-height:calc(100vh - 69px);min-height:calc(100lvh - 69px)}
