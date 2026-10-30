@@ -1087,3 +1087,4 @@ body.no-scroll{overflow:hidden}
 .nf{text-align:center}
 .nf h1,.nf .answer{margin-inline:auto}
 .nf .ctas,.nf .nf-links{justify-content:center}
+.qa details p a{color:var(--green-ink);font-weight:600;text-decoration:underline;text-underline-offset:3px}

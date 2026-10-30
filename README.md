@@ -38,8 +38,8 @@ npm run switch -- AD_PLACEHOLDER_TEXT off  # photos only (current)
 | --- | --- |
 | Site switches (domain, `NOINDEX`, `ADS_ENABLED`, `AD_PLACEHOLDER_TEXT`, `PH_STYLE`, `GA_ID`) | `site.config.mjs` (`npm run switch`) |
 | Brands and models (ranges, batteries, what is listed) | `src/data/brands.json` |
-| Brand texts, importers and dealers | `src/data/brand_content.json` |
-| Model descriptions, battery and range text | `src/data/model_content.json` |
+| Brand texts, importers and dealers (optional `intro` replaces the generated hero sentence) | `src/data/brand_content.json` |
+| Model descriptions, battery and range text; optional `intro` (hero paragraphs), `gearbox` and `faq` (`range`, `battery`, `buy`, `hybrid` answers) replace the generated texts, see Geely E5 | `src/data/model_content.json` |
 | Dimensions and seats (official sources only) | `src/data/model_dims.json` |
 | Fuel prices for the calculator | `src/data/gorivo.json` |
 | Charger data (Open Charge Map, OpenStreetMap, extra) | `src/data/chargers-*.json`, `src/data/chargers-osm.geojson` |
@@ -80,8 +80,8 @@ Cloudflare builds the site on every push to `main`:
 - Deploy command: `npx wrangler deploy` (publishes `site/` with the settings in `wrangler.jsonc`:
   clean addresses, `404.html` for unknown addresses, `_headers`)
 
-`site/` is therefore not committed (see `.gitignore`). `cene-goriva.yml` checks the fuel prices every
-day (and Friday afternoon) and commits `src/data/gorivo.json` when something changed; that push makes
+`site/` is therefore not committed (see `.gitignore`). `cene-goriva.yml` checks the fuel prices once a
+week, on Friday at 15:10 Belgrade time (or by hand: Actions → Cene goriva → Run workflow), and commits `src/data/gorivo.json` when something changed; that push makes
 Cloudflare rebuild.
 
 ## Notes on fidelity

@@ -17,12 +17,14 @@ export interface Dealer {
 }
 export interface Brand {
   slug: string; name: string; data_slug: string; logo: string; founded?: string | null; hq?: string | null;
-  importer?: string | null; about: string[]; dealers: Dealer[]; models: string[];
+  importer?: string | null; intro?: string; about: string[]; dealers: Dealer[]; models: string[];
 }
 export interface Model {
   id: string; b: string; n: string; full: string; cls: string | null; sil: string | null;
   r: number | null; rt: string | null; kwh: number | null; desc: string[] | null; lg: boolean;
   photo: string | null; tags: string[]; body: string | undefined;
+  /** optional hand-written texts from model_content.json: hero paragraphs, gearbox wording, FAQ answers (range, battery, buy, hybrid) */
+  intro?: string[]; gearbox?: string; faq?: Record<string, string>;
 }
 export interface Dims {
   id: string; length_mm?: number | null; width_mm?: number | null; height_mm?: number | null; clearance_mm?: number | null;
@@ -87,6 +89,7 @@ for (const [slug, c] of Object.entries(content)) {
     models[mid] = {
       id: mid, b: slug, n, full, cls, sil, r: m.range_wltp_km ?? null, rt: mc.range_text ?? null, kwh: mc.kwh ?? null,
       desc: mc.desc ?? null, lg: LOGO_IMG.has(mid), photo: PHOTO_FILES[mid] ?? null, tags: tags.split(' ').filter(Boolean), body: m.body,
+      ...(mc.intro ? { intro: mc.intro } : {}), ...(mc.gearbox ? { gearbox: mc.gearbox } : {}), ...(mc.faq ? { faq: mc.faq } : {}),
     };
     ids.push(mid);
   }

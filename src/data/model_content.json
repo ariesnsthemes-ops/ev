@@ -57,11 +57,21 @@
   "kwh": "88"
  },
  "geely-e5": {
-  "desc": [
-   "Geely E5 je električni SUV iz nove generacije Geely električnih vozila.",
-   "Kombinuje prostranu kabinu, savremenu digitalnu opremu i sisteme pomoći vozaču."
+  "intro": [
+   "Geely E5 opremljen je električnim motorom snage 160 kW (218 KS) i baterijom kapaciteta 60,22 kWh, koja omogućava domet do 430 km prema WLTP standardu. Zahvaljujući tehnologiji brzog DC punjenja, baterija se može napuniti od 30% do 80% za približno 20 minuta, u odgovarajućim uslovima punjenja."
   ],
-  "kwh": 60.22
+  "desc": [
+   "Geely E5 je potpuno električni SUV nove generacije koji donosi savršen spoj modernog dizajna, inovativnih tehnologija i vrhunske udobnosti.",
+   "Sa dometom do 430 km prema WLTP standardu, prostranom i elegantno dizajniranom kabinom, naprednim digitalnim funkcijama i inteligentnim sistemima pomoći vozaču, Geely E5 pruža savremeno iskustvo vožnje, prilagođeno svakodnevnim potrebama i dužim putovanjima."
+  ],
+  "kwh": 60.22,
+  "gearbox": "Automatski menjač",
+  "faq": {
+   "range": "Geely E5 nudi domet do 430 km prema WLTP standardu, što ga čini odličnim izborom za svakodnevnu gradsku vožnju, ali i duža putovanja. Stvarni domet može varirati u zavisnosti od stila vožnje, vremenskih uslova, konfiguracije puta i načina korišćenja vozila.",
+   "battery": "Geely E5 opremljen je naprednom litijum-gvožđe-fosfatnom (LFP) baterijom kapaciteta 60,22 kWh. Zahvaljujući tehnologiji brzog DC punjenja, baterija se u odgovarajućim uslovima može napuniti od 30% do 80% za približno 20 minuta.",
+   "buy": "Geely E5 dostupan je putem zvanične mreže ovlašćenih Geely distributera u Srbiji, u gradovima Beograd, Novi Sad, Niš, Kragujevac, Subotica i Požarevac. Za informacije o cenama, dostupnosti vozila i mogućnosti zakazivanja test vožnje posetite zvanični sajt www.geelyauto.rs ili kontaktirajte najbližeg ovlašćenog distributera.",
+   "hybrid": "Ne, Geely E5 je potpuno električno vozilo (100% EV) koje koristi isključivo električni pogon, bez benzinskog ili dizel motora. Pokreće ga električni motor snage 160 kW (218 KS), a energiju dobija iz baterije koja se puni putem električne mreže. Zahvaljujući tome, Geely E5 tokom vožnje ne emituje izduvne gasove."
+  }
  },
  "jac-t9-ev": {
   "desc": [

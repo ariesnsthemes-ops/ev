@@ -30,7 +30,7 @@ const descParas = m.desc || [`${m.full} je potpuno električni ${cw} brenda ${b.
   'Detaljne tehničke podatke i opremu dodajemo čim ih uvoznik objavi. Do tada informacije proverite kod ovlašćenog distributera.'];
 const dm = DIMS[mid] ?? ({} as any);
 const specs: [string, string | null | undefined][] = [['Brend', b.name], ['Model', m.full], ['Klasa vozila', m.cls], ['Pogon', '100% električni'],
-  ['Domet (WLTP)', rng], ['Baterija', kwhTxt(m)], ['Menjač', 'Automatski, jedan stepen prenosa']];
+  ['Domet (WLTP)', rng], ['Baterija', kwhTxt(m)], ['Menjač', m.gearbox || 'Automatski, jedan stepen prenosa']];
 const dimRows: [string, string | null | undefined][] = [
   ['Dužina', dm.length_txt || mm(dm.length_mm)],
   ['Širina', dm.width_folded && dm.width_mm ? mm(dm.width_mm) + ' (sa sklopljenim retrovizorima)' : mm(dm.width_mm)],
@@ -42,11 +42,12 @@ specs.push(...dimRows.filter(([, v]) => v));
 const keys: [string, string][] = [['DOMET (WLTP)', rangeTxt(m) || 'Na upit'], ['BATERIJA', kwhTxt(m) || 'Na upit'], ['KLASA', m.cls || 'Na upit'], ['POGON', 'Električni']];
 const rel = b.models.filter((i) => i !== mid);
 const crumb: Crumb[] = [['Početna', 'index.html'], ['Brendovi', 'brendovi.html'], [b.name, `brendovi/${m.b}.html`], [m.full, `modeli/${mid}.html`]];
+const fq = m.faq || {};
 const qa: QA[] = [];
-if (rng) qa.push([`Koliki je domet modela ${m.full}?`, `${m.full} ima domet ${rng} po WLTP normi, prema podacima proizvođača ili uvoznika. Stvarni domet zavisi od načina vožnje, temperature i opterećenja.`]);
-if (m.kwh) qa.push([`Koliki je kapacitet baterije modela ${m.full}?`, `${m.full} ima bateriju kapaciteta ${kwhTxt(m)}.`]);
-if (cities.length) qa.push([`Gde mogu kupiti ${m.full} u Srbiji?`, `${m.full} prodaju ovlašćeni distributeri brenda ${b.name} u ${cityWord} ${joinSr(cities)}. Kontakti su navedeni na ovoj stranici.`]);
-qa.push([`Da li je ${m.full} hibrid?`, `Ne. ${m.full} je potpuno električni automobil, bez motora sa unutrašnjim sagorevanjem.`]);
+if (rng) qa.push([`Koliki je domet modela ${m.full}?`, fq.range || `${m.full} ima domet ${rng} po WLTP normi, prema podacima proizvođača ili uvoznika. Stvarni domet zavisi od načina vožnje, temperature i opterećenja.`]);
+if (m.kwh) qa.push([`Koliki je kapacitet baterije modela ${m.full}?`, fq.battery || `${m.full} ima bateriju kapaciteta ${kwhTxt(m)}.`]);
+if (cities.length) qa.push([`Gde mogu kupiti ${m.full} u Srbiji?`, fq.buy || `${m.full} prodaju ovlašćeni distributeri brenda ${b.name} u ${cityWord} ${joinSr(cities)}. Kontakti su navedeni na ovoj stranici.`]);
+qa.push([`Da li je ${m.full} hibrid?`, fq.hybrid || `Ne. ${m.full} je potpuno električni automobil, bez motora sa unutrašnjim sagorevanjem.`]);
 
 const car: Record<string, unknown> = { '@context': 'https://schema.org', '@type': 'Car', name: m.full, model: m.n,
   brand: { '@type': 'Brand', name: b.name }, manufacturer: { '@type': 'Organization', name: b.name },
@@ -76,7 +77,7 @@ const relHtml = rel.length ? rel.map((i) => card(i, pre)).join('')
           <a class="mbrand" href={`../brendovi/${m.b}`} title={`Svi modeli brenda ${b.name}`}><span class="mbrand-logo"><Fragment set:html={logoSpan(m.b, pre, 'nosq')} /></span><span class="sr-only">{b.name}</span></a>
           <h1>{m.full}</h1>
           <div class="tags"><span class="tag">100% EV</span><Fragment set:html={m.cls ? `<span class="tag gray">${E(m.cls.toUpperCase())}</span>` : ''} /></div>
-          <p class="answer" set:html={E(summary)}></p>
+          <Fragment set:html={m.intro ? m.intro.map((p) => `<p class="answer">${E(p)}</p>`).join('') : `<p class="answer">${E(summary)}</p>`} />
           <dl class="facts"><Fragment set:html={keys.map(([k, v]) => `<div><dt>${k}</dt><dd>${E(v)}</dd></div>`).join('')} /></dl>
           <div class="ctas">
             <Fragment set:html={b.dealers.length ? '<a href="#kontakt-distributera" class="btn btn-dark">Kontaktirajte distributera <span class="arr">→</span></a>' : ''} />
@@ -107,7 +108,7 @@ const relHtml = rel.length ? rel.map((i) => card(i, pre)).join('')
   <section class="sec">
     <div class="wrap">
       <h2 class="h2s">Česta pitanja: {m.full}</h2>
-      <Fragment set:html={qaBlock(qa)} />
+      <Fragment set:html={qaBlock(qa).replace(/\b(www\.[a-z0-9-]+(?:\.[a-z0-9-]+)+)\b/g, '<a href="https://$1" target="_blank" rel="nofollow noopener">$1</a>')} />
     </div>
   </section>
 

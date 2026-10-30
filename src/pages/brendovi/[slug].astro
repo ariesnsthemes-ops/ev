@@ -51,7 +51,7 @@ const modelsHtml = ids.length
         <div class="bhero-logo" role="img" aria-label={`${b.name} logo`}><Fragment set:html={logoSpan(slug, pre)} /></div>
         <div>
           <h1>{b.name} električni automobili u Srbiji</h1>
-          <p class="answer" set:html={E(answer)}></p>
+          <p class="answer" set:html={E(b.intro || answer)}></p>
           <dl class="facts"><Fragment set:html={facts.filter(([, v]) => v).map(([k, v]) => `<div><dt>${k}</dt><dd>${E(v)}</dd></div>`).join('')} /></dl>
           <div class="ctas">
             <a href="#modeli-brenda" class="btn btn-dark">Električni modeli <span class="arr">→</span></a>
