@@ -14,11 +14,11 @@
 
   // hero carousel (AD-01 rotation positions)
   const slides=[
-    {free:true,b:'SLOBODNO',m:'Pozicija 1',bg:'../img/evomobil-bg-auto.webp'},
-    {free:true,b:'SLOBODNO',m:'Pozicija 2',bg:'../img/evomobil-bg-punjac.webp'},
-    {free:true,b:'SLOBODNO',m:'Pozicija 3',bg:'../img/evomobil-bg-ekran.webp'},
-    {free:true,b:'SLOBODNO',m:'Pozicija 4',bg:'../img/evomobil-bg-svetlo.webp'},
-    {free:true,b:'SLOBODNO',m:'Pozicija 5',bg:'../img/evomobil-bg-kabl.webp'}
+    {free:true,b:'SLOBODNO',m:'Pozicija 1',bg:'../img/evomobil-elektricni-automobil.webp'},
+    {free:true,b:'SLOBODNO',m:'Pozicija 2',bg:'../img/evomobil-punjac-stanica.webp'},
+    {free:true,b:'SLOBODNO',m:'Pozicija 3',bg:'../img/evomobil-ekran-punjenje.webp'},
+    {free:true,b:'SLOBODNO',m:'Pozicija 4',bg:'../img/evomobil-far-elektricnog-automobila.webp'},
+    {free:true,b:'SLOBODNO',m:'Pozicija 5',bg:'../img/evomobil-kabl-za-punjenje.webp'}
   ];
   slides.forEach(s=>{if(s.img){const im=new Image();im.src=s.img}});
   const vb={sedan:'0 0 320 112',hatch:'0 0 320 112',suv:'0 0 320 120'};

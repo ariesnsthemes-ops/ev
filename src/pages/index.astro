@@ -149,7 +149,7 @@ const js = cmpbar + consentSrc.replace('__GA__', GA_ID);
         <div class="stage" id="stage" aria-roledescription="carousel" aria-label={ads ? 'Sponzorisani modeli' : 'Istaknuti modeli'}>
           <div class="stage-clip">
             <a id="h-link" class="hero-img" href="#" hidden><img id="h-img" src="data:," alt="" width="1600" height="900"></a>
-            <div class="free ph-bg" id="h-free" style="--ph:url(../img/evomobil-bg-auto.webp)">
+            <div class="free ph-bg" id="h-free" style="--ph:url(../img/evomobil-elektricni-automobil.webp)">
               <Fragment set:html={txt ? '<h3>Ovde može biti vaš model</h3>' : ''} />
               <Fragment set:html={ads ? '<p>Jedna od 5 pozicija u hero karuselu. Kreativa 1600 x 900 px (16:9), mesečni zakup.</p>\n              ' + zakupi('01', 'Zakupi ovu poziciju') : ''} />
             </div>
@@ -198,7 +198,7 @@ const js = cmpbar + consentSrc.replace('__GA__', GA_ID);
     <div class="wrap">
       <div class="rs" data-pos={ads ? 'AD-02' : undefined}>
         <Fragment set:html={note('AD-02', 'Leaderboard', 'desktop 2480 x 360 px, mobilni 720 x 500 px, mesečni zakup', '02')} />
-        <div class="house ph-bg" style="--ph:url(../img/evomobil-bg-auto-vertikalno.webp);--ph-pos:center 72%">
+        <div class="house ph-bg" style="--ph:url(../img/evomobil-elektricni-automobil-vertikalno.webp);--ph-pos:center 72%">
 <Fragment set:html={txt ? `          <div>${ads ? '\n            ' + adLabel : ''}
             <h3>Vaš brend ispred kupaca električnih automobila</h3>
             <p>Ovaj baner vidi svaki posetilac početne strane, odmah posle pretrage.</p>
@@ -218,7 +218,7 @@ const js = cmpbar + consentSrc.replace('__GA__', GA_ID);
         </div>
       </div>
       <div class="bento">
-        <div class={'feature-brand rs ph-bg' + (txt ? '' : ' ph-quiet')} data-pos={ads ? 'AD-03' : undefined} style="--ph:url(../img/evomobil-bg-svetlo.webp);--ph-pos:30% 40%" aria-hidden={txt ? undefined : 'true'}>
+        <div class={'feature-brand rs ph-bg' + (txt ? '' : ' ph-quiet')} data-pos={ads ? 'AD-03' : undefined} style="--ph:url(../img/evomobil-far-elektricnog-automobila.webp);--ph-pos:30% 40%" aria-hidden={txt ? undefined : 'true'}>
           <Fragment set:html={note('AD-03', 'Brend meseca', 'logo 480 x 160 px + tekst do 120 znakova, 1 brend mesečno', '03')} />
 <Fragment set:html={`          <div>
             <span class="rs-label">${ads ? 'Brend meseca · Oglas' : 'Brend meseca'}</span>
@@ -265,13 +265,13 @@ const js = cmpbar + consentSrc.replace('__GA__', GA_ID);
       <div class="offers">
         <div class="rs" data-pos={ads ? 'AD-04A' : undefined}>
           <Fragment set:html={note('AD-04A', 'Ponuda partnera', 'desktop 1220 x 480 px, mobilni 690 x 440 px, mesečni zakup', '04')} />
-          <div class="house ph-bg" style="--ph:url(../img/evomobil-bg-punjac.webp)">
+          <div class="house ph-bg" style="--ph:url(../img/evomobil-punjac-stanica.webp)">
             <Fragment set:html={txt ? `<div>${adLabel}<h3>Prostor za ponudu distributera</h3><p>Akcijske cene, lizing ili finansiranje za modele koje prodajete.</p></div>` : ''} /><Fragment set:html={ads ? '\n            ' + zakupi('04') : ''} />
           </div>
         </div>
         <div class="rs" data-pos={ads ? 'AD-04B' : undefined}>
           <Fragment set:html={note('AD-04B', 'Ponuda partnera', 'desktop 1220 x 480 px, mobilni 690 x 440 px, mesečni zakup', '04')} />
-          <div class="house ph-bg" style="--ph:url(../img/evomobil-bg-kabl.webp);--ph-pos:center 60%">
+          <div class="house ph-bg" style="--ph:url(../img/evomobil-kabl-za-punjenje.webp);--ph-pos:center 60%">
             <Fragment set:html={txt ? `<div>${adLabel}<h3>Prostor za servis, osiguranje ili punjače</h3><p>Usluge koje vlasnicima električnih vozila trebaju posle kupovine.</p></div>` : ''} /><Fragment set:html={ads ? '\n            ' + zakupi('04') : ''} />
           </div>
         </div>
@@ -288,7 +288,7 @@ const js = cmpbar + consentSrc.replace('__GA__', GA_ID);
           <p>Spisak zvaničnih distributera po gradovima, sa adresama, telefonima i radnim vremenom.</p>
           <a href="distributeri" class="btn">Pronađi distributera <span class="arr">→</span></a>
         </div>
-        <div class={'partner-box rs ph-bg' + (txt ? '' : ' ph-quiet')} data-pos={ads ? 'AD-05' : undefined} style="--ph:url(../img/evomobil-bg-auto.webp)" aria-hidden={txt ? undefined : 'true'}>
+        <div class={'partner-box rs ph-bg' + (txt ? '' : ' ph-quiet')} data-pos={ads ? 'AD-05' : undefined} style="--ph:url(../img/evomobil-elektricni-automobil.webp)" aria-hidden={txt ? undefined : 'true'}>
           <Fragment set:html={note('AD-05', 'Sponzor sekcije', 'logo 400 x 120 px, beli ili jednobojni', '05')} />
 <Fragment set:html={`          <span class="rs-label">Test vožnje omogućava</span>
           <div class="slot">${ads ? 'LOGO SPONZORA' : 'LOGO'}</div>`} /><Fragment set:html={ads ? '\n          <p>Mesto za jednog distributera ili brend, uz link ka zakazivanju test vožnje.</p>' : ''} />

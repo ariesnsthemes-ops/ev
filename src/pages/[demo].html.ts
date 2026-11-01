@@ -72,7 +72,7 @@ export const GET: APIRoute = async () => {
   d = d.slice(0, i) + '  const slides=[\n' + HERO.map(([b, m, f]) => `    {b:'${b}',m:'${m}',img:'${D}${f}.webp',alt:'Oglas: ${b}',href:'#'}`).join(',\n') + '\n' + d.slice(j);
   d = one(d, '<a id="h-link" class="hero-img" href="#" hidden><img id="h-img" src="data:," alt="" width="1600" height="900"></a>',
     `<a id="h-link" class="hero-img" href="#"><img id="h-img" src="${D}hero-1-nova.webp" alt="Oglas: AutoCentar Nova" width="1600" height="900"></a>`);
-  d = one(d, '<div class="free ph-bg" id="h-free" style="--ph:url(../img/evomobil-bg-auto.webp)">', '<div class="free ph-bg" id="h-free" style="--ph:url(../img/evomobil-bg-auto.webp)" hidden>');
+  d = one(d, '<div class="free ph-bg" id="h-free" style="--ph:url(../img/evomobil-elektricni-automobil.webp)">', '<div class="free ph-bg" id="h-free" style="--ph:url(../img/evomobil-elektricni-automobil.webp)" hidden>');
   d = one(d, '<span class="rs-chip"><span id="h-brand">SLOBODNA POZICIJA</span></span>', '<span class="rs-chip" hidden><span id="h-brand">AUTOCENTAR NOVA</span></span>');
   d = swapHouse(d, 'AD-02', pic('lb-putuj', 'lb-putuj-m', 'Oglas: PutujEV', 2480, 360));
   d = swapHouse(d, 'AD-04A', pic('of-sigurna', 'of-sigurna-m', 'Oglas: Sigurna Struja', 1220, 480));
