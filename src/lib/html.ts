@@ -19,7 +19,7 @@ export const logoStyle = (slug: string, pre: string) => `--l:url(${pre}logos/${b
 
 /** Brand logo as an <img> (dark in the light theme, white in the dark theme, see .blogo.has-img in site.css). */
 export function logoSpan(slug: string, pre: string, cls = ''): string {
-  const sq = ['dongfeng.svg', 'geely.svg', 'jmev.png', 'leapmotor.svg', 'mg.svg'].includes(brands[slug].logo) && cls !== 'nosq' ? ' sq' : '';
+  const sq = ['dongfeng.svg', 'geely-vertikalni.svg', 'jmev.png', 'leapmotor.svg', 'mg.svg'].includes(brands[slug].logo) && cls !== 'nosq' ? ' sq' : '';
   return `<span class="blogo${sq} has-img" aria-hidden="true"><img src="${pre}logos/${brands[slug].logo}" alt="" decoding="async"></span>`;
 }
 
