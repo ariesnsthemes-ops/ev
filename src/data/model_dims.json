@@ -276,6 +276,20 @@
   "notes": "Citroën AT product sheet (06/2024). Footnote labels 1795 as width with mirrors extended (doubtful, looks like body width). Height 1660 without roof rails, 1663 with. Sheet lists 5 seats only; no 7-seat (5+2) version stated in this source. | Width hidden on site: source labels 1795 as width with mirrors extended, which looks wrong; needs a check. | fill: Citroën FR technical sheet (04/2025): 'Garde au sol : 193 mm versions électriques' (petrol/hybrid up to 200 mm); laden/unladen not stated."
  },
  {
+  "id": "citroen-e-c5-aircross",
+  "length_mm": 4652,
+  "width_mm": 1902,
+  "width_note": null,
+  "height_mm": 1660,
+  "clearance_mm": 200,
+  "seats": 5,
+  "sources": [
+   "https://www.media.stellantis.com/em-en/citroen/press/all-new-c5-aircross-offers-peace-of-mind-with-more-space-comfort-technologies-now-available-in-electric",
+   "https://www.citroen.fr/content/dam/citroen/france/showroom/b2c/technical-file/11-25/CT-Nouveau-c5-Aircross-1.pdf"
+  ],
+  "notes": "Stellantis press release (new C5 Aircross range): 4652 mm long, 1902 mm wide (mirrors not stated), height 1.66 m, 200 mm ground clearance (not stated per powertrain). Citroën FR technical sheet (10/2026): Électrique 210ch, 5 seats, 73 kWh usable (78 kWh gross), up to 520 km WLTP; its dimensions page is empty."
+ },
+ {
   "id": "citroen-e-c4",
   "length_mm": 4350,
   "width_mm": 1834,

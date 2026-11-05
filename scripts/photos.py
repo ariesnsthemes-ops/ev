@@ -2,7 +2,7 @@
 Usage: python3 photos.py <source_dir>   (files named evomobil-<model-id>.<ext>, or mapped below)"""
 import sys, os, glob, json
 from PIL import Image, ImageChops
-ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # project folder
 SRC = sys.argv[1]
 KEEP_OLD = set(sys.argv[2].split(',')) if len(sys.argv) > 2 else set()
 MAP = {'BMW i4 M50': 'bmw-i4-m50', 'BMW i4 eDrive40 Gran Coup': 'bmw-i4', 'BMW i7 60 sedan': 'bmw-i7', 'BMW iX M70': 'bmw-ix-m-model',
@@ -34,6 +34,6 @@ for f in sorted(glob.glob(SRC + '/*')):
     if not mid or mid in KEEP_OLD:
         print('skip', os.path.basename(f)); continue
     im = trim(Image.open(f)); opaque = im.split()[3].getextrema()[0] >= 250
-    for w, p in ((1280, f'{ROOT}/img/evomobil-{mid}.webp'), (640, f'{ROOT}/img/evomobil-{mid}-640.webp')):
+    for w, p in ((1280, f'{ROOT}/public/img/evomobil-{mid}.webp'), (640, f'{ROOT}/public/img/evomobil-{mid}-640.webp')):
         save(im if im.width <= w else im.resize((w, round(im.height * w / im.width)), Image.LANCZOS), p, opaque)
     print('ok', mid, im.size)
