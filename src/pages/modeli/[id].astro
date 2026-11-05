@@ -27,7 +27,7 @@ const heroImg = {
   ph: '<div class="mhero-img ph">FOTOGRAFIJA USKORO</div>',
 }[kind];
 const descParas = m.desc || [`${m.full} je potpuno električni ${cw} brenda ${b.name} koji je dostupan na srpskom tržištu.`,
-  'Detaljne tehničke podatke i opremu dodajemo čim ih uvoznik objavi. Do tada informacije proverite kod ovlašćenog distributera.'];
+  'Za detaljnije podatke o tehničkim karakteristikama i opremi možete se informisati kod ovlašćenog distributera.'];
 const dm = DIMS[mid] ?? ({} as any);
 const specs: [string, string | null | undefined][] = [['Brend', b.name], ['Model', m.full], ['Klasa vozila', m.cls], ['Pogon', '100% električni'],
   ['Domet (WLTP)', rng], ['Baterija', kwhTxt(m)], ['Menjač', m.gearbox || 'Automatski, jedan stepen prenosa']];
