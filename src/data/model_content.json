@@ -339,6 +339,10 @@
   "kwh": "44",
   "range_text": "302 km"
  },
+ "citroen-e-c5-aircross": {
+  "kwh": "73",
+  "range_text": "520 km"
+ },
  "citroen-e-c4": {
   "kwh": "50 / 54",
   "range_text": "354 / 416 km"

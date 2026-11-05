@@ -1701,6 +1701,14 @@
           "battery_kwh": 44.0
         },
         {
+          "name": "ë-C5 Aircross",
+          "powertrain": "EV",
+          "body": "SUV",
+          "range_wltp_km": 520,
+          "battery_kwh": 73.0,
+          "range_note": "per site owner 2026-11-05"
+        },
+        {
           "name": "ë-C4",
           "powertrain": "EV",
           "body": "Hečbek",

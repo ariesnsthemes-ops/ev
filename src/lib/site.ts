@@ -45,8 +45,8 @@ const PHOTO_IDS = ['kia-ev9', 'porsche-cayenne-turbo-electric', 'bmw-i4-m50', 'b
   'hyundai-ioniq-5', 'hyundai-ioniq-6', 'hyundai-ioniq-6-n', 'hyundai-ioniq-9', 'hyundai-inster', 'cupra-tavascan', 'mazda-cx-6e', 'mazda-6e', 'cupra-raval', 'dacia-spring', 'kia-ev6', 'kia-ev4', 'kia-ev3', 'kia-ev2',
   'porsche-macan-4', 'porsche-taycan-4', 'ford-explorer', 'toyota-bz4x', 'toyota-bz4x-touring', 'toyota-c-hr-plus', 'ford-mustang-mach-e', 'ford-puma-gen-e', 'renault-twingo-e-tech', 'renault-5-e-tech', 'renault-4-e-tech',
   'suzuki-e-vitara', 'volkswagen-id-polo', 'volkswagen-id-3-neo', 'volkswagen-id-4', 'volkswagen-id-5', 'volkswagen-id-7', 'foton-etunland', 'byd-dolphin-surf', 'byd-atto-2-comfort', 'byd-atto-3-evo', 'byd-seal', 'byd-sealion-7',
-  'mg-mg4-electric', 'mg-mg5-electric', 'mg-mgs5-ev', 'changan-deepal-s05', 'changan-deepal-s07', 'geely-e5', 'dongfeng-box', 'jac-t9-ev', 'jac-e30x', 'jmev-ev3', 'jmev-elight', 'leapmotor-b03x', 'leapmotor-b05', 'leapmotor-b10',
-  'leapmotor-c10', 'leapmotor-t03', 'mini-countryman', 'mini-aceman', 'mini-cooper', 'opel-astra-electric', 'opel-frontera-electric', 'opel-mokka-electric', 'citroen-e-c3', 'citroen-e-c3-aircross', 'citroen-e-c4', 'citroen-e-c4-x',
+  'mg-mg4-electric', 'mg-mg5-electric', 'mg-mgs5-ev', 'changan-deepal-s05', 'changan-deepal-s07', 'geely-e5', 'dongfeng-box', 'jac-t9-ev', 'jac-e30x', 'jmev-ev3', 'jmev-elight', 'jmev-ewind', 'leapmotor-b03x', 'leapmotor-b05', 'leapmotor-b10',
+  'leapmotor-c10', 'leapmotor-t03', 'mini-countryman', 'mini-aceman', 'mini-cooper', 'opel-astra-electric', 'opel-frontera-electric', 'opel-mokka-electric', 'citroen-e-c3', 'citroen-e-c3-aircross', 'citroen-e-c5-aircross', 'citroen-e-c4', 'citroen-e-c4-x',
   'skoda-elroq', 'skoda-enyaq', 'skoda-enyaq-coupe', 'volvo-ex30', 'volvo-ex60', 'volvo-ex90', 'volvo-es90', 'porsche-macan-4s', 'peugeot-e-208', 'peugeot-e-2008', 'peugeot-e-308', 'peugeot-e-3008'];
 const PHOTO_FILES: Record<string, string> = Object.fromEntries(PHOTO_IDS.map((i) => [i, `evomobil-${i}.webp`]));
 
@@ -55,7 +55,7 @@ const BODY: Record<string, [string, string | null]> = {
   'Gradski automobil': ['Gradski', 'hatch'], Pikap: ['Pikap', null],
 };
 const NOT_PASSENGER = new Set(['Kombi', 'Kamion', 'Autobus']);
-const LOGO_IMG = new Set(['jmev-ewind', 'lynk-co-02', 'audi-rs-e-tron-gt']); // shown with the faded brand logo until a photo exists
+const LOGO_IMG = new Set(['lynk-co-02', 'audi-rs-e-tron-gt']); // shown with the faded brand logo until a photo exists
 const DISPLAY: Record<string, string> = { 'byd-atto-2-comfort': 'Atto 2' };
 const TAGS: Record<string, string> = { SUV: 'suv', 'Hečbek': 'hatch', Sedan: 'sedan', Pikap: 'pickup', 'Gradski automobil': 'city hatch', Karavan: 'wagon' };
 const CITY = new Set(['byd-dolphin-surf', 'jmev-ev3', 'leapmotor-t03', 'dongfeng-box', 'jac-e30x']);
