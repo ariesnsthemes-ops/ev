@@ -71,7 +71,11 @@ exports follow from them. The homepage's featured models are the `FEATURED_HOME`
    unclear in `notes`. If no official source states a figure, leave it `null` (the page shows a dash).
 4. Photo: `python3 scripts/photos.py <folder>` with the file named `evomobil-<model-id>.<ext>`
    (writes the 1280 px and 640 px WebP into `public/img`), then add the id to `PHOTO_IDS` in `src/lib/site.ts`.
-5. Hand-written brand texts in `src/data/brand_content.json` that list models by name (e.g. "O brendu")
+5. **Replacing an existing photo or logo: never reuse the file name.** Add `-new` to the new file
+   (`evomobil-leapmotor-b05-new.webp`; a later replacement `-new-2`, `-new-3`…), register model photos in
+   `PHOTO_RENAMED` in `src/lib/site.ts`, and delete the old file. `img/` and `logos/` are cached for
+   30 days, so a reused name keeps showing the old picture.
+6. Hand-written brand texts in `src/data/brand_content.json` that list models by name (e.g. "O brendu")
    must get the new model too.
 
 ## Checking a build against a reference
