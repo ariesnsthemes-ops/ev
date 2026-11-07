@@ -14,7 +14,7 @@ const cmpData = ALL_IDS.map((mid) => {
   return { id: mid, b: brands[m.b].name, n: m.n, full: m.full, cls: m.cls || '',
     r: m.r || 0, rt: rangeTxt(m) || '', kt: kwhTxt(m) || '', img, k,
     L: d.length_txt || mm(d.length_mm), W: d.width_folded && d.width_mm ? mm(d.width_mm) + '*' : mm(d.width_mm),
-    H: d.height_txt || mm(d.height_mm), C: d.clearance_laden && d.clearance_mm ? mm(d.clearance_mm) + '**' : mm(d.clearance_mm),
+    H: d.height_txt || mm(d.height_mm),
     S: d.seats ?? null };
 });
 const slot = (k: number) => `<div class="cmp-slot"><label for="cmp-s${k}">Model ${k + 1}</label><select id="cmp-s${k}" data-k="${k}"><option value="">Izaberite model</option>`
@@ -24,13 +24,13 @@ const crumb: Crumb[] = [['Početna', 'index.html'], ['Uporedi modele', 'uporedi.
 const js = 'var CMP=' + pyjson(cmpData, { compact: true }) + ';\n' + compareJs;
 ---
 <Base path="uporedi.html" title={`Uporedi električne automobile: domet, baterija i dimenzije | ${SITE}`} ld={[ldBreadcrumbs(crumb)]} extraJs={js}
-  desc="Uporedite do tri električna automobila koja se prodaju u Srbiji: domet po WLTP normi, baterija, dužina, širina, visina, klirens i broj sedišta.">
+  desc="Uporedite do tri električna automobila koja se prodaju u Srbiji: domet po WLTP normi, baterija, dužina, širina, visina i broj sedišta.">
 <main id="top">
   <section class="phero">
     <div class="wrap">
       <Fragment set:html={crumbs(crumb, '')} />
       <h1>Uporedi električne automobile</h1>
-      <p class="answer">Izaberite do tri modela i uporedite domet, bateriju, dimenzije, klirens i broj sedišta jedan pored drugog.</p>
+      <p class="answer">Izaberite do tri modela i uporedite domet, bateriju, dimenzije i broj sedišta jedan pored drugog.</p>
     </div>
   </section>
   <section class="sec" style="padding-top:0">

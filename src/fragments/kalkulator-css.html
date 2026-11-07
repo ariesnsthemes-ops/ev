@@ -109,4 +109,10 @@
 .kc-src a{color:inherit;font-weight:700;text-decoration:none}.kc-src a:hover{color:var(--muted);text-decoration:underline;text-underline-offset:2px}
 @media (prefers-reduced-motion:reduce){.kc-bar,.kc-switch input,.kc-switch input::after{transition:none}}
 @media (max-width:480px){.kc-panel,.kc-body{padding:18px}.kc-hero{padding:20px 18px}}
+.dd-search{position:relative;margin:0 0 6px}
+.dd-search svg{position:absolute;left:12px;top:50%;width:15px;height:15px;transform:translateY(-50%);color:var(--muted);pointer-events:none}
+.dd-q{width:100%;height:42px;padding:0 12px 0 36px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink);font:500 16px/1 var(--font);outline:none;-webkit-appearance:none;appearance:none}
+.dd-q::placeholder{color:var(--faint)}
+.dd-q:focus{border-color:var(--green);box-shadow:0 0 0 3px var(--green-soft)}
+.dd-q::-webkit-search-cancel-button{cursor:pointer}
 </style>

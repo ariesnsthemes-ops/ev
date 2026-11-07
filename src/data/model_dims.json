@@ -38,9 +38,9 @@
   "seats": 5,
   "sources": [
    "https://www.bmw.co.uk/en/all-models/bmw-i/ix/bmw-ix-technical-data.html",
-   "https://www.press.bmwgroup.com/asia/article/attachment/T0447880EN/627744"
+   "https://www.press.bmwgroup.com/austria/article/attachment/T0447680DE/630618"
   ],
-  "notes": "Facelift (xDrive45/xDrive60/M70). Width incl. mirrors 2230. Clearance unladen 202."
+  "notes": "Facelift (xDrive45/xDrive60/M70). Width incl. mirrors 2230. Clearance unladen 202. [2026-11-07, European sources only] BMW Austria PressClub technical data (Medieninformation 01/2025): iX xDrive45/xDrive60/M70 xDrive all 'Türen/Sitze 5/5', Bodenfreiheit 202 mm (unladen/Leergewicht), L/W/H (leer) 4965/1970/1695 - matches existing bmw.co.uk values."
  },
  {
   "id": "bmw-i4",
@@ -48,13 +48,14 @@
   "width_mm": 1852,
   "width_note": "bez retrovizora",
   "height_mm": 1448,
-  "clearance_mm": 125,
+  "clearance_mm": null,
   "seats": 5,
   "sources": [
-   "https://www.bmw.com.au/en/models/bmw-i/i4/bmw-i4-gran-coupe-technical-data.html",
-   "https://www.press.bmwgroup.com/mexico/article/attachment/T0334074ES/480974"
+   "https://www.bmw.de/de/neufahrzeuge/bmw-i/i4/bmw-i4-technische-daten.html",
+   "https://www.bmw.co.uk/en/all-models/m-models/bmw-i4-m60/bmw-i4-m60-xdrive-gran-coupe-technical-data.html",
+   "https://newsroom.bmwgroup.com/global/the-new-bmw-i4-and-the-new-bmw-4-series-gran-coupe"
   ],
-  "notes": "Width incl. mirrors 2073. Clearance unladen 125 from 2021 press spec (eDrive40); 2024 facelift press PDF was not machine-readable. Dimensions from BMW Australia page (EU tech page not fetchable)."
+  "notes": "Width incl. mirrors 2073. Clearance unladen 125 from 2021 press spec (eDrive40); 2024 facelift press PDF was not machine-readable. Dimensions from BMW Australia page (EU tech page not fetchable). [2026-11-07, European sources only] Current EU i4 (facelift, production from 07/2024), eDrive40. bmw.de and bmw.co.uk tech data: length 4783, width 1852, width incl. mirrors 2073, height 1448 (identical for eDrive35/eDrive40/xDrive40/M60 xDrive). Seats: BMW Group global newsroom press release 'Five seats'. No European source states ground clearance (bmw.de/.co.uk omit it; press tech-data PDFs unreadable; AT/DE brochures only unlabeled drawings), so 125 (2021 Mexico PDF) is cleared."
  },
  {
   "id": "bmw-i5",
@@ -104,13 +105,14 @@
   "width_mm": 1852,
   "width_note": "bez retrovizora",
   "height_mm": 1448,
-  "clearance_mm": 125,
+  "clearance_mm": null,
   "seats": 5,
   "sources": [
-   "https://www.bmw.com.au/en/models/bmw-i/i4/bmw-i4-gran-coupe-technical-data.html",
-   "https://www.press.bmwgroup.com/mexico/article/attachment/T0334074ES/480974"
+   "https://www.bmw.de/de/neufahrzeuge/bmw-i/i4/bmw-i4-technische-daten.html",
+   "https://www.bmw.co.uk/en/all-models/m-models/bmw-i4-m60/bmw-i4-m60-xdrive-gran-coupe-technical-data.html",
+   "https://newsroom.bmwgroup.com/global/the-new-bmw-i4-and-the-new-bmw-4-series-gran-coupe"
   ],
-  "notes": "Width incl. mirrors 2073. Clearance unladen 125 from 2021 press spec. Note: in Europe the M50 was renamed i4 M60 xDrive with the 2024 facelift."
+  "notes": "Width incl. mirrors 2073. Clearance unladen 125 from 2021 press spec. Note: in Europe the M50 was renamed i4 M60 xDrive with the 2024 facelift. [2026-11-07, European sources only] In Europe the M50 is now sold as i4 M60 xDrive (442 kW/601 PS); values are for the M60 xDrive. bmw.de/bmw.co.uk tech data: 4783 / 1852 (2073 incl. mirrors) / 1448. Seats 5 from BMW Group global newsroom ('Five seats'). Ground clearance not stated in any European source; cleared."
  },
  {
   "id": "bmw-ix-m-model",
@@ -122,9 +124,10 @@
   "seats": 5,
   "sources": [
    "https://www.bmw.co.uk/en/all-models/bmw-i/ix/bmw-ix-technical-data.html",
-   "https://www.press.bmwgroup.com/asia/article/attachment/T0447880EN/627744"
+   "https://www.press.bmwgroup.com/austria/article/attachment/T0447680DE/630618",
+   "https://www.bmw.co.uk/en/all-models/m-models/ix-m70/bmw-ix-m70-technical-data.html"
   ],
-  "notes": "Values for current iX M70 xDrive (facelift; M60 replaced by M70). Width incl. mirrors 2230. Clearance unladen 202."
+  "notes": "Values for current iX M70 xDrive (facelift; M60 replaced by M70). Width incl. mirrors 2230. Clearance unladen 202. [2026-11-07, European sources only] iX M70 xDrive: BMW Austria PressClub tech data 'Türen/Sitze 5/5', Bodenfreiheit 202 mm (unladen). bmw.co.uk M70 page confirms 4965/1970 (2230 incl. mirrors)/1695."
  },
  {
   "id": "bmw-i7-m70",
@@ -138,6 +141,33 @@
    "https://www.press.bmwgroup.com/united-kingdom/article/attachment/T0457311EN_GB/649700"
   ],
   "notes": "2026 facelift i7 M70 xDrive; pre-facelift press spec was 5391/1950/1544, clearance 136. Clearance unladen."
+ },
+ {
+  "id": "bmw-i3",
+  "length_mm": 4760,
+  "width_mm": 1865,
+  "width_note": "bez retrovizora",
+  "height_mm": 1480,
+  "clearance_mm": null,
+  "seats": null,
+  "sources": [
+   "https://www.bmw.de/de/neufahrzeuge/3er/limousine/bmw-i3-limousine-technische-daten.html",
+   "https://www.bmw.co.uk/en/all-models/3-series/saloon/bmw-i3-saloon-technical-data.html"
+  ],
+  "notes": "[2026-11-07] New BMW i3 sedan (Neue Klasse, NA0, 2026). The bmw.de and bmw.co.uk technical-data pages give the same figures for i3 40 xDrive and i3 50 xDrive (all trims): length 4760, width 1865, width incl. mirrors 2075, height 1480, wheelbase 2860. Neither page lists clearance or seats, so both stay null (it is a 5-door sedan, but no official seat count was found). The UK page also has an unattributed 'Height 1,455' row later on, possibly a variant or a comparison model; 1480 is kept because both pages give it for every i3 trim. press.bmwgroup.com attachments now redirect to newsroom.bmwgroup.com and could not be read."
+ },
+ {
+  "id": "bmw-ix5",
+  "length_mm": 4994,
+  "width_mm": 2000,
+  "width_note": "bez retrovizora",
+  "height_mm": 1748,
+  "clearance_mm": null,
+  "seats": null,
+  "sources": [
+   "https://www.bmw.co.uk/en/all-models/x-models/suv/bmw-ix5-technical-data.html"
+  ],
+  "notes": "[2026-11-07] BMW iX5 60 xDrive (electric X5, G65). bmw.co.uk: length 4994 (4998 for M Sport), width 2000, width incl. mirrors 2216, height 1748. Neither page lists clearance or seats, so both stay null. The bmw.de iX5 page was not reachable, and the press.bmwgroup.com attachments redirect."
  },
  {
   "id": "byd-dolphin-surf",
@@ -264,16 +294,17 @@
  {
   "id": "citroen-e-c3-aircross",
   "length_mm": 4395,
-  "width_mm": null,
-  "width_note": "sa retrovizorima",
+  "width_mm": 1795,
+  "width_note": "bez retrovizora",
   "height_mm": 1660,
   "clearance_mm": 193,
   "seats": 5,
   "sources": [
    "https://citroen.at/content/dam/citroen/austria/downloads/preislisten/07-2024/NEUER_E-C3_AIRCROSS_Produktblatt_2024_06_28.pdf",
-   "https://citroen.fr/content/dam/citroen/france/showroom/b2c/CT_Nouveau_C3Aircross_0425.pdf"
+   "https://citroen.fr/content/dam/citroen/france/showroom/b2c/CT_Nouveau_C3Aircross_0425.pdf",
+   "https://www.citroen.es/content/dam/citroen/spain/pdf/caracteristicas-tecnicas/CT-c3-ec3-aircross-cc24.pdf"
   ],
-  "notes": "Citroën AT product sheet (06/2024). Footnote labels 1795 as width with mirrors extended (doubtful, looks like body width). Height 1660 without roof rails, 1663 with. Sheet lists 5 seats only; no 7-seat (5+2) version stated in this source. | Width hidden on site: source labels 1795 as width with mirrors extended, which looks wrong; needs a check. | fill: Citroën FR technical sheet (04/2025): 'Garde au sol : 193 mm versions électriques' (petrol/hybrid up to 200 mm); laden/unladen not stated."
+  "notes": "Citroën AT product sheet (06/2024). Footnote labels 1795 as width with mirrors extended (doubtful, looks like body width). Height 1660 without roof rails, 1663 with. Sheet lists 5 seats only; no 7-seat (5+2) version stated in this source. | Width hidden on site: source labels 1795 as width with mirrors extended, which looks wrong; needs a check. | fill: Citroën FR technical sheet (04/2025): 'Garde au sol : 193 mm versions électriques' (petrol/hybrid up to 200 mm); laden/unladen not stated. [2026-11-07] Citroën Spain technical sheet (C3 / ë-C3 Aircross CC24) labels 1795 mm as 'Anchura total (sin espejos)'. This confirms that the Austrian footnote calling 1795 the width with mirrors was wrong. No official width with mirrors was found. Possible discrepancies, not changed: the ES table seems to give the electric column length 4392 (other versions 4395) and height 1688, while its drawing shows 1633/1660 (without/with roof bars). Column assignment in the extracted table is uncertain. The ES sheet lists 5 seats for the ë version, with 7 seats not available for it."
  },
  {
   "id": "citroen-e-c5-aircross",
@@ -322,14 +353,16 @@
   "id": "cupra-tavascan",
   "length_mm": 4644,
   "width_mm": 1861,
-  "width_note": null,
+  "width_note": "bez retrovizora",
   "height_mm": 1597,
   "clearance_mm": null,
   "seats": 5,
   "sources": [
-   "https://www.cupraofficial.co.uk/new-cars/tavascan"
+   "https://www.cupraofficial.co.uk/new-cars/tavascan",
+   "https://ecom.moller.no/cupra/Price_Lists/Tavascan/2025%20Tavascan%20priser%2C%20utstyr%20og%20tekniske%20spesifikasjoner%2023.09.25.pdf",
+   "https://cupraofficial.se/content/dam/countries/se/cupra-website/prislistor/tavascan/cupra-tavascan.pdf"
   ],
-  "notes": "CUPRA UK model page; clearance not stated."
+  "notes": "CUPRA UK model page; clearance not stated. [2026-11-07] Clearance still null. Norwegian importer Møller price/spec list (09/2025) gives Bredde 1861 (without mirrors), 'Bredde inkludert sidespeil' 2108, length 4644, height 1597 and 5 seats, which confirms the existing values and adds the width note. CUPRA Sweden price list (06/2024) has the same figures. Neither lists bakkeklaring/markfrigång. The CUPRA ES brochure and DE price-list PDFs redirect to cupra.com, which is blocked in this environment."
  },
  {
   "id": "cupra-raval",
@@ -348,16 +381,18 @@
  {
   "id": "dacia-spring",
   "length_mm": 3701,
-  "width_mm": null,
-  "width_note": null,
+  "width_mm": 1767,
+  "width_note": "sa retrovizorima",
   "height_mm": null,
   "clearance_mm": 146,
   "seats": 4,
   "sources": [
    "https://www.dacia.rs/CountriesData/Serbia/images/pdf/katalog/novi-spring-katalog.pdf",
-   "https://www.dacia.rs/cars/novi-spring/pregled.html"
+   "https://www.dacia.rs/cars/novi-spring/pregled.html",
+   "https://www.user-manual.dacia.com/en/information-about-the-vehicle/dimensions-metres-3",
+   "https://cdn.group.renault.com/dac/fr/brochures/nouvelle-spring/Brochure-Dacia-Spring-Janvier-2025-FR.pdf.asset.pdf/f421f99374.pdf"
   ],
-  "notes": "dacia.rs catalog dimension drawing: length 3701, clearance 146 (15-inch wheels). Width/height numbers appear unlabeled in drawing, so left null. 4 seats (passenger version); Cargo version has 2."
+  "notes": "dacia.rs catalog dimension drawing: length 3701, clearance 146 (15-inch wheels). Width/height numbers appear unlabeled in drawing, so left null. 4 seats (passenger version); Cargo version has 2. [2026-11-07] Official Dacia owner's manual (Dacia Spring, 09/2025-01/2026), dimensions table, row H: '1767 with rear view mirrors open / 1622 with rear view mirrors folded away'. The same table gives D = 3.701 m, which matches the length. Body width without mirrors and height are not labelled in any official source found: the manual's other rows (1390/1485/1375) are letter-coded against a diagram that could not be viewed, and the FR brochure (01/2025) lists unlabelled numbers (1519, 1583, 1767 ...). Height stays null. Discrepancy, not changed: the FR brochure shows 155 mm marked '*Avec des roues de 15\"' (most likely clearance), while the existing dacia.rs value is 146 mm. The media.dacia.com and press.dacia.co.uk spec pages render empty (JavaScript-only)."
  },
  {
   "id": "dongfeng-box",
@@ -427,14 +462,16 @@
  },
  {
   "id": "geely-e5",
-  "length_mm": null,
-  "width_mm": null,
+  "length_mm": 4615,
+  "width_mm": 1901,
   "width_note": null,
-  "height_mm": null,
-  "clearance_mm": null,
-  "seats": null,
-  "sources": [],
-  "notes": "geelyauto.rs E5 page/configurator show no dimensions. Official brochure and price list PDFs exist (cdn.kmag.net/.../Geely_E5_Brochure_Web_SRB_290726.pdf, SRB Geely E5 Cenovnik 01.09.2026.pdf) but could not be fetched (robots-blocked); global.geely.com EX5 page has no dimensions."
+  "height_mm": 1670,
+  "clearance_mm": 173,
+  "seats": 5,
+  "sources": [
+   "https://www.geelyauto.pl/wp-content/uploads/2025/12/GEELY_E5_ulotka_A4_WEB_2.04.26.pdf"
+  ],
+  "notes": "geelyauto.rs E5 page/configurator show no dimensions. Official brochure and price list PDFs exist (cdn.kmag.net/.../Geely_E5_Brochure_Web_SRB_290726.pdf, SRB Geely E5 Cenovnik 01.09.2026.pdf) but could not be fetched (robots-blocked); global.geely.com EX5 page has no dimensions. [2026-11-07] Official Geely Poland E5 leaflet (Apr 2026, E5 Pro/Max): 'Długość 4615, Szerokość 1901, Wysokość 1670, Prześwit (bez obciążenia/z obciążeniem) 173/145, Liczba miejsc 5', wheelbase 2750. Clearance 173 is unladen; laden is 145. The Serbian brochure on cdn.kmag.net and geelyauto.rs are still unreachable (proxy/allowlist blocked)."
  },
  {
   "id": "hyundai-ioniq-5",
@@ -512,12 +549,13 @@
   "width_mm": 1770,
   "width_note": null,
   "height_mm": 1560,
-  "clearance_mm": null,
+  "clearance_mm": 130,
   "seats": 5,
   "sources": [
-   "https://jacmotors.rs/putnicka-vozila/e30x/"
+   "https://jacmotors.rs/putnicka-vozila/e30x/",
+   "https://jac-schweiz.ch/en/e30x/"
   ],
-  "notes": "Serbian importer page; same dimensions for Luxury and Flagship. Ground clearance not stated."
+  "notes": "Serbian importer page; same dimensions for Luxury and Flagship. Ground clearance not stated. [2026-11-07] Official Swiss JAC importer page: 'Ground clearance 130 mm'. L x W x H 4025 x 1770 x 1560 matches the existing record (mirrors not specified). Datasheet PDF: https://jac-schweiz.ch/wp-content/uploads/2026/10/E30X-New-Datenblatt.pdf."
  },
  {
   "id": "jac-t9-ev",
@@ -526,11 +564,14 @@
   "width_note": null,
   "height_mm": 1920,
   "clearance_mm": 205,
-  "seats": null,
+  "seats": 5,
   "sources": [
-   "https://jacmotors.rs/putnicka-vozila/t9-ev/"
+   "https://jacmotors.rs/putnicka-vozila/t9-ev/",
+   "https://jac-schweiz.ch/en/elektro-pick-up-t9ev-4x4/",
+   "https://jac-schweiz.ch/en/t9ev4x4/",
+   "https://jac-schweiz.ch/wp-content/uploads/2025/10/T9EV-Datenblatt.pdf"
   ],
-  "notes": "Serbian importer page. Seat count not stated (double-cab pickup)."
+  "notes": "Serbian importer page. Seat count not stated (double-cab pickup). [2026-11-07] Official Swiss JAC importer: 'The vehicle with double cab and 5 seats'. The Swiss T9EV page and datasheet confirm 5330 x 1965 x 1920 and clearance 205, which match the existing record."
  },
  {
   "id": "jmev-ev3",
@@ -677,7 +718,7 @@
    "https://eu-www.kia.com/content/dam/kwcms/kme/be/price-specs/Kia-EV4-Pricelist.pdf",
    "https://press.kia.com/content/dam/kiapress/DE/Germany/pressemappen/ev4-/25_09/Kia_EV4_Pressemappe_09-25.pdf"
   ],
-  "notes": "Values are for the HATCHBACK (Air/Motion). GT-Line hatchback 4450 long; Fastback 4730 x 1860 x 1480; GT AWD 4450 x ? x 1495 (page shows width 1609 for GT, likely a typo). No clearance or seat count stated. | fill: Kia Belux EV4 price list: 'Garde au sol (mm) 140 / Bodemvrijheid' (body style not stated on the list). Seats: no explicit count found; the DE press kit only says 'finden im EV4 fünf Personen bequem Platz', and the Belux list shows a 3-seat rear bench. Kia CH EV4 page could not be fetched."
+  "notes": "Values are for the HATCHBACK (Air/Motion). GT-Line hatchback 4450 long; Fastback 4730 x 1860 x 1480; GT AWD 4450 x ? x 1495 (page shows width 1609 for GT, likely a typo). No clearance or seat count stated. | fill: Kia Belux EV4 price list: 'Garde au sol (mm) 140 / Bodemvrijheid' (body style not stated on the list). Seats: no explicit count found; the DE press kit only says 'finden im EV4 fünf Personen bequem Platz', and the Belux list shows a 3-seat rear bench. Kia CH EV4 page could not be fetched. [2026-11-07] Official Kia Nederland B.V. EV4 price list (July 2025): Hatchback '5-zits', clearance 140, 4430/1860/1485 (GT-Line 4450); Fastback '5-zits', 140, 4730/1860/1480. Official Kia Deutschland EV4 Fastback price list (MY2026): 'Anzahl der Sitze 5', 'Bodenfreiheit 140'. Both are official importer PDFs, but the copies found are hosted on dealer sites; the kia.com originals were not reachable. All existing values are confirmed. [2026-11-07, rule: official sources only] Seats removed: the price lists stating 5 seats were only reachable on dealer websites. [2026-11-07] Kia Srbija technical sheet \"Novi EV4 – Tehnički podaci\" (sent by the site owner) confirms length 4430, width 1860, height 1485 (wheelbase 2820, track 1610/1621); the drawing page shows no seats or clearance."
  },
  {
   "id": "kia-ev6",
@@ -688,11 +729,11 @@
   "clearance_mm": 160,
   "seats": 5,
   "sources": [
-   "https://www.kia.com/sg/showroom/ev6/specification.html",
    "https://kia.com/content/dam/kwcms/kme/be/price-specs/Kia-EV6-Pricelist.pdf",
-   "https://www.kia.ch/assets/file/f7b4c93f60164a8d9bd5f1d70e93326a/42371ca958f54a068120c74014555606?alt=media&token=0a469784-c88b-43ef-9bc7-d2e417a091ad&apiKey=f7b4c93f60164a8d9bd5f1d70e93326a"
+   "https://www.kia.ch/assets/file/f7b4c93f60164a8d9bd5f1d70e93326a/42371ca958f54a068120c74014555606?alt=media&token=0a469784-c88b-43ef-9bc7-d2e417a091ad&apiKey=f7b4c93f60164a8d9bd5f1d70e93326a",
+   "https://www.kia.com/nl/modellen/ev6/prijzen-en-specificaties/"
   ],
-  "notes": "EU Kia pages (UK, DE) do not state dimensions in text; values from Kia Singapore official spec page (facelift). Mirrors not specified. No clearance or seat count stated. | fill: Belux list: 'Garde-au-Sol Min. (mm) 160'. Seats from Kia CH Preisliste EV6 (09.2026, MY27): 'Türen/Plätze 5/5'."
+  "notes": "EU Kia pages (UK, DE) do not state dimensions in text; values from Kia Singapore official spec page (facelift). Mirrors not specified. No clearance or seat count stated. | fill: Belux list: 'Garde-au-Sol Min. (mm) 160'. Seats from Kia CH Preisliste EV6 (09.2026, MY27): 'Türen/Plätze 5/5'. [2026-11-07, European sources only] Kia Netherlands official EV6 prices & specs page (facelift, MY25 imagery): lengte 4.695, breedte 1.880, hoogte 1.550 mm; mirrors not specified. Older Kia CH MY22/MY24 lists give 4680-4695 / 1880-1890 for the pre-facelift, so NL is used. Clearance 160 (Belux) and seats 5 (Kia CH) unchanged."
  },
  {
   "id": "kia-ev9",
@@ -714,14 +755,15 @@
   "width_mm": 1800,
   "width_note": null,
   "height_mm": 1575,
-  "clearance_mm": null,
+  "clearance_mm": 146,
   "seats": 5,
   "sources": [
    "https://www.kia.com/uk/new-cars/ev2/specification/",
    "https://www.kia.ch/assets/file/f7b4c93f60164a8d9bd5f1d70e93326a/c17333fa23ac423c9c6113e78aeae949?alt=media&token=12f94f18-b38c-44c1-87b7-5270639ac123&apiKey=f7b4c93f60164a8d9bd5f1d70e93326a",
-   "https://press.kia.com/content/dam/kiapress/DE/Germany/pressemappen/ev2/Kia_EV2_Pressemappe_03-26%20NEU.pdf"
+   "https://press.kia.com/content/dam/kiapress/DE/Germany/pressemappen/ev2/Kia_EV2_Pressemappe_03-26%20NEU.pdf",
+   "https://www.kia.com/content/dam/kwcms/kme/de/de/assets/contents/utility/Preisliste/Kia-Germany-EV2-Preisliste.pdf"
   ],
-  "notes": "Kia UK: First Edition/Air 4060 x 1800 x 1575; GT-Line/GT-Line S 4065 long, 1585 high. Mirrors not specified. No clearance or seat count stated. | fill: Seats: 5 standard; base 'Light' trim has 4 seats, and a 4-seat option is available from Earth. Sources: DE press kit 'fünf Sitzen (Ausführung Light: vier Sitze)' and CH price list 'Türen/Plätze 5/5 5/4'. Ground clearance not found: the Belux EV2 price list PDF is protected and unreadable; the IE specs page, CH brochure and DE press kit list none."
+  "notes": "Kia UK: First Edition/Air 4060 x 1800 x 1575; GT-Line/GT-Line S 4065 long, 1585 high. Mirrors not specified. No clearance or seat count stated. | fill: Seats: 5 standard; base 'Light' trim has 4 seats, and a 4-seat option is available from Earth. Sources: DE press kit 'fünf Sitzen (Ausführung Light: vier Sitze)' and CH price list 'Türen/Plätze 5/5 5/4'. Ground clearance not found: the Belux EV2 price list PDF is protected and unreadable; the IE specs page, CH brochure and DE press kit list none. [2026-11-07] Kia Germany EV2 price list (kia.com): 'Bodenfreiheit 146', one value for all trims. It also confirms 4060 x 1800 x 1575 (GT-Line/Black-Line 4065 x 1800 x 1585) and 'Anzahl der Sitze 4 und 5 (ausstattungsabhängig)': Light trim has 4 seats, the others 5. Mirrors not specified."
  },
  {
   "id": "lynk-co-02",
@@ -740,25 +782,31 @@
   "id": "mazda-6e",
   "length_mm": 4921,
   "width_mm": 1890,
-  "width_note": null,
+  "width_note": "bez retrovizora",
   "height_mm": 1491,
-  "clearance_mm": null,
-  "seats": null,
+  "clearance_mm": 120,
+  "seats": 5,
   "sources": [
-   "https://newsroom.mazda.com/en/publicity/release/2025/202501/250110b.html"
+   "https://www.mazda.fi/media/fpqb2uv1/hinnasto-mazda6e-2025-17-07-2025-fi.pdf",
+   "https://media-assets.mazda.eu/raw/upload/mazdade/globalassets/pdfs/brochure/mazda6e/18-03-2025_preisliste_mazda6e.pdf?rnd=494b2b",
+   "https://media-assets.mazda.eu/raw/upload/mazdach/globalassets/pdfs2/1---pricelists/de/2025-09/mazda6e_pricelist-lhd_chde.pdf?rnd=4a55d1",
+   "https://media-assets.mazda.eu/raw/upload/mazdadk/globalassets/mmdk/2026-prislister/januar/mazda6e-priser-og-udstyr-januar-2026.pdf?rnd=48cf9b"
   ],
-  "notes": "Mazda global newsroom (Jan 2025 European debut) spec table; height includes roof antenna. Mazda UK/EU spec pages not reachable. No clearance or seat count."
+  "notes": "Mazda global newsroom (Jan 2025 European debut) spec table; height includes roof antenna. Mazda UK/EU spec pages not reachable. No clearance or seat count. [2026-11-07] Mazda Finland price list (07/2025): seats 'Istuinpaikkojen määrä 5'; clearance unladen/laden 148/120; mirror-to-mirror width 2156; height 1491. Mazda Germany price list (03/2025) gives the same figures: width 1890 without mirrors (2156 with mirrors, 2003 folded), height 1491, clearance between axles 148 unladen / 120 laden. The 1890 mm width already in the record is without mirrors. Discrepancy: the Mazda Switzerland price list (09/2025) gives clearance 120 unladen / 114 laden and height 1485. The 148 unladen figure follows DE, FI and the NZ brochure. [2026-11-07, European sources only] Length 4921 confirmed by Mazda Denmark price list (Jan 2026, 'Længde (mm) 4.921') and Mazda Switzerland price list (09/2025). FYI: the newer DK Jan 2026 list, like CH, gives clearance between axles 120 unladen / 114 laden and DK height 1491 (CH 1485) - the 148/120 in the record comes from older DE/FI 2025 lists. Clearance set to 120 mm (unladen) per the newest European price lists (Mazda Denmark 01/2026, Mazda Switzerland 09/2025); the older 2025 German/Finnish lists said 148."
  },
  {
   "id": "mazda-cx-6e",
-  "length_mm": null,
-  "width_mm": null,
-  "width_note": null,
-  "height_mm": null,
-  "clearance_mm": null,
-  "seats": null,
-  "sources": [],
-  "notes": "No official source with dimensions found: Mazda newsroom release and Mazda UK/AU press pages give only wheelbase 2902 mm; Mazda UK media pack spec doc link empty/unreadable; mazda.co.uk, mazda.de not fetchable."
+  "length_mm": 4850,
+  "width_mm": 2098,
+  "width_note": "sa retrovizorima",
+  "height_mm": 1620,
+  "clearance_mm": 160,
+  "seats": 5,
+  "sources": [
+   "https://www.mazda.fi/media/mwhbkzbp/hinnasto-mazda-cx-6e-2026-28-04-2026-fi.pdf",
+   "https://media-assets.mazda.eu/raw/upload/mazdadk/globalassets/mmdk/2026-prislister/april/cx-6e-priser-og-udstyr-april-2026.pdf?rnd=4968c1"
+  ],
+  "notes": "No official source with dimensions found: Mazda newsroom release and Mazda UK/AU press pages give only wheelbase 2902 mm; Mazda UK media pack spec doc link empty/unreadable; mazda.co.uk, mazda.de not fetchable. [2026-11-07] Mazda Finland price list (04/2026): length 4850, height unladen 1620, clearance unladen/laden 160/140, 'Istuinpaikkojen määrä 5'. Mirror-to-mirror width is 2098 (Takumi) / 2088 (Takumi Plus). Mazda Denmark price list (04/2026) confirms 4850 / 1620 and width incl. mirrors 2098/2088. It gives clearance between axles 160 unladen / 158 laden. Neither EU list gives width without mirrors. The 1935 mm figure ('Overall width - excluding mirrors') comes from the official Mazda New Zealand brochure (08/2026, hosted on Mazda NZ's CDN). That brochure also gives 4850 / 1620 and clearance 165 unladen / 140 laden. If only EU sources are acceptable, use width 2098 with mirrors instead. [2026-11-07, rule: official sources only] Width 1935 (Mazda NZ brochure on a third-party host) replaced by 2098 mm with mirrors from the European Mazda price lists."
  },
  {
   "id": "mg-mg4-electric",
@@ -797,9 +845,10 @@
   "clearance_mm": null,
   "seats": null,
   "sources": [
-   "https://cdn.uc.assets.prezly.com/93199461-c655-4752-9431-1872df06bc35/-/inline/no/MG_PM_MGS5EV_DE.pdf"
+   "https://cdn.uc.assets.prezly.com/93199461-c655-4752-9431-1872df06bc35/-/inline/no/MG_PM_MGS5EV_DE.pdf",
+   "https://cdn.uc.assets.prezly.com/cb33b3aa-ea4d-4beb-9466-d8a58843a4ca/-/inline/no/MG_PM_MGS5EV_FR.pdf"
   ],
-  "notes": "Source is MG Motor Switzerland (official importer) press release, May 2025, hosted on its Prezly press room - not mgmotor.rs/mgmotor.eu (those pages render specs via JS). Long Range Luxury height 1633. No clearance or seat count."
+  "notes": "Source is MG Motor Switzerland (official importer) press release, May 2025, hosted on its Prezly press room - not mgmotor.rs/mgmotor.eu (those pages render specs via JS). Long Range Luxury height 1633. No clearance or seat count. [2026-11-07] The official MG Slovakia brochure (06/2025, hosted on a dealer subdomain of mgmotor-slovakia.sk) says 'Počet miest na sedenie 5', length 4476 and width incl. mirrors 2094. The official MG Czech catalogue says 'Šířka - bez zrcátek 1 849', so 1849 is without mirrors (2094 with). Height is 1621 with roof rails and 17\" wheels, 1633 with 18\" wheels. Clearance is still null: it is not in the SK brochure, the CZ catalogue or the MG Switzerland FR press release, which mentions only headroom. [2026-11-07, rule: official sources only] Seats and width note removed: they came from brochures hosted on dealer websites."
  },
  {
   "id": "mini-cooper",
@@ -952,13 +1001,14 @@
   "width_note": "bez retrovizora",
   "height_mm": 1379,
   "clearance_mm": 127,
-  "seats": null,
+  "seats": 4,
   "sources": [
    "https://newsroom.porsche.com/dam/jcr:345788fd-9387-43e2-9b12-d9207d75890b/pag-taycan-4-en.pdf",
    "https://www.porsche.com/pcom-model-pages-isr/api/en/technical-data/Y1ABN1/",
-   "https://www.porsche.com/stories/mobility/how-many-seats-are-there-in-a-porsche/"
+   "https://www.porsche.com/stories/mobility/how-many-seats-are-there-in-a-porsche/",
+   "https://configurator.porsche.com/en-WW/mode/model/Y1ABN1/option/5KA"
   ],
-  "notes": "Porsche newsroom technical data MY S 11/2024: width 1966 (2144 incl. mirrors). Ground clearance and seat count not stated. | fill: Porsche tech data (Y1ABN1 Taycan 4): 'Max. ground clearance, air suspension (normal ride height): 127 mm' (low 117, off-road 147). Seats: no count in the tech data. A porsche.com story says the Taycan saloon has a '4+1 seating layout', but it is general and ambiguous (4 vs 4+1), so left null."
+  "notes": "Porsche newsroom technical data MY S 11/2024: width 1966 (2144 incl. mirrors). Ground clearance and seat count not stated. | fill: Porsche tech data (Y1ABN1 Taycan 4): 'Max. ground clearance, air suspension (normal ride height): 127 mm' (low 117, off-road 147). Seats: no count in the tech data. A porsche.com story says the Taycan saloon has a '4+1 seating layout', but it is general and ambiguous (4 vs 4+1), so left null. [2026-11-07] The Porsche configurator for Taycan 4 (Y1ABN1) lists '4+1 seats' (two outer rear seats plus a centre seat) as a non-standard option. The porsche.com seats story says 'Taycan, Taycan 4S and Taycan GTS: 4 or 4+1 seats'. Standard is 4, with 5 (4+1) as an option. Consider showing as '4 (opcija 4+1)'."
  },
  {
   "id": "porsche-macan-4",
@@ -967,14 +1017,16 @@
   "width_note": "bez retrovizora",
   "height_mm": 1622,
   "clearance_mm": 185,
-  "seats": null,
+  "seats": 5,
   "sources": [
    "https://newsroom.porsche.com/dam/jcr:2464d712-2088-47e6-a54d-99d91a30caad/pag-macan-4-electric-td-en.pdf.pdf",
    "https://newsroom.porsche.com/dam/jcr:d2a3945e-e8ec-40f0-832a-4efa9ffb1719/U.S.%20Press%20Kit%20Macan_Media%20Drive_Antibes.pdf",
    "https://newsroom.porsche.com/en/press-kits/the-new-porsche-macan/Highlights.html",
-   "https://www.porsche.com/pcom-model-pages-isr/api/en/technical-data/XABBB1/"
+   "https://www.porsche.com/pcom-model-pages-isr/api/en/technical-data/XABBB1/",
+   "https://www.porsche.com/stories/mobility/differences-porsche-macan-and-cayenne-suvs/",
+   "https://newsroom.porsche.com/en/press-kits/the-new-porsche-macan/Alltagstauglichkeit-und-Komfort.html"
   ],
-  "notes": "Width 1938 (2152 incl. mirrors). Clearance 185 mm is the air-suspension 'Normal' level per Porsche US press kit (195 mm with off-road package); steel-spring value not stated. Seats not stated. | fill: Only seats was requested. The Porsche tech data has no seat count (it lists ground clearance, steel PASM DIN 186 mm, for reference). A porsche.com story about seats covers only the combustion Macan."
+  "notes": "Width 1938 (2152 incl. mirrors). Clearance 185 mm is the air-suspension 'Normal' level per Porsche US press kit (195 mm with off-road package); steel-spring value not stated. Seats not stated. | fill: Only seats was requested. The Porsche tech data has no seat count (it lists ground clearance, steel PASM DIN 186 mm, for reference). A porsche.com story about seats covers only the combustion Macan. [2026-11-07] The porsche.com story comparing Macan and Cayenne says the Macan Electric has 'five seats as standard'. The newsroom press kit agrees: it describes a 40:20:40 split rear bench."
  },
  {
   "id": "porsche-macan-4s",
@@ -983,12 +1035,14 @@
   "width_note": "bez retrovizora",
   "height_mm": 1622,
   "clearance_mm": 186,
-  "seats": null,
+  "seats": 5,
   "sources": [
    "https://newsroom.porsche.com/dam/jcr:693341b3-b7f5-4352-b51e-7b899db88db4/pag-macan-4s-electric-td-en.pdf",
-   "https://www.porsche.com/pcom-model-pages-isr/api/en/technical-data/XABDC1/"
+   "https://www.porsche.com/pcom-model-pages-isr/api/en/technical-data/XABDC1/",
+   "https://www.porsche.com/stories/mobility/differences-porsche-macan-and-cayenne-suvs/",
+   "https://newsroom.porsche.com/en/press-kits/the-new-porsche-macan/Alltagstauglichkeit-und-Komfort.html"
   ],
-  "notes": "Porsche technical data MY R 06/2024: width 1938 (2152 incl. mirrors). Ground clearance and seats not stated in this document (Macan family air-suspension figure 185 mm is in press kit, see macan-4). | fill: 'Max. ground clearance, steel suspension (PASM DIN): 186 mm'; air suspension low 170, off-road 205, extra off-road 225. No seat count in the official tech data."
+  "notes": "Porsche technical data MY R 06/2024: width 1938 (2152 incl. mirrors). Ground clearance and seats not stated in this document (Macan family air-suspension figure 185 mm is in press kit, see macan-4). | fill: 'Max. ground clearance, steel suspension (PASM DIN): 186 mm'; air suspension low 170, off-road 205, extra off-road 225. No seat count in the official tech data. [2026-11-07] Same as macan-4. porsche.com says the Macan Electric has 'five seats as standard' (40:20:40 rear bench per the newsroom press kit)."
  },
  {
   "id": "porsche-cayenne-turbo-electric",
@@ -1023,16 +1077,17 @@
  {
   "id": "renault-twingo-e-tech",
   "length_mm": 3789,
-  "width_mm": null,
-  "width_note": "sa retrovizorima",
+  "width_mm": 1720,
+  "width_note": "retrovizori sklopljeni",
   "height_mm": 1491,
   "clearance_mm": 118,
   "seats": 4,
   "sources": [
    "https://www.renault.fr/vehicules-electriques/twingo-e-tech-electrique/comparateur-specifications.html",
-   "https://www.renault.fr/vehicules-electriques/twingo-e-tech-electrique/habitabilite-et-dimensions.html"
+   "https://www.renault.fr/vehicules-electriques/twingo-e-tech-electrique/habitabilite-et-dimensions.html",
+   "https://www.renault.hr/CountriesData/Croatia/images/News/Twingo/Renault_Twingo_E-Tech_electric_Press_Kit.pdf"
   ],
-  "notes": "Only width with mirrors stated in mm (1953); dimensions page says width 1.72 m (mirror status unspecified). Clearance 118 is laden ('en charge'); unladen not given. | Width hidden on site: only width with mirrors (1953) is published.",
+  "notes": "Only width with mirrors stated in mm (1953); dimensions page says width 1.72 m (mirror status unspecified). Clearance 118 is laden ('en charge'); unladen not given. | Width hidden on site: only width with mirrors (1953) is published. [2026-11-07] Source: official Renault Croatia press kit, DIMENZIJE (mm) table. 'Ukupna širina sa sklopljenim/rasklopljenim retrovizorima 1720/1953': 1720 with mirrors folded, 1953 with mirrors extended. No width excluding mirrors is given. 1720 matches the '1.72 m' on renault.fr/.es. Separate finding (existing value not changed): the same table gives 'Razmak od tla neopterećenog vozila 143', an unladen ground clearance of 143 mm. The current 118 is the laden figure from renault.fr. Consider switching to 143 unladen for consistency with other models.",
   "clearance_laden": true
  },
  {
@@ -1098,9 +1153,10 @@
   "clearance_mm": 180,
   "seats": 5,
   "sources": [
-   "https://www.globalsuzuki.com/globalnews/2024/1104.html"
+   "https://media.prd.suzuki.nl/media/documents/Suzuki_e_VITARA_Prijs-specificatielijst_jan2026_bijgewerkt_per_22dec2025_C.pdf",
+   "https://suzuki.bg/data/files/SUZUKI_eVITARA_PRICE_LIST_WEB.pdf"
   ],
-  "notes": "Suzuki global news release, European-model specs. Clearance is stated as 'minimum ground clearance'. Width: mirrors not specified."
+  "notes": "Suzuki global news release, European-model specs. Clearance is stated as 'minimum ground clearance'. Width: mirrors not specified. [2026-11-07, European sources only] Suzuki Netherlands price/spec list (prices from 1 Jan 2026): Lengte 4.275, Breedte 1.800 (mirrors not specified), Hoogte 1.635, Bodemspeling 180, Aantal zitplaatsen 5 - same for all versions. Suzuki Bulgaria price list (Aug 2026) shows the same figures."
  },
  {
   "id": "toyota-bz4x",
@@ -1199,9 +1255,10 @@
   "seats": 5,
   "sources": [
    "https://www.volvocars.com/uk/cars/ex30-electric/specifications/",
-   "https://www.volvocars.com/nz/support/car/ex30/article/0ed816eed33d98cac0a8cc377bc12bc7-e6a7973b2bf222b2c0a8b09757c97ec8-8664b2fa77a7e089c0a8296870d1a409"
+   "https://www.volvocars.com/uk/support/car/ex30/article/0ed816eed33d98cac0a8cc377bc12bc7-e6a7973b2bf222b2c0a8b09757c97ec8-8664b2fa77a7e089c0a8296870d1a409/",
+   "https://www.volvocars.com/images/cs/v3/assets/blt84e01a6904dbd2e8/bltdc4437137eec679e/681332dd924f57737f7a3d4b/EX30_Model_Year_25.5.pdf?branch=prod_alias"
   ],
-  "notes": "Height and clearance at kerb weight plus one person. Clearance comes from the Volvo NZ support/owner-manual dimensions page. Width is 2032 with mirrors."
+  "notes": "Height and clearance at kerb weight plus one person. Clearance comes from the Volvo NZ support/owner-manual dimensions page. Width is 2032 with mirrors. [2026-11-07, European sources only] Volvo UK support 'Car dimensions': ground clearance 171 mm 'at kerb weight plus one person'. Note: Volvo Ireland MY25.5 price list says 171 unladen / 165 with 1 person; UK support figure kept."
  },
  {
   "id": "volvo-ex60",
@@ -1241,9 +1298,9 @@
   "seats": 5,
   "sources": [
    "https://volvocars.com/ie/cars/es90-electric/specifications",
-   "https://www.volvocars.com/nz/support/car/es90/article/0ed816eed33d98cac0a8cc377bc12bc7-e6a7973b2bf222b2c0a8b09757c97ec8-8664b2fa77a7e089c0a8296870d1a409"
+   "https://www.volvocars.com/uk/support/car/es90/article/0ed816eed33d98cac0a8cc377bc12bc7-e6a7973b2bf222b2c0a8b09757c97ec8-8664b2fa77a7e089c0a8296870d1a409/"
   ],
-  "notes": "IE spec page gives height 1549 (kerb weight plus one person). The NZ support page gives height 1546 and ground clearance 177 at kerb weight plus one person. Width is 2120 with mirrors."
+  "notes": "IE spec page gives height 1549 (kerb weight plus one person). The NZ support page gives height 1546 and ground clearance 177 at kerb weight plus one person. Width is 2120 with mirrors. [2026-11-07, European sources only] Volvo UK support 'Car dimensions' (ES90 2027, updated 30/03/2026): ground clearance 177 mm at kerb weight plus one person (same page gives height 1546; IE spec page 1549 kept as instructed). Width 1942, 2120 incl. mirrors."
  },
  {
   "id": "toyota-bz4x-touring",

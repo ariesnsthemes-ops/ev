@@ -23,7 +23,10 @@ sel.value=start<0?'':String(start);
 /* custom dropdowns, same behaviour and look as the homepage search filters (.dd-* styles in site.css) */
 var DDS=[],CHECK='<svg class="dd-check" viewBox="0 0 14 14" aria-hidden="true"><path d="M3 7.5 5.8 10 11 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 function escH(t){return String(t).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
-function enhance(s){
+/* folds diacritics and case so "ec5", "e-c5" and "ë-C5" all match */
+function fold(t){return String(t).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/đ/g,'dj').replace(/[^a-z0-9]+/g,'')}
+var TOUCH=window.matchMedia&&matchMedia('(hover: none), (pointer: coarse)').matches;
+function enhance(s,search){
   var f=s.closest('.kc-fld'),lab=f.querySelector('label');
   s.classList.add('enh');s.tabIndex=-1;s.setAttribute('aria-hidden','true');
   var btn=document.createElement('button');btn.type='button';btn.className='dd-btn';btn.id=s.id+'-btn';
@@ -31,29 +34,48 @@ function enhance(s){
   btn.innerHTML='<span class="dd-val"></span><svg class="dd-chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5 6 7.5 9 4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
   lab.htmlFor=btn.id;
   var pop=document.createElement('div');pop.className='dd-pop';pop.hidden=true;
-  pop.innerHTML='<div class="dd-list" role="listbox" id="'+s.id+'-list" aria-label="'+escH(lab.textContent)+'"></div>';
+  pop.innerHTML=(search?'<div class="dd-search"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="4.8" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m10.6 10.6 3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><input type="search" class="dd-q" placeholder="Upišite brend ili model" aria-label="Pretraga modela" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" enterkeyhint="search"></div>':'')
+    +'<div class="dd-list" role="listbox" id="'+s.id+'-list" aria-label="'+escH(lab.textContent)+'"></div>'+(search?'<p class="dd-empty" hidden>Nijedan model ne odgovara pretrazi.</p>':'');
   f.appendChild(btn);f.appendChild(pop);
-  var list=pop.querySelector('.dd-list');
-  function opt(o){return '<div class="dd-opt" role="option" tabindex="-1" data-v="'+escH(o.value)+'" aria-selected="'+(o.value===s.value)+'"><span class="dd-txt">'+escH(o.text)+'</span>'+CHECK+'</div>'}
+  var list=pop.querySelector('.dd-list'),qi=pop.querySelector('.dd-q'),empty=pop.querySelector('.dd-empty');
+  function opt(o){var g=o.parentNode.tagName==='OPTGROUP'?o.parentNode.label+' ':'';return '<div class="dd-opt" role="option" tabindex="-1" data-v="'+escH(o.value)+'" data-k="'+escH(fold(g+o.text)+' '+fold(o.text)+(/volkswagen/i.test(g)?' vw':''))+'" aria-selected="'+(o.value===s.value)+'"><span class="dd-txt">'+escH(o.text)+'</span>'+CHECK+'</div>'}
+  /* search: hide options that don't match and brand headings left without options */
+  function filter(){if(!qi)return;var ws=qi.value.split(/\s+/).map(fold).filter(Boolean),any=false,grp=null,gAny=false;
+    [].forEach.call(list.children,function(el){
+      if(el.classList.contains('dd-group')){if(grp)grp.hidden=!gAny;grp=el;gAny=false;return}
+      var hit=ws.every(function(w){return el.dataset.k.indexOf(w)>=0});el.hidden=!hit;if(hit){any=true;gAny=true}});
+    if(grp)grp.hidden=!gAny;empty.hidden=any}
+  function vis(){return [].slice.call(list.querySelectorAll('.dd-opt')).filter(function(o){return !o.hidden})}
   function build(){var h='';[].forEach.call(s.children,function(ch){if(ch.tagName==='OPTION'&&ch.value==='')return;
     if(ch.tagName==='OPTGROUP')h+='<div class="dd-group">'+escH(ch.label)+'</div>'+[].map.call(ch.children,opt).join('');else h+=opt(ch)});list.innerHTML=h}
   function sync(){var o=s.options[s.selectedIndex];btn.querySelector('.dd-val').textContent=o?o.text:'';btn.classList.toggle('set',!!s.value)}
   function open(){DDS.forEach(function(d){if(d!==api)d.close()});build();pop.hidden=false;btn.setAttribute('aria-expanded','true');f.classList.add('open');
     pop.classList.remove('right');if(pop.getBoundingClientRect().right>innerWidth-12)pop.classList.add('right');
-    var cur=list.querySelector('[aria-selected="true"]');if(cur){cur.scrollIntoView({block:'nearest'});cur.focus({preventScroll:true})}else{var o=list.querySelector('.dd-opt');if(o)o.focus()}}
+    if(qi){qi.value='';filter()}
+    var cur=list.querySelector('[aria-selected="true"]');if(cur)cur.scrollIntoView({block:'nearest'});
+    if(qi&&!TOUCH){qi.focus({preventScroll:true});return}
+    if(TOUCH&&qi)return; /* phones: no automatic focus, so no keyboard until the visitor taps the search field */
+    if(cur)cur.focus({preventScroll:true});else{var o=list.querySelector('.dd-opt');if(o)o.focus()}}
   function close(back){if(pop.hidden)return;pop.hidden=true;btn.setAttribute('aria-expanded','false');f.classList.remove('open');if(back)btn.focus()}
   function choose(v){s.value=v;s.dispatchEvent(new Event('change'));sync();close(true)}
   btn.addEventListener('click',function(){pop.hidden?open():close()});
   btn.addEventListener('keydown',function(e){if(e.key==='ArrowDown'||e.key==='ArrowUp'){e.preventDefault();open()}});
   list.addEventListener('click',function(e){var o=e.target.closest('.dd-opt');if(o)choose(o.dataset.v)});
   pop.addEventListener('keydown',function(e){
-    var os=[].slice.call(list.querySelectorAll('.dd-opt')),k=os.indexOf(document.activeElement);
+    if(e.target===qi){var vs=vis();
+      if(e.key==='ArrowDown'){e.preventDefault();if(vs[0])vs[0].focus()}
+      else if(e.key==='Enter'){e.preventDefault();if(vs[0])choose(vs[0].dataset.v)}
+      else if(e.key==='Escape'){e.preventDefault();if(qi.value){qi.value='';filter()}else close(true)}
+      else if(e.key==='Tab')close();
+      return}
+    var os=vis(),k=os.indexOf(document.activeElement);
     if(e.key==='ArrowDown'){e.preventDefault();(os[k+1]||os[0]).focus()}
-    else if(e.key==='ArrowUp'){e.preventDefault();(os[k-1]||os[os.length-1]).focus()}
+    else if(e.key==='ArrowUp'){e.preventDefault();if(k<=0&&qi)qi.focus();else(os[k-1]||os[os.length-1]).focus()}
     else if(e.key==='Enter'){e.preventDefault();if(k>=0)choose(os[k].dataset.v)}
     else if(e.key==='Escape'){e.preventDefault();close(true)}
     else if(e.key==='Tab')close();
   });
+  if(qi)qi.addEventListener('input',function(){filter();list.scrollTop=0});
   var api={close:close,sync:sync};DDS.push(api);sync();return api;
 }
 document.addEventListener('click',function(e){if(!e.target.closest('.kc-fld'))DDS.forEach(function(d){d.close()})});
@@ -121,5 +143,5 @@ $('own').addEventListener('change',function(){$('ownWrap').hidden=!$('own').chec
 $('dual').addEventListener('change',function(){var d=$('dual').checked,pf=$('pPub').closest('.kc-fld');$('dualRow').hidden=!d;$('pubRow').hidden=!d;(d?$('pubRow'):$('singleRow')).appendChild(pf);$('singleRow').hidden=d;calc()});
 $('fB').addEventListener('click',function(){setFuel('b')});$('fD').addEventListener('click',function(){setFuel('d')});
 $('f').addEventListener('input',calc);$('f').addEventListener('submit',function(e){e.preventDefault()});
-var modelDD=enhance(sel);verDD=enhance($('ver'));fillVer();setFuel('b');
+var modelDD=enhance(sel,true);verDD=enhance($('ver'));fillVer();setFuel('b');
 })();

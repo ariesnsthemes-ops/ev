@@ -35,7 +35,6 @@ const dimRows: [string, string | null | undefined][] = [
   ['Dužina', dm.length_txt || mm(dm.length_mm)],
   ['Širina', dm.width_folded && dm.width_mm ? mm(dm.width_mm) + ' (sa sklopljenim retrovizorima)' : mm(dm.width_mm)],
   ['Visina', dm.height_txt || mm(dm.height_mm)],
-  ['Klirens', dm.clearance_laden && dm.clearance_mm ? mm(dm.clearance_mm) + ' (pod opterećenjem)' : mm(dm.clearance_mm)],
   ['Broj sedišta', dm.seats ? String(dm.seats) : null],
 ];
 specs.push(...dimRows.filter(([, v]) => v));

@@ -1468,7 +1468,9 @@
           "powertrain": "EV",
           "body": "SUV",
           "range_wltp_km": 426,
-          "battery_kwh": 61.0
+          "battery_kwh": "49 / 61",
+          "range_versions": "344 / 426 km",
+          "range_note": "49 kWh 2WD 344 km, 61 kWh 2WD 426 km WLTP: Suzuki Denmark price list 28 Oct 2026 (brochurer.suzuki.dk)"
         }
       ],
       "social": {},

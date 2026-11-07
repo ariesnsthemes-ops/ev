@@ -6,7 +6,7 @@ var fmt=function(v,u){return v?String(v).replace(/\B(?=(\d{3})+(?!\d))/g,'.')+(u
 var ROWS=[['Brend',function(m){return m.b}],['Klasa',function(m){return m.cls}],
   ['Domet (WLTP)',function(m){return m.rt}],['Baterija',function(m){return m.kt}],
   ['Dužina',function(m){return m.L||''}],['Širina',function(m){return m.W||''}],['Visina',function(m){return m.H||''}],
-  ['Klirens',function(m){return m.C||''}],['Broj sedišta',function(m){return m.S?String(m.S):''}]];
+  ['Broj sedišta',function(m){return m.S?String(m.S):''}]];
 function ids(){return sel.map(function(s){return s.value}).filter(function(v,i,a){return v&&a.indexOf(v)===i})}
 function esc(t){var d=document.createElement('div');d.textContent=t;return d.innerHTML}
 function render(){
@@ -29,7 +29,6 @@ function render(){
       return '<td'+(b?' class="best"':'')+'>'+(v?esc(v):'<span class="na">–</span>')+'</td>'}).join('')+'</tr>'});
   tbl.innerHTML=h+'</tbody>';tbl.setAttribute('data-n',list.length);
   var fn=[];if(list.some(function(m){return /\*$/.test(m.W||'')}))fn.push('* Širina sa sklopljenim retrovizorima (proizvođač ne objavljuje širinu bez retrovizora).');
-  if(list.some(function(m){return /\*\*$/.test(m.C||'')}))fn.push('** Klirens pod opterećenjem, kako ga navodi proizvođač.');
   $('cmp-fn').textContent=fn.join(' ');$('cmp-fn').hidden=!fn.length;
 }
 sel.forEach(function(s){s.addEventListener('change',render)});

@@ -45,11 +45,10 @@ function dims(i: string): Record<string, string | number> {
   if (d.length_txt || d.length_mm) out.duzina = d.length_txt || mm(d.length_mm)!;
   if (d.width_mm) out.sirina = mm(d.width_mm) + (d.width_folded ? ' (sa sklopljenim retrovizorima)' : '');
   if (d.height_txt || d.height_mm) out.visina = d.height_txt || mm(d.height_mm)!;
-  if (d.clearance_mm) out.klirens = mm(d.clearance_mm) + (d.clearance_laden ? ' (pod opterećenjem)' : '');
   if (d.seats) out.broj_sedista = d.seats;
   return out;
 }
-const LABELS: Record<string, string> = { duzina: 'Dužina', sirina: 'Širina', visina: 'Visina', klirens: 'Klirens', broj_sedista: 'Broj sedišta' };
+const LABELS: Record<string, string> = { duzina: 'Dužina', sirina: 'Širina', visina: 'Visina', broj_sedista: 'Broj sedišta' };
 
 /** llms-full.txt and podaci/modeli.json share one pass over the catalogue. */
 export function fullData(): { text: string; json: string } {

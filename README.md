@@ -66,8 +66,8 @@ exports follow from them. The homepage's featured models are the `FEATURED_HOME`
 1. `src/data/brands.json`: add the model to the brand (name, body, `range_wltp_km`, `battery_kwh`).
 2. `src/data/model_content.json`: battery and range text (`kwh`, `range_text`).
 3. **Always research dimensions and seats yourself** and add them to `src/data/model_dims.json`
-   (length, width, height, ground clearance, seats), from official sources only: manufacturer or
-   importer sites, technical sheets, price lists, press releases. Put the URLs in `sources` and anything
+   (length, width, height and seats; ground clearance is not shown), only from the brand's official websites for European countries (e.g. byd.fr, byd.ch — never byd.ru, byd.au):
+   their price lists, technical sheets and press rooms. Put the URLs in `sources` and anything
    unclear in `notes`. If no official source states a figure, leave it `null` (the page shows a dash).
 4. Photo: `python3 scripts/photos.py <folder>` with the file named `evomobil-<model-id>.<ext>`
    (writes the 1280 px and 640 px WebP into `public/img`), then add the id to `PHOTO_IDS` in `src/lib/site.ts`.
