@@ -31,7 +31,7 @@ export interface Dims {
   seats?: number | null; length_txt?: string | null; height_txt?: string | null; width_folded?: boolean; clearance_laden?: boolean;
 }
 
-const ID_KEEP: Record<string, string> = { 'toyota|C-HR+': 'toyota-c-hr-plus', 'bmw|i4 M60': 'bmw-i4-m50', 'bmw|iX M70': 'bmw-ix-m-model', 'bmw|i5 M60': 'bmw-i5' };
+const ID_KEEP: Record<string, string> = { 'toyota|C-HR+': 'toyota-c-hr-plus', 'bmw|i4 M60': 'bmw-i4-m50', 'bmw|iX M70': 'bmw-ix-m-model', 'bmw|i5 M60': 'bmw-i5', 'ford|Explorer EV': 'ford-explorer' };
 
 function modelId(brandSlug: string, brandName: string, modelName: string): string {
   let n = modelName;

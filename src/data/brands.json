@@ -1209,7 +1209,7 @@
           "battery_kwh": 46.8
         },
         {
-          "name": "Explorer",
+          "name": "Explorer EV",
           "powertrain": "EV",
           "body": "SUV",
           "range_wltp_km": 602,
