@@ -56,3 +56,5 @@ window.evcFacets=function(side,items,test){
     document.addEventListener('click',function(e){if(!wrap.contains(e.target))cclose()});
     csync();}
 })();
+
+(function(){document.querySelectorAll('.qa').forEach(function(g){var d=[].slice.call(g.querySelectorAll(':scope>details'));d.forEach(function(x){x.addEventListener('toggle',function(){if(x.open)d.forEach(function(o){if(o!==x)o.open=false})})})})})();
