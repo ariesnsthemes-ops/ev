@@ -1088,3 +1088,7 @@ body.no-scroll{overflow:hidden}
 .nf h1,.nf .answer{margin-inline:auto}
 .nf .ctas,.nf .nf-links{justify-content:center}
 .qa details p a{color:var(--green-ink);font-weight:600;text-decoration:underline;text-underline-offset:3px}
+/* FAQ +/x: drawn with two bars so it sits exactly in the middle of the circle (the "+" glyph sat off-centre) */
+.faq .pm,.qa .pm{position:relative;font-size:0;line-height:0}
+.faq .pm::before,.faq .pm::after,.qa .pm::before,.qa .pm::after{content:"";position:absolute;left:50%;top:50%;width:10px;height:1.5px;border-radius:1px;background:currentColor;transform:translate(-50%,-50%)}
+.faq .pm::after,.qa .pm::after{transform:translate(-50%,-50%) rotate(90deg)}
