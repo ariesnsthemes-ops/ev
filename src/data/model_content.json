@@ -227,6 +227,10 @@
   "kwh": "58 / 77 / 79",
   "range_text": "444 / 553 / 602 km"
  },
+ "ford-capri": {
+  "kwh": "58 / 77 / 79",
+  "range_text": "464 / 627 / 592 km"
+ },
  "kia-ev3": {
   "kwh": "58,3 / 81,4",
   "range_text": "436 / 605 km"

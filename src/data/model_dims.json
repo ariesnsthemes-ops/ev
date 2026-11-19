@@ -448,7 +448,21 @@
   ],
   "notes": "Ford EU factsheet: width 1872 no mirrors (NL price list says 1871) / 1946 folded / 2063 with mirrors; height 1630 RWD, 1639 AWD. Clearance 141 RWD (148 AWD) is AT MAX LOAD (laden); unladen not stated. Seats 5 per ford.rs.",
   "clearance_laden": true
+ }, {
+  "id": "ford-capri",
+  "length_mm": 4634,
+  "width_mm": 1872,
+  "width_note": "bez retrovizora",
+  "height_mm": 1626,
+  "clearance_mm": 187,
+  "seats": 5,
+  "sources": [
+   "https://www.fromtheroad.ford.com/content/dam/fordmediasite/eur/en/library/2025/tech-specs/2025%20Go%20Electric%20Capri%20factsheet%20ENG.pdf",
+   "https://ford.nl/content/dam/guxeu/nl/documents/pricelists/cars/PL-electric-capri.pdf"
+  ],
+  "notes": "Ford EU factsheet: length 4634 without towbar (4734 with); width 1872 no mirrors / 1946 folded / 2063 with mirrors; height 1626 unladen (NL price list MY2027.25: 1627). Collection trim is 4690 long per NL list. Clearance unladen 187 RWD / 190 AWD per NL price list (laden 135 / 138). Seats 5 per NL price list ('Aantal zitplaatsen: 5')."
  },
+
  {
   "id": "foton-etunland",
   "length_mm": null,

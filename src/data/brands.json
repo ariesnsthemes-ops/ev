@@ -1218,6 +1218,17 @@
             77.0,
             79.0
           ]
+        },
+        {
+          "name": "Capri",
+          "powertrain": "EV",
+          "body": "SUV",
+          "range_wltp_km": 627,
+          "battery_kwh": [
+            58.0,
+            77.0,
+            79.0
+          ]
         }
       ],
       "social": {},
