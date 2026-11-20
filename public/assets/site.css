@@ -1103,3 +1103,8 @@ body.no-scroll{overflow:hidden}
 .cta-photo{grid-template-columns:minmax(0,1fr);min-height:420px}
 @media (max-width:860px){.cta-photo .glow::after{background-size:cover;background-position:70% center;opacity:.45;-webkit-mask-image:linear-gradient(0deg,#000 0%,rgba(0,0,0,.4) 60%,transparent 100%);mask-image:linear-gradient(0deg,#000 0%,rgba(0,0,0,.4) 60%,transparent 100%)}
 .cta-photo{min-height:0}}
+/* HERO_LAYOUT 'single': slow zoom-in on each photo; it restarts with every slide and pauses with the carousel */
+@keyframes hero-zoom{from{transform:scale(1)}to{transform:scale(1.08)}}
+.hero-single #h-free.zoom::before{animation:hero-zoom 6s ease-out forwards;transform-origin:50% 50%;will-change:transform}
+.hero-single .hero-media.paused #h-free.zoom::before{animation-play-state:paused}
+@media (prefers-reduced-motion:reduce){.hero-single #h-free.zoom::before{animation:none}}

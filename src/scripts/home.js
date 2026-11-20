@@ -60,6 +60,7 @@
     [...tabs.children].forEach((t,k)=>t.setAttribute('aria-selected',k===i));
     const t=tabs.children[i];if(tabs.scrollWidth>tabs.clientWidth)tabs.scrollTo({left:t.offsetLeft-tabs.offsetLeft,behavior:reduce()?'auto':'smooth'});
     renderSide();
+    if(single){const f=$('h-free');f.classList.remove('zoom');void f.offsetWidth;f.classList.add('zoom')}
     if(visible&&!free)track('view');
   }
   // rotation timer: DUR per position, paused on hover, focus, off-screen or hidden tab; off for options 3 and 6
@@ -88,7 +89,7 @@
   stage.addEventListener('touchend',e=>{if(x0===null)return;const dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40)go(dx<0?i+1:i-1);x0=null});
 
   // hero layout: 'triple' = layout 4, one large ad with two smaller ones on the side; 'single' = one full-width photo
-  if(single){document.body.classList.add('hero-single','hero-row'); curV='1'}
+  if(single){document.body.classList.add('hero-single','hero-row'); curV='1'; $('h-free').classList.add('zoom')}
   else{document.body.classList.add('hero-v4','hero-row'); curV='4'}
   renderSide();
 
