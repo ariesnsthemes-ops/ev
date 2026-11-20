@@ -4,7 +4,7 @@
  * lists, the counts and the search data (#ev-models) come from the catalogue in src/lib/site.ts;
  * the behaviour (carousel, search, filters, theme) is in src/scripts/home.js.
  */
-import { ADS_ENABLED as ads, AD_PLACEHOLDER_TEXT as txt, CSS_V, DOMAIN, FAV_V, GA_ID, NOINDEX, OG_DEFAULT, PH_STYLE, SITE } from '../config';
+import { ADS_ENABLED as ads, AD_PLACEHOLDER_TEXT as txt, CSS_V, DOMAIN, FAV_V, GA_ID, HERO_LAYOUT, NOINDEX, OG_DEFAULT, PH_STYLE, SITE } from '../config';
 import { card, ldFaq, logoSpan, type QA } from '../lib/html';
 import { ALL_IDS, ORDER, brands, models } from '../lib/site';
 import { E, joinSr, pyjson } from '../lib/util';
@@ -144,12 +144,12 @@ const js = cmpbar + consentSrc.replace('__GA__', GA_ID);
         </div>
       </div>
 
-      <div class="hero-media rs" id="hero-media" data-pos={ads ? 'AD-01' : undefined}>
+      <div class="hero-media rs" id="hero-media" data-pos={ads ? 'AD-01' : undefined} data-layout={HERO_LAYOUT}>
         <Fragment set:html={note('AD-01', 'Hero karusel', '5 pozicija u rotaciji, kreativa 1600 x 900 px (16:9), mesečni zakup', '01')} />
         <div class="stage" id="stage" aria-roledescription="carousel" aria-label={ads ? 'Sponzorisani modeli' : 'Istaknuti modeli'}>
           <div class="stage-clip">
             <a id="h-link" class="hero-img" href="#" hidden><img id="h-img" src="data:," alt="" width="1600" height="900"></a>
-            <div class="free ph-bg" id="h-free" style="--ph:url(../img/evomobil-elektricni-automobil.webp)">
+            <div class="free ph-bg" id="h-free" style={`--ph:url(../img/${HERO_LAYOUT === 'triple' ? 'evomobil-elektricni-automobil' : 'evomobil-ekran-punjenje'}.webp)`}>
               <Fragment set:html={txt ? '<h3>Ovde može biti vaš model</h3>' : ''} />
               <Fragment set:html={ads ? '<p>Jedna od 5 pozicija u hero karuselu. Kreativa 1600 x 900 px (16:9), mesečni zakup.</p>\n              ' + zakupi('01', 'Zakupi ovu poziciju') : ''} />
             </div>

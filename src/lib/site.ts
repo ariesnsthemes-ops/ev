@@ -43,7 +43,7 @@ function modelId(brandSlug: string, brandName: string, modelName: string): strin
 /** Photo file per model id (img/<file> and img/<file minus .webp>-640.webp). */
 const PHOTO_IDS = ['kia-ev9', 'porsche-cayenne-turbo-electric', 'bmw-i4-m50', 'bmw-ix-m-model', 'bmw-i7-m70', 'bmw-i4', 'bmw-i5', 'bmw-ix', 'bmw-ix3', 'bmw-ix5', 'bmw-i3', 'bmw-ix1', 'bmw-i7',
   'hyundai-ioniq-5', 'hyundai-ioniq-6', 'hyundai-ioniq-6-n', 'hyundai-ioniq-9', 'hyundai-inster', 'cupra-tavascan', 'mazda-cx-6e', 'mazda-6e', 'cupra-raval', 'dacia-spring', 'kia-ev6', 'kia-ev4', 'kia-ev3', 'kia-ev2',
-  'porsche-macan-4', 'porsche-taycan-4', 'ford-explorer-ev', 'ford-capri', 'toyota-bz4x', 'toyota-bz4x-touring', 'toyota-c-hr-plus', 'ford-mustang-mach-e', 'ford-puma-gen-e', 'renault-twingo-e-tech', 'renault-5-e-tech', 'renault-4-e-tech',
+  'porsche-macan-4', 'porsche-taycan-4', 'ford-explorer-ev', 'ford-capri', 'audi-rs-e-tron-gt', 'toyota-bz4x', 'toyota-bz4x-touring', 'toyota-c-hr-plus', 'ford-mustang-mach-e', 'ford-puma-gen-e', 'renault-twingo-e-tech', 'renault-5-e-tech', 'renault-4-e-tech',
   'suzuki-e-vitara', 'volkswagen-id-polo', 'volkswagen-id-3-neo', 'volkswagen-id-4', 'volkswagen-id-5', 'volkswagen-id-7', 'foton-etunland', 'byd-dolphin-surf', 'byd-atto-2-comfort', 'byd-atto-3-evo', 'byd-seal', 'byd-sealion-7',
   'mg-mg4-electric', 'mg-mg5-electric', 'mg-mgs5-ev', 'changan-deepal-s05', 'changan-deepal-s07', 'geely-e5', 'dongfeng-box', 'jac-t9-ev', 'jac-e30x', 'jmev-ev3', 'jmev-elight', 'jmev-ewind', 'leapmotor-b03x', 'leapmotor-b05', 'leapmotor-b10',
   'leapmotor-c10', 'leapmotor-t03', 'mini-countryman', 'mini-aceman', 'mini-cooper', 'opel-astra-electric', 'opel-frontera-electric', 'opel-mokka-electric', 'citroen-e-c3', 'citroen-e-c3-aircross', 'citroen-e-c5-aircross', 'citroen-e-c4', 'citroen-e-c4-x',
@@ -58,7 +58,7 @@ const BODY: Record<string, [string, string | null]> = {
   'Gradski automobil': ['Gradski', 'hatch'], Pikap: ['Pikap', null],
 };
 const NOT_PASSENGER = new Set(['Kombi', 'Kamion', 'Autobus']);
-const LOGO_IMG = new Set(['lynk-co-02', 'audi-rs-e-tron-gt']); // shown with the faded brand logo until a photo exists
+const LOGO_IMG = new Set(['lynk-co-02']); // shown with the faded brand logo until a photo exists
 const DISPLAY: Record<string, string> = { 'byd-atto-2-comfort': 'Atto 2' };
 const TAGS: Record<string, string> = { SUV: 'suv', 'Hečbek': 'hatch', Sedan: 'sedan', Pikap: 'pickup', 'Gradski automobil': 'city hatch', Karavan: 'wagon' };
 const CITY = new Set(['byd-dolphin-surf', 'jmev-ev3', 'leapmotor-t03', 'dongfeng-box', 'jac-e30x']);

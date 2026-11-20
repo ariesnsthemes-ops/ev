@@ -1092,3 +1092,6 @@ body.no-scroll{overflow:hidden}
 .faq .pm,.qa .pm{position:relative;font-size:0;line-height:0}
 .faq .pm::before,.faq .pm::after,.qa .pm::before,.qa .pm::after{content:"";position:absolute;left:50%;top:50%;width:10px;height:1.5px;border-radius:1px;background:currentColor;transform:translate(-50%,-50%)}
 .faq .pm::after,.qa .pm::after{transform:translate(-50%,-50%) rotate(90deg)}
+/* HERO_LAYOUT 'single': one full-width photo, about as tall as the 3-field version */
+.hero-single .hero .stage{aspect-ratio:27/10!important}
+@media (max-width:760px){.hero-single .hero .stage{aspect-ratio:3/2!important}}

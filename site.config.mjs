@@ -17,6 +17,13 @@ export default {
    * false = the spots show only their photos, true = the texts are shown. With ADS_ENABLED the texts are always on.
    */
   AD_PLACEHOLDER_TEXT: false,
+  /**
+   * Hero on the homepage:
+   * 'single' = one large photo across the full width, the 5 photos rotate every 5 s (starting with the charging screen).
+   * 'triple' = the 3-field version: one large photo plus two smaller ones on the side, rotating every 6 s
+   *            (the layout for the AD-01 ad carousel; switch back to it when ads go on).
+   */
+  HERO_LAYOUT: 'single',
   /** Look of the demo photos in the empty ad spots on the homepage: 'photo', 'fade' or 'multiply'. */
   PH_STYLE: 'photo',
   /** Google Analytics 4 measurement ID ('G-...'); empty = analytics never loads. */

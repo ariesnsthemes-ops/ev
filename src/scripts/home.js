@@ -20,6 +20,11 @@
     {free:true,b:'SLOBODNO',m:'Pozicija 4',bg:'../img/evomobil-far-elektricnog-automobila.webp'},
     {free:true,b:'SLOBODNO',m:'Pozicija 5',bg:'../img/evomobil-kabl-za-punjenje.webp'}
   ];
+  // HERO_LAYOUT (site.config.mjs): 'single' = one full-width photo, starts with the charging screen, 5 s per photo;
+  // 'triple' = large photo plus two side tiles, 6 s per photo
+  const single=document.getElementById('hero-media').dataset.layout!=='triple';
+  if(single)slides.push(...slides.splice(0,2));
+  const DUR=single?5000:6000;
   slides.forEach(s=>{if(s.img){const im=new Image();im.src=s.img}});
   const vb={sedan:'0 0 320 112',hatch:'0 0 320 112',suv:'0 0 320 120'};
   const stage=$('stage'), heroAd=$('hero-media'), tabs=$('hero-tabs');
@@ -57,12 +62,12 @@
     renderSide();
     if(visible&&!free)track('view');
   }
-  // rotation timer: 6 s per position, paused on hover, focus, off-screen or hidden tab; off for options 3 and 6
-  let tid=null, left=6000, t0=0;
+  // rotation timer: DUR per position, paused on hover, focus, off-screen or hidden tab; off for options 3 and 6
+  let tid=null, left=DUR, t0=0;
   function stopT(){if(tid){clearTimeout(tid);tid=null;left-=Date.now()-t0}}
-  function startT(){if(tid||reduce()||curV==='3'||curV==='6')return;t0=Date.now();tid=setTimeout(()=>{tid=null;left=6000;go(i+1)},Math.max(left,300))}
+  function startT(){if(tid||reduce()||curV==='3'||curV==='6')return;t0=Date.now();tid=setTimeout(()=>{tid=null;left=DUR;go(i+1)},Math.max(left,300))}
   function go(k){
-    if(tid){clearTimeout(tid);tid=null}left=6000;
+    if(tid){clearTimeout(tid);tid=null}left=DUR;
     i=(k+slides.length)%slides.length;
     if(reduce()){render();syncPause();return}
     stage.classList.add('swap');setTimeout(()=>{render();stage.classList.remove('swap');syncPause()},280);
@@ -82,8 +87,9 @@
   stage.addEventListener('touchstart',e=>{x0=e.touches[0].clientX},{passive:true});
   stage.addEventListener('touchend',e=>{if(x0===null)return;const dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40)go(dx<0?i+1:i-1);x0=null});
 
-  // hero: fixed layout 4, one large ad with two smaller ones on the side
-  document.body.classList.add('hero-v4','hero-row'); curV='4';
+  // hero layout: 'triple' = layout 4, one large ad with two smaller ones on the side; 'single' = one full-width photo
+  if(single){document.body.classList.add('hero-single','hero-row'); curV='1'}
+  else{document.body.classList.add('hero-v4','hero-row'); curV='4'}
   renderSide();
 
   // model filtering
