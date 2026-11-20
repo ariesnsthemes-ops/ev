@@ -149,7 +149,7 @@ const js = cmpbar + consentSrc.replace('__GA__', GA_ID);
         <div class="stage" id="stage" aria-roledescription="carousel" aria-label={ads ? 'Sponzorisani modeli' : 'Istaknuti modeli'}>
           <div class="stage-clip">
             <a id="h-link" class="hero-img" href="#" hidden><img id="h-img" src="data:," alt="" width="1600" height="900"></a>
-            <div class="free ph-bg" id="h-free" style={`--ph:url(../img/${HERO_LAYOUT === 'triple' ? 'evomobil-elektricni-automobil' : 'evomobil-ekran-punjenje'}.webp)`}>
+            <div class="free ph-bg" id="h-free" style={`--ph:url(../img/${HERO_LAYOUT === 'triple' ? 'evomobil-elektricni-automobil' : 'evomobil-punjac-stanica'}.webp)`}>
               <Fragment set:html={txt ? '<h3>Ovde može biti vaš model</h3>' : ''} />
               <Fragment set:html={ads ? '<p>Jedna od 5 pozicija u hero karuselu. Kreativa 1600 x 900 px (16:9), mesečni zakup.</p>\n              ' + zakupi('01', 'Zakupi ovu poziciju') : ''} />
             </div>
