@@ -194,7 +194,7 @@ const js = cmpbar + consentSrc.replace('__GA__', GA_ID);
     </div>
   </section>
 
-<Fragment set:html={ads ? '  <!-- AD-02 LEADERBOARD -->\n' : ''} />  <section class="leader" aria-label={ads ? 'Oglas' : 'Istaknuto'}>
+<Fragment set:html={ads ? '  <!-- AD-02 LEADERBOARD -->\n' : ''} />  <section class={ads ? 'leader' : 'leader leader-tall'} aria-label={ads ? 'Oglas' : 'Istaknuto'}>
     <div class="wrap">
       <div class="rs" data-pos={ads ? 'AD-02' : undefined}>
         <Fragment set:html={note('AD-02', 'Leaderboard', 'desktop 2480 x 360 px, mobilni 720 x 500 px, mesečni zakup', '02')} />
@@ -260,7 +260,7 @@ const js = cmpbar + consentSrc.replace('__GA__', GA_ID);
     </div>
   </section>
 
-<Fragment set:html={ads ? '  <!-- AD-04 PARTNER OFFERS (2 positions) -->\n' : ''} />  <section aria-label="Ponude partnera">
+{ads && <Fragment><Fragment set:html={ads ? '  <!-- AD-04 PARTNER OFFERS (2 positions) -->\n' : ''} />  <section aria-label="Ponude partnera">
     <div class="wrap">
       <div class="offers">
         <div class="rs" data-pos={ads ? 'AD-04A' : undefined}>
@@ -277,22 +277,24 @@ const js = cmpbar + consentSrc.replace('__GA__', GA_ID);
         </div>
       </div>
     </div>
-  </section>
+  </section></Fragment>}
 
 <Fragment set:html={ads ? '  <!-- TEST DRIVE BAND. AD-05 is the partner-box box. -->\n' : ''} />  <section class="cta" id="distributeri">
     <div class="wrap">
-      <div class="cta-band">
+      <div class={ads ? 'cta-band' : 'cta-band cta-photo'}>
         <div class="glow" aria-hidden="true"></div>
         <div>
           <h2>Zainteresovani ste za test vožnju?</h2>
           <p>Spisak zvaničnih distributera po gradovima, sa adresama, telefonima i radnim vremenom.</p>
           <a href="distributeri" class="btn">Pronađi distributera <span class="arr">→</span></a>
         </div>
+        {ads && <Fragment>
         <div class={'partner-box rs ph-bg' + (txt ? '' : ' ph-quiet')} data-pos={ads ? 'AD-05' : undefined} style="--ph:url(../img/evomobil-elektricni-automobil.webp)" aria-hidden={txt ? undefined : 'true'}>
           <Fragment set:html={note('AD-05', 'Sponzor sekcije', 'logo 400 x 120 px, beli ili jednobojni', '05')} />
 <Fragment set:html={`          <span class="rs-label">Test vožnje omogućava</span>
           <div class="slot">${ads ? 'LOGO SPONZORA' : 'LOGO'}</div>`} /><Fragment set:html={ads ? '\n          <p>Mesto za jednog distributera ili brend, uz link ka zakazivanju test vožnje.</p>' : ''} />
         </div>
+        </Fragment>}
       </div>
     </div>
   </section>

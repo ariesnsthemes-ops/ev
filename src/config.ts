@@ -18,7 +18,8 @@ export const ADS_ENABLED: boolean = switches.ADS_ENABLED;
 export const AD_PLACEHOLDER_TEXT: boolean = switches.ADS_ENABLED || switches.AD_PLACEHOLDER_TEXT;
 export const PH_STYLE: 'photo' | 'fade' | 'multiply' = switches.PH_STYLE as any;
 export const GA_ID: string = switches.GA_ID;
-export const HERO_LAYOUT: 'single' | 'triple' = (switches as any).HERO_LAYOUT === 'triple' ? 'triple' : 'single';
+/** With ADS_ENABLED the hero is always the 3-field ad carousel (AD-01); HERO_LAYOUT only chooses while ads are off. */
+export const HERO_LAYOUT: 'single' | 'triple' = switches.ADS_ENABLED || (switches as any).HERO_LAYOUT === 'triple' ? 'triple' : 'single';
 
 const pub = (p: string) => resolve('public', p); // astro runs from the project root
 const md5 = (b: Buffer | string) => createHash('md5').update(b).digest('hex');

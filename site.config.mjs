@@ -18,10 +18,10 @@ export default {
    */
   AD_PLACEHOLDER_TEXT: false,
   /**
-   * Hero on the homepage:
+   * Hero on the homepage while ADS_ENABLED is false (with ads on it is always 'triple'):
    * 'single' = one large photo across the full width, the 5 photos rotate every 5 s (starting with the charging screen).
    * 'triple' = the 3-field version: one large photo plus two smaller ones on the side, rotating every 6 s
-   *            (the layout for the AD-01 ad carousel; switch back to it when ads go on).
+   *            (the layout of the AD-01 ad carousel).
    */
   HERO_LAYOUT: 'single',
   /** Look of the demo photos in the empty ad spots on the homepage: 'photo', 'fade' or 'multiply'. */

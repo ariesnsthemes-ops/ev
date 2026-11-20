@@ -22,6 +22,11 @@ npm run dev        # local preview with live reload (http://localhost:4321)
   biti vaš model", "Slobodna pozicija", "Brend meseca", "LOGO"…; the brand-of-the-month tile and the
   test-drive box keep their text invisibly so the layout stays the same size). On: the texts are back.
   With `ADS_ENABLED` on, the texts are always shown.
+- `HERO_LAYOUT` – the homepage hero while ads are off: `'single'` (one full-width photo, rotating every 5 s) or
+  `'triple'` (large photo plus two side tiles). With `ADS_ENABLED` on the hero is always the 3-field ad carousel.
+  With ads off the homepage also leaves out the two partner-offer spots (AD-04A/B), shows a taller leaderboard
+  photo and puts the photo behind the test-drive band instead of the sponsor box (AD-05); `ADS_ENABLED: true`
+  brings all of them back.
 - `PH_STYLE`, `GA_ID` – as before.
 
 Change a switch with one command (or edit `site.config.mjs` by hand), then commit and push:
