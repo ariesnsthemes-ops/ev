@@ -50,7 +50,7 @@ const PHOTO_IDS = ['kia-ev9', 'porsche-cayenne-turbo-electric', 'bmw-i4-m50', 'b
   'skoda-elroq', 'skoda-enyaq', 'skoda-enyaq-coupe', 'volvo-ex30', 'volvo-ex60', 'volvo-ex90', 'volvo-es90', 'porsche-macan-4s', 'peugeot-e-208', 'peugeot-e-2008', 'peugeot-e-308', 'peugeot-e-3008'];
 /** A replaced photo ALWAYS gets a new file name with "-new" (a second replacement "-new-2", …): img/ is cached for 30 days. */
 const PHOTO_RENAMED: Record<string, string> = { 'leapmotor-t03': 'evomobil-leapmotor-t03-new.webp', 'leapmotor-b05': 'evomobil-leapmotor-b05-new.webp',
-  'citroen-e-c5-aircross': 'evomobil-citroen-e-c5-aircross-new.webp' };
+  'citroen-e-c5-aircross': 'evomobil-citroen-e-c5-aircross-new.webp', 'audi-rs-e-tron-gt': 'evomobil-audi-rs-e-tron-gt-new.webp' };
 const PHOTO_FILES: Record<string, string> = Object.fromEntries(PHOTO_IDS.map((i) => [i, PHOTO_RENAMED[i] ?? `evomobil-${i}.webp`]));
 
 const BODY: Record<string, [string, string | null]> = {
