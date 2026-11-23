@@ -15,6 +15,64 @@
   "height_txt": "1.369–1.402 mm"
  },
  {
+  "id": "audi-a6-avant-e-tron",
+  "length_mm": 4928,
+  "width_mm": 1923,
+  "width_note": "bez retrovizora",
+  "height_mm": 1493,
+  "clearance_mm": null,
+  "seats": 5,
+  "sources": [
+   "https://uploads.audi-mediacenter.com/system/production/car_motorizations/1406/file_en/53aa1bed65ebf16516dc0c28ef5e1e1bac1fe44c/eTD-Audi-A6-Avant-performance-55-e-tron-270kW_250121.pdf",
+   "https://uploads.audi-mediacenter.com/system/production/car_motorizations/1415/file_en/7deed7b5525562f4d1511be91e078cccf364b3ac/eTD-Audi-A6-Avant-e-tron-210kW_260202.pdf"
+  ],
+  "notes": "Audi MediaCenter eTD (Germany): A6 Avant e-tron performance 270 kW, battery 100 / 94.9 kWh gross/net; length 4928; width 1923 without mirrors / 2137 with mirrors; height 1493 - 1541 (lowest value used); wheelbase 2950 - 2951; doors/seats 5/5. Ground clearance not stated. audi.rs shows dimensions only as an image.",
+  "height_txt": "1.493–1.541 mm"
+ },
+ {
+  "id": "audi-a6-sportback-e-tron",
+  "length_mm": 4928,
+  "width_mm": 1923,
+  "width_note": "bez retrovizora",
+  "height_mm": 1455,
+  "clearance_mm": null,
+  "seats": 5,
+  "sources": [
+   "https://uploads.audi-mediacenter.com/system/production/car_motorizations/1417/file_en/c010d5c91ba92c82c73824ca8cc55c88dea33f8d/eTD-Audi-A6-Sportback-e-tron-210kW_241029.pdf"
+  ],
+  "notes": "Audi MediaCenter eTD (Germany) A6 Sportback e-tron 210 kW: length 4928; width 1923 without mirrors / 2137 with mirrors; height 1455 - 1501 (lowest value used; Audi UK spec sheet gives 1487); wheelbase 2950 - 2951; doors/seats 5/5. Same body for the 94.9 kWh versions. Ground clearance not stated.",
+  "height_txt": "1.455–1.501 mm"
+ },
+ {
+  "id": "audi-q6-suv-e-tron",
+  "length_mm": 4771,
+  "width_mm": 1939,
+  "width_note": "bez retrovizora",
+  "height_mm": 1648,
+  "clearance_mm": null,
+  "seats": 5,
+  "sources": [
+   "https://uploads.audi-mediacenter.com/system/production/car_motorizations/1387/file_en/d5ef2fc68f8dae2efc40a2767a4d0bde8a3e0da2/eTD-Audi-Q6-SUV-e-tron-performance-225kW_250303.pdf",
+   "https://www.audi-mediacenter.com/en/the-audi-q6-e-tron-electric-mobility-on-a-new-level-15929/the-facts-15948"
+  ],
+  "notes": "Audi MediaCenter eTD (Germany) Q6 SUV e-tron performance 225 kW, battery 100 / 94.9 kWh gross/net: length 4771; width 1939 - 1965 without mirrors / 2193 with mirrors; height 1648 - 1702 (lowest value used); wheelbase 2893 - 2899; doors/seats 5/5. Ground clearance not stated.",
+  "height_txt": "1.648–1.702 mm"
+ },
+ {
+  "id": "audi-e-tron-gt-quattro",
+  "length_mm": 4989,
+  "width_mm": 1964,
+  "width_note": "bez retrovizora",
+  "height_mm": 1413,
+  "clearance_mm": null,
+  "seats": 5,
+  "sources": [
+   "https://uploads.audi-mediacenter.com/system/production/car_motorizations/1236/file_en/6d6ceb7f7cd108885f3c22d6922b5cad38407103/eTD_Audi_e-tron_GT_quattro_350kW_231016.pdf"
+  ],
+  "notes": "Audi MediaCenter eTD (Germany, 10/2023) e-tron GT quattro 350 kW, battery 93.4 / 83.7 kWh gross/net, WLTP 458 - 501 km (matches audi.rs): length 4989; width 1964 without mirrors / 2158 with mirrors; height 1413 steel springs / 1396 air springs; wheelbase 2900; doors/seats 4/5. This is the pre-2025 version; the 2025 e-tron GT quattro (370 kW) has a 105 / 97 kWh battery."
+ },
+
+ {
   "id": "bmw-ix1",
   "length_mm": 4500,
   "width_mm": 1845,

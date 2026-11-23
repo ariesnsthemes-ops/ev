@@ -163,6 +163,22 @@
   "kwh": "39,8 / 53",
   "range_text": "292 / 382 km"
  },
+ "audi-a6-avant-e-tron": {
+  "kwh": "94,9",
+  "range_text": "678 km"
+ },
+ "audi-a6-sportback-e-tron": {
+  "kwh": "94,9",
+  "range_text": "711 km"
+ },
+ "audi-q6-suv-e-tron": {
+  "kwh": "94,9",
+  "range_text": "625 km"
+ },
+ "audi-e-tron-gt-quattro": {
+  "kwh": "83,7",
+  "range_text": "501 km"
+ },
  "audi-rs-e-tron-gt": {
   "kwh": "105",
   "range_text": "593 km"

@@ -983,6 +983,34 @@
       "description_sr": "Audi je nemački proizvođač automobila sa sedištem u Ingolštatu, deo grupe Volkswagen.",
       "models": [
         {
+          "name": "A6 Avant e-tron",
+          "powertrain": "EV",
+          "body": "Karavan",
+          "range_wltp_km": 678,
+          "battery_kwh": 94.9
+        },
+        {
+          "name": "A6 Sportback e-tron",
+          "powertrain": "EV",
+          "body": "Sedan",
+          "range_wltp_km": 711,
+          "battery_kwh": 94.9
+        },
+        {
+          "name": "Q6 SUV e-tron",
+          "powertrain": "EV",
+          "body": "SUV",
+          "range_wltp_km": 625,
+          "battery_kwh": 94.9
+        },
+        {
+          "name": "e-tron GT quattro",
+          "powertrain": "EV",
+          "body": "Sedan",
+          "range_wltp_km": 501,
+          "battery_kwh": 83.7
+        },
+        {
           "name": "RS e-tron GT",
           "powertrain": "EV",
           "body": "Sedan",

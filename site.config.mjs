@@ -19,7 +19,7 @@ export default {
   AD_PLACEHOLDER_TEXT: false,
   /**
    * Hero on the homepage while ADS_ENABLED is false (with ads on it is always 'triple'):
-   * 'single' = one large photo across the full width, the 5 photos rotate every 5 s (starting with the charging screen).
+   * 'single' = one large photo across the full width, the 5 photos rotate every 5 s (starting with the charging station).
    * 'triple' = the 3-field version: one large photo plus two smaller ones on the side, rotating every 6 s
    *            (the layout of the AD-01 ad carousel).
    */
