@@ -198,7 +198,7 @@ const js = cmpbar + consentSrc.replace('__GA__', GA_ID);
     <div class="wrap">
       <div class="rs" data-pos={ads ? 'AD-02' : undefined}>
         <Fragment set:html={note('AD-02', 'Leaderboard', 'desktop 2480 x 360 px, mobilni 720 x 500 px, mesečni zakup', '02')} />
-        <div class="house ph-bg" style="--ph:url(../img/evomobil-elektricni-automobil-vertikalno.webp);--ph-pos:center 72%">
+        <div class="house ph-bg" style={ads ? '--ph:url(../img/evomobil-elektricni-automobil-vertikalno.webp);--ph-pos:center 72%' : '--ph:url(../img/evomobil-utikac-za-punjenje.webp);--ph-pos:center 55%'}>
 <Fragment set:html={txt ? `          <div>${ads ? '\n            ' + adLabel : ''}
             <h3>Vaš brend ispred kupaca električnih automobila</h3>
             <p>Ovaj baner vidi svaki posetilac početne strane, odmah posle pretrage.</p>
@@ -218,7 +218,7 @@ const js = cmpbar + consentSrc.replace('__GA__', GA_ID);
         </div>
       </div>
       <div class="bento">
-        <div class={'feature-brand rs ph-bg' + (txt ? '' : ' ph-quiet')} data-pos={ads ? 'AD-03' : undefined} style="--ph:url(../img/evomobil-far-elektricnog-automobila.webp);--ph-pos:30% 40%" aria-hidden={txt ? undefined : 'true'}>
+        <div class={'feature-brand rs ph-bg' + (txt ? '' : ' ph-quiet')} data-pos={ads ? 'AD-03' : undefined} style={ads ? '--ph:url(../img/evomobil-far-elektricnog-automobila.webp);--ph-pos:30% 40%' : '--ph:url(../img/evomobil-punjaci-u-nizu.webp);--ph-pos:70% 62%'} aria-hidden={txt ? undefined : 'true'}>
           <Fragment set:html={note('AD-03', 'Brend meseca', 'logo 480 x 160 px + tekst do 120 znakova, 1 brend mesečno', '03')} />
 <Fragment set:html={`          <div>
             <span class="rs-label">${ads ? 'Brend meseca · Oglas' : 'Brend meseca'}</span>

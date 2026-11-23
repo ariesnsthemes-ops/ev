@@ -20,10 +20,10 @@
     {free:true,b:'SLOBODNO',m:'Pozicija 4',bg:'../img/evomobil-far-elektricnog-automobila.webp'},
     {free:true,b:'SLOBODNO',m:'Pozicija 5',bg:'../img/evomobil-kabl-za-punjenje.webp'}
   ];
-  // HERO_LAYOUT (site.config.mjs): 'single' = one full-width photo, starts with the charging station, 5 s per photo;
+  // HERO_LAYOUT (site.config.mjs): 'single' = one full-width photo, 4 photos starting with the charging station, 5 s per photo;
   // 'triple' = large photo plus two side tiles, 6 s per photo
   const single=document.getElementById('hero-media').dataset.layout!=='triple';
-  if(single)slides.push(...slides.splice(0,1));
+  if(single)slides.shift();  // the black car photo is kept for the test-drive band, so no photo repeats on the page
   const DUR=single?5000:6000;
   slides.forEach(s=>{if(s.img){const im=new Image();im.src=s.img}});
   const vb={sedan:'0 0 320 112',hatch:'0 0 320 112',suv:'0 0 320 120'};
