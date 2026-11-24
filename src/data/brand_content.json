@@ -647,7 +647,10 @@
     "name": "Porsche Ada",
     "role": "Ovlašćeni partner",
     "address": "Radnička 4",
-    "zip": "11000 Beograd"
+    "zip": "11000 Beograd",
+    "phone": "0800 801 811",
+    "email": "info@porsche-ada.rs",
+    "website": "www.porsche-ada.rs"
    },
    {
     "city": "Novi Sad",
@@ -768,7 +771,18 @@
    "Cupra je španski sportski brend, koji je kao samostalan brend predstavljen 2018. kao deo grupe SEAT.",
    "Električni modeli su Tavascan i Raval."
   ],
-  "dealers": []
+  "dealers": [
+   {
+    "city": "Beograd",
+    "name": "Porsche Ada",
+    "role": "Ovlašćeni partner",
+    "address": "Radnička 4",
+    "zip": "11000 Beograd",
+    "phone": "0800 801 811",
+    "email": "info@porsche-ada.rs",
+    "website": "www.porsche-ada.rs"
+   }
+  ]
  },
  "dacia": {
   "name": "Dacia",
@@ -1267,7 +1281,10 @@
     "name": "Porsche Ada",
     "role": "Ovlašćeni partner",
     "address": "Radnička 4",
-    "zip": "11000 Beograd"
+    "zip": "11000 Beograd",
+    "phone": "0800 801 811",
+    "email": "info@porsche-ada.rs",
+    "website": "www.porsche-ada.rs"
    },
    {
     "city": "Novi Sad",
