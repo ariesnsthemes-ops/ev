@@ -8,3 +8,4 @@ site/
 scripts/prices-report.html
 scripts/prices-report.pdf
 __pycache__/
+scripts/dokazi/

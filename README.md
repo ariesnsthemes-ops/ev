@@ -135,4 +135,8 @@ Merge the pull request and Cloudflare publishes the site. More dealer websites i
 - Wrong page or wrong name: edit `url` or `match` for that model in `prices.json`.
 - Local run: `pip install playwright pypdf && python3 -m playwright install chromium`, then
   `python3 scripts/update_prices.py --brand byd --dry-run` (prints the report, writes nothing).
+- Evidence: every price found is kept as a dated screenshot (or the PDF itself) on the branch `dokazi-cena`, and the
+  page is saved in the Internet Archive (links in the report).
+- A price set by hand: add `"lock": {"price_eur": 26890, "since": "2026-11-27", "note": "…"}` to the model; the
+  script then never changes it and only reports what the sources say.
 - When the monthly runs have proved reliable, set `AUTO_PUBLISH: 'true'` in the workflow: it then publishes without a pull request.

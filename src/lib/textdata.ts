@@ -54,7 +54,7 @@ const LABELS: Record<string, string> = { duzina: 'Dužina', sirina: 'Širina', v
 export function fullData(): { text: string; json: string } {
   const nBrands = ORDER.filter((x) => brands[x].models.length).length;
   const full = [`# ${SITE}: kompletni podaci`, '',
-    '> Nezavisan informativni sajt o potpuno električnim automobilima (BEV) koji se zvanično prodaju u Srbiji. Bez hibrida. Bez cena.',
+    '> Nezavisan informativni sajt o potpuno električnim automobilima (BEV) koji se zvanično prodaju u Srbiji. Bez hibrida. Okvirne početne cene sa datumom nalaze se samo na stranicama modela (cene se menjaju; tačnu cenu daje ovlašćeni distributer).',
     '> Domet je po WLTP normi, za verziju sa najvećim dometom. Podaci su sa zvaničnih sajtova proizvođača i uvoznika. Prazno polje znači da proizvođač podatak ne objavljuje.',
     `> Ukupno: ${ALL_IDS.length} modela, ${nBrands} brendova. Poslednje ažuriranje: ${UPDATED}.`, ''];
   const data: unknown[] = [];

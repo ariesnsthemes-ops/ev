@@ -8,6 +8,10 @@
 # Once the checks have proved reliable, set AUTO_PUBLISH to 'true' below: the run then commits straight to the
 # main branch like the fuel-price check, and Cloudflare publishes the site.
 #
+# Evidence: for every price found, a dated screenshot of the page (or a copy of the PDF price list) is kept on the
+# branch "dokazi-cena" (one folder per check date), and the page is also saved in the Internet Archive (web.archive.org)
+# as an independent dated copy; the links are in the report. Set ARCHIVE to '0' below to skip the Internet Archive.
+#
 # Manual run at any time: Actions > Cene automobila > Run workflow.
 # Needed once: Settings > Actions > General > Workflow permissions:
 #   "Read and write permissions" + "Allow GitHub Actions to create and approve pull requests".
@@ -20,6 +24,7 @@ on:
 
 env:
   AUTO_PUBLISH: 'false'
+  ARCHIVE: '1'
 
 permissions:
   contents: write
@@ -32,7 +37,7 @@ concurrency:
 jobs:
   prices:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 75
     steps:
       - name: Only the first Wednesday of the month (manual runs always go)
         id: gate
@@ -69,7 +74,27 @@ jobs:
           path: |
             scripts/prices-report.pdf
             scripts/prices-report.html
+            scripts/dokazi/
           retention-days: 90
+
+      - name: Keep the evidence for good (branch dokazi-cena, one folder per check date)
+        if: steps.gate.outputs.go == 'true'
+        run: |
+          [ -d scripts/dokazi ] || { echo "Nema dokaza."; exit 0; }
+          git config user.name "evomobil cene automobila"
+          git config user.email "office@evomobil.rs"
+          if git fetch origin dokazi-cena 2>/dev/null; then
+            git worktree add ../dokazi FETCH_HEAD
+            cd ../dokazi && git checkout -B dokazi-cena
+          else
+            git worktree add --detach ../dokazi
+            cd ../dokazi && git checkout --orphan dokazi-cena && git rm -rfq . && rm -rf ./* 
+            printf '# Dokazi cena\n\nScreenshotovi stranica i kopije PDF cenovnika sa kojih je evomobil.rs preuzeo cene, po datumu provere.\n' > README.md
+          fi
+          cp -r "$GITHUB_WORKSPACE/scripts/dokazi/." .
+          git add -A
+          git commit -qm "Dokazi cena $(date -u +%F)" || { echo "Nema novih dokaza."; exit 0; }
+          git push origin dokazi-cena
 
       - name: Open a pull request with the report
         if: steps.gate.outputs.go == 'true' && env.AUTO_PUBLISH != 'true'

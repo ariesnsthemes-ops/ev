@@ -16,11 +16,19 @@ Per model, in src/data/prices.json -> models:
              on the brand's site (_brand_sites), saves the page it found and marks the model "review".
   dealer_urls {dealer host: page} found the same way on the dealer sites; fix or delete by hand if wrong.
   match      the model name as the importer writes it (used to find the right price on pages with several models)
+  lock       optional: {"price_eur": 26890, "since": "2026-11-27", "note": "..."} = price set by hand. The script still
+             reads the sources and reports what they say, but never changes the price; a difference is "review".
+             Delete "lock" to let the script take over again.
+  pdf_label  optional: url is a page with many identical price-list buttons; take the one under the card titled
+             exactly this (e.g. "NOVI Ë-C3 AIRCROSS"; "novi" is ignored). Citroën: alati/preuzmite-cenovnik.html
+  row_anchor optional: read only the price-list rows that start with this text (e.g. "ELEKTRIČNI MOTOR"), so prices of
+             the petrol / hybrid tables in the same PDF are never taken. With column: the Nth price in that row.
   column     optional: in a price list with several price columns, which price in the model's row to take
              (Renault: 2 = "cena sa PDV-om"; the 1st is without VAT)
   price_eur  lowest "from" price in EUR
   checked    day of the last successful check (shown on the site as "Cena proverena")
   changed    day the price last changed (used as lastmod in the sitemap)
+  source     where the shown price came from: uvoznik | dileri (the footnote names it); a locked price names none
   status     ok | review | not-found | blocked | no-url | new
              review = a model page found by the script (price applied, url saved: check it in the pull request)
                       or a change above MAX_CHANGE (NOT applied, old price stays)
@@ -64,6 +72,8 @@ class Fetcher:
         self.last = {}
         self.robots = {}
         self.cache = {}
+        self.evidence = {}
+        self.price_url = {}  # listing page -> the linked PDF the price actually came from   # url -> (ext, bytes): JPEG screenshot of an HTML page or the PDF file itself
         try:
             from playwright.sync_api import sync_playwright
             self.pw = sync_playwright().start()
@@ -116,15 +126,20 @@ class Fetcher:
             if self.browser:
                 r = self.ctx.request.get(url, timeout=60000)
                 if not r.ok: raise RuntimeError(f'HTTP {r.status}')
+                self.evidence[url] = ('pdf', r.body())
                 return 'pdf', pdf_text(r.body()), []
-            return 'pdf', pdf_text(self.raw(url)), []
+            raw = self.raw(url)
+            self.evidence[url] = ('pdf', raw)
+            return 'pdf', pdf_text(raw), []
         if self.browser:
             page = self.ctx.new_page()
             try:
                 resp = page.goto(url, wait_until='domcontentloaded', timeout=60000)
                 ctype = (resp.headers.get('content-type', '') if resp else '')
                 if 'pdf' in ctype:
-                    return 'pdf', pdf_text(resp.body()), []
+                    body = resp.body()
+                    self.evidence[url] = ('pdf', body)
+                    return 'pdf', pdf_text(body), []
                 # JS checks ("please wait…"), redirects and prices loaded later: wait, then read; retry if the page moves
                 text = ''
                 for _ in range(4):
@@ -139,14 +154,33 @@ class Fetcher:
                         continue
                     if 'request is being verified' not in text: break
                     page.wait_for_timeout(3000)
-                links = page.eval_on_selector_all('a[href]', 'els => els.map(a => [a.href, (a.innerText || a.title || "").trim()])')
+                # [href, link text, heading of the card the link sits in] - price-list pages often have many identical
+                # "Skinite cenovnike" buttons, told apart only by the model name above them
+                links = page.eval_on_selector_all('a[href]', '''els => els.map(a => {
+                    let n = a, head = '';
+                    for (let i = 0; i < 6 && n && !head; i++) {
+                        n = n.parentElement;
+                        if (!n) break;
+                        const h = n.querySelector('h1,h2,h3,h4,h5,h6,[class*="title"],[class*="name"]');
+                        if (h && !h.contains(a)) head = (h.innerText || '').trim();
+                    }
+                    return [a.href, (a.innerText || a.title || '').trim(), head.slice(0, 120)];
+                })''')
+                try:   # evidence: the page as it looked, with the date and address stamped on top
+                    page.evaluate('''([u, d]) => { const b = document.createElement('div');
+                        b.textContent = 'evomobil.rs provera cena · ' + d + ' · ' + u;
+                        b.style.cssText = 'position:relative;z-index:2147483647;background:#ffeb3b;color:#000;font:14px/1.4 sans-serif;padding:6px 10px';
+                        document.body.prepend(b); }''', [url, dt.datetime.now(dt.timezone.utc).strftime('%Y-%m-%d %H:%M UTC')])
+                    self.evidence[url] = ('jpg', page.screenshot(full_page=True, type='jpeg', quality=55, timeout=30000))
+                except Exception:  # noqa: BLE001
+                    pass
                 return 'html', text, links
             finally:
                 page.close()
         raw = self.raw(url)
         if raw[:5] == b'%PDF-': return 'pdf', pdf_text(raw), []
         page = raw.decode('utf-8', 'replace')
-        links = [(urllib.parse.urljoin(url, h), re.sub(r'<[^>]+>', ' ', t).strip())
+        links = [(urllib.parse.urljoin(url, h), re.sub(r'<[^>]+>', ' ', t).strip(), '')
                  for h, t in re.findall(r'<a[^>]+href="([^"#]+)"[^>]*>(.*?)</a>', page, re.S)]
         return 'html', html_text(page), links
 
@@ -233,12 +267,14 @@ def candidates(text, bare=False):
     return sorted(set(out))
 
 
-def find_price(text, match, multi, longer=(), column=None):
+def find_price(text, match, multi, longer=(), column=None, anchor=None):
     """Lowest plausible EUR price.
     Page about one model: the lowest price, preferring prices after "od"/"cena".
     Page with several models (price list, PDF, brand page): for each place the model name appears, the first price
     after it (within WINDOW characters); then the lowest of those. Names of longer sibling models are skipped
     ("ë-C3" does not match "ë-C3 Aircross")."""
+    if anchor:
+        return find_in_rows(text, anchor, column or 1)
     cands = candidates(text)
     if not cands and multi and re.search(r'€|\beur\b|evr', text, re.I) and not RSD.search(text):
         cands = candidates(text, bare=True)   # price list with the currency only in the header
@@ -259,6 +295,23 @@ def find_price(text, match, multi, longer=(), column=None):
         if multi: return None, f'model "{match}" nije pronađen pored cene'
     hinted = [c for c in cands if c[2]]
     return min(v for _, v, _ in (hinted or cands)), ('uz "od/cena"' if hinted else 'najniža cena na strani')
+
+
+def find_in_rows(text, anchor, column):
+    """Price lists with one table per powertrain (Citroën: "ELEKTRIČNI MOTOR" rows): after every occurrence of the
+    anchor, the column-th price before the next occurrence; the lowest of those. Hybrid / petrol rows are never read."""
+    t = flat(text)
+    rx = re.compile(r'(?<![a-z0-9])' + r'\s+'.join(map(re.escape, flat(anchor).split())) + r'(?![a-z0-9])')
+    spots = [m.start() for m in rx.finditer(t)]
+    if not spots: return None, f'tabela "{anchor}" nije pronađena'
+    cands = candidates(text) or candidates(text, bare=True)
+    picks = []
+    for i, s0 in enumerate(spots):
+        end = spots[i + 1] if i + 1 < len(spots) else s0 + WINDOW
+        row = [v for pos, v, _ in cands if s0 <= pos < min(end, s0 + WINDOW)]
+        if len(row) >= column: picks.append(row[column - 1])
+    if not picks: return None, f'nema cena u redovima "{anchor}"'
+    return min(picks), f'{column}. cena u redovima "{anchor}" ({len(picks)} redova)'
 
 
 def flat(s):
@@ -311,11 +364,11 @@ def propose_url(f, site, match, siblings=()):
         _, _, links = f.get(site)
     except Exception:  # noqa: BLE001
         pass
-    cands = [(score_link(h, t, key, prefer, siblings), h) for h, t in links if host in h]
+    cands = [(score_link(h, t, key, prefer, siblings), h) for h, t, *_ in links if host in h]
     cands += [(score_link(u, '', key, prefer, siblings), u) for u in f.sitemap_urls(site) if host in u and (not prefer or prefer in u)]
     cands = [c for c in cands if c[0] is not None]
     best = max(cands)[1] if cands else None
-    pricelist = next((h for h, t in links if host in h and re.search(r'cenovnik|cene|price', norm(h + ' ' + t))), None)
+    pricelist = next((h for h, t, *_ in links if host in h and re.search(r'cenovnik|cene|price', norm(h + ' ' + t))), None)
     return best, pricelist
 
 # ---------------------------------------------------------------- sources: importer + dealers
@@ -324,7 +377,7 @@ def err(ex):
     return f'greška ({ex.__class__.__name__}: {(str(ex).splitlines() or [""])[0][:80]})'
 
 
-def read_page(f, url, match, longer, column=None):
+def read_page(f, url, match, longer, column=None, anchor=None, pdf_label=None):
     """-> (state, price, how)  state: ok | not-found | blocked
     An HTML page without a price is searched for linked PDF price lists that name the model (or are called
     cenovnik / pricelist), so url can point at a stable "cenovnici" page while the PDF file names change."""
@@ -336,13 +389,19 @@ def read_page(f, url, match, longer, column=None):
     if 'request is being verified' in text or len(text.strip()) < 200:
         return 'blocked', None, 'sajt blokira automatsku proveru'
     multi = kind == 'pdf' or bool(re.search(r'cenovnik|cenovnici|price', url, re.I))
-    price, how = find_price(text, match, multi, longer, column)
+    price, how = (None, 'cenovnik se bira po naslovu') if pdf_label and kind == 'html' else find_price(text, match, multi, longer, column, anchor)
     if price or kind != 'html':
         return ('ok' if price else 'not-found'), price, f'{kind}, {how}'
     key = norm(match).split()
     pdfs = []
-    for h, t in links:
-        if '.pdf' not in h.lower() or h in pdfs: continue
+    for h, t, *ctx in links:
+        if h in pdfs: continue
+        if pdf_label:   # the card heading must be exactly this model ("NOVI Ë-C3 AIRCROSS"), not just contain it
+            head = ' '.join(w for w in flat(ctx[0] if ctx else '').split() if w != 'novi')
+            want = ' '.join(w for w in flat(pdf_label).split() if w != 'novi')
+            if head == want and re.search(r'cenovnik|cenovnici|cene|price', norm(h + ' ' + t)): pdfs.append(h)   # not "katalog"
+            continue
+        if '.pdf' not in h.lower(): continue
         hay = norm(h + ' ' + t)
         if has_all(hay, key) or (len(key) > 1 and has_all(hay.replace(' ', ''), [''.join(key)])):
             pdfs.append(h)
@@ -351,12 +410,15 @@ def read_page(f, url, match, longer, column=None):
             _, ptext, _ = f.get(pdf)
         except Exception:  # noqa: BLE001
             continue
-        p2, how2 = find_price(ptext, match, True, longer, column)
-        if p2: return 'ok', p2, f'pdf sa stranice ({pdf.rsplit("/", 1)[-1]}), {how2}'
+        p2, how2 = find_price(ptext, match, True, longer, column, anchor)
+        if p2:
+            f.price_url[url] = pdf
+            return 'ok', p2, f'pdf sa stranice ({pdf.rsplit("/", 1)[-1]}), {how2}'
+    if pdf_label and not pdfs: return 'not-found', None, f'nema dugmeta za cenovnik ispod naslova "{pdf_label}"'
     return 'not-found', None, f'{kind}, {how}' + (f'; pregledano PDF-ova: {len(pdfs[:3])}' if pdfs else '')
 
 
-def source(f, label, url, site, match, longer, column=None):
+def source(f, label, url, site, match, longer, column=None, anchor=None, pdf_label=None):
     """One source (importer or a dealer). url empty -> look for the model on site. Never raises."""
     out = {'src': label, 'url': url, 'proposed': False, 'state': 'no-url', 'price': None, 'how': ''}
     try:
@@ -370,7 +432,7 @@ def source(f, label, url, site, match, longer, column=None):
                 out['how'] = 'model nije pronađen na sajtu'
                 return out
             out.update(url=url, proposed=True)
-        out['state'], out['price'], out['how'] = read_page(f, url, match, longer, column)
+        out['state'], out['price'], out['how'] = read_page(f, url, match, longer, column, anchor, pdf_label)
     except Exception as ex:  # noqa: BLE001  one bad site never stops the run
         out.update(state='not-found', how=err(ex))
     return out
@@ -394,6 +456,39 @@ def dealer_sites(importer_site):
             h = host_of(w)
             if h and h != own and h not in seen: seen[h] = w if '://' in w else 'https://' + w
         out[slug] = seen
+    return out
+
+
+EVIDENCE = os.path.join(ROOT, 'scripts', 'dokazi')
+
+
+def save_evidence(f, mid, srcs):
+    """For every source that gave a price: the screenshot / PDF copy in scripts/dokazi/<date>/, file name in the source."""
+    day = os.path.join(EVIDENCE, TODAY)
+    for s in srcs:
+        if not s['price'] or not s['url']: continue
+        url = f.price_url.get(s['url'], s['url'])
+        ev = f.evidence.get(url)
+        if not ev: continue
+        os.makedirs(day, exist_ok=True)
+        name = f'{mid}__{re.sub(r"[^a-z0-9.-]+", "-", s["src"].lower())}.{ev[0]}'
+        with open(os.path.join(day, name), 'wb') as fh: fh.write(ev[1])
+        s['evidence'] = f'{TODAY}/{name}'
+
+
+def archive(urls):
+    """Ask the Internet Archive (Wayback Machine) to snapshot each page: an independent, dated copy.
+    -> {url: archived copy url}. Slow on purpose (one request per ~10 s); failures are only reported."""
+    out = {}
+    for u in urls:
+        try:
+            req = urllib.request.Request('https://web.archive.org/save/' + u, headers={'User-Agent': UA})
+            with urllib.request.urlopen(req, timeout=120) as r:
+                loc = r.headers.get('Content-Location') or ''
+                out[u] = ('https://web.archive.org' + loc) if loc.startswith('/web/') else r.geturl()
+        except Exception as ex:  # noqa: BLE001
+            out[u] = 'nije arhivirano: ' + err(ex)
+        time.sleep(10)
     return out
 
 
@@ -464,7 +559,7 @@ def main():
             longer = [n for n in names.get(brand, ()) if flat(n).startswith(flat(e['match']) + ' ')
                       and brand + '-' + '-'.join(flat(n).split()) != mid]   # not this model's own full name
 
-            srcs = [source(f, 'uvoznik', e.get('url'), sites.get(brand), e['match'], longer, e.get('column'))]
+            srcs = [source(f, 'uvoznik', e.get('url'), sites.get(brand), e['match'], longer, e.get('column'), e.get('row_anchor'), e.get('pdf_label'))]
             if not a.no_dealers:
                 known = e.setdefault('dealer_urls', {})
                 for host, site in dealers.get(brand, {}).items():
@@ -474,8 +569,23 @@ def main():
                     if s['src'] == 'uvoznik': e['url'] = s['url']
                     else: e['dealer_urls'][s['src']] = s['url']
 
+            save_evidence(f, mid, srcs)
             price, status, apply, agreement = decide(srcs, old)
             notes = []
+            lock = e.get('lock')
+            if lock:   # price set by hand: report what the sources say, never change it
+                lp = lock['price_eur']
+                found = price
+                notes.append(f'RUČNO ZAKLJUČANO {eur(lp)} (od {lock.get("since", "?")})'
+                             + (f'; izvori kažu {eur(found)}' if found and not same(found, lp) else '; izvori se slažu' if found else ''))
+                status = 'review' if found and not same(found, lp) else 'ok'
+                e.update(price_eur=lp, checked=TODAY)
+                e['note'] = '; '.join(n for n in [agreement] + notes if n)
+                e['status'] = status
+                rows.append({'id': mid, 'name': e['name'], 'old': old, 'new': lp, 'status': status, 'applied': False,
+                             'agreement': agreement, 'notes': '; '.join(notes), 'sources': srcs})
+                print(f'{mid:32} {status:10} {old or "-":>8} -> {lp:>8}  {e["note"]}')
+                continue
             if price is None:
                 imp = srcs[0]
                 status = {'blocked': 'blocked', 'no-url': 'no-url'}.get(imp['state'], 'not-found')
@@ -488,7 +598,8 @@ def main():
                     notes.append(f'promena {100 * (price - old) / old:+.0f} % (više od {MAX_CHANGE:.0%}), NIJE primenjeno')
             if apply:
                 if price != old: e['changed'] = TODAY
-                e.update(price_eur=price, checked=TODAY)
+                imp = next((x['price'] for x in srcs if x['src'] == 'uvoznik' and x['price']), None)
+                e.update(price_eur=price, checked=TODAY, source='uvoznik' if imp and same(imp, price) else 'dileri')
             elif status == 'review' and price is not None:
                 notes.append('nije primenjeno, ostaje stara cena' if 'NIJE' not in ' '.join(notes) else '')
             e['status'] = status
@@ -496,6 +607,13 @@ def main():
             rows.append({'id': mid, 'name': e['name'], 'old': old, 'new': price, 'status': status, 'applied': apply,
                          'agreement': agreement, 'notes': '; '.join(n for n in notes if n), 'sources': srcs})
             print(f'{mid:32} {status:10} {old or "-":>8} -> {price or "-":>8}  {e["note"]}')
+        if os.environ.get('ARCHIVE', '1') != '0' and not a.dry_run:
+            urls = sorted({f.price_url.get(s['url'], s['url']) for r in rows for s in r['sources'] if s['price'] and s['url']})
+            print(f'Arhiviranje {len(urls)} stranica u Internet Archive…')
+            arch = archive(urls)
+            for r in rows:
+                for s in r['sources']:
+                    if s['price'] and s['url']: s['archive'] = arch.get(f.price_url.get(s['url'], s['url']))
         report(rows, f)
     finally:
         f.close()
@@ -533,10 +651,17 @@ def report(rows, f=None):
         run = f'{os.environ["GITHUB_SERVER_URL"]}/{os.environ["GITHUB_REPOSITORY"]}/actions/runs/{os.environ["GITHUB_RUN_ID"]}'
 
     # markdown (pull request body and the Actions summary)
-    src_md = lambda r: '<br>'.join(f'{s["src"]}: ' + (f'[{eur(s["price"])}]({s["url"]})' if s['price'] else
+    def proof_md(s):
+        bits = []
+        if s.get('evidence') and run: bits.append(f'dokaz: `{s["evidence"]}`')
+        a = s.get('archive') or ''
+        if a.startswith('http'): bits.append(f'[arhiva]({a})')
+        return (' (' + ', '.join(bits) + ')') if bits else ''
+    src_md = lambda r: '<br>'.join(f'{s["src"]}: ' + (f'[{eur(s["price"])}]({s["url"]}){proof_md(s)}' if s['price'] else
                                    (s['how'] or s['state']) + (f' ([stranica]({s["url"]}))' if s['url'] else '')) for s in r['sources'])
     md = [f'## Provera cena {TODAY}', '', f'**{summary}**', '']
-    if run: md += [f'Tabela za štampu (PDF i HTML): {run} → Artifacts → **izvestaj-cene**', '']
+    if run: md += [f'Tabela za štampu (PDF i HTML) i dokazi (screenshotovi, kopije PDF cenovnika): {run} → Artifacts → **izvestaj-cene**. '
+                   f'Dokazi se trajno čuvaju i na grani `dokazi-cena`, u folderu `{TODAY}`. „arhiva“ = nezavisna kopija u Internet Archive.', '']
     for title, part in gs:
         if not part: continue
         md += [f'### {title}', '', '| Model | Staro | Novo | Izvori | Slaganje / napomena |', '|---|---:|---:|---|---|']
@@ -549,7 +674,10 @@ def report(rows, f=None):
     # HTML table (and PDF from it)
     E = htmllib.escape
     def src_html(r):
-        return ''.join(f'<div><b>{E(s["src"])}</b>: ' + (f'<a href="{E(s["url"])}">{eur(s["price"])}</a>' if s['price'] else f'<span class="m">{E(s["how"] or s["state"])}</span>'
+        return ''.join(f'<div><b>{E(s["src"])}</b>: ' + (f'<a href="{E(s["url"])}">{eur(s["price"])}</a>'
+                                                         + (f' <span class="m">dokaz: {E(s["evidence"])}</span>' if s.get('evidence') else '')
+                                                         + (f' <a class="m" href="{E(s["archive"])}">arhiva</a>' if (s.get('archive') or '').startswith('http') else '')
+                                                         if s['price'] else f'<span class="m">{E(s["how"] or s["state"])}</span>'
                                                          + (f' <a class="m" href="{E(s["url"])}">stranica</a>' if s['url'] else '')) + '</div>'
                        for s in r['sources'])
     body = []

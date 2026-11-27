@@ -208,7 +208,8 @@
       "checked": "2026-10-15",
       "changed": "2026-10-15",
       "status": "ok",
-      "note": "početni podatak iz brands.json"
+      "note": "početni podatak iz brands.json",
+      "source": "uvoznik"
     },
     "byd-atto-3-evo": {
       "name": "BYD Atto 3 Evo",
@@ -218,7 +219,8 @@
       "checked": "2026-10-15",
       "changed": "2026-10-15",
       "status": "ok",
-      "note": "početni podatak iz brands.json"
+      "note": "početni podatak iz brands.json",
+      "source": "uvoznik"
     },
     "byd-dolphin-surf": {
       "name": "BYD Dolphin Surf",
@@ -228,7 +230,8 @@
       "checked": "2026-10-15",
       "changed": "2026-10-15",
       "status": "ok",
-      "note": "početni podatak iz brands.json"
+      "note": "početni podatak iz brands.json",
+      "source": "uvoznik"
     },
     "byd-seal": {
       "name": "BYD Seal",
@@ -238,7 +241,8 @@
       "checked": "2026-10-15",
       "changed": "2026-10-15",
       "status": "ok",
-      "note": "početni podatak iz brands.json"
+      "note": "početni podatak iz brands.json",
+      "source": "uvoznik"
     },
     "byd-sealion-7": {
       "name": "BYD Sealion 7",
@@ -248,7 +252,8 @@
       "checked": "2026-10-15",
       "changed": "2026-10-15",
       "status": "ok",
-      "note": "početni podatak iz brands.json"
+      "note": "početni podatak iz brands.json",
+      "source": "uvoznik"
     },
     "changan-deepal-s05": {
       "name": "Changan Deepal S05",
@@ -258,7 +263,8 @@
       "checked": "2026-10-15",
       "changed": "2026-10-15",
       "status": "ok",
-      "note": "početni podatak iz brands.json"
+      "note": "početni podatak iz brands.json",
+      "source": "uvoznik"
     },
     "changan-deepal-s07": {
       "name": "Changan Deepal S07",
@@ -273,52 +279,77 @@
     "citroen-e-c3": {
       "name": "Citroën ë-C3",
       "match": "ë-C3",
-      "url": null,
-      "price_eur": null,
-      "checked": null,
-      "changed": null,
-      "status": "new",
-      "note": null
+      "url": "https://www.citroen.rs/alati/preuzmite-cenovnik.html",
+      "price_eur": 26890,
+      "checked": "2026-11-27",
+      "changed": "2026-11-27",
+      "status": "ok",
+      "note": "ručno zaključano",
+      "lock": {
+        "price_eur": 26890,
+        "since": "2026-11-27",
+        "note": "ručno ispravio Bojan; citroen.rs stranica modela kaže \"već od 26.690 €\""
+      },
+      "pdf_label": "Ë-C3",
+      "row_anchor": "ELEKTRIČNI MOTOR",
+      "column": 2
     },
     "citroen-e-c3-aircross": {
       "name": "Citroën ë-C3 Aircross",
       "match": "ë-C3 Aircross",
-      "url": null,
-      "price_eur": null,
-      "checked": null,
-      "changed": null,
-      "status": "new",
-      "note": null
+      "url": "https://www.citroen.rs/alati/preuzmite-cenovnik.html",
+      "price_eur": 28990,
+      "checked": "2026-11-27",
+      "changed": "2026-11-27",
+      "status": "ok",
+      "note": "ručno zaključano",
+      "lock": {
+        "price_eur": 28990,
+        "since": "2026-11-27",
+        "note": "ručno ispravio Bojan; skripta je sa citroen.rs pročitala 28.490 €"
+      },
+      "pdf_label": "NOVI Ë-C3 AIRCROSS",
+      "row_anchor": "ELEKTRIČNI MOTOR",
+      "column": 2
     },
     "citroen-e-c4": {
       "name": "Citroën ë-C4",
       "match": "ë-C4",
-      "url": null,
+      "url": "https://www.citroen.rs/alati/preuzmite-cenovnik.html",
       "price_eur": null,
       "checked": null,
       "changed": null,
       "status": "new",
-      "note": null
+      "note": null,
+      "pdf_label": "Ë-C4",
+      "row_anchor": "ELEKTRIČNI MOTOR",
+      "column": 2
     },
     "citroen-e-c4-x": {
       "name": "Citroën ë-C4 X",
       "match": "ë-C4 X",
-      "url": null,
+      "url": "https://www.citroen.rs/alati/preuzmite-cenovnik.html",
       "price_eur": null,
       "checked": null,
       "changed": null,
       "status": "new",
-      "note": null
+      "note": null,
+      "pdf_label": "Ë-C4 X",
+      "row_anchor": "ELEKTRIČNI MOTOR",
+      "column": 2
     },
     "citroen-e-c5-aircross": {
       "name": "Citroën ë-C5 Aircross",
       "match": "ë-C5 Aircross",
-      "url": null,
+      "url": "https://www.citroen.rs/alati/preuzmite-cenovnik.html",
       "price_eur": null,
       "checked": null,
       "changed": null,
       "status": "new",
-      "note": null
+      "note": null,
+      "pdf_label": "Ë-C5 AIRCROSS",
+      "row_anchor": "ELEKTRIČNI MOTOR",
+      "column": 2
     },
     "cupra-raval": {
       "name": "Cupra Raval",
@@ -628,7 +659,8 @@
       "checked": "2026-10-15",
       "changed": "2026-10-15",
       "status": "ok",
-      "note": "početni podatak iz brands.json"
+      "note": "početni podatak iz brands.json",
+      "source": "uvoznik"
     },
     "mazda-6e": {
       "name": "Mazda 6e",

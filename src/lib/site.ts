@@ -129,12 +129,16 @@ export const byRangeDesc = (ids: string[]) => [...ids].sort((a, b) => (models[b]
 
 /** Price footnote: shown only when a price exists and was checked within PRICE_MAX_AGE_DAYS (scripts/update_prices.py, monthly). */
 export const PRICE_MAX_AGE_DAYS = 120;
-export interface Price { eur: number; checked: string; changed: string | null }
+export interface Price { eur: number; checked: string; changed: string | null; source: 'uvoznik' | 'dileri' | null }
 export function priceOf(id: string, today = new Date()): Price | null {
   const p = (pricesJson as any).models[id];
   if (!p || !p.price_eur || !p.checked) return null;
+  // a price set by hand ("lock") is dated by the day it was set, not by the monthly check
+  const day: string = p.lock?.since || p.checked;
   const age = (today.getTime() - new Date(p.checked + 'T00:00:00Z').getTime()) / 86400000;
-  return age <= PRICE_MAX_AGE_DAYS ? { eur: p.price_eur, checked: p.checked, changed: p.changed ?? null } : null;
+  if (age > PRICE_MAX_AGE_DAYS) return null;
+  const source = p.lock ? null : p.source === 'dileri' ? 'dileri' : p.source === 'uvoznik' || !p.source ? 'uvoznik' : null;
+  return { eur: p.lock?.price_eur ?? p.price_eur, checked: day, changed: p.changed ?? null, source };
 }
 /** Day the model page last changed in substance (price change), for the sitemap; null = unknown. */
 export const changedOf = (id: string): string | null => (pricesJson as any).models[id]?.changed ?? null;
