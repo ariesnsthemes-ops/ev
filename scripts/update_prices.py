@@ -16,6 +16,8 @@ Per model, in src/data/prices.json -> models:
              on the brand's site (_brand_sites), saves the page it found and marks the model "review".
   dealer_urls {dealer host: page} found the same way on the dealer sites; fix or delete by hand if wrong.
   match      the model name as the importer writes it (used to find the right price on pages with several models)
+  column     optional: in a price list with several price columns, which price in the model's row to take
+             (Renault: 2 = "cena sa PDV-om"; the 1st is without VAT)
   price_eur  lowest "from" price in EUR
   checked    day of the last successful check (shown on the site as "Cena proverena")
   changed    day the price last changed (used as lastmod in the sitemap)
@@ -214,9 +216,14 @@ def to_int(s):
     return int(re.sub(r'\D', '', s))
 
 
-def candidates(text):
+BARE = re.compile(r'(?<![\d.,])(\d{1,3}(?:[.\u00a0\u202f ]\d{3})+)(?:,\d{2})?(?![\d.,]?\d)')
+
+
+def candidates(text, bare=False):
+    """Prices with € / EUR. bare=True (price lists whose header says the currency once, e.g. Hyundai):
+    also "45.990" without a currency sign."""
     out = []
-    for rx in (EUR_AFTER, EUR_BEFORE):
+    for rx in ((EUR_AFTER, EUR_BEFORE, BARE) if bare else (EUR_AFTER, EUR_BEFORE)):
         for m in rx.finditer(text):
             v = to_int(m.group(1))
             if not MIN_EUR <= v <= MAX_EUR: continue
@@ -226,13 +233,15 @@ def candidates(text):
     return sorted(set(out))
 
 
-def find_price(text, match, multi, longer=()):
+def find_price(text, match, multi, longer=(), column=None):
     """Lowest plausible EUR price.
     Page about one model: the lowest price, preferring prices after "od"/"cena".
     Page with several models (price list, PDF, brand page): for each place the model name appears, the first price
     after it (within WINDOW characters); then the lowest of those. Names of longer sibling models are skipped
     ("ë-C3" does not match "ë-C3 Aircross")."""
     cands = candidates(text)
+    if not cands and multi and re.search(r'€|\beur\b|evr', text, re.I) and not RSD.search(text):
+        cands = candidates(text, bare=True)   # price list with the currency only in the header
     if not cands:
         rsd = [to_int(m.group(1)) for m in RSD.finditer(text) if to_int(m.group(1)) > 500000]
         return None, ('samo RSD: ' + ', '.join(f'{v:,}'.replace(',', '.') for v in sorted(rsd)[:3])) if rsd else 'nema cene u EUR'
@@ -241,8 +250,12 @@ def find_price(text, match, multi, longer=()):
         firsts = []
         for s in spots:
             after = [c for c in cands if 0 <= c[0] - s <= WINDOW]
-            if after: firsts.append(after[0][1])
-        if firsts: return min(firsts), 'prva cena posle naziva modela'
+            if column:   # price lists with several price columns (e.g. Renault: without VAT, with VAT, bonus…): the Nth price in the row
+                eol = text.find('\n', s)
+                row = [c for c in after if eol < 0 or c[0] < eol] or after
+                if len(row) >= column: firsts.append(row[column - 1][1])
+            elif after: firsts.append(after[0][1])
+        if firsts: return min(firsts), (f'{column}. cena u redu modela' if column else 'prva cena posle naziva modela')
         if multi: return None, f'model "{match}" nije pronađen pored cene'
     hinted = [c for c in cands if c[2]]
     return min(v for _, v, _ in (hinted or cands)), ('uz "od/cena"' if hinted else 'najniža cena na strani')
@@ -311,21 +324,39 @@ def err(ex):
     return f'greška ({ex.__class__.__name__}: {(str(ex).splitlines() or [""])[0][:80]})'
 
 
-def read_page(f, url, match, longer):
-    """-> (state, price, how)  state: ok | not-found | blocked"""
+def read_page(f, url, match, longer, column=None):
+    """-> (state, price, how)  state: ok | not-found | blocked
+    An HTML page without a price is searched for linked PDF price lists that name the model (or are called
+    cenovnik / pricelist), so url can point at a stable "cenovnici" page while the PDF file names change."""
     if not f.allowed(url): return 'blocked', None, 'robots.txt ne dozvoljava'
     try:
-        kind, text, _ = f.get(url)
+        kind, text, links = f.get(url)
     except Exception as ex:  # noqa: BLE001
         return 'not-found', None, err(ex)
     if 'request is being verified' in text or len(text.strip()) < 200:
         return 'blocked', None, 'sajt blokira automatsku proveru'
-    multi = kind == 'pdf' or bool(re.search(r'cenovnik|price', url, re.I))
-    price, how = find_price(text, match, multi, longer)
-    return ('ok' if price else 'not-found'), price, f'{kind}, {how}'
+    multi = kind == 'pdf' or bool(re.search(r'cenovnik|cenovnici|price', url, re.I))
+    price, how = find_price(text, match, multi, longer, column)
+    if price or kind != 'html':
+        return ('ok' if price else 'not-found'), price, f'{kind}, {how}'
+    key = norm(match).split()
+    pdfs = []
+    for h, t in links:
+        if '.pdf' not in h.lower() or h in pdfs: continue
+        hay = norm(h + ' ' + t)
+        if has_all(hay, key) or (len(key) > 1 and has_all(hay.replace(' ', ''), [''.join(key)])):
+            pdfs.append(h)
+    for pdf in pdfs[:3]:
+        try:
+            _, ptext, _ = f.get(pdf)
+        except Exception:  # noqa: BLE001
+            continue
+        p2, how2 = find_price(ptext, match, True, longer, column)
+        if p2: return 'ok', p2, f'pdf sa stranice ({pdf.rsplit("/", 1)[-1]}), {how2}'
+    return 'not-found', None, f'{kind}, {how}' + (f'; pregledano PDF-ova: {len(pdfs[:3])}' if pdfs else '')
 
 
-def source(f, label, url, site, match, longer):
+def source(f, label, url, site, match, longer, column=None):
     """One source (importer or a dealer). url empty -> look for the model on site. Never raises."""
     out = {'src': label, 'url': url, 'proposed': False, 'state': 'no-url', 'price': None, 'how': ''}
     try:
@@ -339,7 +370,7 @@ def source(f, label, url, site, match, longer):
                 out['how'] = 'model nije pronađen na sajtu'
                 return out
             out.update(url=url, proposed=True)
-        out['state'], out['price'], out['how'] = read_page(f, url, match, longer)
+        out['state'], out['price'], out['how'] = read_page(f, url, match, longer, column)
     except Exception as ex:  # noqa: BLE001  one bad site never stops the run
         out.update(state='not-found', how=err(ex))
     return out
@@ -433,7 +464,7 @@ def main():
             longer = [n for n in names.get(brand, ()) if flat(n).startswith(flat(e['match']) + ' ')
                       and brand + '-' + '-'.join(flat(n).split()) != mid]   # not this model's own full name
 
-            srcs = [source(f, 'uvoznik', e.get('url'), sites.get(brand), e['match'], longer)]
+            srcs = [source(f, 'uvoznik', e.get('url'), sites.get(brand), e['match'], longer, e.get('column'))]
             if not a.no_dealers:
                 known = e.setdefault('dealer_urls', {})
                 for host, site in dealers.get(brand, {}).items():

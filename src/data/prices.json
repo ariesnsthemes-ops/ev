@@ -423,7 +423,7 @@
     "hyundai-inster": {
       "name": "Hyundai Inster",
       "match": "Inster",
-      "url": null,
+      "url": "https://www.hyundai.rs/upload/document/inster_20260313_120434.pdf",
       "price_eur": null,
       "checked": null,
       "changed": null,
@@ -433,7 +433,7 @@
     "hyundai-ioniq-5": {
       "name": "Hyundai IONIQ 5",
       "match": "IONIQ 5",
-      "url": null,
+      "url": "https://hyundai.rs/upload/document/ioniq_5.pdf",
       "price_eur": null,
       "checked": null,
       "changed": null,
@@ -443,7 +443,7 @@
     "hyundai-ioniq-6": {
       "name": "Hyundai IONIQ 6",
       "match": "IONIQ 6",
-      "url": null,
+      "url": "https://hyundai.rs/upload/document/ioniq_6.pdf",
       "price_eur": null,
       "checked": null,
       "changed": null,
@@ -822,28 +822,30 @@
     },
     "renault-4-e-tech": {
       "name": "Renault 4 E-Tech",
-      "match": "4 E-Tech",
-      "url": null,
+      "match": "Renault 4",
+      "url": "https://cdn.group.renault.com/ren/rs/cenovnik/renault4-pricelist.pdf.asset.pdf/955fb7ad89.pdf",
       "price_eur": null,
       "checked": null,
       "changed": null,
       "status": "new",
-      "note": null
+      "note": null,
+      "column": 2
     },
     "renault-5-e-tech": {
       "name": "Renault 5 E-Tech",
-      "match": "5 E-Tech",
-      "url": null,
+      "match": "Renault 5",
+      "url": "https://www.renault.rs/CountriesData/Serbia/images/pdf/pricelist/renault-5-pricelist.pdf",
       "price_eur": null,
       "checked": null,
       "changed": null,
       "status": "new",
-      "note": null
+      "note": null,
+      "column": 2
     },
     "renault-twingo-e-tech": {
       "name": "Renault Twingo E-Tech",
-      "match": "Twingo E-Tech",
-      "url": null,
+      "match": "Twingo",
+      "url": "https://www.renault.rs/CountriesData/Serbia/images/pdf/pricelist/twingo-pricelist.pdf",
       "price_eur": null,
       "checked": null,
       "changed": null,
