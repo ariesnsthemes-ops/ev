@@ -47,6 +47,7 @@ npm run switch -- AD_PLACEHOLDER_TEXT off  # photos only (current)
 | Model descriptions, battery and range text; optional `intro` (hero paragraphs), `gearbox` and `faq` (`range`, `battery`, `buy`, `hybrid` answers) replace the generated texts, see Geely E5 | `src/data/model_content.json` |
 | Dimensions and seats (official sources only) | `src/data/model_dims.json` |
 | Fuel prices for the calculator | `src/data/gorivo.json` |
+| Car "from" prices for the footnote on model pages (monthly check) | `src/data/prices.json`, `scripts/update_prices.py`, `.github/workflows/cene-automobila.yml` |
 | Charger data (Open Charge Map, OpenStreetMap, extra) | `src/data/chargers-*.json`, `src/data/chargers-osm.geojson` |
 | Photos, logos, icons, stylesheet, MapLibre | `public/img`, `public/logos`, `public/assets` |
 | Cloudflare headers | written at build time by `scripts/html-polish.mjs` (`X-Robots-Tag` follows `NOINDEX`) |
@@ -114,3 +115,24 @@ except the homepage, where the old build had accidentally inlined the Dongfeng a
 logos as base64 (the same SVG files with Windows line endings) – the Astro build links
 `logos/dongfeng.svg` and `logos/leapmotor.svg` like every other page. `BUILD_DATE=YYYY-MM-DD`
 pins the date written into the sitemap and the data exports.
+
+## Car prices (footnote on model pages)
+
+Every model page can show one light-grey line at the very bottom: "Početna cena … od X € (prema zvaničnom sajtu
+uvoznika). Cena proverena: [datum] …". The price is in `src/data/prices.json` and is shown only when it was checked
+within the last 120 days; older prices disappear on their own. With a price, the page title also gets "cena" (without the number).
+
+`scripts/update_prices.py` reads the prices from the importers' sites (model page, price-list page or PDF) and from
+the dealer sites listed per brand in `brand_content.json`, and cross-checks them: a price counts as confirmed when the
+importer and at least one dealer agree (or two dealers, when the importer shows none). Disagreements are not applied.
+GitHub runs it on the first Wednesday of the month (Actions > Cene automobila) and opens a pull request with the report
+table: what changed, what to check, what was not found. The same table as PDF: the run's page > Artifacts > izvestaj-cene.
+Merge the pull request and Cloudflare publishes the site. More dealer websites in `brand_content.json` = more cross-checks.
+
+- A model without `url`: the script looks for it on the brand's site (`_brand_sites`), saves the page it found
+  and marks it "review": check the address in the pull request.
+- A change larger than 15 % is NOT applied (status "review"); fix the url or the price by hand if it is real.
+- Wrong page or wrong name: edit `url` or `match` for that model in `prices.json`.
+- Local run: `pip install playwright pypdf && python3 -m playwright install chromium`, then
+  `python3 scripts/update_prices.py --brand byd --dry-run` (prints the report, writes nothing).
+- When the monthly runs have proved reliable, set `AUTO_PUBLISH: 'true'` in the workflow: it then publishes without a pull request.

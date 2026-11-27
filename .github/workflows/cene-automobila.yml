@@ -1,0 +1,98 @@
+# Monthly check of the car "from" prices shown in the footnote of every model page.
+# Runs on the first Wednesday of the month at about 6:20 (Belgrade, winter) / 7:20 (summer).
+# GitHub cron cannot say "first Wednesday", so it starts every Wednesday and stops at once after the 7th.
+#
+# The run reads every importer's site and the dealers' sites (scripts/update_prices.py), cross-checks the prices,
+# updates src/data/prices.json and OPENS A PULL REQUEST with the report table: nothing goes live until you merge it
+# (Pull requests > "Cene automobila"). The same table as PDF/HTML: the run's page > Artifacts > izvestaj-cene.
+# Once the checks have proved reliable, set AUTO_PUBLISH to 'true' below: the run then commits straight to the
+# main branch like the fuel-price check, and Cloudflare publishes the site.
+#
+# Manual run at any time: Actions > Cene automobila > Run workflow.
+# Needed once: Settings > Actions > General > Workflow permissions:
+#   "Read and write permissions" + "Allow GitHub Actions to create and approve pull requests".
+name: Cene automobila
+
+on:
+  schedule:
+    - cron: '20 5 * * 3'     # every Wednesday 05:20 UTC; the first step lets only the first Wednesday through
+  workflow_dispatch: {}
+
+env:
+  AUTO_PUBLISH: 'false'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: cene-automobila
+  cancel-in-progress: false
+
+jobs:
+  prices:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Only the first Wednesday of the month (manual runs always go)
+        id: gate
+        run: |
+          if [ "${{ github.event_name }}" = "schedule" ] && [ "$(date -u +%-d)" -gt 7 ]; then
+            echo "Nije prva sreda u mesecu, preskačem."; echo "go=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "go=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/checkout@v4
+        if: steps.gate.outputs.go == 'true'
+
+      - uses: actions/setup-python@v5
+        if: steps.gate.outputs.go == 'true'
+        with:
+          python-version: '3.12'
+
+      - name: Install Playwright (Chromium) and the PDF reader
+        if: steps.gate.outputs.go == 'true'
+        run: |
+          pip install playwright==1.49.1 pypdf==5.1.0
+          python3 -m playwright install --with-deps chromium
+
+      - name: Check prices
+        if: steps.gate.outputs.go == 'true'
+        run: python3 scripts/update_prices.py
+
+      - name: Keep the printable report (PDF + HTML) with the run
+        if: steps.gate.outputs.go == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: izvestaj-cene
+          path: |
+            scripts/prices-report.pdf
+            scripts/prices-report.html
+          retention-days: 90
+
+      - name: Open a pull request with the report
+        if: steps.gate.outputs.go == 'true' && env.AUTO_PUBLISH != 'true'
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: cene-automobila
+          delete-branch: true
+          add-paths: |
+            src/data/prices.json
+            scripts/prices-report.md
+          commit-message: 'Cene automobila: mesečna provera'
+          title: 'Cene automobila: provera ${{ github.run_started_at }}'
+          body-path: scripts/prices-report.md
+          committer: evomobil cene automobila <office@evomobil.rs>
+          author: evomobil cene automobila <office@evomobil.rs>
+
+      - name: Commit and push straight away (AUTO_PUBLISH)
+        if: steps.gate.outputs.go == 'true' && env.AUTO_PUBLISH == 'true'
+        run: |
+          if git diff --quiet -- src/data/prices.json; then echo "Nema promena."; exit 0; fi
+          git config user.name "evomobil cene automobila"
+          git config user.email "office@evomobil.rs"
+          git add src/data/prices.json scripts/prices-report.md
+          git commit -m "Cene automobila: mesečna provera"
+          git pull --rebase --autostash
+          git push

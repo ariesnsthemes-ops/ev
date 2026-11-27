@@ -3,3 +3,8 @@ node_modules/
 # Cloudflare builds the site itself ("npm run build" -> site/), so the built folder is not committed
 site/
 /Claude outputs
+
+# price check report (printable copies; the .md goes into the pull request)
+scripts/prices-report.html
+scripts/prices-report.pdf
+__pycache__/

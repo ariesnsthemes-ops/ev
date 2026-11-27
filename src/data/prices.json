@@ -1,0 +1,1014 @@
+{
+  "_about": "Početne cene električnih modela za fusnotu na stranicama modela. Popunjava scripts/update_prices.py (GitHub Actions: Cene automobila, prva sreda u mesecu). Ručno se menjaju samo url (stranica modela ili cenovnik, može i PDF) i match (naziv modela kako ga piše uvoznik). price_eur = najniža početna cena u EUR; checked = dan poslednje provere; changed = dan kada se cena poslednji put promenila; status: ok | review (promena veća od dozvoljene, čeka ručnu proveru) | not-found | blocked | no-url | new. Fusnota se prikazuje samo ako postoji cena i ako je checked mlađi od 120 dana.",
+  "_brand_sites": {
+    "byd": "https://byd-auto.rs/",
+    "changan": "https://changanbalkans.com/rs/",
+    "dongfeng": "https://chinamotor.rs/",
+    "foton": "https://fotonserbia.rs/",
+    "geely": "https://www.geelyauto.rs/",
+    "jac": "https://jacmotors.rs/",
+    "jmev": "https://www.jmev.rs/",
+    "leapmotor": "https://www.leapmotor.net/rs",
+    "lynk-co": "https://www.lynkco-see.com/rs/",
+    "mg": "https://www.mgmotor.rs/",
+    "audi": "https://www.audi.rs/",
+    "bmw": "https://www.bmw.rs/",
+    "cupra": "https://www.cupraofficial.rs/",
+    "dacia": "https://www.dacia.rs/",
+    "ford": "https://www.ford.rs/",
+    "kia": "https://www.kia.com/rs/",
+    "mazda": "https://www.mazda.rs/",
+    "porsche": "https://www.porsche.rs/",
+    "renault": "https://www.renault.rs/",
+    "suzuki": "https://www.suzuki.rs/",
+    "toyota": "https://www.toyota.rs/",
+    "volkswagen": "https://www.volkswagen.rs/",
+    "hyundai": "https://www.hyundai.rs/",
+    "citroen": "https://www.citroen.rs/",
+    "mini": "https://www.mini.rs/",
+    "opel": "https://www.opel.rs/",
+    "peugeot": "https://www.peugeot.rs/",
+    "skoda": "https://www.skoda.rs/",
+    "volvo": "https://www.volvocars.com/rs/"
+  },
+  "_brand_sites_verified": [
+    "byd",
+    "changan",
+    "foton",
+    "jac",
+    "leapmotor",
+    "mg"
+  ],
+  "models": {
+    "audi-a6-avant-e-tron": {
+      "name": "Audi A6 Avant e-tron",
+      "match": "A6 Avant e-tron",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "audi-a6-sportback-e-tron": {
+      "name": "Audi A6 Sportback e-tron",
+      "match": "A6 Sportback e-tron",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "audi-e-tron-gt-quattro": {
+      "name": "Audi e-tron GT quattro",
+      "match": "e-tron GT quattro",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "audi-q6-suv-e-tron": {
+      "name": "Audi Q6 SUV e-tron",
+      "match": "Q6 SUV e-tron",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "audi-rs-e-tron-gt": {
+      "name": "Audi RS e-tron GT",
+      "match": "RS e-tron GT",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "bmw-i3": {
+      "name": "BMW i3",
+      "match": "i3",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "bmw-i4": {
+      "name": "BMW i4",
+      "match": "i4",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "bmw-i4-m50": {
+      "name": "BMW i4 M60",
+      "match": "i4 M60",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "bmw-i5": {
+      "name": "BMW i5 M60",
+      "match": "i5 M60",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "bmw-i7": {
+      "name": "BMW i7",
+      "match": "i7",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "bmw-i7-m70": {
+      "name": "BMW i7 M70",
+      "match": "i7 M70",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "bmw-ix": {
+      "name": "BMW iX",
+      "match": "iX",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "bmw-ix-m-model": {
+      "name": "BMW iX M70",
+      "match": "iX M70",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "bmw-ix1": {
+      "name": "BMW iX1",
+      "match": "iX1",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "bmw-ix3": {
+      "name": "BMW iX3",
+      "match": "iX3",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "bmw-ix5": {
+      "name": "BMW iX5",
+      "match": "iX5",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "byd-atto-2-comfort": {
+      "name": "BYD Atto 2",
+      "match": "Atto 2",
+      "url": null,
+      "price_eur": 32250,
+      "checked": "2026-10-15",
+      "changed": "2026-10-15",
+      "status": "ok",
+      "note": "početni podatak iz brands.json"
+    },
+    "byd-atto-3-evo": {
+      "name": "BYD Atto 3 Evo",
+      "match": "Atto 3 Evo",
+      "url": null,
+      "price_eur": 36250,
+      "checked": "2026-10-15",
+      "changed": "2026-10-15",
+      "status": "ok",
+      "note": "početni podatak iz brands.json"
+    },
+    "byd-dolphin-surf": {
+      "name": "BYD Dolphin Surf",
+      "match": "Dolphin Surf",
+      "url": null,
+      "price_eur": 23990,
+      "checked": "2026-10-15",
+      "changed": "2026-10-15",
+      "status": "ok",
+      "note": "početni podatak iz brands.json"
+    },
+    "byd-seal": {
+      "name": "BYD Seal",
+      "match": "Seal",
+      "url": null,
+      "price_eur": 40490,
+      "checked": "2026-10-15",
+      "changed": "2026-10-15",
+      "status": "ok",
+      "note": "početni podatak iz brands.json"
+    },
+    "byd-sealion-7": {
+      "name": "BYD Sealion 7",
+      "match": "Sealion 7",
+      "url": null,
+      "price_eur": 44590,
+      "checked": "2026-10-15",
+      "changed": "2026-10-15",
+      "status": "ok",
+      "note": "početni podatak iz brands.json"
+    },
+    "changan-deepal-s05": {
+      "name": "Changan Deepal S05",
+      "match": "Deepal S05",
+      "url": "https://changanbalkans.com/rs/model/changan-deepal-s05/",
+      "price_eur": 33490,
+      "checked": "2026-10-15",
+      "changed": "2026-10-15",
+      "status": "ok",
+      "note": "početni podatak iz brands.json"
+    },
+    "changan-deepal-s07": {
+      "name": "Changan Deepal S07",
+      "match": "Deepal S07",
+      "url": "https://changanbalkans.com/rs/wp-content/uploads/2026/11/S07-MY26-BEV-CENOVNIK-1.pdf",
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "citroen-e-c3": {
+      "name": "Citroën ë-C3",
+      "match": "ë-C3",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "citroen-e-c3-aircross": {
+      "name": "Citroën ë-C3 Aircross",
+      "match": "ë-C3 Aircross",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "citroen-e-c4": {
+      "name": "Citroën ë-C4",
+      "match": "ë-C4",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "citroen-e-c4-x": {
+      "name": "Citroën ë-C4 X",
+      "match": "ë-C4 X",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "citroen-e-c5-aircross": {
+      "name": "Citroën ë-C5 Aircross",
+      "match": "ë-C5 Aircross",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "cupra-raval": {
+      "name": "Cupra Raval",
+      "match": "Raval",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "cupra-tavascan": {
+      "name": "Cupra Tavascan",
+      "match": "Tavascan",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "dacia-spring": {
+      "name": "Dacia Spring",
+      "match": "Spring",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "dongfeng-box": {
+      "name": "Dongfeng Box",
+      "match": "Box",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "ford-capri": {
+      "name": "Ford Capri",
+      "match": "Capri",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "ford-explorer-ev": {
+      "name": "Ford Explorer EV",
+      "match": "Explorer EV",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "ford-mustang-mach-e": {
+      "name": "Ford Mustang Mach-E",
+      "match": "Mustang Mach-E",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "ford-puma-gen-e": {
+      "name": "Ford Puma Gen-E",
+      "match": "Puma Gen-E",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "foton-etunland": {
+      "name": "Foton eTunland",
+      "match": "eTunland",
+      "url": "https://fotonserbia.rs/cenovnici/FotonSrbija-cenovnik.pdf",
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "geely-e5": {
+      "name": "Geely E5",
+      "match": "E5",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "hyundai-inster": {
+      "name": "Hyundai Inster",
+      "match": "Inster",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "hyundai-ioniq-5": {
+      "name": "Hyundai IONIQ 5",
+      "match": "IONIQ 5",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "hyundai-ioniq-6": {
+      "name": "Hyundai IONIQ 6",
+      "match": "IONIQ 6",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "hyundai-ioniq-6-n": {
+      "name": "Hyundai IONIQ 6 N",
+      "match": "IONIQ 6 N",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "hyundai-ioniq-9": {
+      "name": "Hyundai IONIQ 9",
+      "match": "IONIQ 9",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "jac-e30x": {
+      "name": "JAC E30X",
+      "match": "E30X",
+      "url": "https://jacmotors.rs/putnicka-vozila/cenovnik/",
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "jac-t9-ev": {
+      "name": "JAC T9 EV",
+      "match": "T9 EV",
+      "url": "https://jacmotors.rs/putnicka-vozila/cenovnik/",
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "jmev-elight": {
+      "name": "JMEV Elight",
+      "match": "Elight",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "jmev-ev3": {
+      "name": "JMEV EV3",
+      "match": "EV3",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "jmev-ewind": {
+      "name": "JMEV Ewind",
+      "match": "Ewind",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "kia-ev2": {
+      "name": "Kia EV2",
+      "match": "EV2",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "kia-ev3": {
+      "name": "Kia EV3",
+      "match": "EV3",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "kia-ev4": {
+      "name": "Kia EV4",
+      "match": "EV4",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "kia-ev6": {
+      "name": "Kia EV6",
+      "match": "EV6",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "kia-ev9": {
+      "name": "Kia EV9",
+      "match": "EV9",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "leapmotor-b03x": {
+      "name": "Leapmotor B03X",
+      "match": "B03X",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "leapmotor-b05": {
+      "name": "Leapmotor B05",
+      "match": "B05",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "leapmotor-b10": {
+      "name": "Leapmotor B10",
+      "match": "B10",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "leapmotor-c10": {
+      "name": "Leapmotor C10",
+      "match": "C10",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "leapmotor-t03": {
+      "name": "Leapmotor T03",
+      "match": "T03",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "lynk-co-02": {
+      "name": "Lynk & Co 02",
+      "match": "02",
+      "url": null,
+      "price_eur": 26990,
+      "checked": "2026-10-15",
+      "changed": "2026-10-15",
+      "status": "ok",
+      "note": "početni podatak iz brands.json"
+    },
+    "mazda-6e": {
+      "name": "Mazda 6e",
+      "match": "6e",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "mazda-cx-6e": {
+      "name": "Mazda CX-6e",
+      "match": "CX-6e",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "mg-mg4-electric": {
+      "name": "MG4 Electric",
+      "match": "MG4 Electric",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "mg-mg5-electric": {
+      "name": "MG5 Electric",
+      "match": "MG5 Electric",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "mg-mgs5-ev": {
+      "name": "MGS5 EV",
+      "match": "MGS5 EV",
+      "url": "https://www.mgmotor.rs/model/mgs5-ev",
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "mini-aceman": {
+      "name": "MINI Aceman",
+      "match": "Aceman",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "mini-cooper": {
+      "name": "MINI Cooper",
+      "match": "Cooper",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "mini-countryman": {
+      "name": "MINI Countryman",
+      "match": "Countryman",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "opel-astra-electric": {
+      "name": "Opel Astra Electric",
+      "match": "Astra Electric",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "opel-frontera-electric": {
+      "name": "Opel Frontera Electric",
+      "match": "Frontera Electric",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "opel-mokka-electric": {
+      "name": "Opel Mokka Electric",
+      "match": "Mokka Electric",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "peugeot-e-2008": {
+      "name": "Peugeot e-2008",
+      "match": "e-2008",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "peugeot-e-208": {
+      "name": "Peugeot e-208",
+      "match": "e-208",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "peugeot-e-3008": {
+      "name": "Peugeot e-3008",
+      "match": "e-3008",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "peugeot-e-308": {
+      "name": "Peugeot e-308",
+      "match": "e-308",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "porsche-cayenne-turbo-electric": {
+      "name": "Porsche Cayenne Turbo Electric",
+      "match": "Cayenne Turbo Electric",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "porsche-macan-4": {
+      "name": "Porsche Macan 4",
+      "match": "Macan 4",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "porsche-macan-4s": {
+      "name": "Porsche Macan 4S",
+      "match": "Macan 4S",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "porsche-taycan-4": {
+      "name": "Porsche Taycan 4",
+      "match": "Taycan 4",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "renault-4-e-tech": {
+      "name": "Renault 4 E-Tech",
+      "match": "4 E-Tech",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "renault-5-e-tech": {
+      "name": "Renault 5 E-Tech",
+      "match": "5 E-Tech",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "renault-twingo-e-tech": {
+      "name": "Renault Twingo E-Tech",
+      "match": "Twingo E-Tech",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "skoda-elroq": {
+      "name": "Škoda Elroq",
+      "match": "Elroq",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "skoda-enyaq": {
+      "name": "Škoda Enyaq",
+      "match": "Enyaq",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "skoda-enyaq-coupe": {
+      "name": "Škoda Enyaq Coupé",
+      "match": "Enyaq Coupé",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "suzuki-e-vitara": {
+      "name": "Suzuki e Vitara",
+      "match": "e Vitara",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "toyota-bz4x": {
+      "name": "Toyota bZ4X",
+      "match": "bZ4X",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "toyota-bz4x-touring": {
+      "name": "Toyota bZ4X Touring",
+      "match": "bZ4X Touring",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "toyota-c-hr-plus": {
+      "name": "Toyota C-HR+",
+      "match": "C-HR+",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "volkswagen-id-3-neo": {
+      "name": "Volkswagen ID.3 Neo",
+      "match": "ID.3 Neo",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "volkswagen-id-4": {
+      "name": "Volkswagen ID.4",
+      "match": "ID.4",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "volkswagen-id-5": {
+      "name": "Volkswagen ID.5",
+      "match": "ID.5",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "volkswagen-id-7": {
+      "name": "Volkswagen ID.7",
+      "match": "ID.7",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "volkswagen-id-polo": {
+      "name": "Volkswagen ID. Polo",
+      "match": "ID. Polo",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "volvo-es90": {
+      "name": "Volvo ES90",
+      "match": "ES90",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "volvo-ex30": {
+      "name": "Volvo EX30",
+      "match": "EX30",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "volvo-ex60": {
+      "name": "Volvo EX60",
+      "match": "EX60",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    },
+    "volvo-ex90": {
+      "name": "Volvo EX90",
+      "match": "EX90",
+      "url": null,
+      "price_eur": null,
+      "checked": null,
+      "changed": null,
+      "status": "new",
+      "note": null
+    }
+  }
+}

@@ -3,7 +3,7 @@
 import Base from '../../layouts/Base.astro';
 import { DOMAIN, SITE } from '../../config';
 import { card, crumbs, dealerSection, ldBreadcrumbs, ldFaq, logoSpan, picture, qaBlock, type Crumb, type QA } from '../../lib/html';
-import { ALL_IDS, CLS_WORD, DIMS, brands, citiesOf, kwhTxt, models, rangeTxt } from '../../lib/site';
+import { ALL_IDS, CLS_WORD, DIMS, brands, citiesOf, kwhTxt, models, priceOf, rangeTxt } from '../../lib/site';
 import { E, joinSr, mm } from '../../lib/util';
 
 export const getStaticPaths = () => ALL_IDS.map((id) => ({ params: { id } }));
@@ -16,7 +16,11 @@ const cityWord = cities.length === 1 ? 'gradu' : 'gradovima';
 const summary = `${m.full} je potpuno električni ${cw} brenda ${b.name}. `
   + (rng ? `Prema podacima proizvođača ili uvoznika ima domet ${rng} po WLTP normi` + (m.kwh ? ` i bateriju od ${kwhTxt(m)}` : '') + '. ' : m.kwh ? `Ima bateriju od ${kwhTxt(m)}. ` : '')
   + (cities.length ? `U Srbiji ga prodaju ovlašćeni distributeri u ${cityWord} ${joinSr(cities)}.` : '');
-const title = `${m.full} u Srbiji: domet, baterija i distributeri | ${SITE}`;
+const price = priceOf(mid);
+const eur = (v: number) => v.toLocaleString('de-DE') + ' €';
+const dmy = (d: string) => d.split('-').reverse().map((x) => String(Number(x))).join('. ') + '.';
+// with a price: "cena" goes into the title (without the number, so the title never goes out of date)
+const title = price ? `${m.full}: cena, domet i distributeri u Srbiji | ${SITE}` : `${m.full} u Srbiji: domet, baterija i distributeri | ${SITE}`;
 const desc = `${m.full}, potpuno električni ${cw}. ` + (rng ? `Domet ${rng} (WLTP)` + (m.kwh ? `, baterija ${kwhTxt(m)}` : '') + '. ' : '')
   + `Specifikacije i kontakti distributera ${b.name} u Srbiji.`;
 const [inner, kind] = picture(m, pre);
@@ -117,5 +121,6 @@ const relHtml = rel.length ? rel.map((i) => card(i, pre)).join('')
       <div class={`models${rel.length > 6 ? ' many' : ''}`}><Fragment set:html={relHtml} /></div>
     </div>
   </section>
+  <Fragment set:html={price ? `<div class="wrap"><p class="price-foot">Početna cena modela ${E(m.full)} u Srbiji: od ${eur(price.eur)} (prema zvaničnom sajtu uvoznika). Cena proverena: ${dmy(price.checked)} Cene i oprema se menjaju bez najave; evomobil.rs ne prodaje vozila, a tačnu cenu proverite kod ovlašćenog distributera.</p></div>` : ''} />
 </main>
 </Base>

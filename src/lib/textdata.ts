@@ -1,7 +1,7 @@
 /** The machine-readable extras: sitemap, robots.txt, llms.txt, llms-full.txt and podaci/modeli.json. */
 import { ADS_ENABLED, DOMAIN, SITE, UPDATED } from '../config';
 import { CATS } from './lists';
-import { ALL_IDS, DIMS, ORDER, brands, citiesOf, kwhTxt, models, rangeTxt } from './site';
+import { ALL_IDS, DIMS, ORDER, brands, changedOf, citiesOf, kwhTxt, models, rangeTxt } from './site';
 import { joinSr, mm, pyjson } from './util';
 
 /** Every page address (without .html), the way the old build listed them: index first, then sorted. */
@@ -15,7 +15,7 @@ export function pageList(): string[] {
 export function sitemap(): string {
   const pri = (p: string) => (p === 'index' ? '1.0' : p.startsWith('brendovi/') || p.startsWith('modeli/') || p === 'modeli' || p === 'brendovi' ? '0.8' : '0.7');
   return '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-    + pageList().map((p) => `  <url><loc>${DOMAIN}/${p === 'index' ? '' : p}</loc><lastmod>${UPDATED}</lastmod><priority>${pri(p)}</priority></url>\n`).join('')
+    + pageList().map((p) => `  <url><loc>${DOMAIN}/${p === 'index' ? '' : p}</loc><lastmod>${(p.startsWith('modeli/') && changedOf(p.slice(7))) || UPDATED}</lastmod><priority>${pri(p)}</priority></url>\n`).join('')
     + '</urlset>\n';
 }
 

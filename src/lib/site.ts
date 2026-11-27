@@ -9,6 +9,7 @@ import brandsJson from '../data/brands.json';
 import contentJson from '../data/brand_content.json';
 import mcontentJson from '../data/model_content.json';
 import dimsJson from '../data/model_dims.json';
+import pricesJson from '../data/prices.json';
 import { asciiKey, num, slugify } from './util';
 
 export interface Dealer {
@@ -125,3 +126,15 @@ export function citiesOf(slug: string): string[] {
 
 export const modelsOf = (ids: string[]) => ids.map((i) => models[i]);
 export const byRangeDesc = (ids: string[]) => [...ids].sort((a, b) => (models[b].r || 0) - (models[a].r || 0));
+
+/** Price footnote: shown only when a price exists and was checked within PRICE_MAX_AGE_DAYS (scripts/update_prices.py, monthly). */
+export const PRICE_MAX_AGE_DAYS = 120;
+export interface Price { eur: number; checked: string; changed: string | null }
+export function priceOf(id: string, today = new Date()): Price | null {
+  const p = (pricesJson as any).models[id];
+  if (!p || !p.price_eur || !p.checked) return null;
+  const age = (today.getTime() - new Date(p.checked + 'T00:00:00Z').getTime()) / 86400000;
+  return age <= PRICE_MAX_AGE_DAYS ? { eur: p.price_eur, checked: p.checked, changed: p.changed ?? null } : null;
+}
+/** Day the model page last changed in substance (price change), for the sitemap; null = unknown. */
+export const changedOf = (id: string): string | null => (pricesJson as any).models[id]?.changed ?? null;
