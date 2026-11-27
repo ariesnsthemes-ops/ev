@@ -21,6 +21,15 @@ Per model, in src/data/prices.json -> models:
              Delete "lock" to let the script take over again.
   pdf_label  optional: url is a page with many identical price-list buttons; take the one under the card titled
              exactly this (e.g. "NOVI Ë-C3 AIRCROSS"; "novi" is ignored). Citroën: alati/preuzmite-cenovnik.html
+  pdf_match  optional: like pdf_label, but by words in the PDF address / button text / card heading (e.g. "308",
+             "Astra", "EV2"); the link must be a price list (cenovnik). Peugeot, Opel, Kia.
+  multi      optional: true = url is a list of many models (VW, Audi, Cupra, Volvo, Porsche finder): the first price
+             after each place the model name (match) appears, the lowest of those
+  link_word  optional: which links to follow with pdf_label / pdf_match (default: cenovnik|cene|price);
+             e.g. "konfigurator" (Mazda), "katalozi" (Ford: list -> model page -> PDF price list, followed automatically)
+  extra_sources optional: [{"label": "volvocentar.rs", "url": "...", "match": "EX30"}] more pages to compare with
+  source_override optional: "dileri" when url is a dealer's page, not the importer's (footnote names it that way)
+  skip       optional: true or a reason, e.g. "nema saglasnosti" = not checked, no price shown
   row_anchor optional: read only the price-list rows that start with this text (e.g. "ELEKTRIČNI MOTOR"), so prices of
              the petrol / hybrid tables in the same PDF are never taken. With column: the Nth price in that row.
   column     optional: in a price list with several price columns, which price in the model's row to take
@@ -61,6 +70,7 @@ MAX_CHANGE = 0.15          # 15 %
 WINDOW = 600               # characters after a model name in which its price is looked for
 DELAY = 2.0                # seconds between requests to the same site
 TODAY = dt.date.today().isoformat()
+OTHERS = []                # names of the other models of the brand being checked (set per model in main)
 
 # ---------------------------------------------------------------- fetching
 
@@ -239,7 +249,7 @@ def norm(s):
     return re.sub(r'[^a-z0-9]+', ' ', s).strip()
 
 NUM = r'(\d{1,3}(?:[.\s  ,]\d{3})+|\d{4,6})(?:[.,]\d{1,2})?(?![\d])'
-EUR_AFTER = re.compile(NUM + r'\s*(?:€|eur\b|evra\b|euro\b)', re.I)
+EUR_AFTER = re.compile(NUM + r'(?:\s*,\s*[-–])?\s*(?:€|eur\b|evra\b|euro\b)', re.I)   # also "29.990,- €"
 EUR_BEFORE = re.compile(r'(?:€|eur\b)\s*' + NUM, re.I)
 RSD = re.compile(NUM + r'\s*(?:rsd\b|din\b|dinara\b)', re.I)
 HINT = re.compile(r'(?:\bod\b|cena|početn|pocetn|već od|vec od|from)\W{0,12}$', re.I)
@@ -263,8 +273,11 @@ def candidates(text, bare=False):
             if not MIN_EUR <= v <= MAX_EUR: continue
             before = text[max(0, m.start() - 40):m.start()]
             if NOT_PRICE.search(before): continue
-            out.append((m.start(), v, bool(HINT.search(before))))
-    return sorted(set(out))
+            out.append((m.start(1), v, bool(HINT.search(before))))   # position of the number: "€ 34.990 €" counts once
+    seen, uniq = set(), []
+    for c in sorted(out):
+        if c[0] not in seen: seen.add(c[0]); uniq.append(c)
+    return uniq
 
 
 def find_price(text, match, multi, longer=(), column=None, anchor=None):
@@ -284,8 +297,11 @@ def find_price(text, match, multi, longer=(), column=None, anchor=None):
     spots = name_spots(text, match, longer)
     if multi or (spots and len({v for _, v, _ in cands}) > 1 and len(spots) < len(cands)):
         firsts = []
+        other_spots = [o for name in OTHERS for o in name_spots(text, name)]
         for s in spots:
             after = [c for c in cands if 0 <= c[0] - s <= WINDOW]
+            if after and any(s < o < after[0][0] for o in other_spots if o != s):
+                continue   # another model's name sits between this name and the price (menu, filter chips)
             if column:   # price lists with several price columns (e.g. Renault: without VAT, with VAT, bonus…): the Nth price in the row
                 eol = text.find('\n', s)
                 row = [c for c in after if eol < 0 or c[0] < eol] or after
@@ -304,12 +320,14 @@ def find_in_rows(text, anchor, column):
     rx = re.compile(r'(?<![a-z0-9])' + r'\s+'.join(map(re.escape, flat(anchor).split())) + r'(?![a-z0-9])')
     spots = [m.start() for m in rx.finditer(t)]
     if not spots: return None, f'tabela "{anchor}" nije pronađena'
-    cands = candidates(text) or candidates(text, bare=True)
     picks = []
-    for i, s0 in enumerate(spots):
-        end = spots[i + 1] if i + 1 < len(spots) else s0 + WINDOW
-        row = [v for pos, v, _ in cands if s0 <= pos < min(end, s0 + WINDOW)]
-        if len(row) >= column: picks.append(row[column - 1])
+    for bare in (False, True):
+        cands = candidates(text, bare=bare)
+        for i, s0 in enumerate(spots):
+            end = spots[i + 1] if i + 1 < len(spots) else s0 + WINDOW
+            row = [v for pos, v, _ in cands if s0 <= pos < min(end, s0 + WINDOW)]
+            if len(row) >= column: picks.append(row[column - 1])
+        if picks: break
     if not picks: return None, f'nema cena u redovima "{anchor}"'
     return min(picks), f'{column}. cena u redovima "{anchor}" ({len(picks)} redova)'
 
@@ -377,7 +395,7 @@ def err(ex):
     return f'greška ({ex.__class__.__name__}: {(str(ex).splitlines() or [""])[0][:80]})'
 
 
-def read_page(f, url, match, longer, column=None, anchor=None, pdf_label=None):
+def read_page(f, url, match, longer, column=None, anchor=None, pdf_label=None, pdf_match=None, link_word=None, force_multi=False):
     """-> (state, price, how)  state: ok | not-found | blocked
     An HTML page without a price is searched for linked PDF price lists that name the model (or are called
     cenovnik / pricelist), so url can point at a stable "cenovnici" page while the PDF file names change."""
@@ -388,37 +406,57 @@ def read_page(f, url, match, longer, column=None, anchor=None, pdf_label=None):
         return 'not-found', None, err(ex)
     if 'request is being verified' in text or len(text.strip()) < 200:
         return 'blocked', None, 'sajt blokira automatsku proveru'
-    multi = kind == 'pdf' or bool(re.search(r'cenovnik|cenovnici|price', url, re.I))
-    price, how = (None, 'cenovnik se bira po naslovu') if pdf_label and kind == 'html' else find_price(text, match, multi, longer, column, anchor)
+    multi = force_multi or kind == 'pdf' or bool(re.search(r'cenovnik|cenovnici|price', url, re.I))
+    price, how = (None, 'cenovnik se bira po naslovu') if (pdf_label or pdf_match) and kind == 'html' else find_price(text, match, multi, longer, column, anchor)
     if price or kind != 'html':
         return ('ok' if price else 'not-found'), price, f'{kind}, {how}'
     key = norm(match).split()
+    word = link_word or r'cenovnik|cenovnici|cene|price|pricelist'
     pdfs = []
     for h, t, *ctx in links:
         if h in pdfs: continue
+        if pdf_match:   # e.g. "308": in the PDF address, the button text or the card heading, and it must be a price list
+            hay = norm(urllib.parse.unquote(h) + ' ' + t + ' ' + (ctx[0] if ctx else ''))
+            if has_all(hay, norm(pdf_match).split()) and re.search(word, hay): pdfs.append(h)
+            continue
         if pdf_label:   # the card heading must be exactly this model ("NOVI Ë-C3 AIRCROSS"), not just contain it
             head = ' '.join(w for w in flat(ctx[0] if ctx else '').split() if w != 'novi')
             want = ' '.join(w for w in flat(pdf_label).split() if w != 'novi')
-            if head == want and re.search(r'cenovnik|cenovnici|cene|price', norm(h + ' ' + t)): pdfs.append(h)   # not "katalog"
+            if head == want and re.search(word, norm(urllib.parse.unquote(h) + ' ' + t)): pdfs.append(h)   # not "katalog"
             continue
         if '.pdf' not in h.lower(): continue
         hay = norm(h + ' ' + t)
         if has_all(hay, key) or (len(key) > 1 and has_all(hay.replace(' ', ''), [''.join(key)])):
             pdfs.append(h)
     for pdf in pdfs[:3]:
-        try:
-            _, ptext, _ = f.get(pdf)
-        except Exception:  # noqa: BLE001
-            continue
-        p2, how2 = find_price(ptext, match, True, longer, column, anchor)
-        if p2:
-            f.price_url[url] = pdf
-            return 'ok', p2, f'pdf sa stranice ({pdf.rsplit("/", 1)[-1]}), {how2}'
+        got = follow(f, url, pdf, match, longer, column, anchor)
+        if got: return got
     if pdf_label and not pdfs: return 'not-found', None, f'nema dugmeta za cenovnik ispod naslova "{pdf_label}"'
+    if pdf_match and not pdfs: return 'not-found', None, f'nema cenovnika sa "{pdf_match}" na stranici'
     return 'not-found', None, f'{kind}, {how}' + (f'; pregledano PDF-ova: {len(pdfs[:3])}' if pdfs else '')
 
 
-def source(f, label, url, site, match, longer, column=None, anchor=None, pdf_label=None):
+def follow(f, page_url, link, match, longer, column, anchor, depth=0):
+    """Read a followed link: a PDF price list, or a page (configurator, "katalozi i cenovnici") that shows the price
+    itself or links one more PDF price list (Ford: list -> model page -> "Puma Bev Cenovnik" PDF)."""
+    try:
+        kind, ptext, plinks = f.get(link)
+    except Exception:  # noqa: BLE001
+        return None
+    p2, how2 = find_price(ptext, match, True, longer, column, anchor)
+    if p2:
+        f.price_url[page_url] = link
+        name = urllib.parse.unquote(link.rstrip('/').rsplit('/', 1)[-1])[:60]
+        return 'ok', p2, f'{kind} sa stranice ({name}), {how2}'
+    if kind == 'html' and depth == 0:
+        for h, t, *_ in plinks:
+            if re.search(r'cenovnik|cenovnici|pricelist|price', norm(urllib.parse.unquote(h) + ' ' + t)) and h != link:
+                got = follow(f, page_url, h, match, longer, column, anchor, 1)
+                if got: return got
+    return None
+
+
+def source(f, label, url, site, match, longer, column=None, anchor=None, pdf_label=None, pdf_match=None, link_word=None, force_multi=False):
     """One source (importer or a dealer). url empty -> look for the model on site. Never raises."""
     out = {'src': label, 'url': url, 'proposed': False, 'state': 'no-url', 'price': None, 'how': ''}
     try:
@@ -432,7 +470,7 @@ def source(f, label, url, site, match, longer, column=None, anchor=None, pdf_lab
                 out['how'] = 'model nije pronađen na sajtu'
                 return out
             out.update(url=url, proposed=True)
-        out['state'], out['price'], out['how'] = read_page(f, url, match, longer, column, anchor, pdf_label)
+        out['state'], out['price'], out['how'] = read_page(f, url, match, longer, column, anchor, pdf_label, pdf_match, link_word, force_multi)
     except Exception as ex:  # noqa: BLE001  one bad site never stops the run
         out.update(state='not-found', how=err(ex))
     return out
@@ -559,7 +597,18 @@ def main():
             longer = [n for n in names.get(brand, ()) if flat(n).startswith(flat(e['match']) + ' ')
                       and brand + '-' + '-'.join(flat(n).split()) != mid]   # not this model's own full name
 
-            srcs = [source(f, 'uvoznik', e.get('url'), sites.get(brand), e['match'], longer, e.get('column'), e.get('row_anchor'), e.get('pdf_label'))]
+            OTHERS[:] = [n for n in names.get(brand, ()) if flat(n) != flat(e['match']) and not flat(n).startswith(flat(e['match']) + ' ')
+                         and not flat(e['match']).startswith(flat(n) + ' ')]
+            if e.get('skip'):   # brand/model left out on purpose (no consent yet, no public price)
+                e['status'] = 'skip'
+                rows.append({'id': mid, 'name': e['name'], 'old': e.get('price_eur'), 'new': None, 'status': 'skip', 'applied': False,
+                             'agreement': '', 'notes': e.get('skip') if isinstance(e.get('skip'), str) else 'preskočeno', 'sources': []})
+                continue
+            srcs = [source(f, 'uvoznik', e.get('url'), sites.get(brand), e['match'], longer, e.get('column'), e.get('row_anchor'),
+                           e.get('pdf_label'), e.get('pdf_match'), e.get('link_word'), e.get('multi', False))]
+            for x in e.get('extra_sources', []):   # more pages to compare with (e.g. a dealer's stock list)
+                srcs.append(source(f, x['label'], x['url'], None, x.get('match', e['match']), longer, x.get('column'),
+                                   x.get('row_anchor'), x.get('pdf_label'), x.get('pdf_match'), x.get('link_word'), x.get('multi', True)))
             if not a.no_dealers:
                 known = e.setdefault('dealer_urls', {})
                 for host, site in dealers.get(brand, {}).items():
@@ -599,7 +648,8 @@ def main():
             if apply:
                 if price != old: e['changed'] = TODAY
                 imp = next((x['price'] for x in srcs if x['src'] == 'uvoznik' and x['price']), None)
-                e.update(price_eur=price, checked=TODAY, source='uvoznik' if imp and same(imp, price) else 'dileri')
+                e.update(price_eur=price, checked=TODAY,
+                         source=e.get('source_override') or ('uvoznik' if imp and same(imp, price) else 'dileri'))
             elif status == 'review' and price is not None:
                 notes.append('nije primenjeno, ostaje stara cena' if 'NIJE' not in ' '.join(notes) else '')
             e['status'] = status
@@ -624,7 +674,7 @@ def main():
 
 # ---------------------------------------------------------------- report: markdown (pull request), HTML and PDF
 
-STATUS_TXT = {'ok': 'OK', 'review': 'Za proveru', 'not-found': 'Nije pronađeno', 'blocked': 'Blokirano', 'no-url': 'Bez adrese'}
+STATUS_TXT = {'ok': 'OK', 'review': 'Za proveru', 'not-found': 'Nije pronađeno', 'blocked': 'Blokirano', 'no-url': 'Bez adrese', 'skip': 'Preskočeno'}
 
 
 def eur(v):
@@ -638,6 +688,7 @@ def groups(rows):
         ('Za ručnu proveru', [r for r in rows if r['status'] == 'review']),
         ('Nije pronađeno, blokirano ili bez adrese', [r for r in rows if r['status'] in ('not-found', 'blocked', 'no-url')]),
         ('Bez promene', [r for r in rows if r['status'] == 'ok' and r['new'] == r['old']]),
+        ('Preskočeno namerno', [r for r in rows if r['status'] == 'skip']),
     ], changed
 
 

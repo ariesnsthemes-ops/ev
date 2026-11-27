@@ -16,11 +16,11 @@
     "cupra": "https://www.cupraofficial.rs/",
     "dacia": "https://www.dacia.rs/",
     "ford": "https://www.ford.rs/",
-    "kia": "https://www.kia.com/rs/",
+    "kia": "https://www.kia.rs/",
     "mazda": "https://www.mazda.rs/",
     "porsche": "https://dealer.porsche.com/rs/beograd/sr-Latn-RS/",
     "renault": "https://www.renault.rs/",
-    "suzuki": null,
+    "suzuki": "https://suzuki-novisad.rs/",
     "toyota": "https://www.toyota.rs/",
     "volkswagen": "https://www.volkswagen.rs/",
     "hyundai": "https://www.hyundai.rs/",
@@ -43,52 +43,57 @@
     "audi-a6-avant-e-tron": {
       "name": "Audi A6 Avant e-tron",
       "match": "A6 Avant e-tron",
-      "url": null,
+      "url": "https://www.audi.rs/elektromobilnost/svi-elektro-modeli-audi?categories=electric",
       "price_eur": null,
       "checked": null,
       "changed": null,
       "status": "new",
-      "note": null
+      "note": null,
+      "multi": true
     },
     "audi-a6-sportback-e-tron": {
       "name": "Audi A6 Sportback e-tron",
       "match": "A6 Sportback e-tron",
-      "url": null,
+      "url": "https://www.audi.rs/elektromobilnost/svi-elektro-modeli-audi?categories=electric",
       "price_eur": null,
       "checked": null,
       "changed": null,
       "status": "new",
-      "note": null
+      "note": null,
+      "multi": true
     },
     "audi-e-tron-gt-quattro": {
       "name": "Audi e-tron GT quattro",
       "match": "e-tron GT quattro",
-      "url": null,
+      "url": "https://www.audi.rs/elektromobilnost/svi-elektro-modeli-audi?categories=electric",
       "price_eur": null,
       "checked": null,
       "changed": null,
       "status": "new",
-      "note": null
+      "note": null,
+      "multi": true
     },
     "audi-q6-suv-e-tron": {
       "name": "Audi Q6 SUV e-tron",
       "match": "Q6 SUV e-tron",
-      "url": null,
+      "url": "https://www.audi.rs/elektromobilnost/svi-elektro-modeli-audi?categories=electric",
       "price_eur": null,
       "checked": null,
       "changed": null,
       "status": "new",
-      "note": null
+      "note": null,
+      "multi": true
     },
     "audi-rs-e-tron-gt": {
       "name": "Audi RS e-tron GT",
       "match": "RS e-tron GT",
-      "url": null,
+      "url": "https://www.audi.rs/elektromobilnost/svi-elektro-modeli-audi?categories=electric",
       "price_eur": null,
       "checked": null,
       "changed": null,
       "status": "new",
-      "note": null
+      "note": null,
+      "multi": true
     },
     "bmw-i3": {
       "name": "BMW i3",
@@ -98,7 +103,8 @@
       "checked": null,
       "changed": null,
       "status": "new",
-      "note": null
+      "note": null,
+      "skip": "nema saglasnosti brenda"
     },
     "bmw-i4": {
       "name": "BMW i4",
@@ -108,7 +114,8 @@
       "checked": null,
       "changed": null,
       "status": "new",
-      "note": null
+      "note": null,
+      "skip": "nema saglasnosti brenda"
     },
     "bmw-i4-m50": {
       "name": "BMW i4 M60",
@@ -118,7 +125,8 @@
       "checked": null,
       "changed": null,
       "status": "new",
-      "note": null
+      "note": null,
+      "skip": "nema saglasnosti brenda"
     },
     "bmw-i5": {
       "name": "BMW i5 M60",
@@ -128,7 +136,8 @@
       "checked": null,
       "changed": null,
       "status": "new",
-      "note": null
+      "note": null,
+      "skip": "nema saglasnosti brenda"
     },
     "bmw-i7": {
       "name": "BMW i7",
@@ -138,7 +147,8 @@
       "checked": null,
       "changed": null,
       "status": "new",
-      "note": null
+      "note": null,
+      "skip": "nema saglasnosti brenda"
     },
     "bmw-i7-m70": {
       "name": "BMW i7 M70",
@@ -148,7 +158,8 @@
       "checked": null,
       "changed": null,
       "status": "new",
-      "note": null
+      "note": null,
+      "skip": "nema saglasnosti brenda"
     },
     "bmw-ix": {
       "name": "BMW iX",
@@ -158,7 +169,8 @@
       "checked": null,
       "changed": null,
       "status": "new",
-      "note": null
+      "note": null,
+      "skip": "nema saglasnosti brenda"
     },
     "bmw-ix-m-model": {
       "name": "BMW iX M70",
@@ -168,7 +180,8 @@
       "checked": null,
       "changed": null,
       "status": "new",
-      "note": null
+      "note": null,
+      "skip": "nema saglasnosti brenda"
     },
     "bmw-ix1": {
       "name": "BMW iX1",
@@ -178,7 +191,8 @@
       "checked": null,
       "changed": null,
       "status": "new",
-      "note": null
+      "note": null,
+      "skip": "nema saglasnosti brenda"
     },
     "bmw-ix3": {
       "name": "BMW iX3",
@@ -188,7 +202,8 @@
       "checked": null,
       "changed": null,
       "status": "new",
-      "note": null
+      "note": null,
+      "skip": "nema saglasnosti brenda"
     },
     "bmw-ix5": {
       "name": "BMW iX5",
@@ -198,12 +213,13 @@
       "checked": null,
       "changed": null,
       "status": "new",
-      "note": null
+      "note": null,
+      "skip": "nema saglasnosti brenda"
     },
     "byd-atto-2-comfort": {
       "name": "BYD Atto 2",
       "match": "Atto 2",
-      "url": null,
+      "url": "https://byd-auto.rs/modeli/byd-atto-2-comfort/",
       "price_eur": 32250,
       "checked": "2026-10-15",
       "changed": "2026-10-15",
@@ -214,7 +230,7 @@
     "byd-atto-3-evo": {
       "name": "BYD Atto 3 Evo",
       "match": "Atto 3 Evo",
-      "url": null,
+      "url": "https://byd-auto.rs/modeli/byd-atto-3-evo/",
       "price_eur": 36250,
       "checked": "2026-10-15",
       "changed": "2026-10-15",
@@ -225,7 +241,7 @@
     "byd-dolphin-surf": {
       "name": "BYD Dolphin Surf",
       "match": "Dolphin Surf",
-      "url": null,
+      "url": "https://byd-auto.rs/modeli/byd-dolphin-surf/",
       "price_eur": 23990,
       "checked": "2026-10-15",
       "changed": "2026-10-15",
@@ -236,7 +252,7 @@
     "byd-seal": {
       "name": "BYD Seal",
       "match": "Seal",
-      "url": null,
+      "url": "https://byd-auto.rs/modeli/byd-seal/",
       "price_eur": 40490,
       "checked": "2026-10-15",
       "changed": "2026-10-15",
@@ -247,7 +263,7 @@
     "byd-sealion-7": {
       "name": "BYD Sealion 7",
       "match": "Sealion 7",
-      "url": null,
+      "url": "https://byd-auto.rs/modeli/byd-sealion-7/",
       "price_eur": 44590,
       "checked": "2026-10-15",
       "changed": "2026-10-15",
@@ -354,32 +370,37 @@
     "cupra-raval": {
       "name": "Cupra Raval",
       "match": "Raval",
-      "url": null,
+      "url": "https://www.cupraofficial.rs/svi-modeli",
       "price_eur": null,
       "checked": null,
       "changed": null,
       "status": "new",
-      "note": null
+      "note": null,
+      "multi": true
     },
     "cupra-tavascan": {
       "name": "Cupra Tavascan",
       "match": "Tavascan",
-      "url": null,
+      "url": "https://www.cupraofficial.rs/svi-modeli",
       "price_eur": null,
       "checked": null,
       "changed": null,
       "status": "new",
-      "note": null
+      "note": null,
+      "multi": true
     },
     "dacia-spring": {
       "name": "Dacia Spring",
       "match": "Spring",
-      "url": null,
+      "url": "https://www.dacia.rs/cars/spring/otkrijte.html",
       "price_eur": null,
       "checked": null,
       "changed": null,
       "status": "new",
-      "note": null
+      "note": null,
+      "pdf_match": "spring",
+      "row_anchor": "Električna struja",
+      "column": 2
     },
     "dongfeng-box": {
       "name": "Dongfeng Box",
@@ -389,47 +410,60 @@
       "checked": null,
       "changed": null,
       "status": "new",
-      "note": null
+      "note": null,
+      "skip": "preskočeno (cena samo u dinarima)"
     },
     "ford-capri": {
       "name": "Ford Capri",
       "match": "Capri",
-      "url": null,
+      "url": "https://ford.rs/brochures_and_pricelists/",
       "price_eur": null,
       "checked": null,
       "changed": null,
       "status": "new",
-      "note": null
+      "note": null,
+      "pdf_label": "CAPRI",
+      "row_anchor": "Elektro",
+      "column": 2
     },
     "ford-explorer-ev": {
       "name": "Ford Explorer EV",
       "match": "Explorer EV",
-      "url": null,
+      "url": "https://ford.rs/brochures_and_pricelists/",
       "price_eur": null,
       "checked": null,
       "changed": null,
       "status": "new",
-      "note": null
+      "note": null,
+      "pdf_label": "EXPLORER EV",
+      "row_anchor": "Elektro",
+      "column": 2
     },
     "ford-mustang-mach-e": {
       "name": "Ford Mustang Mach-E",
       "match": "Mustang Mach-E",
-      "url": null,
+      "url": "https://ford.rs/brochures_and_pricelists/",
       "price_eur": null,
       "checked": null,
       "changed": null,
       "status": "new",
-      "note": null
+      "note": null,
+      "pdf_label": "MUSTANG MACH-E",
+      "row_anchor": "Elektro",
+      "column": 2
     },
     "ford-puma-gen-e": {
       "name": "Ford Puma Gen-E",
       "match": "Puma Gen-E",
-      "url": null,
+      "url": "https://ford.rs/brochures_and_pricelists/",
       "price_eur": null,
       "checked": null,
       "changed": null,
       "status": "new",
-      "note": null
+      "note": null,
+      "pdf_label": "PUMA GEN-E",
+      "row_anchor": "Elektro",
+      "column": 2
     },
     "foton-etunland": {
       "name": "Foton eTunland",
@@ -444,12 +478,15 @@
     "geely-e5": {
       "name": "Geely E5",
       "match": "E5",
-      "url": null,
+      "url": "https://www.geelyauto.rs/vozila/e5",
       "price_eur": null,
       "checked": null,
       "changed": null,
       "status": "new",
-      "note": null
+      "note": null,
+      "pdf_match": "E5",
+      "row_anchor": "Potpuno električni",
+      "column": 1
     },
     "hyundai-inster": {
       "name": "Hyundai Inster",
@@ -524,7 +561,7 @@
     "jmev-elight": {
       "name": "JMEV Elight",
       "match": "Elight",
-      "url": null,
+      "url": "https://www.jmev.rs/elight.html",
       "price_eur": null,
       "checked": null,
       "changed": null,
@@ -534,7 +571,7 @@
     "jmev-ev3": {
       "name": "JMEV EV3",
       "match": "EV3",
-      "url": null,
+      "url": "https://www.jmev.rs/ev3.html",
       "price_eur": null,
       "checked": null,
       "changed": null,
@@ -544,7 +581,7 @@
     "jmev-ewind": {
       "name": "JMEV Ewind",
       "match": "Ewind",
-      "url": null,
+      "url": "https://www.jmev.rs/ewind.html",
       "price_eur": null,
       "checked": null,
       "changed": null,
@@ -554,57 +591,72 @@
     "kia-ev2": {
       "name": "Kia EV2",
       "match": "EV2",
-      "url": null,
+      "url": "https://www.kia.rs/ev2",
       "price_eur": null,
       "checked": null,
       "changed": null,
       "status": "new",
-      "note": null
+      "note": null,
+      "pdf_match": "EV2",
+      "row_anchor": "Modeli sa električnim motorom",
+      "column": 2
     },
     "kia-ev3": {
       "name": "Kia EV3",
       "match": "EV3",
-      "url": null,
+      "url": "https://www.kia.rs/ev3",
       "price_eur": null,
       "checked": null,
       "changed": null,
       "status": "new",
-      "note": null
+      "note": null,
+      "pdf_match": "EV3",
+      "row_anchor": "Modeli sa električnim motorom",
+      "column": 2
     },
     "kia-ev4": {
       "name": "Kia EV4",
       "match": "EV4",
-      "url": null,
+      "url": "https://www.kia.rs/ev4",
       "price_eur": null,
       "checked": null,
       "changed": null,
       "status": "new",
-      "note": null
+      "note": null,
+      "pdf_match": "EV4",
+      "row_anchor": "Modeli sa električnim motorom",
+      "column": 2
     },
     "kia-ev6": {
       "name": "Kia EV6",
       "match": "EV6",
-      "url": null,
+      "url": "https://www.kia.rs/ev6",
       "price_eur": null,
       "checked": null,
       "changed": null,
       "status": "new",
-      "note": null
+      "note": null,
+      "pdf_match": "EV6",
+      "row_anchor": "Modeli sa električnim motorom",
+      "column": 2
     },
     "kia-ev9": {
       "name": "Kia EV9",
       "match": "EV9",
-      "url": null,
+      "url": "https://www.kia.rs/ev9",
       "price_eur": null,
       "checked": null,
       "changed": null,
       "status": "new",
-      "note": null
+      "note": null,
+      "pdf_match": "EV9",
+      "row_anchor": "Modeli sa električnim motorom",
+      "column": 2
     },
     "leapmotor-b03x": {
       "name": "Leapmotor B03X",
       "match": "B03X",
-      "url": null,
+      "url": "https://www.leapmotor.net/rs/b03x-full",
       "price_eur": null,
       "checked": null,
       "changed": null,
@@ -614,7 +666,7 @@
     "leapmotor-b05": {
       "name": "Leapmotor B05",
       "match": "B05",
-      "url": null,
+      "url": "https://www.leapmotor.net/rs/b05-full",
       "price_eur": null,
       "checked": null,
       "changed": null,
@@ -624,7 +676,7 @@
     "leapmotor-b10": {
       "name": "Leapmotor B10",
       "match": "B10",
-      "url": null,
+      "url": "https://www.leapmotor.net/rs/b10",
       "price_eur": null,
       "checked": null,
       "changed": null,
@@ -634,7 +686,7 @@
     "leapmotor-c10": {
       "name": "Leapmotor C10",
       "match": "C10",
-      "url": null,
+      "url": "https://www.leapmotor.net/rs/c10",
       "price_eur": null,
       "checked": null,
       "changed": null,
@@ -644,7 +696,7 @@
     "leapmotor-t03": {
       "name": "Leapmotor T03",
       "match": "T03",
-      "url": null,
+      "url": "https://www.leapmotor.net/rs/t03",
       "price_eur": null,
       "checked": null,
       "changed": null,
@@ -654,33 +706,40 @@
     "lynk-co-02": {
       "name": "Lynk & Co 02",
       "match": "02",
-      "url": null,
+      "url": "https://www.lynkco-see.com/rs/vozila/02",
       "price_eur": 26990,
       "checked": "2026-10-15",
       "changed": "2026-10-15",
       "status": "ok",
       "note": "početni podatak iz brands.json",
-      "source": "uvoznik"
+      "source": "uvoznik",
+      "pdf_match": "02",
+      "row_anchor": "Srbija",
+      "column": 2
     },
     "mazda-6e": {
       "name": "Mazda 6e",
       "match": "6e",
-      "url": null,
+      "url": "https://www.mazda.rs/modeli",
       "price_eur": null,
       "checked": null,
       "changed": null,
       "status": "new",
-      "note": null
+      "note": null,
+      "pdf_label": "MAZDA 6E",
+      "link_word": "konfigurator"
     },
     "mazda-cx-6e": {
       "name": "Mazda CX-6e",
       "match": "CX-6e",
-      "url": null,
+      "url": "https://www.mazda.rs/modeli",
       "price_eur": null,
       "checked": null,
       "changed": null,
       "status": "new",
-      "note": null
+      "note": null,
+      "pdf_label": "MAZDA CX-6E",
+      "link_word": "konfigurator"
     },
     "mg-mg4-electric": {
       "name": "MG4 Electric",
@@ -720,7 +779,8 @@
       "checked": null,
       "changed": null,
       "status": "new",
-      "note": null
+      "note": null,
+      "skip": "nema saglasnosti brenda"
     },
     "mini-cooper": {
       "name": "MINI Cooper",
@@ -730,7 +790,8 @@
       "checked": null,
       "changed": null,
       "status": "new",
-      "note": null
+      "note": null,
+      "skip": "nema saglasnosti brenda"
     },
     "mini-countryman": {
       "name": "MINI Countryman",
@@ -740,117 +801,147 @@
       "checked": null,
       "changed": null,
       "status": "new",
-      "note": null
+      "note": null,
+      "skip": "nema saglasnosti brenda"
     },
     "opel-astra-electric": {
       "name": "Opel Astra Electric",
       "match": "Astra Electric",
-      "url": null,
+      "url": "https://www.opel.rs/tools/opel-trazite-brosuru/overview.html",
       "price_eur": null,
       "checked": null,
       "changed": null,
       "status": "new",
-      "note": null
+      "note": null,
+      "pdf_match": "Astra",
+      "row_anchor": "Electric",
+      "column": 1
     },
     "opel-frontera-electric": {
       "name": "Opel Frontera Electric",
       "match": "Frontera Electric",
-      "url": null,
+      "url": "https://www.opel.rs/tools/opel-trazite-brosuru/overview.html",
       "price_eur": null,
       "checked": null,
       "changed": null,
       "status": "new",
-      "note": null
+      "note": null,
+      "pdf_match": "Frontera",
+      "row_anchor": "Electric",
+      "column": 1
     },
     "opel-mokka-electric": {
       "name": "Opel Mokka Electric",
       "match": "Mokka Electric",
-      "url": null,
+      "url": "https://www.opel.rs/tools/opel-trazite-brosuru/overview.html",
       "price_eur": null,
       "checked": null,
       "changed": null,
       "status": "new",
-      "note": null
+      "note": null,
+      "pdf_match": "Mokka",
+      "row_anchor": "Electric",
+      "column": 1
     },
     "peugeot-e-2008": {
       "name": "Peugeot e-2008",
       "match": "e-2008",
-      "url": null,
+      "url": "https://www.peugeot.rs/alati/brosure.html",
       "price_eur": null,
       "checked": null,
       "changed": null,
       "status": "new",
-      "note": null
+      "note": null,
+      "pdf_match": "2008",
+      "row_anchor": "ELEKTRO",
+      "column": 1
     },
     "peugeot-e-208": {
       "name": "Peugeot e-208",
       "match": "e-208",
-      "url": null,
+      "url": "https://www.peugeot.rs/alati/brosure.html",
       "price_eur": null,
       "checked": null,
       "changed": null,
       "status": "new",
-      "note": null
+      "note": null,
+      "pdf_match": "208",
+      "row_anchor": "ELEKTRO",
+      "column": 1
     },
     "peugeot-e-3008": {
       "name": "Peugeot e-3008",
       "match": "e-3008",
-      "url": null,
+      "url": "https://www.peugeot.rs/alati/brosure.html",
       "price_eur": null,
       "checked": null,
       "changed": null,
       "status": "new",
-      "note": null
+      "note": null,
+      "pdf_match": "3008",
+      "row_anchor": "ELEKTRO",
+      "column": 1
     },
     "peugeot-e-308": {
       "name": "Peugeot e-308",
       "match": "e-308",
-      "url": null,
+      "url": "https://www.peugeot.rs/alati/brosure.html",
       "price_eur": null,
       "checked": null,
       "changed": null,
       "status": "new",
-      "note": null
+      "note": null,
+      "pdf_match": "308",
+      "row_anchor": "ELEKTRO",
+      "column": 1
     },
     "porsche-cayenne-turbo-electric": {
       "name": "Porsche Cayenne Turbo Electric",
       "match": "Cayenne Turbo Electric",
-      "url": null,
+      "url": "https://finder.porsche.com/rs/sr-RS/search?condition=new",
       "price_eur": null,
       "checked": null,
       "changed": null,
       "status": "new",
-      "note": null
+      "note": null,
+      "multi": true,
+      "source_override": "dileri"
     },
     "porsche-macan-4": {
       "name": "Porsche Macan 4",
       "match": "Macan 4",
-      "url": null,
+      "url": "https://finder.porsche.com/rs/sr-RS/search?condition=new",
       "price_eur": null,
       "checked": null,
       "changed": null,
       "status": "new",
-      "note": null
+      "note": null,
+      "multi": true,
+      "source_override": "dileri"
     },
     "porsche-macan-4s": {
       "name": "Porsche Macan 4S",
       "match": "Macan 4S",
-      "url": null,
+      "url": "https://finder.porsche.com/rs/sr-RS/search?condition=new",
       "price_eur": null,
       "checked": null,
       "changed": null,
       "status": "new",
-      "note": null
+      "note": null,
+      "multi": true,
+      "source_override": "dileri"
     },
     "porsche-taycan-4": {
       "name": "Porsche Taycan 4",
       "match": "Taycan 4",
-      "url": null,
+      "url": "https://finder.porsche.com/rs/sr-RS/search?condition=new",
       "price_eur": null,
       "checked": null,
       "changed": null,
       "status": "new",
-      "note": null
+      "note": null,
+      "multi": true,
+      "source_override": "dileri"
     },
     "renault-4-e-tech": {
       "name": "Renault 4 E-Tech",
@@ -917,17 +1008,18 @@
     "suzuki-e-vitara": {
       "name": "Suzuki e Vitara",
       "match": "e Vitara",
-      "url": null,
+      "url": "https://suzuki-novisad.rs/modeli/evitara/",
       "price_eur": null,
       "checked": null,
       "changed": null,
       "status": "new",
-      "note": null
+      "note": null,
+      "source_override": "dileri"
     },
     "toyota-bz4x": {
       "name": "Toyota bZ4X",
       "match": "bZ4X",
-      "url": null,
+      "url": "https://www.toyota.rs/new-cars/bz4x",
       "price_eur": null,
       "checked": null,
       "changed": null,
@@ -937,7 +1029,7 @@
     "toyota-bz4x-touring": {
       "name": "Toyota bZ4X Touring",
       "match": "bZ4X Touring",
-      "url": null,
+      "url": "https://www.toyota.rs/new-cars/bz4x-touring",
       "price_eur": null,
       "checked": null,
       "changed": null,
@@ -947,7 +1039,7 @@
     "toyota-c-hr-plus": {
       "name": "Toyota C-HR+",
       "match": "C-HR+",
-      "url": null,
+      "url": "https://www.toyota.rs/new-cars/toyota-c-hr-plus",
       "price_eur": null,
       "checked": null,
       "changed": null,
@@ -957,92 +1049,125 @@
     "volkswagen-id-3-neo": {
       "name": "Volkswagen ID.3 Neo",
       "match": "ID.3 Neo",
-      "url": null,
+      "url": "https://www.volkswagen.rs/modeli-i-konfigurator/svi-modeli?FUEL=Elektro",
       "price_eur": null,
       "checked": null,
       "changed": null,
       "status": "new",
-      "note": null
+      "note": null,
+      "multi": true
     },
     "volkswagen-id-4": {
       "name": "Volkswagen ID.4",
       "match": "ID.4",
-      "url": null,
+      "url": "https://www.volkswagen.rs/modeli-i-konfigurator/svi-modeli?FUEL=Elektro",
       "price_eur": null,
       "checked": null,
       "changed": null,
       "status": "new",
-      "note": null
+      "note": null,
+      "multi": true
     },
     "volkswagen-id-5": {
       "name": "Volkswagen ID.5",
       "match": "ID.5",
-      "url": null,
+      "url": "https://www.volkswagen.rs/modeli-i-konfigurator/svi-modeli?FUEL=Elektro",
       "price_eur": null,
       "checked": null,
       "changed": null,
       "status": "new",
-      "note": null
+      "note": null,
+      "multi": true
     },
     "volkswagen-id-7": {
       "name": "Volkswagen ID.7",
       "match": "ID.7",
-      "url": null,
+      "url": "https://www.volkswagen.rs/modeli-i-konfigurator/svi-modeli?FUEL=Elektro",
       "price_eur": null,
       "checked": null,
       "changed": null,
       "status": "new",
-      "note": null
+      "note": null,
+      "multi": true
     },
     "volkswagen-id-polo": {
       "name": "Volkswagen ID. Polo",
       "match": "ID. Polo",
-      "url": null,
+      "url": "https://www.volkswagen.rs/modeli-i-konfigurator/svi-modeli?FUEL=Elektro",
       "price_eur": null,
       "checked": null,
       "changed": null,
       "status": "new",
-      "note": null
+      "note": null,
+      "multi": true
     },
     "volvo-es90": {
       "name": "Volvo ES90",
       "match": "ES90",
-      "url": null,
+      "url": "https://beograd.volvocars.rs/akcijska_ponuda/details?series=recharge",
       "price_eur": null,
       "checked": null,
       "changed": null,
       "status": "new",
-      "note": null
+      "note": null,
+      "multi": true,
+      "extra_sources": [
+        {
+          "label": "volvocentar.rs (zalihe)",
+          "url": "https://www.volvocentar.rs/volvo_sa_zalihe"
+        }
+      ]
     },
     "volvo-ex30": {
       "name": "Volvo EX30",
       "match": "EX30",
-      "url": null,
+      "url": "https://beograd.volvocars.rs/akcijska_ponuda/details?series=recharge",
       "price_eur": null,
       "checked": null,
       "changed": null,
       "status": "new",
-      "note": null
+      "note": null,
+      "multi": true,
+      "extra_sources": [
+        {
+          "label": "volvocentar.rs (zalihe)",
+          "url": "https://www.volvocentar.rs/volvo_sa_zalihe"
+        }
+      ]
     },
     "volvo-ex60": {
       "name": "Volvo EX60",
       "match": "EX60",
-      "url": null,
+      "url": "https://beograd.volvocars.rs/akcijska_ponuda/details?series=recharge",
       "price_eur": null,
       "checked": null,
       "changed": null,
       "status": "new",
-      "note": null
+      "note": null,
+      "multi": true,
+      "extra_sources": [
+        {
+          "label": "volvocentar.rs (zalihe)",
+          "url": "https://www.volvocentar.rs/volvo_sa_zalihe"
+        }
+      ]
     },
     "volvo-ex90": {
       "name": "Volvo EX90",
       "match": "EX90",
-      "url": null,
+      "url": "https://beograd.volvocars.rs/akcijska_ponuda/details?series=recharge",
       "price_eur": null,
       "checked": null,
       "changed": null,
       "status": "new",
-      "note": null
+      "note": null,
+      "multi": true,
+      "extra_sources": [
+        {
+          "label": "volvocentar.rs (zalihe)",
+          "url": "https://www.volvocentar.rs/volvo_sa_zalihe"
+        }
+      ]
     }
   }
 }
