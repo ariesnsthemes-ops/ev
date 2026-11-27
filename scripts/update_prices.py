@@ -111,11 +111,15 @@ class Fetcher:
     def _get(self, url):
         self.wait(url)
         if url.lower().split('?')[0].endswith('.pdf'):
+            if self.browser:
+                r = self.ctx.request.get(url, timeout=60000)
+                if not r.ok: raise RuntimeError(f'HTTP {r.status}')
+                return 'pdf', pdf_text(r.body()), []
             return 'pdf', pdf_text(self.raw(url)), []
         if self.browser:
             page = self.ctx.new_page()
             try:
-                resp = page.goto(url, wait_until='domcontentloaded', timeout=45000)
+                resp = page.goto(url, wait_until='domcontentloaded', timeout=60000)
                 ctype = (resp.headers.get('content-type', '') if resp else '')
                 if 'pdf' in ctype:
                     return 'pdf', pdf_text(resp.body()), []
@@ -177,7 +181,7 @@ class Fetcher:
 
     def raw(self, url):
         req = urllib.request.Request(url, headers={'User-Agent': UA, 'Accept-Language': 'sr,en;q=0.8'})
-        with urllib.request.urlopen(req, timeout=45) as r:
+        with urllib.request.urlopen(req, timeout=60) as r:
             return r.read()
 
 
@@ -262,9 +266,20 @@ def name_spots(text, match, longer=()):
 
 # ---------------------------------------------------------------- finding a model page
 
-def score_link(href, label, key, prefer):
+def has_all(hay, key):
+    return all(re.search(r'\b' + re.escape(k) + r'\b', hay) for k in key)
+
+
+def score_link(href, label, key, prefer, siblings=()):
     hay = norm(href + ' ' + label)
-    if not all(re.search(r'\b' + re.escape(k) + r'\b', hay) for k in key): return None
+    if not has_all(hay, key): return None
+    # a page of a longer sibling model ("Atto 2 DM-i", "bZ4X Touring", "e-C4 X", "Enyaq Coupe") is not this model
+    hay_url, hay_label = norm(href), norm(label)
+    for sib in siblings:
+        sk = norm(sib).split()
+        if has_all(hay_url, sk) or (label and has_all(hay_label, sk)): return None
+        compact = ''.join(sk)                       # "ec4x", "bz4xtouring" written together in a URL
+        if compact in hay_url.replace(' ', ''): return None
     score = len(key)
     score += 2 if any(w in hay for w in ('model', 'modeli', 'vozila', 'new cars', 'automobili')) else 0
     score += 1 if prefer and prefer in href else 0
@@ -273,7 +288,7 @@ def score_link(href, label, key, prefer):
     return score
 
 
-def propose_url(f, site, match):
+def propose_url(f, site, match, siblings=()):
     """Model page on a brand/dealer site: links on the home page first, then the sitemap."""
     key = norm(match).split()
     host = urllib.parse.urlsplit(site).netloc.replace('www.', '')
@@ -283,8 +298,8 @@ def propose_url(f, site, match):
         _, _, links = f.get(site)
     except Exception:  # noqa: BLE001
         pass
-    cands = [(score_link(h, t, key, prefer), h) for h, t in links if host in h]
-    cands += [(score_link(u, '', key, prefer), u) for u in f.sitemap_urls(site) if host in u and (not prefer or prefer in u)]
+    cands = [(score_link(h, t, key, prefer, siblings), h) for h, t in links if host in h]
+    cands += [(score_link(u, '', key, prefer, siblings), u) for u in f.sitemap_urls(site) if host in u and (not prefer or prefer in u)]
     cands = [c for c in cands if c[0] is not None]
     best = max(cands)[1] if cands else None
     pricelist = next((h for h, t in links if host in h and re.search(r'cenovnik|cene|price', norm(h + ' ' + t))), None)
@@ -318,7 +333,7 @@ def source(f, label, url, site, match, longer):
             if not site:
                 out['how'] = 'nema adrese sajta'
                 return out
-            page, pricelist = propose_url(f, site, match)
+            page, pricelist = propose_url(f, site, match, longer)
             url = page or pricelist
             if not url:
                 out['how'] = 'model nije pronađen na sajtu'
