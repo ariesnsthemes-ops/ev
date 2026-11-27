@@ -75,13 +75,23 @@ class Fetcher:
         if self.pw: self.pw.stop()
 
     def allowed(self, url):
+        """robots.txt check. The file is fetched with the browser (or our UA); a missing or refused robots.txt
+        (4xx, network error) means no rules, as search engines treat it. Python's own reader would treat a
+        refused robots.txt (403) as "everything forbidden", which is wrong."""
         host = urllib.parse.urlsplit(url)
         base = f'{host.scheme}://{host.netloc}'
         if base not in self.robots:
-            rp = urllib.robotparser.RobotFileParser(base + '/robots.txt')
+            rp = None
             try:
-                rp.read()
-            except Exception:  # noqa: BLE001  unreadable robots.txt = allowed
+                if self.browser:
+                    r = self.ctx.request.get(base + '/robots.txt', timeout=20000)
+                    body = r.text() if r.ok else None
+                else:
+                    body = self.raw(base + '/robots.txt').decode('utf-8', 'replace')
+                if body and 'disallow' in body.lower():
+                    rp = urllib.robotparser.RobotFileParser()
+                    rp.parse(body.splitlines())
+            except Exception:  # noqa: BLE001
                 rp = None
             self.robots[base] = rp
         rp = self.robots[base]
@@ -109,11 +119,20 @@ class Fetcher:
                 ctype = (resp.headers.get('content-type', '') if resp else '')
                 if 'pdf' in ctype:
                     return 'pdf', pdf_text(resp.body()), []
-                # cookie walls and "please wait" checks: give the page a moment to settle
-                for _ in range(3):
-                    page.wait_for_timeout(2500)
-                    if 'request is being verified' not in page.content(): break
-                text = page.inner_text('body')
+                # JS checks ("please wait…"), redirects and prices loaded later: wait, then read; retry if the page moves
+                text = ''
+                for _ in range(4):
+                    try:
+                        page.wait_for_load_state('networkidle', timeout=15000)
+                    except Exception:  # noqa: BLE001  pages that never go idle (chat widgets, trackers)
+                        pass
+                    try:
+                        text = page.inner_text('body')
+                    except Exception:  # noqa: BLE001  "page is navigating": try again
+                        page.wait_for_timeout(2500)
+                        continue
+                    if 'request is being verified' not in text: break
+                    page.wait_for_timeout(3000)
                 links = page.eval_on_selector_all('a[href]', 'els => els.map(a => [a.href, (a.innerText || a.title || "").trim()])')
                 return 'html', text, links
             finally:
@@ -124,6 +143,37 @@ class Fetcher:
         links = [(urllib.parse.urljoin(url, h), re.sub(r'<[^>]+>', ' ', t).strip())
                  for h, t in re.findall(r'<a[^>]+href="([^"#]+)"[^>]*>(.*?)</a>', page, re.S)]
         return 'html', html_text(page), links
+
+    def plain(self, url):
+        """Text of a file (sitemap, robots) without rendering; None on any error."""
+        try:
+            if self.browser:
+                r = self.ctx.request.get(url, timeout=30000)
+                return r.text() if r.ok else None
+            return self.raw(url).decode('utf-8', 'replace')
+        except Exception:  # noqa: BLE001
+            return None
+
+    def sitemap_urls(self, site, limit=25):
+        """All page addresses in the site's sitemap(s) (sitemap.xml, sitemap_index.xml, Sitemap: lines in robots.txt)."""
+        base = '{0.scheme}://{0.netloc}'.format(urllib.parse.urlsplit(site))
+        key = 'sitemap:' + base
+        if key in self.cache: return self.cache[key]
+        todo = [base + '/sitemap.xml', base + '/sitemap_index.xml']
+        robots = self.plain(base + '/robots.txt') or ''
+        todo += re.findall(r'(?im)^\s*sitemap:\s*(\S+)', robots)
+        seen, pages = set(), []
+        while todo and len(seen) < limit:
+            u = todo.pop(0)
+            if u in seen: continue
+            seen.add(u)
+            body = self.plain(u)
+            if not body or '<loc' not in body: continue
+            for loc in re.findall(r'<loc>\s*([^<\s]+)\s*</loc>', body):
+                loc = htmllib.unescape(loc)
+                (todo if re.search(r'\.xml(\.gz)?($|\?)', loc) else pages).append(loc)
+        self.cache[key] = pages
+        return pages
 
     def raw(self, url):
         req = urllib.request.Request(url, headers={'User-Agent': UA, 'Accept-Language': 'sr,en;q=0.8'})
@@ -144,6 +194,7 @@ def pdf_text(raw):
 # ---------------------------------------------------------------- reading prices
 
 def norm(s):
+    s = s.replace('+', ' plus ')
     s = unicodedata.normalize('NFKD', s).encode('ascii', 'ignore').decode().lower()
     return re.sub(r'[^a-z0-9]+', ' ', s).strip()
 
@@ -194,38 +245,50 @@ def find_price(text, match, multi, longer=()):
 
 
 def flat(s):
-    """lower case, no accents, punctuation -> space, SAME length as the input (positions stay valid)."""
+    """lower case, no accents, punctuation -> space except "+" (C-HR+ is not C-HR); SAME length as the input."""
     out = []
     for ch in s.lower():
         a = unicodedata.normalize('NFKD', ch).encode('ascii', 'ignore').decode()[:1] or ' '
-        out.append(a if a.isalnum() else ' ')
+        out.append(a if a.isalnum() or a == '+' else ' ')
     return ''.join(out)
 
 
 def name_spots(text, match, longer=()):
     t = flat(text)
-    rx = lambda m: re.compile(r'(?<![a-z0-9])' + r'\s+'.join(map(re.escape, flat(m).split())) + r'(?![a-z0-9])')
+    rx = lambda m: re.compile(r'(?<![a-z0-9])' + r'\s+'.join(map(re.escape, flat(m).split())) + r'(?![a-z0-9+])')
     spots = [m.start() for m in rx(match).finditer(t)]
     skip = {m.start() for name in longer for m in rx(name).finditer(t)}
     return [s for s in spots if s not in skip]
 
 # ---------------------------------------------------------------- finding a model page
 
+def score_link(href, label, key, prefer):
+    hay = norm(href + ' ' + label)
+    if not all(re.search(r'\b' + re.escape(k) + r'\b', hay) for k in key): return None
+    score = len(key)
+    score += 2 if any(w in hay for w in ('model', 'modeli', 'vozila', 'new cars', 'automobili')) else 0
+    score += 1 if prefer and prefer in href else 0
+    score -= href.count('?') + href.count('/') * 0.1
+    score -= 3 if any(w in hay for w in ('test', 'konfigur', 'servis', 'kontakt', 'vest', 'news', 'blog', 'akcij', 'oprema', 'dodatn')) else 0
+    return score
+
+
 def propose_url(f, site, match):
-    kind, text, links = f.get(site)
+    """Model page on a brand/dealer site: links on the home page first, then the sitemap."""
     key = norm(match).split()
-    best = None
     host = urllib.parse.urlsplit(site).netloc.replace('www.', '')
-    for href, label in links:
-        if host not in href: continue
-        hay = norm(href + ' ' + label)
-        score = sum(1 for k in key if re.search(r'\b' + re.escape(k) + r'\b', hay))
-        if score == len(key):
-            score += 2 if any(w in hay for w in ('model', 'modeli', 'vozila')) else 0
-            score -= href.count('?') + (2 if any(w in hay for w in ('test', 'konfigur', 'servis', 'kontakt')) else 0)
-            if best is None or score > best[0]: best = (score, href)
-    pricelist = next((h for h, t in links if re.search(r'cenovnik|cene|price', norm(h + ' ' + t))), None)
-    return (best[1] if best else None), pricelist
+    prefer = urllib.parse.urlsplit(site).path.rstrip('/')   # e.g. /rs on leapmotor.net/rs
+    links = []
+    try:
+        _, _, links = f.get(site)
+    except Exception:  # noqa: BLE001
+        pass
+    cands = [(score_link(h, t, key, prefer), h) for h, t in links if host in h]
+    cands += [(score_link(u, '', key, prefer), u) for u in f.sitemap_urls(site) if host in u and (not prefer or prefer in u)]
+    cands = [c for c in cands if c[0] is not None]
+    best = max(cands)[1] if cands else None
+    pricelist = next((h for h, t in links if host in h and re.search(r'cenovnik|cene|price', norm(h + ' ' + t))), None)
+    return best, pricelist
 
 # ---------------------------------------------------------------- sources: importer + dealers
 
@@ -424,8 +487,8 @@ def report(rows, f=None):
         run = f'{os.environ["GITHUB_SERVER_URL"]}/{os.environ["GITHUB_REPOSITORY"]}/actions/runs/{os.environ["GITHUB_RUN_ID"]}'
 
     # markdown (pull request body and the Actions summary)
-    src_md = lambda r: '<br>'.join(f'{s["src"]}: ' + (f'[{eur(s["price"])}]({s["url"]})' if s['price'] else (s['how'] or s['state']))
-                                   for s in r['sources'])
+    src_md = lambda r: '<br>'.join(f'{s["src"]}: ' + (f'[{eur(s["price"])}]({s["url"]})' if s['price'] else
+                                   (s['how'] or s['state']) + (f' ([stranica]({s["url"]}))' if s['url'] else '')) for s in r['sources'])
     md = [f'## Provera cena {TODAY}', '', f'**{summary}**', '']
     if run: md += [f'Tabela za štampu (PDF i HTML): {run} → Artifacts → **izvestaj-cene**', '']
     for title, part in gs:
@@ -440,7 +503,8 @@ def report(rows, f=None):
     # HTML table (and PDF from it)
     E = htmllib.escape
     def src_html(r):
-        return ''.join(f'<div><b>{E(s["src"])}</b>: ' + (f'<a href="{E(s["url"])}">{eur(s["price"])}</a>' if s['price'] else f'<span class="m">{E(s["how"] or s["state"])}</span>') + '</div>'
+        return ''.join(f'<div><b>{E(s["src"])}</b>: ' + (f'<a href="{E(s["url"])}">{eur(s["price"])}</a>' if s['price'] else f'<span class="m">{E(s["how"] or s["state"])}</span>'
+                                                         + (f' <a class="m" href="{E(s["url"])}">stranica</a>' if s['url'] else '')) + '</div>'
                        for s in r['sources'])
     body = []
     for title, part in gs:

@@ -1,5 +1,5 @@
 {
-  "_about": "Početne cene električnih modela za fusnotu na stranicama modela. Popunjava scripts/update_prices.py (GitHub Actions: Cene automobila, prva sreda u mesecu). Ručno se menjaju samo url (stranica modela ili cenovnik, može i PDF) i match (naziv modela kako ga piše uvoznik). price_eur = najniža početna cena u EUR; checked = dan poslednje provere; changed = dan kada se cena poslednji put promenila; status: ok | review (promena veća od dozvoljene, čeka ručnu proveru) | not-found | blocked | no-url | new. Fusnota se prikazuje samo ako postoji cena i ako je checked mlađi od 120 dana.",
+  "_about": "Početne cene električnih modela za fusnotu na stranicama modela. Popunjava scripts/update_prices.py (GitHub Actions: Cene automobila, prva sreda u mesecu). Ručno se menjaju samo url (stranica modela ili cenovnik, može i PDF) i match (naziv modela kako ga piše uvoznik). price_eur = najniža početna cena u EUR; checked = dan poslednje provere; changed = dan kada se cena poslednji put promenila; status: ok | review (promena veća od dozvoljene, čeka ručnu proveru) | not-found | blocked | no-url | new. Fusnota se prikazuje samo ako postoji cena i ako je checked mlađi od 120 dana. _brand_sites: null = brend nema srpski sajt sa cenama (Suzuki); cena se tada traži samo kod dilera.",
   "_brand_sites": {
     "byd": "https://byd-auto.rs/",
     "changan": "https://changanbalkans.com/rs/",
@@ -18,9 +18,9 @@
     "ford": "https://www.ford.rs/",
     "kia": "https://www.kia.com/rs/",
     "mazda": "https://www.mazda.rs/",
-    "porsche": "https://www.porsche.rs/",
+    "porsche": "https://dealer.porsche.com/rs/beograd/sr-Latn-RS/",
     "renault": "https://www.renault.rs/",
-    "suzuki": "https://www.suzuki.rs/",
+    "suzuki": null,
     "toyota": "https://www.toyota.rs/",
     "volkswagen": "https://www.volkswagen.rs/",
     "hyundai": "https://www.hyundai.rs/",
