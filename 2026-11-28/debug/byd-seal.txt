@@ -1,0 +1,8 @@
+# byd-seal  2026-11-28
+
+izvor uvoznik: https://byd-auto.rs/modeli/byd-seal/ -> blocked: sajt blokira automatsku proveru
+
+====================================================================================================
+https://byd-auto.rs/modeli/byd-seal/
+[html, 51 znakova]
+Please wait while your request is being verified...

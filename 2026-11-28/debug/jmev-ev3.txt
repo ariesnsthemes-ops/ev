@@ -1,0 +1,8 @@
+# jmev-ev3  2026-11-28
+
+izvor uvoznik: https://www.jmev.rs/ev3.html -> blocked: sajt blokira automatsku proveru
+
+====================================================================================================
+https://www.jmev.rs/ev3.html
+[html, 51 znakova]
+Please wait while your request is being verified...

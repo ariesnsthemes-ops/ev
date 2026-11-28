@@ -1,0 +1,7 @@
+# foton-etunland  2026-11-28
+
+izvor uvoznik: https://fotonserbia.rs/cenovnici/FotonSrbija-cenovnik.pdf -> not-found: greška (Error: APIRequestContext.get: Connection timeout)
+
+====================================================================================================
+https://fotonserbia.rs/cenovnici/FotonSrbija-cenovnik.pdf
+(nije učitano)

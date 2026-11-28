@@ -1,0 +1,19 @@
+# geely-e5  2026-11-28
+
+izvor uvoznik: https://www.geelyauto.rs/vozila/e5 -> not-found: nema cenovnika sa "E5" na stranici
+
+====================================================================================================
+https://www.geelyauto.rs/vozila/e5
+[html, 284 znakova]
+www.geelyauto.rs
+Obavljanje bezbednosne verifikacije
+
+Na ovom veb-sajtu koristi se bezbednosni servis za zaštitu od zlonamernih botova. Ova stranica se prikazuje dok veb-sajt proverava da li ste bot.
+
+Ray ID: a6180059187dff56
+Performanse i bezbednost pruža mreža Cloudflare
+Privatnost
+
+--- linkovi (href | tekst | naslov kartice) ---
+https://www.cloudflare.com/?utm_source=challenge&utm_campaign=m | Cloudflare | www.geelyauto.rs
+https://www.cloudflare.com/privacypolicy/ | Privatnost | www.geelyauto.rs

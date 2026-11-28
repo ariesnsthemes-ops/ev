@@ -1,0 +1,253 @@
+# renault-4-e-tech  2026-11-28
+
+izvor uvoznik: https://cdn.group.renault.com/ren/rs/cenovnik/renault4-pricelist.pdf.asset.pdf/955fb7ad89.pdf -> not-found: pdf, model "Renault 4" nije pronađen pored cene
+
+====================================================================================================
+https://cdn.group.renault.com/ren/rs/cenovnik/renault4-pricelist.pdf.asset.pdf/955fb7ad89.pdf
+[pdf, 10924 znakova]
+verzije sa električnom energijom 1.11.2026
+komercijalni naziv kod kw (ks) gorivo cena bez PDV-a cena sa PDV-om* jesenji bonus sa PDV-om cena sa popustom i PDV-om*
+evolution 120 hp urban range EV2 A3 P0 GE 90 (120) električna energija 26.825 € 32.190 € 1.200 € 30.990 €
+evolution 150 hp comfort range EV2 A1 N0 GE 110 (150) električna energija 29.742 € 35.690 € 1.200 € 34.490 €
+techno 150 hp comfort range TE3 A1 N0 GE 110 (150) električna energija 31.825 € 38.190 € 1.200 € 36.990 €
+techno “plein sud™” 150 hp comfort range TE3CA1 N0 GE 110 (150) električna energija 33.075 € 39.690 € 1.200 € 38.490 €
+iconic 150 hp comfort range ICO A1 N0 GE 110 (150) električna energija 33.908 € 40.690 € 1.200 € 39.490 €
+iconic “plein sud™” 150 hp comfort range ICOCA1 N0 GE 110 (150) električna energija 35.158 € 42.190 € 1.200 € 40.990 €
+subvencija za elektro vozila**
+5.000 €
+*Cena uključuje carinu, transport i PDV, ne uključuje trošak pripreme vozila.
+Cenovnik važi do objave novog cenovnika. Keos D.O.O. zadržava pravo izmene informacija na cenovniku. 
+Za više informacija molim Vas kontaktirajte ovlašćenog Renault distributera. 
+Sve cene su izražene u evrima sa uračunatim PDV-om, a obračunavaju se po srednjem kursu NBS na dan plaćanja.
+**Uredbom Vlade Republike Srbije odobrene su subvencije za nabavku novih vozila sa električnim pogonom u iznosu od 5.000 EUR. 
+Zahtev za subvencionisanu kupovinu novog vozila u skladu sa ovom uredbom podnosi se Ministarstvu zaštite životne sredine u skladu
+sa članom 6 Uredbe. KEOS D.O.O. ne garantuje dobijanje subvencije. 
+KEOS D.O.O., DIREKCIJA MARKETING
+RENAUL T  4E-TECH ELECTRIC
+serijska oprema
+serijska oprema evolution
+SIGURNOST I POMOĆ U VOŽNJI UDOBNOST
+Sistem protiv blokiranja točkova - ABS Automatski klima uređaj
+Sistem za pomoć pri kretanju na uzbrdici - HAS Zadnji prozor sa grejačem
+Sistem za kontrolu stabilnosti - ESP Električno podesivi i grejani spoljašnj retrovizori
+Sistem za održavanje vozila u saobraćajnoj traci - LKA Bočni pokazivači pravca na spoljašnjim ogledalima
+Sistem automatskog kočenja u slučaju nužde sa prepoznavanjem pešaka I biciklista Zadnji naslon za glavu
+Sistem za kočenje u slučaju nužde Prednja sedišta podesiva 6Wm / 4Wm
+Sistem za prepoznavanje saobraćajnih znakova Automatsko uključivanje svetala + Brisači sa senzorom za kišu
+Upozorenje na prekoračenje brzine Unutrašnji retrovizor sa ručnim zatamnjivanjem
+Sistem za nadzor umora vozača Električni podizači prednjih i zadnjih stakala - impulsni
+Sistem za hitne pozive Automatsko uključivanje/isključivanje dugih svetala
+Daljinsko centralno zaključavanje Centralna konzola sa naslonom za ruke
+Upozorenje na sigurnosni razmak napred Renault kartica “slobodne ruke” za otključavanje i pokretanje vozila
+Prednji vazdušni jastuk za vozača i suvozača
+Vazdušene zavese I bočni vazdušni jastuci napred
+Zvučni sistem upozorenja za pešake
+Treće kočiono svetlo DIZAJN
+Tritačkovni središnji sigurnosni pojas Tonirana stakla
+ISOFIX sistem pričvršćivanja dečijih sedišta Krov u boji karoserije
+Mogućnost isključivanja prednjeg suvozačevog vazdušnog jastuka Linija na krovu u crnoj boji
+Tempomat Upravljač od pene
+Zadnji parking senzori SpoljašnjI retroizori u crnoj boji
+Automatska parkirna kočnica Full LED Pure Vision prednja svetla
+Zaštita kočionog diska Aktivna prednja rešetka
+Dva svetla za vožnju unazad Čelični 18" naplaci JOGGING
+Upozorenje na nezakopčane sigurnosne pojaseve (sva sedišta)
+Punjenje AC (11kw) + Brzo punjenje DC (80kw) (samo za EV40)
+Punjenje AC (11kw) + Brzo punjenje DC (100kw) (samo za EV52)
+Kabal za punjenje Mode 3. Tip 2 
+Toplotna pumpa
+Indirektna kontrola pritiska u pneumaticima
+MULTIMEDIJA DODACI
+Multimedijski sistem openR link sa 10.1“centralnim ekranom, zvučnim sistemom Akramys i Komplet za popravku pneumatika
+funkcijom povezivanja putem Android Auto™ i Apple CarPlay™ 
+Informacioni TFT 7" ekran u boji
+serijska oprema techno
+dodatno na opremu evolution
+SIGURNOST I POMOĆ U VOŽNJI UDOBNOST
+Aktivni tempomat sa funkcijom Stop & Go Električno podesivi, grejani i preklopivi spoljašnj retrovizori
+Automatska parkirna kočnica sa funkcijom Auto Hold Unutrašnji retrovizor bez okvira sa automatskim zatamnjivanjem
+Kamera za vožnju unazad Uzdužni krovni nosači (ne važi za Plein Sud verzije)
+Sistem Multi-Sense® Prednja sedišta podesiva 6Wm / 6Wm
+Punjenje AC (11kw) + Brzo punjenje DC (100kw) (samo za EV52) Preklopivo suvozačevo sedište
+Regenerativno kočenje podesivo pomoću papučice na volanu
+MULTIMEDIJA DIZAJN
+Multimedijski sistem openR link sa 12“centralnim ekranom, zvučnim sistemom Akramys Upravljač od TEP materijala
+sa navigacijom + Google maps i Google Assistant Shark antena (ne važi za Plein Sud verzije)
+Funkcija povezivanja putem Android Auto™ i Apple CarPlay™ Antena ugrađena u zadnje staklo (samo Plein Sud verzije)
+Bežično punjenje mobilnog uređaja LED unutrašnja svetla napred i pozadi
+Informacioni TFT 12,3" ekran u boji Ambijentalno osvetljenje napred
+Aluminijumski 18" naplaci SIXTIES
+RENAUL T  4
+E-TECH ELECTRIC
+RENAUL T  4
+serijska oprema
+serijska oprema iconic
+dodatno na opremu techno
+SIGURNOST I POMOĆ U VOŽNJI UDOBNOST
+Prednji, zadnji i bočni parking senzori  i Hands free parkiranje Vozačevo sedište sa lumbalnom podrškom
+Grejanje prednjih sedišta
+Grejanje upravljača
+DIZAJN
+Ambijentalno osvetljenje napred I pozadi
+Dodatno zatamnjena zadnja stakla
+Aluminijumski 18" naplaci PARISIAN
+RENAUL T  4
+E-TECH ELECTRIC
+cenovnik opcija
+paketi
+paket UDOBNOST kod evolution techno iconic
+grejanje prednjih sedišta
+prednja sedišta podesiva 6Wm / 6Wm
+paket UDOBNOST +
+grejanje upravljača
+grejanje prednjih sedišta
+prednja sedišta podesiva 6Wm / 6Wm + vozačevo sedište sa lumbalnom 
+podrškom
+paket SIGURNOST
+upozorenje na vozila prilikom kretanja unazad + upozorenje na 
+opasnost prilikom izlaska iz vozila
+prednji, zadnji i bočni parking senzori  i Hands free parkiranje
+upozorenje na mrtvi ugao uz sistem za prevenciju bočnog sudara pri preticanju
+automatsko kočenje u slučaju nužde prilikom kretnje unazad
+sugestija za ekonomičnu vožnju
+paket SIGURNOST +
+upozorenje na vozila prilikom kretanja unazad + upozorenje na 
+opasnost prilikom izlaska iz vozila
+upozorenje na mrtvi ugao uz sistem za prevenciju bočnog sudara pri preticanju
+automatsko kočenje u slučaju nužde prilikom kretnje unazad
+sugestija za ekonomičnu vožnju
+udobnost
+kod evolution techno iconic
+prednji, zadnji i bočni parking senzori 
+handfree parkiranje ITP17 - 490 € S
+multimedija
+kod evolution techno iconic
+premium Harmon Kardon ozvučenje NA498 - 890 € 890 €
+dodaci
+kod evolution techno iconic
+kabal za punjenje Mode 2. Tip 2 (16A) M2CA2 490 € 490 € 490 €
+Vehicle to Load - dvosmerni punjač V2X02 240 € 240 € 240 €
+krovni nosači u crnoj boji (1) RFR00 190 € S S
+automatsko otvaranje/zatvaranje vrata prtljažnika - Easy Trunk Access RDATA - 590 € 590 €
+produžene povezane usluge +2 godine (ukupno 5 godina) ESCO2 - 120 € 120 €
+(1) nije dostupno za Plein Sud verzije
+PCV96 - 590 € -
+PCV98 340 € - -
+PCV82 - - 790 €
+PCV80 990 € --
+RENAUL T  4E-TECH ELECTRIC
+dizajn
+kod evolution techno iconic
+UNUTRAŠNJOST
+unutrašnjost u svetlosivoj boji HAR00 S - -
+unutrašnjost u teget boji HAR02 - S -
+unutrašnjost u tamnosivoj boji HAR03 - - S
+PRESVLAKE
+presvlake u tamnosivoj boji sa plavim detaljlima CLS00 S - -
+presvlake u tamnosivoj boji sa braon detaljima CLS02 - S -
+presvlake u tamnosivoj boji sa plavo/crvenim detaljima detaljima IMI00 - - S
+SPOLJAŠNJOST
+žuta nelepnica "fl4sh" za krov i poklopcac motora (1) PXF00 640 € 640 € 640 €
+plava nelepnica "fl4sh" za krov i poklopcac motora (1) PXF02 640 € 640 € 640 €
+srebrna nelepnica "numbeR4" za krov i poklopcac motora (1) PXF03 640 € 640 € 640 €
+bakarna nelepnica "numbeR4" za krov i poklopcac motora (1) PXF04 640 € 640 € 640 €
+detalji na krilima i branicima u u žutoj boji(2) PXJ00 640 € 640 € 640 €
+detalji na krilima i branicima u u plavoj boji (2) PXJ02 640 € 640 € 640 €
+detalji na krilima i branicima u u srebrnoj boji "numbeR4" (2) PXJ03 640 € 640 € 640 €
+detalji na krilima i branicima u u bakarnoj boji "numbeR4" (2) PXJ04 640 € 640 € 640 €
+poklopac motora u crnoj boji (3) PXC00 - 240 € 240 €
+krov u crnoj boji (4) PXA02 - 0 € S
+krov u različitoj boji od karoserije NTCRF - 0 € S
+bez dekorativnih nalepnica NOPXB S 0 € 0 €
+dvobojna karoserija 2BCOL - 0 € 0 €
+BOJE KAROSERIJE
+jednobojna karoserija metalik (besplatna boja)
+karmin crvena NPF 0 € 0 € -
+jednobojna karoserija metalik
+ledeno bela 369 690 € 690 € -
+urban siva KPW 690 € 690 € -
+crna etoile GNE 690 € 690 € 690 €
+cumulus plava RQU 690 € 690 € -
+france zelena RRP 690 € 690 € -
+terracota braon CNZ 690 € 690 € -
+dvobojna karoserija metalik (boja krova:crna etoile)
+urban siva & crna etoile YYT - 1.290 € 1.290 €
+terracota braon & crna etoile YYU - 1.290 € 1.290 €
+france zelena & crna etoile YYV - 1.290 € 1.290 €
+perla bela & crna etoile YYX - 1.290 € 1.290 €
+cumulus plava & crna etoile YZE - 1.290 € 1.290 €
+karmin crvena & crna etoile YYY - 1.290 € 0 €
+NAPLACI
+čelični 18" naplaci JOGGING RTO18 RIM04 S - -
+aluminijumski 18" naplaci SIXTIES RAL18 RIM02 - S -
+aluminijumski 18" naplaci PARISIAN RAL18 RIM03 - - S
+Napomene:
+(1) Nije dostupno za Plei Sud verzije
+(2) Obavezno uz opciju NOPXB na nivoima opreme Techno i Iconic
+(3) Obavezno uz opcije PXA02 i NTCRF i uz dvobojnu karoseriju na nivou opreme Techno
+(4) Obavezno uz opciju NTCRF i uz dvobojnu karoseriju
+S = serija      - = nije dostupno
+RENAUL T  4E-TECH ELECTRIC
+Čelični 18" naplaci 
+JOGGING
+Aluminijumski 18" naplaci 
+SIXTIES
+Aluminijumski 18" naplaci 
+PARISIAN 
+
+tehničke karakteristike
+komercijalni naziv EV40 120ks EV52 150ks
+MOTOR
+gorivo
+najveća snaga kW (KS) 90 (120) 110 (150)
+najveći obrtni momenat CEE (KS) 225 245
+BATERIJA
+tehnologija
+ukupan napon
+neto kapacitet (kWh) 40 52
+baterije (kg) 237 (+/-5) 297 (+/-5)
+punjenje, prilagodljivo jednofazno ili trofazno do AC11+ DC80 do AC11+ DC100
+vreme punjenja: kučna utičnica (10A)(0-100%) 13h 00min 17h 13min
+3,7kW:16A jednofazni Wallbox (15-80%) 8h 40min 9h 48min
+7,4kW:32A jednofazna stanica za punjenje (15-80%) 4h 20min 5h 11min
+22kW:32A trofazna stanica za punjenje (15-80%) 2h 45min 3h 13min
+80kW:brzo punjenje (15-80%) 0h 30min -
+100kW:brzo punjenje (15-80%) - 0h 30min
+MENJAČ
+tip menjača
+UPRAVLJAČKI MEHANIZAM
+tip upravljača
+Ø kruga okretanja (m)
+PENUMATICI
+Standardna veličina pneumatika
+KOČNICE
+Napred: ventilirajući disk (mm)
+Pozadi: puni disk (mm)
+PREFORMANSE
+najveća brzina (km/h)
+0 - 100 km/h (s) 8,2 9,2
+POTROŠNJA WLTP
+emisije CO2 (g/km)
+domet po WLTP (km) 308 409
+potrošnja po WLTP (Wh/km) 14,7 15,1
+MASE (kg)
+masa praznog vozila 1410 1462
+najveća dozvoljena nosivost vozila 1895 1980
+najveća dozvoljena nosivost vozila + prikolica (MTR) 2645 2730
+največa dozvoljena masa prikolice sa kočnicama
+največa dozvoljena masa prikolice bez kočnicama
+najveća dozvoljena nosivost na krovu 80
+750
+750
+150
+296X26
+električna energija
+0
+električni varijabilni servo
+280X9.6
+automatski menjač
+10,8
+195/60 R18 96H
+Litij-ionska
+400V
+RENAUL T  4E-TECH ELECTRIC

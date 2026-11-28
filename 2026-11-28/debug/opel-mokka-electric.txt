@@ -1,0 +1,792 @@
+# opel-mokka-electric  2026-11-28
+
+izvor uvoznik: https://www.opel.rs/tools/opel-trazite-brosuru/overview.html -> not-found: html, cenovnik se bira po naslovu; pregledano linkova: 1
+izvor autopromet.rs: None -> no-url: model nije pronađen na sajtu
+izvor beoauto.com: None -> no-url: model nije pronađen na sajtu
+izvor opel.acbrajic.com: None -> no-url: model nije pronađen na sajtu
+izvor opelcarbox.rs: None -> no-url: model nije pronađen na sajtu
+izvor automirkos.com: None -> no-url: model nije pronađen na sajtu
+
+====================================================================================================
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html
+[html, 6270 znakova]
+Skip To Content
+Vozila na lageru
+Opel dileri
+MyOpel
+Putnička vozila
+Komercijalna vozila
+Ponude
+Flota
+Za vlasnike vozila
+TESTIRAJ I UPOZNAJ SVOJ NOVI OPEL!
+TESTIRAJ I UPOZNAJ SVOJ NOVI OPEL!
+Preuzimanje kataloga i cenovnika
+Nova Astra
+Cenovnik
+Nova Astra Sports Tourer
+Cenovnik
+Corsa
+Cenovnik
+Combo Life
+Cenovnik
+Cenovnik - Combo Life N1
+Nova Frontera
+Pošaljite upit
+Cenovnik
+Novi Grandland
+Pošaljite upit
+Cenovnik
+Mokka
+Cenovnik
+Combo Cargo
+Cenovnik
+Movano Van
+Cenovnik
+Vivaro Van
+Brošura
+Cenovnik
+Vivaro Combi
+Brošura
+Cenovnik
+Lokator dilera
+Test Vožnja
+Zatražite Ponudu
+Brošure
+Zatražite servisiranje
+Putnička vozila
+Pomozi mi da izaberem
+Budući modeli
+120 godina modeli
+Komercijalna vozila
+Konverzije
+Više o Opelu
+Opelov sistem za informisanje i zabavu
+Koncept automobil
+Opel Classic
+Prosto električni
+Opel Experimental
+O Opelu
+Održivost
+Filozofija
+Osnovne činjenice
+Lokacije
+Politika kvaliteta
+Politika zaštite životne sredine
+Politika zdravlja i bezbednosti na radu
+Vodič o ekonomičnosti potrošnje goriva, emisiji i zagađivanju
+Pratite nas preko
+Budućnost pripada svima © Opel 2026
+Žig i autorsko pravo
+Wltp rezimvoznje potrosnjagoriva
+Pravila o zaštiti privatnosti
+Opel privatnost i pravna pitanja
+Pravno obaveštenje
+Recikliranje
+Deklaracije o usaglašenosti
+Kontakt
+Tehnička informacija
+Колачић пристанак
+
+Slika može prikazivati opcionu opremu.
+
+Opisane i ilustrovane karakteristike mogu se odnositi na ili prikazivati opcionu opremu koja nije uključena u standardnu isporuku. Navedene informacije bile su tačne u vreme objavljivanja. Zadržavamo pravo izmene dizajna i opreme. Prikazane boje samo približno odgovaraju stvarnim bojama. Ilustrovana opciona oprema dostupna je uz doplatu. Dostupnost, tehničke karakteristike i oprema koja se isporučuje na našim vozilima mogu varirati ili biti dostupni samo u pojedinim zemljama ili samo uz doplatu. Za preciznije informacije o opremi koja se isporučuje na našim vozilima, možete se obatiti lokalnom ovlašćenom Opel partneru.
+
+
+ 
+
++) WLTP
+
++) Podaci o potrošnji goriva i emisiji CO2 određeni su prema Globalno usklađenom ispitnom postupku za laka vozila (WLTP), u skladu s uredbama R (EC) br. 715/2007 i R (EU) br. 2017/1151. Vrednosti ne uzimaju u obzir posebno korišćenje i uslove vožnje. Više informacija o zvaničnim vrednostima za potrošnju goriva i emisiju CO2 naći ćete u uputstvu ,,Uputstvo za potrošnju goriva i emisiju CO2 za nova putnička vozila” koje je besplatno dostupno na svim prodajnim mestima ili kod imenovanog državnog organa.
+
+ 
+
+++) NEDC
+
+++) Podaci o potrošnji goriva i emisiji CO2 određeni su prema Globalno usklađenom ispitnom postupku za laka vozila (WLTP), a relevantne vrednosti su ponovo prevedene u NEDC kako bi se omogućilo poređenje, u skladu s uredbama R (EC) br. 715/2007, R (EU) br. 2017/1153 i R (EU) br. 2017/1151.
+
+Vrednosti ne uzimaju u obzir posebno korišćenje, uslove vožnje, opremu ili opcije i mogu varirati u zavisnosti od dimenzija pneumatika. Više informacija o zvaničnim vrednostima za potrošnju goriva i emisiju CO2 naći ćete u uputstvu ,, Uputstvo za potrošnju goriva i emisiju CO2 za nova putnička vozila” koje je besplatno dostupno na svim prodajnim mestima ili kod imenovanog državnog organa.
+
+ 
+
++++) Odlazeći modeli / Laka komercijalna vozila
+
++++) Sve navedene vrednosti odnose se na osnovni EU model sa standardnom opremom. Podaci o potrošnji goriva i emisiji CO2 određeni su u skladu s uredbama R EC br. 715/2007 i R (EC) br. 692/2008 (u odgovarajućim verzijama), uzimajući u obzir masu vozila u voznom stanju, kako je navedeno u uredbama. Dodatna oprema i fabrički ugrađene opcije mogu voditi nešto višim vrednostima za potrošnju i emisiju CO2 od navedenih. Vrednosti za potrošnju goriva i emisiju CO2 ne odnose se ni na jedno vozilo posebno i nisu deo ponude. Ovde su date samo u cilju poređenja različitih vozila, ali se mogu razlikovati od konkretne potrošnje goriva pri vožnji u realnim uslovima, koja u velikoj meri zavisi od stila vožnje i uslova eksploatacije. Dodatna oprema može povećati masu praznog vozila i, u nekim slučajevima, dozvoljeno osovinsko opterećenje kao i dozvoljenu ukupnu masu vozila i smanjiti dozvoljenu masu prikolice pod punim teretom. Ovo može dovesti do smanjenja maksimalne brzine i povećanja vremena ubrzanja. Vozne performanse podrazumevaju vozača od 75 kg i 125 kg tereta. 2 H gas u m3/100 km.
+
+ 
+
+++++) Podaci o potrošnji goriva i emisiji CO2 su preliminarni i određeni su prema WLTP test metodologiji (R (EC) No. 715/2007, R (EU) No. 2017/1151). Odobrenje EG tipa i Sertifikat o konformitetu još uvek nisu dostupni. Preliminarne vrednosti se mogu razlikovati od oficijelnih podataka finalnog tipa.
+
+ 
+
++++++) Podaci o potrošnji goriva i emisiji CO2 su preliminarni i određeni su prema WLTP test metodologiji, i relevantne vrednosti su prevedene u NEDC kako bi bilo moguće upoređivanje sa drugim vozilima, prema regulativi R (EC) No. 715/2007, R (EU) No. 2017/1153 and R (EU) No. 2017/1151. Odobrenje EG tipa i Sertifikat o konformitetu još uvek nisu dostupni. Preliminarne vrednosti se mogu razlikovati od oficijelnih podataka finalnog tipa.
+
+NASTAVITI BEZ PRIHVATANJA →
+
+
+
+POŠTUJEMO VAŠU PRIVATNOST
+
+Koristimo kolačiće kako bismo Vam osigurali najbolje iskustvo na našoj veb stranici. Kolačići nam omogućavaju da Vam pružimo osnovne funkcionalnosti kao što su bezbednost, upravljanje mrežom i pristupačnost. Kolačići poboljšavaju upotrebljivost i performanse kroz različite funkcije, kao što su prepoznavanje jezika, rezultati pretraživanja i na taj način poboljšavaju ono što Vam nudimo. Naša veb stranica takođe može koristiti kolačiće trećih strana za slanje oglasnih poruka koje su za vas relevantnije. Neke kolačiće, odnosno podatke dobijene njihovim korišćenjem, mogu obrađivati treća lica koja se nalaze u zemljama izvan Evropske ekonomske zone (EEZ) koje možda još nisu dobile odluku o adekvatnosti od relevantnih evropskih organa za zaštitu podataka. U ovom slučaju prenos se zasniva na vašem pristanku (član 69. stav 1. tačka 1. Zakona o zaštiti podatka o ličnosti Republike Srbije (ZZPL).
+
+Ukoliko želite da saznate više o kolačićima koje koristimo i kako da ih uredite, možete pristupiti našoj Politici o kolačićima ili kliknuti na taster „Uredi moja podešavanja“.
+
+UREDI MOJA PODEŠAVANJA
+PRIHVATI SVE
+
+--- linkovi (href | tekst | naslov kartice) ---
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html#main | Skip To Content | Putnička vozila
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html# |  | Putnička vozila
+https://www.opel.rs/ |  | Putnička vozila
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html# | Putnička vozila | Putnička vozila
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html# | Nova Astra modeli | Nova Astra modeli
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html# | Nova Opel Astra | Nova Opel Astra
+https://www.opel.rs/putnicki-automobili/astra-modeli/astra/hatchback/overview.html | Pregled | Nova Opel Astra
+https://www.opel.rs/putnicki-automobili/astra-modeli/astra/hatchback/features.html | Karakteristike | Nova Opel Astra
+https://www.opel.rs/putnicki-automobili/astra-modeli/astra/hatchback/brochures-pricelist.html | Brošure i cenovnici | Nova Opel Astra
+https://lager.opel.rs/ | Vozila na lageru | Nova Opel Astra
+https://www.opel.rs/tools/konfigurator.html | Konfigurator | Nova Opel Astra
+https://www.opel.rs/tools/opel-nadite-dilera.html | Lokator dilera | Nova Opel Astra
+https://www.opel.rs/tools/test-voznja.html | Test Vožnja | Nova Opel Astra
+https://www.opel.rs/tools/opel-kontaktirajte-prodavca.html | Zatražite Ponudu | Nova Opel Astra
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html | Brošure | Nova Opel Astra
+https://www.opel.rs/tools/opel-online-zakazivanje-servisa.html | Zatražite servisiranje | Nova Opel Astra
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html# | Nova Opel Astra Plug-in Hybrid | Nova Opel Astra Plug-in Hybrid
+https://www.opel.rs/putnicki-automobili/astra-modeli/astra-hybrid/hatchback/overview.html | Pregled | Nova Opel Astra Plug-in Hybrid
+https://www.opel.rs/putnicki-automobili/astra-modeli/astra-hybrid/hatchback/features.html | Karakteristike | Nova Opel Astra Plug-in Hybrid
+https://www.opel.rs/putnicki-automobili/astra-modeli/astra-hybrid/hatchback/brochures-pricelist.html | Brošure i cenovnici | Nova Opel Astra Plug-in Hybrid
+https://lager.opel.rs/ | Vozila na lageru | Nova Opel Astra Plug-in Hybrid
+https://www.opel.rs/tools/konfigurator.html | Konfigurator | Nova Opel Astra Plug-in Hybrid
+https://www.opel.rs/tools/opel-nadite-dilera.html | Lokator dilera | Nova Opel Astra Plug-in Hybrid
+https://www.opel.rs/tools/test-voznja.html | Test Vožnja | Nova Opel Astra Plug-in Hybrid
+https://www.opel.rs/tools/opel-kontaktirajte-prodavca.html | Zatražite Ponudu | Nova Opel Astra Plug-in Hybrid
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html | Brošure | Nova Opel Astra Plug-in Hybrid
+https://www.opel.rs/tools/opel-online-zakazivanje-servisa.html | Zatražite servisiranje | Nova Opel Astra Plug-in Hybrid
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html# | Nova Opel Astra GSe | Nova Opel Astra GSe
+https://www.opel.rs/putnicki-automobili/astra-modeli/astra-hybrid/gse/overview-hb.html | Hatchback | Nova Opel Astra GSe
+https://lager.opel.rs/ | Vozila na lageru | Nova Opel Astra GSe
+https://www.opel.rs/tools/konfigurator.html | Konfigurator | Nova Opel Astra GSe
+https://www.opel.rs/tools/opel-nadite-dilera.html | Lokator dilera | Nova Opel Astra GSe
+https://www.opel.rs/tools/test-voznja.html | Test Vožnja | Nova Opel Astra GSe
+https://www.opel.rs/tools/opel-kontaktirajte-prodavca.html | Zatražite Ponudu | Nova Opel Astra GSe
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html | Brošure | Nova Opel Astra GSe
+https://www.opel.rs/tools/opel-online-zakazivanje-servisa.html | Zatražite servisiranje | Nova Opel Astra GSe
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html# | Nova Opel Astra-e | Nova Opel Astra-e
+https://www.opel.rs/putnicki-automobili/astra-modeli/astra-e/overview-features.html | Pregled | Nova Opel Astra-e
+https://lager.opel.rs/ | Vozila na lageru | Nova Opel Astra-e
+https://www.opel.rs/tools/konfigurator.html | Konfigurator | Nova Opel Astra-e
+https://www.opel.rs/tools/opel-nadite-dilera.html | Lokator dilera | Nova Opel Astra-e
+https://www.opel.rs/tools/test-voznja.html | Test Vožnja | Nova Opel Astra-e
+https://www.opel.rs/tools/opel-kontaktirajte-prodavca.html | Zatražite Ponudu | Nova Opel Astra-e
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html | Brošure | Nova Opel Astra-e
+https://www.opel.rs/tools/opel-online-zakazivanje-servisa.html | Zatražite servisiranje | Nova Opel Astra-e
+https://www.opel.rs/tools/konfigurator.html | Konfigurator | Nova Astra modeli
+https://www.opel.rs/tools/opel-nadite-dilera.html | Lokator dilera | Nova Astra modeli
+https://www.opel.rs/tools/test-voznja.html | Test Vožnja | Nova Astra modeli
+https://www.opel.rs/tools/opel-kontaktirajte-prodavca.html | Zatražite Ponudu | Nova Astra modeli
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html | Brošure | Nova Astra modeli
+https://www.opel.rs/tools/opel-online-zakazivanje-servisa.html | Zatražite servisiranje | Nova Astra modeli
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html# | Nova Corsa | Nova Corsa
+https://www.opel.rs/putnicki-automobili/corsa-modeli/nova-corsa/pregled.html | Pregled | Nova Corsa
+https://www.opel.rs/putnicki-automobili/corsa-modeli/nova-corsa/detalji-o-vozilu.html | Detalji o vozilu | Nova Corsa
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html | Brošure i cenovnici | Nova Corsa
+https://www.opel.rs/tools/konfigurator.html | Konfigurator | Nova Corsa
+https://www.opel.rs/tools/opel-nadite-dilera.html | Lokator dilera | Nova Corsa
+https://www.opel.rs/tools/test-voznja.html | Test Vožnja | Nova Corsa
+https://www.opel.rs/tools/opel-kontaktirajte-prodavca.html | Zatražite Ponudu | Nova Corsa
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html | Brošure | Nova Corsa
+https://www.opel.rs/tools/opel-online-zakazivanje-servisa.html | Zatražite servisiranje | Nova Corsa
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html# | Combo Life | Combo Life
+https://www.opel.rs/putnicki-automobili/combo-modeli/life/model-overview.html | Pregled | Combo Life
+https://www.opel.rs/putnicki-automobili/combo-modeli/life/karakteristike.html | Karakteristike | Combo Life
+https://www.opel.rs/putnicki-automobili/combo-modeli/life/za-preuzimanje.html | Za preuzimanje | Combo Life
+https://lager.opel.rs/ | Vozila na lageru | Combo Life
+https://www.opel.rs/tools/konfigurator.html | Konfigurator | Combo Life
+https://www.opel.rs/tools/opel-nadite-dilera.html | Lokator dilera | Combo Life
+https://www.opel.rs/tools/test-voznja.html | Test Vožnja | Combo Life
+https://www.opel.rs/tools/opel-kontaktirajte-prodavca.html | Zatražite Ponudu | Combo Life
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html | Brošure | Combo Life
+https://www.opel.rs/tools/opel-online-zakazivanje-servisa.html | Zatražite servisiranje | Combo Life
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html# | Novi Grandland | Novi Grandland
+https://www.opel.rs/putnicki-automobili/grandland-modeli/grandland-electric/pregled.html | Pregled | Novi Grandland
+https://www.opel.rs/tools/konfigurator.html | Konfigurator | Novi Grandland
+https://www.opel.rs/tools/opel-nadite-dilera.html | Lokator dilera | Novi Grandland
+https://www.opel.rs/tools/test-voznja.html | Test Vožnja | Novi Grandland
+https://www.opel.rs/tools/opel-kontaktirajte-prodavca.html | Zatražite Ponudu | Novi Grandland
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html | Brošure | Novi Grandland
+https://www.opel.rs/tools/opel-online-zakazivanje-servisa.html | Zatražite servisiranje | Novi Grandland
+https://www.opel.rs/putnicki-automobili/frontera/frontera-bev/overview.html | Nova Frontera | Putnička vozila
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html# | Mokka modeli | Mokka modeli
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html# | Mokka | Mokka
+https://www.opel.rs/putnicki-automobili/mokka-modeli/mokka/pregled.html | Pregled | Mokka
+https://lager.opel.rs/ | Vozila na lageru | Mokka
+https://www.opel.rs/tools/konfigurator.html | Konfigurator | Mokka
+https://www.opel.rs/tools/opel-nadite-dilera.html | Lokator dilera | Mokka
+https://www.opel.rs/tools/test-voznja.html | Test Vožnja | Mokka
+https://www.opel.rs/tools/opel-kontaktirajte-prodavca.html | Zatražite Ponudu | Mokka
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html | Brošure | Mokka
+https://www.opel.rs/tools/opel-online-zakazivanje-servisa.html | Zatražite servisiranje | Mokka
+https://www.opel.rs/tools/konfigurator.html | Konfigurator | Mokka modeli
+https://www.opel.rs/tools/opel-nadite-dilera.html | Lokator dilera | Mokka modeli
+https://www.opel.rs/tools/test-voznja.html | Test Vožnja | Mokka modeli
+https://www.opel.rs/tools/opel-kontaktirajte-prodavca.html | Zatražite Ponudu | Mokka modeli
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html | Brošure | Mokka modeli
+https://www.opel.rs/tools/opel-online-zakazivanje-servisa.html | Zatražite servisiranje | Mokka modeli
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html# | Novi Combo | Novi Combo
+https://www.opel.rs/putnicki-automobili/combo-modeli/combo-ice/overview-features.html | Pregled | Novi Combo
+https://www.opel.rs/putnicki-automobili/combo-modeli/combo-ice/vehicle-details.html | Detalji vozila | Novi Combo
+https://www.opel.rs/tools/konfigurator.html | Konfigurator | Novi Combo
+https://www.opel.rs/tools/opel-nadite-dilera.html | Lokator dilera | Novi Combo
+https://www.opel.rs/tools/test-voznja.html | Test Vožnja | Novi Combo
+https://www.opel.rs/tools/opel-kontaktirajte-prodavca.html | Zatražite Ponudu | Novi Combo
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html | Brošure | Novi Combo
+https://www.opel.rs/tools/opel-online-zakazivanje-servisa.html | Zatražite servisiranje | Novi Combo
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html# | Vivaro Combi | Vivaro Combi
+https://www.opel.rs/komercijalna-vozila/vivaro-c/panel-van/overview-features.html | Pregled | Vivaro Combi
+https://www.opel.rs/komercijalna-vozila/vivaro-c/panel-van/variants.html | Varijante | Vivaro Combi
+https://www.opel.rs/tools/opel-trazite-brosuru.html | Brošure i cenovnik | Vivaro Combi
+https://lager.opel.rs/ | Vozila na lageru | Vivaro Combi
+https://www.opel.rs/tools/konfigurator.html | Konfigurator | Vivaro Combi
+https://www.opel.rs/tools/opel-nadite-dilera.html | Lokator dilera | Vivaro Combi
+https://www.opel.rs/tools/test-voznja.html | Test Vožnja | Vivaro Combi
+https://www.opel.rs/tools/opel-kontaktirajte-prodavca.html | Zatražite Ponudu | Vivaro Combi
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html | Brošure | Vivaro Combi
+https://www.opel.rs/tools/opel-online-zakazivanje-servisa.html | Zatražite servisiranje | Vivaro Combi
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html# | Zafira Life | Zafira Life
+https://www.opel.rs/putnicki-automobili/zafira-life/pregled.html | Pregled | Zafira Life
+https://www.opel.rs/putnicki-automobili/zafira-life/karakteristike.html | Karakteristike | Zafira Life
+https://www.opel.rs/tools/opel-trazite-brosuru.html | Brošure i cenovnik | Zafira Life
+https://lager.opel.rs/ | Vozila na lageru | Zafira Life
+https://www.opel.rs/tools/konfigurator.html | Konfigurator | Zafira Life
+https://www.opel.rs/tools/opel-nadite-dilera.html | Lokator dilera | Zafira Life
+https://www.opel.rs/tools/test-voznja.html | Test Vožnja | Zafira Life
+https://www.opel.rs/tools/opel-kontaktirajte-prodavca.html | Zatražite Ponudu | Zafira Life
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html | Brošure | Zafira Life
+https://www.opel.rs/tools/opel-online-zakazivanje-servisa.html | Zatražite servisiranje | Zafira Life
+https://www.opel.rs/putnicki-automobili/upcoming-models/upcoming-models.html | Budući modeli | Putnička vozila
+https://www.opel.rs/tools/konfigurator.html | Konfigurator | Putnička vozila
+https://www.opel.rs/tools/opel-nadite-dilera.html | Lokator dilera | Putnička vozila
+https://www.opel.rs/tools/test-voznja.html | Test Vožnja | Putnička vozila
+https://www.opel.rs/tools/opel-kontaktirajte-prodavca.html | Zatražite Ponudu | Putnička vozila
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html | Brošure | Putnička vozila
+https://www.opel.rs/tools/opel-online-zakazivanje-servisa.html | Zatražite servisiranje | Putnička vozila
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html# | Komercijalna vozila | Komercijalna vozila
+https://www.opel.rs/komercijalna-vozila/komercijalni-program/vanovi-i-komercijalna-vozila.html | Vanovi i komercijalna vozila | Komercijalna vozila
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html# | Combo | Combo
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html# | Combo | Combo
+https://www.opel.rs/komercijalna-vozila/combo-models/combo-cargo/overview-features.html | Pregled | Combo
+https://www.opel.rs/komercijalna-vozila/combo-models/combo-cargo/vehicle-details.html | Detalji vozila | Combo
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html | Za preuzimanje | Combo
+https://www.opel.rs/tools/konfigurator.html | Konfigurator | Combo
+https://www.opel.rs/tools/opel-nadite-dilera.html | Lokator dilera | Combo
+https://www.opel.rs/tools/test-voznja.html | Test Vožnja | Combo
+https://www.opel.rs/tools/opel-kontaktirajte-prodavca.html | Zatražite Ponudu | Combo
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html | Brošure | Combo
+https://www.opel.rs/tools/opel-online-zakazivanje-servisa.html | Zatražite servisiranje | Combo
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html# | Combo-e Cargo | Combo-e Cargo
+https://www.opel.rs/komercijalna-vozila/combo-models/combo-e-cargo/overview-features.html | Pregled | Combo-e Cargo
+https://www.opel.rs/komercijalna-vozila/combo-models/combo-e-cargo/vehicle-details.html | Detalji vozila | Combo-e Cargo
+https://www.opel.rs/tools/konfigurator.html | Konfigurator | Combo-e Cargo
+https://www.opel.rs/tools/opel-nadite-dilera.html | Lokator dilera | Combo-e Cargo
+https://www.opel.rs/tools/test-voznja.html | Test Vožnja | Combo-e Cargo
+https://www.opel.rs/tools/opel-kontaktirajte-prodavca.html | Zatražite Ponudu | Combo-e Cargo
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html | Brošure | Combo-e Cargo
+https://www.opel.rs/tools/opel-online-zakazivanje-servisa.html | Zatražite servisiranje | Combo-e Cargo
+https://www.opel.rs/tools/konfigurator.html | Konfigurator | Combo
+https://www.opel.rs/tools/opel-nadite-dilera.html | Lokator dilera | Combo
+https://www.opel.rs/tools/test-voznja.html | Test Vožnja | Combo
+https://www.opel.rs/tools/opel-kontaktirajte-prodavca.html | Zatražite Ponudu | Combo
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html | Brošure | Combo
+https://www.opel.rs/tools/opel-online-zakazivanje-servisa.html | Zatražite servisiranje | Combo
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html# | Movano Van | Movano Van
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html# | Movano | Movano
+https://www.opel.rs/komercijalna-vozila/movano-models/movano/pregled.html | Pregled | Movano
+https://lager.opel.rs/ | Vozila na lageru | Movano
+https://www.opel.rs/tools/konfigurator.html | Konfigurator | Movano
+https://www.opel.rs/tools/opel-nadite-dilera.html | Lokator dilera | Movano
+https://www.opel.rs/tools/test-voznja.html | Test Vožnja | Movano
+https://www.opel.rs/tools/opel-kontaktirajte-prodavca.html | Zatražite Ponudu | Movano
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html | Brošure | Movano
+https://www.opel.rs/tools/opel-online-zakazivanje-servisa.html | Zatražite servisiranje | Movano
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html# | Movano-e | Movano-e
+https://www.opel.rs/komercijalna-vozila/movano-models/movano-e/pregled.html | Pregled | Movano-e
+https://www.opel.rs/komercijalna-vozila/movano-models/movano-e/vehicle-details.html | Detalji vozila | Movano-e
+https://lager.opel.rs/ | Vozila na lageru | Movano-e
+https://www.opel.rs/tools/konfigurator.html | Konfigurator | Movano-e
+https://www.opel.rs/tools/opel-nadite-dilera.html | Lokator dilera | Movano-e
+https://www.opel.rs/tools/test-voznja.html | Test Vožnja | Movano-e
+https://www.opel.rs/tools/opel-kontaktirajte-prodavca.html | Zatražite Ponudu | Movano-e
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html | Brošure | Movano-e
+https://www.opel.rs/tools/opel-online-zakazivanje-servisa.html | Zatražite servisiranje | Movano-e
+https://www.opel.rs/tools/konfigurator.html | Konfigurator | Movano Van
+https://www.opel.rs/tools/opel-nadite-dilera.html | Lokator dilera | Movano Van
+https://www.opel.rs/tools/test-voznja.html | Test Vožnja | Movano Van
+https://www.opel.rs/tools/opel-kontaktirajte-prodavca.html | Zatražite Ponudu | Movano Van
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html | Brošure | Movano Van
+https://www.opel.rs/tools/opel-online-zakazivanje-servisa.html | Zatražite servisiranje | Movano Van
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html# | Vivaro Van | Vivaro Van
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html# | Vivaro Van | Vivaro Van
+https://www.opel.rs/komercijalna-vozila/vivaro-c/panel-van/overview-features.html | Pregled | Vivaro Van
+https://www.opel.rs/komercijalna-vozila/vivaro-c/panel-van/variants.html | Variants | Vivaro Van
+https://www.opel.rs/tools/opel-trazite-brosuru.html | Za preuzimanje | Vivaro Van
+https://lager.opel.rs/ | Vozila na lageru | Vivaro Van
+https://www.opel.rs/tools/konfigurator.html | Konfigurator | Vivaro Van
+https://www.opel.rs/tools/opel-nadite-dilera.html | Lokator dilera | Vivaro Van
+https://www.opel.rs/tools/test-voznja.html | Test Vožnja | Vivaro Van
+https://www.opel.rs/tools/opel-kontaktirajte-prodavca.html | Zatražite Ponudu | Vivaro Van
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html | Brošure | Vivaro Van
+https://www.opel.rs/tools/opel-online-zakazivanje-servisa.html | Zatražite servisiranje | Vivaro Van
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html# | Vivaro-e | Vivaro-e
+https://www.opel.rs/komercijalna-vozila/vivaro-c/vivaro-e/overview-features.html | Pregled | Vivaro-e
+https://www.opel.rs/komercijalna-vozila/vivaro-c/vivaro-e/vehicle-details.html | Detalji vozila | Vivaro-e
+https://www.opel.rs/tools/opel-trazite-brosuru.html | Za preuzimanje | Vivaro-e
+https://lager.opel.rs/ | Vozila na lageru | Vivaro-e
+https://www.opel.rs/tools/konfigurator.html | Konfigurator | Vivaro-e
+https://www.opel.rs/tools/opel-nadite-dilera.html | Lokator dilera | Vivaro-e
+https://www.opel.rs/tools/test-voznja.html | Test Vožnja | Vivaro-e
+https://www.opel.rs/tools/opel-kontaktirajte-prodavca.html | Zatražite Ponudu | Vivaro-e
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html | Brošure | Vivaro-e
+https://www.opel.rs/tools/opel-online-zakazivanje-servisa.html | Zatražite servisiranje | Vivaro-e
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html# | Vivaro Combi | Vivaro Combi
+https://www.opel.rs/komercijalna-vozila/vivaro-c/panel-van/overview-features.html | Pregled | Vivaro Combi
+https://www.opel.rs/komercijalna-vozila/vivaro-c/panel-van/variants.html | Variants | Vivaro Combi
+https://www.opel.rs/tools/opel-trazite-brosuru.html | Za preuzimanje | Vivaro Combi
+https://lager.opel.rs/ | Vozila na lageru | Vivaro Combi
+https://www.opel.rs/tools/konfigurator.html | Konfigurator | Vivaro Combi
+https://www.opel.rs/tools/opel-nadite-dilera.html | Lokator dilera | Vivaro Combi
+https://www.opel.rs/tools/test-voznja.html | Test Vožnja | Vivaro Combi
+https://www.opel.rs/tools/opel-kontaktirajte-prodavca.html | Zatražite Ponudu | Vivaro Combi
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html | Brošure | Vivaro Combi
+https://www.opel.rs/tools/opel-online-zakazivanje-servisa.html | Zatražite servisiranje | Vivaro Combi
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html# | Foldable Crew Van | Foldable Crew Van
+https://www.opel.rs/komercijalna-vozila/vivaro-c/panel-van/overview-features.html | Pregled | Foldable Crew Van
+https://www.opel.rs/komercijalna-vozila/vivaro-c/panel-van/variants.html | Variants | Foldable Crew Van
+https://www.opel.rs/tools/opel-trazite-brosuru.html | Za preuzimanje | Foldable Crew Van
+https://lager.opel.rs/ | Vozila na lageru | Foldable Crew Van
+https://www.opel.rs/tools/konfigurator.html | Konfigurator | Foldable Crew Van
+https://www.opel.rs/tools/opel-nadite-dilera.html | Lokator dilera | Foldable Crew Van
+https://www.opel.rs/tools/test-voznja.html | Test Vožnja | Foldable Crew Van
+https://www.opel.rs/tools/opel-kontaktirajte-prodavca.html | Zatražite Ponudu | Foldable Crew Van
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html | Brošure | Foldable Crew Van
+https://www.opel.rs/tools/opel-online-zakazivanje-servisa.html | Zatražite servisiranje | Foldable Crew Van
+https://www.opel.rs/tools/konfigurator.html | Konfigurator | Vivaro Van
+https://www.opel.rs/tools/opel-nadite-dilera.html | Lokator dilera | Vivaro Van
+https://www.opel.rs/tools/test-voznja.html | Test Vožnja | Vivaro Van
+https://www.opel.rs/tools/opel-kontaktirajte-prodavca.html | Zatražite Ponudu | Vivaro Van
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html | Brošure | Vivaro Van
+https://www.opel.rs/tools/opel-online-zakazivanje-servisa.html | Zatražite servisiranje | Vivaro Van
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html# | Dostavna vozila | Dostavna vozila
+https://www.opel.rs/komercijalna-vozila/komercijalni-program/konverzije/all.html | Konverzije | Dostavna vozila
+https://www.opel.rs/tools/konfigurator.html | Konfigurator | Dostavna vozila
+https://www.opel.rs/tools/opel-nadite-dilera.html | Lokator dilera | Dostavna vozila
+https://www.opel.rs/tools/test-voznja.html | Test Vožnja | Dostavna vozila
+https://www.opel.rs/tools/opel-kontaktirajte-prodavca.html | Zatražite Ponudu | Dostavna vozila
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html | Brošure | Dostavna vozila
+https://www.opel.rs/tools/opel-online-zakazivanje-servisa.html | Zatražite servisiranje | Dostavna vozila
+https://www.opel.rs/tools/konfigurator.html | Konfigurator | Komercijalna vozila
+https://www.opel.rs/tools/opel-nadite-dilera.html | Lokator dilera | Komercijalna vozila
+https://www.opel.rs/tools/test-voznja.html | Test Vožnja | Komercijalna vozila
+https://www.opel.rs/tools/opel-kontaktirajte-prodavca.html | Zatražite Ponudu | Komercijalna vozila
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html | Brošure | Komercijalna vozila
+https://www.opel.rs/tools/opel-online-zakazivanje-servisa.html | Zatražite servisiranje | Komercijalna vozila
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html# | Ponude | Ponude
+https://www.opel.rs/ponude-i-usluge/aktualne.html | Trenutne ponude | Ponude
+https://www.opel.rs/tools/konfigurator.html | Konfigurator | Ponude
+https://www.opel.rs/tools/opel-nadite-dilera.html | Lokator dilera | Ponude
+https://www.opel.rs/tools/test-voznja.html | Test Vožnja | Ponude
+https://www.opel.rs/tools/opel-kontaktirajte-prodavca.html | Zatražite Ponudu | Ponude
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html | Brošure | Ponude
+https://www.opel.rs/tools/opel-online-zakazivanje-servisa.html | Zatražite servisiranje | Ponude
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html# | Flota | Flota
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html# | Vozač kompanijskog automobila | Vozač kompanijskog automobila
+https://www.opel.rs/flota/vozac-kompanijskog-automobila/pregled.html | Pregled | Vozač kompanijskog automobila
+https://www.opel.rs/flota/vozac-kompanijskog-automobila/lizing.html | Lizing | Vozač kompanijskog automobila
+https://www.opel.rs/flota/vozac-kompanijskog-automobila/baza-znanja.html | Baza znanja | Vozač kompanijskog automobila
+https://www.opel.rs/tools/konfigurator.html | Konfigurator | Vozač kompanijskog automobila
+https://www.opel.rs/tools/opel-nadite-dilera.html | Lokator dilera | Vozač kompanijskog automobila
+https://www.opel.rs/tools/test-voznja.html | Test Vožnja | Vozač kompanijskog automobila
+https://www.opel.rs/tools/opel-kontaktirajte-prodavca.html | Zatražite Ponudu | Vozač kompanijskog automobila
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html | Brošure | Vozač kompanijskog automobila
+https://www.opel.rs/tools/opel-online-zakazivanje-servisa.html | Zatražite servisiranje | Vozač kompanijskog automobila
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html# | Flotni menadžer | Flotni menadžer
+https://www.opel.rs/flota/flotni-menadzer/pregled.html | Pregled | Flotni menadžer
+https://www.opel.rs/flota/flotni-menadzer/service-assistance.html | Servis i asistencija | Flotni menadžer
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html# | Kupovina / lizing | Kupovina / lizing
+https://www.opel.rs/flota/flotni-menadzer/kupovina-lizing/kupovina-i-lizing.html | Kupovina i lizing | Kupovina / lizing
+https://www.opel.rs/tools/konfigurator.html | Konfigurator | Kupovina / lizing
+https://www.opel.rs/tools/opel-nadite-dilera.html | Lokator dilera | Kupovina / lizing
+https://www.opel.rs/tools/test-voznja.html | Test Vožnja | Kupovina / lizing
+https://www.opel.rs/tools/opel-kontaktirajte-prodavca.html | Zatražite Ponudu | Kupovina / lizing
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html | Brošure | Kupovina / lizing
+https://www.opel.rs/tools/opel-online-zakazivanje-servisa.html | Zatražite servisiranje | Kupovina / lizing
+https://www.opel.rs/tools/konfigurator.html | Konfigurator | Flotni menadžer
+https://www.opel.rs/tools/opel-nadite-dilera.html | Lokator dilera | Flotni menadžer
+https://www.opel.rs/tools/test-voznja.html | Test Vožnja | Flotni menadžer
+https://www.opel.rs/tools/opel-kontaktirajte-prodavca.html | Zatražite Ponudu | Flotni menadžer
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html | Brošure | Flotni menadžer
+https://www.opel.rs/tools/opel-online-zakazivanje-servisa.html | Zatražite servisiranje | Flotni menadžer
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html# | Korporativna flotna prodaja | Korporativna flotna prodaja
+https://www.opel.rs/flota/korporativna-flotna-prodaja/pregled.html | Pregled | Korporativna flotna prodaja
+https://www.opel.rs/flota/korporativna-flotna-prodaja/servis-asistencija.html | Servis i asistencija | Korporativna flotna prodaja
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html# | Kupovina / lizing | Kupovina / lizing
+https://www.opel.rs/flota/korporativna-flotna-prodaja/kupovina-lizing/lizing-ili-zakup.html | Lizing ili zakup? | Kupovina / lizing
+https://www.opel.rs/tools/konfigurator.html | Konfigurator | Kupovina / lizing
+https://www.opel.rs/tools/opel-nadite-dilera.html | Lokator dilera | Kupovina / lizing
+https://www.opel.rs/tools/test-voznja.html | Test Vožnja | Kupovina / lizing
+https://www.opel.rs/tools/opel-kontaktirajte-prodavca.html | Zatražite Ponudu | Kupovina / lizing
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html | Brošure | Kupovina / lizing
+https://www.opel.rs/tools/opel-online-zakazivanje-servisa.html | Zatražite servisiranje | Kupovina / lizing
+https://www.opel.rs/flota/korporativna-flotna-prodaja/kontakt.html | Kontakt | Korporativna flotna prodaja
+https://www.opel.rs/tools/konfigurator.html | Konfigurator | Korporativna flotna prodaja
+https://www.opel.rs/tools/opel-nadite-dilera.html | Lokator dilera | Korporativna flotna prodaja
+https://www.opel.rs/tools/test-voznja.html | Test Vožnja | Korporativna flotna prodaja
+https://www.opel.rs/tools/opel-kontaktirajte-prodavca.html | Zatražite Ponudu | Korporativna flotna prodaja
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html | Brošure | Korporativna flotna prodaja
+https://www.opel.rs/tools/opel-online-zakazivanje-servisa.html | Zatražite servisiranje | Korporativna flotna prodaja
+https://www.opel.rs/flota/kalkulacije-i-alati.html | Kalkulacije i alati | Flota
+https://www.opel.rs/flota/kontakt.html | Kontakt | Flota
+https://www.opel.rs/tools/konfigurator.html | Konfigurator | Flota
+https://www.opel.rs/tools/opel-nadite-dilera.html | Lokator dilera | Flota
+https://www.opel.rs/tools/test-voznja.html | Test Vožnja | Flota
+https://www.opel.rs/tools/opel-kontaktirajte-prodavca.html | Zatražite Ponudu | Flota
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html | Brošure | Flota
+https://www.opel.rs/tools/opel-online-zakazivanje-servisa.html | Zatražite servisiranje | Flota
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html# | Za vlasnike vozila | Za vlasnike vozila
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html# | Provere & ispitivanje | Provere & ispitivanje
+https://www.opel.rs/ispitivanje-i-delovi/provere-i-ispitivanja/provere.html | Provere | Provere & ispitivanje
+https://www.opel.rs/ispitivanje-i-delovi/provere-i-ispitivanja/servisna-ispitivanja.html | Servisno ispitivanje | Provere & ispitivanje
+https://www.opel.rs/ispitivanje-i-delovi/provere-i-ispitivanja/provere-vozila.html | Provera zdravlja vozila | Provere & ispitivanje
+https://www.opel.rs/ispitivanje-i-delovi/provere-i-ispitivanja/tehnicki-pregled.html | Tehnički pregled | Provere & ispitivanje
+https://www.opel.rs/ispitivanje-i-delovi/certificate.html | Uputstvo za izdavanje potvrda | Provere & ispitivanje
+https://www.opel.rs/ispitivanje-i-delovi/check-vin.html | Kampanje opoziva | Provere & ispitivanje
+https://www.opel.rs/tools/konfigurator.html | Konfigurator | Provere & ispitivanje
+https://www.opel.rs/tools/opel-nadite-dilera.html | Lokator dilera | Provere & ispitivanje
+https://www.opel.rs/tools/test-voznja.html | Test Vožnja | Provere & ispitivanje
+https://www.opel.rs/tools/opel-kontaktirajte-prodavca.html | Zatražite Ponudu | Provere & ispitivanje
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html | Brošure | Provere & ispitivanje
+https://www.opel.rs/tools/opel-online-zakazivanje-servisa.html | Zatražite servisiranje | Provere & ispitivanje
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html# | Delovi i popravke | Delovi i popravke
+https://www.opel.rs/ispitivanje-i-delovi/delovi-i-popravke/originalni-delovi.html | Originalni delovi | Delovi i popravke
+https://www.opel.rs/ispitivanje-i-delovi/delovi-i-popravke/pametne-popravke-i-stakala.html | Pametne popravke | Delovi i popravke
+https://www.opel.rs/tools/konfigurator.html | Konfigurator | Delovi i popravke
+https://www.opel.rs/tools/opel-nadite-dilera.html | Lokator dilera | Delovi i popravke
+https://www.opel.rs/tools/test-voznja.html | Test Vožnja | Delovi i popravke
+https://www.opel.rs/tools/opel-kontaktirajte-prodavca.html | Zatražite Ponudu | Delovi i popravke
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html | Brošure | Delovi i popravke
+https://www.opel.rs/tools/opel-online-zakazivanje-servisa.html | Zatražite servisiranje | Delovi i popravke
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html# | Pakete usluga | Pakete usluga
+https://www.opel.rs/ispitivanje-i-delovi/detalji-o-garanciji.html | Garancija novog vozila | Pakete usluga
+https://www.opel.rs/ispitivanje-i-delovi/provere-i-ispitivanja/mydigitalservice.html | Mydigitalservice | Pakete usluga
+https://www.opel.rs/ispitivanje-i-delovi/ponude/covid-19.html | Specijalne usluge za vreme covid-19 | Pakete usluga
+https://www.opel.rs/tools/konfigurator.html | Konfigurator | Pakete usluga
+https://www.opel.rs/tools/opel-nadite-dilera.html | Lokator dilera | Pakete usluga
+https://www.opel.rs/tools/test-voznja.html | Test Vožnja | Pakete usluga
+https://www.opel.rs/tools/opel-kontaktirajte-prodavca.html | Zatražite Ponudu | Pakete usluga
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html | Brošure | Pakete usluga
+https://www.opel.rs/tools/opel-online-zakazivanje-servisa.html | Zatražite servisiranje | Pakete usluga
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html# | Saznajte više | Saznajte više
+https://www.opel.rs/ispitivanje-i-delovi/prirucnici.html | Uputstva | Saznajte više
+https://www.opel.rs/ispitivanje-i-delovi/myopel.html | MyOpel | Saznajte više
+https://www.opel.rs/tools/konfigurator.html | Konfigurator | Saznajte više
+https://www.opel.rs/tools/opel-nadite-dilera.html | Lokator dilera | Saznajte više
+https://www.opel.rs/tools/test-voznja.html | Test Vožnja | Saznajte više
+https://www.opel.rs/tools/opel-kontaktirajte-prodavca.html | Zatražite Ponudu | Saznajte više
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html | Brošure | Saznajte više
+https://www.opel.rs/tools/opel-online-zakazivanje-servisa.html | Zatražite servisiranje | Saznajte više
+https://www.opel.rs/ispitivanje-i-delovi/dodatna-oprema.html | Opel oprema | Za vlasnike vozila
+https://www.opel.rs/tools/konfigurator.html | Konfigurator | Za vlasnike vozila
+https://www.opel.rs/tools/opel-nadite-dilera.html | Lokator dilera | Za vlasnike vozila
+https://www.opel.rs/tools/test-voznja.html | Test Vožnja | Za vlasnike vozila
+https://www.opel.rs/tools/opel-kontaktirajte-prodavca.html | Zatražite Ponudu | Za vlasnike vozila
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html | Brošure | Za vlasnike vozila
+https://www.opel.rs/tools/opel-online-zakazivanje-servisa.html | Zatražite servisiranje | Za vlasnike vozila
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html# | Više o Opelu | Više o Opelu
+https://www.opel.rs/experience-opel/infotainment-2020.html | Sistemi za informisanje i zabavu | Više o Opelu
+https://www.opel.rs/experience-opel/koncept-automobil.html | Koncept automobil | Više o Opelu
+https://www.opel.rs/experience-opel/opel-classic.html | Opel Classic | Više o Opelu
+https://www.opel.rs/experience-opel/opel-kolekcija.html | Opel Kolekcija | Više o Opelu
+https://www.opel.rs/experience-opel/opel-experimental.html | Opel Experimental | Više o Opelu
+https://www.opel.rs/tools/konfigurator.html | Konfigurator | Više o Opelu
+https://www.opel.rs/tools/opel-nadite-dilera.html | Lokator dilera | Više o Opelu
+https://www.opel.rs/tools/test-voznja.html | Test Vožnja | Više o Opelu
+https://www.opel.rs/tools/opel-kontaktirajte-prodavca.html | Zatražite Ponudu | Više o Opelu
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html | Brošure | Više o Opelu
+https://www.opel.rs/tools/opel-online-zakazivanje-servisa.html | Zatražite servisiranje | Više o Opelu
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html# | O Opelu | O Opelu
+https://www.opel.rs/about-opel/Odr%C5%BEivost.html | Održivost | O Opelu
+https://www.opel.rs/about-opel/Filozofija.html | Filozofija | O Opelu
+https://www.opel.rs/about-opel/Osnovne%20%C4%8Dinjenice.html | Osnovne činjenice | O Opelu
+https://www.opel.rs/about-opel/locations.html | Lokacije | O Opelu
+https://www.opel.rs/content/dam/opel/serbia/quality-policies/Politika_Kvaliteta.pdf | Politika kvaliteta | O Opelu
+https://www.opel.rs/content/dam/opel/serbia/quality-policies/Politika_Za%C5%A1tite_%C5%BEivotne_sredine.pdf | Politika zaštite životne sredine | O Opelu
+https://www.opel.rs/content/dam/opel/serbia/quality-policies/Politika_Bezbednosti_i_za%C5%A1tite_na_radu.pdf | Politika zdravlja i bezbednosti na radu | O Opelu
+https://www.opel.rs/content/dam/opel/serbia/quality-policies/Vodi%C4%8D_o_ekonomi%C4%8Dnosti_potro%C5%A1nje_goriva_emisi | Vodič o ekonomičnosti potrošnje goriva, emisiji i zagađivanju | O Opelu
+https://www.opel.rs/tools/konfigurator.html | Konfigurator | O Opelu
+https://www.opel.rs/tools/opel-nadite-dilera.html | Lokator dilera | O Opelu
+https://www.opel.rs/tools/test-voznja.html | Test Vožnja | O Opelu
+https://www.opel.rs/tools/opel-kontaktirajte-prodavca.html | Zatražite Ponudu | O Opelu
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html | Brošure | O Opelu
+https://www.opel.rs/tools/opel-online-zakazivanje-servisa.html | Zatražite servisiranje | O Opelu
+https://my.opel.rs/ | MyOpel | Putnička vozila
+https://lager.opel.rs/ | Vozila na lageru | Putnička vozila
+https://www.opel.rs/tools/konfigurator.html | Konfigurator | Putnička vozila
+https://www.opel.rs/tools/opel-nadite-dilera.html | Lokator dilera | Putnička vozila
+https://www.opel.rs/tools/test-voznja.html | Test Vožnja | Putnička vozila
+https://www.opel.rs/tools/opel-kontaktirajte-prodavca.html | Zatražite Ponudu | Putnička vozila
+https://www.opel.rs/tools/opel-trazite-brosuru/overview.html | Brošure | Putnička vozila
+https://www.opel.rs/tools/opel-online-zakazivanje-servisa.html | Zatražite servisiranje | Putnička vozila
+
+====================================================================================================
+https://www.opel.rs/content/dam/opel/serbia/brochures/pricelists/2026/Opel_Mokka_cenovnik.pdf
+(nije učitano)
+
+====================================================================================================
+https://www.autopromet.rs
+[html, 51 znakova]
+Please wait while your request is being verified...
+
+====================================================================================================
+https://www.beoauto.com
+(nije učitano)
+
+====================================================================================================
+https://opel.acbrajic.com
+[html, 2365 znakova]
+Ugrás a tartalomra
+AC BRAJIC
+Lokacija
+Dia 1 / 8
+Saznajte više
+Saznajte više
+Saznajte više
+Saznajte više
+Saznajte više
+Saznajte više
+Zakažite servis
+
+Jednostavno zakažite svoj servis, popravku ili održavanje putem interneta. Zakažite servis, popravke ili nas upitajte da pogledamo sve nedostatke koje imate. U samo šest jednostavnih koraka izaberite vreme, datum i prodavca po vašem izboru.
+
+Saznajte više
+Proceni moje vozilo
+
+Vidite koliko možete da uštedite. Kada unesete detalje o svom trenutnom vozilu, obavestićemo vas koliko ćete dobiti kao dodatni bonus za novi Opel automobil.* Samo popunite obrazac i pokažite email sa potvrdom izabranom prodavcu da biste ostvarili svoje
+
+Saznajte više
+Beograd
+Ibarski put 101, 11000 Beograd
+Šabac
+Loznički put bb, 15000 Šabac
+Коришћењем Гоогле мапа, ви као корисник ове веб странице подлежете додатним условима коришћења за Гоогле мапе/Гоогле Еартх ( укључујући Гоогле политику приватности).
+Follow us
+COPYRIGHT WWW.OPEL.ACBRAJIC.COM
+KREIRAO CARUSSEL
+IZJAVA O PRIVATNOSTI
+OPEL AC BRAJIĆ
+ZAŠTITA PRIVATNOSTI I "KOLAČIĆI"
+VODIČ O EKONOMIČNOSTI POTROŠNJE
+MAPA SAJTA
+PRISTANAK NA KOLAČIĆE
+Legal note
+Naslovna
+Test vožnja
+Servisa
+Ponudu
+Lokacija
+NASTAVITI BEZ PRIHVATANJA →
+
+
+
+POŠTUJEMO VAŠU PRIVATNOST
+
+Koristimo kolačiće kako bismo Vam osigurali najbolje iskustvo na našoj veb stranici. Kolačići nam omogućavaju da Vam pružimo osnovne funkcionalnosti kao što su bezbednost, upravljanje mrežom i pristupačnost. Kolačići poboljšavaju upotrebljivost i performanse kroz različite funkcije, kao što su prepoznavanje jezika, rezultati pretraživanja i na taj način poboljšavaju ono što Vam nudimo. Naša veb stranica takođe može koristiti kolačiće trećih strana za slanje oglasnih poruka koje su za vas relevantnije. Neke kolačiće, odnosno podatke dobijene njihovim korišćenjem, mogu obrađivati treća lica koja se nalaze u zemljama izvan Evropske ekonomske zone (EEZ) koje možda još nisu dobile odluku o adekvatnosti od relevantnih evropskih organa za zaštitu podataka. U ovom slučaju prenos se zasniva na vašem pristanku (član 69. stav 1. tačka 1. Zakona o zaštiti podatka o ličnosti Republike Srbije (ZZPL).
+
+Ukoliko želite da saznate više o kolačićima koje koristimo i kako da ih uredite, možete pristupiti našoj Politici o kolačićima ili kliknuti na taster „Uredi moja podešavanja“.
+
+UREDI MOJA PODEŠAVANJA
+PRIHVATI SVE
+
+--- linkovi (href | tekst | naslov kartice) ---
+https://opel.acbrajic.com/#main-content | Ugrás a tartalomra | Saznajte više
+https://opel.acbrajic.com/ |  | Saznajte više
+https://opel.acbrajic.com/opel-kontakt/lokacija | Lokacija | Saznajte više
+https://opel.acbrajic.com/ |  | Saznajte više
+https://opel.acbrajic.com/opel-kontakt/lokacija |  | Saznajte više
+https://opel.acbrajic.com/usluge/posebna-ponuda | Saznajte više | 
+https://opel.acbrajic.com/usluge/posebna-ponuda | Saznajte više | Saznajte više
+https://opel.acbrajic.com/usluge/posebna-ponuda | Saznajte više | Saznajte više
+https://opel.acbrajic.com/usluge/posebna-ponuda | Saznajte više | 
+https://opel.acbrajic.com/usluge/posebna-ponuda | Saznajte više | Saznajte više
+https://opel.acbrajic.com/usluge/posebna-ponuda | Saznajte više | Saznajte više
+https://opel.acbrajic.com/usluge/posebna-ponuda | Saznajte više | 
+https://opel.acbrajic.com/usluge/posebna-ponuda | Saznajte više | Saznajte više
+https://opel.acbrajic.com/usluge/posebna-ponuda | Saznajte više | Saznajte više
+https://opel.acbrajic.com/usluge/posebna-ponuda | Saznajte više | 
+https://opel.acbrajic.com/usluge/posebna-ponuda | Saznajte više | Saznajte više
+https://opel.acbrajic.com/usluge/posebna-ponuda | Saznajte više | Saznajte više
+https://opel.acbrajic.com/usluge/posebna-ponuda | Saznajte više | 
+https://opel.acbrajic.com/usluge/posebna-ponuda | Saznajte više | Saznajte više
+https://opel.acbrajic.com/usluge/posebna-ponuda | Saznajte više | Saznajte više
+https://www.opel.rs/ispitivanje-i-delovi/check-vin/takata-kampanja.html | Saznajte više | 
+https://www.opel.rs/ispitivanje-i-delovi/check-vin/takata-kampanja.html | Saznajte više | Saznajte više
+https://www.opel.rs/ispitivanje-i-delovi/check-vin/takata-kampanja.html | Saznajte više | Saznajte više
+https://opel.acbrajic.com/flexcare/opel_servis | Saznajte više | Zakažite servis
+https://opel.acbrajic.com/opel-kontakt/contact-webform | Saznajte više | Proceni moje vozilo
+https://www.google.com/intl/sr_SR/help/terms_maps/ | подлежете додатним условима коришћења | Beograd
+https://policies.google.com/privacy?hl=sr_SR | ( укључујући Гоогле политику приватности). | Beograd
+https://www.facebook.com/opelacbrajic |  | Saznajte više
+https://www.instagram.com/autocentarbrajic/ |  | Saznajte više
+https://www.linkedin.com/company/ac-brajic |  | Saznajte više
+http://opel.acbrajic.com/ | COPYRIGHT WWW.OPEL.ACBRAJIC.COM | Saznajte više
+https://www.carussel.com/ | KREIRAO CARUSSEL | Saznajte više
+https://opel.acbrajic.com/tools/privatnost | IZJAVA O PRIVATNOSTI | Saznajte više
+http://opel.acbrajic.com/ | OPEL AC BRAJIĆ | Saznajte više
+https://opel.acbrajic.com/tools/privatnost-pravna-pitanja | ZAŠTITA PRIVATNOSTI I "KOLAČIĆI" | Saznajte više
+https://www.abs.gov.rs/admin/upload/documents/20231016113943--o-ekonomicnosti-potrosnje-goriva.pdf | VODIČ O EKONOMIČNOSTI POTROŠNJE | Saznajte više
+https://opel.acbrajic.com/map | MAPA SAJTA | Saznajte više
+https://opel.acbrajic.com/pocetna | Naslovna | Saznajte više
+https://opel.acbrajic.com/tools/test-voznja | Test vožnja | Saznajte više
+https://opel.acbrajic.com/flexcare/opel_servis | Servisa | Saznajte više
+https://opel.acbrajic.com/tools/kontaktirajte-prodavca | Ponudu | Saznajte više
+https://opel.acbrajic.com/opel-kontakt/lokacija | Lokacija | Saznajte više
+https://www.google.com/analytics/tag-manager |  | null
+https://www.google.com/analytics/tag-manager |  | null
+https://www.google.com/analytics/tag-manager |  | null
+javascript:void(0) | null | null
+javascript:void(0) | null | null
+javascript:void(0) | NASTAVITI BEZ PRIHVATANJA → | null
+https://www.opel.rs/tools/privatnost-pravna-pitanja.html.html | Politici o kolačićima | null
+javascript:void(0) | UREDI MOJA PODEŠAVANJA | null
+javascript:void(0) | PRIHVATI SVE | null
+javascript:void(0) |  | 
+javascript:void(0) |  | 
+javascript:void(0) |  | 
+javascript:void(0) |  | 
+javascript: void(0) | OTKAŽITE I VRATITE SE NAZAD | null
+javascript:void(0) | SAČUVAJ MOJA PODEŠAVANJA | null
+
+====================================================================================================
+https://www.opelcarbox.rs
+[html, 2467 znakova]
+Ugrás a tartalomra
+CAR BOX D.O.O.
+BULEVAR CARA KONSTANTINA 80-82, 18000 NIS
+Lokacija
++381 18 550010
+Otvoreno do 15:00.
+Dia 1 / 7
+Saznajte više
+Saznajte više
+Saznajte više
+Saznajte više
+Saznajte više
+Saznajte više
+Pretraži lager
+
+Resetuj sve
+
+Model
+Model
+Karoserija
+Karoserija
+Gorivo
+Gorivo
+1 Vidi više
+UPOZNAJ OPEL!
+Pronađite svoje novo Opel vozilo u Car Box-u
+Car Box je ovlašćeni diler i serviser Opel vozila u Nišu, na adresi Bulevar cara Konstantina 80–82. Posetite nas i pronađite Opel vozilo koje odgovara vašim potrebama. Vaš novi Opel vas čeka!
+Zakažite servis
+
+Jednostavno zakažite svoj servis, popravku ili održavanje putem interneta. Zakažite servis, popravke ili nas upitajte da pogledamo sve nedostatke koje imate. U samo šest jednostavnih koraka izaberite vreme, datum i prodavca po vašem izboru.
+
+Saznajte više
+Proceni moje vozilo
+
+Vidite koliko možete da uštedite. Kada unesete detalje o svom trenutnom vozilu, obavestićemo vas koliko ćete dobiti kao dodatni bonus za novi Opel automobil.* Samo popunite obrazac i pokažite email sa potvrdom izabranom prodavcu da biste ostvarili svoje
+
+Saznajte više
+Follow us
+KREIRAO CARUSSEL
+IZJAVA O PRIVATNOSTI
+ZAŠTITA PRIVATNOSTI I "KOLAČIĆI"
+MAPA SAJTA
+PRISTANAK NA KOLAČIĆE
+Legal note
+Naslovna
+Test vožnja
+Servisa
+Ponudu
+Lokacija
+NASTAVITI BEZ PRIHVATANJA →
+
+
+
+POŠTUJEMO VAŠU PRIVATNOST
+
+Koristimo kolačiće kako bismo Vam osigurali najbolje iskustvo na našoj veb stranici. Kolačići nam omogućavaju da Vam pružimo osnovne funkcionalnosti kao što su bezbednost, upravljanje mrežom i pristupačnost. Kolačići poboljšavaju upotrebljivost i performanse kroz različite funkcije, kao što su prepoznavanje jezika, rezultati pretraživanja i na taj način poboljšavaju ono što Vam nudimo. Naša veb stranica takođe može koristiti kolačiće trećih strana za slanje oglasnih poruka koje su za vas relevantnije. Neke kolačiće, odnosno podatke dobijene njihovim korišćenjem, mogu obrađivati treća lica koja se nalaze u zemljama izvan Evropske ekonomske zone (EEZ) koje možda još nisu dobile odluku o adekvatnosti od relevantnih evropskih organa za zaštitu podataka. U ovom slučaju prenos se zasniva na vašem pristanku (član 69. stav 1. tačka 1. Zakona o zaštiti podatka o ličnosti Republike Srbije (ZZPL).
+
+Ukoliko želite da saznate više o kolačićima koje koristimo i kako da ih uredite, možete pristupiti našoj Politici o kolačićima ili kliknuti na taster „Uredi moja podešavanja“.
+
+UREDI MOJA PODEŠAVANJA
+PRIHVATI SVE
+
+--- linkovi (href | tekst | naslov kartice) ---
+https://www.opelcarbox.rs/#main-content | Ugrás a tartalomra | Saznajte više
+https://www.opelcarbox.rs/ |  | Saznajte više
+https://www.opelcarbox.rs/opel-kontakt/lokacija | Lokacija | Saznajte više
+tel:+381 18 550010 | +381 18 550010 | Saznajte više
+https://www.opelcarbox.rs/ |  | Saznajte više
+https://www.opelcarbox.rs/opel-kontakt/lokacija |  | Saznajte više
+tel:+381 18 550010 |  | Saznajte više
+https://www.opelcarbox.rs/usluge/posebna-ponuda | Saznajte više | 
+https://www.opelcarbox.rs/usluge/posebna-ponuda | Saznajte više | Saznajte više
+https://www.opelcarbox.rs/usluge/posebna-ponuda | Saznajte više | Saznajte više
+https://www.opelcarbox.rs/usluge/posebna-ponuda | Saznajte više | 
+https://www.opelcarbox.rs/usluge/posebna-ponuda | Saznajte više | Saznajte više
+https://www.opelcarbox.rs/usluge/posebna-ponuda | Saznajte više | Saznajte više
+https://www.opelcarbox.rs/usluge/posebna-ponuda | Saznajte više | 
+https://www.opelcarbox.rs/usluge/posebna-ponuda | Saznajte više | Saznajte više
+https://www.opelcarbox.rs/usluge/posebna-ponuda | Saznajte više | Saznajte više
+https://www.opelcarbox.rs/usluge/posebna-ponuda | Saznajte više | 
+https://www.opelcarbox.rs/usluge/posebna-ponuda | Saznajte više | Saznajte više
+https://www.opelcarbox.rs/usluge/posebna-ponuda | Saznajte više | Saznajte više
+https://www.opelcarbox.rs/usluge/posebna-ponuda | Saznajte više | 
+https://www.opelcarbox.rs/usluge/posebna-ponuda | Saznajte više | Saznajte više
+https://www.opelcarbox.rs/usluge/posebna-ponuda | Saznajte više | Saznajte više
+https://www.opel.rs/ispitivanje-i-delovi/check-vin/takata-kampanja.html | Saznajte više | 
+https://www.opel.rs/ispitivanje-i-delovi/check-vin/takata-kampanja.html | Saznajte više | Saznajte više
+https://www.opel.rs/ispitivanje-i-delovi/check-vin/takata-kampanja.html | Saznajte više | Saznajte više
+https://www.opelcarbox.rs/opelvozila/vozila-na-lageru | 1 Vidi više | Pretraži lager
+https://www.opelcarbox.rs/flexcare/opel_servis | Saznajte više | Zakažite servis
+https://www.opelcarbox.rs/opel-kontakt/contact-webform | Saznajte više | Proceni moje vozilo
+https://www.google.com/intl/sr_SR/help/terms_maps/ |  | 
+https://policies.google.com/privacy?hl=sr_SR |  | 
+https://www.instagram.com/carbox_nis/?hl=en |  | Saznajte više
+https://www.carussel.com/ | KREIRAO CARUSSEL | Saznajte više
+https://www.opelcarbox.rs/tools/privatnost | IZJAVA O PRIVATNOSTI | Saznajte više
+https://www.opelcarbox.rs/tools/privatnost-pravna-pitanja | ZAŠTITA PRIVATNOSTI I "KOLAČIĆI" | Saznajte više
+https://www.opelcarbox.rs/map | MAPA SAJTA | Saznajte više
+https://www.opelcarbox.rs/pocetna | Naslovna | Saznajte više
+https://www.opelcarbox.rs/tools/test-voznja | Test vožnja | Saznajte više
+https://www.opelcarbox.rs/flexcare/opel_servis | Servisa | Saznajte više
+https://www.opelcarbox.rs/tools/kontaktirajte-prodavca | Ponudu | Saznajte više
+https://www.opelcarbox.rs/opel-kontakt/lokacija | Lokacija | Saznajte više
+https://www.google.com/analytics/tag-manager |  | null
+https://www.google.com/analytics/tag-manager |  | null
+https://www.google.com/analytics/tag-manager |  | null
+javascript:void(0) | null | null
+javascript:void(0) | null | null
+javascript:void(0) | NASTAVITI BEZ PRIHVATANJA → | null
+https://www.opel.rs/tools/privatnost-pravna-pitanja.html.html | Politici o kolačićima | null
+javascript:void(0) | UREDI MOJA PODEŠAVANJA | null
+javascript:void(0) | PRIHVATI SVE | null
+javascript:void(0) |  | 
+javascript:void(0) |  | 
+javascript:void(0) |  | 
+javascript:void(0) |  | 
+javascript: void(0) | OTKAŽITE I VRATITE SE NAZAD | null
+javascript:void(0) | SAČUVAJ MOJA PODEŠAVANJA | null
+
+====================================================================================================
+https://automirkos.com
+[html, 28 znakova]
+dwt-web-01.carusselgroup.com

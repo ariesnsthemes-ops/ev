@@ -1,0 +1,19 @@
+# kia-ev2  2026-11-28
+
+izvor uvoznik: https://www.kia.rs/ev2 -> not-found: nema cenovnika sa "EV2" na stranici
+
+====================================================================================================
+https://www.kia.rs/ev2
+[html, 278 znakova]
+www.kia.rs
+Obavljanje bezbednosne verifikacije
+
+Na ovom veb-sajtu koristi se bezbednosni servis za zaštitu od zlonamernih botova. Ova stranica se prikazuje dok veb-sajt proverava da li ste bot.
+
+Ray ID: a618071df9865187
+Performanse i bezbednost pruža mreža Cloudflare
+Privatnost
+
+--- linkovi (href | tekst | naslov kartice) ---
+https://www.cloudflare.com/?utm_source=challenge&utm_campaign=m | Cloudflare | www.kia.rs
+https://www.cloudflare.com/privacypolicy/ | Privatnost | www.kia.rs
