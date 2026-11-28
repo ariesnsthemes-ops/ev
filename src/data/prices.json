@@ -47,9 +47,10 @@
       "price_eur": null,
       "checked": null,
       "changed": null,
-      "status": "new",
-      "note": null,
-      "multi": true
+      "status": "not-found",
+      "note": "html, model \"A6 Avant e-tron\" nije pronađen pored cene",
+      "multi": true,
+      "dealer_urls": {}
     },
     "audi-a6-sportback-e-tron": {
       "name": "Audi A6 Sportback e-tron",
@@ -58,42 +59,49 @@
       "price_eur": null,
       "checked": null,
       "changed": null,
-      "status": "new",
-      "note": null,
-      "multi": true
+      "status": "not-found",
+      "note": "html, model \"A6 Sportback e-tron\" nije pronađen pored cene",
+      "multi": true,
+      "dealer_urls": {}
     },
     "audi-e-tron-gt-quattro": {
       "name": "Audi e-tron GT quattro",
       "match": "e-tron GT quattro",
       "url": "https://www.audi.rs/elektromobilnost/svi-elektro-modeli-audi?categories=electric",
-      "price_eur": null,
-      "checked": null,
-      "changed": null,
-      "status": "new",
-      "note": null,
-      "multi": true
+      "price_eur": 116147,
+      "checked": "2026-11-28",
+      "changed": "2026-11-28",
+      "status": "ok",
+      "note": "samo uvoznik",
+      "multi": true,
+      "dealer_urls": {},
+      "source": "uvoznik"
     },
     "audi-q6-suv-e-tron": {
       "name": "Audi Q6 SUV e-tron",
       "match": "Q6 SUV e-tron",
       "url": "https://www.audi.rs/elektromobilnost/svi-elektro-modeli-audi?categories=electric",
-      "price_eur": null,
-      "checked": null,
-      "changed": null,
-      "status": "new",
-      "note": null,
-      "multi": true
+      "price_eur": 72489,
+      "checked": "2026-11-28",
+      "changed": "2026-11-28",
+      "status": "ok",
+      "note": "samo uvoznik",
+      "multi": true,
+      "dealer_urls": {},
+      "source": "uvoznik"
     },
     "audi-rs-e-tron-gt": {
       "name": "Audi RS e-tron GT",
       "match": "RS e-tron GT",
       "url": "https://www.audi.rs/elektromobilnost/svi-elektro-modeli-audi?categories=electric",
-      "price_eur": null,
-      "checked": null,
-      "changed": null,
-      "status": "new",
-      "note": null,
-      "multi": true
+      "price_eur": 155746,
+      "checked": "2026-11-28",
+      "changed": "2026-11-28",
+      "status": "ok",
+      "note": "samo uvoznik",
+      "multi": true,
+      "dealer_urls": {},
+      "source": "uvoznik"
     },
     "bmw-i3": {
       "name": "BMW i3",
@@ -102,7 +110,7 @@
       "price_eur": null,
       "checked": null,
       "changed": null,
-      "status": "new",
+      "status": "skip",
       "note": null,
       "skip": "nema saglasnosti brenda"
     },
@@ -113,7 +121,7 @@
       "price_eur": null,
       "checked": null,
       "changed": null,
-      "status": "new",
+      "status": "skip",
       "note": null,
       "skip": "nema saglasnosti brenda"
     },
@@ -124,7 +132,7 @@
       "price_eur": null,
       "checked": null,
       "changed": null,
-      "status": "new",
+      "status": "skip",
       "note": null,
       "skip": "nema saglasnosti brenda"
     },
@@ -135,7 +143,7 @@
       "price_eur": null,
       "checked": null,
       "changed": null,
-      "status": "new",
+      "status": "skip",
       "note": null,
       "skip": "nema saglasnosti brenda"
     },
@@ -146,7 +154,7 @@
       "price_eur": null,
       "checked": null,
       "changed": null,
-      "status": "new",
+      "status": "skip",
       "note": null,
       "skip": "nema saglasnosti brenda"
     },
@@ -157,7 +165,7 @@
       "price_eur": null,
       "checked": null,
       "changed": null,
-      "status": "new",
+      "status": "skip",
       "note": null,
       "skip": "nema saglasnosti brenda"
     },
@@ -168,7 +176,7 @@
       "price_eur": null,
       "checked": null,
       "changed": null,
-      "status": "new",
+      "status": "skip",
       "note": null,
       "skip": "nema saglasnosti brenda"
     },
@@ -179,7 +187,7 @@
       "price_eur": null,
       "checked": null,
       "changed": null,
-      "status": "new",
+      "status": "skip",
       "note": null,
       "skip": "nema saglasnosti brenda"
     },
@@ -190,7 +198,7 @@
       "price_eur": null,
       "checked": null,
       "changed": null,
-      "status": "new",
+      "status": "skip",
       "note": null,
       "skip": "nema saglasnosti brenda"
     },
@@ -201,7 +209,7 @@
       "price_eur": null,
       "checked": null,
       "changed": null,
-      "status": "new",
+      "status": "skip",
       "note": null,
       "skip": "nema saglasnosti brenda"
     },
@@ -212,7 +220,7 @@
       "price_eur": null,
       "checked": null,
       "changed": null,
-      "status": "new",
+      "status": "skip",
       "note": null,
       "skip": "nema saglasnosti brenda"
     },
@@ -221,44 +229,48 @@
       "match": "Atto 2",
       "url": "https://byd-auto.rs/modeli/byd-atto-2-comfort/",
       "price_eur": 32250,
-      "checked": "2026-10-15",
+      "checked": "2026-11-28",
       "changed": "2026-10-15",
       "status": "ok",
-      "note": "početni podatak iz brands.json",
-      "source": "uvoznik"
+      "note": "samo uvoznik",
+      "source": "uvoznik",
+      "dealer_urls": {}
     },
     "byd-atto-3-evo": {
       "name": "BYD Atto 3 Evo",
       "match": "Atto 3 Evo",
       "url": "https://byd-auto.rs/modeli/byd-atto-3-evo/",
       "price_eur": 36250,
-      "checked": "2026-10-15",
+      "checked": "2026-11-28",
       "changed": "2026-10-15",
       "status": "ok",
-      "note": "početni podatak iz brands.json",
-      "source": "uvoznik"
+      "note": "samo uvoznik",
+      "source": "uvoznik",
+      "dealer_urls": {}
     },
     "byd-dolphin-surf": {
       "name": "BYD Dolphin Surf",
       "match": "Dolphin Surf",
       "url": "https://byd-auto.rs/modeli/byd-dolphin-surf/",
       "price_eur": 23990,
-      "checked": "2026-10-15",
+      "checked": "2026-11-28",
       "changed": "2026-10-15",
       "status": "ok",
-      "note": "početni podatak iz brands.json",
-      "source": "uvoznik"
+      "note": "samo uvoznik",
+      "source": "uvoznik",
+      "dealer_urls": {}
     },
     "byd-seal": {
       "name": "BYD Seal",
       "match": "Seal",
       "url": "https://byd-auto.rs/modeli/byd-seal/",
       "price_eur": 40490,
-      "checked": "2026-10-15",
+      "checked": "2026-11-28",
       "changed": "2026-10-15",
       "status": "ok",
-      "note": "početni podatak iz brands.json",
-      "source": "uvoznik"
+      "note": "samo uvoznik",
+      "source": "uvoznik",
+      "dealer_urls": {}
     },
     "byd-sealion-7": {
       "name": "BYD Sealion 7",
@@ -267,9 +279,10 @@
       "price_eur": 44590,
       "checked": "2026-10-15",
       "changed": "2026-10-15",
-      "status": "ok",
-      "note": "početni podatak iz brands.json",
-      "source": "uvoznik"
+      "status": "not-found",
+      "note": "greška (TimeoutError: Page.goto: Timeout 60000ms exceeded.)",
+      "source": "uvoznik",
+      "dealer_urls": {}
     },
     "changan-deepal-s05": {
       "name": "Changan Deepal S05",
@@ -278,29 +291,32 @@
       "price_eur": 33490,
       "checked": "2026-10-15",
       "changed": "2026-10-15",
-      "status": "ok",
-      "note": "početni podatak iz brands.json",
-      "source": "uvoznik"
+      "status": "not-found",
+      "note": "html, nema cene u EUR; pregledano linkova: 1",
+      "source": "uvoznik",
+      "dealer_urls": {}
     },
     "changan-deepal-s07": {
       "name": "Changan Deepal S07",
       "match": "Deepal S07",
       "url": "https://changanbalkans.com/rs/wp-content/uploads/2026/11/S07-MY26-BEV-CENOVNIK-1.pdf",
-      "price_eur": null,
-      "checked": null,
-      "changed": null,
-      "status": "new",
-      "note": null
+      "price_eur": 41990,
+      "checked": "2026-11-28",
+      "changed": "2026-11-28",
+      "status": "ok",
+      "note": "samo uvoznik",
+      "dealer_urls": {},
+      "source": "uvoznik"
     },
     "citroen-e-c3": {
       "name": "Citroën ë-C3",
       "match": "ë-C3",
       "url": "https://www.citroen.rs/alati/preuzmite-cenovnik.html",
       "price_eur": 26890,
-      "checked": "2026-11-27",
+      "checked": "2026-11-28",
       "changed": "2026-11-27",
       "status": "ok",
-      "note": "ručno zaključano",
+      "note": "RUČNO ZAKLJUČANO 26.890 € (od 2026-11-27)",
       "lock": {
         "price_eur": 26890,
         "since": "2026-11-27",
@@ -308,17 +324,18 @@
       },
       "pdf_label": "Ë-C3",
       "row_anchor": "ELEKTRIČNI MOTOR",
-      "column": 2
+      "column": 2,
+      "dealer_urls": {}
     },
     "citroen-e-c3-aircross": {
       "name": "Citroën ë-C3 Aircross",
       "match": "ë-C3 Aircross",
       "url": "https://www.citroen.rs/alati/preuzmite-cenovnik.html",
       "price_eur": 28990,
-      "checked": "2026-11-27",
+      "checked": "2026-11-28",
       "changed": "2026-11-27",
       "status": "ok",
-      "note": "ručno zaključano",
+      "note": "RUČNO ZAKLJUČANO 28.990 € (od 2026-11-27)",
       "lock": {
         "price_eur": 28990,
         "since": "2026-11-27",
@@ -326,7 +343,8 @@
       },
       "pdf_label": "NOVI Ë-C3 AIRCROSS",
       "row_anchor": "ELEKTRIČNI MOTOR",
-      "column": 2
+      "column": 2,
+      "dealer_urls": {}
     },
     "citroen-e-c4": {
       "name": "Citroën ë-C4",
@@ -335,11 +353,12 @@
       "price_eur": null,
       "checked": null,
       "changed": null,
-      "status": "new",
-      "note": null,
+      "status": "not-found",
+      "note": "html, cenovnik se bira po naslovu; pregledano linkova: 1",
       "pdf_label": "Ë-C4",
       "row_anchor": "ELEKTRIČNI MOTOR",
-      "column": 2
+      "column": 2,
+      "dealer_urls": {}
     },
     "citroen-e-c4-x": {
       "name": "Citroën ë-C4 X",
@@ -348,11 +367,12 @@
       "price_eur": null,
       "checked": null,
       "changed": null,
-      "status": "new",
-      "note": null,
+      "status": "not-found",
+      "note": "html, cenovnik se bira po naslovu; pregledano linkova: 2",
       "pdf_label": "Ë-C4 X",
       "row_anchor": "ELEKTRIČNI MOTOR",
-      "column": 2
+      "column": 2,
+      "dealer_urls": {}
     },
     "citroen-e-c5-aircross": {
       "name": "Citroën ë-C5 Aircross",
@@ -361,46 +381,53 @@
       "price_eur": null,
       "checked": null,
       "changed": null,
-      "status": "new",
-      "note": null,
+      "status": "not-found",
+      "note": "nema dugmeta za cenovnik ispod naslova \"Ë-C5 AIRCROSS\"",
       "pdf_label": "Ë-C5 AIRCROSS",
       "row_anchor": "ELEKTRIČNI MOTOR",
-      "column": 2
+      "column": 2,
+      "dealer_urls": {}
     },
     "cupra-raval": {
       "name": "Cupra Raval",
       "match": "Raval",
       "url": "https://www.cupraofficial.rs/svi-modeli",
-      "price_eur": null,
-      "checked": null,
-      "changed": null,
-      "status": "new",
-      "note": null,
-      "multi": true
+      "price_eur": 29990,
+      "checked": "2026-11-28",
+      "changed": "2026-11-28",
+      "status": "ok",
+      "note": "samo uvoznik",
+      "multi": true,
+      "dealer_urls": {},
+      "source": "uvoznik"
     },
     "cupra-tavascan": {
       "name": "Cupra Tavascan",
       "match": "Tavascan",
       "url": "https://www.cupraofficial.rs/svi-modeli",
-      "price_eur": null,
-      "checked": null,
-      "changed": null,
-      "status": "new",
-      "note": null,
-      "multi": true
+      "price_eur": 58397,
+      "checked": "2026-11-28",
+      "changed": "2026-11-28",
+      "status": "ok",
+      "note": "samo uvoznik",
+      "multi": true,
+      "dealer_urls": {},
+      "source": "uvoznik"
     },
     "dacia-spring": {
       "name": "Dacia Spring",
       "match": "Spring",
       "url": "https://www.dacia.rs/cars/spring/otkrijte.html",
-      "price_eur": null,
-      "checked": null,
-      "changed": null,
-      "status": "new",
-      "note": null,
+      "price_eur": 17990,
+      "checked": "2026-11-28",
+      "changed": "2026-11-28",
+      "status": "ok",
+      "note": "samo uvoznik",
       "pdf_match": "spring",
       "row_anchor": "Električna struja",
-      "column": 2
+      "column": 2,
+      "dealer_urls": {},
+      "source": "uvoznik"
     },
     "dongfeng-box": {
       "name": "Dongfeng Box",
@@ -409,7 +436,7 @@
       "price_eur": null,
       "checked": null,
       "changed": null,
-      "status": "new",
+      "status": "skip",
       "note": null,
       "skip": "preskočeno (cena samo u dinarima)"
     },
@@ -420,11 +447,14 @@
       "price_eur": null,
       "checked": null,
       "changed": null,
-      "status": "new",
-      "note": null,
+      "status": "review",
+      "note": "samo jedan diler, nema potvrde; nije primenjeno, ostaje stara cena",
       "pdf_label": "CAPRI",
       "row_anchor": "Elektro",
-      "column": 2
+      "column": 2,
+      "dealer_urls": {
+        "fordsabac.rs": "https://fordsabac.rs/storage/catalogs/pdfs/50-capri-cenovnik.pdf"
+      }
     },
     "ford-explorer-ev": {
       "name": "Ford Explorer EV",
@@ -433,11 +463,14 @@
       "price_eur": null,
       "checked": null,
       "changed": null,
-      "status": "new",
-      "note": null,
+      "status": "review",
+      "note": "samo jedan diler, nema potvrde; nije primenjeno, ostaje stara cena",
       "pdf_label": "EXPLORER EV",
       "row_anchor": "Elektro",
-      "column": 2
+      "column": 2,
+      "dealer_urls": {
+        "fordsabac.rs": "https://fordsabac.rs/storage/catalogs/pdfs/31-cenovik-explorer-ev.pdf"
+      }
     },
     "ford-mustang-mach-e": {
       "name": "Ford Mustang Mach-E",
@@ -446,11 +479,14 @@
       "price_eur": null,
       "checked": null,
       "changed": null,
-      "status": "new",
-      "note": null,
+      "status": "review",
+      "note": "samo jedan diler, nema potvrde; nije primenjeno, ostaje stara cena",
       "pdf_label": "MUSTANG MACH-E",
       "row_anchor": "Elektro",
-      "column": 2
+      "column": 2,
+      "dealer_urls": {
+        "fordsabac.rs": "https://fordsabac.rs/storage/catalogs/pdfs/7-mustang-mach-e-cenovnik.pdf"
+      }
     },
     "ford-puma-gen-e": {
       "name": "Ford Puma Gen-E",
@@ -459,21 +495,24 @@
       "price_eur": null,
       "checked": null,
       "changed": null,
-      "status": "new",
-      "note": null,
+      "status": "not-found",
+      "note": "html, cenovnik se bira po naslovu; pregledano linkova: 1",
       "pdf_label": "PUMA GEN-E",
       "row_anchor": "Elektro",
-      "column": 2
+      "column": 2,
+      "dealer_urls": {}
     },
     "foton-etunland": {
       "name": "Foton eTunland",
       "match": "eTunland",
       "url": "https://fotonserbia.rs/cenovnici/FotonSrbija-cenovnik.pdf",
-      "price_eur": null,
-      "checked": null,
-      "changed": null,
-      "status": "new",
-      "note": null
+      "price_eur": 38990,
+      "checked": "2026-11-28",
+      "changed": "2026-11-28",
+      "status": "ok",
+      "note": "samo uvoznik",
+      "dealer_urls": {},
+      "source": "uvoznik"
     },
     "geely-e5": {
       "name": "Geely E5",
@@ -482,11 +521,12 @@
       "price_eur": null,
       "checked": null,
       "changed": null,
-      "status": "new",
-      "note": null,
+      "status": "not-found",
+      "note": "nema cenovnika sa \"E5\" na stranici",
       "pdf_match": "E5",
       "row_anchor": "Potpuno električni",
-      "column": 1
+      "column": 1,
+      "dealer_urls": {}
     },
     "hyundai-inster": {
       "name": "Hyundai Inster",
@@ -495,8 +535,9 @@
       "price_eur": null,
       "checked": null,
       "changed": null,
-      "status": "new",
-      "note": null
+      "status": "not-found",
+      "note": "html, nema cene u EUR; pregledano linkova: 1",
+      "dealer_urls": {}
     },
     "hyundai-ioniq-5": {
       "name": "Hyundai IONIQ 5",
@@ -505,8 +546,9 @@
       "price_eur": null,
       "checked": null,
       "changed": null,
-      "status": "new",
-      "note": null
+      "status": "not-found",
+      "note": "html, nema cene u EUR; pregledano linkova: 3",
+      "dealer_urls": {}
     },
     "hyundai-ioniq-6": {
       "name": "Hyundai IONIQ 6",
@@ -515,8 +557,9 @@
       "price_eur": null,
       "checked": null,
       "changed": null,
-      "status": "new",
-      "note": null
+      "status": "not-found",
+      "note": "html, nema cene u EUR; pregledano linkova: 4",
+      "dealer_urls": {}
     },
     "hyundai-ioniq-6-n": {
       "name": "Hyundai IONIQ 6 N",
@@ -525,8 +568,9 @@
       "price_eur": null,
       "checked": null,
       "changed": null,
-      "status": "new",
-      "note": null
+      "status": "not-found",
+      "note": "html, nema cene u EUR; pregledano linkova: 1",
+      "dealer_urls": {}
     },
     "hyundai-ioniq-9": {
       "name": "Hyundai IONIQ 9",
@@ -535,28 +579,33 @@
       "price_eur": null,
       "checked": null,
       "changed": null,
-      "status": "new",
-      "note": null
+      "status": "not-found",
+      "note": "html, nema cene u EUR; pregledano linkova: 1",
+      "dealer_urls": {}
     },
     "jac-e30x": {
       "name": "JAC E30X",
       "match": "E30X",
       "url": "https://jacmotors.rs/putnicka-vozila/cenovnik/",
-      "price_eur": null,
-      "checked": null,
-      "changed": null,
-      "status": "new",
-      "note": null
+      "price_eur": 25990,
+      "checked": "2026-11-28",
+      "changed": "2026-11-28",
+      "status": "ok",
+      "note": "samo uvoznik",
+      "dealer_urls": {},
+      "source": "uvoznik"
     },
     "jac-t9-ev": {
       "name": "JAC T9 EV",
       "match": "T9 EV",
       "url": "https://jacmotors.rs/putnicka-vozila/cenovnik/",
-      "price_eur": null,
-      "checked": null,
-      "changed": null,
-      "status": "new",
-      "note": null
+      "price_eur": 38325,
+      "checked": "2026-11-28",
+      "changed": "2026-11-28",
+      "status": "ok",
+      "note": "samo uvoznik",
+      "dealer_urls": {},
+      "source": "uvoznik"
     },
     "jmev-elight": {
       "name": "JMEV Elight",
@@ -565,8 +614,9 @@
       "price_eur": null,
       "checked": null,
       "changed": null,
-      "status": "new",
-      "note": null
+      "status": "not-found",
+      "note": "html, nema cene u EUR",
+      "dealer_urls": {}
     },
     "jmev-ev3": {
       "name": "JMEV EV3",
@@ -575,8 +625,9 @@
       "price_eur": null,
       "checked": null,
       "changed": null,
-      "status": "new",
-      "note": null
+      "status": "not-found",
+      "note": "html, nema cene u EUR",
+      "dealer_urls": {}
     },
     "jmev-ewind": {
       "name": "JMEV Ewind",
@@ -585,8 +636,9 @@
       "price_eur": null,
       "checked": null,
       "changed": null,
-      "status": "new",
-      "note": null
+      "status": "not-found",
+      "note": "html, nema cene u EUR",
+      "dealer_urls": {}
     },
     "kia-ev2": {
       "name": "Kia EV2",
@@ -595,11 +647,12 @@
       "price_eur": null,
       "checked": null,
       "changed": null,
-      "status": "new",
-      "note": null,
+      "status": "not-found",
+      "note": "nema cenovnika sa \"EV2\" na stranici",
       "pdf_match": "EV2",
       "row_anchor": "Modeli sa električnim motorom",
-      "column": 2
+      "column": 2,
+      "dealer_urls": {}
     },
     "kia-ev3": {
       "name": "Kia EV3",
@@ -608,11 +661,12 @@
       "price_eur": null,
       "checked": null,
       "changed": null,
-      "status": "new",
-      "note": null,
+      "status": "not-found",
+      "note": "nema cenovnika sa \"EV3\" na stranici",
       "pdf_match": "EV3",
       "row_anchor": "Modeli sa električnim motorom",
-      "column": 2
+      "column": 2,
+      "dealer_urls": {}
     },
     "kia-ev4": {
       "name": "Kia EV4",
@@ -621,11 +675,12 @@
       "price_eur": null,
       "checked": null,
       "changed": null,
-      "status": "new",
-      "note": null,
+      "status": "not-found",
+      "note": "nema cenovnika sa \"EV4\" na stranici",
       "pdf_match": "EV4",
       "row_anchor": "Modeli sa električnim motorom",
-      "column": 2
+      "column": 2,
+      "dealer_urls": {}
     },
     "kia-ev6": {
       "name": "Kia EV6",
@@ -634,11 +689,12 @@
       "price_eur": null,
       "checked": null,
       "changed": null,
-      "status": "new",
-      "note": null,
+      "status": "not-found",
+      "note": "nema cenovnika sa \"EV6\" na stranici",
       "pdf_match": "EV6",
       "row_anchor": "Modeli sa električnim motorom",
-      "column": 2
+      "column": 2,
+      "dealer_urls": {}
     },
     "kia-ev9": {
       "name": "Kia EV9",
@@ -647,61 +703,72 @@
       "price_eur": null,
       "checked": null,
       "changed": null,
-      "status": "new",
-      "note": null,
+      "status": "not-found",
+      "note": "nema cenovnika sa \"EV9\" na stranici",
       "pdf_match": "EV9",
       "row_anchor": "Modeli sa električnim motorom",
-      "column": 2
+      "column": 2,
+      "dealer_urls": {}
     },
     "leapmotor-b03x": {
       "name": "Leapmotor B03X",
       "match": "B03X",
       "url": "https://www.leapmotor.net/rs/b03x-full",
-      "price_eur": null,
-      "checked": null,
-      "changed": null,
-      "status": "new",
-      "note": null
+      "price_eur": 21490,
+      "checked": "2026-11-28",
+      "changed": "2026-11-28",
+      "status": "ok",
+      "note": "samo uvoznik",
+      "dealer_urls": {},
+      "source": "uvoznik"
     },
     "leapmotor-b05": {
       "name": "Leapmotor B05",
       "match": "B05",
       "url": "https://www.leapmotor.net/rs/b05-full",
-      "price_eur": null,
-      "checked": null,
-      "changed": null,
-      "status": "new",
-      "note": null
+      "price_eur": 26590,
+      "checked": "2026-11-28",
+      "changed": "2026-11-28",
+      "status": "ok",
+      "note": "samo uvoznik",
+      "dealer_urls": {},
+      "source": "uvoznik"
     },
     "leapmotor-b10": {
       "name": "Leapmotor B10",
       "match": "B10",
       "url": "https://www.leapmotor.net/rs/b10",
-      "price_eur": null,
-      "checked": null,
-      "changed": null,
-      "status": "new",
-      "note": null
+      "price_eur": 27990,
+      "checked": "2026-11-28",
+      "changed": "2026-11-28",
+      "status": "ok",
+      "note": "samo uvoznik",
+      "dealer_urls": {},
+      "source": "uvoznik"
     },
     "leapmotor-c10": {
       "name": "Leapmotor C10",
       "match": "C10",
       "url": "https://www.leapmotor.net/rs/c10",
-      "price_eur": null,
-      "checked": null,
-      "changed": null,
-      "status": "new",
-      "note": null
+      "price_eur": 31990,
+      "checked": "2026-11-28",
+      "changed": "2026-11-28",
+      "status": "ok",
+      "note": "samo uvoznik",
+      "dealer_urls": {},
+      "source": "uvoznik"
     },
     "leapmotor-t03": {
       "name": "Leapmotor T03",
       "match": "T03",
       "url": "https://www.leapmotor.net/rs/t03",
-      "price_eur": null,
-      "checked": null,
-      "changed": null,
-      "status": "new",
-      "note": null
+      "price_eur": 16990,
+      "checked": "2026-11-28",
+      "changed": "2026-11-28",
+      "status": "ok",
+      "note": "samo uvoznik",
+      "dealer_urls": {},
+      "source": "uvoznik"
     },
     "lynk-co-02": {
       "name": "Lynk & Co 02",
@@ -710,34 +777,39 @@
       "price_eur": 26990,
       "checked": "2026-10-15",
       "changed": "2026-10-15",
-      "status": "ok",
-      "note": "početni podatak iz brands.json",
+      "status": "not-found",
+      "note": "nema cenovnika sa \"02\" na stranici",
       "source": "uvoznik",
       "pdf_match": "02",
       "row_anchor": "Srbija",
-      "column": 2
+      "column": 2,
+      "dealer_urls": {}
     },
     "mazda-6e": {
       "name": "Mazda 6e",
       "match": "6e",
       "url": "https://www.mazda.rs/modeli",
-      "price_eur": null,
-      "checked": null,
-      "changed": null,
-      "status": "new",
-      "note": null,
+      "price_eur": 44790,
+      "checked": "2026-11-28",
+      "changed": "2026-11-28",
+      "status": "ok",
+      "note": "samo uvoznik",
       "pdf_label": "MAZDA 6E",
-      "link_word": "konfigurator"
+      "link_word": "konfigurator",
+      "dealer_urls": {},
+      "source": "uvoznik"
     },
     "mazda-cx-6e": {
       "name": "Mazda CX-6e",
       "match": "CX-6e",
       "url": "https://www.mazda.rs/konfigurator/MAZDA%20CX-6e/5WGN/engine",
-      "price_eur": null,
-      "checked": null,
-      "changed": null,
-      "status": "new",
-      "note": null
+      "price_eur": 46150,
+      "checked": "2026-11-28",
+      "changed": "2026-11-28",
+      "status": "ok",
+      "note": "samo uvoznik",
+      "dealer_urls": {},
+      "source": "uvoznik"
     },
     "mg-mg4-electric": {
       "name": "MG4 Electric",
@@ -746,7 +818,7 @@
       "price_eur": null,
       "checked": null,
       "changed": null,
-      "status": "new",
+      "status": "skip",
       "note": null,
       "skip": "nije u ponudi na mgmotor.rs (novembar 2026)"
     },
@@ -757,7 +829,7 @@
       "price_eur": null,
       "checked": null,
       "changed": null,
-      "status": "new",
+      "status": "skip",
       "note": null,
       "skip": "nije u ponudi na mgmotor.rs (novembar 2026)"
     },
@@ -765,11 +837,13 @@
       "name": "MGS5 EV",
       "match": "MGS5 EV",
       "url": "https://www.mgmotor.rs/model/mgs5-ev",
-      "price_eur": null,
-      "checked": null,
-      "changed": null,
-      "status": "new",
-      "note": null
+      "price_eur": 29990,
+      "checked": "2026-11-28",
+      "changed": "2026-11-28",
+      "status": "ok",
+      "note": "samo uvoznik",
+      "dealer_urls": {},
+      "source": "uvoznik"
     },
     "mini-aceman": {
       "name": "MINI Aceman",
@@ -778,7 +852,7 @@
       "price_eur": null,
       "checked": null,
       "changed": null,
-      "status": "new",
+      "status": "skip",
       "note": null,
       "skip": "nema saglasnosti brenda"
     },
@@ -789,7 +863,7 @@
       "price_eur": null,
       "checked": null,
       "changed": null,
-      "status": "new",
+      "status": "skip",
       "note": null,
       "skip": "nema saglasnosti brenda"
     },
@@ -800,7 +874,7 @@
       "price_eur": null,
       "checked": null,
       "changed": null,
-      "status": "new",
+      "status": "skip",
       "note": null,
       "skip": "nema saglasnosti brenda"
     },
@@ -811,11 +885,12 @@
       "price_eur": null,
       "checked": null,
       "changed": null,
-      "status": "new",
-      "note": null,
+      "status": "not-found",
+      "note": "html, cenovnik se bira po naslovu; pregledano linkova: 3",
       "pdf_match": "Astra",
       "row_anchor": "Electric",
-      "column": 1
+      "column": 1,
+      "dealer_urls": {}
     },
     "opel-frontera-electric": {
       "name": "Opel Frontera Electric",
@@ -824,11 +899,12 @@
       "price_eur": null,
       "checked": null,
       "changed": null,
-      "status": "new",
-      "note": null,
+      "status": "not-found",
+      "note": "html, cenovnik se bira po naslovu; pregledano linkova: 1",
       "pdf_match": "Frontera",
       "row_anchor": "Electric",
-      "column": 1
+      "column": 1,
+      "dealer_urls": {}
     },
     "opel-mokka-electric": {
       "name": "Opel Mokka Electric",
@@ -837,24 +913,27 @@
       "price_eur": null,
       "checked": null,
       "changed": null,
-      "status": "new",
-      "note": null,
+      "status": "not-found",
+      "note": "html, cenovnik se bira po naslovu; pregledano linkova: 1",
       "pdf_match": "Mokka",
       "row_anchor": "Electric",
-      "column": 1
+      "column": 1,
+      "dealer_urls": {}
     },
     "peugeot-e-2008": {
       "name": "Peugeot e-2008",
       "match": "e-2008",
       "url": "https://www.peugeot.rs/alati/brosure.html",
-      "price_eur": null,
-      "checked": null,
-      "changed": null,
-      "status": "new",
-      "note": null,
+      "price_eur": 44090,
+      "checked": "2026-11-28",
+      "changed": "2026-11-28",
+      "status": "ok",
+      "note": "samo uvoznik",
       "pdf_match": "2008",
       "row_anchor": "ELEKTRO",
-      "column": "min"
+      "column": "min",
+      "dealer_urls": {},
+      "source": "uvoznik"
     },
     "peugeot-e-208": {
       "name": "Peugeot e-208",
@@ -863,24 +942,27 @@
       "price_eur": null,
       "checked": null,
       "changed": null,
-      "status": "new",
-      "note": null,
+      "status": "not-found",
+      "note": "html, cenovnik se bira po naslovu; pregledano linkova: 2",
       "pdf_match": "208",
       "row_anchor": "ELEKTRO",
-      "column": "min"
+      "column": "min",
+      "dealer_urls": {}
     },
     "peugeot-e-3008": {
       "name": "Peugeot e-3008",
       "match": "e-3008",
       "url": "https://www.peugeot.rs/alati/brosure.html",
-      "price_eur": null,
-      "checked": null,
-      "changed": null,
-      "status": "new",
-      "note": null,
+      "price_eur": 56590,
+      "checked": "2026-11-28",
+      "changed": "2026-11-28",
+      "status": "ok",
+      "note": "samo uvoznik",
       "pdf_match": "3008",
       "row_anchor": "ELEKTRO",
-      "column": "min"
+      "column": "min",
+      "dealer_urls": {},
+      "source": "uvoznik"
     },
     "peugeot-e-308": {
       "name": "Peugeot e-308",
@@ -889,11 +971,12 @@
       "price_eur": null,
       "checked": null,
       "changed": null,
-      "status": "new",
-      "note": null,
+      "status": "not-found",
+      "note": "html, cenovnik se bira po naslovu; pregledano linkova: 1",
       "pdf_match": "308",
       "row_anchor": "ELEKTRO",
-      "column": "min"
+      "column": "min",
+      "dealer_urls": {}
     },
     "porsche-cayenne-turbo-electric": {
       "name": "Porsche Cayenne Turbo Electric",
@@ -902,10 +985,11 @@
       "price_eur": null,
       "checked": null,
       "changed": null,
-      "status": "new",
-      "note": null,
+      "status": "blocked",
+      "note": "sajt blokira automatsku proveru",
       "multi": true,
-      "source_override": "dileri"
+      "source_override": "dileri",
+      "dealer_urls": {}
     },
     "porsche-macan-4": {
       "name": "Porsche Macan 4",
@@ -914,10 +998,11 @@
       "price_eur": null,
       "checked": null,
       "changed": null,
-      "status": "new",
-      "note": null,
+      "status": "blocked",
+      "note": "sajt blokira automatsku proveru",
       "multi": true,
-      "source_override": "dileri"
+      "source_override": "dileri",
+      "dealer_urls": {}
     },
     "porsche-macan-4s": {
       "name": "Porsche Macan 4S",
@@ -926,10 +1011,11 @@
       "price_eur": null,
       "checked": null,
       "changed": null,
-      "status": "new",
-      "note": null,
+      "status": "blocked",
+      "note": "sajt blokira automatsku proveru",
       "multi": true,
-      "source_override": "dileri"
+      "source_override": "dileri",
+      "dealer_urls": {}
     },
     "porsche-taycan-4": {
       "name": "Porsche Taycan 4",
@@ -938,22 +1024,25 @@
       "price_eur": null,
       "checked": null,
       "changed": null,
-      "status": "new",
-      "note": null,
+      "status": "blocked",
+      "note": "sajt blokira automatsku proveru",
       "multi": true,
-      "source_override": "dileri"
+      "source_override": "dileri",
+      "dealer_urls": {}
     },
     "renault-4-e-tech": {
       "name": "Renault 4 E-Tech",
       "match": "Renault 4",
       "url": "https://cdn.group.renault.com/ren/rs/cenovnik/renault4-pricelist.pdf.asset.pdf/955fb7ad89.pdf",
-      "price_eur": null,
-      "checked": null,
-      "changed": null,
-      "status": "new",
-      "note": null,
+      "price_eur": 30990,
+      "checked": "2026-11-28",
+      "changed": "2026-11-28",
+      "status": "ok",
+      "note": "samo uvoznik",
       "column": 3,
-      "row_anchor": "električna energija"
+      "row_anchor": "električna energija",
+      "dealer_urls": {},
+      "source": "uvoznik"
     },
     "renault-5-e-tech": {
       "name": "Renault 5 E-Tech",
@@ -962,10 +1051,11 @@
       "price_eur": null,
       "checked": null,
       "changed": null,
-      "status": "new",
-      "note": null,
+      "status": "not-found",
+      "note": "greška (RuntimeError: HTTP 410; običan HTTP: greška (HTTPError: HTTP Error 410: Gone))",
       "column": 3,
-      "row_anchor": "električna energija"
+      "row_anchor": "električna energija",
+      "dealer_urls": {}
     },
     "renault-twingo-e-tech": {
       "name": "Renault Twingo E-Tech",
@@ -974,204 +1064,251 @@
       "price_eur": null,
       "checked": null,
       "changed": null,
-      "status": "new",
-      "note": null,
+      "status": "not-found",
+      "note": "greška (RuntimeError: HTTP 410; običan HTTP: greška (HTTPError: HTTP Error 410: Gone))",
       "row_anchor": "električna energija",
-      "column": 3
+      "column": 3,
+      "dealer_urls": {}
     },
     "skoda-elroq": {
       "name": "Škoda Elroq",
       "match": "Elroq",
       "url": null,
-      "price_eur": null,
-      "checked": null,
-      "changed": null,
-      "status": "new",
-      "note": null
+      "price_eur": 38988,
+      "checked": "2026-11-28",
+      "changed": "2026-11-28",
+      "status": "review",
+      "note": "5/5 dilera se slažu (uvoznik bez cene); stranica pronađena automatski, proveri link (cena primenjena)",
+      "dealer_urls": {
+        "autocacak-promet.rs": "https://www.autocacak-promet.rs/models/elroq/elroq.php",
+        "skoda-alpros.rs": "https://skoda-alpros.rs/skoda-automobil/novi-skoda-elroq/",
+        "autocentarstojanovic.rs": "https://autocentarstojanovic.rs/automobili/elroq/",
+        "intersrem.co.rs": "https://www.intersrem.co.rs/elroq/",
+        "aks-drive.co.rs": "https://www.aks-drive.co.rs/modeli/elroq.html"
+      },
+      "source": "dileri"
     },
     "skoda-enyaq": {
       "name": "Škoda Enyaq",
       "match": "Enyaq",
       "url": null,
-      "price_eur": null,
-      "checked": null,
-      "changed": null,
-      "status": "new",
-      "note": null
+      "price_eur": 47004,
+      "checked": "2026-11-28",
+      "changed": "2026-11-28",
+      "status": "review",
+      "note": "2/2 dilera se slažu (uvoznik bez cene); stranica pronađena automatski, proveri link (cena primenjena)",
+      "dealer_urls": {
+        "autocentarstojanovic.rs": "https://autocentarstojanovic.rs/automobili/enyaq/",
+        "aks-drive.co.rs": "https://www.aks-drive.co.rs/modeli/Enyaq.html"
+      },
+      "source": "dileri"
     },
     "skoda-enyaq-coupe": {
       "name": "Škoda Enyaq Coupé",
       "match": "Enyaq Coupé",
       "url": null,
-      "price_eur": null,
-      "checked": null,
-      "changed": null,
-      "status": "new",
-      "note": null
+      "price_eur": 49776,
+      "checked": "2026-11-28",
+      "changed": "2026-11-28",
+      "status": "review",
+      "note": "2/4 dilera se slažu (uvoznik bez cene); stranica pronađena automatski, proveri link (cena primenjena)",
+      "dealer_urls": {
+        "skoda-alpros.rs": "https://skoda-alpros.rs/skoda-automobil/skoda-enyaq-coupe",
+        "autocentarstojanovic.rs": "https://autocentarstojanovic.rs/automobili/enyaq-coupe/",
+        "intersrem.co.rs": "https://www.intersrem.co.rs/enyaq/",
+        "aks-drive.co.rs": "https://www.aks-drive.co.rs/modeli/enyaq-coupe.html"
+      },
+      "source": "dileri"
     },
     "suzuki-e-vitara": {
       "name": "Suzuki e Vitara",
       "match": "e Vitara",
       "url": "https://suzuki-novisad.rs/modeli/evitara/",
-      "price_eur": null,
-      "checked": null,
-      "changed": null,
-      "status": "new",
-      "note": null,
-      "source_override": "dileri"
+      "price_eur": 26250,
+      "checked": "2026-11-28",
+      "changed": "2026-11-28",
+      "status": "ok",
+      "note": "samo uvoznik",
+      "source_override": "dileri",
+      "dealer_urls": {},
+      "source": "dileri"
     },
     "toyota-bz4x": {
       "name": "Toyota bZ4X",
       "match": "bZ4X",
       "url": "https://www.toyota.rs/new-cars/bz4x",
-      "price_eur": null,
-      "checked": null,
-      "changed": null,
-      "status": "new",
-      "note": null
+      "price_eur": 40490,
+      "checked": "2026-11-28",
+      "changed": "2026-11-28",
+      "status": "ok",
+      "note": "samo uvoznik",
+      "dealer_urls": {},
+      "source": "uvoznik"
     },
     "toyota-bz4x-touring": {
       "name": "Toyota bZ4X Touring",
       "match": "bZ4X Touring",
       "url": "https://www.toyota.rs/new-cars/bz4x-touring",
-      "price_eur": null,
-      "checked": null,
-      "changed": null,
-      "status": "new",
-      "note": null
+      "price_eur": 47490,
+      "checked": "2026-11-28",
+      "changed": "2026-11-28",
+      "status": "ok",
+      "note": "samo uvoznik",
+      "dealer_urls": {},
+      "source": "uvoznik"
     },
     "toyota-c-hr-plus": {
       "name": "Toyota C-HR+",
       "match": "C-HR+",
       "url": "https://www.toyota.rs/new-cars/toyota-c-hr-plus",
-      "price_eur": null,
-      "checked": null,
-      "changed": null,
-      "status": "new",
-      "note": null
+      "price_eur": 38990,
+      "checked": "2026-11-28",
+      "changed": "2026-11-28",
+      "status": "ok",
+      "note": "samo uvoznik",
+      "dealer_urls": {},
+      "source": "uvoznik"
     },
     "volkswagen-id-3-neo": {
       "name": "Volkswagen ID.3 Neo",
       "match": "ID.3 Neo",
       "url": "https://www.volkswagen.rs/modeli-i-konfigurator/svi-modeli?FUEL=Elektro",
-      "price_eur": null,
-      "checked": null,
-      "changed": null,
-      "status": "new",
-      "note": null,
-      "multi": true
+      "price_eur": 38826,
+      "checked": "2026-11-28",
+      "changed": "2026-11-28",
+      "status": "ok",
+      "note": "samo uvoznik",
+      "multi": true,
+      "dealer_urls": {},
+      "source": "uvoznik"
     },
     "volkswagen-id-4": {
       "name": "Volkswagen ID.4",
       "match": "ID.4",
       "url": "https://www.volkswagen.rs/modeli-i-konfigurator/svi-modeli?FUEL=Elektro",
-      "price_eur": null,
-      "checked": null,
-      "changed": null,
-      "status": "new",
-      "note": null,
-      "multi": true
+      "price_eur": 41674,
+      "checked": "2026-11-28",
+      "changed": "2026-11-28",
+      "status": "ok",
+      "note": "samo uvoznik",
+      "multi": true,
+      "dealer_urls": {},
+      "source": "uvoznik"
     },
     "volkswagen-id-5": {
       "name": "Volkswagen ID.5",
       "match": "ID.5",
       "url": "https://www.volkswagen.rs/modeli-i-konfigurator/svi-modeli?FUEL=Elektro",
-      "price_eur": null,
-      "checked": null,
-      "changed": null,
-      "status": "new",
-      "note": null,
-      "multi": true
+      "price_eur": 52565,
+      "checked": "2026-11-28",
+      "changed": "2026-11-28",
+      "status": "ok",
+      "note": "samo uvoznik",
+      "multi": true,
+      "dealer_urls": {},
+      "source": "uvoznik"
     },
     "volkswagen-id-7": {
       "name": "Volkswagen ID.7",
       "match": "ID.7",
       "url": "https://www.volkswagen.rs/modeli-i-konfigurator/svi-modeli?FUEL=Elektro",
-      "price_eur": null,
-      "checked": null,
-      "changed": null,
-      "status": "new",
-      "note": null,
-      "multi": true
+      "price_eur": 56849,
+      "checked": "2026-11-28",
+      "changed": "2026-11-28",
+      "status": "ok",
+      "note": "samo uvoznik",
+      "multi": true,
+      "dealer_urls": {},
+      "source": "uvoznik"
     },
     "volkswagen-id-polo": {
       "name": "Volkswagen ID. Polo",
       "match": "ID. Polo",
       "url": "https://www.volkswagen.rs/modeli-i-konfigurator/svi-modeli?FUEL=Elektro",
-      "price_eur": null,
-      "checked": null,
-      "changed": null,
-      "status": "new",
-      "note": null,
-      "multi": true
+      "price_eur": 24995,
+      "checked": "2026-11-28",
+      "changed": "2026-11-28",
+      "status": "ok",
+      "note": "samo uvoznik",
+      "multi": true,
+      "dealer_urls": {},
+      "source": "uvoznik"
     },
     "volvo-es90": {
       "name": "Volvo ES90",
       "match": "ES90",
       "url": "https://beograd.volvocars.rs/akcijska_ponuda/details?series=recharge",
-      "price_eur": null,
-      "checked": null,
-      "changed": null,
-      "status": "new",
-      "note": null,
+      "price_eur": 66140,
+      "checked": "2026-11-28",
+      "changed": "2026-11-28",
+      "status": "ok",
+      "note": "samo uvoznik",
       "multi": true,
       "extra_sources": [
         {
           "label": "volvocentar.rs (zalihe)",
           "url": "https://www.volvocentar.rs/volvo_sa_zalihe"
         }
-      ]
+      ],
+      "dealer_urls": {},
+      "source": "uvoznik"
     },
     "volvo-ex30": {
       "name": "Volvo EX30",
       "match": "EX30",
       "url": "https://beograd.volvocars.rs/akcijska_ponuda/details?series=recharge",
-      "price_eur": null,
-      "checked": null,
-      "changed": null,
-      "status": "new",
-      "note": null,
+      "price_eur": 34990,
+      "checked": "2026-11-28",
+      "changed": "2026-11-28",
+      "status": "ok",
+      "note": "samo uvoznik",
       "multi": true,
       "extra_sources": [
         {
           "label": "volvocentar.rs (zalihe)",
           "url": "https://www.volvocentar.rs/volvo_sa_zalihe"
         }
-      ]
+      ],
+      "dealer_urls": {},
+      "source": "uvoznik"
     },
     "volvo-ex60": {
       "name": "Volvo EX60",
       "match": "EX60",
       "url": "https://beograd.volvocars.rs/akcijska_ponuda/details?series=recharge",
-      "price_eur": null,
-      "checked": null,
-      "changed": null,
-      "status": "new",
-      "note": null,
+      "price_eur": 62213,
+      "checked": "2026-11-28",
+      "changed": "2026-11-28",
+      "status": "ok",
+      "note": "samo uvoznik",
       "multi": true,
       "extra_sources": [
         {
           "label": "volvocentar.rs (zalihe)",
           "url": "https://www.volvocentar.rs/volvo_sa_zalihe"
         }
-      ]
+      ],
+      "dealer_urls": {},
+      "source": "uvoznik"
     },
     "volvo-ex90": {
       "name": "Volvo EX90",
       "match": "EX90",
       "url": "https://beograd.volvocars.rs/akcijska_ponuda/details?series=recharge",
-      "price_eur": null,
-      "checked": null,
-      "changed": null,
-      "status": "new",
-      "note": null,
+      "price_eur": 79287,
+      "checked": "2026-11-28",
+      "changed": "2026-11-28",
+      "status": "ok",
+      "note": "samo uvoznik",
       "multi": true,
       "extra_sources": [
         {
           "label": "volvocentar.rs (zalihe)",
           "url": "https://www.volvocentar.rs/volvo_sa_zalihe"
         }
-      ]
+      ],
+      "dealer_urls": {},
+      "source": "uvoznik"
     }
   }
 }
