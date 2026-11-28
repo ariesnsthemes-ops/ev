@@ -491,7 +491,7 @@
     "hyundai-inster": {
       "name": "Hyundai Inster",
       "match": "Inster",
-      "url": "https://www.hyundai.rs/upload/document/inster_20260313_120434.pdf",
+      "url": null,
       "price_eur": null,
       "checked": null,
       "changed": null,
@@ -501,7 +501,7 @@
     "hyundai-ioniq-5": {
       "name": "Hyundai IONIQ 5",
       "match": "IONIQ 5",
-      "url": "https://hyundai.rs/upload/document/ioniq_5.pdf",
+      "url": null,
       "price_eur": null,
       "checked": null,
       "changed": null,
@@ -511,7 +511,7 @@
     "hyundai-ioniq-6": {
       "name": "Hyundai IONIQ 6",
       "match": "IONIQ 6",
-      "url": "https://hyundai.rs/upload/document/ioniq_6.pdf",
+      "url": null,
       "price_eur": null,
       "checked": null,
       "changed": null,
@@ -854,7 +854,7 @@
       "note": null,
       "pdf_match": "2008",
       "row_anchor": "ELEKTRO",
-      "column": 1
+      "column": "min"
     },
     "peugeot-e-208": {
       "name": "Peugeot e-208",
@@ -867,7 +867,7 @@
       "note": null,
       "pdf_match": "208",
       "row_anchor": "ELEKTRO",
-      "column": 1
+      "column": "min"
     },
     "peugeot-e-3008": {
       "name": "Peugeot e-3008",
@@ -880,7 +880,7 @@
       "note": null,
       "pdf_match": "3008",
       "row_anchor": "ELEKTRO",
-      "column": 1
+      "column": "min"
     },
     "peugeot-e-308": {
       "name": "Peugeot e-308",
@@ -893,7 +893,7 @@
       "note": null,
       "pdf_match": "308",
       "row_anchor": "ELEKTRO",
-      "column": 1
+      "column": "min"
     },
     "porsche-cayenne-turbo-electric": {
       "name": "Porsche Cayenne Turbo Electric",

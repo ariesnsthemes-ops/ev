@@ -70,6 +70,8 @@ MAX_CHANGE = 0.15          # 15 %
 WINDOW = 600               # characters after a model name in which its price is looked for
 DELAY = 2.0                # seconds between requests to the same site
 TODAY = dt.date.today().isoformat()
+SECTION_STOP = re.compile(r'(?<![a-z])(plug in|hybrid|hibrid[a-z]*|benzin[a-z]*|dizel|diesel|phev|mhev)(?![a-z])')   # on flat() text
+CARD_END = re.compile(r'saznajte vi[sš]e|vi[sš]e informacija|konfigur|prika[zž]i detalje|zatra[zž]i|[zž]elim ponudu|test vo[zž]nj|sve varijante', re.I)
 OTHERS = []                # names of the other models of the brand being checked (set per model in main)
 
 # ---------------------------------------------------------------- fetching
@@ -82,6 +84,7 @@ class Fetcher:
         self.last = {}
         self.robots = {}
         self.cache = {}
+        self.trail = []      # addresses read for the model being checked (diagnostics)
         self.evidence = {}
         self.price_url = {}  # listing page -> the linked PDF the price actually came from   # url -> (ext, bytes): JPEG screenshot of an HTML page or the PDF file itself
         try:
@@ -127,6 +130,7 @@ class Fetcher:
 
     def get(self, url):
         """-> (kind, text, links)  kind: 'html' | 'pdf'; links: [(href, link text)] for html. Each address is read once per run."""
+        self.trail.append(url)
         if url not in self.cache: self.cache[url] = self._get(url)
         return self.cache[url]
 
@@ -260,7 +264,7 @@ def to_int(s):
     return int(re.sub(r'\D', '', s))
 
 
-BARE = re.compile(r'(?<![\d.,])(\d{1,3}(?:[.\u00a0\u202f ]\d{3})+)(?:,\d{2})?(?![\d.,]?\d)')
+BARE = re.compile(r'(?<![\d.,])(\d{1,3}(?:\.\d{3})+)(?:,\d{2})?(?![\d.,]?\d)')   # "45.990" only; "97 323" is 97 KS + 323 km
 
 
 def candidates(text, bare=False):
@@ -302,6 +306,8 @@ def find_price(text, match, multi, longer=(), column=None, anchor=None):
             after = [c for c in cands if 0 <= c[0] - s <= WINDOW]
             if after and any(s < o < after[0][0] for o in other_spots if o != s):
                 continue   # another model's name sits between this name and the price (menu, filter chips)
+            if after and CARD_END.search(text[s:after[0][0]]):
+                continue   # the card ends (its buttons) before the price: that price belongs to the next card
             if column:   # price lists with several price columns (e.g. Renault: without VAT, with VAT, bonus…): the Nth price in the row
                 eol = text.find('\n', s)
                 row = [c for c in after if eol < 0 or c[0] < eol] or after
@@ -317,19 +323,23 @@ def find_in_rows(text, anchor, column):
     """Price lists with one table per powertrain (Citroën: "ELEKTRIČNI MOTOR" rows): after every occurrence of the
     anchor, the column-th price before the next occurrence; the lowest of those. Hybrid / petrol rows are never read."""
     t = flat(text)
-    rx = re.compile(r'(?<![a-z0-9])' + r'\s+'.join(map(re.escape, flat(anchor).split())) + r'(?![a-z0-9])')
+    rx = re.compile(r'\s+'.join(map(re.escape, flat(anchor).split())) + r'(?![a-z0-9])')   # "automatskiElektro" counts
     spots = [m.start() for m in rx.finditer(t)]
     if not spots: return None, f'tabela "{anchor}" nije pronađena'
+    stops = [m.start() for m in SECTION_STOP.finditer(t)]
     picks = []
     for bare in (False, True):
         cands = candidates(text, bare=bare)
         for i, s0 in enumerate(spots):
             end = spots[i + 1] if i + 1 < len(spots) else s0 + WINDOW
+            end = min([end] + [x for x in stops if x > s0 + len(anchor)])   # the hybrid / petrol table starts here
             row = [v for pos, v, _ in cands if s0 <= pos < min(end, s0 + WINDOW)]
-            if len(row) >= column: picks.append(row[column - 1])
+            if column == 'min' and row: picks.append(min(row))
+            elif column != 'min' and len(row) >= column: picks.append(row[column - 1])
         if picks: break
     if not picks: return None, f'nema cena u redovima "{anchor}"'
-    return min(picks), f'{column}. cena u redovima "{anchor}" ({len(picks)} redova)'
+    which = 'najniža cena' if column == 'min' else f'{column}. cena'
+    return min(picks), f'{which} u redovima "{anchor}" ({len(picks)} redova)'
 
 
 def flat(s):
@@ -428,21 +438,24 @@ def read_page(f, url, match, longer, column=None, anchor=None, pdf_label=None, p
         hay = norm(h + ' ' + t)
         if has_all(hay, key) or (len(key) > 1 and has_all(hay.replace(' ', ''), [''.join(key)])):
             pdfs.append(h)
-    for pdf in pdfs[:3]:
-        got = follow(f, url, pdf, match, longer, column, anchor)
+    need = norm(pdf_match).split() if pdf_match else None
+    for pdf in pdfs[:5]:
+        got = follow(f, url, pdf, match, longer, column, anchor, need=need)
         if got: return got
     if pdf_label and not pdfs: return 'not-found', None, f'nema dugmeta za cenovnik ispod naslova "{pdf_label}"'
     if pdf_match and not pdfs: return 'not-found', None, f'nema cenovnika sa "{pdf_match}" na stranici'
-    return 'not-found', None, f'{kind}, {how}' + (f'; pregledano PDF-ova: {len(pdfs[:3])}' if pdfs else '')
+    return 'not-found', None, f'{kind}, {how}' + (f'; pregledano linkova: {len(pdfs[:5])}' if pdfs else '')
 
 
-def follow(f, page_url, link, match, longer, column, anchor, depth=0):
+def follow(f, page_url, link, match, longer, column, anchor, depth=0, need=None):
     """Read a followed link: a PDF price list, or a page (configurator, "katalozi i cenovnici") that shows the price
     itself or links one more PDF price list (Ford: list -> model page -> "Puma Bev Cenovnik" PDF)."""
     try:
         kind, ptext, plinks = f.get(link)
     except Exception:  # noqa: BLE001
         return None
+    if need and kind == 'pdf' and not has_all(norm(ptext), need):
+        return None   # a price list of another model (it never names this one)
     p2, how2 = find_price(ptext, match, True, longer, column, anchor)
     if p2:
         f.price_url[page_url] = link
@@ -451,7 +464,7 @@ def follow(f, page_url, link, match, longer, column, anchor, depth=0):
     if kind == 'html' and depth == 0:
         for h, t, *_ in plinks:
             if re.search(r'cenovnik|cenovnici|pricelist|price', norm(urllib.parse.unquote(h) + ' ' + t)) and h != link:
-                got = follow(f, page_url, h, match, longer, column, anchor, 1)
+                got = follow(f, page_url, h, match, longer, column, anchor, 1, need)
                 if got: return got
     return None
 
@@ -512,6 +525,25 @@ def save_evidence(f, mid, srcs):
         name = f'{mid}__{re.sub(r"[^a-z0-9.-]+", "-", s["src"].lower())}.{ev[0]}'
         with open(os.path.join(day, name), 'wb') as fh: fh.write(ev[1])
         s['evidence'] = f'{TODAY}/{name}'
+
+
+def save_debug(f, mid, srcs):
+    """No price found: keep what the script saw (page text and links) in scripts/dokazi/<date>/debug/<model>.txt,
+    so the settings (url, pdf_match, row_anchor…) can be fixed from the evidence branch without guessing."""
+    day = os.path.join(EVIDENCE, TODAY, 'debug')
+    os.makedirs(day, exist_ok=True)
+    out = [f'# {mid}  {TODAY}', '']
+    for s in srcs: out.append(f'izvor {s["src"]}: {s["url"]} -> {s["state"]}: {s["how"]}')
+    for u in dict.fromkeys(f.trail):
+        got = f.cache.get(u)
+        out += ['', '=' * 100, u]
+        if not got: out.append('(nije učitano)'); continue
+        kind, text, links = got
+        out += [f'[{kind}, {len(text)} znakova]', text[:12000]]
+        if links:
+            out += ['', '--- linkovi (href | tekst | naslov kartice) ---']
+            out += [' | '.join(str(x).replace('\n', ' ')[:120] for x in l) for l in links[:400]]
+    with open(os.path.join(day, mid + '.txt'), 'w', encoding='utf-8') as fh: fh.write('\n'.join(out))
 
 
 def archive(urls):
@@ -597,6 +629,7 @@ def main():
             longer = [n for n in names.get(brand, ()) if flat(n).startswith(flat(e['match']) + ' ')
                       and brand + '-' + '-'.join(flat(n).split()) != mid]   # not this model's own full name
 
+            f.trail = []
             OTHERS[:] = [n for n in names.get(brand, ()) if flat(n) != flat(e['match']) and not flat(n).startswith(flat(e['match']) + ' ')
                          and not flat(e['match']).startswith(flat(n) + ' ')]
             if e.get('skip'):   # brand/model left out on purpose (no consent yet, no public price)
@@ -620,6 +653,9 @@ def main():
 
             save_evidence(f, mid, srcs)
             price, status, apply, agreement = decide(srcs, old)
+            if price is None or e.get('lock'):
+                try: save_debug(f, mid, srcs)
+                except Exception as ex: print('debug nije snimljen:', err(ex))  # noqa: BLE001
             notes = []
             lock = e.get('lock')
             if lock:   # price set by hand: report what the sources say, never change it
