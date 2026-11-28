@@ -363,4 +363,4 @@ javascript:void(0) | SAČUVAJ MOJA PODEŠAVANJA | null
 
 ====================================================================================================
 https://www.citroen.rs/content/dam/citroen/serbia/pdf/10-09-2026/C3Aircross_010926.pdf
-(nije učitano)
+(nije učitano: greška (RuntimeError: HTTP 403; običan HTTP: greška (HTTPError: HTTP Error 403: Forbidden)))

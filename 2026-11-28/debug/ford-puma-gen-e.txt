@@ -678,12 +678,154 @@ https://ford-cdn.fsn1.your-objectstorage.com/fw4z6g8963u1pfxzqyex0kielb91 | Otvo
 
 ====================================================================================================
 https://ford.rs/brochures_and_pricelists/1456/download?name=Puma+Bev+Cenovnik
-(nije učitano)
+(nije učitano: greška (Error: Page.goto: net::ERR_ABORTED at https://ford.rs/brochures_and_pricelists/1456/dow))
 
 ====================================================================================================
 https://autostadmotors.rs
-[html, 51 znakova]
-Please wait while your request is being verified...
+[html, 1943 znakova]
+Mi cenimo privatnost posetioca sajta!
+
+Koristimo kolačiće da bismo poboljšali vaše iskustvo pregledanja, prikazivali personalizovane oglase ili sadržaj i analizirali naš saobraćaj. Klikom na „Prihvati sve“, pristajete na našu upotrebu kolačića. Više o politikama privatnosti i kolićima možete saznati na našoj stranici Politike privatnosti.
+
+Uredi
+Odbij sve
+Prihvati sve
+Skip to content
+Bulevar Tanaska Rajića 176, Čačak
++38132-53-50-420
+office@autostadmotors.rs
+facebook
+instagram
+AUTOSTAD MOTORS
+
+Ovlašćeni distributer Ford i MG – dobrodošli
+
+Home
+Ford 
+MG 
+O nama
+Servis
+Zakazivanje servisa
+Kontakt
+PRODAJA NOVIH VOZILA
+Razmišljate o kupovini novog vozila? Na pravom ste mestu.
+SERVIS VOZILA
+Servisiranje vozila je veoma važno i nikako ne sme biti potcenjeno i stavljeno u drugi plan. Automobili zahtevaju redovno održavanje kako biste ih držali u dobrom stanju i dobili optimalne performanse
+Vidi još...
+ZAKAŽI SERVIS
+Zakažite online servisni termin. Naše ljubazno osoblje će Vas kontaktirati u najkraćem roku za dalji dogovor.
+Vidi još...
+NOVA VOZILA
+Pogledajte naš kompletan asortiman vozila i otkrijte koje najbolje odgovara vašem životnom stilu.
+NAŠ TIM
+Naše profesionalno osoblje Vam je uvek na raspolaganju.
+Miloš Marković
+Direktor
+Miloš Lazović
+Administrator garantnih popravki
+Mirko Trnavac
+Direktor postprodaje
+Milisav Radičević
+Prodaja vozila
+Filip Popović
+Šef servisa
+Miloš Simović
+Prodaja vozila
+DRUGI GOVORE O NAMA
+ Profesionalno i odgovorno. Veoma sam zadovoljan svojim novim vozilom, kao i održavanjem istog.
+Petar Petrović
+Direktor
+ Servisiram svoje vozilo već duži niz godina kod Autostad Motors-a. Tu praksu ću svakako nastaviti jer sam prezadovoljna.
+Ana Stanković
+Preduzetnik
+1000
+Zadovoljnih klijenata
+3800
+Servisiranih vozila
+1500
+Prodatih vozila
+facebook
+instagram
+Politika privatnosti
+Podaci za identifikaciju
+Copyright © 2026 AUTOSTAD MOTORS All rights reserved. Theme: Flash by ThemeGrill. Powered by WordPress
+
+--- linkovi (href | tekst | naslov kartice) ---
+https://autostadmotors.rs/politika-privatnosti/ | Politike privatnosti. | Mi cenimo privatnost posetioca sajta!
+https://autostadmotors.rs/politika-privatnosti/ |  | Mi cenimo privatnost posetioca sajta!
+https://autostadmotors.rs/#content | Skip to content | AUTOSTAD MOTORS
+https://www.facebook.com/autostad.motors.cacak?locale=sr_RS | facebook | 
+https://www.instagram.com/autostad.motors.cacak/ | instagram | 
+https://autostadmotors.rs/ |  | AUTOSTAD MOTORS
+https://autostadmotors.rs/ | AUTOSTAD MOTORS | 
+https://autostadmotors.rs/ | Home | AUTOSTAD MOTORS
+https://autostadmotors.rs/ford/ | Ford | AUTOSTAD MOTORS
+https://autostadmotors.rs/ford/ |  | 
+https://autostadmotors.rs/puma/ |  | 
+https://autostadmotors.rs/puma-2/ |  | 
+https://autostadmotors.rs/novakuga/ |  | 
+https://autostadmotors.rs/explorer/ |  | 
+https://autostadmotors.rs/mustang/ |  | 
+https://autostadmotors.rs/ford/ |  | 
+https://autostadmotors.rs/puma/ |  | 
+https://autostadmotors.rs/explorer/ |  | 
+https://autostadmotors.rs/mustang/ |  | 
+https://autostadmotors.rs/tourneo/ |  | 
+https://autostadmotors.rs/tcustom/ |  | 
+https://autostadmotors.rs/connect/ |  | 
+https://autostadmotors.rs/etransit/ |  | 
+https://autostadmotors.rs/phew/ |  | 
+https://autostadmotors.rs/capri/ |  | 
+https://autostadmotors.rs/ford/ |  | 
+https://autostadmotors.rs/raptor/ |  | 
+https://autostadmotors.rs/mustang/ |  | 
+https://autostadmotors.rs/ford/ |  | 
+https://autostadmotors.rs/raptor/ |  | 
+https://autostadmotors.rs/etransit/ |  | 
+https://autostadmotors.rs/etrcustom/ |  | 
+https://autostadmotors.rs/transit/ |  | 
+https://autostadmotors.rs/trcon/ |  | 
+https://autostadmotors.rs/courier/ |  | 
+https://autostadmotors.rs/trcustom/ |  | 
+https://autostadmotors.rs/sasija-2/ |  | 
+https://autostadmotors.rs/phew/ |  | 
+https://autostadmotors.rs/mg/ | MG | AUTOSTAD MOTORS
+https://autostadmotors.rs/mg/ |  | 
+https://autostadmotors.rs/mg3/ |  | 
+https://autostadmotors.rs/mghs/ |  | 
+https://autostadmotors.rs/mg/ |  | 
+https://autostadmotors.rs/mg3hyb/ |  | 
+https://autostadmotors.rs/mgzs/ |  | 
+https://autostadmotors.rs/mghs-2/ |  | 
+https://autostadmotors.rs/mgphev/ |  | 
+https://autostadmotors.rs/mg/ |  | 
+https://autostadmotors.rs/mg4/ |  | 
+https://autostadmotors.rs/mg5/ |  | 
+https://autostadmotors.rs/mgs5-ev/ |  | 
+https://autostadmotors.rs/o_nama/ | O nama | AUTOSTAD MOTORS
+https://autostadmotors.rs/sservis/ | Servis | AUTOSTAD MOTORS
+https://autostadmotors.rs/contact/ | Zakazivanje servisa | AUTOSTAD MOTORS
+https://autostadmotors.rs/kontakt/ | Kontakt | AUTOSTAD MOTORS
+https://autostadmotors.rs/sservis/ | SERVIS VOZILA | 
+https://autostadmotors.rs/sservis/ | Vidi još... | SERVIS VOZILA
+https://autostadmotors.rs/contact/ | ZAKAŽI SERVIS | 
+https://autostadmotors.rs/contact/ | Vidi još... | ZAKAŽI SERVIS
+https://autostadmotors.rs/ford/ |  | 
+https://autostadmotors.rs/mg/ |  | 
+http://linekdin.com/ |  | Miloš Marković
+http://linekdin.com/ |  | Miloš Lazović
+http://linkedin.com/ |  | Mirko Trnavac
+http://linekdin.com/ |  | Milisav Radičević
+http://linekdin.com/ |  | Filip Popović
+http://linekdin.com/ |  | Miloš Simović
+https://www.facebook.com/autostad.motors.cacak?locale=sr_RS | facebook | 
+https://www.instagram.com/autostad.motors.cacak/ | instagram | 
+https://autostadmotors.rs/politika-privatnosti/ | Politika privatnosti | 
+https://autostadmotors.rs/wp-content/uploads/2026/03/Podaci-za-identifikaciju-Autostad-Motors.pdf | Podaci za identifikaciju | 
+https://autostadmotors.rs/ | AUTOSTAD MOTORS | AUTOSTAD MOTORS
+https://themegrill.com/themes/flash/ | Flash | AUTOSTAD MOTORS
+https://wordpress.org/ | WordPress | AUTOSTAD MOTORS
+https://autostadmotors.rs/#masthead |  | AUTOSTAD MOTORS
 
 ====================================================================================================
 https://fordsabac.rs

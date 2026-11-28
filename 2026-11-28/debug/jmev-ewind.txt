@@ -1,8 +1,52 @@
 # jmev-ewind  2026-11-28
 
-izvor uvoznik: https://www.jmev.rs/ewind.html -> blocked: sajt blokira automatsku proveru
+izvor uvoznik: https://www.jmev.rs/ewind.html -> not-found: html, nema cene u EUR
 
 ====================================================================================================
 https://www.jmev.rs/ewind.html
-[html, 51 znakova]
-Please wait while your request is being verified...
+[html, 335 znakova]
+EWIND
+ELIGHT
+EV3
+Galerija
+Kontakt
+EWIND
+
+Električni automobil nove generacije
+
+VIDI KONFIGURACIJU
+‹
+›
+Prtljažnik
+
+Električno otvaranje vrata prtljažnika bez upotrebe ruku.
+
+Enterijer
+
+Opuštajuća ergonomska prostrana sedišta za svakog putnika.
+
+Modeli
+EWIND
+ELIGHT
+EV3
+Informacije
+Galerija
+Kontakt
+
+© 2026 CUBI JMEV. Sva prava zadržana.
+
+--- linkovi (href | tekst | naslov kartice) ---
+https://www.jmev.rs/index.html |  | EWIND
+https://www.jmev.rs/ewind.html | EWIND | EWIND
+https://www.jmev.rs/elight.html | ELIGHT | EWIND
+https://www.jmev.rs/ev3.html | EV3 | EWIND
+https://www.jmev.rs/galerija.html | Galerija | EWIND
+https://www.jmev.rs/kontakt.html | Kontakt | EWIND
+https://www.jmev.rs/ewind.html# | VIDI KONFIGURACIJU | EWIND
+https://www.jmev.rs/ewind.html | EWIND | Modeli
+https://www.jmev.rs/elight.html | ELIGHT | Modeli
+https://www.jmev.rs/ev3.html | EV3 | Modeli
+https://www.jmev.rs/galerija.html | Galerija | Informacije
+https://www.jmev.rs/kontakt.html | Kontakt | Informacije
+tel:0692024260 | 069 202 42 60 | Karakteristike vozila
+mailto:cubi@jmev.rs | cubi@jmev.rs | Karakteristike vozila

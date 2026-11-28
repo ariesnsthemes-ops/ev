@@ -363,4 +363,4 @@ javascript:void(0) | SAČUVAJ MOJA PODEŠAVANJA | null
 
 ====================================================================================================
 https://www.citroen.rs/content/dam/citroen/serbia/cenovnici/13-10-2026/Novi-C4-Cenovnik-13-10-26.pdf
-(nije učitano)
+(nije učitano: greška (RuntimeError: HTTP 403; običan HTTP: greška (HTTPError: HTTP Error 403: Forbidden)))

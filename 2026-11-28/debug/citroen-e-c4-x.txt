@@ -363,8 +363,8 @@ javascript:void(0) | SAČUVAJ MOJA PODEŠAVANJA | null
 
 ====================================================================================================
 https://www.citroen.rs/content/dam/citroen/serbia/cenovnici/13-10-2026/C4X_010926.pdf
-(nije učitano)
+(nije učitano: greška (RuntimeError: HTTP 403; običan HTTP: greška (HTTPError: HTTP Error 403: Forbidden)))
 
 ====================================================================================================
 https://www.citroen.rs/content/dam/citroen/serbia/cenovnici/11-11-2024/CITROEN-EC3-SR-09.pdf
-(nije učitano)
+(nije učitano: greška (RuntimeError: HTTP 403; običan HTTP: greška (HTTPError: HTTP Error 403: Forbidden)))

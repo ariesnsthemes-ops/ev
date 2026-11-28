@@ -538,16 +538,32 @@ https://www.opel.rs/tools/opel-online-zakazivanje-servisa.html | Zatražite serv
 
 ====================================================================================================
 https://www.opel.rs/content/dam/opel/serbia/brochures/pricelists/2026/Opel_Mokka_cenovnik.pdf
-(nije učitano)
+(nije učitano: greška (RuntimeError: HTTP 403; običan HTTP: greška (HTTPError: HTTP Error 403: Forbidden)))
 
 ====================================================================================================
 https://www.autopromet.rs
-[html, 51 znakova]
-Please wait while your request is being verified...
+[html, 15 znakova]
+Skip to content
+
+--- linkovi (href | tekst | naslov kartice) ---
+https://autopromet.rs/#content | Skip to content | 
+https://www.opel.rs/ |  | 
+https://www.polovniautomobili.com/autopromet |  | 
+https://autopromet.rs/citroen/ |  | 
+https://zontes.rs/ |  | 
+https://kawasaki-srbija.rs/ |  | 
+https://benda.rs/ |  | 
+https://www.opel.rs/ |  | 
+https://zontes.rs/ |  | 
+https://www.polovniautomobili.com/autopromet |  | 
+https://www.qjmotor-srbija.rs/ |  | 
+https://autopromet.rs/citroen/ |  | 
+https://benda.rs/ |  | 
+https://autopromet.rs/imunify-bot-check |  | 
 
 ====================================================================================================
 https://www.beoauto.com
-(nije učitano)
+(nije učitano: greška (Error: Page.goto: net::ERR_CERT_AUTHORITY_INVALID at https://www.beoauto.com/))
 
 ====================================================================================================
 https://opel.acbrajic.com

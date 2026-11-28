@@ -10,7 +10,7 @@ Obavljanje bezbednosne verifikacije
 
 Na ovom veb-sajtu koristi se bezbednosni servis za zaštitu od zlonamernih botova. Ova stranica se prikazuje dok veb-sajt proverava da li ste bot.
 
-Ray ID: a618074e2cfa6623
+Ray ID: a61848c9cd83a221
 Performanse i bezbednost pruža mreža Cloudflare
 Privatnost
 

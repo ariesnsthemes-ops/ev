@@ -1,8 +1,66 @@
 # jmev-elight  2026-11-28
 
-izvor uvoznik: https://www.jmev.rs/elight.html -> blocked: sajt blokira automatsku proveru
+izvor uvoznik: https://www.jmev.rs/elight.html -> not-found: html, nema cene u EUR
 
 ====================================================================================================
 https://www.jmev.rs/elight.html
-[html, 51 znakova]
-Please wait while your request is being verified...
+[html, 1862 znakova]
+EWIND
+ELIGHT
+EV3
+Galerija
+Kontakt
+ELIGHT
+
+Primenite ekološku moć umetničke estetike!
+
+VIDI KONFIGURACIJU
+‹
+›
+Limuzina ELIGHT
+
+Kompanija JMEV iz Kine osnovana je 2015. godine sa ciljem proizvodnje električnih vozila, sa tendencijom napredovanja i stvaranja novih tehnologija u sferi EV. Jiangling Motors je već u 2014. godini krenula sa stvaranjem tada jednog od najboljih elektičnih vozila u Kini i u Aziji. I dalje to činimo, jer svaki dan tehnologija i nauka napreduju u službi ljudi. Ono sto čini našu kompaniju su ljudi i prijatelji bez kojih ne možemo, prijatelji koji žive širom sveta. Mislimo o budućnosti naših potomaka, uz zahvalnost našim precima.
+
+Električna vozila
+
+Mi smo čista zelena kompanija. Sva potrošnja električne energije u proizvodnji EV vozila je iz obnovljivih izvora. JMEV je jedna od najvećih kineskih kompanija za proizvodnju električnih vozila sa svim EWVTA standardima. Naši automobili su napravljeni da uživate u njima, da služe vašim potrebama, a da vam planeta bude zahvalna.
+
+Zato je naš slogan: SIJAJTE SA NAMA
+
+Kasko osiguranje
+
+Mislimo na naše buduće kupce, brinemo za njih i zbog toga imamo i generalni servis za naša vozila. Da vaš EV bude u sigurnim i dobrim rukama. Da ne mislite gde i kako, ako se desi neki nepredviđen događaj. I zato što imamo generalni servis naša električna vozila možete i KASKO osigurati.
+
+Zaštita baterije pravougaonog oblika
+
+Zaštitna struktura baterije je pravougaonog oblika, pruža bateriji jaku zaštitu, kontrolu unutrašnje temperature, spoljnu zaštitu od sudara i druge moćne karakteristike.
+
+Detaljan proces proizvodnje baterija
+
+Proces proizvodnje baterija je osmišljen da ojača stabilnost i performanse odvođenja toplote baterijske ćelije, odloži proces starenja i produži vek trajanja baterije.
+
+Modeli
+EWIND
+ELIGHT
+EV3
+Informacije
+Galerija
+Kontakt
+
+© 2026 CUBI JMEV. Sva prava zadržana.
+
+--- linkovi (href | tekst | naslov kartice) ---
+https://www.jmev.rs/index.html |  | ELIGHT
+https://www.jmev.rs/ewind.html | EWIND | ELIGHT
+https://www.jmev.rs/elight.html | ELIGHT | ELIGHT
+https://www.jmev.rs/ev3.html | EV3 | ELIGHT
+https://www.jmev.rs/galerija.html | Galerija | ELIGHT
+https://www.jmev.rs/kontakt.html | Kontakt | ELIGHT
+https://www.jmev.rs/elight.html# | VIDI KONFIGURACIJU | ELIGHT
+https://www.jmev.rs/ewind.html | EWIND | Modeli
+https://www.jmev.rs/elight.html | ELIGHT | Modeli
+https://www.jmev.rs/ev3.html | EV3 | Modeli
+https://www.jmev.rs/galerija.html | Galerija | Informacije
+https://www.jmev.rs/contact.html | Kontakt | Informacije
+tel:0692024260 | 069 202 42 60 | Karakteristike vozila
+mailto:cubi@jmev.rs | cubi@jmev.rs | Karakteristike vozila

@@ -1,7 +1,7 @@
 # renault-twingo-e-tech  2026-11-28
 
-izvor uvoznik: https://www.renault.rs/CountriesData/Serbia/images/pdf/pricelist/twingo-pricelist.pdf -> not-found: greška (RuntimeError: HTTP 410)
+izvor uvoznik: https://www.renault.rs/CountriesData/Serbia/images/pdf/pricelist/twingo-pricelist.pdf -> not-found: greška (RuntimeError: HTTP 410; običan HTTP: greška (HTTPError: HTTP Error 410: Gone))
 
 ====================================================================================================
 https://www.renault.rs/CountriesData/Serbia/images/pdf/pricelist/twingo-pricelist.pdf
-(nije učitano)
+(nije učitano: greška (RuntimeError: HTTP 410; običan HTTP: greška (HTTPError: HTTP Error 410: Gone)))

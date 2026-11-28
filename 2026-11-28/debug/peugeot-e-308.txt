@@ -4,7 +4,7 @@ izvor uvoznik: https://www.peugeot.rs/alati/brosure.html -> not-found: html, cen
 
 ====================================================================================================
 https://www.peugeot.rs/alati/brosure.html
-[html, 1870 znakova]
+[html, 2370 znakova]
 SkiptoContentText
 Putnička vozila
 Komercijalna vozila
@@ -71,17 +71,19 @@ Pravna pitanja
 Peugeot mreža
 Data Act
 
-Continue without accepting →
+CONTINUE WITHOUT ACCEPTING →
 
 
 
-WE VALUE YOUR PRIVACY
+WELCOME TO PEUGEOT
 
-We use cookies to bring you the best experience and to improve the relevance of our communications with you. Your preferences matter to us, we will only use the data for which you give your consent except for essential cookies that are necessary for the operation of this website.
+We use cookies and/or other tracking tools (the “Tools”) to ensure that we give you the best experience on our website. They enable us to provide you core functionalities such as security, network management and accessibility. The Tools improve usability and performance through various features such as language recognition, search results and thereby improve what we offer to you. Our website could use also third parties Tools to send advertising that is more relevant to you. Some Tools may be processed by third parties located in countries outside of the European Economic Area (EEA) who may not yet have an adequacy decision from the relevant European data protection authorities. In this case the transfer is based on your consent (Art. 49.1a GDPR).
 
-For more information on our data policies, please visit our Cookie Policy / Cookie section on the Privacy Policy if Cookie Policy if not separate.
+If you want to find out more about the Tools we use and how to manage them, you can access to our Cookie policy or click on ‘Manage my settings’ button.
 
-MANAGE OPTIONS
+Privacy Policy
+
+MANAGE MY SETTINGS
 ACCEPT ALL
 
 --- linkovi (href | tekst | naslov kartice) ---
@@ -179,20 +181,22 @@ https://www.peugeot.rs/alati/kontaktirajte-nas.html | Data Act |
 https://www.peugeot.rs/alati/brosure.html# |  | 208
 https://www.peugeot.rs/alati/brosure.html# |  | 208
 https://www.peugeot.rs/alati/brosure.html# |  | 208
-https://www.google.com/analytics/tag-manager | Access website | Manage your cookies
-https://www.google.com/analytics/tag-manager | Access website | Manage your cookies
-https://www.google.com/analytics/tag-manager | Access website | Manage your cookies
-javascript:void(0) | null | Opt out process
-javascript:void(0) | Go Back | Opt out process
-javascript:void(0) | Continue without accepting → | Manage your cookies
-https://www.peugeot.rs/cec/ | Cookie Policy / Cookie section on the Privacy Policy if Cookie Policy if not separate | Manage your cookies
-javascript:void(0) | MANAGE OPTIONS | Manage your cookies
-javascript:void(0) | ACCEPT ALL | Manage your cookies
+https://www.google.com/analytics/tag-manager |  | null
+https://www.google.com/analytics/tag-manager |  | null
+https://www.google.com/analytics/tag-manager |  | null
+javascript:void(0) | null | null
+javascript:void(0) | null | null
+javascript:void(0) | CONTINUE WITHOUT ACCEPTING → | null
+https://www.peugeot.co.uk/tools/cookies-policy.html | Cookie policy | null
+https://www.peugeot.co.uk/privacy-policy/ | Privacy Policy | null
+javascript:void(0) | MANAGE MY SETTINGS | null
+javascript:void(0) | ACCEPT ALL | null
 javascript:void(0) |  | 
 javascript:void(0) |  | 
 javascript:void(0) |  | 
-javascript: void(0) | Cancel and return | Manage your cookies
-javascript:void(0) | Save | Manage your cookies
+javascript:void(0) |  | 
+javascript: void(0) | CANCEL AND RETURN | null
+javascript:void(0) | SAVE MY SETTINGS | null
 
 ====================================================================================================
 https://www.peugeot.rs/content/dam/peugeot/serbia/brochures/Cenovnik%20308%2003.26.pdf

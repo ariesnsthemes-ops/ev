@@ -694,63 +694,63 @@ https://www.porsche-ada.rs/zastita-podataka#tab-GTC | Opšti uslovi poslovanja |
 https://www.onetrust.com/products/cookie-consent/ |  | 01_Strogo potrebni kolačići
 https://cookiepedia.co.uk/giving-consent-to-cookies | Додатне информације | Центар за жељене опције о приватности
 https://www.onetrust.com/products/cookie-consent/ |  | Центар за жељене опције о приватности
-https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0937153-RS&country=RS&inter |  | Nova vozila odmah dostupna Porsche Ada
-https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0937153-RS&country=RS&inter | Detaljni pregled | 
-https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0938003-RS&country=RS&inter |  | Nova vozila odmah dostupna Porsche Ada
-https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0938003-RS&country=RS&inter | Detaljni pregled | 
-https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0938107-RS&country=RS&inter |  | Nova vozila odmah dostupna Porsche Ada
-https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0938107-RS&country=RS&inter | Detaljni pregled | 
-https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0938118-RS&country=RS&inter |  | Nova vozila odmah dostupna Porsche Ada
-https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0938118-RS&country=RS&inter | Detaljni pregled | 
-https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0937417-RS&country=RS&inter |  | Nova vozila odmah dostupna Porsche Ada
-https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0937417-RS&country=RS&inter | Detaljni pregled | 
-https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=S-2025-0336196-RS&country=RS&inter |  | Nova vozila odmah dostupna Porsche Ada
-https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=S-2025-0336196-RS&country=RS&inter | Detaljni pregled | 
-https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0937618-RS&country=RS&inter |  | Nova vozila odmah dostupna Porsche Ada
-https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0937618-RS&country=RS&inter | Detaljni pregled | 
-https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0937989-RS&country=RS&inter |  | Nova vozila odmah dostupna Porsche Ada
-https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0937989-RS&country=RS&inter | Detaljni pregled | 
-https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0937172-RS&country=RS&inter |  | Nova vozila odmah dostupna Porsche Ada
-https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0937172-RS&country=RS&inter | Detaljni pregled | 
-https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=S-2026-0336349-RS&country=RS&inter |  | Nova vozila odmah dostupna Porsche Ada
-https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=S-2026-0336349-RS&country=RS&inter | Detaljni pregled | 
-https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0937984-RS&country=RS&inter |  | Nova vozila odmah dostupna Porsche Ada
-https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0937984-RS&country=RS&inter | Detaljni pregled | 
-https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=S-2026-0336538-RS&country=RS&inter |  | Nova vozila odmah dostupna Porsche Ada
-https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=S-2026-0336538-RS&country=RS&inter | Detaljni pregled | 
-https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=S-2026-0336387-RS&country=RS&inter |  | Nova vozila odmah dostupna Porsche Ada
-https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=S-2026-0336387-RS&country=RS&inter | Detaljni pregled | 
-https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0937617-RS&country=RS&inter |  | Nova vozila odmah dostupna Porsche Ada
-https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0937617-RS&country=RS&inter | Detaljni pregled | 
-https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0938119-RS&country=RS&inter |  | Nova vozila odmah dostupna Porsche Ada
-https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0938119-RS&country=RS&inter | Detaljni pregled | 
-https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=S-2026-0336496-RS&country=RS&inter |  | Nova vozila odmah dostupna Porsche Ada
-https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=S-2026-0336496-RS&country=RS&inter | Detaljni pregled | 
-https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=S-2026-0336318-RS&country=RS&inter |  | Nova vozila odmah dostupna Porsche Ada
-https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=S-2026-0336318-RS&country=RS&inter | Detaljni pregled | 
-https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0937846-RS&country=RS&inter |  | Nova vozila odmah dostupna Porsche Ada
-https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0937846-RS&country=RS&inter | Detaljni pregled | 
-https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0937564-RS&country=RS&inter |  | Nova vozila odmah dostupna Porsche Ada
-https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0937564-RS&country=RS&inter | Detaljni pregled | 
-https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0937154-RS&country=RS&inter |  | Nova vozila odmah dostupna Porsche Ada
-https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0937154-RS&country=RS&inter | Detaljni pregled | 
-https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0937760-RS&country=RS&inter |  | Nova vozila odmah dostupna Porsche Ada
-https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0937760-RS&country=RS&inter | Detaljni pregled | 
-https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0937615-RS&country=RS&inter |  | Nova vozila odmah dostupna Porsche Ada
-https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0937615-RS&country=RS&inter | Detaljni pregled | 
 https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0937990-RS&country=RS&inter |  | Nova vozila odmah dostupna Porsche Ada
 https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0937990-RS&country=RS&inter | Detaljni pregled | 
-https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0937809-RS&country=RS&inter |  | Nova vozila odmah dostupna Porsche Ada
-https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0937809-RS&country=RS&inter | Detaljni pregled | 
-https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=S-2026-0336351-RS&country=RS&inter |  | Nova vozila odmah dostupna Porsche Ada
-https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=S-2026-0336351-RS&country=RS&inter | Detaljni pregled | 
-https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0937975-RS&country=RS&inter |  | Nova vozila odmah dostupna Porsche Ada
-https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0937975-RS&country=RS&inter | Detaljni pregled | 
-https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0937419-RS&country=RS&inter |  | Nova vozila odmah dostupna Porsche Ada
-https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0937419-RS&country=RS&inter | Detaljni pregled | 
+https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0937154-RS&country=RS&inter |  | Nova vozila odmah dostupna Porsche Ada
+https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0937154-RS&country=RS&inter | Detaljni pregled | 
+https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=S-2025-0336196-RS&country=RS&inter |  | Nova vozila odmah dostupna Porsche Ada
+https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=S-2025-0336196-RS&country=RS&inter | Detaljni pregled | 
 https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0937568-RS&country=RS&inter |  | Nova vozila odmah dostupna Porsche Ada
 https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0937568-RS&country=RS&inter | Detaljni pregled | 
+https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0937417-RS&country=RS&inter |  | Nova vozila odmah dostupna Porsche Ada
+https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0937417-RS&country=RS&inter | Detaljni pregled | 
+https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0937615-RS&country=RS&inter |  | Nova vozila odmah dostupna Porsche Ada
+https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0937615-RS&country=RS&inter | Detaljni pregled | 
+https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0938003-RS&country=RS&inter |  | Nova vozila odmah dostupna Porsche Ada
+https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0938003-RS&country=RS&inter | Detaljni pregled | 
 https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0936923-RS&country=RS&inter |  | Nova vozila odmah dostupna Porsche Ada
 https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0936923-RS&country=RS&inter | Detaljni pregled | 
+https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=S-2026-0336538-RS&country=RS&inter |  | Nova vozila odmah dostupna Porsche Ada
+https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=S-2026-0336538-RS&country=RS&inter | Detaljni pregled | 
+https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0938118-RS&country=RS&inter |  | Nova vozila odmah dostupna Porsche Ada
+https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0938118-RS&country=RS&inter | Detaljni pregled | 
+https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0937419-RS&country=RS&inter |  | Nova vozila odmah dostupna Porsche Ada
+https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0937419-RS&country=RS&inter | Detaljni pregled | 
+https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0937564-RS&country=RS&inter |  | Nova vozila odmah dostupna Porsche Ada
+https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0937564-RS&country=RS&inter | Detaljni pregled | 
+https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0937153-RS&country=RS&inter |  | Nova vozila odmah dostupna Porsche Ada
+https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0937153-RS&country=RS&inter | Detaljni pregled | 
 https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=S-2026-0336388-RS&country=RS&inter |  | Nova vozila odmah dostupna Porsche Ada
 https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=S-2026-0336388-RS&country=RS&inter | Detaljni pregled | 
+https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0938107-RS&country=RS&inter |  | Nova vozila odmah dostupna Porsche Ada
+https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0938107-RS&country=RS&inter | Detaljni pregled | 
+https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=S-2026-0336349-RS&country=RS&inter |  | Nova vozila odmah dostupna Porsche Ada
+https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=S-2026-0336349-RS&country=RS&inter | Detaljni pregled | 
+https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0937760-RS&country=RS&inter |  | Nova vozila odmah dostupna Porsche Ada
+https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0937760-RS&country=RS&inter | Detaljni pregled | 
+https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=S-2026-0336351-RS&country=RS&inter |  | Nova vozila odmah dostupna Porsche Ada
+https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=S-2026-0336351-RS&country=RS&inter | Detaljni pregled | 
+https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=S-2026-0336496-RS&country=RS&inter |  | Nova vozila odmah dostupna Porsche Ada
+https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=S-2026-0336496-RS&country=RS&inter | Detaljni pregled | 
+https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0938119-RS&country=RS&inter |  | Nova vozila odmah dostupna Porsche Ada
+https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0938119-RS&country=RS&inter | Detaljni pregled | 
+https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0937617-RS&country=RS&inter |  | Nova vozila odmah dostupna Porsche Ada
+https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0937617-RS&country=RS&inter | Detaljni pregled | 
+https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=S-2026-0336387-RS&country=RS&inter |  | Nova vozila odmah dostupna Porsche Ada
+https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=S-2026-0336387-RS&country=RS&inter | Detaljni pregled | 
+https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0937618-RS&country=RS&inter |  | Nova vozila odmah dostupna Porsche Ada
+https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0937618-RS&country=RS&inter | Detaljni pregled | 
+https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0937846-RS&country=RS&inter |  | Nova vozila odmah dostupna Porsche Ada
+https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0937846-RS&country=RS&inter | Detaljni pregled | 
+https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0937989-RS&country=RS&inter |  | Nova vozila odmah dostupna Porsche Ada
+https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0937989-RS&country=RS&inter | Detaljni pregled | 
+https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0937975-RS&country=RS&inter |  | Nova vozila odmah dostupna Porsche Ada
+https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0937975-RS&country=RS&inter | Detaljni pregled | 
+https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0937809-RS&country=RS&inter |  | Nova vozila odmah dostupna Porsche Ada
+https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0937809-RS&country=RS&inter | Detaljni pregled | 
+https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0937172-RS&country=RS&inter |  | Nova vozila odmah dostupna Porsche Ada
+https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0937172-RS&country=RS&inter | Detaljni pregled | 
+https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=S-2026-0336318-RS&country=RS&inter |  | Nova vozila odmah dostupna Porsche Ada
+https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=S-2026-0336318-RS&country=RS&inter | Detaljni pregled | 
+https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0937984-RS&country=RS&inter |  | Nova vozila odmah dostupna Porsche Ada
+https://api.marketplace.porscheinformatik.com/mainframe/api/redirect/car-detail?carId=A-2026-0937984-RS&country=RS&inter | Detaljni pregled | 
