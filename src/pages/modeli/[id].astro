@@ -119,10 +119,11 @@ const relHtml = rel.length ? rel.map((i) => card(i, pre)).join('')
     <div class="wrap">
       <div class="head"><div><h2 style="font-size:clamp(24px,2.6vw,32px)">Ostali električni modeli {b.name}</h2></div><a class="link" href={`../brendovi/${m.b}`}>Stranica brenda →</a></div>
       <div class={`models${rel.length > 6 ? ' many' : ''}`}><Fragment set:html={relHtml} /></div>
+      {/* price footnote: the last line of the last section, inside its rounded bottom (never on the footer) */}
+      {/* data-nosnippet: Google never shows this text (the price) in search results or AI answers, so a price that has
+        changed since our check is not repeated there; the page itself stays in search. */}
+      <Fragment set:html={price ? `<p class="price-foot" data-nosnippet>Početna cena modela ${E(m.full)} u Srbiji${price.source === 'uvoznik' ? ', prema zvaničnom sajtu uvoznika' : price.source === 'dileri' ? ', prema sajtovima ovlašćenih prodavaca' : ''}: od ${eur(price.eur)}, zabeleženo ${dmy(price.checked)} Cene se mogu promeniti i u toku meseca. evomobil.rs ne prodaje vozila; tačnu cenu i opremu proverite kod ovlašćenog distributera.</p>` : ''} />
     </div>
   </section>
-  {/* data-nosnippet: Google never shows this text (the price) in search results or AI answers, so a price that has
-      changed since our check is not repeated there; the page itself stays in search. */}
-  <Fragment set:html={price ? `<div class="wrap" data-nosnippet><p class="price-foot">Početna cena modela ${E(m.full)} u Srbiji${price.source === 'uvoznik' ? ', prema zvaničnom sajtu uvoznika' : price.source === 'dileri' ? ', prema sajtovima ovlašćenih prodavaca' : ''}: od ${eur(price.eur)}, zabeleženo ${dmy(price.checked)} Cene se mogu promeniti i u toku meseca. evomobil.rs ne prodaje vozila; tačnu cenu i opremu proverite kod ovlašćenog distributera.</p></div>` : ''} />
 </main>
 </Base>

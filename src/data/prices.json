@@ -732,14 +732,12 @@
     "mazda-cx-6e": {
       "name": "Mazda CX-6e",
       "match": "CX-6e",
-      "url": "https://www.mazda.rs/modeli",
+      "url": "https://www.mazda.rs/konfigurator/MAZDA%20CX-6e/5WGN/engine",
       "price_eur": null,
       "checked": null,
       "changed": null,
       "status": "new",
-      "note": null,
-      "pdf_label": "MAZDA CX-6E",
-      "link_word": "konfigurator"
+      "note": null
     },
     "mg-mg4-electric": {
       "name": "MG4 Electric",
@@ -749,7 +747,8 @@
       "checked": null,
       "changed": null,
       "status": "new",
-      "note": null
+      "note": null,
+      "skip": "nije u ponudi na mgmotor.rs (novembar 2026)"
     },
     "mg-mg5-electric": {
       "name": "MG5 Electric",
@@ -759,7 +758,8 @@
       "checked": null,
       "changed": null,
       "status": "new",
-      "note": null
+      "note": null,
+      "skip": "nije u ponudi na mgmotor.rs (novembar 2026)"
     },
     "mg-mgs5-ev": {
       "name": "MGS5 EV",
@@ -952,7 +952,8 @@
       "changed": null,
       "status": "new",
       "note": null,
-      "column": 2
+      "column": 3,
+      "row_anchor": "električna energija"
     },
     "renault-5-e-tech": {
       "name": "Renault 5 E-Tech",
@@ -963,7 +964,8 @@
       "changed": null,
       "status": "new",
       "note": null,
-      "column": 2
+      "column": 3,
+      "row_anchor": "električna energija"
     },
     "renault-twingo-e-tech": {
       "name": "Renault Twingo E-Tech",
@@ -973,7 +975,9 @@
       "checked": null,
       "changed": null,
       "status": "new",
-      "note": null
+      "note": null,
+      "row_anchor": "električna energija",
+      "column": 3
     },
     "skoda-elroq": {
       "name": "Škoda Elroq",

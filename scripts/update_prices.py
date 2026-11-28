@@ -84,6 +84,7 @@ class Fetcher:
         self.last = {}
         self.robots = {}
         self.cache = {}
+        self.errors = {}     # address -> why it could not be read (diagnostics)
         self.trail = []      # addresses read for the model being checked (diagnostics)
         self.evidence = {}
         self.price_url = {}  # listing page -> the linked PDF the price actually came from   # url -> (ext, bytes): JPEG screenshot of an HTML page or the PDF file itself
@@ -131,17 +132,31 @@ class Fetcher:
     def get(self, url):
         """-> (kind, text, links)  kind: 'html' | 'pdf'; links: [(href, link text)] for html. Each address is read once per run."""
         self.trail.append(url)
-        if url not in self.cache: self.cache[url] = self._get(url)
+        if url not in self.cache:
+            try:
+                self.cache[url] = self._get(url)
+            except Exception as ex:  # noqa: BLE001
+                self.errors[url] = err(ex)
+                raise
         return self.cache[url]
 
     def _get(self, url):
         self.wait(url)
         if url.lower().split('?')[0].endswith('.pdf'):
             if self.browser:
-                r = self.ctx.request.get(url, timeout=60000)
-                if not r.ok: raise RuntimeError(f'HTTP {r.status}')
-                self.evidence[url] = ('pdf', r.body())
-                return 'pdf', pdf_text(r.body()), []
+                body, why = None, ''
+                for headers in ({}, {'Accept': 'application/pdf,*/*;q=0.8', 'Referer': '{0.scheme}://{0.netloc}/'.format(urllib.parse.urlsplit(url))}):
+                    try:
+                        r = self.ctx.request.get(url, timeout=60000, headers=headers)
+                        if r.ok and r.body()[:5] == b'%PDF-': body = r.body(); break
+                        why = f'HTTP {r.status}' if not r.ok else 'odgovor nije PDF'
+                    except Exception as ex:  # noqa: BLE001
+                        why = err(ex)
+                if body is None:
+                    try: body = self.raw(url)
+                    except Exception as ex: raise RuntimeError(f'{why}; običan HTTP: {err(ex)}')  # noqa: BLE001
+                self.evidence[url] = ('pdf', body)
+                return 'pdf', pdf_text(body), []
             raw = self.raw(url)
             self.evidence[url] = ('pdf', raw)
             return 'pdf', pdf_text(raw), []
@@ -537,7 +552,7 @@ def save_debug(f, mid, srcs):
     for u in dict.fromkeys(f.trail):
         got = f.cache.get(u)
         out += ['', '=' * 100, u]
-        if not got: out.append('(nije učitano)'); continue
+        if not got: out.append('(nije učitano: ' + f.errors.get(u, '?') + ')'); continue
         kind, text, links = got
         out += [f'[{kind}, {len(text)} znakova]', text[:12000]]
         if links:
